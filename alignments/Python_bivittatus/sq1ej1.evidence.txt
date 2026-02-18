@@ -1,0 +1,3 @@
+# Tier D: no SINE copies assigned â€“ sear evidence (relaxed: id>=0.5, len>=30)
+# chrom	start	end	name	score	strand
+# No hits found

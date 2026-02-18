@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SINE-KB: SINE Knowledge Base</title>
+<style>
+/* === RESET & BASE === */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{font:12px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#222;background:#fff}
+a{color:#1a5dab;text-decoration:none}
+a:hover{text-decoration:underline}
+table{border-collapse:collapse;width:100%}
+th,td{border:1px solid #ccc;padding:2px 5px;text-align:left;vertical-align:top;white-space:nowrap}
+th{background:#1a4d8c;color:#fff;font-weight:600;position:sticky;top:0;z-index:2;cursor:pointer;user-select:none;font-size:11px}
+th:hover{background:#15407a}
+th .sort-arrow{font-size:9px;margin-left:2px;opacity:.6}
+td{font-size:11px}
+tr:nth-child(even){background:#f7f8fa}
+tr:hover{background:#e8f0fe}
+tr.selected{background:#cde4fc}
+input,textarea,select{font:11px/1.3 inherit;border:1px solid #aaa;padding:1px 3px;background:#fffef5}
+textarea{resize:vertical}
+button{font:11px/1.3 inherit;padding:2px 8px;cursor:pointer;border:1px solid #888;background:#f0f0f0;border-radius:2px}
+button:hover{background:#ddd}
+button.primary{background:#1a4d8c;color:#fff;border-color:#1a4d8c}
+button.primary:hover{background:#15407a}
+button.danger{background:#c0392b;color:#fff;border-color:#c0392b}
+button.danger:hover{background:#a93226}
+
+/* === LAYOUT === */
+#app{display:flex;height:100vh;flex-direction:column}
+#topbar{display:flex;align-items:center;background:#1a4d8c;color:#fff;padding:0 8px;height:28px;flex-shrink:0;font-size:12px;gap:12px}
+#topbar .title{font-weight:700;font-size:13px;letter-spacing:.5px}
+#topbar .stats{font-size:11px;opacity:.85}
+#topbar .actions{margin-left:auto;display:flex;gap:6px;align-items:center}
+#topbar button{font-size:10px;padding:1px 6px;background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.3)}
+#topbar button:hover{background:rgba(255,255,255,.3)}
+#main{display:flex;flex:1;overflow:hidden}
+
+/* Left panel */
+#sidebar{width:220px;min-width:180px;max-width:320px;border-right:1px solid #ccc;display:flex;flex-direction:column;flex-shrink:0;background:#f5f6f8;font-size:11px;overflow:hidden}
+#sidebar .panel-header{background:#2c3e50;color:#fff;padding:3px 6px;font-weight:600;font-size:11px;display:flex;justify-content:space-between;align-items:center}
+#sidebar .tree{overflow-y:auto;flex:1;padding:2px 0}
+.tree-node{padding:1px 0 1px 12px;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tree-node:hover{background:#dce6f0}
+.tree-node.active{background:#b8d4f0;font-weight:600}
+.tree-toggle{display:inline-block;width:10px;font-size:9px;color:#666;text-align:center;cursor:pointer}
+.tree-label{margin-left:2px}
+.tree-count{color:#888;font-size:10px;margin-left:3px}
+.tree-leaf{color:#1a5dab}
+.tree-section{background:#e8ecf0;padding:2px 6px;font-weight:700;font-size:10px;text-transform:uppercase;color:#555;border-bottom:1px solid #ccc;border-top:1px solid #ccc;margin-top:2px}
+
+/* Content area */
+#content{flex:1;display:flex;flex-direction:column;overflow:hidden}
+#tabs{display:flex;background:#e8ecf0;border-bottom:1px solid #ccc;flex-shrink:0}
+.tab{padding:3px 12px;font-size:11px;cursor:pointer;border-right:1px solid #ccc;white-space:nowrap;user-select:none}
+.tab:hover{background:#d0d8e0}
+.tab.active{background:#fff;font-weight:600;border-bottom:1px solid #fff;margin-bottom:-1px}
+#view{flex:1;overflow:auto;position:relative}
+#view .table-wrap{overflow:auto;height:100%}
+
+/* Detail pane (bottom) */
+#detail{border-top:1px solid #ccc;height:0;overflow:hidden;transition:height .15s;background:#fafbfc}
+#detail.open{height:260px;overflow:auto}
+#detail .detail-header{background:#2c3e50;color:#fff;padding:3px 8px;font-size:11px;font-weight:600;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:2}
+#detail .detail-body{padding:6px 8px;font-size:11px}
+#detail .detail-body table{width:auto}
+#detail .detail-body th{background:#3a5068;font-size:10px;padding:2px 6px}
+#detail .detail-body td{font-size:11px;padding:2px 6px;white-space:normal;max-width:600px;word-break:break-word}
+.seq-display{font-family:"Courier New",Courier,monospace;font-size:11px;line-height:1.4;word-break:break-all;white-space:pre-wrap;background:#f0f0f0;padding:4px;border:1px solid #ddd;max-height:90px;overflow-y:auto;letter-spacing:0.5px}
+.seq-display .A{color:#e74c3c}.seq-display .T{color:#2980b9}.seq-display .G{color:#27ae60}.seq-display .C{color:#8e44ad}.seq-display .N{color:#999}
+
+/* Status bar */
+#statusbar{height:18px;background:#f0f0f0;border-top:1px solid #ccc;display:flex;align-items:center;padding:0 8px;font-size:10px;color:#555;flex-shrink:0;gap:12px}
+#statusbar .unsaved{color:#c0392b;font-weight:600}
+
+/* Edit modal */
+.modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.35);z-index:100;display:flex;align-items:flex-start;justify-content:center;padding-top:40px}
+.modal{background:#fff;border:1px solid #666;box-shadow:0 4px 20px rgba(0,0,0,.3);max-width:700px;width:95%;max-height:85vh;overflow:auto;font-size:11px}
+.modal-title{background:#1a4d8c;color:#fff;padding:4px 8px;font-weight:700;font-size:12px;display:flex;justify-content:space-between;align-items:center}
+.modal-title button{background:transparent;border:none;color:#fff;font-size:14px;cursor:pointer;padding:0 4px}
+.modal-body{padding:8px}
+.modal-body label{display:block;font-weight:600;margin:4px 0 1px;font-size:10px;color:#555;text-transform:uppercase}
+.modal-body input,.modal-body textarea,.modal-body select{width:100%;margin-bottom:2px}
+.modal-body textarea{height:50px}
+.modal-body .seq-input{font-family:"Courier New",monospace;height:60px}
+.modal-footer{padding:4px 8px 8px;text-align:right;display:flex;gap:6px;justify-content:flex-end}
+
+/* Resize handle */
+.resize-handle{width:4px;cursor:col-resize;background:transparent;flex-shrink:0}
+.resize-handle:hover{background:#aaa}
+
+/* Utility */
+.hidden{display:none!important}
+.text-right{text-align:right}
+.text-center{text-align:center}
+.mono{font-family:"Courier New",Courier,monospace}
+.truncate{max-width:180px;overflow:hidden;text-overflow:ellipsis}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+
+/* === SUMMARY TABLE === */
+.summary-wrap{overflow:auto;height:100%}
+.summary-controls{padding:4px 8px;border-bottom:1px solid #ccc;display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:11px;background:#f7f8fa;flex-shrink:0}
+.summary-controls label{font-weight:600}
+.summary-controls select,.summary-controls input[type=number]{width:auto;min-width:80px;font-size:11px;padding:1px 3px}
+.summary-table{border-collapse:separate;border-spacing:0;font-size:10px}
+.summary-table th,.summary-table td{border:1px solid #d0d0d0;padding:1px 3px;white-space:nowrap}
+.summary-table thead th{position:sticky;top:0;z-index:4;background:#1a4d8c;color:#fff;font-size:10px;font-weight:600}
+.summary-table thead tr:nth-child(2) th{top:22px;z-index:3}
+/* Sticky species column */
+.summary-table .sticky-species{position:sticky;left:0;z-index:2;background:#fff;border-right:2px solid #999;width:160px;min-width:160px;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:normal;line-height:1.2}
+.summary-table thead .sticky-species{z-index:5;background:#1a4d8c}
+/* Sticky total column */
+.summary-table .sticky-total{position:sticky;left:162px;z-index:2;background:#fff;border-right:2px solid #999;min-width:70px;text-align:right;font-weight:700}
+.summary-table thead .sticky-total{z-index:5;background:#1a4d8c}
+/* Ensure sticky cells keep solid bg on group headers, footer, hover */
+.summary-table .group-header .sticky-species,.summary-table .group-header .sticky-total{background:#e0e6ed}
+.summary-table tfoot .sticky-species,.summary-table tfoot .sticky-total{background:#e8ecf0}
+.summary-table tr:hover .sticky-species,.summary-table tr:hover .sticky-total{background:#e8f0fe}
+.summary-table thead tr:hover .sticky-species,.summary-table thead tr:hover .sticky-total{background:#1a4d8c}
+/* Subfamily columns */
+.summary-table .sf-col{min-width:42px;text-align:right;cursor:pointer;position:relative}
+.summary-table .sf-col:hover{background:#e8f0fe !important}
+.summary-table .sf-col .aln-dot{position:absolute;top:1px;right:1px;width:5px;height:5px;border-radius:50%;background:#2196f3;opacity:.6}
+.aln-links{margin:6px 0;padding:4px 6px;background:#f0f6ff;border:1px solid #c0d4f0;border-radius:3px;font-size:10px}
+.aln-links a{margin-right:8px;text-decoration:none;color:#1a4d8c;font-weight:600}
+.aln-links a:hover{text-decoration:underline}
+.summary-table .sf-vertical{writing-mode:vertical-lr;text-orientation:mixed;font-size:9px;max-width:30px;min-width:30px;cursor:pointer;padding:2px 1px}
+.summary-table .sf-vertical:hover{background:#15407a}
+.summary-table tfoot td{font-weight:700;background:#e8ecf0;border-top:2px solid #999}
+.summary-table .group-header td{background:#e0e6ed;font-weight:700;font-size:10px;border-top:2px solid #888}
+.summary-table tr:hover td:not(.group-header):not(.sticky-species):not(.sticky-total){background-color:rgba(232,240,254,.4)}
+.summary-table .fam-hdr{background:#2c3e50;text-align:center;font-size:10px;letter-spacing:.5px}
+/* heatmap */
+.sc-high{background:#1a6b3c;color:#fff}.sc-med{background:#5ab87a;color:#000}.sc-low{background:#c8e6c9;color:#333}.sc-zero{background:#fff;color:#ccc}
+/* curation */
+.sc-fp{background:#f5f5f5;color:#bbb;text-decoration:line-through}
+.sc-curated{outline:2px solid #e67e22;outline-offset:-2px}
+.curation-box{margin:6px 0;padding:6px 8px;background:#fff8e1;border:1px solid #e6c35c;border-radius:3px;font-size:10px}
+.curation-box .orig-val{font-weight:700;color:#555}
+.curation-btns{margin:4px 0;display:flex;gap:6px;flex-wrap:wrap}
+.curation-btns button{font-size:10px;padding:2px 8px}
+.seq-list{max-height:300px;overflow-y:auto;border:1px solid #ccc;font-family:'Courier New',monospace;font-size:10px;background:#fafafa}
+.seq-item{padding:2px 6px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:6px}
+.seq-item:hover{background:#e8f0fe}
+.seq-item.excluded{background:#fee;color:#999;text-decoration:line-through}
+.seq-item label{flex:1;cursor:pointer;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="topbar">
+    <span class="title">SINE-KB</span>
+    <span class="stats" id="topStats"></span>
+    <div class="actions">
+      <button onclick="exportJSON()" title="Download data.json">Export JSON</button>
+      <button onclick="exportFASTA()" title="Download all consensus sequences as FASTA">Export FASTA</button>
+      <button onclick="document.getElementById('fileImport').click()" title="Import data.json">Import</button>
+      <input type="file" id="fileImport" accept=".json" style="display:none" onchange="importJSON(event)">
+      <button onclick="resetData()" title="Discard edits, reload original">Reset</button>
+    </div>
+  </div>
+  <div id="main">
+    <div id="sidebar">
+      <div class="panel-header">Navigator</div>
+      <div class="tree-section">Families</div>
+      <div class="tree" id="famTree"></div>
+      <div class="tree-section">Taxonomy</div>
+      <div class="tree" id="taxTree"></div>
+    </div>
+    <div class="resize-handle" id="resizeHandle"></div>
+    <div id="content">
+      <div id="tabs">
+        <div class="tab" data-tab="subfamilies">Subfamilies</div>
+        <div class="tab" data-tab="families">Families</div>
+        <div class="tab" data-tab="instances">Instances</div>
+        <div class="tab" data-tab="taxonomy">Taxonomy</div>
+        <div class="tab" data-tab="sequences">Sequences</div>
+        <div class="tab active" data-tab="summary">Summary</div>
+      </div>
+      <div id="view"><div class="table-wrap" id="tableWrap"></div></div>
+      <div id="detail">
+        <div class="detail-header"><span id="detailTitle"></span><button onclick="closeDetail()">&times;</button></div>
+        <div class="detail-body" id="detailBody"></div>
+      </div>
+    </div>
+  </div>
+  <div id="statusbar">
+    <span id="statusRecords"></span>
+    <span id="statusUnsaved" class="unsaved hidden">UNSAVED CHANGES</span>
+    <span style="margin-left:auto" id="statusInfo"></span>
+  </div>
+</div>
+
+<script>
+// ===================== DATA LAYER =====================
+let DATA = null;
+let ORIGINAL = null;
+let DIRTY = false;
+
+function loadData(){
+  const saved = localStorage.getItem('sinekb_data');
+  if(saved){
+    try{ DATA = JSON.parse(saved); DIRTY = true; }catch(e){ DATA = null; }
+  }
+  if(!DATA){
+    return fetch('data.json').then(r=>r.json()).then(d=>{ DATA=d; ORIGINAL=JSON.stringify(d); init(); });
+  }
+  if(!ORIGINAL) fetch('data.json').then(r=>r.json()).then(d=>{ ORIGINAL=JSON.stringify(d); }).catch(()=>{});
+  init();
+}
+
+function save(){
+  localStorage.setItem('sinekb_data', JSON.stringify(DATA));
+  DIRTY = true;
+  updateStatus();
+}
+
+function resetData(){
+  if(!confirm('Discard all edits and reload original data?')) return;
+  localStorage.removeItem('sinekb_data');
+  DIRTY = false;
+  if(ORIGINAL) DATA = JSON.parse(ORIGINAL);
+  else location.reload();
+  init();
+}
+
+function exportJSON(){
+  const blob = new Blob([JSON.stringify(DATA,null,2)], {type:'application/json'});
+  const a = document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download='data.json'; a.click();
+}
+
+function exportFASTA(){
+  let fa = '';
+  for(const fam of DATA.families){
+    for(const sf of fam.subfamilies||[]){
+      fa += '>' + (sf.id||sf.name) + ' ' + sf.name + ' [' + fam.name + '] len=' + (sf.length||'') + '\n';
+      const seq = sf.sequence||'';
+      for(let i=0;i<seq.length;i+=80) fa += seq.slice(i,i+80)+'\n';
+    }
+  }
+  const blob = new Blob([fa], {type:'text/plain'});
+  const a = document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download='sinekb_consensus.fa'; a.click();
+}
+
+function importJSON(ev){
+  const f = ev.target.files[0]; if(!f) return;
+  const r = new FileReader();
+  r.onload = function(){ try{ DATA=JSON.parse(r.result); save(); init(); }catch(e){ alert('Invalid JSON'); } };
+  r.readAsText(f);
+  ev.target.value='';
+}
+
+// ===================== DERIVED DATA =====================
+function allSubfamilies(){
+  const rows=[];
+  for(const fam of DATA.families){
+    for(const sf of fam.subfamilies||[]){
+      rows.push({...sf, _family: fam.name, _familyHead: fam.head_type});
+    }
+  }
+  return rows;
+}
+
+function allInstances(){
+  const rows=[];
+  for(const fam of DATA.families){
+    for(const sf of fam.subfamilies||[]){
+      for(const inst of sf.instances||[]){
+        rows.push({...inst, _family: fam.name, _subfamily: sf.name, _sfId: sf.id});
+      }
+    }
+  }
+  return rows;
+}
+
+// ===================== INIT =====================
+let currentTab = 'summary';
+let sortCol = null, sortDir = 1;
+let filterFamily = null;
+let filterTaxon = null;
+
+function init(){
+  buildSidebar();
+  renderTab();
+  updateStatus();
+}
+
+function updateStatus(){
+  const sfs = allSubfamilies();
+  const insts = allInstances();
+  const totalCopies = insts.reduce((s,i)=>s+(i.copy_count||0),0);
+  document.getElementById('topStats').textContent =
+    DATA.families.length + ' families | ' + sfs.length + ' subfamilies | ' + insts.length + ' instances | ' + totalCopies.toLocaleString() + ' total copies';
+  document.getElementById('statusRecords').textContent = 'Records: ' + sfs.length + ' subfamilies, ' + insts.length + ' instances';
+  const u = document.getElementById('statusUnsaved');
+  if(DIRTY){ u.classList.remove('hidden'); } else { u.classList.add('hidden'); }
+}
+
+// ===================== SIDEBAR =====================
+function buildSidebar(){
+  var html = '';
+  for(var fi=0; fi<DATA.families.length; fi++){
+    var fam = DATA.families[fi];
+    var sfCount = (fam.subfamilies||[]).length;
+    var isActive = filterFamily === fam.name;
+    html += '<div class="tree-node' + (isActive?' active':'') + '" onclick="toggleFamilyFilter(\'' + q(fam.name) + '\')" title="' + esc(fam.description||'') + '">';
+    html += '<span class="tree-toggle">' + (sfCount>0?'&#9654;':'') + '</span>';
+    html += '<span class="tree-label">' + esc(fam.name) + '</span>';
+    html += '<span class="tree-count">(' + sfCount + ')</span>';
+    html += '</div>';
+    if(isActive){
+      for(var si=0; si<(fam.subfamilies||[]).length; si++){
+        var sf = fam.subfamilies[si];
+        var copies = (sf.instances||[]).reduce(function(s,i){return s+(i.copy_count||0);},0);
+        html += '<div class="tree-node" style="padding-left:24px" onclick="showSubfamilyDetail(\'' + q(fam.name) + '\',\'' + q(sf.name) + '\')" title="' + esc(sf.id||'') + '">';
+        html += '<span class="tree-leaf">' + esc(sf.name) + '</span>';
+        html += '<span class="tree-count">' + (copies?copies.toLocaleString():'-') + '</span>';
+        html += '</div>';
+      }
+    }
+  }
+  document.getElementById('famTree').innerHTML = html;
+
+  var taxHtml = '';
+  function renderTaxNode(node, depth){
+    if(node.taxon){
+      var isAct = filterTaxon === node.taxon;
+      taxHtml += '<div class="tree-node' + (isAct?' active':'') + '" style="padding-left:' + (8+depth*10) + 'px" onclick="toggleTaxonFilter(\'' + q(node.taxon) + '\')">';
+      taxHtml += '<span class="tree-leaf">' + esc(node.taxon.replace(/_/g,' ')) + '</span>';
+      if(node.ncbi_taxid) taxHtml += '<span class="tree-count">' + node.ncbi_taxid + '</span>';
+      taxHtml += '</div>';
+    } else {
+      taxHtml += '<div class="tree-node" style="padding-left:' + (8+depth*10) + 'px;font-weight:600;color:#444">';
+      taxHtml += esc(node.name);
+      taxHtml += '</div>';
+      for(var ci=0; ci<(node.children||[]).length; ci++) renderTaxNode(node.children[ci], depth+1);
+    }
+  }
+  for(var ti=0; ti<(DATA.taxonomy||[]).length; ti++) renderTaxNode(DATA.taxonomy[ti], 0);
+  document.getElementById('taxTree').innerHTML = taxHtml;
+}
+
+function toggleFamilyFilter(name){
+  filterFamily = filterFamily===name ? null : name;
+  buildSidebar();
+  renderTab();
+}
+
+function toggleTaxonFilter(name){
+  filterTaxon = filterTaxon===name ? null : name;
+  buildSidebar();
+  renderTab();
+}
+
+// ===================== TABS =====================
+document.getElementById('tabs').addEventListener('click', function(e){
+  var tab = e.target.closest('.tab');
+  if(!tab) return;
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});
+  tab.classList.add('active');
+  currentTab = tab.dataset.tab;
+  sortCol = null; sortDir = 1;
+  closeDetail();
+  renderTab();
+});
+
+function renderTab(){
+  closeDetail();
+  // Summary tab uses full width — hide sidebar and expand
+  var sidebar = document.getElementById('sidebar');
+  var resizeHandle = document.getElementById('resizeHandle');
+  if(currentTab === 'summary'){
+    sidebar.style.display = 'none';
+    resizeHandle.style.display = 'none';
+  } else {
+    sidebar.style.display = '';
+    resizeHandle.style.display = '';
+  }
+  switch(currentTab){
+    case 'subfamilies': renderSubfamilies(); break;
+    case 'families': renderFamilies(); break;
+    case 'instances': renderInstances(); break;
+    case 'taxonomy': renderTaxonomy(); break;
+    case 'sequences': renderSequences(); break;
+    case 'summary': renderSummary(); break;
+  }
+}
+
+// ===================== SORTING =====================
+function sortBy(col){
+  if(sortCol===col) sortDir*=-1;
+  else { sortCol=col; sortDir=1; }
+  renderTab();
+}
+
+function sortRows(rows, col, dir){
+  if(!col) return rows;
+  return rows.slice().sort(function(a,b){
+    var va=a[col], vb=b[col];
+    if(va==null) va='';
+    if(vb==null) vb='';
+    if(typeof va==='number'&&typeof vb==='number') return (va-vb)*dir;
+    return String(va).localeCompare(String(vb),'en',{numeric:true})*dir;
+  });
+}
+
+function thHtml(col, label){
+  var arrow = '';
+  if(sortCol===col) arrow = '<span class="sort-arrow">' + (sortDir>0?'&#9650;':'&#9660;') + '</span>';
+  return '<th onclick="sortBy(\'' + col + '\')">' + label + arrow + '</th>';
+}
+
+// ===================== SUBFAMILIES TABLE =====================
+function renderSubfamilies(){
+  var rows = allSubfamilies();
+  if(filterFamily) rows = rows.filter(function(r){return r._family===filterFamily;});
+  if(filterTaxon) rows = rows.filter(function(r){return (r.instances||[]).some(function(i){return i.taxon===filterTaxon;});});
+  rows = sortRows(rows, sortCol, sortDir);
+
+  var html = '<table id="dataTable"><thead><tr>';
+  html += thHtml('id','ID');
+  html += thHtml('_family','Family');
+  html += thHtml('name','Subfamily');
+  html += thHtml('length','Len');
+  html += '<th>Head</th>';
+  html += '<th>Tail motif</th>';
+  html += '<th>LINE</th>';
+  html += thHtml('_copies','Copies');
+  html += '<th>Mean sim</th>';
+  html += '<th>Top100%</th>';
+  html += '<th>Rand100%</th>';
+  html += thHtml('aliases','Aliases');
+  html += '<th>Refs</th>';
+  html += '<th style="min-width:60px">Actions</th>';
+  html += '</tr></thead><tbody>';
+
+  for(var i=0; i<rows.length; i++){
+    var sf = rows[i];
+    var copies = (sf.instances||[]).reduce(function(s,inst){return s+(inst.copy_count||0);},0);
+    var inst0 = (sf.instances||[])[0];
+    var stats = (inst0 && inst0.stats) || {};
+    var headType = (sf.modules && sf.modules.head && sf.modules.head.type) || sf._familyHead || '';
+    var tailMotif = (sf.modules && sf.modules.tail && sf.modules.tail.tail_motif) || '';
+    var lineClade = (sf.modules && sf.modules.tail && (sf.modules.tail.line_clade || sf.modules.tail.partner_line)) || '';
+    var aliases = (sf.aliases||[]).join(', ');
+    var refs = (sf.references||[]).map(function(r){return r.doi?'<a href="https://doi.org/'+r.doi+'" target="_blank">'+r.doi+'</a>':(r.note||'');}).join('; ');
+
+    html += '<tr onclick="selectSubfamily(\'' + q(sf._family) + '\',\'' + q(sf.name) + '\')" ondblclick="editSubfamily(\'' + q(sf._family) + '\',\'' + q(sf.name) + '\')" title="' + esc(sf.notes||'') + '">';
+    html += '<td class="mono" style="font-size:10px">' + esc(sf.id||'') + '</td>';
+    html += '<td>' + esc(sf._family) + '</td>';
+    html += '<td><b>' + esc(sf.name) + '</b></td>';
+    html += '<td class="num">' + (sf.length||'') + '</td>';
+    html += '<td>' + esc(headType) + '</td>';
+    html += '<td class="mono" style="font-size:10px">' + esc(tailMotif) + '</td>';
+    html += '<td>' + esc(lineClade) + '</td>';
+    html += '<td class="num">' + (copies?copies.toLocaleString():'-') + '</td>';
+    html += '<td class="num">' + (stats.sim_mean!=null?stats.sim_mean.toFixed(4):'') + '</td>';
+    html += '<td class="num">' + (stats.top100_identity!=null?stats.top100_identity+'%':'') + '</td>';
+    html += '<td class="num">' + (stats.rand100_identity!=null?stats.rand100_identity+'%':'') + '</td>';
+    html += '<td style="font-size:10px">' + esc(aliases) + '</td>';
+    html += '<td style="font-size:10px">' + refs + '</td>';
+    html += '<td><button onclick="event.stopPropagation();editSubfamily(\'' + q(sf._family) + '\',\'' + q(sf.name) + '\')">Edit</button> <button class="danger" onclick="event.stopPropagation();deleteSubfamily(\'' + q(sf._family) + '\',\'' + q(sf.name) + '\')">Del</button></td>';
+    html += '</tr>';
+  }
+  html += '</tbody></table>';
+  html += '<div style="padding:3px 6px"><button onclick="addSubfamily()">+ Add Subfamily</button></div>';
+
+  document.getElementById('tableWrap').innerHTML = html;
+  document.getElementById('statusInfo').textContent = rows.length + ' subfamilies shown';
+}
+
+function selectSubfamily(famName, sfName){
+  showSubfamilyDetail(famName, sfName);
+}
+
+function showSubfamilyDetail(famName, sfName){
+  var fam = DATA.families.find(function(f){return f.name===famName;});
+  var sf = fam && (fam.subfamilies||[]).find(function(s){return s.name===sfName;});
+  if(!sf) return;
+
+  document.getElementById('detailTitle').textContent = (sf.id||'') + ' ' + sf.name + ' [' + famName + ']';
+  document.getElementById('detail').classList.add('open');
+
+  var html = '<table><tr>';
+  html += '<th>ID</th><td>' + esc(sf.id||'') + '</td>';
+  html += '<th>Family</th><td>' + esc(famName) + '</td>';
+  html += '<th>Length</th><td>' + (sf.length||'') + ' nt</td>';
+  html += '<th>Created</th><td>' + esc(sf.created||'') + '</td>';
+  html += '<th>Modified</th><td>' + esc(sf.last_modified||'') + '</td>';
+  html += '</tr></table>';
+
+  if(sf.modules){
+    var m = sf.modules;
+    html += '<table style="margin-top:4px"><tr><th>Module</th><th>Type/Detail</th><th>Region</th><th>Extra</th></tr>';
+    if(m.head) html += '<tr><td>Head</td><td>' + esc(m.head.type||'') + '</td><td class="mono">' + esc(m.head.region||'') + '</td><td>' + (m.head.trna_gene?'tRNA: '+esc(m.head.trna_gene):'') + ' ' + (m.head.trna_identity_pct?m.head.trna_identity_pct+'%':'') + '</td></tr>';
+    if(m.body) html += '<tr><td>Body</td><td>' + esc(m.body.core_domain||'-') + '</td><td class="mono">' + esc(m.body.region||'') + '</td><td></td></tr>';
+    if(m.tail) html += '<tr><td>Tail</td><td>' + esc(m.tail.partner_line||'-') + ' ' + esc(m.tail.line_clade||'') + '</td><td class="mono">' + esc(m.tail.region||'') + '</td><td>Motif: <span class="mono">' + esc(m.tail.tail_motif||'-') + '</span></td></tr>';
+    html += '</table>';
+  }
+
+  if(sf.sequence){
+    html += '<div style="margin-top:4px;font-weight:600;font-size:10px">CONSENSUS SEQUENCE:</div>';
+    html += '<div class="seq-display">' + colorSeq(sf.sequence) + '</div>';
+  }
+
+  if(sf.notes) html += '<div style="margin-top:4px"><b>Notes:</b> ' + esc(sf.notes) + '</div>';
+  if(sf.aliases && sf.aliases.length) html += '<div><b>Aliases:</b> ' + sf.aliases.map(function(a){return esc(a);}).join(', ') + '</div>';
+  if(sf.references && sf.references.length){
+    html += '<div><b>References:</b> ';
+    html += sf.references.map(function(r){ return r.doi ? '<a href="https://doi.org/'+r.doi+'" target="_blank">'+r.doi+'</a>' + (r.note?' ('+esc(r.note)+')':'') : esc(r.note||''); }).join('; ');
+    html += '</div>';
+  }
+
+  if(sf.instances && sf.instances.length){
+    html += '<table style="margin-top:4px"><tr><th>Taxon</th><th>NCBI TaxID</th><th>Assembly</th><th>Status</th><th>Copies</th><th>Original</th><th>Method</th><th>Mean sim</th><th>Median sim</th><th>Top100%</th><th>Rand100%</th><th>Notes</th></tr>';
+    for(var ii=0; ii<sf.instances.length; ii++){
+      var inst = sf.instances[ii];
+      var st = inst.stats||{};
+      var isFP = inst.status==='false_positive';
+      html += '<tr'+(isFP?' style="color:#bbb;text-decoration:line-through"':'')+'>';
+      html += '<td>' + esc(inst.taxon||'') + '</td>';
+      html += '<td>' + (inst.ncbi_taxid||'') + '</td>';
+      html += '<td>' + esc(inst.genome_assembly||'') + '</td>';
+      html += '<td>' + esc(inst.status||'') + '</td>';
+      html += '<td class="num">' + (inst.copy_count!=null?inst.copy_count.toLocaleString():'-') + '</td>';
+      html += '<td class="num">' + (inst.original_copy_count!=null?inst.original_copy_count.toLocaleString():'') + '</td>';
+      html += '<td>' + esc(inst.copy_count_method||'') + '</td>';
+      html += '<td class="num">' + (st.sim_mean!=null?st.sim_mean.toFixed(4):'') + '</td>';
+      html += '<td class="num">' + (st.sim_median!=null?st.sim_median.toFixed(4):'') + '</td>';
+      html += '<td class="num">' + (st.top100_identity!=null?st.top100_identity+'%':'') + '</td>';
+      html += '<td class="num">' + (st.rand100_identity!=null?st.rand100_identity+'%':'') + '</td>';
+      html += '<td>' + esc(inst.notes||'') + (inst.curation_notes?' <em>['+esc(inst.curation_notes)+']</em>':'') + '</td>';
+      html += '</tr>';
+    }
+    html += '</table>';
+  }
+
+  document.getElementById('detailBody').innerHTML = html;
+}
+
+function closeDetail(){
+  document.getElementById('detail').classList.remove('open');
+}
+
+// ===================== FAMILIES TABLE =====================
+function renderFamilies(){
+  var rows = DATA.families.slice();
+  rows = sortRows(rows, sortCol, sortDir);
+
+  var html = '<table id="dataTable"><thead><tr>';
+  html += thHtml('name','Family');
+  html += thHtml('head_type','Head type');
+  html += '<th>Subfamilies</th>';
+  html += '<th>Total copies</th>';
+  html += '<th>Description</th>';
+  html += '<th>Notes</th>';
+  html += thHtml('created','Created');
+  html += '<th>Actions</th>';
+  html += '</tr></thead><tbody>';
+
+  for(var i=0; i<rows.length; i++){
+    var fam = rows[i];
+    var sfCount = (fam.subfamilies||[]).length;
+    var totalCopies = (fam.subfamilies||[]).reduce(function(s,sf){
+      return s + (sf.instances||[]).reduce(function(ss,inst){return ss+(inst.copy_count||0);},0);
+    },0);
+
+    html += '<tr ondblclick="editFamily(\'' + q(fam.name) + '\')">';
+    html += '<td><b>' + esc(fam.name) + '</b></td>';
+    html += '<td>' + esc(fam.head_type||'') + '</td>';
+    html += '<td class="num">' + sfCount + '</td>';
+    html += '<td class="num">' + (totalCopies?totalCopies.toLocaleString():'-') + '</td>';
+    html += '<td style="white-space:normal;max-width:350px;font-size:10px">' + esc(fam.description||'') + '</td>';
+    html += '<td style="white-space:normal;max-width:200px;font-size:10px">' + esc(fam.notes||'') + '</td>';
+    html += '<td>' + esc(fam.created||'') + '</td>';
+    html += '<td><button onclick="editFamily(\'' + q(fam.name) + '\')">Edit</button> <button class="danger" onclick="deleteFamily(\'' + q(fam.name) + '\')">Del</button></td>';
+    html += '</tr>';
+  }
+  html += '</tbody></table>';
+  html += '<div style="padding:3px 6px"><button onclick="addFamily()">+ Add Family</button></div>';
+
+  document.getElementById('tableWrap').innerHTML = html;
+  document.getElementById('statusInfo').textContent = rows.length + ' families';
+}
+
+// ===================== INSTANCES TABLE =====================
+function renderInstances(){
+  var rows = allInstances();
+  if(filterFamily) rows = rows.filter(function(r){return r._family===filterFamily;});
+  if(filterTaxon) rows = rows.filter(function(r){return r.taxon===filterTaxon;});
+  rows = sortRows(rows, sortCol, sortDir);
+
+  var html = '<table id="dataTable"><thead><tr>';
+  html += thHtml('_family','Family');
+  html += thHtml('_subfamily','Subfamily');
+  html += thHtml('_sfId','SF ID');
+  html += thHtml('taxon','Taxon');
+  html += thHtml('ncbi_taxid','NCBI TaxID');
+  html += thHtml('genome_assembly','Assembly');
+  html += thHtml('status','Status');
+  html += thHtml('copy_count','Copies');
+  html += thHtml('copy_count_method','Method');
+  html += '<th>Mean sim</th>';
+  html += '<th>Median sim</th>';
+  html += '<th>Top100%</th>';
+  html += '<th>Rand100%</th>';
+  html += '<th>Notes</th>';
+  html += '<th>Actions</th>';
+  html += '</tr></thead><tbody>';
+
+  for(var i=0; i<rows.length; i++){
+    var inst = rows[i];
+    var st = inst.stats||{};
+    html += '<tr ondblclick="editInstance(\'' + q(inst._family) + '\',\'' + q(inst._subfamily) + '\',\'' + q(inst.taxon) + '\')">';
+    html += '<td>' + esc(inst._family) + '</td>';
+    html += '<td>' + esc(inst._subfamily) + '</td>';
+    html += '<td class="mono" style="font-size:10px">' + esc(inst._sfId||'') + '</td>';
+    html += '<td><i>' + esc((inst.taxon||'').replace(/_/g,' ')) + '</i></td>';
+    html += '<td class="num">' + (inst.ncbi_taxid||'') + '</td>';
+    html += '<td>' + esc(inst.genome_assembly||'') + '</td>';
+    html += '<td>' + esc(inst.status||'') + '</td>';
+    html += '<td class="num">' + (inst.copy_count!=null?inst.copy_count.toLocaleString():'-') + '</td>';
+    html += '<td>' + esc(inst.copy_count_method||'') + '</td>';
+    html += '<td class="num">' + (st.sim_mean!=null?st.sim_mean.toFixed(4):'') + '</td>';
+    html += '<td class="num">' + (st.sim_median!=null?st.sim_median.toFixed(4):'') + '</td>';
+    html += '<td class="num">' + (st.top100_identity!=null?st.top100_identity+'%':'') + '</td>';
+    html += '<td class="num">' + (st.rand100_identity!=null?st.rand100_identity+'%':'') + '</td>';
+    html += '<td style="white-space:normal;max-width:200px;font-size:10px">' + esc(inst.notes||'') + '</td>';
+    html += '<td><button onclick="editInstance(\'' + q(inst._family) + '\',\'' + q(inst._subfamily) + '\',\'' + q(inst.taxon) + '\')">Edit</button> <button class="danger" onclick="deleteInstance(\'' + q(inst._family) + '\',\'' + q(inst._subfamily) + '\',\'' + q(inst.taxon) + '\')">Del</button></td>';
+    html += '</tr>';
+  }
+  html += '</tbody></table>';
+  html += '<div style="padding:3px 6px"><button onclick="addInstance()">+ Add Instance</button></div>';
+
+  document.getElementById('tableWrap').innerHTML = html;
+  document.getElementById('statusInfo').textContent = rows.length + ' instances shown';
+}
+
+// ===================== TAXONOMY TABLE =====================
+function renderTaxonomy(){
+  var rows = [];
+  function flatten(node, path, depth){
+    if(node.taxon){
+      var totalCopies = 0, sfCount = 0;
+      for(var fi=0;fi<DATA.families.length;fi++){
+        var fam=DATA.families[fi];
+        for(var si=0;si<(fam.subfamilies||[]).length;si++){
+          var sf=fam.subfamilies[si];
+          for(var ii=0;ii<(sf.instances||[]).length;ii++){
+            if(sf.instances[ii].taxon===node.taxon){ totalCopies += sf.instances[ii].copy_count||0; sfCount++; }
+          }
+        }
+      }
+      rows.push({taxon:node.taxon, ncbi_taxid:node.ncbi_taxid, common_name:node.common_name||'', path:path, depth:depth, totalCopies:totalCopies, sfCount:sfCount});
+    } else {
+      rows.push({clade:node.name, path:path, depth:depth, childCount:(node.children||[]).length});
+      for(var ci=0;ci<(node.children||[]).length;ci++) flatten(node.children[ci], path+' > '+(node.children[ci].name||node.children[ci].taxon||''), depth+1);
+    }
+  }
+  for(var ti=0;ti<(DATA.taxonomy||[]).length;ti++) flatten(DATA.taxonomy[ti], DATA.taxonomy[ti].name, 0);
+
+  var html = '<table id="dataTable"><thead><tr>';
+  html += '<th>Hierarchy</th><th>Name</th><th>Type</th><th>NCBI TaxID</th><th>Common name</th><th>SINE subfamilies</th><th>Total copies</th>';
+  html += '</tr></thead><tbody>';
+
+  for(var i=0;i<rows.length;i++){
+    var r = rows[i];
+    var indent = r.depth * 16;
+    if(r.clade){
+      html += '<tr style="background:#eef2f7"><td style="padding-left:' + (indent+4) + 'px;font-weight:600">' + esc(r.clade) + '</td><td></td><td>clade</td><td></td><td></td><td class="num">' + r.childCount + ' children</td><td></td></tr>';
+    } else {
+      html += '<tr><td style="padding-left:' + (indent+4) + 'px"><i>' + esc(r.taxon.replace(/_/g,' ')) + '</i></td>';
+      html += '<td>' + esc(r.taxon) + '</td><td>species</td>';
+      html += '<td class="num">' + (r.ncbi_taxid||'') + '</td>';
+      html += '<td>' + esc(r.common_name) + '</td>';
+      html += '<td class="num">' + (r.sfCount||'-') + '</td>';
+      html += '<td class="num">' + (r.totalCopies?r.totalCopies.toLocaleString():'-') + '</td>';
+      html += '</tr>';
+    }
+  }
+  html += '</tbody></table>';
+
+  document.getElementById('tableWrap').innerHTML = html;
+  document.getElementById('statusInfo').textContent = rows.length + ' taxonomy nodes';
+}
+
+// ===================== SEQUENCES TABLE =====================
+function renderSequences(){
+  var rows = allSubfamilies();
+  if(filterFamily) rows = rows.filter(function(r){return r._family===filterFamily;});
+  rows = sortRows(rows, sortCol, sortDir);
+
+  var html = '<table id="dataTable"><thead><tr>';
+  html += thHtml('id','ID');
+  html += thHtml('_family','Family');
+  html += thHtml('name','Subfamily');
+  html += thHtml('length','Len');
+  html += '<th>Head region</th><th>Body region</th><th>Tail region</th>';
+  html += '<th style="min-width:400px">Consensus sequence</th>';
+  html += '</tr></thead><tbody>';
+
+  for(var i=0;i<rows.length;i++){
+    var sf = rows[i];
+    var m = sf.modules||{};
+    html += '<tr>';
+    html += '<td class="mono" style="font-size:10px">' + esc(sf.id||'') + '</td>';
+    html += '<td>' + esc(sf._family) + '</td>';
+    html += '<td><b>' + esc(sf.name) + '</b></td>';
+    html += '<td class="num">' + (sf.length||'') + '</td>';
+    html += '<td class="mono" style="font-size:10px">' + esc(m.head?m.head.region:'') + '</td>';
+    html += '<td class="mono" style="font-size:10px">' + esc(m.body?m.body.region:'') + '</td>';
+    html += '<td class="mono" style="font-size:10px">' + esc(m.tail?m.tail.region:'') + '</td>';
+    html += '<td><div class="seq-display" style="max-height:36px;font-size:10px">' + colorSeq(sf.sequence||'') + '</div></td>';
+    html += '</tr>';
+  }
+  html += '</tbody></table>';
+
+  document.getElementById('tableWrap').innerHTML = html;
+  document.getElementById('statusInfo').textContent = rows.length + ' sequences';
+}
+
+// ===================== SEQUENCE COLORING =====================
+function colorSeq(seq){
+  var out = '';
+  for(var i=0;i<seq.length;i++){
+    var c = seq[i];
+    var u = c.toUpperCase();
+    if('ATGCN'.indexOf(u)>=0) out += '<span class="' + u + '">' + c + '</span>';
+    else out += c;
+  }
+  return out;
+}
+
+// ===================== EDIT MODALS =====================
+function showModal(title, bodyHtml, onSave){
+  var overlay = document.createElement('div');
+  overlay.className = 'modal-overlay';
+  overlay.innerHTML = '<div class="modal">' +
+    '<div class="modal-title"><span>' + title + '</span><button onclick="this.closest(\'.modal-overlay\').remove()">&times;</button></div>' +
+    '<div class="modal-body">' + bodyHtml + '</div>' +
+    '<div class="modal-footer">' +
+      '<button onclick="this.closest(\'.modal-overlay\').remove()">Cancel</button>' +
+      '<button class="primary" id="modalSaveBtn">Save</button>' +
+    '</div>' +
+  '</div>';
+  document.body.appendChild(overlay);
+  overlay.querySelector('#modalSaveBtn').addEventListener('click', function(){
+    if(onSave(overlay)!==false) overlay.remove();
+  });
+  overlay.addEventListener('click', function(e){ if(e.target===overlay) overlay.remove(); });
+  var first = overlay.querySelector('input,textarea,select');
+  if(first) setTimeout(function(){first.focus();}, 50);
+}
+
+// --- Family CRUD ---
+function editFamily(name){
+  var fam = DATA.families.find(function(f){return f.name===name;});
+  if(!fam) return;
+  var body =
+    '<label>Name</label><input id="mName" value="' + esc(fam.name) + '">' +
+    '<label>Head type</label><input id="mHead" value="' + esc(fam.head_type||'') + '">' +
+    '<label>Description</label><textarea id="mDesc">' + esc(fam.description||'') + '</textarea>' +
+    '<label>Notes</label><textarea id="mNotes">' + esc(fam.notes||'') + '</textarea>';
+  showModal('Edit Family: '+name, body, function(ov){
+    fam.name = ov.querySelector('#mName').value.trim() || fam.name;
+    fam.head_type = ov.querySelector('#mHead').value.trim();
+    fam.description = ov.querySelector('#mDesc').value.trim();
+    fam.notes = ov.querySelector('#mNotes').value.trim();
+    save(); renderTab(); buildSidebar();
+  });
+}
+
+function addFamily(){
+  var body =
+    '<label>Name</label><input id="mName" value="">' +
+    '<label>Head type</label><input id="mHead" value="">' +
+    '<label>Description</label><textarea id="mDesc"></textarea>';
+  showModal('Add Family', body, function(ov){
+    var name = ov.querySelector('#mName').value.trim();
+    if(!name){ alert('Name required'); return false; }
+    if(DATA.families.find(function(f){return f.name===name;})){ alert('Family exists'); return false; }
+    DATA.families.push({name:name, head_type:ov.querySelector('#mHead').value.trim(), description:ov.querySelector('#mDesc').value.trim(), notes:'', created:today(), _slug:name, subfamilies:[]});
+    save(); renderTab(); buildSidebar();
+  });
+}
+
+function deleteFamily(name){
+  if(!confirm('Delete family "'+name+'" and all its subfamilies?')) return;
+  DATA.families = DATA.families.filter(function(f){return f.name!==name;});
+  save(); renderTab(); buildSidebar();
+}
+
+// --- Subfamily CRUD ---
+function editSubfamily(famName, sfName){
+  var fam = DATA.families.find(function(f){return f.name===famName;});
+  var sf = fam && (fam.subfamilies||[]).find(function(s){return s.name===sfName;});
+  if(!sf) return;
+  var m = sf.modules||{};
+  var famOptions = DATA.families.map(function(f){return '<option'+(f.name===famName?' selected':'')+'>'+esc(f.name)+'</option>';}).join('');
+  var body =
+    '<label>Subfamily name</label><input id="mName" value="' + esc(sf.name) + '">' +
+    '<label>ID</label><input id="mId" value="' + esc(sf.id||'') + '">' +
+    '<label>Family</label><select id="mFam">' + famOptions + '</select>' +
+    '<label>Consensus sequence</label><textarea class="seq-input" id="mSeq">' + esc(sf.sequence||'') + '</textarea>' +
+    '<label>Length (auto-calculated if blank)</label><input id="mLen" value="' + (sf.length||'') + '">' +
+    '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px">' +
+      '<div><label>Head type</label><input id="mHeadType" value="' + esc(m.head?m.head.type:'') + '"></div>' +
+      '<div><label>Head region</label><input id="mHeadRegion" value="' + esc(m.head?m.head.region:'') + '"></div>' +
+      '<div><label>tRNA gene</label><input id="mTrnaGene" value="' + esc(m.head?m.head.trna_gene||'':'') + '"></div>' +
+      '<div><label>Body core domain</label><input id="mBodyCore" value="' + esc(m.body?m.body.core_domain||'':'') + '"></div>' +
+      '<div><label>Body region</label><input id="mBodyRegion" value="' + esc(m.body?m.body.region:'') + '"></div>' +
+      '<div></div>' +
+      '<div><label>Tail partner LINE</label><input id="mTailLine" value="' + esc(m.tail?m.tail.partner_line||'':'') + '"></div>' +
+      '<div><label>Tail region</label><input id="mTailRegion" value="' + esc(m.tail?m.tail.region:'') + '"></div>' +
+      '<div><label>Tail motif</label><input id="mTailMotif" value="' + esc(m.tail?m.tail.tail_motif||'':'') + '"></div>' +
+    '</div>' +
+    '<label>Aliases (comma-separated)</label><input id="mAliases" value="' + esc((sf.aliases||[]).join(', ')) + '">' +
+    '<label>Notes</label><textarea id="mNotes">' + esc(sf.notes||'') + '</textarea>' +
+    '<label>References (one DOI per line)</label><textarea id="mRefs">' + (sf.references||[]).map(function(r){return r.doi||r.note||'';}).join('\n') + '</textarea>';
+
+  showModal('Edit Subfamily: '+sfName, body, function(ov){
+    var newFam = ov.querySelector('#mFam').value;
+    sf.name = ov.querySelector('#mName').value.trim() || sf.name;
+    sf.id = ov.querySelector('#mId').value.trim();
+    sf.sequence = ov.querySelector('#mSeq').value.trim().replace(/\s/g,'');
+    sf.length = parseInt(ov.querySelector('#mLen').value) || sf.sequence.length;
+    sf.notes = ov.querySelector('#mNotes').value.trim();
+    sf.aliases = ov.querySelector('#mAliases').value.split(',').map(function(s){return s.trim();}).filter(Boolean);
+    sf.references = ov.querySelector('#mRefs').value.split('\n').map(function(s){return s.trim();}).filter(Boolean).map(function(s){return s.indexOf('10.')===0?{doi:s,note:''}:{doi:'',note:s};});
+    sf.last_modified = today();
+    sf._slug = sf.name;
+    sf.family = newFam;
+    if(!sf.modules) sf.modules = {};
+    sf.modules.head = {type:ov.querySelector('#mHeadType').value.trim(), trna_gene:ov.querySelector('#mTrnaGene').value.trim()||null, trna_identity_pct:null, trna_overlap_nt:null, region:ov.querySelector('#mHeadRegion').value.trim()};
+    sf.modules.body = {core_domain:ov.querySelector('#mBodyCore').value.trim()||null, region:ov.querySelector('#mBodyRegion').value.trim()};
+    sf.modules.tail = {partner_line:ov.querySelector('#mTailLine').value.trim()||null, line_clade:ov.querySelector('#mTailLine').value.trim()||null, tail_motif:ov.querySelector('#mTailMotif').value.trim()||null, region:ov.querySelector('#mTailRegion').value.trim()};
+    if(newFam !== famName){
+      fam.subfamilies = fam.subfamilies.filter(function(s){return s!==sf;});
+      var targetFam = DATA.families.find(function(f){return f.name===newFam;});
+      if(targetFam) targetFam.subfamilies.push(sf);
+    }
+    save(); renderTab(); buildSidebar();
+  });
+}
+
+function addSubfamily(){
+  var famOptions = DATA.families.map(function(f){return '<option>'+esc(f.name)+'</option>';}).join('');
+  var body =
+    '<label>Family</label><select id="mFam">' + famOptions + '</select>' +
+    '<label>Subfamily name</label><input id="mName" value="">' +
+    '<label>ID</label><input id="mId" value="">' +
+    '<label>Consensus sequence</label><textarea class="seq-input" id="mSeq"></textarea>' +
+    '<label>Head type</label><input id="mHeadType" value="">' +
+    '<label>Tail motif</label><input id="mTailMotif" value="">' +
+    '<label>Notes</label><textarea id="mNotes"></textarea>';
+  showModal('Add Subfamily', body, function(ov){
+    var famName = ov.querySelector('#mFam').value;
+    var name = ov.querySelector('#mName').value.trim();
+    if(!name){ alert('Name required'); return false; }
+    var fam = DATA.families.find(function(f){return f.name===famName;});
+    if(!fam){ alert('Family not found'); return false; }
+    var seq = ov.querySelector('#mSeq').value.trim().replace(/\s/g,'');
+    fam.subfamilies.push({
+      name: name, id: ov.querySelector('#mId').value.trim(), sequence: seq, length: seq.length,
+      modules: {head:{type:ov.querySelector('#mHeadType').value.trim(),region:'',trna_gene:null,trna_identity_pct:null,trna_overlap_nt:null}, body:{core_domain:null,region:''}, tail:{partner_line:null,line_clade:null,tail_motif:ov.querySelector('#mTailMotif').value.trim()||null,region:''}},
+      aliases:[], references:[], notes:ov.querySelector('#mNotes').value.trim(), last_modified:today(), family:famName, created:today(), _slug:name, instances:[]
+    });
+    save(); renderTab(); buildSidebar();
+  });
+}
+
+function deleteSubfamily(famName, sfName){
+  if(!confirm('Delete subfamily "'+sfName+'"?')) return;
+  var fam = DATA.families.find(function(f){return f.name===famName;});
+  if(fam) fam.subfamilies = (fam.subfamilies||[]).filter(function(s){return s.name!==sfName;});
+  save(); renderTab(); buildSidebar(); closeDetail();
+}
+
+// --- Instance CRUD ---
+function editInstance(famName, sfName, taxon){
+  var fam = DATA.families.find(function(f){return f.name===famName;});
+  var sf = fam && (fam.subfamilies||[]).find(function(s){return s.name===sfName;});
+  var inst = sf && (sf.instances||[]).find(function(i){return i.taxon===taxon;});
+  if(!inst) return;
+  var st = inst.stats||{};
+  var isCurated = inst.curated;
+  var origCount = inst.original_copy_count;
+  var body = '';
+
+  if(isCurated && origCount!=null){
+    body += '<div class="curation-box">Curated — original pipeline count: <span class="orig-val">'+origCount.toLocaleString()+'</span>';
+    if(inst.excluded_seqs && inst.excluded_seqs.length) body += ' | '+inst.excluded_seqs.length+' seq(s) excluded';
+    if(inst.curated_date) body += ' | '+inst.curated_date;
+    body += '</div>';
+  }
+
+  body +=
+    '<label>Taxon</label><input id="mTaxon" value="' + esc(inst.taxon||'') + '">' +
+    '<label>NCBI TaxID</label><input id="mTaxId" value="' + (inst.ncbi_taxid||'') + '">' +
+    '<label>Genome assembly</label><input id="mAssembly" value="' + esc(inst.genome_assembly||'') + '">' +
+    '<label>Status</label><select id="mStatus"><option'+(inst.status==='present'?' selected':'')+'>present</option><option'+(inst.status==='absent'?' selected':'')+'>absent</option><option'+(inst.status==='unknown'?' selected':'')+'>unknown</option><option value="false_positive"'+(inst.status==='false_positive'?' selected':'')+'>false_positive</option></select>' +
+    '<label>Copy count'+(isCurated?' (curated)':'')+'</label><input id="mCopies" value="' + (inst.copy_count!=null?inst.copy_count:'') + '">' +
+    '<label>Copy count method</label><input id="mMethod" value="' + esc(inst.copy_count_method||'') + '">' +
+    '<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:4px">' +
+      '<div><label>Mean similarity</label><input id="mSimMean" value="' + (st.sim_mean!=null?st.sim_mean:'') + '"></div>' +
+      '<div><label>Median similarity</label><input id="mSimMedian" value="' + (st.sim_median!=null?st.sim_median:'') + '"></div>' +
+      '<div><label>Top100 identity %</label><input id="mTop100" value="' + (st.top100_identity!=null?st.top100_identity:'') + '"></div>' +
+      '<div><label>Rand100 identity %</label><input id="mRand100" value="' + (st.rand100_identity!=null?st.rand100_identity:'') + '"></div>' +
+    '</div>' +
+    '<label>Notes</label><textarea id="mNotes">' + esc(inst.notes||'') + '</textarea>' +
+    '<label>Curation notes</label><textarea id="mCurNotes" placeholder="Reason for curation...">'+esc(inst.curation_notes||'')+'</textarea>';
+
+  showModal('Edit Instance: '+taxon+' in '+sfName, body, function(ov){
+    var newCopies = parseFloat(ov.querySelector('#mCopies').value) || null;
+    // Track original if count changed
+    if(newCopies !== inst.copy_count && inst.original_copy_count==null){
+      inst.original_copy_count = inst.copy_count;
+    }
+    if(newCopies !== inst.copy_count || ov.querySelector('#mStatus').value !== inst.status){
+      inst.curated = true;
+      inst.curated_date = today();
+    }
+    inst.taxon = ov.querySelector('#mTaxon').value.trim() || inst.taxon;
+    inst.ncbi_taxid = parseInt(ov.querySelector('#mTaxId').value) || null;
+    inst.genome_assembly = ov.querySelector('#mAssembly').value.trim();
+    inst.status = ov.querySelector('#mStatus').value;
+    inst.copy_count = newCopies;
+    inst.copy_count_method = ov.querySelector('#mMethod').value.trim();
+    inst.notes = ov.querySelector('#mNotes').value.trim();
+    inst.curation_notes = ov.querySelector('#mCurNotes').value.trim();
+    inst.last_modified = today();
+    inst._slug = inst.taxon;
+    if(!inst.stats) inst.stats = {};
+    inst.stats.sim_mean = parseFloat(ov.querySelector('#mSimMean').value) || null;
+    inst.stats.sim_median = parseFloat(ov.querySelector('#mSimMedian').value) || null;
+    inst.stats.top100_identity = parseFloat(ov.querySelector('#mTop100').value) || null;
+    inst.stats.rand100_identity = parseFloat(ov.querySelector('#mRand100').value) || null;
+    save(); renderTab();
+  });
+}
+
+function addInstance(){
+  var sfOptions = '';
+  for(var fi=0;fi<DATA.families.length;fi++){
+    var fam=DATA.families[fi];
+    for(var si=0;si<(fam.subfamilies||[]).length;si++){
+      var sf=fam.subfamilies[si];
+      sfOptions += '<option value="'+esc(fam.name)+'|||'+esc(sf.name)+'">'+esc(fam.name)+' / '+esc(sf.name)+'</option>';
+    }
+  }
+  var body =
+    '<label>Subfamily</label><select id="mSf">' + sfOptions + '</select>' +
+    '<label>Taxon</label><input id="mTaxon" value="">' +
+    '<label>NCBI TaxID</label><input id="mTaxId" value="">' +
+    '<label>Genome assembly</label><input id="mAssembly" value="">' +
+    '<label>Status</label><select id="mStatus"><option selected>present</option><option>absent</option><option>unknown</option></select>' +
+    '<label>Copy count</label><input id="mCopies" value="">' +
+    '<label>Copy count method</label><input id="mMethod" value="">' +
+    '<label>Notes</label><textarea id="mNotes"></textarea>';
+  showModal('Add Instance', body, function(ov){
+    var parts = ov.querySelector('#mSf').value.split('|||');
+    var famName = parts[0], sfName = parts[1];
+    var taxon = ov.querySelector('#mTaxon').value.trim();
+    if(!taxon){ alert('Taxon required'); return false; }
+    var fam = DATA.families.find(function(f){return f.name===famName;});
+    var sf = fam && (fam.subfamilies||[]).find(function(s){return s.name===sfName;});
+    if(!sf){ alert('Subfamily not found'); return false; }
+    sf.instances.push({
+      taxon: taxon, ncbi_taxid: parseInt(ov.querySelector('#mTaxId').value)||null,
+      genome_assembly: ov.querySelector('#mAssembly').value.trim(),
+      status: ov.querySelector('#mStatus').value,
+      copy_count: parseFloat(ov.querySelector('#mCopies').value)||null,
+      copy_count_method: ov.querySelector('#mMethod').value.trim(),
+      notes: ov.querySelector('#mNotes').value.trim(),
+      stats:{sim_mean:null,sim_median:null,top100_identity:null,rand100_identity:null},
+      last_modified: today(), created: today(), _slug: taxon
+    });
+    save(); renderTab();
+  });
+}
+
+function deleteInstance(famName, sfName, taxon){
+  if(!confirm('Delete instance "'+taxon+'" from '+sfName+'?')) return;
+  var fam = DATA.families.find(function(f){return f.name===famName;});
+  var sf = fam && (fam.subfamilies||[]).find(function(s){return s.name===sfName;});
+  if(sf) sf.instances = (sf.instances||[]).filter(function(i){return i.taxon!==taxon;});
+  save(); renderTab();
+}
+
+// ===================== SUMMARY TABLE =====================
+function buildSummaryData(){
+  // Collect all subfamilies grouped by family
+  var sineGroups = [];
+  for(var fi=0; fi<DATA.families.length; fi++){
+    var fam = DATA.families[fi];
+    var sfs = (fam.subfamilies||[]).map(function(sf){ return sf.name; });
+    if(sfs.length) sineGroups.push({name:fam.name, subfamilies:sfs});
+  }
+  var allSfNames = [];
+  sineGroups.forEach(function(g){ allSfNames = allSfNames.concat(g.subfamilies); });
+
+  // Collect all species from taxonomy (leaf nodes), grouped by immediate parent clade
+  var taxGroups = [];
+  var groupMap = {};
+  var taxonSet = {};
+
+  function ensureGroup(name){
+    var gname = name || 'Other';
+    if(!groupMap[gname]) groupMap[gname] = {name:gname, species:[]};
+    return groupMap[gname];
+  }
+
+  function walkTax(node, parentName){
+    if(node.taxon){
+      if(!taxonSet[node.taxon]){
+        var grp = ensureGroup(parentName);
+        grp.species.push({taxon:node.taxon, common_name:node.common_name||'', ncbi_taxid:node.ncbi_taxid||null});
+        taxonSet[node.taxon] = true;
+      }
+      return;
+    }
+    var children = node.children || [];
+    var nextParent = node.name || parentName;
+    for(var ci=0; ci<children.length; ci++) walkTax(children[ci], nextParent);
+  }
+
+  for(var ti=0; ti<(DATA.taxonomy||[]).length; ti++) walkTax(DATA.taxonomy[ti], null);
+
+  Object.keys(groupMap).forEach(function(k){
+    if(groupMap[k].species.length) taxGroups.push(groupMap[k]);
+  });
+
+  // Add species that have instances but aren't in taxonomy
+  var ungrouped = [];
+  for(var fi2=0; fi2<DATA.families.length; fi2++){
+    for(var si2=0; si2<(DATA.families[fi2].subfamilies||[]).length; si2++){
+      var sf2 = DATA.families[fi2].subfamilies[si2];
+      for(var ii2=0; ii2<(sf2.instances||[]).length; ii2++){
+        var tx = sf2.instances[ii2].taxon;
+        if(tx && !taxonSet[tx]){ taxonSet[tx]=true; ungrouped.push({taxon:tx, common_name:'', ncbi_taxid:null}); }
+      }
+    }
+  }
+  if(ungrouped.length) taxGroups.push({name:'Other', species:ungrouped});
+
+  // Build copy count map: taxon -> subfam -> {total, firm, sim_mean}
+  var countMap = {};
+  for(var fi3=0; fi3<DATA.families.length; fi3++){
+    for(var si3=0; si3<(DATA.families[fi3].subfamilies||[]).length; si3++){
+      var sf3 = DATA.families[fi3].subfamilies[si3];
+      for(var ii3=0; ii3<(sf3.instances||[]).length; ii3++){
+        var inst = sf3.instances[ii3];
+        if(!inst.taxon) continue;
+        if(!countMap[inst.taxon]) countMap[inst.taxon] = {};
+        countMap[inst.taxon][sf3.name] = {
+          total: inst.copy_count||0,
+          sim_mean: (inst.stats&&inst.stats.sim_mean)||null,
+          sim_median: (inst.stats&&inst.stats.sim_median)||null,
+          alignments: inst.alignments||null,
+          curated: inst.curated||false,
+          original_copy_count: inst.original_copy_count,
+          status: inst.status||'present',
+          excluded_seqs: inst.excluded_seqs||[]
+        };
+      }
+    }
+  }
+
+  return {sineGroups:sineGroups, allSfNames:allSfNames, taxGroups:taxGroups, countMap:countMap};
+}
+
+function renderSummary(){
+  var d = buildSummaryData();
+  var sineGroups = d.sineGroups, allSfNames = d.allSfNames, taxGroups = d.taxGroups, countMap = d.countMap;
+
+  // Count total species
+  var totalSpecies = 0;
+  taxGroups.forEach(function(g){ totalSpecies += g.species.length; });
+
+  var html = '';
+  // Controls
+  html += '<div class="summary-controls">';
+  html += '<label>Filter family:</label>';
+  html += '<select id="sumFamFilter" onchange="filterSummary()">';
+  html += '<option value="">All families</option>';
+  sineGroups.forEach(function(g){ html += '<option value="'+esc(g.name)+'">'+esc(g.name)+'</option>'; });
+  html += '</select>';
+  html += '<label>Min copies:</label>';
+  html += '<input type="number" id="sumMinCopies" value="0" min="0" style="width:70px" onchange="filterSummary()">';
+  html += '<label><input type="checkbox" id="sumHideZero" onchange="filterSummary()"> Hide empty columns</label>';
+  html += '<label><input type="checkbox" id="sumShowCurated" onchange="filterSummary()"> Highlight curated</label>';
+  html += '<span style="margin-left:auto;color:#666">' + totalSpecies + ' species × ' + allSfNames.length + ' subfamilies</span>';
+  html += '</div>';
+
+  // Table
+  html += '<div class="summary-wrap"><table class="summary-table" id="sumTable">';
+
+  // Header row 1: family groups
+  html += '<thead><tr>';
+  html += '<th class="sticky-species" rowspan="2" style="cursor:pointer" onclick="sortSummary(\'species\')">Species ⇕</th>';
+  html += '<th class="sticky-total" rowspan="2" style="cursor:pointer" onclick="sortSummary(\'total\')">Total ⇕</th>';
+  var sfStart = 0;
+  sineGroups.forEach(function(g){
+    html += '<th class="fam-hdr" data-start="'+sfStart+'" data-count="'+g.subfamilies.length+'" colspan="'+g.subfamilies.length+'">'+esc(g.name)+'</th>';
+    sfStart += g.subfamilies.length;
+  });
+  html += '</tr>';
+
+  // Header row 2: subfamily names (vertical)
+  html += '<tr>';
+  allSfNames.forEach(function(sfn, idx){
+    html += '<th class="sf-vertical" data-sf="'+esc(sfn)+'" onclick="sortSummary('+idx+')">'+esc(sfn)+'</th>';
+  });
+  html += '</tr></thead>';
+
+  // Body: grouped by taxonomy family
+  html += '<tbody>';
+  taxGroups.forEach(function(grp){
+    // Group header row
+    html += '<tr class="group-header"><td class="sticky-species"><strong>'+esc(grp.name)+'</strong></td>';
+    html += '<td class="sticky-total"></td>';
+    for(var gi=0; gi<allSfNames.length; gi++) html += '<td></td>';
+    html += '</tr>';
+
+    grp.species.forEach(function(sp){
+      var rowCounts = countMap[sp.taxon]||{};
+      var rowTotal = 0;
+      allSfNames.forEach(function(sfn){ rowTotal += (rowCounts[sfn]?rowCounts[sfn].total:0); });
+
+      html += '<tr data-taxon="'+esc(sp.taxon)+'" data-group="'+esc(grp.name)+'" data-total="'+rowTotal+'">';
+      html += '<td class="sticky-species"><i>'+esc(sp.taxon.replace(/_/g,' '))+'</i>';
+      if(sp.common_name) html += '<br><span style="color:#888;font-size:9px">'+esc(sp.common_name)+'</span>';
+      html += '</td>';
+      html += '<td class="sticky-total">'+formatN(rowTotal)+'</td>';
+
+      allSfNames.forEach(function(sfn){
+        var v = rowCounts[sfn];
+        var val = v ? v.total : 0;
+        var isFP = v && v.status==='false_positive';
+        var isCurated = v && v.curated;
+        var cls = isFP?'sc-fp':val>1000?'sc-high':val>100?'sc-med':val>0?'sc-low':'sc-zero';
+        if(isCurated && !isFP) cls += ' sc-curated';
+        var tip = sfn+' in '+sp.taxon.replace(/_/g,' ')+': '+(val?val.toLocaleString():'0')+' copies';
+        if(isCurated && v.original_copy_count!=null) tip += ' (original: '+v.original_copy_count+')';
+        if(isFP) tip += ' [FALSE POSITIVE]';
+        if(v && v.sim_mean!=null) tip += ' (sim='+v.sim_mean.toFixed(3)+')';
+        html += '<td class="sf-col '+cls+'" data-sf="'+esc(sfn)+'" data-taxon="'+esc(sp.taxon)+'" data-val="'+val+'"';
+        html += ' title="'+esc(tip)+'"';
+        html += ' onclick="editSumCell(this,\''+q(sp.taxon)+'\',\''+q(sfn)+'\')"';
+        var hasAln = v && v.alignments;
+        html += '>'+(isFP?'<s style="color:#bbb">'+(v.original_copy_count||val?formatN(v.original_copy_count||val):'')+'</s>':(val?formatN(val):''))+(hasAln?'<span class="aln-dot" title="Alignments available"></span>':'')+'</td>';
+      });
+      html += '</tr>';
+    });
+  });
+  html += '</tbody>';
+
+  // Footer: totals
+  html += '<tfoot><tr>';
+  html += '<td class="sticky-species"><strong>Totals</strong></td>';
+  var grandTotal = 0;
+  var sfTotals = {};
+  allSfNames.forEach(function(sfn){ sfTotals[sfn]=0; });
+  taxGroups.forEach(function(grp){
+    grp.species.forEach(function(sp){
+      var rc = countMap[sp.taxon]||{};
+      allSfNames.forEach(function(sfn){
+        var v = rc[sfn]?rc[sfn].total:0;
+        sfTotals[sfn] += v;
+        grandTotal += v;
+      });
+    });
+  });
+  html += '<td class="sticky-total">'+formatN(grandTotal)+'</td>';
+  allSfNames.forEach(function(sfn){
+    html += '<td class="sf-col" style="font-weight:700">'+(sfTotals[sfn]?formatN(sfTotals[sfn]):'')+'</td>';
+  });
+  html += '</tr></tfoot>';
+
+  html += '</table></div>';
+
+  document.getElementById('tableWrap').innerHTML = html;
+  filterSummary();
+  document.getElementById('statusInfo').textContent = totalSpecies + ' species, ' + allSfNames.length + ' subfamilies, ' + grandTotal.toLocaleString() + ' total copies';
+}
+
+function formatN(n){ return n ? n.toLocaleString() : ''; }
+
+// --- Summary filtering ---
+function filterSummary(){
+  var famFilter = document.getElementById('sumFamFilter').value;
+  var minC = parseInt(document.getElementById('sumMinCopies').value)||0;
+  var hideZero = document.getElementById('sumHideZero').checked;
+  var rows = document.querySelectorAll('#sumTable tbody tr');
+
+  // Show/hide subfamily columns by family
+  var sfHeaders = document.querySelectorAll('#sumTable .sf-vertical');
+  var visibleSfIdx = {};
+  sfHeaders.forEach(function(h, idx){
+    var sfn = h.dataset.sf;
+    var famMatch = true;
+    if(famFilter){
+      var found = false;
+      DATA.families.forEach(function(fam){
+        if(fam.name===famFilter){
+          (fam.subfamilies||[]).forEach(function(sf){ if(sf.name===sfn) found=true; });
+        }
+      });
+      if(!found) famMatch = false;
+    }
+    // Check if column has any data
+    var hasData = true;
+    if(hideZero){
+      hasData = false;
+      rows.forEach(function(row){
+        if(row.classList.contains('group-header')) return;
+        var cells = row.querySelectorAll('.sf-col');
+        if(cells[idx]){
+          var v = parseInt(cells[idx].dataset.val)||0;
+          if(v>0) hasData = true;
+        }
+      });
+    }
+    var show = famMatch && hasData;
+    h.style.display = show ? '' : 'none';
+    visibleSfIdx[idx] = show;
+    // fam header colspan needs adjustment — complex, skip for now
+  });
+
+  // Show/hide cells
+  rows.forEach(function(row){
+    if(row.classList.contains('group-header')){
+      var cells = row.querySelectorAll('td');
+      cells.forEach(function(c, ci){ if(ci>=2) c.style.display = visibleSfIdx[ci-2]===false?'none':''; });
+      return;
+    }
+
+    var rowTotal = parseInt(row.dataset.total)||0;
+    row.style.display = rowTotal >= minC ? '' : 'none';
+
+    var sfCells = row.querySelectorAll('.sf-col');
+    sfCells.forEach(function(c, idx){ c.style.display = visibleSfIdx[idx]===false?'none':''; });
+  });
+
+  // Hide group headers with no visible member rows
+  var tbody = document.querySelector('#sumTable tbody');
+  if(tbody){
+    var allRows = Array.from(tbody.querySelectorAll('tr'));
+    var groupHeader = null;
+    var hasVisible = false;
+    allRows.forEach(function(r){
+      if(r.classList.contains('group-header')){
+        if(groupHeader) groupHeader.style.display = hasVisible ? '' : 'none';
+        groupHeader = r;
+        hasVisible = false;
+      } else if(r.style.display !== 'none') {
+        hasVisible = true;
+      }
+    });
+    if(groupHeader) groupHeader.style.display = hasVisible ? '' : 'none';
+  }
+
+  // Footer
+  var footCells = document.querySelectorAll('#sumTable tfoot .sf-col');
+  footCells.forEach(function(c, idx){ c.style.display = visibleSfIdx[idx]===false?'none':''; });
+
+  // fam header row
+  var famHdrs = document.querySelectorAll('#sumTable .fam-hdr');
+  if(famHdrs.length){
+    famHdrs.forEach(function(h){
+      var sfIdx = parseInt(h.dataset.start)||0;
+      var count = parseInt(h.dataset.count)||0;
+      var visCount = 0;
+      for(var si=0; si<count; si++){
+        if(visibleSfIdx[sfIdx+si]!==false) visCount++;
+      }
+      h.colSpan = Math.max(1, visCount);
+      h.style.display = visCount===0?'none':'';
+    });
+  }
+}
+
+// --- Summary sorting ---
+var sumSortCol = null, sumSortDir = 1;
+function sortSummary(col){
+  if(sumSortCol===col) sumSortDir *= -1;
+  else { sumSortCol = col; sumSortDir = 1; }
+
+  var tbody = document.querySelector('#sumTable tbody');
+  if(!tbody) return;
+  var rows = Array.from(tbody.querySelectorAll('tr'));
+
+  // Separate group headers and data rows
+  var groups = [];
+  var currentGrp = null;
+  rows.forEach(function(row){
+    if(row.classList.contains('group-header')){
+      currentGrp = {header: row, rows: []};
+      groups.push(currentGrp);
+    } else if(currentGrp) {
+      currentGrp.rows.push(row);
+    }
+  });
+
+  // Sort within each group
+  groups.forEach(function(g){
+    g.rows.sort(function(a,b){
+      var va, vb;
+      if(col==='species'){
+        va = a.dataset.taxon||''; vb = b.dataset.taxon||'';
+        return va.localeCompare(vb) * sumSortDir;
+      } else if(col==='total'){
+        va = parseInt(a.dataset.total)||0; vb = parseInt(b.dataset.total)||0;
+        return (vb-va)*sumSortDir;
+      } else {
+        var cellsA = a.querySelectorAll('.sf-col');
+        var cellsB = b.querySelectorAll('.sf-col');
+        va = parseInt(cellsA[col]?cellsA[col].dataset.val:0)||0;
+        vb = parseInt(cellsB[col]?cellsB[col].dataset.val:0)||0;
+        return (vb-va)*sumSortDir;
+      }
+    });
+  });
+
+  // Re-append
+  while(tbody.firstChild) tbody.removeChild(tbody.firstChild);
+  groups.forEach(function(g){
+    tbody.appendChild(g.header);
+    g.rows.forEach(function(r){ tbody.appendChild(r); });
+  });
+}
+
+// --- Summary cell editing ---
+var MSA_VIEWER = 'https://toki-bio.github.io/MSA-viewer/';
+var SINEDB_BASE = 'https://toki-bio.github.io/SINEdb/';
+function viewerLink(relPath, label){
+  return '<a href="'+MSA_VIEWER+'?url='+encodeURIComponent(SINEDB_BASE+relPath)+'" target="_blank">'+esc(label)+'</a>';
+}
+
+function _findSfInst(sfName, taxon){
+  var fam=null, sf=null, inst=null;
+  for(var fi=0;fi<DATA.families.length;fi++){
+    for(var si=0;si<(DATA.families[fi].subfamilies||[]).length;si++){
+      if(DATA.families[fi].subfamilies[si].name===sfName){
+        fam=DATA.families[fi]; sf=DATA.families[fi].subfamilies[si]; break;
+      }
+    }
+    if(sf) break;
+  }
+  if(sf && taxon) inst=(sf.instances||[]).find(function(i){return i.taxon===taxon;});
+  return {fam:fam, sf:sf, inst:inst};
+}
+
+function editSumCell(cell, taxon, sfName){
+  var r = _findSfInst(sfName, taxon);
+  var fam=r.fam, sf=r.sf, inst=r.inst;
+  if(!sf) return;
+
+  var curVal = inst ? (inst.copy_count||0) : 0;
+  var curSimMean = inst && inst.stats ? (inst.stats.sim_mean||'') : '';
+  var curSimMedian = inst && inst.stats ? (inst.stats.sim_median||'') : '';
+  var curStatus = inst ? (inst.status||'present') : 'present';
+  var curNotes = inst ? (inst.notes||'') : '';
+  var curCurNotes = inst ? (inst.curation_notes||'') : '';
+  var origCount = inst ? inst.original_copy_count : null;
+  var isCurated = inst && inst.curated;
+  var excludedSeqs = inst ? (inst.excluded_seqs||[]) : [];
+
+  var body =
+    '<label>Subfamily</label><input value="'+esc(sfName)+'" disabled style="background:#eee">' +
+    '<label>Taxon</label><input value="'+esc(taxon.replace(/_/g,' '))+'" disabled style="background:#eee">';
+
+  // Show original count if curated
+  if(isCurated && origCount!=null){
+    body += '<div class="curation-box">Curated — original pipeline count: <span class="orig-val">'+origCount.toLocaleString()+'</span>';
+    if(excludedSeqs.length) body += ' | '+excludedSeqs.length+' sequence(s) excluded';
+    if(inst.curated_date) body += ' | curated '+inst.curated_date;
+    body += '</div>';
+  }
+
+  body +=
+    '<label>Copy count'+(isCurated?' (curated)':'')+'</label><input id="mCopies" type="number" value="'+curVal+'">' +
+    '<label>Status</label><select id="mStatus">' +
+      '<option'+(curStatus==='present'?' selected':'')+'>present</option>' +
+      '<option'+(curStatus==='absent'?' selected':'')+'>absent</option>' +
+      '<option'+(curStatus==='unknown'?' selected':'')+'>unknown</option>' +
+      '<option value="false_positive"'+(curStatus==='false_positive'?' selected':'')+'>false_positive</option>' +
+    '</select>' +
+    '<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">' +
+      '<div><label>Mean similarity</label><input id="mSimMean" value="'+curSimMean+'"></div>' +
+      '<div><label>Median similarity</label><input id="mSimMedian" value="'+curSimMedian+'"></div>' +
+    '</div>' +
+    '<label>Notes</label><textarea id="mNotes">'+esc(curNotes)+'</textarea>' +
+    '<label>Curation notes</label><textarea id="mCurNotes" placeholder="Reason for curation...">'+esc(curCurNotes)+'</textarea>';
+
+  // Alignment links
+  body += (function(){
+    var aln = inst && inst.alignments;
+    if(!aln) return '';
+    var n = origCount!=null ? origCount : curVal||0;
+    var coreN = Math.min(50, n);
+    var h = '<div class="aln-links"><strong>Alignments:</strong> ';
+    if(aln.core) h += viewerLink(aln.core, 'Core '+coreN+'/'+n);
+    if(aln.best50) h += viewerLink(aln.best50, 'Best '+coreN+'/'+n);
+    if(aln.subfam) h += viewerLink(aln.subfam, 'SubFam');
+    if(aln.evidence) h += '<a href="'+SINEDB_BASE+aln.evidence+'" target="_blank">Evidence</a>';
+    h += '</div>';
+    return h;
+  })();
+
+  // Curation buttons
+  body += '<div class="curation-btns">';
+  if(inst && curStatus!=='false_positive'){
+    body += '<button class="danger" onclick="markFalsePositive(\''+q(fam.name)+'\',\''+q(sfName)+'\',\''+q(taxon)+'\');this.closest(\'.modal-overlay\').remove()">Mark False Positive</button>';
+  }
+  if(inst && inst.alignments && inst.alignments.core){
+    body += '<button onclick="curateAlignment(\''+q(fam.name)+'\',\''+q(sfName)+'\',\''+q(taxon)+'\');this.closest(\'.modal-overlay\').remove()">Curate Alignment</button>';
+  }
+  if(isCurated){
+    body += '<button onclick="restoreOriginal(\''+q(fam.name)+'\',\''+q(sfName)+'\',\''+q(taxon)+'\');this.closest(\'.modal-overlay\').remove()">Restore Original</button>';
+  }
+  if(inst){
+    body += '<button class="danger" onclick="deleteSumInstance(\''+q(fam.name)+'\',\''+q(sfName)+'\',\''+q(taxon)+'\');this.closest(\'.modal-overlay\').remove()">Delete</button>';
+  }
+  body += '</div>';
+
+  showModal('Edit: '+sfName+' × '+taxon.replace(/_/g,' '), body, function(ov){
+    var newCopies = parseFloat(ov.querySelector('#mCopies').value)||0;
+    var newStatus = ov.querySelector('#mStatus').value;
+    var newSimMean = parseFloat(ov.querySelector('#mSimMean').value)||null;
+    var newSimMedian = parseFloat(ov.querySelector('#mSimMedian').value)||null;
+    var newNotes = ov.querySelector('#mNotes').value.trim();
+    var newCurNotes = ov.querySelector('#mCurNotes').value.trim();
+
+    if(!inst){
+      if(!sf.instances) sf.instances = [];
+      sf.instances.push({
+        taxon:taxon, ncbi_taxid:null, genome_assembly:'',
+        status:newStatus, copy_count:newCopies, copy_count_method:'manual',
+        notes:newNotes, curation_notes:newCurNotes,
+        stats:{sim_mean:newSimMean, sim_median:newSimMedian, top100_identity:null, rand100_identity:null},
+        last_modified:today(), created:today(), _slug:taxon
+      });
+    } else {
+      // Track original if count changed and not already tracked
+      if(newCopies !== inst.copy_count && inst.original_copy_count==null){
+        inst.original_copy_count = inst.copy_count;
+      }
+      if(newCopies !== inst.copy_count || newStatus !== inst.status){
+        inst.curated = true;
+        inst.curated_date = today();
+      }
+      inst.copy_count = newCopies;
+      inst.status = newStatus;
+      inst.notes = newNotes;
+      inst.curation_notes = newCurNotes;
+      inst.last_modified = today();
+      if(!inst.stats) inst.stats = {};
+      inst.stats.sim_mean = newSimMean;
+      inst.stats.sim_median = newSimMedian;
+    }
+    save(); renderSummary();
+  });
+}
+
+// --- Mark as false positive: zero out but preserve original ---
+function markFalsePositive(famName, sfName, taxon){
+  var r = _findSfInst(sfName, taxon);
+  if(!r.inst) return;
+  var inst = r.inst;
+  if(inst.original_copy_count==null) inst.original_copy_count = inst.copy_count;
+  inst.copy_count = 0;
+  inst.status = 'false_positive';
+  inst.curated = true;
+  inst.curated_date = today();
+  if(!inst.curation_notes) inst.curation_notes = 'Marked as false positive';
+  save(); renderSummary();
+}
+
+// --- Restore original pipeline values ---
+function restoreOriginal(famName, sfName, taxon){
+  if(!confirm('Restore original pipeline values for '+sfName+' × '+taxon.replace(/_/g,' ')+'?')) return;
+  var r = _findSfInst(sfName, taxon);
+  if(!r.inst) return;
+  var inst = r.inst;
+  if(inst.original_copy_count!=null) inst.copy_count = inst.original_copy_count;
+  delete inst.original_copy_count;
+  delete inst.curated;
+  delete inst.curated_date;
+  delete inst.excluded_seqs;
+  inst.status = 'present';
+  inst.curation_notes = '';
+  inst.last_modified = today();
+  save(); renderSummary();
+}
+
+// --- Curate alignment: fetch FASTA, show sequences, allow exclusion ---
+function curateAlignment(famName, sfName, taxon){
+  var r = _findSfInst(sfName, taxon);
+  if(!r.inst || !r.inst.alignments || !r.inst.alignments.core) return;
+  var inst = r.inst;
+  var corePath = inst.alignments.core;
+  var excluded = inst.excluded_seqs || [];
+
+  // Fetch the FASTA file
+  fetch(SINEDB_BASE + corePath).then(function(resp){
+    if(!resp.ok) throw new Error('Failed to fetch '+corePath);
+    return resp.text();
+  }).then(function(fasta){
+    // Parse FASTA: extract headers
+    var seqs = [];
+    var lines = fasta.split('\n');
+    var curName = null, curSeq = '';
+    for(var li=0; li<lines.length; li++){
+      var ln = lines[li].trim();
+      if(ln.startsWith('>')){
+        if(curName!=null) seqs.push({name:curName, len:curSeq.replace(/-/g,'').length, seq:curSeq});
+        curName = ln.substring(1).split(/\s+/)[0];
+        curSeq = '';
+      } else {
+        curSeq += ln;
+      }
+    }
+    if(curName!=null) seqs.push({name:curName, len:curSeq.replace(/-/g,'').length, seq:curSeq});
+
+    // Build modal with sequence list
+    var origN = inst.original_copy_count!=null ? inst.original_copy_count : inst.copy_count;
+    var body = '<div style="font-size:11px;margin-bottom:6px">';
+    body += '<strong>'+sfName+'</strong> in <i>'+taxon.replace(/_/g,' ')+'</i> — '+seqs.length+' sequences in core alignment';
+    if(origN > seqs.length) body += ' (out of '+origN.toLocaleString()+' total hits)';
+    body += '<br>Uncheck sequences that are false positives. Excluded sequences will be tracked.';
+    body += '</div>';
+    body += '<div style="margin-bottom:4px"><button onclick="document.querySelectorAll(\'.seq-cb\').forEach(function(c){c.checked=true})">Select All</button> ';
+    body += '<button onclick="document.querySelectorAll(\'.seq-cb\').forEach(function(c){c.checked=false})">Select None</button></div>';
+    body += '<div class="seq-list">';
+    for(var si=0; si<seqs.length; si++){
+      var s = seqs[si];
+      var isExcl = excluded.indexOf(s.name) >= 0;
+      body += '<div class="seq-item'+(isExcl?' excluded':'')+'">';
+      body += '<input type="checkbox" class="seq-cb" data-name="'+esc(s.name)+'"'+(isExcl?'':' checked')+'>';
+      body += '<label title="'+esc(s.name)+'">'+esc(s.name)+' <span style="color:#888">('+s.len+' bp)</span></label>';
+      body += '</div>';
+    }
+    body += '</div>';
+    body += '<label>Curation notes</label><textarea id="mCurNotes2">'+esc(inst.curation_notes||'')+'</textarea>';
+
+    showModal('Curate: '+sfName+' × '+taxon.replace(/_/g,' '), body, function(ov){
+      var newExcluded = [];
+      var checkboxes = ov.querySelectorAll('.seq-cb');
+      checkboxes.forEach(function(cb){
+        if(!cb.checked) newExcluded.push(cb.dataset.name);
+      });
+      inst.excluded_seqs = newExcluded;
+      inst.curation_notes = ov.querySelector('#mCurNotes2').value.trim();
+
+      // Adjust copy count based on exclusions
+      if(inst.original_copy_count==null && newExcluded.length>0){
+        inst.original_copy_count = inst.copy_count;
+      }
+      if(inst.original_copy_count!=null){
+        var orig = inst.original_copy_count;
+        if(orig <= seqs.length){
+          // Low-copy: count = included sequences
+          inst.copy_count = seqs.length - newExcluded.length;
+        } else {
+          // High-copy: scale proportionally
+          var keepRatio = (seqs.length - newExcluded.length) / seqs.length;
+          inst.copy_count = Math.round(orig * keepRatio);
+        }
+      }
+      if(newExcluded.length > 0){
+        inst.curated = true;
+        inst.curated_date = today();
+        if(inst.copy_count === 0) inst.status = 'false_positive';
+      } else if(inst.original_copy_count!=null){
+        // All included again — restore
+        inst.copy_count = inst.original_copy_count;
+        delete inst.original_copy_count;
+        inst.curated = false;
+      }
+      inst.last_modified = today();
+      save(); renderSummary();
+    });
+  }).catch(function(err){
+    alert('Could not fetch alignment: '+err.message+'\n\nYou can still manually edit the copy count in the cell editor.');
+  });
+}
+
+function deleteSumInstance(famName, sfName, taxon){
+  if(!confirm('Delete instance "'+taxon+'" from '+sfName+'?')) return;
+  var fam = DATA.families.find(function(f){return f.name===famName;});
+  var sf = fam && (fam.subfamilies||[]).find(function(s){return s.name===sfName;});
+  if(sf) sf.instances = (sf.instances||[]).filter(function(i){return i.taxon!==taxon;});
+  save(); renderSummary();
+}
+
+// ===================== UTILS =====================
+function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function q(s){ return String(s||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/\r?\n/g,' '); }
+function today(){ return new Date().toISOString().slice(0,10); }
+
+// Resize sidebar
+(function(){
+  var handle = document.getElementById('resizeHandle');
+  var sidebar = document.getElementById('sidebar');
+  var startX, startW;
+  handle.addEventListener('mousedown', function(e){
+    startX = e.clientX; startW = sidebar.offsetWidth;
+    function onMove(e){ sidebar.style.width = Math.max(120, Math.min(500, startW + e.clientX - startX)) + 'px'; }
+    function onUp(){ document.removeEventListener('mousemove',onMove); document.removeEventListener('mouseup',onUp); }
+    document.addEventListener('mousemove', onMove);
+    document.addEventListener('mouseup', onUp);
+    e.preventDefault();
+  });
+})();
+
+// Keyboard shortcuts
+document.addEventListener('keydown', function(e){
+  if(e.key==='Escape'){
+    var modal = document.querySelector('.modal-overlay');
+    if(modal) modal.remove();
+    else closeDetail();
+  }
+});
+
+// ===================== START =====================
+// TODO (future features):
+// - Functional annotation overlay in MSA viewer: if consensus has annotated
+//   parts (tRNA, body, tail, A/B box promoters, TSD in flanks), display
+//   colored annotation bars above the alignment columns.
+// - Tree / clustering view: build NJ or UPGMA tree from SINE subfamily
+//   copy-count vectors across taxa. Allow user to select subset of taxa
+//   and/or subfamilies for tree construction. Distance metrics: Jaccard,
+//   Bray-Curtis, or Euclidean on log-transformed copy counts.
+loadData();
+</script>
+</body>
+</html>
