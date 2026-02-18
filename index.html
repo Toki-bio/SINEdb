@@ -147,6 +147,22 @@ button.danger:hover{background:#a93226}
 .seq-item:hover{background:#e8f0fe}
 .seq-item.excluded{background:#fee;color:#999;text-decoration:line-through}
 .seq-item label{flex:1;cursor:pointer;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* Conservation histogram */
+.conservation-container{margin:8px 0}
+.conservation-canvas{width:100%;height:80px;border:1px solid #ddd;background:#fafafa;cursor:crosshair;display:block}
+.conservation-legend{font-size:9px;color:#666;display:flex;gap:12px;margin-top:2px}
+/* Annotation editor */
+.annotation-types{display:flex;flex-wrap:wrap;gap:4px;margin:6px 0}
+.annotation-type-btn{padding:2px 8px;border:2px solid rgba(0,0,0,.15);border-radius:3px;cursor:pointer;font-size:10px;font-weight:600;opacity:.7}
+.annotation-type-btn.active{border-color:#333;box-shadow:0 0 0 1px #333;opacity:1}
+.annotation-type-btn:hover{opacity:1}
+.annotation-seq-wrap{overflow-y:auto;max-height:260px;border:1px solid #ccc;padding:4px;background:#fafafa;user-select:none;font-family:'Courier New',monospace}
+.annotation-seq-row{white-space:nowrap;line-height:20px}
+.ann-pos{display:inline-block;width:40px;text-align:right;padding-right:6px;color:#999;font-size:10px;user-select:none}
+.ann-char{display:inline-block;width:8.4px;text-align:center;font-size:12px;cursor:crosshair}
+.ann-char:hover{outline:1px solid #888}
+.ann-char.drag-sel{outline:2px solid #333;outline-offset:-1px;z-index:1;position:relative}
+.cartoon-legend{display:flex;flex-wrap:wrap;gap:8px;font-size:9px;margin-top:4px}
 </style>
 </head>
 <body>
@@ -504,8 +520,11 @@ function showSubfamilyDetail(famName, sfName){
   }
 
   if(sf.sequence){
-    html += '<div style="margin-top:4px;font-weight:600;font-size:10px">CONSENSUS SEQUENCE:</div>';
+    html += '<div style="margin-top:4px;font-weight:600;font-size:10px">CONSENSUS SEQUENCE: <button style="font-size:10px;margin-left:8px" onclick="openAnnotationEditor(\'' + q(famName) + '\',\'' + q(sf.name) + '\')">&#9998; Annotate Structure</button></div>';
     html += '<div class="seq-display">' + colorSeq(sf.sequence) + '</div>';
+    if(sf.annotations && sf.annotations.length){
+      html += '<div id="sfCartoonDetail" style="margin-top:4px"></div>';
+    }
   }
 
   if(sf.notes) html += '<div style="margin-top:4px"><b>Notes:</b> ' + esc(sf.notes) + '</div>';
@@ -541,6 +560,10 @@ function showSubfamilyDetail(famName, sfName){
   }
 
   document.getElementById('detailBody').innerHTML = html;
+  if(sf.sequence && sf.annotations && sf.annotations.length){
+    var cd = document.getElementById('sfCartoonDetail');
+    if(cd) renderCartoonDiagram(sf.annotations, sf.sequence.length, sf.name, cd);
+  }
 }
 
 function closeDetail(){
@@ -702,6 +725,7 @@ function renderSequences(){
   html += thHtml('length','Len');
   html += '<th>Head region</th><th>Body region</th><th>Tail region</th>';
   html += '<th style="min-width:400px">Consensus sequence</th>';
+  html += '<th>Actions</th>';
   html += '</tr></thead><tbody>';
 
   for(var i=0;i<rows.length;i++){
@@ -716,6 +740,7 @@ function renderSequences(){
     html += '<td class="mono" style="font-size:10px">' + esc(m.body?m.body.region:'') + '</td>';
     html += '<td class="mono" style="font-size:10px">' + esc(m.tail?m.tail.region:'') + '</td>';
     html += '<td><div class="seq-display" style="max-height:36px;font-size:10px">' + colorSeq(sf.sequence||'') + '</div></td>';
+    html += '<td><button onclick="event.stopPropagation();openAnnotationEditor(\'' + q(sf._family) + '\',\'' + q(sf.name) + '\')">Annotate</button></td>';
     html += '</tr>';
   }
   html += '</tbody></table>';
@@ -1413,6 +1438,9 @@ function editSumCell(cell, taxon, sfName){
     return h;
   })();
 
+  // Conservation histogram panel
+  body += '<div id="conservationPanel" style="margin-top:4px"></div>';
+
   // Curation buttons
   body += '<div class="curation-btns">';
   if(inst && curStatus!=='false_positive'){
@@ -1466,6 +1494,11 @@ function editSumCell(cell, taxon, sfName){
     }
     save(); renderSummary();
   });
+  // Load conservation histogram if alignment available
+  setTimeout(function(){
+    var panel = document.getElementById('conservationPanel');
+    if(panel) showConservation(sfName, taxon, panel);
+  }, 100);
 }
 
 // --- Mark as false positive: zero out but preserve original ---
@@ -1628,15 +1661,351 @@ document.addEventListener('keydown', function(e){
   }
 });
 
+// ===================== CONSERVATION HISTOGRAM =====================
+
+function parseFasta(text){
+  var seqs=[]; var lines=text.split('\n'); var nm=null,sq='';
+  for(var i=0;i<lines.length;i++){
+    var ln=lines[i].trim();
+    if(ln.charAt(0)==='>'){
+      if(nm!=null) seqs.push({name:nm,seq:sq});
+      nm=ln.substring(1).split(/\s+/)[0]; sq='';
+    } else sq+=ln;
+  }
+  if(nm!=null) seqs.push({name:nm,seq:sq});
+  return seqs;
+}
+
+function calcConservation(seqs){
+  if(!seqs.length) return [];
+  var len=0; seqs.forEach(function(s){if(s.seq.length>len)len=s.seq.length;});
+  var res=[];
+  for(var p=0;p<len;p++){
+    var ct={A:0,T:0,G:0,C:0}; var gap=0,total=seqs.length;
+    for(var si=0;si<seqs.length;si++){
+      var c=(seqs[si].seq[p]||'-').toUpperCase();
+      if(c==='U')c='T';
+      if(c==='-'||c==='N') gap++;
+      else if(ct[c]!==undefined) ct[c]++;
+      else gap++;
+    }
+    var nonGap=total-gap; var mx=0,dom='N';
+    ['A','T','G','C'].forEach(function(b){if(ct[b]>mx){mx=ct[b];dom=b;}});
+    res.push({pos:p, cons:nonGap>0?mx/nonGap:0, gapFrac:gap/total, dom:dom, nonGap:nonGap, total:total});
+  }
+  return res;
+}
+
+function showConservation(sfName,taxon,container){
+  var r=_findSfInst(sfName,taxon);
+  if(!r.inst||!r.inst.alignments){container.innerHTML='<div style="color:#999;font-size:10px;padding:4px">No alignment data available</div>';return;}
+  var path=r.inst.alignments.core||r.inst.alignments.best50||r.inst.alignments.subfam;
+  if(!path){container.innerHTML='<div style="color:#999;font-size:10px;padding:4px">No alignment file</div>';return;}
+  container.innerHTML='<div style="color:#888;font-size:10px;padding:4px">Loading alignment for conservation analysis...</div>';
+  fetch(SINEDB_BASE+path).then(function(resp){
+    if(!resp.ok)throw new Error('HTTP '+resp.status);
+    return resp.text();
+  }).then(function(fasta){
+    var seqs=parseFasta(fasta);
+    if(seqs.length<2){container.innerHTML='<div style="color:#999;font-size:10px">Only '+seqs.length+' sequence — need ≥2 for conservation</div>';return;}
+    var cons=calcConservation(seqs);
+    renderConservationCanvas(cons,seqs.length,container,r.sf);
+  }).catch(function(err){
+    container.innerHTML='<div style="color:#c00;font-size:10px">Error loading alignment: '+err.message+'</div>';
+  });
+}
+
+function renderConservationCanvas(cons,nSeqs,container,sf){
+  if(!cons.length){container.innerHTML='<div style="color:#999">No data</div>';return;}
+  var html='<div class="conservation-container">';
+  html+='<div style="font-weight:600;font-size:10px;margin-bottom:2px">Conservation Profile ('+nSeqs+' sequences, '+cons.length+' alignment columns)</div>';
+  html+='<canvas id="consCanvas" class="conservation-canvas"></canvas>';
+  html+='<div class="conservation-legend">';
+  html+='<span style="color:#1a6b3c">&#9632; ≥90%</span>';
+  html+='<span style="color:#4CAF50">&#9632; 70–90%</span>';
+  html+='<span style="color:#FF9800">&#9632; 50–70%</span>';
+  html+='<span style="color:#f44336">&#9632; &lt;50%</span>';
+  html+='<span style="color:#ccc">&#9632; gap-heavy</span>';
+  html+='</div>';
+  html+='<div id="consTooltip" style="position:fixed;background:#333;color:#fff;padding:2px 6px;border-radius:3px;font-size:10px;pointer-events:none;display:none;z-index:200"></div>';
+  html+='</div>';
+  container.innerHTML=html;
+  var canvas=document.getElementById('consCanvas');
+  if(!canvas)return;
+  var cw=container.offsetWidth-20;
+  canvas.style.width=cw+'px'; canvas.style.height='80px';
+  var dpr=window.devicePixelRatio||1;
+  canvas.width=cw*dpr; canvas.height=80*dpr;
+  var ctx=canvas.getContext('2d');
+  ctx.scale(dpr,dpr);
+  var barW=cw/cons.length;
+  var plotH=65;
+  // Annotation bar if present
+  if(sf&&sf.annotations&&sf.annotations.length){
+    var annH=8;
+    ctx.fillStyle='#eee'; ctx.fillRect(0,plotH+2,cw,annH);
+    sf.annotations.forEach(function(ann){
+      var x1=(ann.start/cons.length)*cw;
+      var x2=((ann.end+1)/cons.length)*cw;
+      ctx.fillStyle=ann.color||'#999';
+      ctx.fillRect(x1,plotH+2,x2-x1,annH);
+    });
+  }
+  // Conservation bars
+  for(var i=0;i<cons.length;i++){
+    var d=cons[i];
+    var bh=d.cons*plotH;
+    var x=i*barW;
+    var col;
+    if(d.gapFrac>0.5) col='#ccc';
+    else if(d.cons>=0.9) col='#1a6b3c';
+    else if(d.cons>=0.7) col='#4CAF50';
+    else if(d.cons>=0.5) col='#FF9800';
+    else col='#f44336';
+    ctx.fillStyle=col;
+    ctx.fillRect(x,plotH-bh,Math.max(barW-0.3,0.5),bh);
+  }
+  // Position labels
+  ctx.fillStyle='#999'; ctx.font='9px sans-serif'; ctx.textAlign='center';
+  var step=Math.max(1,Math.floor(cons.length/8));
+  for(var p=0;p<cons.length;p+=step){
+    ctx.fillText(String(p+1),p*barW+barW/2,plotH+20);
+  }
+  // Tooltip on hover
+  canvas.addEventListener('mousemove',function(e){
+    var rect=canvas.getBoundingClientRect();
+    var mx=(e.clientX-rect.left)/rect.width*cons.length;
+    var idx=Math.floor(mx);
+    var tip=document.getElementById('consTooltip');
+    if(idx>=0&&idx<cons.length&&tip){
+      var d2=cons[idx];
+      tip.textContent='Pos '+(idx+1)+': '+(d2.cons*100).toFixed(1)+'% ('+d2.dom+') '+d2.nonGap+'/'+d2.total+' non-gap';
+      tip.style.left=e.clientX+12+'px'; tip.style.top=e.clientY-24+'px'; tip.style.display='block';
+    }
+  });
+  canvas.addEventListener('mouseleave',function(){
+    var tip=document.getElementById('consTooltip');
+    if(tip)tip.style.display='none';
+  });
+}
+
+// ===================== ANNOTATION EDITOR =====================
+
+var REGION_TYPES=[
+  {id:'trna',label:'tRNA',color:'#4CAF50'},
+  {id:'a_box',label:'A Box',color:'#FF9800'},
+  {id:'b_box',label:'B Box',color:'#E65100'},
+  {id:'body',label:'Body',color:'#2196F3'},
+  {id:'core',label:'Core',color:'#9C27B0'},
+  {id:'line_tail',label:'LINE tail',color:'#F44336'},
+  {id:'ttr',label:'TTR',color:'#00BCD4'},
+  {id:'tail_motif',label:'Tail motif',color:'#795548'},
+  {id:'other',label:'Other',color:'#607D8B'}
+];
+
+function getAnnColorAt(anns,pos){
+  for(var i=anns.length-1;i>=0;i--){
+    if(pos>=anns[i].start&&pos<=anns[i].end) return anns[i].color;
+  }
+  return null;
+}
+
+function openAnnotationEditor(famName,sfName){
+  var fam=DATA.families.find(function(f){return f.name===famName;});
+  var sf=fam&&(fam.subfamilies||[]).find(function(s){return s.name===sfName;});
+  if(!sf||!sf.sequence){alert('No consensus sequence available');return;}
+  var anns=sf.annotations?JSON.parse(JSON.stringify(sf.annotations)):[];
+  var seq=sf.sequence;
+  var activeType='trna';
+  var dragStart=-1,dragEnd=-1;
+  var ROW_LEN=80;
+
+  var body='<div class="annotation-editor">';
+  body+='<div style="margin-bottom:6px"><span style="font-weight:600;font-size:10px">1. Select region type:</span></div>';
+  body+='<div class="annotation-types" id="annTypes">';
+  REGION_TYPES.forEach(function(rt){
+    body+='<div class="annotation-type-btn'+(rt.id===activeType?' active':'')+'" style="background:'+rt.color+';color:#fff" data-type="'+rt.id+'">'+rt.label+'</div>';
+  });
+  body+='</div>';
+  body+='<div style="font-weight:600;font-size:10px;margin:4px 0">2. Click + drag on sequence to annotate ('+seq.length+' nt):</div>';
+  body+='<div id="annSelInfo" style="font-size:10px;color:#666;height:16px;margin-bottom:2px"></div>';
+  body+='<div class="annotation-seq-wrap" id="annSeqWrap"></div>';
+  body+='<div id="annListDiv" style="margin-top:8px"></div>';
+  body+='<div style="margin-top:8px"><div style="font-weight:600;font-size:10px;margin-bottom:4px">Structure diagram:</div><div id="annCartoon"></div></div>';
+  body+='</div>';
+
+  var overlay=document.createElement('div');
+  overlay.className='modal-overlay';
+  overlay.innerHTML='<div class="modal" style="max-width:900px">'+
+    '<div class="modal-title"><span>Annotate: '+esc(sfName)+' ('+seq.length+' nt)</span><button onclick="this.closest(\'.modal-overlay\').remove()">&times;</button></div>'+
+    '<div class="modal-body">'+body+'</div>'+
+    '<div class="modal-footer">'+
+      '<button onclick="this.closest(\'.modal-overlay\').remove()">Cancel</button>'+
+      '<button class="primary" id="annSaveBtn">Save Annotations</button>'+
+    '</div></div>';
+  document.body.appendChild(overlay);
+
+  var seqWrap=document.getElementById('annSeqWrap');
+  var selInfo=document.getElementById('annSelInfo');
+  var listDiv=document.getElementById('annListDiv');
+  var cartoonDiv=document.getElementById('annCartoon');
+
+  function renderSeqRows(){
+    var html='';
+    for(var r=0;r<seq.length;r+=ROW_LEN){
+      html+='<div class="annotation-seq-row">';
+      html+='<span class="ann-pos">'+(r+1)+'</span>';
+      var end=Math.min(r+ROW_LEN,seq.length);
+      for(var i=r;i<end;i++){
+        var bg=getAnnColorAt(anns,i);
+        var style=bg?'background:'+bg+';color:#fff;':'';
+        html+='<span class="ann-char" data-pos="'+i+'" style="'+style+'">'+seq[i]+'</span>';
+      }
+      html+='</div>';
+    }
+    seqWrap.innerHTML=html;
+  }
+
+  function renderList(){
+    if(!anns.length){
+      listDiv.innerHTML='<div style="color:#999;font-size:10px">No annotations yet. Select a type, then click+drag on the sequence.</div>';
+    } else {
+      anns.sort(function(a,b){return a.start-b.start;});
+      var h='<table style="font-size:10px;width:auto"><tr><th>Type</th><th>Range</th><th>Length</th><th></th></tr>';
+      anns.forEach(function(ann,idx){
+        var rt=REGION_TYPES.find(function(r2){return r2.id===ann.type;})||{label:ann.type,color:'#999'};
+        h+='<tr><td><span style="background:'+(ann.color||rt.color)+';color:#fff;padding:1px 6px;border-radius:2px;font-size:9px;font-weight:600">'+esc(rt.label)+'</span></td>';
+        h+='<td class="mono">'+(ann.start+1)+' &ndash; '+(ann.end+1)+'</td>';
+        h+='<td class="num">'+(ann.end-ann.start+1)+' nt</td>';
+        h+='<td><button data-delidx="'+idx+'" style="font-size:9px;padding:0 6px;background:#fee;border-color:#c00;color:#c00;cursor:pointer">&times;</button></td></tr>';
+      });
+      h+='</table>';
+      listDiv.innerHTML=h;
+      listDiv.querySelectorAll('button[data-delidx]').forEach(function(btn){
+        btn.addEventListener('click',function(){anns.splice(parseInt(this.dataset.delidx),1);renderAll();});
+      });
+    }
+  }
+
+  function renderCartoon(){renderCartoonDiagram(anns,seq.length,sfName,cartoonDiv);}
+  function renderAll(){renderSeqRows();renderList();renderCartoon();selInfo.textContent='';}
+
+  // Type button handlers
+  document.getElementById('annTypes').addEventListener('click',function(e){
+    var btn=e.target.closest('.annotation-type-btn');
+    if(!btn)return;
+    activeType=btn.dataset.type;
+    overlay.querySelectorAll('.annotation-type-btn').forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+  });
+
+  // Sequence drag selection
+  seqWrap.addEventListener('mousedown',function(e){
+    var ch=e.target.closest('.ann-char');
+    if(!ch)return;
+    dragStart=parseInt(ch.dataset.pos); dragEnd=dragStart;
+    e.preventDefault();
+    var rt=REGION_TYPES.find(function(r2){return r2.id===activeType;});
+    ch.classList.add('drag-sel');
+    ch.style.background=rt?rt.color:'#999';
+    ch.style.color='#fff';
+    selInfo.textContent='Position: '+(dragStart+1);
+
+    function onMove(ev){
+      var el=document.elementFromPoint(ev.clientX,ev.clientY);
+      if(!el||!el.classList||!el.classList.contains('ann-char'))return;
+      var newEnd=parseInt(el.dataset.pos);
+      if(newEnd===dragEnd)return;
+      dragEnd=newEnd;
+      // Clear old highlights
+      seqWrap.querySelectorAll('.drag-sel').forEach(function(c2){
+        c2.classList.remove('drag-sel');
+        var p2=parseInt(c2.dataset.pos);
+        var bg2=getAnnColorAt(anns,p2);
+        c2.style.background=bg2||''; c2.style.color=bg2?'#fff':'';
+      });
+      // Apply new highlights
+      var s=Math.min(dragStart,dragEnd),en=Math.max(dragStart,dragEnd);
+      seqWrap.querySelectorAll('.ann-char').forEach(function(c2){
+        var p2=parseInt(c2.dataset.pos);
+        if(p2>=s&&p2<=en){c2.classList.add('drag-sel');c2.style.background=rt?rt.color:'#999';c2.style.color='#fff';}
+      });
+      selInfo.textContent='Selecting: '+(s+1)+' \u2013 '+(en+1)+' ('+(en-s+1)+' nt) \u2192 '+(rt?rt.label:activeType);
+    }
+    function onUp(){
+      document.removeEventListener('mousemove',onMove);
+      document.removeEventListener('mouseup',onUp);
+      if(dragStart>=0&&dragEnd>=0){
+        var s=Math.min(dragStart,dragEnd),en=Math.max(dragStart,dragEnd);
+        var rt2=REGION_TYPES.find(function(r2){return r2.id===activeType;});
+        anns.push({type:activeType,label:rt2?rt2.label:activeType,start:s,end:en,color:rt2?rt2.color:'#999'});
+        dragStart=-1; dragEnd=-1;
+        renderAll();
+      }
+    }
+    document.addEventListener('mousemove',onMove);
+    document.addEventListener('mouseup',onUp);
+  });
+
+  // Save annotations
+  overlay.querySelector('#annSaveBtn').addEventListener('click',function(){
+    sf.annotations=anns; sf.last_modified=today();
+    save(); renderTab(); overlay.remove();
+  });
+  overlay.addEventListener('click',function(e){if(e.target===overlay)overlay.remove();});
+
+  renderAll();
+}
+
+// ===================== CARTOON DIAGRAM =====================
+
+function renderCartoonDiagram(anns,seqLen,sfName,container){
+  if(!anns||!anns.length){container.innerHTML='<div style="color:#999;font-size:10px">Add annotations to see structure diagram</div>';return;}
+  var W=660,H=90;
+  var barY=25,barH=28,margin=35;
+  var drawW=W-2*margin;
+  var sc=drawW/seqLen;
+  var svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+W+' '+H+'" style="width:100%;max-width:'+W+'px;height:auto;background:#fff;border:1px solid #eee">';
+  svg+='<text x="'+(W/2)+'" y="14" text-anchor="middle" font-size="10" font-weight="600" fill="#333">'+esc(sfName)+' ('+seqLen+' nt)</text>';
+  // Background bar
+  svg+='<rect x="'+margin+'" y="'+barY+'" width="'+drawW+'" height="'+barH+'" fill="#e0e0e0" rx="4"/>';
+  // Annotation segments
+  var sorted=anns.slice().sort(function(a,b){return a.start-b.start;});
+  sorted.forEach(function(ann){
+    var x=margin+ann.start*sc;
+    var w=(ann.end-ann.start+1)*sc;
+    svg+='<rect x="'+x+'" y="'+barY+'" width="'+Math.max(w,2)+'" height="'+barH+'" fill="'+(ann.color||'#999')+'" rx="2" opacity="0.9"/>';
+    if(w>20){
+      svg+='<text x="'+(x+w/2)+'" y="'+(barY+barH/2+3.5)+'" text-anchor="middle" font-size="8" fill="#fff" font-weight="700">'+esc(ann.label||ann.type)+'</text>';
+    }
+  });
+  // 5' / 3' labels
+  svg+='<text x="'+(margin-4)+'" y="'+(barY+barH/2+4)+'" text-anchor="end" font-size="10" fill="#333" font-weight="700">5\'</text>';
+  svg+='<text x="'+(margin+drawW+4)+'" y="'+(barY+barH/2+4)+'" text-anchor="start" font-size="10" fill="#333" font-weight="700">3\'</text>';
+  // Scale ticks
+  var tStep=seqLen<=200?50:seqLen<=500?100:200;
+  for(var t=0;t<=seqLen;t+=tStep){
+    var tx=margin+t*sc;
+    svg+='<line x1="'+tx+'" y1="'+(barY+barH)+'" x2="'+tx+'" y2="'+(barY+barH+5)+'" stroke="#999" stroke-width="0.8"/>';
+    svg+='<text x="'+tx+'" y="'+(barY+barH+14)+'" text-anchor="middle" font-size="7" fill="#666">'+t+'</text>';
+  }
+  var ex=margin+seqLen*sc;
+  svg+='<line x1="'+ex+'" y1="'+(barY+barH)+'" x2="'+ex+'" y2="'+(barY+barH+5)+'" stroke="#999" stroke-width="0.8"/>';
+  svg+='<text x="'+ex+'" y="'+(barY+barH+14)+'" text-anchor="middle" font-size="7" fill="#666">'+seqLen+'</text>';
+  svg+='</svg>';
+  // Legend
+  svg+='<div class="cartoon-legend">';
+  var used={};
+  sorted.forEach(function(ann){
+    if(used[ann.type])return; used[ann.type]=true;
+    var rt=REGION_TYPES.find(function(r2){return r2.id===ann.type;})||{label:ann.type};
+    svg+='<span><span style="display:inline-block;width:10px;height:10px;background:'+(ann.color||'#999')+';border-radius:2px;vertical-align:middle"></span> '+esc(rt.label)+'</span>';
+  });
+  svg+='</div>';
+  container.innerHTML=svg;
+}
+
 // ===================== START =====================
-// TODO (future features):
-// - Functional annotation overlay in MSA viewer: if consensus has annotated
-//   parts (tRNA, body, tail, A/B box promoters, TSD in flanks), display
-//   colored annotation bars above the alignment columns.
-// - Tree / clustering view: build NJ or UPGMA tree from SINE subfamily
-//   copy-count vectors across taxa. Allow user to select subset of taxa
-//   and/or subfamilies for tree construction. Distance metrics: Jaccard,
-//   Bray-Curtis, or Euclidean on log-transformed copy counts.
 loadData();
 </script>
 </body>
