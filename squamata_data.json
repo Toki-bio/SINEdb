@@ -1,0 +1,601 @@
+{
+  "title": "Squamata Outgroups \u2014 SINE Copy Counts",
+  "description": "Non-snake squamate species analyzed with snake SINE consensuses",
+  "subfamilies": [
+    "Heno",
+    "SqUCON",
+    "SqUCON1",
+    "UCON_cyl",
+    "oph1",
+    "oph2",
+    "oph3",
+    "oph_ae",
+    "sq2_Eryx"
+  ],
+  "species": [
+    {
+      "taxon": "Rhineura_floridana",
+      "family": "Rhineuridae",
+      "clade": "Amphisbaenia",
+      "counts": {
+        "Heno": 4339,
+        "oph1": 10896,
+        "oph2": 3713,
+        "oph3": 3955,
+        "oph_ae": 6,
+        "sq2_Eryx": 110075,
+        "SqUCON1": 5854,
+        "SqUCON": 441,
+        "UCON_cyl": 3683
+      },
+      "total": 142962,
+      "sim_means": {
+        "sq2_Eryx": 0.17,
+        "oph1": 21.12,
+        "SqUCON1": 96.99,
+        "Heno": 1.56,
+        "oph3": 20.48,
+        "oph2": 54.86,
+        "UCON_cyl": 13.82,
+        "SqUCON": 90.72,
+        "oph_ae": 0.0
+      }
+    },
+    {
+      "taxon": "Dopasia_gracilis",
+      "family": "Anguidae",
+      "clade": "Anguimorpha",
+      "counts": {
+        "Heno": 49,
+        "oph1": 13960,
+        "oph2": 1693,
+        "oph3": 1162,
+        "oph_ae": 9,
+        "sq2_Eryx": 33013,
+        "SqUCON1": 1,
+        "SqUCON": 1,
+        "UCON_cyl": 6340
+      },
+      "total": 56228,
+      "sim_means": {
+        "sq2_Eryx": 0.22,
+        "oph1": 12.34,
+        "UCON_cyl": 23.35,
+        "oph2": 33.31,
+        "oph3": 22.55,
+        "Heno": 0.0,
+        "oph_ae": 0.0,
+        "SqUCON": 100.0,
+        "SqUCON1": 0.0
+      }
+    },
+    {
+      "taxon": "Elgaria_multicarinata",
+      "family": "Anguidae",
+      "clade": "Anguimorpha",
+      "counts": {
+        "Heno": 65,
+        "oph1": 58826,
+        "oph2": 732,
+        "oph3": 1189,
+        "oph_ae": 8,
+        "sq2_Eryx": 40312,
+        "SqUCON1": 3428,
+        "SqUCON": 599,
+        "UCON_cyl": 973
+      },
+      "total": 106132,
+      "sim_means": {
+        "oph1": 2.23,
+        "sq2_Eryx": 0.25,
+        "SqUCON1": 96.78,
+        "oph3": 24.47,
+        "UCON_cyl": 19.79,
+        "oph2": 35.11,
+        "SqUCON": 93.54,
+        "Heno": 0.0,
+        "oph_ae": 0.0
+      }
+    },
+    {
+      "taxon": "Anniella_stebbinsi",
+      "family": "Anniellidae",
+      "clade": "Anguimorpha",
+      "counts": {
+        "Heno": 59,
+        "oph1": 15020,
+        "oph2": 683,
+        "oph3": 722,
+        "oph_ae": 9,
+        "sq2_Eryx": 46584,
+        "SqUCON1": 1,
+        "SqUCON": 2,
+        "UCON_cyl": 580
+      },
+      "total": 63660,
+      "sim_means": {
+        "sq2_Eryx": 0.19,
+        "oph1": 4.62,
+        "oph3": 26.32,
+        "oph2": 42.9,
+        "UCON_cyl": 13.73,
+        "Heno": 0.0,
+        "oph_ae": 0.0,
+        "SqUCON": 0.0,
+        "SqUCON1": 0.0
+      }
+    },
+    {
+      "taxon": "Dibamus_smithi",
+      "family": "Dibamidae",
+      "clade": "Dibamia",
+      "counts": {
+        "Heno": 45,
+        "oph1": 3360,
+        "oph2": 101,
+        "oph3": 271,
+        "oph_ae": 5,
+        "sq2_Eryx": 43776,
+        "SqUCON1": 1,
+        "SqUCON": 3,
+        "UCON_cyl": 3832
+      },
+      "total": 51394,
+      "sim_means": {
+        "sq2_Eryx": 0.06,
+        "UCON_cyl": 9.99,
+        "oph1": 11.73,
+        "oph3": 17.71,
+        "oph2": 40.59,
+        "Heno": 0.0,
+        "oph_ae": 0.0,
+        "SqUCON": 0.0,
+        "SqUCON1": 0.0
+      }
+    },
+    {
+      "taxon": "Nephrurus_levis",
+      "family": "Carphodactylidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 5465,
+        "oph1": 7920,
+        "oph2": 7762,
+        "oph3": 6090,
+        "oph_ae": 9,
+        "sq2_Eryx": 27407,
+        "SqUCON1": 3,
+        "SqUCON": 5,
+        "UCON_cyl": 6517
+      },
+      "total": 61178,
+      "sim_means": {
+        "sq2_Eryx": 0.17,
+        "oph1": 12.46,
+        "oph2": 8.64,
+        "UCON_cyl": 6.81,
+        "oph3": 8.78,
+        "Heno": 5.89,
+        "oph_ae": 0.0,
+        "SqUCON": 0.0,
+        "SqUCON1": 0.0
+      }
+    },
+    {
+      "taxon": "Correlophus_ciliatus",
+      "family": "Diplodactylidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 16608,
+        "oph1": 22325,
+        "oph2": 900,
+        "oph3": 9011,
+        "oph_ae": 11,
+        "sq2_Eryx": 49180,
+        "SqUCON1": 4,
+        "SqUCON": 6,
+        "UCON_cyl": 10144
+      },
+      "total": 108189,
+      "sim_means": {
+        "sq2_Eryx": 0.35,
+        "oph1": 39.91,
+        "Heno": 6.95,
+        "UCON_cyl": 45.34,
+        "oph3": 14.55,
+        "oph2": 16.22,
+        "oph_ae": 0.0,
+        "SqUCON": 0.0,
+        "SqUCON1": 0.0
+      }
+    },
+    {
+      "taxon": "Correlophus_sarasinorum",
+      "family": "Diplodactylidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 16292,
+        "oph1": 22079,
+        "oph2": 834,
+        "oph3": 9081,
+        "oph_ae": 13,
+        "sq2_Eryx": 48131,
+        "SqUCON1": 5,
+        "SqUCON": 3,
+        "UCON_cyl": 9641
+      },
+      "total": 106079,
+      "sim_means": {
+        "sq2_Eryx": 0.37,
+        "oph1": 43.6,
+        "Heno": 7.28,
+        "UCON_cyl": 47.12,
+        "oph3": 14.46,
+        "oph2": 16.07,
+        "oph_ae": 0.0,
+        "SqUCON1": 0.0,
+        "SqUCON": 0.0
+      }
+    },
+    {
+      "taxon": "Coleonyx_brevis",
+      "family": "Eublepharidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 4812,
+        "oph1": 3854,
+        "oph2": 457,
+        "oph3": 353,
+        "oph_ae": 510,
+        "sq2_Eryx": 45253,
+        "SqUCON1": 3372,
+        "SqUCON": 2852,
+        "UCON_cyl": 4357
+      },
+      "total": 65820,
+      "sim_means": {
+        "sq2_Eryx": 0.18,
+        "Heno": 5.94,
+        "UCON_cyl": 4.64,
+        "oph1": 6.88,
+        "SqUCON1": 46.64,
+        "SqUCON": 91.02,
+        "oph_ae": 0.39,
+        "oph2": 22.98,
+        "oph3": 21.25
+      }
+    },
+    {
+      "taxon": "Coleonyx_elegans",
+      "family": "Eublepharidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 3094,
+        "oph1": 1734,
+        "oph2": 63,
+        "oph3": 93,
+        "oph_ae": 286,
+        "sq2_Eryx": 35585,
+        "SqUCON1": 3044,
+        "SqUCON": 1764,
+        "UCON_cyl": 1757
+      },
+      "total": 47420,
+      "sim_means": {
+        "sq2_Eryx": 0.03,
+        "Heno": 5.98,
+        "SqUCON1": 62.85,
+        "UCON_cyl": 3.59,
+        "SqUCON": 88.89,
+        "oph1": 5.25,
+        "oph_ae": 0.0,
+        "oph3": 18.28,
+        "oph2": 25.4
+      }
+    },
+    {
+      "taxon": "Eublepharis_macularius",
+      "family": "Eublepharidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 6802,
+        "oph1": 13343,
+        "oph2": 88,
+        "oph3": 132,
+        "oph_ae": 17,
+        "sq2_Eryx": 50993,
+        "SqUCON1": 886,
+        "SqUCON": 12493,
+        "UCON_cyl": 2936
+      },
+      "total": 87690,
+      "sim_means": {
+        "sq2_Eryx": 0.22,
+        "oph1": 41.47,
+        "SqUCON": 95.18,
+        "Heno": 6.68,
+        "UCON_cyl": 6.16,
+        "SqUCON1": 82.18,
+        "oph3": 27.27,
+        "oph2": 34.09,
+        "oph_ae": 0.0
+      }
+    },
+    {
+      "taxon": "Christinus_marmoratus",
+      "family": "Gekkonidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 38657,
+        "oph1": 23942,
+        "oph2": 431,
+        "oph3": 9343,
+        "oph_ae": 10,
+        "sq2_Eryx": 93905,
+        "SqUCON1": 2,
+        "SqUCON": 5,
+        "UCON_cyl": 12511
+      },
+      "total": 178806,
+      "sim_means": {
+        "sq2_Eryx": 0.67,
+        "Heno": 12.26,
+        "oph1": 17.69,
+        "UCON_cyl": 13.84,
+        "oph3": 10.62,
+        "oph2": 16.01,
+        "oph_ae": 0.0,
+        "SqUCON": 0.0,
+        "SqUCON1": 0.0
+      }
+    },
+    {
+      "taxon": "Gehyra_mutilata",
+      "family": "Gekkonidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 11847,
+        "oph1": 47330,
+        "oph2": 2509,
+        "oph3": 434,
+        "oph_ae": 6,
+        "sq2_Eryx": 46559,
+        "SqUCON1": 2177,
+        "SqUCON": 54515,
+        "UCON_cyl": 7572
+      },
+      "total": 172949,
+      "sim_means": {
+        "SqUCON": 86.55,
+        "oph1": 17.31,
+        "sq2_Eryx": 0.72,
+        "Heno": 9.46,
+        "UCON_cyl": 20.01,
+        "oph2": 23.83,
+        "SqUCON1": 68.39,
+        "oph3": 29.72,
+        "oph_ae": 0.0
+      }
+    },
+    {
+      "taxon": "Gekko_gecko",
+      "family": "Gekkonidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 24624,
+        "oph1": 15811,
+        "oph2": 2052,
+        "oph3": 796,
+        "oph_ae": 10,
+        "sq2_Eryx": 84185,
+        "SqUCON1": 3,
+        "SqUCON": 3,
+        "UCON_cyl": 7503
+      },
+      "total": 134987,
+      "sim_means": {
+        "sq2_Eryx": 0.52,
+        "Heno": 11.04,
+        "oph1": 23.16,
+        "UCON_cyl": 5.76,
+        "oph2": 16.13,
+        "oph3": 17.46,
+        "oph_ae": 0.0,
+        "SqUCON1": 0.0,
+        "SqUCON": 33.33
+      }
+    },
+    {
+      "taxon": "Gekko_japonicus",
+      "family": "Gekkonidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 24027,
+        "oph1": 12681,
+        "oph2": 2826,
+        "oph3": 560,
+        "oph_ae": 4,
+        "sq2_Eryx": 75361,
+        "SqUCON1": 5,
+        "SqUCON": 4,
+        "UCON_cyl": 6596
+      },
+      "total": 122064,
+      "sim_means": {
+        "sq2_Eryx": 0.45,
+        "Heno": 10.26,
+        "oph1": 25.33,
+        "UCON_cyl": 5.32,
+        "oph2": 20.13,
+        "oph3": 22.32,
+        "SqUCON1": 20.0,
+        "oph_ae": 0.0,
+        "SqUCON": 25.0
+      }
+    },
+    {
+      "taxon": "Hemidactylus_brookii",
+      "family": "Gekkonidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 13208,
+        "oph1": 14825,
+        "oph2": 369,
+        "oph3": 412,
+        "oph_ae": 13,
+        "sq2_Eryx": 109500,
+        "SqUCON1": 5429,
+        "SqUCON": 61252,
+        "UCON_cyl": 4669
+      },
+      "total": 209677,
+      "sim_means": {
+        "sq2_Eryx": 0.32,
+        "SqUCON": 95.03,
+        "oph1": 11.45,
+        "Heno": 8.9,
+        "SqUCON1": 80.76,
+        "UCON_cyl": 5.46,
+        "oph3": 26.94,
+        "oph2": 19.51,
+        "oph_ae": 0.0
+      }
+    },
+    {
+      "taxon": "Hemidactylus_flaviviridis",
+      "family": "Gekkonidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 5800,
+        "oph1": 26977,
+        "oph2": 343,
+        "oph3": 553,
+        "oph_ae": 18,
+        "sq2_Eryx": 35306,
+        "SqUCON1": 2,
+        "SqUCON": 2,
+        "UCON_cyl": 5553
+      },
+      "total": 74554,
+      "sim_means": {
+        "sq2_Eryx": 0.28,
+        "Heno": 7.61,
+        "UCON_cyl": 9.04,
+        "oph3": 24.59,
+        "oph2": 33.53,
+        "oph1": 26.1,
+        "oph_ae": 0.0,
+        "SqUCON1": 0.0,
+        "SqUCON": 50.0
+      }
+    },
+    {
+      "taxon": "Hemidactylus_frenatus",
+      "family": "Gekkonidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 5588,
+        "oph1": 70403,
+        "oph2": 429,
+        "oph3": 870,
+        "oph_ae": 6,
+        "sq2_Eryx": 32090,
+        "SqUCON1": 3,
+        "SqUCON": 12,
+        "UCON_cyl": 7913
+      },
+      "total": 117314,
+      "sim_means": {
+        "oph1": 17.83,
+        "sq2_Eryx": 0.35,
+        "UCON_cyl": 11.31,
+        "Heno": 6.84,
+        "oph3": 25.06,
+        "oph2": 30.07,
+        "SqUCON": 8.33,
+        "oph_ae": 0.0,
+        "SqUCON1": 0.0
+      }
+    },
+    {
+      "taxon": "Hemidactylus_mabouia",
+      "family": "Gekkonidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 5578,
+        "oph1": 24929,
+        "oph2": 890,
+        "oph3": 2257,
+        "oph_ae": 10,
+        "sq2_Eryx": 30216,
+        "SqUCON1": 2,
+        "SqUCON": 8,
+        "UCON_cyl": 29818
+      },
+      "total": 93708,
+      "sim_means": {
+        "UCON_cyl": 11.39,
+        "oph1": 12.46,
+        "sq2_Eryx": 0.35,
+        "Heno": 6.47,
+        "oph3": 16.44,
+        "oph2": 28.54,
+        "oph_ae": 0.0,
+        "SqUCON": 0.0,
+        "SqUCON1": 0.0
+      }
+    },
+    {
+      "taxon": "Hemidactylus_macropholis",
+      "family": "Gekkonidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 3340,
+        "oph1": 16821,
+        "oph2": 591,
+        "oph3": 1116,
+        "oph_ae": 15,
+        "sq2_Eryx": 26034,
+        "UCON_cyl": 17998
+      },
+      "total": 65915,
+      "sim_means": {
+        "UCON_cyl": 14.7,
+        "sq2_Eryx": 0.27,
+        "Heno": 5.84,
+        "oph3": 23.66,
+        "oph1": 27.13,
+        "oph2": 29.44,
+        "oph_ae": 0.0
+      }
+    },
+    {
+      "taxon": "Heteronotia_binoei",
+      "family": "Gekkonidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 13417,
+        "oph1": 15745,
+        "oph2": 363,
+        "oph3": 462,
+        "oph_ae": 14,
+        "sq2_Eryx": 111742,
+        "SqUCON1": 4977,
+        "SqUCON": 62998,
+        "UCON_cyl": 4668
+      },
+      "total": 214386,
+      "sim_means": {
+        "sq2_Eryx": 0.32,
+        "SqUCON": 94.9,
+        "oph1": 11.31,
+        "Heno": 8.97,
+        "SqUCON1": 80.7,
+        "UCON_cyl": 5.48,
+        "oph3": 27.27,
+        "oph2": 19.56,
+        "oph_ae": 0.0
+      }
+    }
+  ]
+}

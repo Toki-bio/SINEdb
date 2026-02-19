@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SINEdb — Squamata Outgroups</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font:12px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#222;background:#fff}
+a{color:#1a5dab;text-decoration:none}
+a:hover{text-decoration:underline}
+#topbar{display:flex;align-items:center;background:#1a4d8c;color:#fff;padding:0 12px;height:32px;font-size:12px;gap:12px}
+#topbar .title{font-weight:700;font-size:14px;letter-spacing:.5px}
+#topbar .nav-link{color:rgba(255,255,255,.85);font-size:11px;padding:2px 8px;border:1px solid rgba(255,255,255,.3);border-radius:3px}
+#topbar .nav-link:hover{background:rgba(255,255,255,.15);text-decoration:none}
+#topbar .stats{font-size:11px;opacity:.85;margin-left:auto}
+.page-header{padding:12px 16px;background:#f0f4f8;border-bottom:1px solid #d0d4d8}
+.page-header h2{font-size:14px;color:#1a4d8c;margin-bottom:2px}
+.page-header p{font-size:11px;color:#555}
+.status-banner{padding:6px 16px;background:#fff8e1;border-bottom:1px solid #e6c35c;font-size:11px;color:#7a5c00}
+.controls{padding:8px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;border-bottom:1px solid #e0e0e0;background:#fafbfc}
+.controls label{font-weight:600;font-size:11px}
+.controls select,.controls input{font-size:11px;padding:1px 4px;border:1px solid #aaa}
+.table-wrap{overflow:auto;height:calc(100vh - 140px);padding:0}
+table{border-collapse:separate;border-spacing:0;font-size:10px}
+table th,table td{border:1px solid #d0d0d0;padding:2px 4px;white-space:nowrap}
+table thead th{position:sticky;top:0;z-index:4;background:#1a4d8c;color:#fff;font-size:10px;font-weight:600;cursor:pointer;user-select:none}
+table thead th:hover{background:#15407a}
+table thead tr:nth-child(2) th{top:22px;z-index:3}
+/* Sticky species column */
+table .sticky-sp{position:sticky;left:0;z-index:2;background:#fff;border-right:2px solid #999;width:180px;min-width:180px;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:normal;line-height:1.2}
+table thead .sticky-sp{z-index:5;background:#1a4d8c}
+/* Sticky total column */
+table .sticky-tot{position:sticky;left:182px;z-index:2;background:#fff;border-right:2px solid #999;min-width:65px;text-align:right;font-weight:700}
+table thead .sticky-tot{z-index:5;background:#1a4d8c}
+/* Group/family header row */
+table .grp-hdr td{background:#dce3eb;font-weight:700;font-size:10px;border-top:2px solid #888;color:#333}
+table .grp-hdr .sticky-sp,.grp-hdr .sticky-tot{background:#dce3eb}
+/* Subfamily vertical headers */
+table .sf-vert{writing-mode:vertical-lr;text-orientation:mixed;font-size:9px;max-width:30px;min-width:30px;padding:2px 1px}
+table .sf-vert:hover{background:#15407a}
+/* Family group header */
+table .fam-hdr{background:#2c3e50;text-align:center;font-size:10px;letter-spacing:.5px}
+/* Heatmap cells */
+.c-high{background:#1a6b3c;color:#fff}
+.c-med{background:#5ab87a;color:#000}
+.c-low{background:#c8e6c9;color:#333}
+.c-zero{background:#fff;color:#ddd}
+.c-trace{background:#ffecb3;color:#8d6e63}
+/* Footer */
+table tfoot td{font-weight:700;background:#e8ecf0;border-top:2px solid #999}
+table tfoot .sticky-sp,table tfoot .sticky-tot{background:#e8ecf0}
+tr:hover td{background-color:rgba(232,240,254,.4)}
+tr:hover .sticky-sp,tr:hover .sticky-tot{background:#e8f0fe}
+/* Tooltip cell */
+td[title]{cursor:help}
+/* RHS info panel */
+#info{display:none;position:fixed;right:0;top:32px;bottom:0;width:340px;background:#fff;border-left:2px solid #1a4d8c;overflow-y:auto;z-index:10;padding:10px;box-shadow:-2px 0 8px rgba(0,0,0,.1)}
+#info .close-btn{position:absolute;top:4px;right:8px;cursor:pointer;font-size:16px;color:#888}
+#info h3{font-size:12px;color:#1a4d8c;margin-bottom:6px}
+#info .detail-row{font-size:11px;margin:2px 0}
+#info .bar{height:14px;background:#e0e0e0;border-radius:2px;margin:1px 0;position:relative;overflow:hidden}
+#info .bar-fill{height:100%;position:absolute;left:0;top:0;border-radius:2px}
+#info .bar-label{position:absolute;left:4px;top:0;font-size:9px;color:#333;line-height:14px;z-index:1}
+</style>
+</head>
+<body>
+
+<div id="topbar">
+  <span class="title">SINEdb — Squamata Outgroups</span>
+  <a class="nav-link" href="index.html">← Snake Summary</a>
+  <span class="stats" id="topStats"></span>
+</div>
+
+<div class="page-header">
+  <h2>Non-Snake Squamate SINE Copy Counts</h2>
+  <p>Snake SINE consensus sequences searched against non-snake squamate genomes using the SINEderella pipeline.
+     Subfamilies shown are the same as in the snake analysis (Heno, oph1–3, oph_ae, sq2_Eryx, SqUCON, SqUCON1, UCON_cyl).</p>
+</div>
+
+<div class="status-banner" id="statusBanner" style="display:none"></div>
+
+<div class="controls">
+  <label>Filter clade:</label>
+  <select id="cladeFilter" onchange="render()"><option value="">All</option></select>
+  <label>Filter family:</label>
+  <select id="famFilter" onchange="render()"><option value="">All</option></select>
+  <label>Min copies:</label>
+  <input type="number" id="minCopies" value="0" min="0" style="width:60px" onchange="render()">
+  <label><input type="checkbox" id="hideZero" onchange="render()"> Hide empty cols</label>
+  <label><input type="checkbox" id="showPct" onchange="render()"> Show % of total</label>
+  <span id="countInfo" style="margin-left:auto;color:#666;font-size:11px"></span>
+</div>
+
+<div class="table-wrap" id="tableWrap"></div>
+
+<div id="info">
+  <span class="close-btn" onclick="closeInfo()">&times;</span>
+  <div id="infoBody"></div>
+</div>
+
+<script>
+let DATA = null;
+let sortCol = null, sortDir = 1;
+
+// Subfamily display order (matching snake table)
+const SF_ORDER = ['Heno','oph1','oph2','oph3','oph_ae','sq2_Eryx','SqUCON','SqUCON1','UCON_cyl'];
+
+// Family grouping of SINE subfamilies (for colspan headers)
+const SINE_GROUPS = [
+  {name:'Heno', sfs:['Heno']},
+  {name:'Ophidia', sfs:['oph1','oph2','oph3','oph_ae']},
+  {name:'Squamata', sfs:['sq2_Eryx','SqUCON','SqUCON1','UCON_cyl']},
+];
+
+// Colors for sparklines
+const CLADE_COLORS = {
+  'Amphisbaenia':'#8e44ad','Anguimorpha':'#2c3e50','Dibamia':'#7f8c8d',
+  'Gekkota':'#e67e22','Iguania':'#27ae60','Laterata':'#2980b9',
+  'Scinciformata':'#c0392b','Rhynchocephalia':'#16a085'
+};
+
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function fmt(n){return n?n.toLocaleString():'0';}
+
+async function init(){
+  try{
+    const r = await fetch('squamata_data.json');
+    DATA = await r.json();
+  }catch(e){
+    document.getElementById('tableWrap').innerHTML = '<p style="padding:20px;color:red">Error loading squamata_data.json: '+e.message+'</p>';
+    return;
+  }
+
+  // Populate filter dropdowns
+  const clades = [...new Set(DATA.species.map(s=>s.clade))].sort();
+  const fams = [...new Set(DATA.species.map(s=>s.family))].sort();
+  const cs = document.getElementById('cladeFilter');
+  clades.forEach(c=>{ const o=document.createElement('option'); o.value=c; o.textContent=c; cs.appendChild(o); });
+  const fs = document.getElementById('famFilter');
+  fams.forEach(f=>{ const o=document.createElement('option'); o.value=f; o.textContent=f; fs.appendChild(o); });
+
+  // Show status
+  const pending = 79 - DATA.species.length;
+  if(pending > 0){
+    const banner = document.getElementById('statusBanner');
+    banner.style.display = '';
+    banner.textContent = '⏳ ' + DATA.species.length + ' of 79 species completed. ' + pending + ' still running on server.';
+  }
+
+  document.getElementById('topStats').textContent = DATA.species.length + ' species • 9 subfamilies';
+  render();
+}
+
+function render(){
+  const clade = document.getElementById('cladeFilter').value;
+  const fam = document.getElementById('famFilter').value;
+  const minC = parseInt(document.getElementById('minCopies').value)||0;
+  const hideZ = document.getElementById('hideZero').checked;
+  const showPct = document.getElementById('showPct').checked;
+
+  // Filter species
+  let species = DATA.species.filter(sp=>{
+    if(clade && sp.clade!==clade) return false;
+    if(fam && sp.family!==fam) return false;
+    return true;
+  });
+
+  // Sort
+  if(sortCol==='species'){
+    species.sort((a,b)=> sortDir * a.taxon.localeCompare(b.taxon));
+  } else if(sortCol==='total'){
+    species.sort((a,b)=> sortDir * (a.total - b.total));
+  } else if(sortCol!==null && typeof sortCol==='string'){
+    species.sort((a,b)=> sortDir * ((a.counts[sortCol]||0) - (b.counts[sortCol]||0)));
+  }
+
+  // Determine visible subfamilies
+  let visibleSFs = SF_ORDER.slice();
+  if(hideZ){
+    visibleSFs = visibleSFs.filter(sf=> species.some(sp=> (sp.counts[sf]||0) > 0));
+  }
+
+  // Build visible SINE group headers
+  let groupHeaders = SINE_GROUPS.map(g=>{
+    const vis = g.sfs.filter(sf=> visibleSFs.includes(sf));
+    return {name:g.name, sfs:vis, count:vis.length};
+  }).filter(g=>g.count>0);
+
+  // Column totals
+  let colTotals = {};
+  visibleSFs.forEach(sf=>{ colTotals[sf]=0; });
+  let grandTotal = 0;
+  species.forEach(sp=>{
+    visibleSFs.forEach(sf=>{ colTotals[sf]+=(sp.counts[sf]||0); });
+    grandTotal += sp.total;
+  });
+
+  // Build table HTML
+  let h = '<table id="sumTable">';
+
+  // Header row 1: SINE family groups
+  h += '<thead><tr>';
+  h += '<th class="sticky-sp" rowspan="2" onclick="doSort(\'species\')">Species ⇕</th>';
+  h += '<th class="sticky-tot" rowspan="2" onclick="doSort(\'total\')">Total ⇕</th>';
+  groupHeaders.forEach(g=>{
+    h += '<th class="fam-hdr" colspan="'+g.count+'">'+esc(g.name)+'</th>';
+  });
+  h += '</tr>';
+
+  // Header row 2: subfamily names (vertical)
+  h += '<tr>';
+  visibleSFs.forEach(sf=>{
+    h += '<th class="sf-vert" onclick="doSort(\''+esc(sf)+'\')">'+esc(sf)+'</th>';
+  });
+  h += '</tr></thead>';
+
+  // Body: grouped by clade > family
+  h += '<tbody>';
+  let lastGroup = '';
+  species.forEach(sp=>{
+    const grpKey = sp.clade + ' > ' + sp.family;
+    if(grpKey !== lastGroup){
+      h += '<tr class="grp-hdr"><td class="sticky-sp" colspan="2"><strong>'+esc(grpKey)+'</strong></td>';
+      for(let i=0;i<visibleSFs.length;i++) h += '<td></td>';
+      h += '</tr>';
+      lastGroup = grpKey;
+    }
+
+    const rowTotal = sp.total;
+    if(minC > 0 && rowTotal < minC) return;
+
+    h += '<tr data-taxon="'+esc(sp.taxon)+'">';
+    h += '<td class="sticky-sp"><i>'+esc(sp.taxon.replace(/_/g,' '))+'</i>';
+    h += '<br><span style="color:#888;font-size:9px">'+esc(sp.family)+'</span></td>';
+    h += '<td class="sticky-tot" onclick="showSpeciesInfo(\''+esc(sp.taxon)+'\')">'+fmt(rowTotal)+'</td>';
+
+    visibleSFs.forEach(sf=>{
+      const v = sp.counts[sf]||0;
+      let display = showPct && rowTotal>0 ? (100*v/rowTotal).toFixed(1)+'%' : fmt(v);
+      let cls;
+      if(v > 10000) cls = 'c-high';
+      else if(v > 1000) cls = 'c-med';
+      else if(v > 10) cls = 'c-low';
+      else if(v > 0) cls = 'c-trace';
+      else cls = 'c-zero';
+
+      const simInfo = sp.sim_means && sp.sim_means[sf] ? ' (conf_alt='+sp.sim_means[sf].toFixed(1)+'%)' : '';
+      const tip = sf+' in '+sp.taxon.replace(/_/g,' ')+': '+fmt(v)+' copies'+simInfo;
+      h += '<td class="'+cls+'" title="'+esc(tip)+'" onclick="showCellInfo(\''+esc(sp.taxon)+'\',\''+esc(sf)+'\')">'+display+'</td>';
+    });
+    h += '</tr>';
+  });
+  h += '</tbody>';
+
+  // Footer: column totals
+  h += '<tfoot><tr><td class="sticky-sp"><strong>Total</strong></td>';
+  h += '<td class="sticky-tot">'+fmt(grandTotal)+'</td>';
+  visibleSFs.forEach(sf=>{
+    h += '<td style="text-align:right;font-weight:700">'+fmt(colTotals[sf])+'</td>';
+  });
+  h += '</tr></tfoot>';
+
+  h += '</table>';
+
+  document.getElementById('tableWrap').innerHTML = h;
+  document.getElementById('countInfo').textContent = species.length + ' species × ' + visibleSFs.length + ' subfamilies';
+}
+
+function doSort(col){
+  if(sortCol===col) sortDir *= -1;
+  else { sortCol=col; sortDir=-1; } // default desc for counts
+  if(col==='species') sortDir = sortCol===col ? sortDir : 1;
+  render();
+}
+
+function showSpeciesInfo(taxon){
+  const sp = DATA.species.find(s=>s.taxon===taxon);
+  if(!sp) return;
+  const info = document.getElementById('info');
+  const body = document.getElementById('infoBody');
+
+  let h = '<h3><i>'+esc(sp.taxon.replace(/_/g,' '))+'</i></h3>';
+  h += '<div class="detail-row"><b>Family:</b> '+esc(sp.family)+'</div>';
+  h += '<div class="detail-row"><b>Clade:</b> '+esc(sp.clade)+'</div>';
+  h += '<div class="detail-row"><b>Total copies:</b> '+fmt(sp.total)+'</div>';
+  h += '<hr style="margin:8px 0">';
+  h += '<h3>Subfamily Breakdown</h3>';
+
+  // Bar chart
+  const sorted = SF_ORDER.filter(sf=>(sp.counts[sf]||0)>0)
+    .sort((a,b)=>(sp.counts[b]||0)-(sp.counts[a]||0));
+  const maxVal = sorted.length>0 ? sp.counts[sorted[0]] : 1;
+
+  sorted.forEach(sf=>{
+    const v = sp.counts[sf]||0;
+    const pct = (100*v/maxVal).toFixed(1);
+    const fracOfTotal = (100*v/sp.total).toFixed(1);
+    h += '<div class="detail-row"><b>'+esc(sf)+'</b>: '+fmt(v)+' ('+fracOfTotal+'%)</div>';
+    h += '<div class="bar"><div class="bar-fill" style="width:'+pct+'%;background:'+getBarColor(sf)+'"></div>';
+    h += '<div class="bar-label">'+fmt(v)+'</div></div>';
+  });
+
+  // Add conf_alt info if available
+  if(sp.sim_means){
+    h += '<hr style="margin:8px 0">';
+    h += '<h3>Conf_alt % (ambiguous assignment)</h3>';
+    Object.entries(sp.sim_means).sort((a,b)=>b[1]-a[1]).forEach(([sf,pct])=>{
+      const color = pct>50?'#c0392b':pct>20?'#e67e22':'#27ae60';
+      h += '<div class="detail-row"><b>'+esc(sf)+'</b>: <span style="color:'+color+'">'+pct.toFixed(1)+'%</span></div>';
+    });
+  }
+
+  body.innerHTML = h;
+  info.style.display = '';
+}
+
+function showCellInfo(taxon, sf){
+  const sp = DATA.species.find(s=>s.taxon===taxon);
+  if(!sp) return;
+  const v = sp.counts[sf]||0;
+  const info = document.getElementById('info');
+  const body = document.getElementById('infoBody');
+
+  let h = '<h3>'+esc(sf)+' in <i>'+esc(taxon.replace(/_/g,' '))+'</i></h3>';
+  h += '<div class="detail-row"><b>Copy count:</b> '+fmt(v)+'</div>';
+  h += '<div class="detail-row"><b>% of total:</b> '+(sp.total>0?(100*v/sp.total).toFixed(1):'0')+'%</div>';
+  if(sp.sim_means && sp.sim_means[sf]!=null){
+    h += '<div class="detail-row"><b>Conf_alt:</b> '+sp.sim_means[sf].toFixed(1)+'%</div>';
+  }
+
+  // Context: how does this compare to other species?
+  h += '<hr style="margin:8px 0">';
+  h += '<h3>Same subfamily across species</h3>';
+  const vals = DATA.species.map(s=>({taxon:s.taxon, v:s.counts[sf]||0})).filter(x=>x.v>0).sort((a,b)=>b.v-a.v);
+  const maxV = vals.length>0?vals[0].v:1;
+  vals.forEach(x=>{
+    const pct = (100*x.v/maxV).toFixed(0);
+    const isCurrent = x.taxon===taxon;
+    h += '<div class="detail-row" style="'+(isCurrent?'font-weight:700;color:#1a4d8c':'')+'">'+esc(x.taxon.replace(/_/g,' '))+': '+fmt(x.v)+'</div>';
+    h += '<div class="bar"><div class="bar-fill" style="width:'+pct+'%;background:'+(isCurrent?'#1a4d8c':'#95a5a6')+'"></div></div>';
+  });
+
+  body.innerHTML = h;
+  info.style.display = '';
+}
+
+function closeInfo(){
+  document.getElementById('info').style.display = 'none';
+}
+
+function getBarColor(sf){
+  if(sf.startsWith('oph')) return '#e74c3c';
+  if(sf==='Heno') return '#3498db';
+  if(sf.startsWith('sq2')) return '#2ecc71';
+  if(sf.startsWith('SqUCON')) return '#9b59b6';
+  if(sf==='UCON_cyl') return '#f39c12';
+  return '#7f8c8d';
+}
+
+// Init on load
+init();
+</script>
+</body>
+</html>
