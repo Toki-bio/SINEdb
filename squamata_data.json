@@ -1,16 +1,16 @@
 {
-  "title": "Squamata Outgroups \u2014 SINE Copy Counts",
-  "description": "Non-snake squamate species analyzed with snake SINE consensuses",
+  "title": "Squamata Non-Snake \u2014 SINE Copy Counts",
+  "description": "Non-snake squamate species analyzed with snake SINE consensuses (73 species, 9 subfamilies)",
   "subfamilies": [
     "Heno",
-    "SqUCON",
-    "SqUCON1",
-    "UCON_cyl",
     "oph1",
     "oph2",
     "oph3",
     "oph_ae",
-    "sq2_Eryx"
+    "sq2_Eryx",
+    "SqUCON",
+    "SqUCON1",
+    "UCON_cyl"
   ],
   "species": [
     {
@@ -18,84 +18,60 @@
       "family": "Rhineuridae",
       "clade": "Amphisbaenia",
       "counts": {
-        "Heno": 4339,
-        "oph1": 10896,
-        "oph2": 3713,
-        "oph3": 3955,
-        "oph_ae": 6,
-        "sq2_Eryx": 110075,
-        "SqUCON1": 5854,
-        "SqUCON": 441,
-        "UCON_cyl": 3683
+        "Heno": 4392,
+        "oph1": 11729,
+        "oph2": 7146,
+        "oph3": 4195,
+        "oph_ae": 7,
+        "sq2_Eryx": 110033,
+        "SqUCON": 4672,
+        "SqUCON1": 5880,
+        "UCON_cyl": 5171
       },
-      "total": 142962,
-      "sim_means": {
-        "sq2_Eryx": 0.17,
-        "oph1": 21.12,
-        "SqUCON1": 96.99,
-        "Heno": 1.56,
-        "oph3": 20.48,
-        "oph2": 54.86,
-        "UCON_cyl": 13.82,
-        "SqUCON": 90.72,
-        "oph_ae": 0.0
-      }
+      "total": 153225,
+      "total_loci": 153225,
+      "unassigned_n": 30794,
+      "unassigned_pct": 20.1
     },
     {
       "taxon": "Dopasia_gracilis",
       "family": "Anguidae",
       "clade": "Anguimorpha",
       "counts": {
-        "Heno": 49,
-        "oph1": 13960,
-        "oph2": 1693,
-        "oph3": 1162,
+        "Heno": 52,
+        "oph1": 14815,
+        "oph2": 2537,
+        "oph3": 1357,
         "oph_ae": 9,
-        "sq2_Eryx": 33013,
-        "SqUCON1": 1,
+        "sq2_Eryx": 32952,
         "SqUCON": 1,
-        "UCON_cyl": 6340
+        "SqUCON1": 1,
+        "UCON_cyl": 7754
       },
-      "total": 56228,
-      "sim_means": {
-        "sq2_Eryx": 0.22,
-        "oph1": 12.34,
-        "UCON_cyl": 23.35,
-        "oph2": 33.31,
-        "oph3": 22.55,
-        "Heno": 0.0,
-        "oph_ae": 0.0,
-        "SqUCON": 100.0,
-        "SqUCON1": 0.0
-      }
+      "total": 59478,
+      "total_loci": 59478,
+      "unassigned_n": 14842,
+      "unassigned_pct": 24.95
     },
     {
       "taxon": "Elgaria_multicarinata",
       "family": "Anguidae",
       "clade": "Anguimorpha",
       "counts": {
-        "Heno": 65,
-        "oph1": 58826,
-        "oph2": 732,
-        "oph3": 1189,
+        "Heno": 74,
+        "oph1": 59745,
+        "oph2": 1058,
+        "oph3": 1393,
         "oph_ae": 8,
-        "sq2_Eryx": 40312,
-        "SqUCON1": 3428,
-        "SqUCON": 599,
-        "UCON_cyl": 973
+        "sq2_Eryx": 40244,
+        "SqUCON": 7363,
+        "SqUCON1": 3426,
+        "UCON_cyl": 1254
       },
-      "total": 106132,
-      "sim_means": {
-        "oph1": 2.23,
-        "sq2_Eryx": 0.25,
-        "SqUCON1": 96.78,
-        "oph3": 24.47,
-        "UCON_cyl": 19.79,
-        "oph2": 35.11,
-        "SqUCON": 93.54,
-        "Heno": 0.0,
-        "oph_ae": 0.0
-      }
+      "total": 114565,
+      "total_loci": 114565,
+      "unassigned_n": 22081,
+      "unassigned_pct": 19.27
     },
     {
       "taxon": "Anniella_stebbinsi",
@@ -103,499 +79,1423 @@
       "clade": "Anguimorpha",
       "counts": {
         "Heno": 59,
-        "oph1": 15020,
-        "oph2": 683,
-        "oph3": 722,
+        "oph1": 15992,
+        "oph2": 962,
+        "oph3": 852,
         "oph_ae": 9,
-        "sq2_Eryx": 46584,
-        "SqUCON1": 1,
+        "sq2_Eryx": 46532,
         "SqUCON": 2,
-        "UCON_cyl": 580
+        "SqUCON1": 1,
+        "UCON_cyl": 876
       },
-      "total": 63660,
-      "sim_means": {
-        "sq2_Eryx": 0.19,
-        "oph1": 4.62,
-        "oph3": 26.32,
-        "oph2": 42.9,
-        "UCON_cyl": 13.73,
-        "Heno": 0.0,
-        "oph_ae": 0.0,
-        "SqUCON": 0.0,
-        "SqUCON1": 0.0
-      }
+      "total": 65285,
+      "total_loci": 65285,
+      "unassigned_n": 16963,
+      "unassigned_pct": 25.98
+    },
+    {
+      "taxon": "Heloderma_charlesbogerti",
+      "family": "Helodermatidae",
+      "clade": "Anguimorpha",
+      "counts": {
+        "Heno": 353,
+        "oph1": 31382,
+        "oph2": 4445,
+        "oph3": 4004,
+        "oph_ae": 8,
+        "sq2_Eryx": 67876,
+        "SqUCON": 4916,
+        "SqUCON1": 277,
+        "UCON_cyl": 11909
+      },
+      "total": 125170,
+      "total_loci": 125170,
+      "unassigned_n": 28946,
+      "unassigned_pct": 23.13
+    },
+    {
+      "taxon": "Lanthanotus_borneensis",
+      "family": "Lanthanotidae",
+      "clade": "Anguimorpha",
+      "counts": {
+        "Heno": 75,
+        "oph1": 5843,
+        "oph2": 852,
+        "oph3": 1406,
+        "oph_ae": 10,
+        "sq2_Eryx": 39751,
+        "SqUCON": 2,
+        "SqUCON1": 1,
+        "UCON_cyl": 7109
+      },
+      "total": 55049,
+      "total_loci": 55049,
+      "unassigned_n": 17910,
+      "unassigned_pct": 32.53
+    },
+    {
+      "taxon": "Shinisaurus_crocodilurus",
+      "family": "Shinisauridae",
+      "clade": "Anguimorpha",
+      "counts": {
+        "Heno": 204,
+        "oph1": 29243,
+        "oph2": 6378,
+        "oph3": 3335,
+        "oph_ae": 9,
+        "sq2_Eryx": 67051,
+        "SqUCON": 1,
+        "SqUCON1": 1,
+        "UCON_cyl": 92685
+      },
+      "total": 198907,
+      "total_loci": 198907,
+      "unassigned_n": 27054,
+      "unassigned_pct": 13.6
+    },
+    {
+      "taxon": "Varanus_acanthurus",
+      "family": "Varanidae",
+      "clade": "Anguimorpha",
+      "counts": {
+        "Heno": 30,
+        "oph1": 6021,
+        "oph2": 1482,
+        "oph3": 2556,
+        "oph_ae": 4,
+        "sq2_Eryx": 22115,
+        "SqUCON": 0,
+        "SqUCON1": 0,
+        "UCON_cyl": 2284
+      },
+      "total": 34492,
+      "total_loci": 34492,
+      "unassigned_n": 10038,
+      "unassigned_pct": 29.1
+    },
+    {
+      "taxon": "Varanus_komodoensis",
+      "family": "Varanidae",
+      "clade": "Anguimorpha",
+      "counts": {
+        "Heno": 53,
+        "oph1": 6779,
+        "oph2": 1733,
+        "oph3": 2523,
+        "oph_ae": 15,
+        "sq2_Eryx": 20828,
+        "SqUCON": 6,
+        "SqUCON1": 2,
+        "UCON_cyl": 27488
+      },
+      "total": 59427,
+      "total_loci": 59427,
+      "unassigned_n": 10550,
+      "unassigned_pct": 17.75
     },
     {
       "taxon": "Dibamus_smithi",
       "family": "Dibamidae",
       "clade": "Dibamia",
       "counts": {
-        "Heno": 45,
-        "oph1": 3360,
-        "oph2": 101,
-        "oph3": 271,
+        "Heno": 46,
+        "oph1": 3441,
+        "oph2": 175,
+        "oph3": 357,
         "oph_ae": 5,
-        "sq2_Eryx": 43776,
-        "SqUCON1": 1,
+        "sq2_Eryx": 43773,
         "SqUCON": 3,
-        "UCON_cyl": 3832
+        "SqUCON1": 1,
+        "UCON_cyl": 4139
       },
-      "total": 51394,
-      "sim_means": {
-        "sq2_Eryx": 0.06,
-        "UCON_cyl": 9.99,
-        "oph1": 11.73,
-        "oph3": 17.71,
-        "oph2": 40.59,
-        "Heno": 0.0,
-        "oph_ae": 0.0,
-        "SqUCON": 0.0,
-        "SqUCON1": 0.0
-      }
+      "total": 51940,
+      "total_loci": 51940,
+      "unassigned_n": 13184,
+      "unassigned_pct": 25.38
     },
     {
       "taxon": "Nephrurus_levis",
       "family": "Carphodactylidae",
       "clade": "Gekkota",
       "counts": {
-        "Heno": 5465,
-        "oph1": 7920,
-        "oph2": 7762,
-        "oph3": 6090,
-        "oph_ae": 9,
-        "sq2_Eryx": 27407,
-        "SqUCON1": 3,
+        "Heno": 5503,
+        "oph1": 10019,
+        "oph2": 8036,
+        "oph3": 9462,
+        "oph_ae": 10,
+        "sq2_Eryx": 27351,
         "SqUCON": 5,
-        "UCON_cyl": 6517
+        "SqUCON1": 3,
+        "UCON_cyl": 19777
       },
-      "total": 61178,
-      "sim_means": {
-        "sq2_Eryx": 0.17,
-        "oph1": 12.46,
-        "oph2": 8.64,
-        "UCON_cyl": 6.81,
-        "oph3": 8.78,
-        "Heno": 5.89,
-        "oph_ae": 0.0,
-        "SqUCON": 0.0,
-        "SqUCON1": 0.0
-      }
+      "total": 80166,
+      "total_loci": 80166,
+      "unassigned_n": 27326,
+      "unassigned_pct": 34.09
     },
     {
       "taxon": "Correlophus_ciliatus",
       "family": "Diplodactylidae",
       "clade": "Gekkota",
       "counts": {
-        "Heno": 16608,
-        "oph1": 22325,
-        "oph2": 900,
-        "oph3": 9011,
-        "oph_ae": 11,
-        "sq2_Eryx": 49180,
-        "SqUCON1": 4,
-        "SqUCON": 6,
-        "UCON_cyl": 10144
+        "Heno": 16653,
+        "oph1": 24859,
+        "oph2": 1066,
+        "oph3": 9580,
+        "oph_ae": 163,
+        "sq2_Eryx": 48685,
+        "SqUCON": 9,
+        "SqUCON1": 7,
+        "UCON_cyl": 13422
       },
-      "total": 108189,
-      "sim_means": {
-        "sq2_Eryx": 0.35,
-        "oph1": 39.91,
-        "Heno": 6.95,
-        "UCON_cyl": 45.34,
-        "oph3": 14.55,
-        "oph2": 16.22,
-        "oph_ae": 0.0,
-        "SqUCON": 0.0,
-        "SqUCON1": 0.0
-      }
+      "total": 114444,
+      "total_loci": 114444,
+      "unassigned_n": 21202,
+      "unassigned_pct": 18.53,
+      "assemblies": [
+        "Correlophus_ciliatus",
+        "Correlophus_ciliatus_local"
+      ]
     },
     {
       "taxon": "Correlophus_sarasinorum",
       "family": "Diplodactylidae",
       "clade": "Gekkota",
       "counts": {
-        "Heno": 16292,
-        "oph1": 22079,
-        "oph2": 834,
-        "oph3": 9081,
-        "oph_ae": 13,
-        "sq2_Eryx": 48131,
-        "SqUCON1": 5,
-        "SqUCON": 3,
-        "UCON_cyl": 9641
+        "Heno": 16343,
+        "oph1": 24701,
+        "oph2": 997,
+        "oph3": 9555,
+        "oph_ae": 166,
+        "sq2_Eryx": 47713,
+        "SqUCON": 4,
+        "SqUCON1": 6,
+        "UCON_cyl": 12783
       },
-      "total": 106079,
-      "sim_means": {
-        "sq2_Eryx": 0.37,
-        "oph1": 43.6,
-        "Heno": 7.28,
-        "UCON_cyl": 47.12,
-        "oph3": 14.46,
-        "oph2": 16.07,
-        "oph_ae": 0.0,
-        "SqUCON1": 0.0,
-        "SqUCON": 0.0
-      }
+      "total": 112268,
+      "total_loci": 112268,
+      "unassigned_n": 20359,
+      "unassigned_pct": 18.13
     },
     {
       "taxon": "Coleonyx_brevis",
       "family": "Eublepharidae",
       "clade": "Gekkota",
       "counts": {
-        "Heno": 4812,
-        "oph1": 3854,
-        "oph2": 457,
-        "oph3": 353,
-        "oph_ae": 510,
-        "sq2_Eryx": 45253,
-        "SqUCON1": 3372,
-        "SqUCON": 2852,
-        "UCON_cyl": 4357
+        "Heno": 4859,
+        "oph1": 4143,
+        "oph2": 725,
+        "oph3": 480,
+        "oph_ae": 513,
+        "sq2_Eryx": 45250,
+        "SqUCON": 5771,
+        "SqUCON1": 3416,
+        "UCON_cyl": 4893
       },
-      "total": 65820,
-      "sim_means": {
-        "sq2_Eryx": 0.18,
-        "Heno": 5.94,
-        "UCON_cyl": 4.64,
-        "oph1": 6.88,
-        "SqUCON1": 46.64,
-        "SqUCON": 91.02,
-        "oph_ae": 0.39,
-        "oph2": 22.98,
-        "oph3": 21.25
-      }
+      "total": 70050,
+      "total_loci": 70050,
+      "unassigned_n": 16212,
+      "unassigned_pct": 23.14
     },
     {
       "taxon": "Coleonyx_elegans",
       "family": "Eublepharidae",
       "clade": "Gekkota",
       "counts": {
-        "Heno": 3094,
-        "oph1": 1734,
-        "oph2": 63,
-        "oph3": 93,
-        "oph_ae": 286,
-        "sq2_Eryx": 35585,
-        "SqUCON1": 3044,
-        "SqUCON": 1764,
-        "UCON_cyl": 1757
+        "Heno": 3113,
+        "oph1": 1831,
+        "oph2": 99,
+        "oph3": 123,
+        "oph_ae": 288,
+        "sq2_Eryx": 35588,
+        "SqUCON": 4283,
+        "SqUCON1": 3079,
+        "UCON_cyl": 2005
       },
-      "total": 47420,
-      "sim_means": {
-        "sq2_Eryx": 0.03,
-        "Heno": 5.98,
-        "SqUCON1": 62.85,
-        "UCON_cyl": 3.59,
-        "SqUCON": 88.89,
-        "oph1": 5.25,
-        "oph_ae": 0.0,
-        "oph3": 18.28,
-        "oph2": 25.4
-      }
+      "total": 50409,
+      "total_loci": 50409,
+      "unassigned_n": 10636,
+      "unassigned_pct": 21.1
     },
     {
       "taxon": "Eublepharis_macularius",
       "family": "Eublepharidae",
       "clade": "Gekkota",
       "counts": {
-        "Heno": 6802,
-        "oph1": 13343,
-        "oph2": 88,
-        "oph3": 132,
-        "oph_ae": 17,
-        "sq2_Eryx": 50993,
-        "SqUCON1": 886,
-        "SqUCON": 12493,
-        "UCON_cyl": 2936
+        "Heno": 6848,
+        "oph1": 13446,
+        "oph2": 130,
+        "oph3": 168,
+        "oph_ae": 19,
+        "sq2_Eryx": 50985,
+        "SqUCON": 13072,
+        "SqUCON1": 1258,
+        "UCON_cyl": 3541
       },
-      "total": 87690,
-      "sim_means": {
-        "sq2_Eryx": 0.22,
-        "oph1": 41.47,
-        "SqUCON": 95.18,
-        "Heno": 6.68,
-        "UCON_cyl": 6.16,
-        "SqUCON1": 82.18,
-        "oph3": 27.27,
-        "oph2": 34.09,
-        "oph_ae": 0.0
-      }
+      "total": 89467,
+      "total_loci": 89467,
+      "unassigned_n": 14508,
+      "unassigned_pct": 16.22,
+      "assemblies": [
+        "Eublepharis_macularius",
+        "Eublepharis_macularius_local"
+      ]
     },
     {
       "taxon": "Christinus_marmoratus",
       "family": "Gekkonidae",
       "clade": "Gekkota",
       "counts": {
-        "Heno": 38657,
-        "oph1": 23942,
-        "oph2": 431,
-        "oph3": 9343,
-        "oph_ae": 10,
-        "sq2_Eryx": 93905,
+        "Heno": 38744,
+        "oph1": 28430,
+        "oph2": 539,
+        "oph3": 9512,
+        "oph_ae": 11,
+        "sq2_Eryx": 93851,
+        "SqUCON": 8,
         "SqUCON1": 2,
-        "SqUCON": 5,
-        "UCON_cyl": 12511
+        "UCON_cyl": 15906
       },
-      "total": 178806,
-      "sim_means": {
-        "sq2_Eryx": 0.67,
-        "Heno": 12.26,
-        "oph1": 17.69,
-        "UCON_cyl": 13.84,
-        "oph3": 10.62,
-        "oph2": 16.01,
-        "oph_ae": 0.0,
-        "SqUCON": 0.0,
-        "SqUCON1": 0.0
-      }
-    },
-    {
-      "taxon": "Gehyra_mutilata",
-      "family": "Gekkonidae",
-      "clade": "Gekkota",
-      "counts": {
-        "Heno": 11847,
-        "oph1": 47330,
-        "oph2": 2509,
-        "oph3": 434,
-        "oph_ae": 6,
-        "sq2_Eryx": 46559,
-        "SqUCON1": 2177,
-        "SqUCON": 54515,
-        "UCON_cyl": 7572
-      },
-      "total": 172949,
-      "sim_means": {
-        "SqUCON": 86.55,
-        "oph1": 17.31,
-        "sq2_Eryx": 0.72,
-        "Heno": 9.46,
-        "UCON_cyl": 20.01,
-        "oph2": 23.83,
-        "SqUCON1": 68.39,
-        "oph3": 29.72,
-        "oph_ae": 0.0
-      }
+      "total": 187003,
+      "total_loci": 187003,
+      "unassigned_n": 24917,
+      "unassigned_pct": 13.32
     },
     {
       "taxon": "Gekko_gecko",
       "family": "Gekkonidae",
       "clade": "Gekkota",
       "counts": {
-        "Heno": 24624,
-        "oph1": 15811,
-        "oph2": 2052,
-        "oph3": 796,
-        "oph_ae": 10,
-        "sq2_Eryx": 84185,
-        "SqUCON1": 3,
+        "Heno": 24733,
+        "oph1": 16195,
+        "oph2": 2192,
+        "oph3": 1077,
+        "oph_ae": 12,
+        "sq2_Eryx": 84089,
         "SqUCON": 3,
-        "UCON_cyl": 7503
+        "SqUCON1": 3,
+        "UCON_cyl": 9638
       },
-      "total": 134987,
-      "sim_means": {
-        "sq2_Eryx": 0.52,
-        "Heno": 11.04,
-        "oph1": 23.16,
-        "UCON_cyl": 5.76,
-        "oph2": 16.13,
-        "oph3": 17.46,
-        "oph_ae": 0.0,
-        "SqUCON1": 0.0,
-        "SqUCON": 33.33
-      }
+      "total": 137942,
+      "total_loci": 137942,
+      "unassigned_n": 20130,
+      "unassigned_pct": 14.59
     },
     {
       "taxon": "Gekko_japonicus",
       "family": "Gekkonidae",
       "clade": "Gekkota",
       "counts": {
-        "Heno": 24027,
-        "oph1": 12681,
-        "oph2": 2826,
-        "oph3": 560,
-        "oph_ae": 4,
-        "sq2_Eryx": 75361,
-        "SqUCON1": 5,
+        "Heno": 24118,
+        "oph1": 12907,
+        "oph2": 2985,
+        "oph3": 726,
+        "oph_ae": 8,
+        "sq2_Eryx": 75274,
         "SqUCON": 4,
-        "UCON_cyl": 6596
+        "SqUCON1": 5,
+        "UCON_cyl": 8391
       },
-      "total": 122064,
-      "sim_means": {
-        "sq2_Eryx": 0.45,
-        "Heno": 10.26,
-        "oph1": 25.33,
-        "UCON_cyl": 5.32,
-        "oph2": 20.13,
-        "oph3": 22.32,
-        "SqUCON1": 20.0,
-        "oph_ae": 0.0,
-        "SqUCON": 25.0
-      }
+      "total": 124418,
+      "total_loci": 124418,
+      "unassigned_n": 17059,
+      "unassigned_pct": 13.71,
+      "assemblies": [
+        "Gekko_japonicus",
+        "Gekko_japonicus_local"
+      ]
     },
     {
       "taxon": "Hemidactylus_brookii",
       "family": "Gekkonidae",
       "clade": "Gekkota",
       "counts": {
-        "Heno": 13208,
-        "oph1": 14825,
-        "oph2": 369,
-        "oph3": 412,
-        "oph_ae": 13,
-        "sq2_Eryx": 109500,
-        "SqUCON1": 5429,
-        "SqUCON": 61252,
-        "UCON_cyl": 4669
+        "Heno": 13290,
+        "oph1": 14946,
+        "oph2": 475,
+        "oph3": 539,
+        "oph_ae": 15,
+        "sq2_Eryx": 109446,
+        "SqUCON": 64761,
+        "SqUCON1": 5745,
+        "UCON_cyl": 5593
       },
-      "total": 209677,
-      "sim_means": {
-        "sq2_Eryx": 0.32,
-        "SqUCON": 95.03,
-        "oph1": 11.45,
-        "Heno": 8.9,
-        "SqUCON1": 80.76,
-        "UCON_cyl": 5.46,
-        "oph3": 26.94,
-        "oph2": 19.51,
-        "oph_ae": 0.0
-      }
+      "total": 214810,
+      "total_loci": 214810,
+      "unassigned_n": 21035,
+      "unassigned_pct": 9.79
     },
     {
       "taxon": "Hemidactylus_flaviviridis",
       "family": "Gekkonidae",
       "clade": "Gekkota",
       "counts": {
-        "Heno": 5800,
-        "oph1": 26977,
-        "oph2": 343,
-        "oph3": 553,
+        "Heno": 5737,
+        "oph1": 15620,
+        "oph2": 1249,
+        "oph3": 1376,
         "oph_ae": 18,
-        "sq2_Eryx": 35306,
-        "SqUCON1": 2,
+        "sq2_Eryx": 35326,
         "SqUCON": 2,
-        "UCON_cyl": 5553
+        "SqUCON1": 2,
+        "UCON_cyl": 16938
       },
-      "total": 74554,
-      "sim_means": {
-        "sq2_Eryx": 0.28,
-        "Heno": 7.61,
-        "UCON_cyl": 9.04,
-        "oph3": 24.59,
-        "oph2": 33.53,
-        "oph1": 26.1,
-        "oph_ae": 0.0,
-        "SqUCON1": 0.0,
-        "SqUCON": 50.0
-      }
+      "total": 76268,
+      "total_loci": 76268,
+      "unassigned_n": 37484,
+      "unassigned_pct": 49.15
     },
     {
       "taxon": "Hemidactylus_frenatus",
       "family": "Gekkonidae",
       "clade": "Gekkota",
       "counts": {
-        "Heno": 5588,
-        "oph1": 70403,
-        "oph2": 429,
-        "oph3": 870,
-        "oph_ae": 6,
-        "sq2_Eryx": 32090,
-        "SqUCON1": 3,
+        "Heno": 5613,
+        "oph1": 70970,
+        "oph2": 590,
+        "oph3": 1025,
+        "oph_ae": 7,
+        "sq2_Eryx": 32079,
         "SqUCON": 12,
-        "UCON_cyl": 7913
+        "SqUCON1": 4,
+        "UCON_cyl": 11404
       },
-      "total": 117314,
-      "sim_means": {
-        "oph1": 17.83,
-        "sq2_Eryx": 0.35,
-        "UCON_cyl": 11.31,
-        "Heno": 6.84,
-        "oph3": 25.06,
-        "oph2": 30.07,
-        "SqUCON": 8.33,
-        "oph_ae": 0.0,
-        "SqUCON1": 0.0
-      }
+      "total": 121704,
+      "total_loci": 121704,
+      "unassigned_n": 13932,
+      "unassigned_pct": 11.45
     },
     {
       "taxon": "Hemidactylus_mabouia",
       "family": "Gekkonidae",
       "clade": "Gekkota",
       "counts": {
-        "Heno": 5578,
-        "oph1": 24929,
-        "oph2": 890,
-        "oph3": 2257,
-        "oph_ae": 10,
-        "sq2_Eryx": 30216,
-        "SqUCON1": 2,
+        "Heno": 5598,
+        "oph1": 30361,
+        "oph2": 1150,
+        "oph3": 2432,
+        "oph_ae": 11,
+        "sq2_Eryx": 30200,
         "SqUCON": 8,
-        "UCON_cyl": 29818
+        "SqUCON1": 3,
+        "UCON_cyl": 32442
       },
-      "total": 93708,
-      "sim_means": {
-        "UCON_cyl": 11.39,
-        "oph1": 12.46,
-        "sq2_Eryx": 0.35,
-        "Heno": 6.47,
-        "oph3": 16.44,
-        "oph2": 28.54,
-        "oph_ae": 0.0,
-        "SqUCON": 0.0,
-        "SqUCON1": 0.0
-      }
+      "total": 102205,
+      "total_loci": 102205,
+      "unassigned_n": 17688,
+      "unassigned_pct": 17.31
     },
     {
       "taxon": "Hemidactylus_macropholis",
       "family": "Gekkonidae",
       "clade": "Gekkota",
       "counts": {
-        "Heno": 3340,
-        "oph1": 16821,
-        "oph2": 591,
-        "oph3": 1116,
+        "Heno": 3359,
+        "oph1": 13389,
+        "oph2": 1290,
+        "oph3": 1828,
         "oph_ae": 15,
-        "sq2_Eryx": 26034,
-        "UCON_cyl": 17998
+        "sq2_Eryx": 26035,
+        "SqUCON": 0,
+        "SqUCON1": 0,
+        "UCON_cyl": 23112
       },
-      "total": 65915,
-      "sim_means": {
-        "UCON_cyl": 14.7,
-        "sq2_Eryx": 0.27,
-        "Heno": 5.84,
-        "oph3": 23.66,
-        "oph1": 27.13,
-        "oph2": 29.44,
-        "oph_ae": 0.0
-      }
+      "total": 69028,
+      "total_loci": 69028,
+      "unassigned_n": 28539,
+      "unassigned_pct": 41.34
     },
     {
       "taxon": "Heteronotia_binoei",
       "family": "Gekkonidae",
       "clade": "Gekkota",
       "counts": {
-        "Heno": 13417,
-        "oph1": 15745,
-        "oph2": 363,
-        "oph3": 462,
-        "oph_ae": 14,
-        "sq2_Eryx": 111742,
-        "SqUCON1": 4977,
-        "SqUCON": 62998,
-        "UCON_cyl": 4668
+        "Heno": 13473,
+        "oph1": 15891,
+        "oph2": 475,
+        "oph3": 605,
+        "oph_ae": 15,
+        "sq2_Eryx": 111681,
+        "SqUCON": 67548,
+        "SqUCON1": 5574,
+        "UCON_cyl": 5653
       },
-      "total": 214386,
-      "sim_means": {
-        "sq2_Eryx": 0.32,
-        "SqUCON": 94.9,
-        "oph1": 11.31,
-        "Heno": 8.97,
-        "SqUCON1": 80.7,
-        "UCON_cyl": 5.48,
-        "oph3": 27.27,
-        "oph2": 19.56,
-        "oph_ae": 0.0
-      }
+      "total": 220915,
+      "total_loci": 220915,
+      "unassigned_n": 22966,
+      "unassigned_pct": 10.4,
+      "assemblies": [
+        "Heteronotia_binoei",
+        "Heteronotia_binoei_local"
+      ]
+    },
+    {
+      "taxon": "Lepidodactylus_listeri",
+      "family": "Gekkonidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 24462,
+        "oph1": 10746,
+        "oph2": 1904,
+        "oph3": 594,
+        "oph_ae": 10,
+        "sq2_Eryx": 84367,
+        "SqUCON": 6,
+        "SqUCON1": 2,
+        "UCON_cyl": 7638
+      },
+      "total": 129729,
+      "total_loci": 129729,
+      "unassigned_n": 16911,
+      "unassigned_pct": 13.04
+    },
+    {
+      "taxon": "Lepidodactylus_lugubris",
+      "family": "Gekkonidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 32183,
+        "oph1": 15174,
+        "oph2": 2426,
+        "oph3": 803,
+        "oph_ae": 7,
+        "sq2_Eryx": 109035,
+        "SqUCON": 6,
+        "SqUCON1": 6,
+        "UCON_cyl": 10942
+      },
+      "total": 170582,
+      "total_loci": 170582,
+      "unassigned_n": 27267,
+      "unassigned_pct": 15.98
+    },
+    {
+      "taxon": "Mediodactylus_kotschyi",
+      "family": "Gekkonidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 10742,
+        "oph1": 38622,
+        "oph2": 3932,
+        "oph3": 1058,
+        "oph_ae": 15,
+        "sq2_Eryx": 45098,
+        "SqUCON": 1,
+        "SqUCON1": 6,
+        "UCON_cyl": 10214
+      },
+      "total": 109688,
+      "total_loci": 109688,
+      "unassigned_n": 13907,
+      "unassigned_pct": 12.68
+    },
+    {
+      "taxon": "Paroedura_picta",
+      "family": "Gekkonidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 5817,
+        "oph1": 36021,
+        "oph2": 1992,
+        "oph3": 2672,
+        "oph_ae": 10,
+        "sq2_Eryx": 34120,
+        "SqUCON": 57879,
+        "SqUCON1": 921,
+        "UCON_cyl": 18333
+      },
+      "total": 157765,
+      "total_loci": 157765,
+      "unassigned_n": 16320,
+      "unassigned_pct": 10.34
+    },
+    {
+      "taxon": "Paroedura_stumpffi",
+      "family": "Gekkonidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 8245,
+        "oph1": 38028,
+        "oph2": 5203,
+        "oph3": 3840,
+        "oph_ae": 14,
+        "sq2_Eryx": 41425,
+        "SqUCON": 61831,
+        "SqUCON1": 873,
+        "UCON_cyl": 27829
+      },
+      "total": 187288,
+      "total_loci": 187288,
+      "unassigned_n": 23101,
+      "unassigned_pct": 12.33
+    },
+    {
+      "taxon": "Phelsuma_laticauda",
+      "family": "Gekkonidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 36245,
+        "oph1": 66431,
+        "oph2": 1422,
+        "oph3": 1696,
+        "oph_ae": 34,
+        "sq2_Eryx": 57114,
+        "SqUCON": 26741,
+        "SqUCON1": 284,
+        "UCON_cyl": 18909
+      },
+      "total": 208876,
+      "total_loci": 208876,
+      "unassigned_n": 20036,
+      "unassigned_pct": 9.59
+    },
+    {
+      "taxon": "Asaccus_caudivolvulus",
+      "family": "Phyllodactylidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 24745,
+        "oph1": 15193,
+        "oph2": 181,
+        "oph3": 398,
+        "oph_ae": 679,
+        "sq2_Eryx": 60322,
+        "SqUCON": 9,
+        "SqUCON1": 13,
+        "UCON_cyl": 17834
+      },
+      "total": 119374,
+      "total_loci": 119374,
+      "unassigned_n": 15461,
+      "unassigned_pct": 12.95
+    },
+    {
+      "taxon": "Phyllodactylus_wirshingi",
+      "family": "Phyllodactylidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 14086,
+        "oph1": 10713,
+        "oph2": 3557,
+        "oph3": 3310,
+        "oph_ae": 10,
+        "sq2_Eryx": 54115,
+        "SqUCON": 8,
+        "SqUCON1": 4,
+        "UCON_cyl": 11270
+      },
+      "total": 97073,
+      "total_loci": 97073,
+      "unassigned_n": 18078,
+      "unassigned_pct": 18.62
+    },
+    {
+      "taxon": "Tarentola_annularis",
+      "family": "Phyllodactylidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 11943,
+        "oph1": 12279,
+        "oph2": 327,
+        "oph3": 808,
+        "oph_ae": 31,
+        "sq2_Eryx": 48608,
+        "SqUCON": 11806,
+        "SqUCON1": 882,
+        "UCON_cyl": 11130
+      },
+      "total": 97814,
+      "total_loci": 97814,
+      "unassigned_n": 13849,
+      "unassigned_pct": 14.16
+    },
+    {
+      "taxon": "Tarentola_mauritanica",
+      "family": "Phyllodactylidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 14546,
+        "oph1": 24811,
+        "oph2": 647,
+        "oph3": 1604,
+        "oph_ae": 7,
+        "sq2_Eryx": 51148,
+        "SqUCON": 33501,
+        "SqUCON1": 1486,
+        "UCON_cyl": 28455
+      },
+      "total": 156205,
+      "total_loci": 156205,
+      "unassigned_n": 17863,
+      "unassigned_pct": 11.44
+    },
+    {
+      "taxon": "Thecadactylus_rapicauda",
+      "family": "Phyllodactylidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 20470,
+        "oph1": 11155,
+        "oph2": 4972,
+        "oph3": 5400,
+        "oph_ae": 10,
+        "sq2_Eryx": 62080,
+        "SqUCON": 4,
+        "SqUCON1": 4,
+        "UCON_cyl": 22687
+      },
+      "total": 126782,
+      "total_loci": 126782,
+      "unassigned_n": 22430,
+      "unassigned_pct": 17.69,
+      "assemblies": [
+        "Thecadactylus_rapicauda",
+        "Thecadactylus_rapicauda_local"
+      ]
+    },
+    {
+      "taxon": "Lialis_burtonis",
+      "family": "Pygopodidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 21694,
+        "oph1": 21603,
+        "oph2": 1562,
+        "oph3": 3667,
+        "oph_ae": 10,
+        "sq2_Eryx": 42411,
+        "SqUCON": 5,
+        "SqUCON1": 1,
+        "UCON_cyl": 9270
+      },
+      "total": 100223,
+      "total_loci": 100223,
+      "unassigned_n": 17381,
+      "unassigned_pct": 17.34
+    },
+    {
+      "taxon": "Pygopus_nigriceps",
+      "family": "Pygopodidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 14149,
+        "oph1": 24833,
+        "oph2": 1488,
+        "oph3": 4408,
+        "oph_ae": 10,
+        "sq2_Eryx": 39723,
+        "SqUCON": 5,
+        "SqUCON1": 5,
+        "UCON_cyl": 8527
+      },
+      "total": 93148,
+      "total_loci": 93148,
+      "unassigned_n": 15880,
+      "unassigned_pct": 17.05
+    },
+    {
+      "taxon": "Aristelliger_praesignis",
+      "family": "Sphaerodactylidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 19758,
+        "oph1": 20618,
+        "oph2": 4447,
+        "oph3": 12057,
+        "oph_ae": 13,
+        "sq2_Eryx": 44117,
+        "SqUCON": 78952,
+        "SqUCON1": 6077,
+        "UCON_cyl": 40620
+      },
+      "total": 226659,
+      "total_loci": 226659,
+      "unassigned_n": 22905,
+      "unassigned_pct": 10.11
+    },
+    {
+      "taxon": "Euleptes_europaea",
+      "family": "Sphaerodactylidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 31263,
+        "oph1": 33864,
+        "oph2": 294,
+        "oph3": 549,
+        "oph_ae": 7,
+        "sq2_Eryx": 115131,
+        "SqUCON": 38809,
+        "SqUCON1": 2679,
+        "UCON_cyl": 8160
+      },
+      "total": 230756,
+      "total_loci": 230756,
+      "unassigned_n": 16561,
+      "unassigned_pct": 7.18
+    },
+    {
+      "taxon": "Gonatodes_alexandermendesi",
+      "family": "Sphaerodactylidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 1211,
+        "oph1": 833,
+        "oph2": 122,
+        "oph3": 364,
+        "oph_ae": 0,
+        "sq2_Eryx": 17319,
+        "SqUCON": 1854,
+        "SqUCON1": 633,
+        "UCON_cyl": 1966
+      },
+      "total": 24302,
+      "total_loci": 24302,
+      "unassigned_n": 2088,
+      "unassigned_pct": 8.59
+    },
+    {
+      "taxon": "Sphaerodactylus_glaucus",
+      "family": "Sphaerodactylidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 5429,
+        "oph1": 2134,
+        "oph2": 216,
+        "oph3": 410,
+        "oph_ae": 3294,
+        "sq2_Eryx": 28743,
+        "SqUCON": 3670,
+        "SqUCON1": 1354,
+        "UCON_cyl": 3465
+      },
+      "total": 48715,
+      "total_loci": 48715,
+      "unassigned_n": 7112,
+      "unassigned_pct": 14.6
+    },
+    {
+      "taxon": "Sphaerodactylus_inigoi",
+      "family": "Sphaerodactylidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 8929,
+        "oph1": 3681,
+        "oph2": 449,
+        "oph3": 814,
+        "oph_ae": 20,
+        "sq2_Eryx": 34725,
+        "SqUCON": 5190,
+        "SqUCON1": 3108,
+        "UCON_cyl": 5732
+      },
+      "total": 62648,
+      "total_loci": 62648,
+      "unassigned_n": 12554,
+      "unassigned_pct": 20.04
+    },
+    {
+      "taxon": "Sphaerodactylus_townsendi",
+      "family": "Sphaerodactylidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 7294,
+        "oph1": 3085,
+        "oph2": 377,
+        "oph3": 715,
+        "oph_ae": 11,
+        "sq2_Eryx": 29542,
+        "SqUCON": 4492,
+        "SqUCON1": 2826,
+        "UCON_cyl": 4863
+      },
+      "total": 53205,
+      "total_loci": 53205,
+      "unassigned_n": 9532,
+      "unassigned_pct": 17.92
+    },
+    {
+      "taxon": "Teratoscincus_roborowskii",
+      "family": "Sphaerodactylidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 28713,
+        "oph1": 15427,
+        "oph2": 1359,
+        "oph3": 853,
+        "oph_ae": 14,
+        "sq2_Eryx": 69274,
+        "SqUCON": 4305,
+        "SqUCON1": 833,
+        "UCON_cyl": 12327
+      },
+      "total": 133105,
+      "total_loci": 133105,
+      "unassigned_n": 18986,
+      "unassigned_pct": 14.26
+    },
+    {
+      "taxon": "Laudakia_wui",
+      "family": "Agamidae",
+      "clade": "Iguania",
+      "counts": {
+        "Heno": 715,
+        "oph1": 3879,
+        "oph2": 3816,
+        "oph3": 20111,
+        "oph_ae": 8,
+        "sq2_Eryx": 10832,
+        "SqUCON": 277,
+        "SqUCON1": 528,
+        "UCON_cyl": 3694
+      },
+      "total": 43860,
+      "total_loci": 43860,
+      "unassigned_n": 7486,
+      "unassigned_pct": 17.07
+    },
+    {
+      "taxon": "Pogona_vitticeps",
+      "family": "Agamidae",
+      "clade": "Iguania",
+      "counts": {
+        "Heno": 720,
+        "oph1": 2141,
+        "oph2": 2463,
+        "oph3": 14723,
+        "oph_ae": 6,
+        "sq2_Eryx": 11497,
+        "SqUCON": 203,
+        "SqUCON1": 355,
+        "UCON_cyl": 857
+      },
+      "total": 32965,
+      "total_loci": 32965,
+      "unassigned_n": 6401,
+      "unassigned_pct": 19.42
+    },
+    {
+      "taxon": "Chamaeleo_calyptratus",
+      "family": "Chamaeleonidae",
+      "clade": "Iguania",
+      "counts": {
+        "Heno": 366,
+        "oph1": 780,
+        "oph2": 6243,
+        "oph3": 2711,
+        "oph_ae": 33,
+        "sq2_Eryx": 4951,
+        "SqUCON": 20,
+        "SqUCON1": 123,
+        "UCON_cyl": 173
+      },
+      "total": 15400,
+      "total_loci": 15400,
+      "unassigned_n": 2195,
+      "unassigned_pct": 14.25
+    },
+    {
+      "taxon": "Furcifer_pardalis",
+      "family": "Chamaeleonidae",
+      "clade": "Iguania",
+      "counts": {
+        "Heno": 437,
+        "oph1": 808,
+        "oph2": 7207,
+        "oph3": 2924,
+        "oph_ae": 43,
+        "sq2_Eryx": 5445,
+        "SqUCON": 35,
+        "SqUCON1": 154,
+        "UCON_cyl": 182
+      },
+      "total": 17235,
+      "total_loci": 17235,
+      "unassigned_n": 2501,
+      "unassigned_pct": 14.51
+    },
+    {
+      "taxon": "Basiliscus_vittatus",
+      "family": "Corytophanidae",
+      "clade": "Iguania",
+      "counts": {
+        "Heno": 18447,
+        "oph1": 7011,
+        "oph2": 1174,
+        "oph3": 2084,
+        "oph_ae": 70,
+        "sq2_Eryx": 14949,
+        "SqUCON": 16,
+        "SqUCON1": 17,
+        "UCON_cyl": 16519
+      },
+      "total": 60287,
+      "total_loci": 60287,
+      "unassigned_n": 17432,
+      "unassigned_pct": 28.92
+    },
+    {
+      "taxon": "Gambelia_wislizenii",
+      "family": "Crotaphytidae",
+      "clade": "Iguania",
+      "counts": {
+        "Heno": 21788,
+        "oph1": 31638,
+        "oph2": 4373,
+        "oph3": 7745,
+        "oph_ae": 12,
+        "sq2_Eryx": 16683,
+        "SqUCON": 28,
+        "SqUCON1": 76,
+        "UCON_cyl": 46643
+      },
+      "total": 128986,
+      "total_loci": 128986,
+      "unassigned_n": 36266,
+      "unassigned_pct": 28.12
+    },
+    {
+      "taxon": "Anolis_carolinensis",
+      "family": "Dactyloidae",
+      "clade": "Iguania",
+      "counts": {
+        "Heno": 3844,
+        "oph1": 8892,
+        "oph2": 978,
+        "oph3": 2590,
+        "oph_ae": 18,
+        "sq2_Eryx": 4666,
+        "SqUCON": 1213,
+        "SqUCON1": 16,
+        "UCON_cyl": 9895
+      },
+      "total": 32112,
+      "total_loci": 32112,
+      "unassigned_n": 4699,
+      "unassigned_pct": 14.63
+    },
+    {
+      "taxon": "Brachylophus_fasciatus",
+      "family": "Iguanidae",
+      "clade": "Iguania",
+      "counts": {
+        "Heno": 12481,
+        "oph1": 5106,
+        "oph2": 1622,
+        "oph3": 1434,
+        "oph_ae": 10,
+        "sq2_Eryx": 16315,
+        "SqUCON": 8,
+        "SqUCON1": 14,
+        "UCON_cyl": 10807
+      },
+      "total": 47797,
+      "total_loci": 47797,
+      "unassigned_n": 10217,
+      "unassigned_pct": 21.38
+    },
+    {
+      "taxon": "Cyclura_pinguis",
+      "family": "Iguanidae",
+      "clade": "Iguania",
+      "counts": {
+        "Heno": 16094,
+        "oph1": 11220,
+        "oph2": 4253,
+        "oph3": 5188,
+        "oph_ae": 9,
+        "sq2_Eryx": 16455,
+        "SqUCON": 11,
+        "SqUCON1": 40,
+        "UCON_cyl": 20594
+      },
+      "total": 73864,
+      "total_loci": 73864,
+      "unassigned_n": 14747,
+      "unassigned_pct": 19.97
+    },
+    {
+      "taxon": "Iguana_iguana",
+      "family": "Iguanidae",
+      "clade": "Iguania",
+      "counts": {
+        "Heno": 15263,
+        "oph1": 11149,
+        "oph2": 5122,
+        "oph3": 5131,
+        "oph_ae": 10,
+        "sq2_Eryx": 15923,
+        "SqUCON": 8,
+        "SqUCON1": 71,
+        "UCON_cyl": 19575
+      },
+      "total": 72252,
+      "total_loci": 72252,
+      "unassigned_n": 14086,
+      "unassigned_pct": 19.5
+    },
+    {
+      "taxon": "Tretioscincus_oriximinensis",
+      "family": "Gymnophthalmidae",
+      "clade": "Laterata",
+      "counts": {
+        "Heno": 490,
+        "oph1": 8620,
+        "oph2": 490,
+        "oph3": 948,
+        "oph_ae": 0,
+        "sq2_Eryx": 484,
+        "SqUCON": 0,
+        "SqUCON1": 0,
+        "UCON_cyl": 11194
+      },
+      "total": 22226,
+      "total_loci": 22226,
+      "unassigned_n": 2388,
+      "unassigned_pct": 10.74
+    },
+    {
+      "taxon": "Gallotia_galloti",
+      "family": "Lacertidae",
+      "clade": "Laterata",
+      "counts": {
+        "Heno": 12,
+        "oph1": 14862,
+        "oph2": 2857,
+        "oph3": 6042,
+        "oph_ae": 0,
+        "sq2_Eryx": 38284,
+        "SqUCON": 0,
+        "SqUCON1": 1,
+        "UCON_cyl": 3969
+      },
+      "total": 66027,
+      "total_loci": 66027,
+      "unassigned_n": 12036,
+      "unassigned_pct": 18.23
+    },
+    {
+      "taxon": "Lacerta_agilis",
+      "family": "Lacertidae",
+      "clade": "Laterata",
+      "counts": {
+        "Heno": 43,
+        "oph1": 22472,
+        "oph2": 3348,
+        "oph3": 6945,
+        "oph_ae": 10,
+        "sq2_Eryx": 41757,
+        "SqUCON": 6,
+        "SqUCON1": 2,
+        "UCON_cyl": 3902
+      },
+      "total": 78485,
+      "total_loci": 78485,
+      "unassigned_n": 13683,
+      "unassigned_pct": 17.43
+    },
+    {
+      "taxon": "Latastia_doriai",
+      "family": "Lacertidae",
+      "clade": "Laterata",
+      "counts": {
+        "Heno": 5,
+        "oph1": 5738,
+        "oph2": 494,
+        "oph3": 1350,
+        "oph_ae": 3,
+        "sq2_Eryx": 24363,
+        "SqUCON": 1,
+        "SqUCON1": 1,
+        "UCON_cyl": 843
+      },
+      "total": 32798,
+      "total_loci": 32798,
+      "unassigned_n": 6567,
+      "unassigned_pct": 20.02
+    },
+    {
+      "taxon": "Podarcis_cretensis",
+      "family": "Lacertidae",
+      "clade": "Laterata",
+      "counts": {
+        "Heno": 44,
+        "oph1": 24910,
+        "oph2": 2927,
+        "oph3": 6600,
+        "oph_ae": 7,
+        "sq2_Eryx": 40497,
+        "SqUCON": 5,
+        "SqUCON1": 0,
+        "UCON_cyl": 3613
+      },
+      "total": 78603,
+      "total_loci": 78603,
+      "unassigned_n": 13117,
+      "unassigned_pct": 16.69
+    },
+    {
+      "taxon": "Podarcis_lilfordi",
+      "family": "Lacertidae",
+      "clade": "Laterata",
+      "counts": {
+        "Heno": 42,
+        "oph1": 24673,
+        "oph2": 3318,
+        "oph3": 6730,
+        "oph_ae": 11,
+        "sq2_Eryx": 41896,
+        "SqUCON": 4,
+        "SqUCON1": 3,
+        "UCON_cyl": 3765
+      },
+      "total": 80442,
+      "total_loci": 80442,
+      "unassigned_n": 14009,
+      "unassigned_pct": 17.42
+    },
+    {
+      "taxon": "Podarcis_muralis",
+      "family": "Lacertidae",
+      "clade": "Laterata",
+      "counts": {
+        "Heno": 47,
+        "oph1": 24634,
+        "oph2": 3269,
+        "oph3": 6528,
+        "oph_ae": 9,
+        "sq2_Eryx": 42374,
+        "SqUCON": 6,
+        "SqUCON1": 0,
+        "UCON_cyl": 3835
+      },
+      "total": 80702,
+      "total_loci": 80702,
+      "unassigned_n": 14320,
+      "unassigned_pct": 17.74
+    },
+    {
+      "taxon": "Zootoca_vivipara",
+      "family": "Lacertidae",
+      "clade": "Laterata",
+      "counts": {
+        "Heno": 42,
+        "oph1": 30694,
+        "oph2": 3532,
+        "oph3": 6692,
+        "oph_ae": 8,
+        "sq2_Eryx": 39363,
+        "SqUCON": 1,
+        "SqUCON1": 2,
+        "UCON_cyl": 3998
+      },
+      "total": 84332,
+      "total_loci": 84332,
+      "unassigned_n": 14172,
+      "unassigned_pct": 16.81
+    },
+    {
+      "taxon": "Aspidoscelis_tigris",
+      "family": "Teiidae",
+      "clade": "Laterata",
+      "counts": {
+        "Heno": 2470,
+        "oph1": 6496,
+        "oph2": 260,
+        "oph3": 366,
+        "oph_ae": 8,
+        "sq2_Eryx": 3655,
+        "SqUCON": 1,
+        "SqUCON1": 2,
+        "UCON_cyl": 1469
+      },
+      "total": 14727,
+      "total_loci": 14727,
+      "unassigned_n": 3131,
+      "unassigned_pct": 21.26
+    },
+    {
+      "taxon": "Salvator_merianae",
+      "family": "Teiidae",
+      "clade": "Laterata",
+      "counts": {
+        "Heno": 5743,
+        "oph1": 10121,
+        "oph2": 676,
+        "oph3": 832,
+        "oph_ae": 0,
+        "sq2_Eryx": 7362,
+        "SqUCON": 1,
+        "SqUCON1": 0,
+        "UCON_cyl": 9444
+      },
+      "total": 34179,
+      "total_loci": 34179,
+      "unassigned_n": 8019,
+      "unassigned_pct": 23.46
+    },
+    {
+      "taxon": "Hemicordylus_capensis",
+      "family": "Cordylidae",
+      "clade": "Scinciformata",
+      "counts": {
+        "Heno": 978,
+        "oph1": 1535,
+        "oph2": 823,
+        "oph3": 518,
+        "oph_ae": 22,
+        "sq2_Eryx": 207298,
+        "SqUCON": 6,
+        "SqUCON1": 70,
+        "UCON_cyl": 920
+      },
+      "total": 212170,
+      "total_loci": 212170,
+      "unassigned_n": 18136,
+      "unassigned_pct": 8.55
+    },
+    {
+      "taxon": "Cryptoblepharus_egeriae",
+      "family": "Scincidae",
+      "clade": "Scinciformata",
+      "counts": {
+        "Heno": 31,
+        "oph1": 3902,
+        "oph2": 2476,
+        "oph3": 1811,
+        "oph_ae": 8,
+        "sq2_Eryx": 11594,
+        "SqUCON": 2,
+        "SqUCON1": 4,
+        "UCON_cyl": 23149
+      },
+      "total": 42977,
+      "total_loci": 42977,
+      "unassigned_n": 6262,
+      "unassigned_pct": 14.57
+    },
+    {
+      "taxon": "Lerista_edwardsae",
+      "family": "Scincidae",
+      "clade": "Scinciformata",
+      "counts": {
+        "Heno": 10,
+        "oph1": 2206,
+        "oph2": 213,
+        "oph3": 149,
+        "oph_ae": 0,
+        "sq2_Eryx": 19913,
+        "SqUCON": 435,
+        "SqUCON1": 140,
+        "UCON_cyl": 2573
+      },
+      "total": 25639,
+      "total_loci": 25639,
+      "unassigned_n": 6726,
+      "unassigned_pct": 26.23
+    },
+    {
+      "taxon": "Marisora_unimarginata",
+      "family": "Scincidae",
+      "clade": "Scinciformata",
+      "counts": {
+        "Heno": 117,
+        "oph1": 1507,
+        "oph2": 447,
+        "oph3": 1092,
+        "oph_ae": 16,
+        "sq2_Eryx": 35962,
+        "SqUCON": 2,
+        "SqUCON1": 3,
+        "UCON_cyl": 773
+      },
+      "total": 39919,
+      "total_loci": 39919,
+      "unassigned_n": 11072,
+      "unassigned_pct": 27.74
+    },
+    {
+      "taxon": "Spondylurus_nitidus",
+      "family": "Scincidae",
+      "clade": "Scinciformata",
+      "counts": {
+        "Heno": 33,
+        "oph1": 996,
+        "oph2": 239,
+        "oph3": 219,
+        "oph_ae": 17,
+        "sq2_Eryx": 21349,
+        "SqUCON": 5447,
+        "SqUCON1": 1104,
+        "UCON_cyl": 929
+      },
+      "total": 30333,
+      "total_loci": 30333,
+      "unassigned_n": 7905,
+      "unassigned_pct": 26.06
+    },
+    {
+      "taxon": "Tiliqua_scincoides",
+      "family": "Scincidae",
+      "clade": "Scinciformata",
+      "counts": {
+        "Heno": 124,
+        "oph1": 1847,
+        "oph2": 435,
+        "oph3": 357,
+        "oph_ae": 10,
+        "sq2_Eryx": 33902,
+        "SqUCON": 111,
+        "SqUCON1": 21,
+        "UCON_cyl": 4721
+      },
+      "total": 41528,
+      "total_loci": 41528,
+      "unassigned_n": 13388,
+      "unassigned_pct": 32.24
+    },
+    {
+      "taxon": "Xantusia_vigilis",
+      "family": "Xantusiidae",
+      "clade": "Scinciformata",
+      "counts": {
+        "Heno": 74,
+        "oph1": 34427,
+        "oph2": 9579,
+        "oph3": 3015,
+        "oph_ae": 29,
+        "sq2_Eryx": 35403,
+        "SqUCON": 1,
+        "SqUCON1": 1,
+        "UCON_cyl": 18569
+      },
+      "total": 101098,
+      "total_loci": 101098,
+      "unassigned_n": 26244,
+      "unassigned_pct": 25.96
+    },
+    {
+      "taxon": "Gehyra_mutilata",
+      "family": "Unknown",
+      "clade": "Unknown",
+      "counts": {
+        "Heno": 11861,
+        "oph1": 49061,
+        "oph2": 2703,
+        "oph3": 615,
+        "oph_ae": 8,
+        "sq2_Eryx": 46507,
+        "SqUCON": 56092,
+        "SqUCON1": 2215,
+        "UCON_cyl": 9435
+      },
+      "total": 178497,
+      "total_loci": 178497,
+      "unassigned_n": 17691,
+      "unassigned_pct": 9.91,
+      "assemblies": [
+        "Gehyra_mutilata_hifi",
+        "Gehyra_mutilata_local"
+      ]
     }
   ]
 }
