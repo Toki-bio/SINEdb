@@ -1678,13 +1678,27 @@ function parseFasta(text){
 }
 
 function calcConservation(seqs){
-  if(!seqs.length) return [];
+  if(!seqs.length) return {cols:[], consMap:[], refLen:0};
   var len=0; seqs.forEach(function(s){if(s.seq.length>len)len=s.seq.length;});
-  var res=[];
+  // Build consensus position map: for each alignment column where seq[0] has a base,
+  // record which consensus position (0-based) it corresponds to
+  var consMap=[]; // consMap[i] = alignment column index for consensus pos i
+  var refSeq=seqs[0].seq;
+  var consPos=0;
   for(var p=0;p<len;p++){
-    var ct={A:0,T:0,G:0,C:0}; var gap=0,total=seqs.length;
-    for(var si=0;si<seqs.length;si++){
-      var c=(seqs[si].seq[p]||'-').toUpperCase();
+    var rc=(refSeq[p]||'-').toUpperCase();
+    if(rc!=='-'&&rc!=='N'&&rc!=='.'){
+      consMap.push(p);
+      consPos++;
+    }
+  }
+  // Calculate conservation only at consensus-aligned columns (skip pure-gap flanking)
+  var cols=[];
+  for(var ci=0;ci<consMap.length;ci++){
+    var p2=consMap[ci];
+    var ct={A:0,T:0,G:0,C:0}; var gap=0,total=seqs.length-1; // exclude consensus itself
+    for(var si=1;si<seqs.length;si++){
+      var c=(seqs[si].seq[p2]||'-').toUpperCase();
       if(c==='U')c='T';
       if(c==='-'||c==='N') gap++;
       else if(ct[c]!==undefined) ct[c]++;
@@ -1692,9 +1706,10 @@ function calcConservation(seqs){
     }
     var nonGap=total-gap; var mx=0,dom='N';
     ['A','T','G','C'].forEach(function(b){if(ct[b]>mx){mx=ct[b];dom=b;}});
-    res.push({pos:p, cons:nonGap>0?mx/nonGap:0, gapFrac:gap/total, dom:dom, nonGap:nonGap, total:total});
+    cols.push({consPos:ci, alnCol:p2, cons:nonGap>0?mx/nonGap:0, gapFrac:gap/total,
+               coverage:nonGap/total, dom:dom, nonGap:nonGap, total:total});
   }
-  return res;
+  return {cols:cols, consMap:consMap, refLen:consMap.length};
 }
 
 function showConservation(sfName,taxon,container){
@@ -1709,24 +1724,25 @@ function showConservation(sfName,taxon,container){
   }).then(function(fasta){
     var seqs=parseFasta(fasta);
     if(seqs.length<2){container.innerHTML='<div style="color:#999;font-size:10px">Only '+seqs.length+' sequence — need ≥2 for conservation</div>';return;}
-    var cons=calcConservation(seqs);
-    renderConservationCanvas(cons,seqs.length,container,r.sf);
+    var consData=calcConservation(seqs);
+    renderConservationCanvas(consData,seqs.length-1,container,r.sf);
   }).catch(function(err){
     container.innerHTML='<div style="color:#c00;font-size:10px">Error loading alignment: '+err.message+'</div>';
   });
 }
 
-function renderConservationCanvas(cons,nSeqs,container,sf){
+function renderConservationCanvas(consData,nSeqs,container,sf){
+  var cons=consData.cols;
   if(!cons.length){container.innerHTML='<div style="color:#999">No data</div>';return;}
   var html='<div class="conservation-container">';
-  html+='<div style="font-weight:600;font-size:10px;margin-bottom:2px">Conservation Profile ('+nSeqs+' sequences, '+cons.length+' alignment columns)</div>';
+  html+='<div style="font-weight:600;font-size:10px;margin-bottom:2px">Conservation Profile ('+nSeqs+' copies, '+cons.length+' consensus positions)</div>';
   html+='<canvas id="consCanvas" class="conservation-canvas"></canvas>';
   html+='<div class="conservation-legend">';
   html+='<span style="color:#1a6b3c">&#9632; ≥90%</span>';
   html+='<span style="color:#4CAF50">&#9632; 70–90%</span>';
   html+='<span style="color:#FF9800">&#9632; 50–70%</span>';
   html+='<span style="color:#f44336">&#9632; &lt;50%</span>';
-  html+='<span style="color:#ccc">&#9632; gap-heavy</span>';
+  html+='<span style="color:#90CAF9">&#9644; coverage</span>';
   html+='</div>';
   html+='<div id="consTooltip" style="position:fixed;background:#333;color:#fff;padding:2px 6px;border-radius:3px;font-size:10px;pointer-events:none;display:none;z-index:200"></div>';
   html+='</div>';
@@ -1734,24 +1750,15 @@ function renderConservationCanvas(cons,nSeqs,container,sf){
   var canvas=document.getElementById('consCanvas');
   if(!canvas)return;
   var cw=container.offsetWidth-20;
-  canvas.style.width=cw+'px'; canvas.style.height='80px';
+  canvas.style.width=cw+'px'; canvas.style.height='90px';
   var dpr=window.devicePixelRatio||1;
-  canvas.width=cw*dpr; canvas.height=80*dpr;
+  canvas.width=cw*dpr; canvas.height=90*dpr;
   var ctx=canvas.getContext('2d');
   ctx.scale(dpr,dpr);
   var barW=cw/cons.length;
-  var plotH=65;
-  // Annotation bar if present
-  if(sf&&sf.annotations&&sf.annotations.length){
-    var annH=8;
-    ctx.fillStyle='#eee'; ctx.fillRect(0,plotH+2,cw,annH);
-    sf.annotations.forEach(function(ann){
-      var x1=(ann.start/cons.length)*cw;
-      var x2=((ann.end+1)/cons.length)*cw;
-      ctx.fillStyle=ann.color||'#999';
-      ctx.fillRect(x1,plotH+2,x2-x1,annH);
-    });
-  }
+  var plotH=60;
+  var covH=6; // coverage bar height
+  var annY=plotH+covH+4;
   // Conservation bars
   for(var i=0;i<cons.length;i++){
     var d=cons[i];
@@ -1766,11 +1773,30 @@ function renderConservationCanvas(cons,nSeqs,container,sf){
     ctx.fillStyle=col;
     ctx.fillRect(x,plotH-bh,Math.max(barW-0.3,0.5),bh);
   }
-  // Position labels
+  // Coverage bar (what fraction of copies have a base at each consensus pos)
+  ctx.fillStyle='#e0e0e0'; ctx.fillRect(0,plotH+1,cw,covH);
+  for(var i2=0;i2<cons.length;i2++){
+    var d2c=cons[i2];
+    ctx.fillStyle='rgba(33,150,243,'+(0.3+0.7*d2c.coverage)+')';
+    ctx.fillRect(i2*barW,plotH+1,Math.max(barW-0.3,0.5),covH);
+  }
+  // Annotation bar if present — annotations use CONSENSUS positions (0-based)
+  if(sf&&sf.annotations&&sf.annotations.length){
+    var annH=8;
+    ctx.fillStyle='#eee'; ctx.fillRect(0,annY,cw,annH);
+    sf.annotations.forEach(function(ann){
+      // ann.start and ann.end are consensus positions (0-based), directly map to cons array index
+      var x1=(ann.start/cons.length)*cw;
+      var x2=((ann.end+1)/cons.length)*cw;
+      ctx.fillStyle=ann.color||'#999';
+      ctx.fillRect(x1,annY,x2-x1,annH);
+    });
+  }
+  // Position labels (consensus positions)
   ctx.fillStyle='#999'; ctx.font='9px sans-serif'; ctx.textAlign='center';
   var step=Math.max(1,Math.floor(cons.length/8));
   for(var p=0;p<cons.length;p+=step){
-    ctx.fillText(String(p+1),p*barW+barW/2,plotH+20);
+    ctx.fillText(String(p+1),p*barW+barW/2,annY+18);
   }
   // Tooltip on hover
   canvas.addEventListener('mousemove',function(e){
@@ -1780,7 +1806,7 @@ function renderConservationCanvas(cons,nSeqs,container,sf){
     var tip=document.getElementById('consTooltip');
     if(idx>=0&&idx<cons.length&&tip){
       var d2=cons[idx];
-      tip.textContent='Pos '+(idx+1)+': '+(d2.cons*100).toFixed(1)+'% ('+d2.dom+') '+d2.nonGap+'/'+d2.total+' non-gap';
+      tip.textContent='Pos '+(d2.consPos+1)+': '+(d2.cons*100).toFixed(1)+'% '+d2.dom+', coverage '+(d2.coverage*100).toFixed(0)+'% ('+d2.nonGap+'/'+d2.total+')';
       tip.style.left=e.clientX+12+'px'; tip.style.top=e.clientY-24+'px'; tip.style.display='block';
     }
   });
