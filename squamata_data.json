@@ -362,6 +362,30 @@
       "unassigned_pct": 13.32
     },
     {
+      "taxon": "Gehyra_mutilata",
+      "family": "Gekkonidae",
+      "clade": "Gekkota",
+      "counts": {
+        "Heno": 11861,
+        "oph1": 49061,
+        "oph2": 2703,
+        "oph3": 615,
+        "oph_ae": 8,
+        "sq2_Eryx": 46507,
+        "SqUCON": 56092,
+        "SqUCON1": 2215,
+        "UCON_cyl": 9435
+      },
+      "total": 178497,
+      "total_loci": 178497,
+      "unassigned_n": 17691,
+      "unassigned_pct": 9.91,
+      "assemblies": [
+        "Gehyra_mutilata_hifi",
+        "Gehyra_mutilata_local"
+      ]
+    },
+    {
       "taxon": "Gekko_gecko",
       "family": "Gekkonidae",
       "clade": "Gekkota",
@@ -1472,30 +1496,6 @@
       "total_loci": 101098,
       "unassigned_n": 26244,
       "unassigned_pct": 25.96
-    },
-    {
-      "taxon": "Gehyra_mutilata",
-      "family": "Unknown",
-      "clade": "Unknown",
-      "counts": {
-        "Heno": 11861,
-        "oph1": 49061,
-        "oph2": 2703,
-        "oph3": 615,
-        "oph_ae": 8,
-        "sq2_Eryx": 46507,
-        "SqUCON": 56092,
-        "SqUCON1": 2215,
-        "UCON_cyl": 9435
-      },
-      "total": 178497,
-      "total_loci": 178497,
-      "unassigned_n": 17691,
-      "unassigned_pct": 9.91,
-      "assemblies": [
-        "Gehyra_mutilata_hifi",
-        "Gehyra_mutilata_local"
-      ]
     }
   ]
 }

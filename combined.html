@@ -68,6 +68,11 @@ tr.outgroup-row .sticky-sp{border-left:3px solid #e67e22}
 #info .bar-label{position:absolute;left:4px;top:0;font-size:9px;color:#333;line-height:14px;z-index:1}
 /* Separator between snakes and outgroups */
 .clade-separator td{border-top:4px solid #1a4d8c !important;height:4px;padding:0}
+/* Alignment indicators */
+.aln-dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:#2196f3;opacity:.6;margin-left:3px;vertical-align:super}
+.aln-links{margin:6px 0;padding:4px 6px;background:#f0f6ff;border:1px solid #c0d4f0;border-radius:3px;font-size:10px}
+.aln-links a{margin-right:8px;text-decoration:none;color:#1a4d8c;font-weight:600}
+.aln-links a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -82,7 +87,7 @@ tr.outgroup-row .sticky-sp{border-left:3px solid #e67e22}
 <div class="page-header">
   <h2>Snakes vs Non-Snake Squamates — SINE Copy Counts</h2>
   <p>Comparing 9 shared SINE subfamilies (Heno, oph1–3, oph_ae, sq2_Eryx, SqUCON, SqUCON1, UCON_cyl) across 32 snake species and
-     21 non-snake squamate species. Note: 30 additional snake-specific subfamilies (Squam1, Squam3 families) are omitted from this view.
+     73 non-snake squamate species. Note: 32 additional snake-specific subfamilies (Squam1, Squam3 families) are omitted from this view.
      <span style="color:#27ae60">■</span> = Snake &nbsp; <span style="color:#e67e22">■</span> = Outgroup</p>
 </div>
 
@@ -386,6 +391,23 @@ function showCellInfo(taxon, sf){
   let h = '<h3>'+esc(sf)+' in <i>'+esc(taxon.replace(/_/g,' '))+'</i></h3>';
   h += '<div class="detail-row"><b>Copy count:</b> '+fmt(v)+'</div>';
   h += '<div class="detail-row"><b>% of total:</b> '+(sp.total>0?(100*v/sp.total).toFixed(1):'0')+'%</div>';
+
+  // Alignment links (check for alignment files)
+  const alnBase = 'alignments/' + taxon + '/' + sf;
+  const isSnake = sp.clade==='Serpentes';
+  if(isSnake){
+    // Snake alignments: .core.fa, .best50.fa, .subfam.fa
+    h += '<div class="aln-links"><strong>Alignments:</strong> ';
+    h += '<a href="'+alnBase+'.core.fa" target="_blank">Core</a>';
+    h += '<a href="'+alnBase+'.best50.fa" target="_blank">Best50</a>';
+    h += '<a href="'+alnBase+'.subfam.fa" target="_blank">SubFam</a>';
+    h += '</div>';
+  } else if(sp.alignments && sp.alignments[sf]){
+    // Outgroup alignments: .aln.fa from step5
+    h += '<div class="aln-links"><strong>Alignment:</strong> ';
+    h += '<a href="'+sp.alignments[sf]+'" target="_blank">'+esc(sf)+'.aln.fa</a>';
+    h += '</div>';
+  }
 
   // Rank across all species
   h += '<hr style="margin:8px 0">';
