@@ -56,7 +56,7 @@ tr:hover .sticky-sp,tr:hover .sticky-tot{background:#e8f0fe}
 td[title]{cursor:help}
 /* Detail panel (bottom slide-up) */
 #detail{border-top:1px solid #ccc;height:0;overflow:hidden;transition:height .15s;background:#fafbfc;flex-shrink:0}
-#detail.open{height:260px;overflow:auto}
+#detail.open{height:280px;overflow:auto}
 #detail .detail-header{background:#2c3e50;color:#fff;padding:3px 8px;font-size:11px;font-weight:600;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:2}
 #detail .detail-header button{background:transparent;border:none;color:#fff;font-size:14px;cursor:pointer;padding:0 4px}
 #detail .detail-body{padding:6px 8px;font-size:11px}
@@ -338,29 +338,52 @@ function showCellInfo(taxon, sf){
   const sp = DATA.species.find(s=>s.taxon===taxon);
   if(!sp) return;
   const v = sp.counts[sf]||0;
-  const alnBase = 'alignments/'+taxon+'/'+sf;
+
+  // All subfamilies sorted by count for bar chart
+  const sorted = SF_ORDER.filter(sf2=>(sp.counts[sf2]||0)>0).sort((a,b)=>(sp.counts[b]||0)-(sp.counts[a]||0));
+  const maxVal = sorted.length>0 ? (sp.counts[sorted[0]]||0) : 1;
+
+  // Rank of this sf among species subfamilies
+  const rank = sorted.indexOf(sf);
+  const rankStr = rank>=0 ? '#'+(rank+1)+' of '+sorted.length+' subfamilies' : 'not detected';
+
+  // Similarity stat
+  const confAlt = sp.sim_means && sp.sim_means[sf]!=null ? sp.sim_means[sf] : null;
+  const confColor = confAlt!=null ? (confAlt>50?'#c0392b':confAlt>20?'#e67e22':'#27ae60') : '#888';
 
   let h = '<div style="display:flex;gap:16px;flex-wrap:wrap">';
-  h += '<div style="flex:1;min-width:160px">';
+
+  // Left: key stats for this cell
+  h += '<div style="flex:0 0 160px">';
+  h += '<div class="detail-row"><b>'+esc(sf)+'</b> in <i>'+esc(taxon.replace(/_/g,' '))+'</i></div>';
+  h += '<div class="detail-row"><b>Family:</b> '+esc(sp.family)+' &bull; <b>Clade:</b> '+esc(sp.clade)+'</div>';
+  h += '<hr style="margin:4px 0">';
   h += '<div class="detail-row"><b>Count:</b> '+fmt(v)+'</div>';
   h += '<div class="detail-row"><b>% of total:</b> '+(sp.total>0?(100*v/sp.total).toFixed(1):'0')+'%</div>';
-  if(sp.alignments && sp.alignments[sf]){
-    h += '<div class="aln-links"><strong>Alignment:</strong> '+viewerLink(sp.alignments[sf],esc(sf)+'.aln.fa')+'</div>';
-  }
-  if(sp.sim_means && sp.sim_means[sf]!=null){
-    h += '<div class="detail-row"><b>Conf_alt:</b> '+sp.sim_means[sf].toFixed(1)+'%</div>';
-  }
-  const plotPath = 'plots/'+taxon+'/'+sf+'_divergence.png';
-  h += '<div style="margin-top:6px"><div style="font-weight:600;font-size:10px">Divergence</div><img src="'+plotPath+'" style="max-width:100%;border:1px solid #ddd;border-radius:4px;margin-top:2px" onerror="this.parentElement.style.display=\'none\'" /></div>';
-  h += '</div>';
-  h += '<div style="flex:2;min-width:280px" id="conservationPanel"><div style="color:#888;font-size:10px;padding:4px">Loading conservation...</div></div>';
+  h += '<div class="detail-row"><b>Rank:</b> '+rankStr+'</div>';
+  if(confAlt!=null) h += '<div class="detail-row"><b>Conf_alt:</b> <span style="color:'+confColor+'">'+confAlt.toFixed(1)+'%</span></div>';
+  h += '<div class="detail-row" style="color:#aaa;font-size:9px;margin-top:6px">Alignment/conservation data<br>available for snake species only</div>';
   h += '</div>';
 
+  // Right: all subfamilies bar chart
+  h += '<div style="flex:1;min-width:240px">';
+  h += '<div style="font-weight:600;font-size:10px;margin-bottom:4px">All subfamilies — '+esc(taxon.replace(/_/g,' '))+'</div>';
+  sorted.forEach(sf2=>{
+    const v2 = sp.counts[sf2]||0;
+    const pct = (100*v2/maxVal).toFixed(1);
+    const fracTotal = (100*v2/sp.total).toFixed(1);
+    const isSel = sf2===sf;
+    h += '<div style="display:flex;align-items:center;gap:4px;margin:1px 0">';
+    h += '<span style="font-size:9px;width:60px;text-align:right;'+(isSel?'font-weight:700;color:#1a4d8c':'')+'">'+esc(sf2)+'</span>';
+    h += '<div style="flex:1;height:12px;background:#e0e0e0;border-radius:2px;position:relative;'+(isSel?'outline:1.5px solid #1a4d8c':'')+'">';
+    h += '<div style="width:'+pct+'%;height:100%;background:'+getBarColor(sf2)+';border-radius:2px;position:absolute"></div>';
+    h += '<span style="position:absolute;left:3px;top:0;font-size:8px;line-height:12px;color:#333">'+(isSel?'<b>':'')+''+fmt(v2)+' ('+fracTotal+'%)'+(isSel?'</b>':'')+'</span>';
+    h += '</div></div>';
+  });
+  h += '</div>';
+
+  h += '</div>';
   openDetail(sf+' in '+taxon.replace(/_/g,' '), h);
-  setTimeout(()=>{
-    const panel = document.getElementById('conservationPanel');
-    if(panel) showConservation(alnBase+'.core.fa', panel);
-  }, 250);
 }
 
 function closeDetail(){ document.getElementById('detail').classList.remove('open'); }
