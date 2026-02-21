@@ -361,6 +361,14 @@ function showSpeciesInfo(taxon){
     h += '<div class="bar-label">'+fmt(v)+'</div></div>';
   });
 
+  // Divergence plots gallery
+  h += '<hr style="margin:8px 0">';
+  h += '<h3>Divergence Distributions</h3>';
+  sorted.forEach(sf=>{
+    const plotPath = 'plots/' + sp.taxon + '/' + sf + '_divergence.png';
+    h += '<img src="'+plotPath+'" style="max-width:100%;border:1px solid #ddd;border-radius:4px;margin:4px 0" onerror="this.style.display=\'none\'" />';
+  });
+
   // Compare to means
   h += '<hr style="margin:8px 0">';
   h += '<h3>vs. Snake Mean / Outgroup Mean</h3>';
@@ -391,6 +399,10 @@ function showCellInfo(taxon, sf){
   let h = '<h3>'+esc(sf)+' in <i>'+esc(taxon.replace(/_/g,' '))+'</i></h3>';
   h += '<div class="detail-row"><b>Copy count:</b> '+fmt(v)+'</div>';
   h += '<div class="detail-row"><b>% of total:</b> '+(sp.total>0?(100*v/sp.total).toFixed(1):'0')+'%</div>';
+
+  // Divergence plot
+  const plotPath = 'plots/' + taxon + '/' + sf + '_divergence.png';
+  h += '<div class="detail-row" style="margin-top:8px"><b>Divergence:</b> <img src="'+plotPath+'" style="max-width:100%;border:1px solid #ddd;border-radius:4px;margin-top:4px" onerror="this.parentElement.style.display=\'none\'" /></div>';
 
   // Alignment links (check for alignment files)
   const alnBase = 'alignments/' + taxon + '/' + sf;
