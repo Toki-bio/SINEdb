@@ -71,7 +71,7 @@ tr.outgroup-row .sticky-sp{border-left:3px solid #e67e22}
 #detail .bar-label{position:absolute;left:4px;top:0;font-size:9px;color:#333;line-height:14px;z-index:1}
 /* Conservation histogram */
 .conservation-container{margin:8px 0}
-.conservation-canvas{width:100%;height:90px;border:1px solid #ddd;background:#fafafa;cursor:crosshair;display:block}
+.conservation-canvas{width:100%;border:1px solid #ddd;background:#fafafa;cursor:crosshair;display:block}
 .conservation-legend{font-size:9px;color:#666;display:flex;gap:12px;margin-top:2px}
 /* Separator between snakes and outgroups */
 .clade-separator td{border-top:4px solid #1a4d8c !important;height:4px;padding:0}
@@ -410,7 +410,7 @@ function showCellInfo(taxon, sf){
   setTimeout(()=>{
     const panel = document.getElementById('conservationPanel');
     if(panel) showConservation(alnBase+'.core.fa', panel);
-  }, 50);
+  }, 250);
 }
 
 function closeDetail(){ document.getElementById('detail').classList.remove('open'); }
@@ -434,11 +434,20 @@ function calcConservation(seqs){
   for(let p=0;p<len;p++){const rc=(refSeq[p]||'-').toUpperCase(); if(rc!=='-'&&rc!=='N'&&rc!=='.')consMap.push(p);}
   const cols=[];
   for(let ci=0;ci<consMap.length;ci++){
-    const p2=consMap[ci]; const ct={A:0,T:0,G:0,C:0}; let gap=0; const total=seqs.length-1;
-    for(let si=1;si<seqs.length;si++){let c=(seqs[si].seq[p2]||'-').toUpperCase(); if(c==='U')c='T'; if(c==='-'||c==='N')gap++; else if(ct[c]!==undefined)ct[c]++; else gap++;}
-    const nonGap=total-gap; let mx=0,dom='N';
-    ['A','T','G','C'].forEach(b=>{if(ct[b]>mx){mx=ct[b];dom=b;}});
-    cols.push({consPos:ci,alnCol:p2,cons:nonGap>0?mx/nonGap:0,gapFrac:gap/total,coverage:nonGap/total,dom:dom,nonGap,total});
+    const p2=consMap[ci];
+    let cb=(refSeq[p2]||'N').toUpperCase(); if(cb==='U')cb='T';
+    const ct={A:0,T:0,G:0,C:0}; let gap=0, match=0;
+    const total=seqs.length-1;
+    for(let si=1;si<seqs.length;si++){
+      let c=(seqs[si].seq[p2]||'-').toUpperCase(); if(c==='U')c='T';
+      if(c==='-'||c==='N') gap++;
+      else { if(ct[c]!==undefined)ct[c]++; if(c===cb)match++; }
+    }
+    const nonGap=total-gap;
+    cols.push({consPos:ci,alnCol:p2,consBase:cb,
+               matchRate:nonGap>0?match/nonGap:0,
+               gapFrac:gap/total,coverage:nonGap/total,
+               ct,nonGap,total});
   }
   return{cols,consMap,refLen:consMap.length};
 }
@@ -456,41 +465,61 @@ function showConservation(path, container){
 function renderConservationCanvas(consData,nSeqs,container){
   const cons=consData.cols;
   if(!cons.length){container.innerHTML='<div style="color:#999">No data</div>';return;}
+  const matchH=55,covH=5,compH=35,labelH=14,g1=2,g2=2;
+  const totalH=matchH+g1+covH+g2+compH+labelH;
+  const y0cov=matchH+g1, y0comp=matchH+g1+covH+g2, y0lbl=y0comp+compH+2;
   let html='<div class="conservation-container">';
-  html+='<div style="font-weight:600;font-size:10px;margin-bottom:2px">Conservation ('+nSeqs+' copies, '+cons.length+' positions)</div>';
-  html+='<canvas id="consCanvas" class="conservation-canvas"></canvas>';
-  html+='<div class="conservation-legend"><span style="color:#1a6b3c">&#9632; ≥90%</span><span style="color:#4CAF50">&#9632; 70–90%</span><span style="color:#FF9800">&#9632; 50–70%</span><span style="color:#f44336">&#9632; &lt;50%</span><span style="color:#90CAF9">&#9644; coverage</span></div>';
+  html+='<div style="font-weight:600;font-size:10px;margin-bottom:2px">Match to consensus ('+nSeqs+' copies, '+cons.length+' positions)</div>';
+  html+='<canvas id="consCanvas" class="conservation-canvas" style="height:'+totalH+'px"></canvas>';
+  html+='<div class="conservation-legend"><span style="color:#1a6b3c">&#9632; &ge;80%</span><span style="color:#4CAF50">&#9632; 60&ndash;80%</span><span style="color:#FF9800">&#9632; 40&ndash;60%</span><span style="color:#f44336">&#9632; &lt;40%</span><span style="color:#90CAF9">&#9644; coverage</span></div>';
+  html+='<div style="font-weight:600;font-size:10px;margin:4px 0 2px">Nucleotide composition</div>';
+  html+='<div class="conservation-legend"><span style="color:#e74c3c">&#9632; A</span><span style="color:#2980b9">&#9632; T</span><span style="color:#27ae60">&#9632; G</span><span style="color:#8e44ad">&#9632; C</span></div>';
   html+='<div id="consTooltip" style="position:fixed;background:#333;color:#fff;padding:2px 6px;border-radius:3px;font-size:10px;pointer-events:none;display:none;z-index:200"></div>';
   html+='</div>';
   container.innerHTML=html;
-  const canvas=document.getElementById('consCanvas');
-  if(!canvas)return;
+  const canvas=document.getElementById('consCanvas'); if(!canvas)return;
   const cw=container.offsetWidth-20;
-  canvas.style.width=cw+'px'; canvas.style.height='90px';
+  canvas.style.width=cw+'px';
   const dpr=window.devicePixelRatio||1;
-  canvas.width=cw*dpr; canvas.height=90*dpr;
+  canvas.width=cw*dpr; canvas.height=totalH*dpr;
   const ctx=canvas.getContext('2d'); ctx.scale(dpr,dpr);
-  const barW=cw/cons.length; const plotH=60; const covH=6; const annY=plotH+covH+4;
+  const bw=cw/cons.length;
+  // Match rate bars
   for(let i=0;i<cons.length;i++){
-    const d=cons[i]; const bh=d.cons*plotH; const x=i*barW;
-    ctx.fillStyle=d.gapFrac>0.5?'#ccc':d.cons>=0.9?'#1a6b3c':d.cons>=0.7?'#4CAF50':d.cons>=0.5?'#FF9800':'#f44336';
-    ctx.fillRect(x,plotH-bh,Math.max(barW-0.3,0.5),bh);
+    const d=cons[i],bh=d.matchRate*matchH,x=i*bw;
+    ctx.fillStyle=d.gapFrac>0.5?'#ccc':d.matchRate>=0.8?'#1a6b3c':d.matchRate>=0.6?'#4CAF50':d.matchRate>=0.4?'#FF9800':'#f44336';
+    ctx.fillRect(x,matchH-bh,Math.max(bw-0.3,0.5),bh);
   }
-  ctx.fillStyle='#e0e0e0'; ctx.fillRect(0,plotH+1,cw,covH);
+  // Coverage track
+  ctx.fillStyle='#e8e8e8'; ctx.fillRect(0,y0cov,cw,covH);
   for(let i=0;i<cons.length;i++){
-    ctx.fillStyle='rgba(33,150,243,'+(0.3+0.7*cons[i].coverage)+')';
-    ctx.fillRect(i*barW,plotH+1,Math.max(barW-0.3,0.5),covH);
+    ctx.fillStyle='rgba(33,150,243,'+(0.2+0.8*cons[i].coverage)+')';
+    ctx.fillRect(i*bw,y0cov,Math.max(bw-0.3,0.5),covH);
   }
+  // Nucleotide composition stacked bars
+  const BC={A:'#e74c3c',T:'#2980b9',G:'#27ae60',C:'#8e44ad'};
+  for(let i=0;i<cons.length;i++){
+    const d=cons[i],x=i*bw,w=Math.max(bw-0.3,0.5);
+    if(d.nonGap===0){ctx.fillStyle='#f0f0f0';ctx.fillRect(x,y0comp,w,compH);continue;}
+    let yo=y0comp+compH;
+    for(const b of ['A','T','G','C']){
+      const bh=(d.ct[b]||0)/d.nonGap*compH;
+      ctx.fillStyle=BC[b]; yo-=bh; ctx.fillRect(x,yo,w,bh);
+    }
+  }
+  // Position labels
   ctx.fillStyle='#999'; ctx.font='9px sans-serif'; ctx.textAlign='center';
   const step=Math.max(1,Math.floor(cons.length/8));
-  for(let p=0;p<cons.length;p+=step) ctx.fillText(String(p+1),p*barW+barW/2,annY+18);
+  for(let p=0;p<cons.length;p+=step) ctx.fillText(String(p+1),p*bw+bw/2,y0lbl+10);
+  // Tooltip
   canvas.addEventListener('mousemove',e=>{
     const rect=canvas.getBoundingClientRect();
     const idx=Math.floor((e.clientX-rect.left)/rect.width*cons.length);
     const tip=document.getElementById('consTooltip');
     if(idx>=0&&idx<cons.length&&tip){
-      const d=cons[idx];
-      tip.textContent='Pos '+(d.consPos+1)+': '+(d.cons*100).toFixed(1)+'% '+d.dom+', cov '+(d.coverage*100).toFixed(0)+'% ('+d.nonGap+'/'+d.total+')';
+      const d=cons[idx],n=d.nonGap;
+      const comp=n>0?['A','T','G','C'].map(b=>b+':'+(100*(d.ct[b]||0)/n).toFixed(0)+'%').join(' '):'no data';
+      tip.textContent='Pos '+(d.consPos+1)+' ('+d.consBase+'): '+(d.matchRate*100).toFixed(1)+'% match | cov '+(d.coverage*100).toFixed(0)+'% | '+comp;
       tip.style.left=e.clientX+12+'px'; tip.style.top=e.clientY-24+'px'; tip.style.display='block';
     }
   });
