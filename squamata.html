@@ -78,9 +78,16 @@ td[title]{cursor:help}
 .modal-title{background:#1a4d8c;color:#fff;padding:4px 8px;font-weight:700;font-size:12px;display:flex;justify-content:space-between;align-items:center}
 .modal-title button{background:transparent;border:none;color:#fff;font-size:14px;cursor:pointer;padding:0 4px}
 .modal-body{padding:8px}
+.modal-body label{display:block;font-weight:600;margin:4px 0 1px;font-size:10px;color:#555;text-transform:uppercase}
+.modal-body input,.modal-body textarea,.modal-body select{width:100%;margin-bottom:2px;font:11px/1.3 inherit;border:1px solid #aaa;padding:1px 3px;background:#fffef5}
+.modal-body textarea{height:50px;resize:vertical}
 .modal-footer{padding:4px 8px 8px;text-align:right;display:flex;gap:6px;justify-content:flex-end}
 .modal-footer button{font:11px/1.3 inherit;padding:2px 8px;cursor:pointer;border:1px solid #888;background:#f0f0f0;border-radius:2px}
 .modal-footer button:hover{background:#ddd}
+.modal-footer button.primary{background:#1a4d8c;color:#fff;border-color:#1a4d8c}
+.modal-footer button.primary:hover{background:#15407a}
+.curation-btns{margin:4px 0;display:flex;gap:6px;flex-wrap:wrap}
+.curation-btns button{font-size:10px;padding:2px 8px}
 </style>
 </head>
 <body>
@@ -145,6 +152,23 @@ function showInfoModal(title, bodyHtml){
     '</div>';
   document.body.appendChild(ov);
   ov.addEventListener('click', e=>{ if(e.target===ov) ov.remove(); });
+}
+function showModal(title, bodyHtml, onSave){
+  const old = document.getElementById('_infoModal');
+  if(old) old.remove();
+  const ov = document.createElement('div');
+  ov.className = 'modal-overlay';
+  ov.id = '_infoModal';
+  ov.innerHTML = '<div class="modal">' +
+    '<div class="modal-title"><span>' + title + '</span><button onclick="this.closest(\'.modal-overlay\').remove()">&times;</button></div>' +
+    '<div class="modal-body">' + bodyHtml + '</div>' +
+    '<div class="modal-footer"><button onclick="this.closest(\'.modal-overlay\').remove()">Cancel</button><button class="primary" id="modalSaveBtn">Save</button></div>' +
+    '</div>';
+  document.body.appendChild(ov);
+  ov.querySelector('#modalSaveBtn').addEventListener('click', function(){
+    if(!onSave || onSave(ov)!==false) ov.remove();
+  });
+  ov.addEventListener('click', function(e){ if(e.target===ov) ov.remove(); });
 }
 
 // Subfamily display order (matching snake table)
@@ -359,10 +383,16 @@ function showSpeciesInfo(taxon){
 function showCellInfo(taxon, sf){
   const sp = DATA.species.find(s=>s.taxon===taxon);
   if(!sp) return;
-  const v = sp.counts[sf]||0;
+  const edits = (sp._edits && sp._edits[sf]) || {};
+  const v = edits.copy_count!=null ? edits.copy_count : (sp.counts[sf]||0);
   const alnBase = 'alignments/'+taxon+'/'+sf;
   const sorted = SF_ORDER.filter(sf2=>(sp.counts[sf2]||0)>0).sort((a,b)=>(sp.counts[b]||0)-(sp.counts[a]||0));
   const maxVal = sorted.length>0 ? (sp.counts[sorted[0]]||0) : 1;
+  const curStatus = edits.status || 'present';
+  const curSimMean = edits.sim_mean!=null ? edits.sim_mean : '';
+  const curSimMedian = edits.sim_median!=null ? edits.sim_median : '';
+  const curNotes = edits.notes || '';
+  const curCurNotes = edits.curation_notes || '';
 
   // Rank of this sf among species subfamilies
   const rank = sorted.indexOf(sf);
@@ -372,44 +402,48 @@ function showCellInfo(taxon, sf){
   const confAlt = sp.sim_means && sp.sim_means[sf]!=null ? sp.sim_means[sf] : null;
   const confColor = confAlt!=null ? (confAlt>50?'#c0392b':confAlt>20?'#e67e22':'#27ae60') : '#888';
 
-  let h = '<div style="display:flex;gap:16px;flex-wrap:wrap">';
+  let h = '';
+  h += '<label>Subfamily</label><input value="'+esc(sf)+'" disabled style="background:#eee">';
+  h += '<label>Taxon</label><input value="'+esc(taxon.replace(/_/g,' '))+'" disabled style="background:#eee">';
+  h += '<label>Copy count</label><input id="mCopies" type="number" value="'+v+'">';
+  h += '<label>Status</label><select id="mStatus">' +
+    '<option'+(curStatus==='present'?' selected':'')+'>present</option>' +
+    '<option'+(curStatus==='absent'?' selected':'')+'>absent</option>' +
+    '<option'+(curStatus==='unknown'?' selected':'')+'>unknown</option>' +
+    '</select>';
+  h += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">' +
+    '<div><label>Mean similarity</label><input id="mSimMean" value="'+curSimMean+'"></div>' +
+    '<div><label>Median similarity</label><input id="mSimMedian" value="'+curSimMedian+'"></div>' +
+    '</div>';
+  h += '<label>Notes</label><textarea id="mNotes">'+esc(curNotes)+'</textarea>' +
+       '<label>Curation notes</label><textarea id="mCurNotes" placeholder="Reason for curation...">'+esc(curCurNotes)+'</textarea>';
 
-  // Left: key stats for this cell
-  h += '<div style="flex:0 0 160px">';
-  h += '<div class="detail-row"><b>'+esc(sf)+'</b> in <i>'+esc(taxon.replace(/_/g,' '))+'</i></div>';
+  h += '<div style="margin-top:8px">';
   h += '<div class="detail-row"><b>Family:</b> '+esc(sp.family)+' &bull; <b>Clade:</b> '+esc(sp.clade)+'</div>';
-  h += '<hr style="margin:4px 0">';
-  h += '<div class="detail-row"><b>Count:</b> '+fmt(v)+'</div>';
   h += '<div class="detail-row"><b>% of total:</b> '+(sp.total>0?(100*v/sp.total).toFixed(1):'0')+'%</div>';
   h += '<div class="detail-row"><b>Rank:</b> '+rankStr+'</div>';
   if(confAlt!=null) h += '<div class="detail-row"><b>Conf_alt:</b> <span style="color:'+confColor+'">'+confAlt.toFixed(1)+'%</span></div>';
   h += '</div>';
 
-  // Middle: all subfamilies bar chart
-  h += '<div style="flex:1;min-width:200px">';
-  h += '<div style="font-weight:600;font-size:10px;margin-bottom:4px">All subfamilies — '+esc(taxon.replace(/_/g,' '))+'</div>';
-  sorted.forEach(sf2=>{
-    const v2 = sp.counts[sf2]||0;
-    const pct = (100*v2/maxVal).toFixed(1);
-    const fracTotal = (100*v2/sp.total).toFixed(1);
-    const isSel = sf2===sf;
-    h += '<div style="display:flex;align-items:center;gap:4px;margin:1px 0">';
-    h += '<span style="font-size:9px;width:60px;text-align:right;'+(isSel?'font-weight:700;color:#1a4d8c':'')+'">'+esc(sf2)+'</span>';
-    h += '<div style="flex:1;height:12px;background:#e0e0e0;border-radius:2px;position:relative;'+(isSel?'outline:1.5px solid #1a4d8c':'')+'">';
-    h += '<div style="width:'+pct+'%;height:100%;background:'+getBarColor(sf2)+';border-radius:2px;position:absolute"></div>';
-    h += '<span style="position:absolute;left:3px;top:0;font-size:8px;line-height:12px;color:#333">'+(isSel?'<b>':'')+''+fmt(v2)+' ('+fracTotal+'%)'+(isSel?'</b>':'')+'</span>';
-    h += '</div></div>';
-  });
-  h += '</div>';
-
-  // Right: conservation histogram panel
-  h += '<div style="flex:2;min-width:280px">';
   h += '<div class="aln-links"><strong>Alignments:</strong> '+viewerLink(alnBase+'.core.fa','Core')+' '+viewerLink(alnBase+'.best50.fa','Best50')+'</div>';
   h += '<div id="conservationPanel"><div style="color:#888;font-size:10px;padding:4px">Loading conservation...</div></div>';
-  h += '</div>';
 
-  h += '</div>';
-  showInfoModal(sf+' in '+taxon.replace(/_/g,' '), h);
+  showModal('Edit: '+sf+' × '+taxon.replace(/_/g,' '), h, function(ov){
+    const newCopies = parseFloat(ov.querySelector('#mCopies').value)||0;
+    const oldCopies = sp.counts[sf]||0;
+    if(!sp._edits) sp._edits = {};
+    sp._edits[sf] = {
+      copy_count:newCopies,
+      status:ov.querySelector('#mStatus').value,
+      sim_mean:parseFloat(ov.querySelector('#mSimMean').value)||null,
+      sim_median:parseFloat(ov.querySelector('#mSimMedian').value)||null,
+      notes:ov.querySelector('#mNotes').value.trim(),
+      curation_notes:ov.querySelector('#mCurNotes').value.trim()
+    };
+    sp.counts[sf] = newCopies;
+    sp.total = Math.max(0, (sp.total||0) - oldCopies + newCopies);
+    render();
+  });
   setTimeout(()=>{
     const panel = document.getElementById('conservationPanel');
     if(panel) showConservation(alnBase+'.core.fa', panel);

@@ -86,9 +86,16 @@ tr.outgroup-row .sticky-sp{border-left:3px solid #e67e22}
 .modal-title{background:#1a4d8c;color:#fff;padding:4px 8px;font-weight:700;font-size:12px;display:flex;justify-content:space-between;align-items:center}
 .modal-title button{background:transparent;border:none;color:#fff;font-size:14px;cursor:pointer;padding:0 4px}
 .modal-body{padding:8px}
+.modal-body label{display:block;font-weight:600;margin:4px 0 1px;font-size:10px;color:#555;text-transform:uppercase}
+.modal-body input,.modal-body textarea,.modal-body select{width:100%;margin-bottom:2px;font:11px/1.3 inherit;border:1px solid #aaa;padding:1px 3px;background:#fffef5}
+.modal-body textarea{height:50px;resize:vertical}
 .modal-footer{padding:4px 8px 8px;text-align:right;display:flex;gap:6px;justify-content:flex-end}
 .modal-footer button{font:11px/1.3 inherit;padding:2px 8px;cursor:pointer;border:1px solid #888;background:#f0f0f0;border-radius:2px}
 .modal-footer button:hover{background:#ddd}
+.modal-footer button.primary{background:#1a4d8c;color:#fff;border-color:#1a4d8c}
+.modal-footer button.primary:hover{background:#15407a}
+.curation-btns{margin:4px 0;display:flex;gap:6px;flex-wrap:wrap}
+.curation-btns button{font-size:10px;padding:2px 8px}
 </style>
 </head>
 <body>
@@ -152,6 +159,23 @@ function showInfoModal(title, bodyHtml){
     '</div>';
   document.body.appendChild(ov);
   ov.addEventListener('click', e=>{ if(e.target===ov) ov.remove(); });
+}
+function showModal(title, bodyHtml, onSave){
+  const old = document.getElementById('_infoModal');
+  if(old) old.remove();
+  const ov = document.createElement('div');
+  ov.className = 'modal-overlay';
+  ov.id = '_infoModal';
+  ov.innerHTML = '<div class="modal">' +
+    '<div class="modal-title"><span>' + title + '</span><button onclick="this.closest(\'.modal-overlay\').remove()">&times;</button></div>' +
+    '<div class="modal-body">' + bodyHtml + '</div>' +
+    '<div class="modal-footer"><button onclick="this.closest(\'.modal-overlay\').remove()">Cancel</button><button class="primary" id="modalSaveBtn">Save</button></div>' +
+    '</div>';
+  document.body.appendChild(ov);
+  ov.querySelector('#modalSaveBtn').addEventListener('click', function(){
+    if(!onSave || onSave(ov)!==false) ov.remove();
+  });
+  ov.addEventListener('click', function(e){ if(e.target===ov) ov.remove(); });
 }
 
 const SF_ORDER = ['Heno','oph1','oph2','oph3','oph_ae','sq2_Eryx','SqUCON','SqUCON1','UCON_cyl'];
@@ -408,27 +432,58 @@ function showSpeciesInfo(taxon){
 function showCellInfo(taxon, sf){
   const sp = DATA.species.find(s=>s.taxon===taxon);
   if(!sp) return;
-  const v = sp.counts[sf]||0;
+  const edits = (sp._edits && sp._edits[sf]) || {};
+  const v = edits.copy_count!=null ? edits.copy_count : (sp.counts[sf]||0);
   const isSnake = sp.clade==='Serpentes';
   const alnBase = 'alignments/'+taxon+'/'+sf;
+  const curStatus = edits.status || 'present';
+  const curSimMean = edits.sim_mean!=null ? edits.sim_mean : '';
+  const curSimMedian = edits.sim_median!=null ? edits.sim_median : '';
+  const curNotes = edits.notes || '';
+  const curCurNotes = edits.curation_notes || '';
 
-  let h = '<div style="display:flex;gap:16px;flex-wrap:wrap">';
-  h += '<div style="flex:1;min-width:160px">';
-  h += '<div class="detail-row"><b>Count:</b> '+fmt(v)+'</div>';
-  h += '<div class="detail-row"><b>% of total:</b> '+(sp.total>0?(100*v/sp.total).toFixed(1):'0')+'%</div>';
-  h += '<div class="detail-row"><b>Clade:</b> '+esc(sp.clade)+' · '+esc(sp.family)+'</div>';
+  let h = '';
+  h += '<label>Subfamily</label><input value="'+esc(sf)+'" disabled style="background:#eee">';
+  h += '<label>Taxon</label><input value="'+esc(taxon.replace(/_/g,' '))+'" disabled style="background:#eee">';
+  h += '<label>Copy count</label><input id="mCopies" type="number" value="'+v+'">';
+  h += '<label>Status</label><select id="mStatus">' +
+    '<option'+(curStatus==='present'?' selected':'')+'>present</option>' +
+    '<option'+(curStatus==='absent'?' selected':'')+'>absent</option>' +
+    '<option'+(curStatus==='unknown'?' selected':'')+'>unknown</option>' +
+    '</select>';
+  h += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">' +
+    '<div><label>Mean similarity</label><input id="mSimMean" value="'+curSimMean+'"></div>' +
+    '<div><label>Median similarity</label><input id="mSimMedian" value="'+curSimMedian+'"></div>' +
+    '</div>';
+  h += '<label>Notes</label><textarea id="mNotes">'+esc(curNotes)+'</textarea>' +
+       '<label>Curation notes</label><textarea id="mCurNotes" placeholder="Reason for curation...">'+esc(curCurNotes)+'</textarea>';
+
+  h += '<div style="margin-top:8px"><div class="detail-row"><b>% of total:</b> '+(sp.total>0?(100*v/sp.total).toFixed(1):'0')+'%</div>';
+  h += '<div class="detail-row"><b>Clade:</b> '+esc(sp.clade)+' · '+esc(sp.family)+'</div></div>';
+
   if(isSnake){
     h += '<div class="aln-links"><strong>Alignments:</strong> '+viewerLink(alnBase+'.core.fa','Core')+viewerLink(alnBase+'.best50.fa','Best50')+viewerLink(alnBase+'.subfam.fa','SubFam')+'</div>';
   } else if(sp.alignments && sp.alignments[sf]){
     h += '<div class="aln-links"><strong>Alignment:</strong> '+viewerLink(sp.alignments[sf],esc(sf)+'.aln.fa')+'</div>';
   }
-  const plotPath = 'plots/'+taxon+'/'+sf+'_divergence.png';
-  h += '<div style="margin-top:6px"><div style="font-weight:600;font-size:10px">Divergence</div><img src="'+plotPath+'" style="max-width:100%;border:1px solid #ddd;border-radius:4px;margin-top:2px" onerror="this.parentElement.style.display=\'none\'" /></div>';
-  h += '</div>';
-  h += '<div style="flex:2;min-width:280px" id="conservationPanel"><div style="color:#888;font-size:10px;padding:4px">Loading conservation...</div></div>';
-  h += '</div>';
+  h += '<div id="conservationPanel" style="margin-top:4px"><div style="color:#888;font-size:10px;padding:4px">Loading conservation...</div></div>';
 
-  showInfoModal(sf+' in '+taxon.replace(/_/g,' '), h);
+  showModal('Edit: '+sf+' × '+taxon.replace(/_/g,' '), h, function(ov){
+    const newCopies = parseFloat(ov.querySelector('#mCopies').value)||0;
+    const oldCopies = sp.counts[sf]||0;
+    if(!sp._edits) sp._edits = {};
+    sp._edits[sf] = {
+      copy_count:newCopies,
+      status:ov.querySelector('#mStatus').value,
+      sim_mean:parseFloat(ov.querySelector('#mSimMean').value)||null,
+      sim_median:parseFloat(ov.querySelector('#mSimMedian').value)||null,
+      notes:ov.querySelector('#mNotes').value.trim(),
+      curation_notes:ov.querySelector('#mCurNotes').value.trim()
+    };
+    sp.counts[sf] = newCopies;
+    sp.total = Math.max(0, (sp.total||0) - oldCopies + newCopies);
+    render();
+  });
   setTimeout(()=>{
     const panel = document.getElementById('conservationPanel');
     if(panel) showConservation(alnBase+'.core.fa', panel);
