@@ -56,7 +56,7 @@ tr:hover .sticky-sp,tr:hover .sticky-tot{background:#e8f0fe}
 td[title]{cursor:help}
 /* Detail panel (bottom slide-up) */
 #detail{border-top:1px solid #ccc;height:0;overflow:hidden;transition:height .15s;background:#fafbfc;flex-shrink:0}
-#detail.open{height:280px;overflow:auto}
+#detail.open{height:320px;overflow:auto}
 #detail .detail-header{background:#2c3e50;color:#fff;padding:3px 8px;font-size:11px;font-weight:600;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:2}
 #detail .detail-header button{background:transparent;border:none;color:#fff;font-size:14px;cursor:pointer;padding:0 4px}
 #detail .detail-body{padding:6px 8px;font-size:11px}
@@ -338,8 +338,7 @@ function showCellInfo(taxon, sf){
   const sp = DATA.species.find(s=>s.taxon===taxon);
   if(!sp) return;
   const v = sp.counts[sf]||0;
-
-  // All subfamilies sorted by count for bar chart
+  const alnBase = 'alignments/'+taxon+'/'+sf;
   const sorted = SF_ORDER.filter(sf2=>(sp.counts[sf2]||0)>0).sort((a,b)=>(sp.counts[b]||0)-(sp.counts[a]||0));
   const maxVal = sorted.length>0 ? (sp.counts[sorted[0]]||0) : 1;
 
@@ -362,11 +361,10 @@ function showCellInfo(taxon, sf){
   h += '<div class="detail-row"><b>% of total:</b> '+(sp.total>0?(100*v/sp.total).toFixed(1):'0')+'%</div>';
   h += '<div class="detail-row"><b>Rank:</b> '+rankStr+'</div>';
   if(confAlt!=null) h += '<div class="detail-row"><b>Conf_alt:</b> <span style="color:'+confColor+'">'+confAlt.toFixed(1)+'%</span></div>';
-  h += '<div class="detail-row" style="color:#aaa;font-size:9px;margin-top:6px">Alignment/conservation data<br>available for snake species only</div>';
   h += '</div>';
 
-  // Right: all subfamilies bar chart
-  h += '<div style="flex:1;min-width:240px">';
+  // Middle: all subfamilies bar chart
+  h += '<div style="flex:1;min-width:200px">';
   h += '<div style="font-weight:600;font-size:10px;margin-bottom:4px">All subfamilies — '+esc(taxon.replace(/_/g,' '))+'</div>';
   sorted.forEach(sf2=>{
     const v2 = sp.counts[sf2]||0;
@@ -382,8 +380,18 @@ function showCellInfo(taxon, sf){
   });
   h += '</div>';
 
+  // Right: conservation histogram panel
+  h += '<div style="flex:2;min-width:280px">';
+  h += '<div class="aln-links"><strong>Alignments:</strong> '+viewerLink(alnBase+'.core.fa','Core')+' '+viewerLink(alnBase+'.best50.fa','Best50')+'</div>';
+  h += '<div id="conservationPanel"><div style="color:#888;font-size:10px;padding:4px">Loading conservation...</div></div>';
+  h += '</div>';
+
   h += '</div>';
   openDetail(sf+' in '+taxon.replace(/_/g,' '), h);
+  setTimeout(()=>{
+    const panel = document.getElementById('conservationPanel');
+    if(panel) showConservation(alnBase+'.core.fa', panel);
+  }, 250);
 }
 
 function closeDetail(){ document.getElementById('detail').classList.remove('open'); }
