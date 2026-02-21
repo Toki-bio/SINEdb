@@ -1442,6 +1442,15 @@ function editSumCell(cell, taxon, sfName){
   // Conservation histogram panel
   body += '<div id="conservationPanel" style="margin-top:4px"></div>';
 
+  // Pre-computed plots (divergence distribution + nucleotide frequency)
+  var plotBase = 'plots/'+taxon+'/'+sfName;
+  body += '<div style="margin-top:8px">';
+  body += '<div id="divPlotWrap"><div style="font-weight:600;font-size:10px;margin-bottom:4px">Divergence Distribution</div>';
+  body += '<img src="'+plotBase+'_divergence.png" style="max-width:100%;max-height:220px;border:1px solid #ddd;border-radius:4px" onerror="this.parentElement.style.display=\'none\'" /></div>';
+  body += '<div id="nucfreqPlotWrap" style="margin-top:6px"><div style="font-weight:600;font-size:10px;margin-bottom:4px">Nucleotide Frequency</div>';
+  body += '<img src="'+plotBase+'_nucfreq.png" style="max-width:100%;max-height:220px;border:1px solid #ddd;border-radius:4px" onerror="this.parentElement.style.display=\'none\'" /></div>';
+  body += '</div>';
+
   // Curation buttons
   body += '<div class="curation-btns">';
   if(inst && curStatus!=='false_positive'){
