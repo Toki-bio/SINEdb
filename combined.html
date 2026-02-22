@@ -461,9 +461,8 @@ function showCellInfo(taxon, sf){
   h += '<div style="margin-top:8px"><div class="detail-row"><b>% of total:</b> '+(sp.total>0?(100*v/sp.total).toFixed(1):'0')+'%</div>';
   h += '<div class="detail-row"><b>Clade:</b> '+esc(sp.clade)+' · '+esc(sp.family)+'</div></div>';
 
-  // Show alignment viewer links
-  let alnLinks = viewerLink(alnBase+'.core.fa','Core')+viewerLink(alnBase+'.best50.fa','Best50');
-  if(isSnake) alnLinks += viewerLink(alnBase+'.subfam.fa','SubFam');
+  // Show alignment viewer links (SubFam shown for all; 404 hides it)
+  let alnLinks = viewerLink(alnBase+'.core.fa','Core')+viewerLink(alnBase+'.best50.fa','Best50')+viewerLink(alnBase+'.subfam.fa','SubFam');
   h += '<div class="aln-links"><strong>Alignments:</strong> '+alnLinks+'</div>';
   h += '<div id="conservationPanel" style="margin-top:4px"><div style="color:#888;font-size:10px;padding:4px">Loading conservation...</div></div>';
 
