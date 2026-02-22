@@ -9,8 +9,8 @@
 body{font:12px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#222;background:#fff;display:flex;flex-direction:column;height:100vh;overflow:hidden}
 a{color:#1a5dab;text-decoration:none}
 a:hover{text-decoration:underline}
-#topbar{display:flex;align-items:center;background:#1a4d8c;color:#fff;padding:0 12px;height:32px;font-size:12px;gap:12px}
-#topbar .title{font-weight:700;font-size:14px;letter-spacing:.5px}
+#topbar{display:flex;align-items:center;background:#1a4d8c;color:#fff;padding:0 8px;height:28px;flex-shrink:0;font-size:12px;gap:12px}
+#topbar .title{font-weight:700;font-size:13px;letter-spacing:.5px}
 #topbar .nav-link{color:rgba(255,255,255,.85);font-size:11px;padding:2px 8px;border:1px solid rgba(255,255,255,.3);border-radius:3px}
 #topbar .nav-link:hover{background:rgba(255,255,255,.15);text-decoration:none}
 #topbar .stats{font-size:11px;opacity:.85;margin-left:auto}
@@ -56,7 +56,7 @@ tr:hover .sticky-sp,tr:hover .sticky-tot{background:#e8f0fe}
 td[title]{cursor:help}
 /* Detail panel (bottom slide-up) */
 #detail{border-top:1px solid #ccc;height:0;overflow:hidden;transition:height .15s;background:#fafbfc;flex-shrink:0}
-#detail.open{height:320px;overflow:auto}
+#detail.open{height:280px;overflow:auto}
 #detail .detail-header{background:#2c3e50;color:#fff;padding:3px 8px;font-size:11px;font-weight:600;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:2}
 #detail .detail-header button{background:transparent;border:none;color:#fff;font-size:14px;cursor:pointer;padding:0 4px}
 #detail .detail-body{padding:6px 8px;font-size:11px}
