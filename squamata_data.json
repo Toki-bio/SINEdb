@@ -28,6 +28,17 @@
         "SqUCON1": 5880,
         "UCON_cyl": 5171
       },
+      "firm_counts": {
+        "Heno": 4099,
+        "oph1": 10896,
+        "oph2": 3713,
+        "oph3": 3955,
+        "oph_ae": 6,
+        "sq2_Eryx": 90280,
+        "SqUCON": 431,
+        "SqUCON1": 5846,
+        "UCON_cyl": 3205
+      },
       "total": 153225,
       "total_loci": 153225,
       "unassigned_n": 30794,
@@ -47,6 +58,17 @@
         "SqUCON": 1,
         "SqUCON1": 1,
         "UCON_cyl": 7754
+      },
+      "firm_counts": {
+        "Heno": 49,
+        "oph1": 13960,
+        "oph2": 1693,
+        "oph3": 1162,
+        "oph_ae": 9,
+        "sq2_Eryx": 21916,
+        "SqUCON": 1,
+        "SqUCON1": 1,
+        "UCON_cyl": 5845
       },
       "total": 59478,
       "total_loci": 59478,
@@ -68,6 +90,17 @@
         "SqUCON1": 3426,
         "UCON_cyl": 1254
       },
+      "firm_counts": {
+        "Heno": 65,
+        "oph1": 58826,
+        "oph2": 732,
+        "oph3": 1189,
+        "oph_ae": 8,
+        "sq2_Eryx": 26819,
+        "SqUCON": 588,
+        "SqUCON1": 3418,
+        "UCON_cyl": 839
+      },
       "total": 114565,
       "total_loci": 114565,
       "unassigned_n": 22081,
@@ -87,6 +120,17 @@
         "SqUCON": 2,
         "SqUCON1": 1,
         "UCON_cyl": 876
+      },
+      "firm_counts": {
+        "Heno": 59,
+        "oph1": 15020,
+        "oph2": 683,
+        "oph3": 722,
+        "oph_ae": 9,
+        "sq2_Eryx": 31469,
+        "SqUCON": 2,
+        "SqUCON1": 1,
+        "UCON_cyl": 357
       },
       "total": 65285,
       "total_loci": 65285,
@@ -108,6 +152,17 @@
         "SqUCON1": 277,
         "UCON_cyl": 11909
       },
+      "firm_counts": {
+        "Heno": 307,
+        "oph1": 28080,
+        "oph2": 2317,
+        "oph3": 3630,
+        "oph_ae": 7,
+        "sq2_Eryx": 48673,
+        "SqUCON": 3369,
+        "SqUCON1": 260,
+        "UCON_cyl": 9581
+      },
       "total": 125170,
       "total_loci": 125170,
       "unassigned_n": 28946,
@@ -127,6 +182,17 @@
         "SqUCON": 2,
         "SqUCON1": 1,
         "UCON_cyl": 7109
+      },
+      "firm_counts": {
+        "Heno": 73,
+        "oph1": 5114,
+        "oph2": 696,
+        "oph3": 1252,
+        "oph_ae": 9,
+        "sq2_Eryx": 23802,
+        "SqUCON": 2,
+        "SqUCON1": 1,
+        "UCON_cyl": 6190
       },
       "total": 55049,
       "total_loci": 55049,
@@ -148,6 +214,17 @@
         "SqUCON1": 1,
         "UCON_cyl": 92685
       },
+      "firm_counts": {
+        "Heno": 202,
+        "oph1": 26326,
+        "oph2": 5616,
+        "oph3": 3129,
+        "oph_ae": 8,
+        "sq2_Eryx": 46877,
+        "SqUCON": 1,
+        "SqUCON1": 1,
+        "UCON_cyl": 89693
+      },
       "total": 198907,
       "total_loci": 198907,
       "unassigned_n": 27054,
@@ -167,6 +244,17 @@
         "SqUCON": 0,
         "SqUCON1": 0,
         "UCON_cyl": 2284
+      },
+      "firm_counts": {
+        "Heno": 26,
+        "oph1": 5323,
+        "oph2": 1096,
+        "oph3": 2268,
+        "oph_ae": 4,
+        "sq2_Eryx": 13964,
+        "SqUCON": 0,
+        "SqUCON1": 0,
+        "UCON_cyl": 1773
       },
       "total": 34492,
       "total_loci": 34492,
@@ -188,6 +276,17 @@
         "SqUCON1": 2,
         "UCON_cyl": 27488
       },
+      "firm_counts": {
+        "Heno": 47,
+        "oph1": 5880,
+        "oph2": 1290,
+        "oph3": 2263,
+        "oph_ae": 15,
+        "sq2_Eryx": 12644,
+        "SqUCON": 5,
+        "SqUCON1": 2,
+        "UCON_cyl": 26731
+      },
       "total": 59427,
       "total_loci": 59427,
       "unassigned_n": 10550,
@@ -207,6 +306,17 @@
         "SqUCON": 3,
         "SqUCON1": 1,
         "UCON_cyl": 4139
+      },
+      "firm_counts": {
+        "Heno": 45,
+        "oph1": 3360,
+        "oph2": 101,
+        "oph3": 271,
+        "oph_ae": 5,
+        "sq2_Eryx": 31138,
+        "SqUCON": 3,
+        "SqUCON1": 1,
+        "UCON_cyl": 3832
       },
       "total": 51940,
       "total_loci": 51940,
@@ -228,6 +338,17 @@
         "SqUCON1": 3,
         "UCON_cyl": 19777
       },
+      "firm_counts": {
+        "Heno": 5465,
+        "oph1": 7920,
+        "oph2": 7762,
+        "oph3": 6090,
+        "oph_ae": 9,
+        "sq2_Eryx": 19069,
+        "SqUCON": 5,
+        "SqUCON1": 3,
+        "UCON_cyl": 6517
+      },
       "total": 80166,
       "total_loci": 80166,
       "unassigned_n": 27326,
@@ -247,6 +368,17 @@
         "SqUCON": 9,
         "SqUCON1": 7,
         "UCON_cyl": 13422
+      },
+      "firm_counts": {
+        "Heno": 16535,
+        "oph1": 22325,
+        "oph2": 900,
+        "oph3": 9011,
+        "oph_ae": 11,
+        "sq2_Eryx": 34306,
+        "SqUCON": 6,
+        "SqUCON1": 4,
+        "UCON_cyl": 10144
       },
       "total": 114444,
       "total_loci": 114444,
@@ -272,6 +404,17 @@
         "SqUCON1": 6,
         "UCON_cyl": 12783
       },
+      "firm_counts": {
+        "Heno": 16253,
+        "oph1": 22079,
+        "oph2": 834,
+        "oph3": 9081,
+        "oph_ae": 13,
+        "sq2_Eryx": 34000,
+        "SqUCON": 3,
+        "SqUCON1": 5,
+        "UCON_cyl": 9641
+      },
       "total": 112268,
       "total_loci": 112268,
       "unassigned_n": 20359,
@@ -291,6 +434,17 @@
         "SqUCON": 5771,
         "SqUCON1": 3416,
         "UCON_cyl": 4893
+      },
+      "firm_counts": {
+        "Heno": 4811,
+        "oph1": 3854,
+        "oph2": 457,
+        "oph3": 353,
+        "oph_ae": 510,
+        "sq2_Eryx": 33383,
+        "SqUCON": 2828,
+        "SqUCON1": 3285,
+        "UCON_cyl": 4357
       },
       "total": 70050,
       "total_loci": 70050,
@@ -312,6 +466,17 @@
         "SqUCON1": 3079,
         "UCON_cyl": 2005
       },
+      "firm_counts": {
+        "Heno": 3094,
+        "oph1": 1734,
+        "oph2": 63,
+        "oph3": 93,
+        "oph_ae": 286,
+        "sq2_Eryx": 28008,
+        "SqUCON": 1737,
+        "SqUCON1": 3001,
+        "UCON_cyl": 1757
+      },
       "total": 50409,
       "total_loci": 50409,
       "unassigned_n": 10636,
@@ -331,6 +496,17 @@
         "SqUCON": 13072,
         "SqUCON1": 1258,
         "UCON_cyl": 3541
+      },
+      "firm_counts": {
+        "Heno": 6800,
+        "oph1": 13343,
+        "oph2": 88,
+        "oph3": 132,
+        "oph_ae": 17,
+        "sq2_Eryx": 38316,
+        "SqUCON": 12457,
+        "SqUCON1": 870,
+        "UCON_cyl": 2936
       },
       "total": 89467,
       "total_loci": 89467,
@@ -356,6 +532,17 @@
         "SqUCON1": 2,
         "UCON_cyl": 15906
       },
+      "firm_counts": {
+        "Heno": 38424,
+        "oph1": 23942,
+        "oph2": 431,
+        "oph3": 9343,
+        "oph_ae": 10,
+        "sq2_Eryx": 77418,
+        "SqUCON": 5,
+        "SqUCON1": 2,
+        "UCON_cyl": 12511
+      },
       "total": 187003,
       "total_loci": 187003,
       "unassigned_n": 24917,
@@ -375,6 +562,17 @@
         "SqUCON": 56092,
         "SqUCON1": 2215,
         "UCON_cyl": 9435
+      },
+      "firm_counts": {
+        "Heno": 11769,
+        "oph1": 47330,
+        "oph2": 2509,
+        "oph3": 434,
+        "oph_ae": 6,
+        "sq2_Eryx": 34588,
+        "SqUCON": 54447,
+        "SqUCON1": 2151,
+        "UCON_cyl": 7572
       },
       "total": 178497,
       "total_loci": 178497,
@@ -400,6 +598,17 @@
         "SqUCON1": 3,
         "UCON_cyl": 9638
       },
+      "firm_counts": {
+        "Heno": 24464,
+        "oph1": 15811,
+        "oph2": 2052,
+        "oph3": 796,
+        "oph_ae": 10,
+        "sq2_Eryx": 67170,
+        "SqUCON": 3,
+        "SqUCON1": 3,
+        "UCON_cyl": 7503
+      },
       "total": 137942,
       "total_loci": 137942,
       "unassigned_n": 20130,
@@ -419,6 +628,17 @@
         "SqUCON": 4,
         "SqUCON1": 5,
         "UCON_cyl": 8391
+      },
+      "firm_counts": {
+        "Heno": 23909,
+        "oph1": 12681,
+        "oph2": 2826,
+        "oph3": 560,
+        "oph_ae": 4,
+        "sq2_Eryx": 60774,
+        "SqUCON": 4,
+        "SqUCON1": 5,
+        "UCON_cyl": 6596
       },
       "total": 124418,
       "total_loci": 124418,
@@ -444,6 +664,17 @@
         "SqUCON1": 5745,
         "UCON_cyl": 5593
       },
+      "firm_counts": {
+        "Heno": 13199,
+        "oph1": 14825,
+        "oph2": 369,
+        "oph3": 412,
+        "oph_ae": 13,
+        "sq2_Eryx": 93781,
+        "SqUCON": 61148,
+        "SqUCON1": 5359,
+        "UCON_cyl": 4669
+      },
       "total": 214810,
       "total_loci": 214810,
       "unassigned_n": 21035,
@@ -463,6 +694,17 @@
         "SqUCON": 2,
         "SqUCON1": 2,
         "UCON_cyl": 16938
+      },
+      "firm_counts": {
+        "Heno": 5574,
+        "oph1": 295,
+        "oph2": 343,
+        "oph3": 553,
+        "oph_ae": 18,
+        "sq2_Eryx": 26444,
+        "SqUCON": 2,
+        "SqUCON1": 2,
+        "UCON_cyl": 5553
       },
       "total": 76268,
       "total_loci": 76268,
@@ -484,6 +726,17 @@
         "SqUCON1": 4,
         "UCON_cyl": 11404
       },
+      "firm_counts": {
+        "Heno": 5588,
+        "oph1": 70403,
+        "oph2": 429,
+        "oph3": 870,
+        "oph_ae": 6,
+        "sq2_Eryx": 22548,
+        "SqUCON": 12,
+        "SqUCON1": 3,
+        "UCON_cyl": 7913
+      },
       "total": 121704,
       "total_loci": 121704,
       "unassigned_n": 13932,
@@ -503,6 +756,17 @@
         "SqUCON": 8,
         "SqUCON1": 3,
         "UCON_cyl": 32442
+      },
+      "firm_counts": {
+        "Heno": 5578,
+        "oph1": 24929,
+        "oph2": 890,
+        "oph3": 2257,
+        "oph_ae": 10,
+        "sq2_Eryx": 21025,
+        "SqUCON": 8,
+        "SqUCON1": 2,
+        "UCON_cyl": 29818
       },
       "total": 102205,
       "total_loci": 102205,
@@ -524,6 +788,17 @@
         "SqUCON1": 0,
         "UCON_cyl": 23112
       },
+      "firm_counts": {
+        "Heno": 3340,
+        "oph1": 1102,
+        "oph2": 591,
+        "oph3": 1116,
+        "oph_ae": 14,
+        "sq2_Eryx": 16328,
+        "SqUCON": 0,
+        "SqUCON1": 0,
+        "UCON_cyl": 17998
+      },
       "total": 69028,
       "total_loci": 69028,
       "unassigned_n": 28539,
@@ -543,6 +818,17 @@
         "SqUCON": 67548,
         "SqUCON1": 5574,
         "UCON_cyl": 5653
+      },
+      "firm_counts": {
+        "Heno": 13407,
+        "oph1": 15745,
+        "oph2": 363,
+        "oph3": 462,
+        "oph_ae": 14,
+        "sq2_Eryx": 95491,
+        "SqUCON": 62886,
+        "SqUCON1": 4913,
+        "UCON_cyl": 4668
       },
       "total": 220915,
       "total_loci": 220915,
@@ -568,6 +854,17 @@
         "SqUCON1": 2,
         "UCON_cyl": 7638
       },
+      "firm_counts": {
+        "Heno": 24225,
+        "oph1": 10592,
+        "oph2": 1838,
+        "oph3": 459,
+        "oph_ae": 9,
+        "sq2_Eryx": 69322,
+        "SqUCON": 6,
+        "SqUCON1": 2,
+        "UCON_cyl": 6365
+      },
       "total": 129729,
       "total_loci": 129729,
       "unassigned_n": 16911,
@@ -587,6 +884,17 @@
         "SqUCON": 6,
         "SqUCON1": 6,
         "UCON_cyl": 10942
+      },
+      "firm_counts": {
+        "Heno": 31889,
+        "oph1": 14951,
+        "oph2": 2287,
+        "oph3": 581,
+        "oph_ae": 4,
+        "sq2_Eryx": 84607,
+        "SqUCON": 6,
+        "SqUCON1": 5,
+        "UCON_cyl": 8985
       },
       "total": 170582,
       "total_loci": 170582,
@@ -608,6 +916,17 @@
         "SqUCON1": 6,
         "UCON_cyl": 10214
       },
+      "firm_counts": {
+        "Heno": 10696,
+        "oph1": 38338,
+        "oph2": 3773,
+        "oph3": 806,
+        "oph_ae": 13,
+        "sq2_Eryx": 34041,
+        "SqUCON": 1,
+        "SqUCON1": 5,
+        "UCON_cyl": 8108
+      },
       "total": 109688,
       "total_loci": 109688,
       "unassigned_n": 13907,
@@ -627,6 +946,17 @@
         "SqUCON": 57879,
         "SqUCON1": 921,
         "UCON_cyl": 18333
+      },
+      "firm_counts": {
+        "Heno": 5785,
+        "oph1": 34679,
+        "oph2": 1243,
+        "oph3": 2242,
+        "oph_ae": 10,
+        "sq2_Eryx": 25443,
+        "SqUCON": 57449,
+        "SqUCON1": 599,
+        "UCON_cyl": 13995
       },
       "total": 157765,
       "total_loci": 157765,
@@ -648,6 +978,17 @@
         "SqUCON1": 873,
         "UCON_cyl": 27829
       },
+      "firm_counts": {
+        "Heno": 8211,
+        "oph1": 36840,
+        "oph2": 853,
+        "oph3": 3025,
+        "oph_ae": 14,
+        "sq2_Eryx": 31999,
+        "SqUCON": 61466,
+        "SqUCON1": 530,
+        "UCON_cyl": 21249
+      },
       "total": 187288,
       "total_loci": 187288,
       "unassigned_n": 23101,
@@ -667,6 +1008,17 @@
         "SqUCON": 26741,
         "SqUCON1": 284,
         "UCON_cyl": 18909
+      },
+      "firm_counts": {
+        "Heno": 36051,
+        "oph1": 65854,
+        "oph2": 1209,
+        "oph3": 1481,
+        "oph_ae": 34,
+        "sq2_Eryx": 44857,
+        "SqUCON": 26601,
+        "SqUCON1": 135,
+        "UCON_cyl": 12618
       },
       "total": 208876,
       "total_loci": 208876,
@@ -688,6 +1040,17 @@
         "SqUCON1": 13,
         "UCON_cyl": 17834
       },
+      "firm_counts": {
+        "Heno": 24381,
+        "oph1": 14961,
+        "oph2": 123,
+        "oph3": 295,
+        "oph_ae": 677,
+        "sq2_Eryx": 47529,
+        "SqUCON": 8,
+        "SqUCON1": 5,
+        "UCON_cyl": 15934
+      },
       "total": 119374,
       "total_loci": 119374,
       "unassigned_n": 15461,
@@ -707,6 +1070,17 @@
         "SqUCON": 8,
         "SqUCON1": 4,
         "UCON_cyl": 11270
+      },
+      "firm_counts": {
+        "Heno": 13986,
+        "oph1": 8875,
+        "oph2": 2891,
+        "oph3": 3005,
+        "oph_ae": 10,
+        "sq2_Eryx": 41131,
+        "SqUCON": 8,
+        "SqUCON1": 4,
+        "UCON_cyl": 9085
       },
       "total": 97073,
       "total_loci": 97073,
@@ -728,6 +1102,17 @@
         "SqUCON1": 882,
         "UCON_cyl": 11130
       },
+      "firm_counts": {
+        "Heno": 11878,
+        "oph1": 11749,
+        "oph2": 30,
+        "oph3": 607,
+        "oph_ae": 31,
+        "sq2_Eryx": 37946,
+        "SqUCON": 11421,
+        "SqUCON1": 631,
+        "UCON_cyl": 9672
+      },
       "total": 97814,
       "total_loci": 97814,
       "unassigned_n": 13849,
@@ -748,6 +1133,17 @@
         "SqUCON1": 1486,
         "UCON_cyl": 28455
       },
+      "firm_counts": {
+        "Heno": 14365,
+        "oph1": 23029,
+        "oph2": 427,
+        "oph3": 1363,
+        "oph_ae": 7,
+        "sq2_Eryx": 39085,
+        "SqUCON": 33053,
+        "SqUCON1": 1209,
+        "UCON_cyl": 25804
+      },
       "total": 156205,
       "total_loci": 156205,
       "unassigned_n": 17863,
@@ -767,6 +1163,17 @@
         "SqUCON": 4,
         "SqUCON1": 4,
         "UCON_cyl": 22687
+      },
+      "firm_counts": {
+        "Heno": 20288,
+        "oph1": 9693,
+        "oph2": 1675,
+        "oph3": 4461,
+        "oph_ae": 9,
+        "sq2_Eryx": 48552,
+        "SqUCON": 4,
+        "SqUCON1": 4,
+        "UCON_cyl": 19666
       },
       "total": 126782,
       "total_loci": 126782,
@@ -792,6 +1199,17 @@
         "SqUCON1": 1,
         "UCON_cyl": 9270
       },
+      "firm_counts": {
+        "Heno": 21634,
+        "oph1": 18842,
+        "oph2": 1056,
+        "oph3": 3304,
+        "oph_ae": 10,
+        "sq2_Eryx": 30167,
+        "SqUCON": 5,
+        "SqUCON1": 1,
+        "UCON_cyl": 7823
+      },
       "total": 100223,
       "total_loci": 100223,
       "unassigned_n": 17381,
@@ -811,6 +1229,17 @@
         "SqUCON": 5,
         "SqUCON1": 5,
         "UCON_cyl": 8527
+      },
+      "firm_counts": {
+        "Heno": 14090,
+        "oph1": 23216,
+        "oph2": 913,
+        "oph3": 3990,
+        "oph_ae": 9,
+        "sq2_Eryx": 28001,
+        "SqUCON": 4,
+        "SqUCON1": 4,
+        "UCON_cyl": 7041
       },
       "total": 93148,
       "total_loci": 93148,
@@ -832,6 +1261,17 @@
         "SqUCON1": 6077,
         "UCON_cyl": 40620
       },
+      "firm_counts": {
+        "Heno": 19558,
+        "oph1": 17886,
+        "oph2": 3176,
+        "oph3": 10723,
+        "oph_ae": 11,
+        "sq2_Eryx": 33808,
+        "SqUCON": 76829,
+        "SqUCON1": 5125,
+        "UCON_cyl": 36638
+      },
       "total": 226659,
       "total_loci": 226659,
       "unassigned_n": 22905,
@@ -851,6 +1291,17 @@
         "SqUCON": 38809,
         "SqUCON1": 2679,
         "UCON_cyl": 8160
+      },
+      "firm_counts": {
+        "Heno": 31007,
+        "oph1": 33582,
+        "oph2": 188,
+        "oph3": 452,
+        "oph_ae": 7,
+        "sq2_Eryx": 103063,
+        "SqUCON": 37818,
+        "SqUCON1": 2354,
+        "UCON_cyl": 5724
       },
       "total": 230756,
       "total_loci": 230756,
@@ -872,6 +1323,17 @@
         "SqUCON1": 633,
         "UCON_cyl": 1966
       },
+      "firm_counts": {
+        "Heno": 1203,
+        "oph1": 755,
+        "oph2": 72,
+        "oph3": 272,
+        "oph_ae": 0,
+        "sq2_Eryx": 15967,
+        "SqUCON": 1599,
+        "SqUCON1": 509,
+        "UCON_cyl": 1837
+      },
       "total": 24302,
       "total_loci": 24302,
       "unassigned_n": 2088,
@@ -891,6 +1353,17 @@
         "SqUCON": 3670,
         "SqUCON1": 1354,
         "UCON_cyl": 3465
+      },
+      "firm_counts": {
+        "Heno": 5383,
+        "oph1": 2001,
+        "oph2": 162,
+        "oph3": 307,
+        "oph_ae": 3294,
+        "sq2_Eryx": 22989,
+        "SqUCON": 3199,
+        "SqUCON1": 1182,
+        "UCON_cyl": 3086
       },
       "total": 48715,
       "total_loci": 48715,
@@ -912,6 +1385,17 @@
         "SqUCON1": 3108,
         "UCON_cyl": 5732
       },
+      "firm_counts": {
+        "Heno": 8842,
+        "oph1": 3383,
+        "oph2": 336,
+        "oph3": 638,
+        "oph_ae": 17,
+        "sq2_Eryx": 25241,
+        "SqUCON": 4051,
+        "SqUCON1": 2563,
+        "UCON_cyl": 5023
+      },
       "total": 62648,
       "total_loci": 62648,
       "unassigned_n": 12554,
@@ -931,6 +1415,17 @@
         "SqUCON": 4492,
         "SqUCON1": 2826,
         "UCON_cyl": 4863
+      },
+      "firm_counts": {
+        "Heno": 7253,
+        "oph1": 2819,
+        "oph2": 266,
+        "oph3": 569,
+        "oph_ae": 10,
+        "sq2_Eryx": 22468,
+        "SqUCON": 3620,
+        "SqUCON1": 2369,
+        "UCON_cyl": 4299
       },
       "total": 53205,
       "total_loci": 53205,
@@ -952,6 +1447,17 @@
         "SqUCON1": 833,
         "UCON_cyl": 12327
       },
+      "firm_counts": {
+        "Heno": 28359,
+        "oph1": 13981,
+        "oph2": 672,
+        "oph3": 743,
+        "oph_ae": 13,
+        "sq2_Eryx": 55364,
+        "SqUCON": 3990,
+        "SqUCON1": 684,
+        "UCON_cyl": 10313
+      },
       "total": 133105,
       "total_loci": 133105,
       "unassigned_n": 18986,
@@ -971,6 +1477,17 @@
         "SqUCON": 277,
         "SqUCON1": 528,
         "UCON_cyl": 3694
+      },
+      "firm_counts": {
+        "Heno": 687,
+        "oph1": 3400,
+        "oph2": 2674,
+        "oph3": 19471,
+        "oph_ae": 8,
+        "sq2_Eryx": 6550,
+        "SqUCON": 191,
+        "SqUCON1": 387,
+        "UCON_cyl": 3006
       },
       "total": 43860,
       "total_loci": 43860,
@@ -992,6 +1509,17 @@
         "SqUCON1": 355,
         "UCON_cyl": 857
       },
+      "firm_counts": {
+        "Heno": 696,
+        "oph1": 1900,
+        "oph2": 1520,
+        "oph3": 14266,
+        "oph_ae": 6,
+        "sq2_Eryx": 7180,
+        "SqUCON": 110,
+        "SqUCON1": 286,
+        "UCON_cyl": 600
+      },
       "total": 32965,
       "total_loci": 32965,
       "unassigned_n": 6401,
@@ -1011,6 +1539,17 @@
         "SqUCON": 20,
         "SqUCON1": 123,
         "UCON_cyl": 173
+      },
+      "firm_counts": {
+        "Heno": 363,
+        "oph1": 731,
+        "oph2": 5952,
+        "oph3": 2435,
+        "oph_ae": 29,
+        "sq2_Eryx": 3417,
+        "SqUCON": 17,
+        "SqUCON1": 122,
+        "UCON_cyl": 139
       },
       "total": 15400,
       "total_loci": 15400,
@@ -1032,6 +1571,17 @@
         "SqUCON1": 154,
         "UCON_cyl": 182
       },
+      "firm_counts": {
+        "Heno": 427,
+        "oph1": 765,
+        "oph2": 6971,
+        "oph3": 2683,
+        "oph_ae": 38,
+        "sq2_Eryx": 3516,
+        "SqUCON": 26,
+        "SqUCON1": 154,
+        "UCON_cyl": 154
+      },
       "total": 17235,
       "total_loci": 17235,
       "unassigned_n": 2501,
@@ -1051,6 +1601,17 @@
         "SqUCON": 16,
         "SqUCON1": 17,
         "UCON_cyl": 16519
+      },
+      "firm_counts": {
+        "Heno": 17834,
+        "oph1": 169,
+        "oph2": 20,
+        "oph3": 1524,
+        "oph_ae": 70,
+        "sq2_Eryx": 9742,
+        "SqUCON": 14,
+        "SqUCON1": 16,
+        "UCON_cyl": 13466
       },
       "total": 60287,
       "total_loci": 60287,
@@ -1072,6 +1633,17 @@
         "SqUCON1": 76,
         "UCON_cyl": 46643
       },
+      "firm_counts": {
+        "Heno": 20637,
+        "oph1": 24618,
+        "oph2": 3637,
+        "oph3": 6559,
+        "oph_ae": 12,
+        "sq2_Eryx": 10323,
+        "SqUCON": 23,
+        "SqUCON1": 68,
+        "UCON_cyl": 26843
+      },
       "total": 128986,
       "total_loci": 128986,
       "unassigned_n": 36266,
@@ -1091,6 +1663,17 @@
         "SqUCON": 1213,
         "SqUCON1": 16,
         "UCON_cyl": 9895
+      },
+      "firm_counts": {
+        "Heno": 3733,
+        "oph1": 8197,
+        "oph2": 712,
+        "oph3": 2235,
+        "oph_ae": 18,
+        "sq2_Eryx": 2849,
+        "SqUCON": 1185,
+        "SqUCON1": 14,
+        "UCON_cyl": 8470
       },
       "total": 32112,
       "total_loci": 32112,
@@ -1112,6 +1695,17 @@
         "SqUCON1": 14,
         "UCON_cyl": 10807
       },
+      "firm_counts": {
+        "Heno": 11249,
+        "oph1": 4436,
+        "oph2": 1449,
+        "oph3": 1103,
+        "oph_ae": 10,
+        "sq2_Eryx": 9929,
+        "SqUCON": 7,
+        "SqUCON1": 12,
+        "UCON_cyl": 9385
+      },
       "total": 47797,
       "total_loci": 47797,
       "unassigned_n": 10217,
@@ -1131,6 +1725,17 @@
         "SqUCON": 11,
         "SqUCON1": 40,
         "UCON_cyl": 20594
+      },
+      "firm_counts": {
+        "Heno": 14938,
+        "oph1": 8583,
+        "oph2": 3882,
+        "oph3": 4123,
+        "oph_ae": 9,
+        "sq2_Eryx": 9445,
+        "SqUCON": 9,
+        "SqUCON1": 39,
+        "UCON_cyl": 18089
       },
       "total": 73864,
       "total_loci": 73864,
@@ -1152,6 +1757,17 @@
         "SqUCON1": 71,
         "UCON_cyl": 19575
       },
+      "firm_counts": {
+        "Heno": 14393,
+        "oph1": 7891,
+        "oph2": 4729,
+        "oph3": 4357,
+        "oph_ae": 10,
+        "sq2_Eryx": 9275,
+        "SqUCON": 4,
+        "SqUCON1": 70,
+        "UCON_cyl": 17437
+      },
       "total": 72252,
       "total_loci": 72252,
       "unassigned_n": 14086,
@@ -1171,6 +1787,17 @@
         "SqUCON": 0,
         "SqUCON1": 0,
         "UCON_cyl": 11194
+      },
+      "firm_counts": {
+        "Heno": 490,
+        "oph1": 8189,
+        "oph2": 231,
+        "oph3": 723,
+        "oph_ae": 0,
+        "sq2_Eryx": 480,
+        "SqUCON": 0,
+        "SqUCON1": 0,
+        "UCON_cyl": 9725
       },
       "total": 22226,
       "total_loci": 22226,
@@ -1192,6 +1819,17 @@
         "SqUCON1": 1,
         "UCON_cyl": 3969
       },
+      "firm_counts": {
+        "Heno": 12,
+        "oph1": 14006,
+        "oph2": 1949,
+        "oph3": 5615,
+        "oph_ae": 0,
+        "sq2_Eryx": 29202,
+        "SqUCON": 0,
+        "SqUCON1": 1,
+        "UCON_cyl": 3206
+      },
       "total": 66027,
       "total_loci": 66027,
       "unassigned_n": 12036,
@@ -1211,6 +1849,17 @@
         "SqUCON": 6,
         "SqUCON1": 2,
         "UCON_cyl": 3902
+      },
+      "firm_counts": {
+        "Heno": 42,
+        "oph1": 21491,
+        "oph2": 2357,
+        "oph3": 6396,
+        "oph_ae": 8,
+        "sq2_Eryx": 31345,
+        "SqUCON": 6,
+        "SqUCON1": 2,
+        "UCON_cyl": 3155
       },
       "total": 78485,
       "total_loci": 78485,
@@ -1232,6 +1881,17 @@
         "SqUCON1": 1,
         "UCON_cyl": 843
       },
+      "firm_counts": {
+        "Heno": 5,
+        "oph1": 5556,
+        "oph2": 379,
+        "oph3": 1259,
+        "oph_ae": 3,
+        "sq2_Eryx": 18270,
+        "SqUCON": 1,
+        "SqUCON1": 1,
+        "UCON_cyl": 757
+      },
       "total": 32798,
       "total_loci": 32798,
       "unassigned_n": 6567,
@@ -1251,6 +1911,17 @@
         "SqUCON": 5,
         "SqUCON1": 0,
         "UCON_cyl": 3613
+      },
+      "firm_counts": {
+        "Heno": 44,
+        "oph1": 24086,
+        "oph2": 2188,
+        "oph3": 6214,
+        "oph_ae": 7,
+        "sq2_Eryx": 29914,
+        "SqUCON": 5,
+        "SqUCON1": 0,
+        "UCON_cyl": 3028
       },
       "total": 78603,
       "total_loci": 78603,
@@ -1272,6 +1943,17 @@
         "SqUCON1": 3,
         "UCON_cyl": 3765
       },
+      "firm_counts": {
+        "Heno": 42,
+        "oph1": 23789,
+        "oph2": 2423,
+        "oph3": 6277,
+        "oph_ae": 11,
+        "sq2_Eryx": 30824,
+        "SqUCON": 4,
+        "SqUCON1": 3,
+        "UCON_cyl": 3060
+      },
       "total": 80442,
       "total_loci": 80442,
       "unassigned_n": 14009,
@@ -1291,6 +1973,17 @@
         "SqUCON": 6,
         "SqUCON1": 0,
         "UCON_cyl": 3835
+      },
+      "firm_counts": {
+        "Heno": 46,
+        "oph1": 23691,
+        "oph2": 2305,
+        "oph3": 5984,
+        "oph_ae": 9,
+        "sq2_Eryx": 31234,
+        "SqUCON": 6,
+        "SqUCON1": 0,
+        "UCON_cyl": 3107
       },
       "total": 80702,
       "total_loci": 80702,
@@ -1312,6 +2005,17 @@
         "SqUCON1": 2,
         "UCON_cyl": 3998
       },
+      "firm_counts": {
+        "Heno": 41,
+        "oph1": 29521,
+        "oph2": 2540,
+        "oph3": 6102,
+        "oph_ae": 8,
+        "sq2_Eryx": 28726,
+        "SqUCON": 1,
+        "SqUCON1": 2,
+        "UCON_cyl": 3219
+      },
       "total": 84332,
       "total_loci": 84332,
       "unassigned_n": 14172,
@@ -1331,6 +2035,17 @@
         "SqUCON": 1,
         "SqUCON1": 2,
         "UCON_cyl": 1469
+      },
+      "firm_counts": {
+        "Heno": 1799,
+        "oph1": 6332,
+        "oph2": 132,
+        "oph3": 295,
+        "oph_ae": 8,
+        "sq2_Eryx": 1976,
+        "SqUCON": 1,
+        "SqUCON1": 2,
+        "UCON_cyl": 1051
       },
       "total": 14727,
       "total_loci": 14727,
@@ -1352,6 +2067,17 @@
         "SqUCON1": 0,
         "UCON_cyl": 9444
       },
+      "firm_counts": {
+        "Heno": 4369,
+        "oph1": 9660,
+        "oph2": 467,
+        "oph3": 768,
+        "oph_ae": 0,
+        "sq2_Eryx": 3848,
+        "SqUCON": 1,
+        "SqUCON1": 0,
+        "UCON_cyl": 7047
+      },
       "total": 34179,
       "total_loci": 34179,
       "unassigned_n": 8019,
@@ -1371,6 +2097,17 @@
         "SqUCON": 6,
         "SqUCON1": 70,
         "UCON_cyl": 920
+      },
+      "firm_counts": {
+        "Heno": 971,
+        "oph1": 1194,
+        "oph2": 704,
+        "oph3": 461,
+        "oph_ae": 22,
+        "sq2_Eryx": 189805,
+        "SqUCON": 3,
+        "SqUCON1": 67,
+        "UCON_cyl": 807
       },
       "total": 212170,
       "total_loci": 212170,
@@ -1392,6 +2129,17 @@
         "SqUCON1": 4,
         "UCON_cyl": 23149
       },
+      "firm_counts": {
+        "Heno": 31,
+        "oph1": 3048,
+        "oph2": 1642,
+        "oph3": 1681,
+        "oph_ae": 8,
+        "sq2_Eryx": 7597,
+        "SqUCON": 2,
+        "SqUCON1": 4,
+        "UCON_cyl": 22702
+      },
       "total": 42977,
       "total_loci": 42977,
       "unassigned_n": 6262,
@@ -1411,6 +2159,17 @@
         "SqUCON": 435,
         "SqUCON1": 140,
         "UCON_cyl": 2573
+      },
+      "firm_counts": {
+        "Heno": 10,
+        "oph1": 1815,
+        "oph2": 87,
+        "oph3": 80,
+        "oph_ae": 0,
+        "sq2_Eryx": 13988,
+        "SqUCON": 386,
+        "SqUCON1": 134,
+        "UCON_cyl": 2413
       },
       "total": 25639,
       "total_loci": 25639,
@@ -1432,6 +2191,17 @@
         "SqUCON1": 3,
         "UCON_cyl": 773
       },
+      "firm_counts": {
+        "Heno": 117,
+        "oph1": 1265,
+        "oph2": 379,
+        "oph3": 1041,
+        "oph_ae": 14,
+        "sq2_Eryx": 25331,
+        "SqUCON": 2,
+        "SqUCON1": 3,
+        "UCON_cyl": 695
+      },
       "total": 39919,
       "total_loci": 39919,
       "unassigned_n": 11072,
@@ -1451,6 +2221,17 @@
         "SqUCON": 5447,
         "SqUCON1": 1104,
         "UCON_cyl": 929
+      },
+      "firm_counts": {
+        "Heno": 29,
+        "oph1": 896,
+        "oph2": 198,
+        "oph3": 188,
+        "oph_ae": 17,
+        "sq2_Eryx": 14446,
+        "SqUCON": 4849,
+        "SqUCON1": 928,
+        "UCON_cyl": 877
       },
       "total": 30333,
       "total_loci": 30333,
@@ -1472,6 +2253,17 @@
         "SqUCON1": 21,
         "UCON_cyl": 4721
       },
+      "firm_counts": {
+        "Heno": 99,
+        "oph1": 1519,
+        "oph2": 320,
+        "oph3": 268,
+        "oph_ae": 10,
+        "sq2_Eryx": 21478,
+        "SqUCON": 94,
+        "SqUCON1": 18,
+        "UCON_cyl": 4334
+      },
       "total": 41528,
       "total_loci": 41528,
       "unassigned_n": 13388,
@@ -1491,6 +2283,17 @@
         "SqUCON": 1,
         "SqUCON1": 1,
         "UCON_cyl": 18569
+      },
+      "firm_counts": {
+        "Heno": 72,
+        "oph1": 29122,
+        "oph2": 7110,
+        "oph3": 2647,
+        "oph_ae": 29,
+        "sq2_Eryx": 22764,
+        "SqUCON": 1,
+        "SqUCON1": 1,
+        "UCON_cyl": 13108
       },
       "total": 101098,
       "total_loci": 101098,

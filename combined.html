@@ -412,9 +412,11 @@ function showSpeciesInfo(taxon){
   h += '<hr style="margin:4px 0">';
   sorted.forEach(sf=>{
     const v = sp.counts[sf]||0;
+    const firmV = sp.firm_counts ? (sp.firm_counts[sf]||0) : v;
+    const softV = v - firmV;
     const pct = (100*v/maxVal).toFixed(1);
     const fracOfTotal = sp.total>0?(100*v/sp.total).toFixed(1):'0';
-    h += '<div class="detail-row"><b>'+esc(sf)+'</b>: '+fmt(v)+' ('+fracOfTotal+'%)</div>';
+    h += '<div class="detail-row"><b>'+esc(sf)+'</b>: '+fmt(v)+' ('+fracOfTotal+'%)'+(softV>0?' <span style="color:#888;font-size:9px">[firm:'+fmt(firmV)+' soft:'+fmt(softV)+']</span>':'')+'</div>';
     h += '<div class="bar"><div class="bar-fill" style="width:'+pct+'%;background:'+getBarColor(sf)+'"></div><div class="bar-label">'+fmt(v)+'</div></div>';
   });
   h += '</div>';
@@ -459,6 +461,9 @@ function showCellInfo(taxon, sf){
        '<label>Curation notes</label><textarea id="mCurNotes" placeholder="Reason for curation...">'+esc(curCurNotes)+'</textarea>';
 
   h += '<div style="margin-top:8px"><div class="detail-row"><b>% of total:</b> '+(sp.total>0?(100*v/sp.total).toFixed(1):'0')+'%</div>';
+  const firmV = sp.firm_counts ? (sp.firm_counts[sf]||0) : v;
+  const softV = v - firmV;
+  h += '<div class="detail-row"><b>Firm assigned:</b> '+fmt(firmV)+(softV>0?' &nbsp; <b>Soft assigned:</b> '+fmt(softV):'')+'</div>';
   h += '<div class="detail-row"><b>Clade:</b> '+esc(sp.clade)+' · '+esc(sp.family)+'</div></div>';
 
   // Show alignment viewer links (SubFam shown for all; 404 hides it)
