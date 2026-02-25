@@ -540,6 +540,8 @@ function showCellInfo(taxon,sf){
   _showCellInfoBody(taxon,sf);
 }
 function _showCellInfoBody(taxon,sf){
+  const sp = DATA.species.find(s=>s.taxon===taxon);
+  if(!sp) return;
   const raw = sp.counts[sf];
   if(raw===null||raw===undefined){showInfoModal(sf+' × '+taxon.replace(/_/g,' '),'<p>This subfamily was <b>not searched</b> in this species.</p><p>Search set: '+esc(sp.searched_sets.join(', '))+'</p>');return;}
   const edits = (sp._edits && sp._edits[sf]) || {};
