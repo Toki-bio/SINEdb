@@ -80,6 +80,17 @@ tr.outgroup-row .sticky-sp{border-left:3px solid #e67e22}
 .aln-links{margin:6px 0;padding:4px 6px;background:#f0f6ff;border:1px solid #c0d4f0;border-radius:3px;font-size:10px}
 .aln-links a{margin-right:8px;text-decoration:none;color:#1a4d8c;font-weight:600}
 .aln-links a:hover{text-decoration:underline}
+/* Cell curation status indicators — corner triangles */
+td.cell-checked{position:relative}
+td.cell-checked::after{content:'';position:absolute;top:0;right:0;border-style:solid;border-width:0 8px 8px 0;border-color:transparent #1976d2 transparent transparent;pointer-events:none}
+td.cell-working{position:relative}
+td.cell-working::after{content:'';position:absolute;top:0;right:0;border-style:solid;border-width:0 8px 8px 0;border-color:transparent #e53935 transparent transparent;pointer-events:none}
+.status-legend{font-size:10px;display:flex;gap:8px;align-items:center}
+.status-legend .swatch{display:inline-block;width:0;height:0;border-style:solid;border-width:0 8px 8px 0;vertical-align:middle;margin-right:2px}
+.status-legend .sw-checked{border-color:transparent #1976d2 transparent transparent}
+.status-legend .sw-working{border-color:transparent #e53935 transparent transparent}
+.export-btn{font-size:10px;padding:1px 8px;cursor:pointer;border:1px solid #1a4d8c;background:#e3f2fd;border-radius:3px;color:#1a4d8c;font-weight:600}
+.export-btn:hover{background:#bbdefb}
 /* Modal overlay */
 .modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.35);z-index:100;display:flex;align-items:flex-start;justify-content:center;padding-top:40px}
 .modal{background:#fff;border:1px solid #666;box-shadow:0 4px 20px rgba(0,0,0,.3);max-width:700px;width:95%;max-height:85vh;overflow:auto;font-size:11px}
@@ -123,6 +134,8 @@ tr.outgroup-row .sticky-sp{border-left:3px solid #e67e22}
   <label><input type="checkbox" id="showPct" onchange="render()"> Show %</label>
   <label><input type="checkbox" id="showSnakes" checked onchange="render()"> Snakes</label>
   <label><input type="checkbox" id="showOutgroups" checked onchange="render()"> Outgroups</label>
+  <span class="status-legend"><span class="swatch sw-checked"></span>Checked <span class="swatch sw-working" style="margin-left:4px"></span>Working</span>
+  <button class="export-btn" onclick="exportJSON()" title="Download combined_data.json with your edits and status markers">Export JSON</button>
   <span id="countInfo" style="margin-left:auto;color:#666;font-size:11px"></span>
 </div>
 
@@ -336,7 +349,9 @@ function render(){
       else cls = 'c-zero';
 
       const tip = sf+' in '+sp.taxon.replace(/_/g,' ')+': '+fmt(v)+' copies';
-      h += '<td class="'+cls+'" title="'+esc(tip)+'" onclick="showCellInfo(\''+esc(sp.taxon)+'\',\''+esc(sf)+'\')">'+display+'</td>';
+      const cStatus = (sp.cell_status && sp.cell_status[sf]) || '';
+      const csCls = cStatus==='checked'?' cell-checked':cStatus==='working'?' cell-working':'';
+      h += '<td class="'+cls+csCls+'" title="'+esc(tip)+'" oncontextmenu="cycleStatus(event,\''+esc(sp.taxon)+'\',\''+esc(sf)+'\')" onclick="showCellInfo(\''+esc(sp.taxon)+'\',\''+esc(sf)+'\')">'+display+'</td>';
     });
     h += '</tr>';
     prevClade = sp.clade;
@@ -457,6 +472,12 @@ function showCellInfo(taxon, sf){
     '<div><label>Mean similarity</label><input id="mSimMean" value="'+curSimMean+'"></div>' +
     '<div><label>Median similarity</label><input id="mSimMedian" value="'+curSimMedian+'"></div>' +
     '</div>';
+  const curCellStatus = (sp.cell_status && sp.cell_status[sf]) || '';
+  h += '<label>Cell Status</label><select id="mCellStatus">' +
+    '<option value=""'+(curCellStatus===''?' selected':'')+'>— not reviewed —</option>' +
+    '<option value="checked"'+(curCellStatus==='checked'?' selected':'')+'>✓ Checked</option>' +
+    '<option value="working"'+(curCellStatus==='working'?' selected':'')+'>⚠ Working</option>' +
+    '</select>';
   h += '<label>Notes</label><textarea id="mNotes">'+esc(curNotes)+'</textarea>' +
        '<label>Curation notes</label><textarea id="mCurNotes" placeholder="Reason for curation...">'+esc(curCurNotes)+'</textarea>';
 
@@ -492,6 +513,10 @@ function showCellInfo(taxon, sf){
       notes:ov.querySelector('#mNotes').value.trim(),
       curation_notes:ov.querySelector('#mCurNotes').value.trim()
     };
+    const newCellStatus = ov.querySelector('#mCellStatus').value;
+    if(!sp.cell_status) sp.cell_status = {};
+    if(newCellStatus) sp.cell_status[sf] = newCellStatus;
+    else delete sp.cell_status[sf];
     sp.counts[sf] = newCopies;
     sp.total = Math.max(0, (sp.total||0) - oldCopies + newCopies);
     render();
@@ -503,6 +528,33 @@ function showCellInfo(taxon, sf){
 }
 
 function closeDetail(){ document.getElementById('detail').classList.remove('open'); }
+
+// ====== CELL STATUS CYCLING (right-click) ======
+function cycleStatus(event, taxon, sf){
+  event.preventDefault();
+  const sp = DATA.species.find(s=>s.taxon===taxon);
+  if(!sp) return;
+  if(!sp.cell_status) sp.cell_status = {};
+  const cur = sp.cell_status[sf] || '';
+  // Cycle: none → checked → working → none
+  if(cur==='') sp.cell_status[sf] = 'checked';
+  else if(cur==='checked') sp.cell_status[sf] = 'working';
+  else delete sp.cell_status[sf];
+  render();
+}
+
+// ====== EXPORT JSON ======
+function exportJSON(){
+  // Build clean export (strip internal _edits, keep cell_status)
+  const out = JSON.parse(JSON.stringify(DATA));
+  out.species.forEach(sp=>{ delete sp._edits; });
+  const blob = new Blob([JSON.stringify(out, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'combined_data.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
 
 // ====== CONSERVATION HISTOGRAM ======
 function parseFasta(text){
