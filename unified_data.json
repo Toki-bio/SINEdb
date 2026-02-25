@@ -38,7 +38,8 @@
       "sq1_rs1",
       "sq1_rs3",
       "sq1_rs5",
-      "sq1_xun"
+      "sq1_xun",
+      "sq1_body"
     ],
     "Squam2": [
       "sq2_Eryx"
@@ -48,7 +49,9 @@
       "Sq3A_Eryx",
       "Sq3C_Eryx",
       "sq3c_mala",
-      "Sq3X_Eryx"
+      "Sq3X_Eryx",
+      "sq3a",
+      "sq3other"
     ],
     "SqUCON": [
       "SqUCON",
@@ -97,7 +100,10 @@
     "Sq3X_Eryx",
     "SqUCON",
     "SqUCON1",
-    "UCON_cyl"
+    "UCON_cyl",
+    "sq3a",
+    "sq3other",
+    "sq1_body"
   ],
   "shared_subfamilies": [
     "Heno",
@@ -108,7 +114,10 @@
     "oph2",
     "oph3",
     "oph_ae",
-    "sq2_Eryx"
+    "sq1_body",
+    "sq2_Eryx",
+    "sq3a",
+    "sq3other"
   ],
   "species": [
     {
@@ -156,7 +165,10 @@
         "Sq3X_Eryx": 19649,
         "SqUCON": 6,
         "SqUCON1": 2,
-        "UCON_cyl": 770
+        "UCON_cyl": 770,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 10358,
@@ -199,7 +211,10 @@
         "Sq3X_Eryx": 17933,
         "SqUCON": 6,
         "SqUCON1": 2,
-        "UCON_cyl": 676
+        "UCON_cyl": 676,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 130817,
       "searched_sets": [
@@ -251,7 +266,10 @@
         "Sq3X_Eryx": 33071,
         "SqUCON": 0,
         "SqUCON1": 3,
-        "UCON_cyl": 1591
+        "UCON_cyl": 1591,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 17486,
@@ -294,7 +312,10 @@
         "Sq3X_Eryx": 32094,
         "SqUCON": 0,
         "SqUCON1": 2,
-        "UCON_cyl": 1384
+        "UCON_cyl": 1384,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 88839,
       "searched_sets": [
@@ -346,7 +367,10 @@
         "Sq3X_Eryx": 36660,
         "SqUCON": 9699,
         "SqUCON1": 177,
-        "UCON_cyl": 1326
+        "UCON_cyl": 1326,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 18775,
@@ -389,7 +413,10 @@
         "Sq3X_Eryx": 35343,
         "SqUCON": 9682,
         "SqUCON1": 157,
-        "UCON_cyl": 1124
+        "UCON_cyl": 1124,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 131274,
       "searched_sets": [
@@ -441,7 +468,10 @@
         "Sq3X_Eryx": 37662,
         "SqUCON": 5644,
         "SqUCON1": 147,
-        "UCON_cyl": 1598
+        "UCON_cyl": 1598,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 19284,
@@ -484,7 +514,10 @@
         "Sq3X_Eryx": 35820,
         "SqUCON": 5628,
         "SqUCON1": 137,
-        "UCON_cyl": 1352
+        "UCON_cyl": 1352,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 145989,
       "searched_sets": [
@@ -536,7 +569,10 @@
         "Sq3X_Eryx": 37475,
         "SqUCON": 1361,
         "SqUCON1": 91,
-        "UCON_cyl": 1594
+        "UCON_cyl": 1594,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 18372,
@@ -579,7 +615,10 @@
         "Sq3X_Eryx": 35926,
         "SqUCON": 665,
         "SqUCON1": 87,
-        "UCON_cyl": 1325
+        "UCON_cyl": 1325,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 225941,
       "searched_sets": [
@@ -631,7 +670,10 @@
         "Sq3X_Eryx": 35109,
         "SqUCON": 6640,
         "SqUCON1": 165,
-        "UCON_cyl": 1535
+        "UCON_cyl": 1535,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 19864,
@@ -674,7 +716,10 @@
         "Sq3X_Eryx": 33852,
         "SqUCON": 6618,
         "SqUCON1": 146,
-        "UCON_cyl": 1333
+        "UCON_cyl": 1333,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 116645,
       "searched_sets": [
@@ -726,7 +771,10 @@
         "Sq3X_Eryx": 35166,
         "SqUCON": 1850,
         "SqUCON1": 212,
-        "UCON_cyl": 1210
+        "UCON_cyl": 1210,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 17015,
@@ -769,7 +817,10 @@
         "Sq3X_Eryx": 33574,
         "SqUCON": 1846,
         "SqUCON1": 199,
-        "UCON_cyl": 1038
+        "UCON_cyl": 1038,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 138326,
       "searched_sets": [
@@ -821,7 +872,10 @@
         "Sq3X_Eryx": 36732,
         "SqUCON": 1921,
         "SqUCON1": 215,
-        "UCON_cyl": 1536
+        "UCON_cyl": 1536,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 18262,
@@ -864,7 +918,10 @@
         "Sq3X_Eryx": 35058,
         "SqUCON": 1913,
         "SqUCON1": 206,
-        "UCON_cyl": 1273
+        "UCON_cyl": 1273,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 138596,
       "searched_sets": [
@@ -916,7 +973,10 @@
         "Sq3X_Eryx": 38413,
         "SqUCON": 1380,
         "SqUCON1": 96,
-        "UCON_cyl": 1622
+        "UCON_cyl": 1622,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 19002,
@@ -959,7 +1019,10 @@
         "Sq3X_Eryx": 36547,
         "SqUCON": 752,
         "SqUCON1": 87,
-        "UCON_cyl": 1213
+        "UCON_cyl": 1213,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 228125,
       "searched_sets": [
@@ -1011,7 +1074,10 @@
         "Sq3X_Eryx": 14176,
         "SqUCON": 117,
         "SqUCON1": 919,
-        "UCON_cyl": 3839
+        "UCON_cyl": 3839,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 6932,
@@ -1054,7 +1120,10 @@
         "Sq3X_Eryx": 12559,
         "SqUCON": 79,
         "SqUCON1": 890,
-        "UCON_cyl": 638
+        "UCON_cyl": 638,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 123147,
       "searched_sets": [
@@ -1106,7 +1175,10 @@
         "Sq3X_Eryx": 14450,
         "SqUCON": 121,
         "SqUCON1": 1214,
-        "UCON_cyl": 4034
+        "UCON_cyl": 4034,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 6994,
@@ -1149,7 +1221,10 @@
         "Sq3X_Eryx": 12894,
         "SqUCON": 77,
         "SqUCON1": 1164,
-        "UCON_cyl": 829
+        "UCON_cyl": 829,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 124294,
       "searched_sets": [
@@ -1201,7 +1276,10 @@
         "Sq3X_Eryx": 27257,
         "SqUCON": 3,
         "SqUCON1": 2,
-        "UCON_cyl": 23409
+        "UCON_cyl": 23409,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 17964,
@@ -1244,7 +1322,10 @@
         "Sq3X_Eryx": 26083,
         "SqUCON": 2,
         "SqUCON1": 1,
-        "UCON_cyl": 21535
+        "UCON_cyl": 21535,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 167238,
       "searched_sets": [
@@ -1296,7 +1377,10 @@
         "Sq3X_Eryx": 13636,
         "SqUCON": 69,
         "SqUCON1": 149,
-        "UCON_cyl": 1915
+        "UCON_cyl": 1915,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 6109,
@@ -1339,7 +1423,10 @@
         "Sq3X_Eryx": 11688,
         "SqUCON": 41,
         "SqUCON1": 132,
-        "UCON_cyl": 733
+        "UCON_cyl": 733,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 104058,
       "searched_sets": [
@@ -1391,7 +1478,10 @@
         "Sq3X_Eryx": 14331,
         "SqUCON": 63,
         "SqUCON1": 166,
-        "UCON_cyl": 431
+        "UCON_cyl": 431,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 6867,
@@ -1434,7 +1524,10 @@
         "Sq3X_Eryx": 12794,
         "SqUCON": 40,
         "SqUCON1": 156,
-        "UCON_cyl": 157
+        "UCON_cyl": 157,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 95404,
       "searched_sets": [
@@ -1517,7 +1610,10 @@
         "Sq3X_Eryx": 13338,
         "SqUCON": 65,
         "SqUCON1": 133,
-        "UCON_cyl": 1243
+        "UCON_cyl": 1243,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 5924,
@@ -1560,7 +1656,10 @@
         "Sq3X_Eryx": 11654,
         "SqUCON": 48,
         "SqUCON1": 128,
-        "UCON_cyl": 677
+        "UCON_cyl": 677,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 83893,
       "searched_sets": [
@@ -1612,7 +1711,10 @@
         "Sq3X_Eryx": 15186,
         "SqUCON": 39,
         "SqUCON1": 105,
-        "UCON_cyl": 1735
+        "UCON_cyl": 1735,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 7176,
@@ -1655,7 +1757,10 @@
         "Sq3X_Eryx": 13570,
         "SqUCON": 26,
         "SqUCON1": 97,
-        "UCON_cyl": 926
+        "UCON_cyl": 926,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 131096,
       "searched_sets": [
@@ -1707,7 +1812,10 @@
         "Sq3X_Eryx": 27064,
         "SqUCON": 11,
         "SqUCON1": 3,
-        "UCON_cyl": 1483
+        "UCON_cyl": 1483,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 20049,
@@ -1750,7 +1858,10 @@
         "Sq3X_Eryx": 25693,
         "SqUCON": 11,
         "SqUCON1": 2,
-        "UCON_cyl": 1217
+        "UCON_cyl": 1217,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 113366,
       "searched_sets": [
@@ -1802,7 +1913,10 @@
         "Sq3X_Eryx": 27496,
         "SqUCON": 23,
         "SqUCON1": 1,
-        "UCON_cyl": 1684
+        "UCON_cyl": 1684,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 20836,
@@ -1845,7 +1959,10 @@
         "Sq3X_Eryx": 26285,
         "SqUCON": 23,
         "SqUCON1": 1,
-        "UCON_cyl": 1254
+        "UCON_cyl": 1254,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 102455,
       "searched_sets": [
@@ -1897,7 +2014,10 @@
         "Sq3X_Eryx": 27222,
         "SqUCON": 1,
         "SqUCON1": 0,
-        "UCON_cyl": 1189
+        "UCON_cyl": 1189,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 20914,
@@ -1940,7 +2060,10 @@
         "Sq3X_Eryx": 26084,
         "SqUCON": 1,
         "SqUCON1": 0,
-        "UCON_cyl": 1017
+        "UCON_cyl": 1017,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 94389,
       "searched_sets": [
@@ -1992,7 +2115,10 @@
         "Sq3X_Eryx": 26551,
         "SqUCON": 1,
         "SqUCON1": 0,
-        "UCON_cyl": 1262
+        "UCON_cyl": 1262,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 20372,
@@ -2035,7 +2161,10 @@
         "Sq3X_Eryx": 25452,
         "SqUCON": 1,
         "SqUCON1": 0,
-        "UCON_cyl": 995
+        "UCON_cyl": 995,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 92215,
       "searched_sets": [
@@ -2087,7 +2216,10 @@
         "Sq3X_Eryx": 25470,
         "SqUCON": 8,
         "SqUCON1": 4,
-        "UCON_cyl": 1499
+        "UCON_cyl": 1499,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 20138,
@@ -2130,7 +2262,10 @@
         "Sq3X_Eryx": 24310,
         "SqUCON": 8,
         "SqUCON1": 4,
-        "UCON_cyl": 1198
+        "UCON_cyl": 1198,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 92721,
       "searched_sets": [
@@ -2182,7 +2317,10 @@
         "Sq3X_Eryx": 26549,
         "SqUCON": 3,
         "SqUCON1": 4,
-        "UCON_cyl": 1485
+        "UCON_cyl": 1485,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 20681,
@@ -2225,7 +2363,10 @@
         "Sq3X_Eryx": 25443,
         "SqUCON": 3,
         "SqUCON1": 3,
-        "UCON_cyl": 1239
+        "UCON_cyl": 1239,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 94595,
       "searched_sets": [
@@ -2277,7 +2418,10 @@
         "Sq3X_Eryx": 12883,
         "SqUCON": 0,
         "SqUCON1": 0,
-        "UCON_cyl": 877
+        "UCON_cyl": 877,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 12407,
@@ -2320,7 +2464,10 @@
         "Sq3X_Eryx": 12172,
         "SqUCON": 0,
         "SqUCON1": 0,
-        "UCON_cyl": 727
+        "UCON_cyl": 727,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 51850,
       "searched_sets": [
@@ -2372,7 +2519,10 @@
         "Sq3X_Eryx": 26383,
         "SqUCON": 0,
         "SqUCON1": 0,
-        "UCON_cyl": 639
+        "UCON_cyl": 639,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 20566,
@@ -2415,7 +2565,10 @@
         "Sq3X_Eryx": 25348,
         "SqUCON": 0,
         "SqUCON1": 0,
-        "UCON_cyl": 575
+        "UCON_cyl": 575,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 87266,
       "searched_sets": [
@@ -2467,7 +2620,10 @@
         "Sq3X_Eryx": 7890,
         "SqUCON": 489,
         "SqUCON1": 63,
-        "UCON_cyl": 1769
+        "UCON_cyl": 1769,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 7881,
@@ -2510,7 +2666,10 @@
         "Sq3X_Eryx": 7246,
         "SqUCON": 477,
         "SqUCON1": 41,
-        "UCON_cyl": 1665
+        "UCON_cyl": 1665,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 67613,
       "searched_sets": [
@@ -2562,7 +2721,10 @@
         "Sq3X_Eryx": 15794,
         "SqUCON": 1074,
         "SqUCON1": 159,
-        "UCON_cyl": 2758
+        "UCON_cyl": 2758,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 13668,
@@ -2605,7 +2767,10 @@
         "Sq3X_Eryx": 13160,
         "SqUCON": 1007,
         "SqUCON1": 126,
-        "UCON_cyl": 2499
+        "UCON_cyl": 2499,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 215348,
       "searched_sets": [
@@ -2657,7 +2822,10 @@
         "Sq3X_Eryx": 21384,
         "SqUCON": 1,
         "SqUCON1": 0,
-        "UCON_cyl": 1621
+        "UCON_cyl": 1621,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 13284,
@@ -2700,7 +2868,10 @@
         "Sq3X_Eryx": 20237,
         "SqUCON": 1,
         "SqUCON1": 0,
-        "UCON_cyl": 1535
+        "UCON_cyl": 1535,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 88188,
       "searched_sets": [
@@ -2752,7 +2923,10 @@
         "Sq3X_Eryx": 17884,
         "SqUCON": 45,
         "SqUCON1": 96,
-        "UCON_cyl": 2348
+        "UCON_cyl": 2348,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 8005,
@@ -2795,7 +2969,10 @@
         "Sq3X_Eryx": 16091,
         "SqUCON": 35,
         "SqUCON1": 90,
-        "UCON_cyl": 1234
+        "UCON_cyl": 1234,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 148940,
       "searched_sets": [
@@ -2847,7 +3024,10 @@
         "Sq3X_Eryx": 15185,
         "SqUCON": 39,
         "SqUCON1": 105,
-        "UCON_cyl": 1769
+        "UCON_cyl": 1769,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 7191,
@@ -2890,7 +3070,10 @@
         "Sq3X_Eryx": 13577,
         "SqUCON": 26,
         "SqUCON1": 98,
-        "UCON_cyl": 915
+        "UCON_cyl": 915,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 131077,
       "searched_sets": [
@@ -2942,7 +3125,10 @@
         "Sq3X_Eryx": 14700,
         "SqUCON": 35,
         "SqUCON1": 141,
-        "UCON_cyl": 1687
+        "UCON_cyl": 1687,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 7030,
@@ -2985,7 +3171,10 @@
         "Sq3X_Eryx": 13211,
         "SqUCON": 16,
         "SqUCON1": 135,
-        "UCON_cyl": 917
+        "UCON_cyl": 917,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 180418,
       "searched_sets": [
@@ -3037,7 +3226,10 @@
         "Sq3X_Eryx": 13229,
         "SqUCON": 26401,
         "SqUCON1": 10351,
-        "UCON_cyl": 3671
+        "UCON_cyl": 3671,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 5813,
@@ -3080,7 +3272,10 @@
         "Sq3X_Eryx": 10672,
         "SqUCON": 15687,
         "SqUCON1": 10043,
-        "UCON_cyl": 824
+        "UCON_cyl": 824,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 264909,
       "searched_sets": [
@@ -3132,7 +3327,10 @@
         "Sq3X_Eryx": 26903,
         "SqUCON": 2,
         "SqUCON1": 17,
-        "UCON_cyl": 1995
+        "UCON_cyl": 1995,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 19015,
@@ -3175,7 +3373,10 @@
         "Sq3X_Eryx": 25521,
         "SqUCON": 2,
         "SqUCON1": 17,
-        "UCON_cyl": 1711
+        "UCON_cyl": 1711,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 102393,
       "searched_sets": [
@@ -3227,7 +3428,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4672,
         "SqUCON1": 5880,
-        "UCON_cyl": 5171
+        "UCON_cyl": 5171,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 4099,
@@ -3270,7 +3474,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 431,
         "SqUCON1": 5846,
-        "UCON_cyl": 3205
+        "UCON_cyl": 3205,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 153225,
       "searched_sets": [
@@ -3322,7 +3529,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1,
         "SqUCON1": 1,
-        "UCON_cyl": 7754
+        "UCON_cyl": 7754,
+        "sq3a": 34263,
+        "sq3other": 1380,
+        "sq1_body": 5
       },
       "firm_counts": {
         "Heno": 49,
@@ -3365,11 +3575,15 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1,
         "SqUCON1": 1,
-        "UCON_cyl": 5845
+        "UCON_cyl": 5845,
+        "sq3a": 30131,
+        "sq3other": 78,
+        "sq1_body": 5
       },
-      "total": 59478,
+      "total": 95126,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.1229,
@@ -3380,7 +3594,10 @@
         "sq2_Eryx": 0.5405,
         "SqUCON": 0.089,
         "SqUCON1": 0.1037,
-        "UCON_cyl": 0.312
+        "UCON_cyl": 0.312,
+        "sq3a": 0.5164,
+        "sq3other": 0.1825,
+        "sq1_body": 0.1366
       }
     },
     {
@@ -3428,7 +3645,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 7363,
         "SqUCON1": 3426,
-        "UCON_cyl": 1254
+        "UCON_cyl": 1254,
+        "sq3a": 47415,
+        "sq3other": 1856,
+        "sq1_body": 9
       },
       "firm_counts": {
         "Heno": 65,
@@ -3471,12 +3691,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 588,
         "SqUCON1": 3418,
-        "UCON_cyl": 839
+        "UCON_cyl": 839,
+        "sq3a": 42204,
+        "sq3other": 89,
+        "sq1_body": 9
       },
-      "total": 114565,
+      "total": 163845,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.5013,
+        "sq3other": 0.1643,
+        "sq1_body": 0.1424
+      }
     },
     {
       "taxon": "Anniella_stebbinsi",
@@ -3523,7 +3752,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 2,
         "SqUCON1": 1,
-        "UCON_cyl": 876
+        "UCON_cyl": 876,
+        "sq3a": 38941,
+        "sq3other": 1961,
+        "sq1_body": 6
       },
       "firm_counts": {
         "Heno": 59,
@@ -3566,12 +3798,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 2,
         "SqUCON1": 1,
-        "UCON_cyl": 357
+        "UCON_cyl": 357,
+        "sq3a": 33863,
+        "sq3other": 75,
+        "sq1_body": 6
       },
-      "total": 65285,
+      "total": 106193,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.4684,
+        "sq3other": 0.1618,
+        "sq1_body": 0.1692
+      }
     },
     {
       "taxon": "Heloderma_charlesbogerti",
@@ -3618,7 +3859,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4916,
         "SqUCON1": 277,
-        "UCON_cyl": 11909
+        "UCON_cyl": 11909,
+        "sq3a": 64737,
+        "sq3other": 2796,
+        "sq1_body": 13436
       },
       "firm_counts": {
         "Heno": 307,
@@ -3661,12 +3905,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 3369,
         "SqUCON1": 260,
-        "UCON_cyl": 9581
+        "UCON_cyl": 9581,
+        "sq3a": 56376,
+        "sq3other": 79,
+        "sq1_body": 13407
       },
-      "total": 125170,
+      "total": 206139,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.5976,
+        "sq3other": 0.1581,
+        "sq1_body": 0.7347
+      }
     },
     {
       "taxon": "Lanthanotus_borneensis",
@@ -3713,7 +3966,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 2,
         "SqUCON1": 1,
-        "UCON_cyl": 7109
+        "UCON_cyl": 7109,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 73,
@@ -3756,7 +4012,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 2,
         "SqUCON1": 1,
-        "UCON_cyl": 6190
+        "UCON_cyl": 6190,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 55049,
       "searched_sets": [
@@ -3808,7 +4067,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1,
         "SqUCON1": 1,
-        "UCON_cyl": 92685
+        "UCON_cyl": 92685,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 202,
@@ -3851,7 +4113,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1,
         "SqUCON1": 1,
-        "UCON_cyl": 89693
+        "UCON_cyl": 89693,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 198907,
       "searched_sets": [
@@ -3903,7 +4168,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 0,
         "SqUCON1": 0,
-        "UCON_cyl": 2284
+        "UCON_cyl": 2284,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 26,
@@ -3946,7 +4214,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 0,
         "SqUCON1": 0,
-        "UCON_cyl": 1773
+        "UCON_cyl": 1773,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 34492,
       "searched_sets": [
@@ -3998,7 +4269,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 6,
         "SqUCON1": 2,
-        "UCON_cyl": 27488
+        "UCON_cyl": 27488,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 47,
@@ -4041,7 +4315,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 5,
         "SqUCON1": 2,
-        "UCON_cyl": 26731
+        "UCON_cyl": 26731,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 59427,
       "searched_sets": [
@@ -4093,7 +4370,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 3,
         "SqUCON1": 1,
-        "UCON_cyl": 4139
+        "UCON_cyl": 4139,
+        "sq3a": 78346,
+        "sq3other": 3735,
+        "sq1_body": 3
       },
       "firm_counts": {
         "Heno": 45,
@@ -4136,11 +4416,15 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 3,
         "SqUCON1": 1,
-        "UCON_cyl": 3832
+        "UCON_cyl": 3832,
+        "sq3a": 69857,
+        "sq3other": 250,
+        "sq1_body": 3
       },
-      "total": 51940,
+      "total": 134024,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.1196,
@@ -4151,7 +4435,10 @@
         "sq2_Eryx": 0.2866,
         "SqUCON": 0.0987,
         "SqUCON1": 0.0923,
-        "UCON_cyl": 0.222
+        "UCON_cyl": 0.222,
+        "sq3a": 0.4818,
+        "sq3other": 0.2263,
+        "sq1_body": 0.1766
       }
     },
     {
@@ -4199,7 +4486,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 5,
         "SqUCON1": 3,
-        "UCON_cyl": 19777
+        "UCON_cyl": 19777,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 5465,
@@ -4242,7 +4532,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 5,
         "SqUCON1": 3,
-        "UCON_cyl": 6517
+        "UCON_cyl": 6517,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 80166,
       "searched_sets": [
@@ -4305,7 +4598,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 9,
         "SqUCON1": 7,
-        "UCON_cyl": 13422
+        "UCON_cyl": 13422,
+        "sq3a": 160969,
+        "sq3other": 44371,
+        "sq1_body": 16
       },
       "firm_counts": {
         "Heno": 16535,
@@ -4348,12 +4644,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 6,
         "SqUCON1": 4,
-        "UCON_cyl": 10144
+        "UCON_cyl": 10144,
+        "sq3a": 113724,
+        "sq3other": 32810,
+        "sq1_body": 16
       },
-      "total": 114444,
+      "total": 319800,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.5206,
+        "sq3other": 0.4528,
+        "sq1_body": 0.1747
+      }
     },
     {
       "taxon": "Correlophus_sarasinorum",
@@ -4400,7 +4705,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4,
         "SqUCON1": 6,
-        "UCON_cyl": 12783
+        "UCON_cyl": 12783,
+        "sq3a": 162688,
+        "sq3other": 46168,
+        "sq1_body": 12
       },
       "firm_counts": {
         "Heno": 16253,
@@ -4443,12 +4751,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 3,
         "SqUCON1": 5,
-        "UCON_cyl": 9641
+        "UCON_cyl": 9641,
+        "sq3a": 115324,
+        "sq3other": 35083,
+        "sq1_body": 11
       },
-      "total": 112268,
+      "total": 321136,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.5209,
+        "sq3other": 0.4756,
+        "sq1_body": 0.1513
+      }
     },
     {
       "taxon": "Coleonyx_brevis",
@@ -4495,7 +4812,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 5771,
         "SqUCON1": 3416,
-        "UCON_cyl": 4893
+        "UCON_cyl": 4893,
+        "sq3a": 77420,
+        "sq3other": 54571,
+        "sq1_body": 5
       },
       "firm_counts": {
         "Heno": 4811,
@@ -4538,11 +4858,15 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 2828,
         "SqUCON1": 3285,
-        "UCON_cyl": 4357
+        "UCON_cyl": 4357,
+        "sq3a": 58060,
+        "sq3other": 37826,
+        "sq1_body": 5
       },
-      "total": 70050,
+      "total": 202046,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.1885,
@@ -4553,7 +4877,10 @@
         "sq2_Eryx": 0.3491,
         "SqUCON": 0.6323,
         "SqUCON1": 0.5322,
-        "UCON_cyl": 0.2579
+        "UCON_cyl": 0.2579,
+        "sq3a": 0.5012,
+        "sq3other": 0.3225,
+        "sq1_body": 0.1651
       }
     },
     {
@@ -4601,7 +4928,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4283,
         "SqUCON1": 3079,
-        "UCON_cyl": 2005
+        "UCON_cyl": 2005,
+        "sq3a": 65406,
+        "sq3other": 41811,
+        "sq1_body": 33
       },
       "firm_counts": {
         "Heno": 3094,
@@ -4644,11 +4974,15 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1737,
         "SqUCON1": 3001,
-        "UCON_cyl": 1757
+        "UCON_cyl": 1757,
+        "sq3a": 49664,
+        "sq3other": 31104,
+        "sq1_body": 33
       },
-      "total": 50409,
+      "total": 157659,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.2068,
@@ -4659,7 +4993,10 @@
         "sq2_Eryx": 0.329,
         "SqUCON": 0.536,
         "SqUCON1": 0.5606,
-        "UCON_cyl": 0.2614
+        "UCON_cyl": 0.2614,
+        "sq3a": 0.4739,
+        "sq3other": 0.3161,
+        "sq1_body": 0.3722
       }
     },
     {
@@ -4707,7 +5044,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 13072,
         "SqUCON1": 1258,
-        "UCON_cyl": 3541
+        "UCON_cyl": 3541,
+        "sq3a": 90516,
+        "sq3other": 95852,
+        "sq1_body": 16
       },
       "firm_counts": {
         "Heno": 6800,
@@ -4750,12 +5090,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 12457,
         "SqUCON1": 870,
-        "UCON_cyl": 2936
+        "UCON_cyl": 2936,
+        "sq3a": 66641,
+        "sq3other": 72827,
+        "sq1_body": 16
       },
-      "total": 89467,
+      "total": 275851,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.5254,
+        "sq3other": 0.418,
+        "sq1_body": 0.1585
+      }
     },
     {
       "taxon": "Christinus_marmoratus",
@@ -4802,7 +5151,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 8,
         "SqUCON1": 2,
-        "UCON_cyl": 15906
+        "UCON_cyl": 15906,
+        "sq3a": 200077,
+        "sq3other": 24658,
+        "sq1_body": 3079
       },
       "firm_counts": {
         "Heno": 38424,
@@ -4845,12 +5197,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 5,
         "SqUCON1": 2,
-        "UCON_cyl": 12511
+        "UCON_cyl": 12511,
+        "sq3a": 82626,
+        "sq3other": 14356,
+        "sq1_body": 3073
       },
-      "total": 187003,
+      "total": 414817,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.583,
+        "sq3other": 0.3158,
+        "sq1_body": 0.6373
+      }
     },
     {
       "taxon": "Gehyra_mutilata",
@@ -4897,7 +5258,10 @@
         "Sq3X_Eryx": null,
         "SqUCON": 56092,
         "SqUCON1": 2215,
-        "UCON_cyl": 9435
+        "UCON_cyl": 9435,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 11769,
@@ -4940,7 +5304,10 @@
         "Sq3X_Eryx": null,
         "SqUCON": 54447,
         "SqUCON1": 2151,
-        "UCON_cyl": 7572
+        "UCON_cyl": 7572,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 178497,
       "searched_sets": [
@@ -4992,7 +5359,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 3,
         "SqUCON1": 3,
-        "UCON_cyl": 9638
+        "UCON_cyl": 9638,
+        "sq3a": 169894,
+        "sq3other": 138078,
+        "sq1_body": 59340
       },
       "firm_counts": {
         "Heno": 24464,
@@ -5035,11 +5405,15 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 3,
         "SqUCON1": 3,
-        "UCON_cyl": 7503
+        "UCON_cyl": 7503,
+        "sq3a": 71876,
+        "sq3other": 123159,
+        "sq1_body": 57095
       },
-      "total": 137942,
+      "total": 505254,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.2071,
@@ -5050,7 +5424,10 @@
         "sq2_Eryx": 0.4495,
         "SqUCON": 0.11,
         "SqUCON1": 0.1008,
-        "UCON_cyl": 0.2936
+        "UCON_cyl": 0.2936,
+        "sq3a": 0.5624,
+        "sq3other": 0.3688,
+        "sq1_body": 0.7811
       }
     },
     {
@@ -5098,7 +5475,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4,
         "SqUCON1": 5,
-        "UCON_cyl": 8391
+        "UCON_cyl": 8391,
+        "sq3a": 147263,
+        "sq3other": 130715,
+        "sq1_body": 84299
       },
       "firm_counts": {
         "Heno": 23909,
@@ -5141,11 +5521,15 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4,
         "SqUCON1": 5,
-        "UCON_cyl": 6596
+        "UCON_cyl": 6596,
+        "sq3a": 62880,
+        "sq3other": 118787,
+        "sq1_body": 77533
       },
-      "total": 124418,
+      "total": 486695,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.2081,
@@ -5155,7 +5539,10 @@
         "oph_ae": 0.1437,
         "sq2_Eryx": 0.4556,
         "SqUCON1": 0.1255,
-        "UCON_cyl": 0.3035
+        "UCON_cyl": 0.3035,
+        "sq3a": 0.5052,
+        "sq3other": 0.3497,
+        "sq1_body": 0.7475
       }
     },
     {
@@ -5203,7 +5590,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 64761,
         "SqUCON1": 5745,
-        "UCON_cyl": 5593
+        "UCON_cyl": 5593,
+        "sq3a": 59184,
+        "sq3other": 55834,
+        "sq1_body": 35408
       },
       "firm_counts": {
         "Heno": 13199,
@@ -5246,12 +5636,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 61148,
         "SqUCON1": 5359,
-        "UCON_cyl": 4669
+        "UCON_cyl": 4669,
+        "sq3a": 28577,
+        "sq3other": 50270,
+        "sq1_body": 29719
       },
-      "total": 214810,
+      "total": 365236,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.3843,
+        "sq3other": 0.2787,
+        "sq1_body": 0.5993
+      }
     },
     {
       "taxon": "Hemidactylus_flaviviridis",
@@ -5298,7 +5697,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 2,
         "SqUCON1": 2,
-        "UCON_cyl": 16938
+        "UCON_cyl": 16938,
+        "sq3a": 77791,
+        "sq3other": 76224,
+        "sq1_body": 54884
       },
       "firm_counts": {
         "Heno": 5574,
@@ -5341,12 +5743,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 2,
         "SqUCON1": 2,
-        "UCON_cyl": 5553
+        "UCON_cyl": 5553,
+        "sq3a": 34430,
+        "sq3other": 68106,
+        "sq1_body": 48744
       },
-      "total": 76268,
+      "total": 285167,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.4135,
+        "sq3other": 0.2903,
+        "sq1_body": 0.6366
+      }
     },
     {
       "taxon": "Hemidactylus_frenatus",
@@ -5393,7 +5804,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 12,
         "SqUCON1": 4,
-        "UCON_cyl": 11404
+        "UCON_cyl": 11404,
+        "sq3a": 75982,
+        "sq3other": 75624,
+        "sq1_body": 59273
       },
       "firm_counts": {
         "Heno": 5588,
@@ -5436,12 +5850,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 12,
         "SqUCON1": 3,
-        "UCON_cyl": 7913
+        "UCON_cyl": 7913,
+        "sq3a": 32085,
+        "sq3other": 66345,
+        "sq1_body": 49827
       },
-      "total": 121704,
+      "total": 332583,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.3822,
+        "sq3other": 0.2991,
+        "sq1_body": 0.6255
+      }
     },
     {
       "taxon": "Hemidactylus_mabouia",
@@ -5488,7 +5911,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 8,
         "SqUCON1": 3,
-        "UCON_cyl": 32442
+        "UCON_cyl": 32442,
+        "sq3a": 66662,
+        "sq3other": 70394,
+        "sq1_body": 71778
       },
       "firm_counts": {
         "Heno": 5578,
@@ -5531,12 +5957,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 8,
         "SqUCON1": 2,
-        "UCON_cyl": 29818
+        "UCON_cyl": 29818,
+        "sq3a": 30525,
+        "sq3other": 62591,
+        "sq1_body": 62208
       },
-      "total": 102205,
+      "total": 311039,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.3847,
+        "sq3other": 0.3115,
+        "sq1_body": 0.6697
+      }
     },
     {
       "taxon": "Hemidactylus_macropholis",
@@ -5583,7 +6018,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 0,
         "SqUCON1": 0,
-        "UCON_cyl": 23112
+        "UCON_cyl": 23112,
+        "sq3a": 62995,
+        "sq3other": 65713,
+        "sq1_body": 27439
       },
       "firm_counts": {
         "Heno": 3340,
@@ -5626,12 +6064,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 0,
         "SqUCON1": 0,
-        "UCON_cyl": 17998
+        "UCON_cyl": 17998,
+        "sq3a": 27385,
+        "sq3other": 58145,
+        "sq1_body": 18618
       },
-      "total": 69028,
+      "total": 225175,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.3726,
+        "sq3other": 0.2794,
+        "sq1_body": 0.5676
+      }
     },
     {
       "taxon": "Heteronotia_binoei",
@@ -5678,7 +6125,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 67548,
         "SqUCON1": 5574,
-        "UCON_cyl": 5653
+        "UCON_cyl": 5653,
+        "sq3a": 95050,
+        "sq3other": 193091,
+        "sq1_body": 39
       },
       "firm_counts": {
         "Heno": 13407,
@@ -5721,12 +6171,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 62886,
         "SqUCON1": 4913,
-        "UCON_cyl": 4668
+        "UCON_cyl": 4668,
+        "sq3a": 45094,
+        "sq3other": 177977,
+        "sq1_body": 39
       },
-      "total": 220915,
+      "total": 509095,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.4576,
+        "sq3other": 0.3155,
+        "sq1_body": 0.1726
+      }
     },
     {
       "taxon": "Lepidodactylus_listeri",
@@ -5773,7 +6232,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 6,
         "SqUCON1": 2,
-        "UCON_cyl": 7638
+        "UCON_cyl": 7638,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 24225,
@@ -5816,7 +6278,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 6,
         "SqUCON1": 2,
-        "UCON_cyl": 6365
+        "UCON_cyl": 6365,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 129729,
       "searched_sets": [
@@ -5868,7 +6333,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 6,
         "SqUCON1": 6,
-        "UCON_cyl": 10942
+        "UCON_cyl": 10942,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 31889,
@@ -5911,7 +6379,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 6,
         "SqUCON1": 5,
-        "UCON_cyl": 8985
+        "UCON_cyl": 8985,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 170582,
       "searched_sets": [
@@ -5963,7 +6434,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1,
         "SqUCON1": 6,
-        "UCON_cyl": 10214
+        "UCON_cyl": 10214,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 10696,
@@ -6006,7 +6480,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1,
         "SqUCON1": 5,
-        "UCON_cyl": 8108
+        "UCON_cyl": 8108,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 109688,
       "searched_sets": [
@@ -6058,7 +6535,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 57879,
         "SqUCON1": 921,
-        "UCON_cyl": 18333
+        "UCON_cyl": 18333,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 5785,
@@ -6101,7 +6581,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 57449,
         "SqUCON1": 599,
-        "UCON_cyl": 13995
+        "UCON_cyl": 13995,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 157765,
       "searched_sets": [
@@ -6164,7 +6647,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 61831,
         "SqUCON1": 873,
-        "UCON_cyl": 27829
+        "UCON_cyl": 27829,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 8211,
@@ -6207,7 +6693,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 61466,
         "SqUCON1": 530,
-        "UCON_cyl": 21249
+        "UCON_cyl": 21249,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 187288,
       "searched_sets": [
@@ -6259,7 +6748,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 26741,
         "SqUCON1": 284,
-        "UCON_cyl": 18909
+        "UCON_cyl": 18909,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 36051,
@@ -6302,7 +6794,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 26601,
         "SqUCON1": 135,
-        "UCON_cyl": 12618
+        "UCON_cyl": 12618,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 208876,
       "searched_sets": [
@@ -6354,7 +6849,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 9,
         "SqUCON1": 13,
-        "UCON_cyl": 17834
+        "UCON_cyl": 17834,
+        "sq3a": 101366,
+        "sq3other": 67097,
+        "sq1_body": 2165
       },
       "firm_counts": {
         "Heno": 24381,
@@ -6397,12 +6895,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 8,
         "SqUCON1": 5,
-        "UCON_cyl": 15934
+        "UCON_cyl": 15934,
+        "sq3a": 67433,
+        "sq3other": 58261,
+        "sq1_body": 2162
       },
-      "total": 119374,
+      "total": 290002,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.4881,
+        "sq3other": 0.4262,
+        "sq1_body": 0.2393
+      }
     },
     {
       "taxon": "Phyllodactylus_wirshingi",
@@ -6449,7 +6956,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 8,
         "SqUCON1": 4,
-        "UCON_cyl": 11270
+        "UCON_cyl": 11270,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 13986,
@@ -6492,7 +7002,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 8,
         "SqUCON1": 4,
-        "UCON_cyl": 9085
+        "UCON_cyl": 9085,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 97073,
       "searched_sets": [
@@ -6544,7 +7057,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 11806,
         "SqUCON1": 882,
-        "UCON_cyl": 11130
+        "UCON_cyl": 11130,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 11878,
@@ -6587,7 +7103,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 11421,
         "SqUCON1": 631,
-        "UCON_cyl": 9672
+        "UCON_cyl": 9672,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 97814,
       "searched_sets": [
@@ -6639,7 +7158,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 33501,
         "SqUCON1": 1486,
-        "UCON_cyl": 28455
+        "UCON_cyl": 28455,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 14365,
@@ -6682,7 +7204,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 33053,
         "SqUCON1": 1209,
-        "UCON_cyl": 25804
+        "UCON_cyl": 25804,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 156205,
       "searched_sets": [
@@ -6734,7 +7259,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4,
         "SqUCON1": 4,
-        "UCON_cyl": 22687
+        "UCON_cyl": 22687,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 20288,
@@ -6777,7 +7305,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4,
         "SqUCON1": 4,
-        "UCON_cyl": 19666
+        "UCON_cyl": 19666,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 126782,
       "searched_sets": [
@@ -6829,7 +7360,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 5,
         "SqUCON1": 1,
-        "UCON_cyl": 9270
+        "UCON_cyl": 9270,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 21634,
@@ -6872,7 +7406,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 5,
         "SqUCON1": 1,
-        "UCON_cyl": 7823
+        "UCON_cyl": 7823,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 100223,
       "searched_sets": [
@@ -6935,7 +7472,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 5,
         "SqUCON1": 5,
-        "UCON_cyl": 8527
+        "UCON_cyl": 8527,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 14090,
@@ -6978,7 +7518,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4,
         "SqUCON1": 4,
-        "UCON_cyl": 7041
+        "UCON_cyl": 7041,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 93148,
       "searched_sets": [
@@ -7041,7 +7584,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 78952,
         "SqUCON1": 6077,
-        "UCON_cyl": 40620
+        "UCON_cyl": 40620,
+        "sq3a": 139441,
+        "sq3other": 75813,
+        "sq1_body": 304
       },
       "firm_counts": {
         "Heno": 19558,
@@ -7084,12 +7630,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 76829,
         "SqUCON1": 5125,
-        "UCON_cyl": 36638
+        "UCON_cyl": 36638,
+        "sq3a": 67542,
+        "sq3other": 54520,
+        "sq1_body": 304
       },
-      "total": 226659,
+      "total": 442217,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.4772,
+        "sq3other": 0.3701,
+        "sq1_body": 0.1721
+      }
     },
     {
       "taxon": "Euleptes_europaea",
@@ -7136,7 +7691,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 38809,
         "SqUCON1": 2679,
-        "UCON_cyl": 8160
+        "UCON_cyl": 8160,
+        "sq3a": 114433,
+        "sq3other": 104074,
+        "sq1_body": 31
       },
       "firm_counts": {
         "Heno": 31007,
@@ -7179,11 +7737,15 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 37818,
         "SqUCON1": 2354,
-        "UCON_cyl": 5724
+        "UCON_cyl": 5724,
+        "sq3a": 54773,
+        "sq3other": 88760,
+        "sq1_body": 31
       },
-      "total": 230756,
+      "total": 449294,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.249,
@@ -7194,7 +7756,10 @@
         "sq2_Eryx": 0.5591,
         "SqUCON": 0.5821,
         "SqUCON1": 0.5412,
-        "UCON_cyl": 0.2863
+        "UCON_cyl": 0.2863,
+        "sq3a": 0.5182,
+        "sq3other": 0.3409,
+        "sq1_body": 0.1556
       }
     },
     {
@@ -7242,7 +7807,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1854,
         "SqUCON1": 633,
-        "UCON_cyl": 1966
+        "UCON_cyl": 1966,
+        "sq3a": 50615,
+        "sq3other": 94355,
+        "sq1_body": 0
       },
       "firm_counts": {
         "Heno": 1203,
@@ -7285,12 +7853,20 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1599,
         "SqUCON1": 509,
-        "UCON_cyl": 1837
+        "UCON_cyl": 1837,
+        "sq3a": 23036,
+        "sq3other": 85763,
+        "sq1_body": 0
       },
-      "total": 24302,
+      "total": 169272,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.411,
+        "sq3other": 0.3387
+      }
     },
     {
       "taxon": "Sphaerodactylus_glaucus",
@@ -7337,7 +7913,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 3670,
         "SqUCON1": 1354,
-        "UCON_cyl": 3465
+        "UCON_cyl": 3465,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 5383,
@@ -7380,7 +7959,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 3199,
         "SqUCON1": 1182,
-        "UCON_cyl": 3086
+        "UCON_cyl": 3086,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 48715,
       "searched_sets": [
@@ -7432,7 +8014,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 5190,
         "SqUCON1": 3108,
-        "UCON_cyl": 5732
+        "UCON_cyl": 5732,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 8842,
@@ -7475,7 +8060,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4051,
         "SqUCON1": 2563,
-        "UCON_cyl": 5023
+        "UCON_cyl": 5023,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 62648,
       "searched_sets": [
@@ -7527,7 +8115,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4492,
         "SqUCON1": 2826,
-        "UCON_cyl": 4863
+        "UCON_cyl": 4863,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 7253,
@@ -7570,7 +8161,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 3620,
         "SqUCON1": 2369,
-        "UCON_cyl": 4299
+        "UCON_cyl": 4299,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 53205,
       "searched_sets": [
@@ -7622,7 +8216,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4305,
         "SqUCON1": 833,
-        "UCON_cyl": 12327
+        "UCON_cyl": 12327,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 28359,
@@ -7665,7 +8262,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 3990,
         "SqUCON1": 684,
-        "UCON_cyl": 10313
+        "UCON_cyl": 10313,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 133105,
       "searched_sets": [
@@ -7717,7 +8317,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 277,
         "SqUCON1": 528,
-        "UCON_cyl": 3694
+        "UCON_cyl": 3694,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 687,
@@ -7760,7 +8363,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 191,
         "SqUCON1": 387,
-        "UCON_cyl": 3006
+        "UCON_cyl": 3006,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 43860,
       "searched_sets": [
@@ -7823,7 +8429,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 203,
         "SqUCON1": 355,
-        "UCON_cyl": 857
+        "UCON_cyl": 857,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 696,
@@ -7866,7 +8475,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 110,
         "SqUCON1": 286,
-        "UCON_cyl": 600
+        "UCON_cyl": 600,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 32965,
       "searched_sets": [
@@ -7929,7 +8541,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 20,
         "SqUCON1": 123,
-        "UCON_cyl": 173
+        "UCON_cyl": 173,
+        "sq3a": 4024,
+        "sq3other": 155,
+        "sq1_body": 139553
       },
       "firm_counts": {
         "Heno": 363,
@@ -7972,12 +8587,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 17,
         "SqUCON1": 122,
-        "UCON_cyl": 139
+        "UCON_cyl": 139,
+        "sq3a": 2961,
+        "sq3other": 63,
+        "sq1_body": 137016
       },
-      "total": 15400,
+      "total": 159132,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.2333,
+        "sq3other": 0.1521,
+        "sq1_body": 0.6263
+      }
     },
     {
       "taxon": "Furcifer_pardalis",
@@ -8024,7 +8648,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 35,
         "SqUCON1": 154,
-        "UCON_cyl": 182
+        "UCON_cyl": 182,
+        "sq3a": 4531,
+        "sq3other": 127,
+        "sq1_body": 145321
       },
       "firm_counts": {
         "Heno": 427,
@@ -8067,11 +8694,15 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 26,
         "SqUCON1": 154,
-        "UCON_cyl": 154
+        "UCON_cyl": 154,
+        "sq3a": 3573,
+        "sq3other": 49,
+        "sq1_body": 142973
       },
-      "total": 17235,
+      "total": 167214,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.139,
@@ -8082,7 +8713,10 @@
         "sq2_Eryx": 0.3243,
         "SqUCON": 0.127,
         "SqUCON1": 0.1522,
-        "UCON_cyl": 0.2103
+        "UCON_cyl": 0.2103,
+        "sq3a": 0.2415,
+        "sq3other": 0.1396,
+        "sq1_body": 0.6667
       }
     },
     {
@@ -8130,7 +8764,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 16,
         "SqUCON1": 17,
-        "UCON_cyl": 16519
+        "UCON_cyl": 16519,
+        "sq3a": 22237,
+        "sq3other": 2793,
+        "sq1_body": 293
       },
       "firm_counts": {
         "Heno": 17834,
@@ -8173,12 +8810,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 14,
         "SqUCON1": 16,
-        "UCON_cyl": 13466
+        "UCON_cyl": 13466,
+        "sq3a": 13747,
+        "sq3other": 295,
+        "sq1_body": 277
       },
-      "total": 60287,
+      "total": 85610,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.3258,
+        "sq3other": 0.2864,
+        "sq1_body": 0.5581
+      }
     },
     {
       "taxon": "Gambelia_wislizenii",
@@ -8225,7 +8871,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 28,
         "SqUCON1": 76,
-        "UCON_cyl": 46643
+        "UCON_cyl": 46643,
+        "sq3a": 21124,
+        "sq3other": 706,
+        "sq1_body": 12
       },
       "firm_counts": {
         "Heno": 20637,
@@ -8268,12 +8917,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 23,
         "SqUCON1": 68,
-        "UCON_cyl": 26843
+        "UCON_cyl": 26843,
+        "sq3a": 17773,
+        "sq3other": 138,
+        "sq1_body": 12
       },
-      "total": 128986,
+      "total": 150828,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.2804,
+        "sq3other": 0.1707,
+        "sq1_body": 0.163
+      }
     },
     {
       "taxon": "Anolis_carolinensis",
@@ -8320,7 +8978,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1213,
         "SqUCON1": 16,
-        "UCON_cyl": 9895
+        "UCON_cyl": 9895,
+        "sq3a": 4973,
+        "sq3other": 129,
+        "sq1_body": 91074
       },
       "firm_counts": {
         "Heno": 3733,
@@ -8363,12 +9024,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1185,
         "SqUCON1": 14,
-        "UCON_cyl": 8470
+        "UCON_cyl": 8470,
+        "sq3a": 3986,
+        "sq3other": 49,
+        "sq1_body": 87128
       },
-      "total": 32112,
+      "total": 128288,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.209,
+        "sq3other": 0.1735,
+        "sq1_body": 0.4639
+      }
     },
     {
       "taxon": "Brachylophus_fasciatus",
@@ -8415,7 +9085,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 8,
         "SqUCON1": 14,
-        "UCON_cyl": 10807
+        "UCON_cyl": 10807,
+        "sq3a": 29669,
+        "sq3other": 1324,
+        "sq1_body": 4
       },
       "firm_counts": {
         "Heno": 11249,
@@ -8458,12 +9131,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 7,
         "SqUCON1": 12,
-        "UCON_cyl": 9385
+        "UCON_cyl": 9385,
+        "sq3a": 27302,
+        "sq3other": 197,
+        "sq1_body": 4
       },
-      "total": 47797,
+      "total": 78794,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.2726,
+        "sq3other": 0.1914,
+        "sq1_body": 0.1588
+      }
     },
     {
       "taxon": "Cyclura_pinguis",
@@ -8510,7 +9192,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 11,
         "SqUCON1": 40,
-        "UCON_cyl": 20594
+        "UCON_cyl": 20594,
+        "sq3a": 30924,
+        "sq3other": 1612,
+        "sq1_body": 8
       },
       "firm_counts": {
         "Heno": 14938,
@@ -8553,11 +9238,15 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 9,
         "SqUCON1": 39,
-        "UCON_cyl": 18089
+        "UCON_cyl": 18089,
+        "sq3a": 28280,
+        "sq3other": 228,
+        "sq1_body": 7
       },
-      "total": 73864,
+      "total": 106408,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.2038,
@@ -8568,7 +9257,10 @@
         "sq2_Eryx": 0.3416,
         "SqUCON": 0.0893,
         "SqUCON1": 0.1469,
-        "UCON_cyl": 0.2639
+        "UCON_cyl": 0.2639,
+        "sq3a": 0.2916,
+        "sq3other": 0.1793,
+        "sq1_body": 0.1233
       }
     },
     {
@@ -8616,7 +9308,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 8,
         "SqUCON1": 71,
-        "UCON_cyl": 19575
+        "UCON_cyl": 19575,
+        "sq3a": 29677,
+        "sq3other": 1587,
+        "sq1_body": 7
       },
       "firm_counts": {
         "Heno": 14393,
@@ -8659,11 +9354,15 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4,
         "SqUCON1": 70,
-        "UCON_cyl": 17437
+        "UCON_cyl": 17437,
+        "sq3a": 27168,
+        "sq3other": 235,
+        "sq1_body": 7
       },
-      "total": 72252,
+      "total": 103523,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.2295,
@@ -8674,7 +9373,10 @@
         "sq2_Eryx": 0.3603,
         "SqUCON": 0.1002,
         "SqUCON1": 0.2038,
-        "UCON_cyl": 0.2683
+        "UCON_cyl": 0.2683,
+        "sq3a": 0.2666,
+        "sq3other": 0.1881,
+        "sq1_body": 0.1589
       }
     },
     {
@@ -8722,7 +9424,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 0,
         "SqUCON1": 0,
-        "UCON_cyl": 11194
+        "UCON_cyl": 11194,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 490,
@@ -8765,7 +9470,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 0,
         "SqUCON1": 0,
-        "UCON_cyl": 9725
+        "UCON_cyl": 9725,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 22226,
       "searched_sets": [
@@ -8817,7 +9525,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 0,
         "SqUCON1": 1,
-        "UCON_cyl": 3969
+        "UCON_cyl": 3969,
+        "sq3a": 21526,
+        "sq3other": 3381,
+        "sq1_body": 5834
       },
       "firm_counts": {
         "Heno": 12,
@@ -8860,11 +9571,15 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 0,
         "SqUCON1": 1,
-        "UCON_cyl": 3206
+        "UCON_cyl": 3206,
+        "sq3a": 17124,
+        "sq3other": 2460,
+        "sq1_body": 5816
       },
-      "total": 66027,
+      "total": 96768,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.1687,
@@ -8873,7 +9588,10 @@
         "oph3": 0.2727,
         "sq2_Eryx": 0.4881,
         "SqUCON1": 0.1181,
-        "UCON_cyl": 0.2292
+        "UCON_cyl": 0.2292,
+        "sq3a": 0.4081,
+        "sq3other": 0.397,
+        "sq1_body": 0.4216
       }
     },
     {
@@ -8921,7 +9639,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 6,
         "SqUCON1": 2,
-        "UCON_cyl": 3902
+        "UCON_cyl": 3902,
+        "sq3a": 42859,
+        "sq3other": 14416,
+        "sq1_body": 61201
       },
       "firm_counts": {
         "Heno": 42,
@@ -8964,11 +9685,15 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 6,
         "SqUCON1": 2,
-        "UCON_cyl": 3155
+        "UCON_cyl": 3155,
+        "sq3a": 32755,
+        "sq3other": 12879,
+        "sq1_body": 61046
       },
-      "total": 78485,
+      "total": 196961,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.1355,
@@ -8979,7 +9704,10 @@
         "sq2_Eryx": 0.4752,
         "SqUCON": 0.0876,
         "SqUCON1": 0.0908,
-        "UCON_cyl": 0.2455
+        "UCON_cyl": 0.2455,
+        "sq3a": 0.3428,
+        "sq3other": 0.3925,
+        "sq1_body": 0.4591
       }
     },
     {
@@ -9027,7 +9755,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1,
         "SqUCON1": 1,
-        "UCON_cyl": 843
+        "UCON_cyl": 843,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 5,
@@ -9070,7 +9801,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1,
         "SqUCON1": 1,
-        "UCON_cyl": 757
+        "UCON_cyl": 757,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 32798,
       "searched_sets": [
@@ -9133,7 +9867,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 5,
         "SqUCON1": 0,
-        "UCON_cyl": 3613
+        "UCON_cyl": 3613,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 44,
@@ -9176,7 +9913,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 5,
         "SqUCON1": 0,
-        "UCON_cyl": 3028
+        "UCON_cyl": 3028,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 78603,
       "searched_sets": [
@@ -9228,7 +9968,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4,
         "SqUCON1": 3,
-        "UCON_cyl": 3765
+        "UCON_cyl": 3765,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 42,
@@ -9271,7 +10014,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4,
         "SqUCON1": 3,
-        "UCON_cyl": 3060
+        "UCON_cyl": 3060,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 80442,
       "searched_sets": [
@@ -9334,7 +10080,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 6,
         "SqUCON1": 0,
-        "UCON_cyl": 3835
+        "UCON_cyl": 3835,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 46,
@@ -9377,7 +10126,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 6,
         "SqUCON1": 0,
-        "UCON_cyl": 3107
+        "UCON_cyl": 3107,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 80702,
       "searched_sets": [
@@ -9439,7 +10191,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1,
         "SqUCON1": 2,
-        "UCON_cyl": 3998
+        "UCON_cyl": 3998,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 41,
@@ -9482,7 +10237,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1,
         "SqUCON1": 2,
-        "UCON_cyl": 3219
+        "UCON_cyl": 3219,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 84332,
       "searched_sets": [
@@ -9545,7 +10303,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1,
         "SqUCON1": 2,
-        "UCON_cyl": 1469
+        "UCON_cyl": 1469,
+        "sq3a": 126260,
+        "sq3other": 35548,
+        "sq1_body": 3
       },
       "firm_counts": {
         "Heno": 1799,
@@ -9588,12 +10349,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1,
         "SqUCON1": 2,
-        "UCON_cyl": 1051
+        "UCON_cyl": 1051,
+        "sq3a": 116087,
+        "sq3other": 29914,
+        "sq1_body": 2
       },
-      "total": 14727,
+      "total": 176538,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.3485,
+        "sq3other": 0.3418,
+        "sq1_body": 0.168
+      }
     },
     {
       "taxon": "Salvator_merianae",
@@ -9640,7 +10410,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1,
         "SqUCON1": 0,
-        "UCON_cyl": 9444
+        "UCON_cyl": 9444,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 4369,
@@ -9683,7 +10456,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1,
         "SqUCON1": 0,
-        "UCON_cyl": 7047
+        "UCON_cyl": 7047,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 34179,
       "searched_sets": [
@@ -9744,7 +10520,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 6,
         "SqUCON1": 70,
-        "UCON_cyl": 920
+        "UCON_cyl": 920,
+        "sq3a": 78214,
+        "sq3other": 3132,
+        "sq1_body": 10
       },
       "firm_counts": {
         "Heno": 971,
@@ -9787,12 +10566,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 3,
         "SqUCON1": 67,
-        "UCON_cyl": 807
+        "UCON_cyl": 807,
+        "sq3a": 73807,
+        "sq3other": 311,
+        "sq1_body": 10
       },
-      "total": 212170,
+      "total": 293526,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.5223,
+        "sq3other": 0.2453,
+        "sq1_body": 0.1569
+      }
     },
     {
       "taxon": "Cryptoblepharus_egeriae",
@@ -9839,7 +10627,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 2,
         "SqUCON1": 4,
-        "UCON_cyl": 23149
+        "UCON_cyl": 23149,
+        "sq3a": 12733,
+        "sq3other": 626,
+        "sq1_body": 21260
       },
       "firm_counts": {
         "Heno": 31,
@@ -9882,12 +10673,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 2,
         "SqUCON1": 4,
-        "UCON_cyl": 22702
+        "UCON_cyl": 22702,
+        "sq3a": 10947,
+        "sq3other": 80,
+        "sq1_body": 19128
       },
-      "total": 42977,
+      "total": 77596,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.3441,
+        "sq3other": 0.1875,
+        "sq1_body": 0.4726
+      }
     },
     {
       "taxon": "Lerista_edwardsae",
@@ -9934,7 +10734,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 435,
         "SqUCON1": 140,
-        "UCON_cyl": 2573
+        "UCON_cyl": 2573,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 10,
@@ -9977,7 +10780,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 386,
         "SqUCON1": 134,
-        "UCON_cyl": 2413
+        "UCON_cyl": 2413,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 25639,
       "searched_sets": [
@@ -10039,7 +10845,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 2,
         "SqUCON1": 3,
-        "UCON_cyl": 773
+        "UCON_cyl": 773,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 117,
@@ -10082,7 +10891,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 2,
         "SqUCON1": 3,
-        "UCON_cyl": 695
+        "UCON_cyl": 695,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 39919,
       "searched_sets": [
@@ -10134,7 +10946,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 5447,
         "SqUCON1": 1104,
-        "UCON_cyl": 929
+        "UCON_cyl": 929,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 29,
@@ -10177,7 +10992,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4849,
         "SqUCON1": 928,
-        "UCON_cyl": 877
+        "UCON_cyl": 877,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 30333,
       "searched_sets": [
@@ -10229,7 +11047,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 111,
         "SqUCON1": 21,
-        "UCON_cyl": 4721
+        "UCON_cyl": 4721,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 99,
@@ -10272,7 +11093,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 94,
         "SqUCON1": 18,
-        "UCON_cyl": 4334
+        "UCON_cyl": 4334,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 41528,
       "searched_sets": [
@@ -10324,7 +11148,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1,
         "SqUCON1": 1,
-        "UCON_cyl": 18569
+        "UCON_cyl": 18569,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 72,
@@ -10367,7 +11194,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 1,
         "SqUCON1": 1,
-        "UCON_cyl": 13108
+        "UCON_cyl": 13108,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 101098,
       "searched_sets": [
@@ -10430,7 +11260,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 9,
         "SqUCON1": 7,
-        "UCON_cyl": 13422
+        "UCON_cyl": 13422,
+        "sq3a": 165892,
+        "sq3other": 48386,
+        "sq1_body": 19
       },
       "firm_counts": {
         "Heno": 16653,
@@ -10473,12 +11306,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 9,
         "SqUCON1": 7,
-        "UCON_cyl": 13422
+        "UCON_cyl": 13422,
+        "sq3a": 115821,
+        "sq3other": 36478,
+        "sq1_body": 19
       },
-      "total": 114444,
+      "total": 328741,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.5545,
+        "sq3other": 0.4602,
+        "sq1_body": 0.1625
+      }
     },
     {
       "taxon": "Eublepharis_macularius_local",
@@ -10525,7 +11367,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 13072,
         "SqUCON1": 1258,
-        "UCON_cyl": 3541
+        "UCON_cyl": 3541,
+        "sq3a": 91299,
+        "sq3other": 95934,
+        "sq1_body": 15
       },
       "firm_counts": {
         "Heno": 6848,
@@ -10568,12 +11413,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 13072,
         "SqUCON1": 1258,
-        "UCON_cyl": 3541
+        "UCON_cyl": 3541,
+        "sq3a": 66988,
+        "sq3other": 72683,
+        "sq1_body": 14
       },
-      "total": 89467,
+      "total": 276715,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.5595,
+        "sq3other": 0.4482,
+        "sq1_body": 0.161
+      }
     },
     {
       "taxon": "Gehyra_mutilata_hifi",
@@ -10620,7 +11474,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4,
         "SqUCON1": 5,
-        "UCON_cyl": 8420
+        "UCON_cyl": 8420,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 24076,
@@ -10663,7 +11520,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4,
         "SqUCON1": 5,
-        "UCON_cyl": 8420
+        "UCON_cyl": 8420,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 124445,
       "searched_sets": [
@@ -10715,7 +11575,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 56092,
         "SqUCON1": 2215,
-        "UCON_cyl": 9435
+        "UCON_cyl": 9435,
+        "sq3a": 73315,
+        "sq3other": 147963,
+        "sq1_body": 36465
       },
       "firm_counts": {
         "Heno": 11861,
@@ -10758,12 +11621,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 56092,
         "SqUCON1": 2215,
-        "UCON_cyl": 9435
+        "UCON_cyl": 9435,
+        "sq3a": 36345,
+        "sq3other": 133769,
+        "sq1_body": 32836
       },
-      "total": 178497,
+      "total": 436240,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.4745,
+        "sq3other": 0.3603,
+        "sq1_body": 0.5439
+      }
     },
     {
       "taxon": "Gekko_japonicus_local",
@@ -10810,7 +11682,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4,
         "SqUCON1": 5,
-        "UCON_cyl": 8391
+        "UCON_cyl": 8391,
+        "sq3a": 152292,
+        "sq3other": 136959,
+        "sq1_body": 88958
       },
       "firm_counts": {
         "Heno": 24118,
@@ -10853,12 +11728,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4,
         "SqUCON1": 5,
-        "UCON_cyl": 8391
+        "UCON_cyl": 8391,
+        "sq3a": 62887,
+        "sq3other": 124133,
+        "sq1_body": 81071
       },
-      "total": 124418,
+      "total": 502627,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.5395,
+        "sq3other": 0.3522,
+        "sq1_body": 0.758
+      }
     },
     {
       "taxon": "Heteronotia_binoei_local",
@@ -10905,7 +11789,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 64890,
         "SqUCON1": 5616,
-        "UCON_cyl": 5546
+        "UCON_cyl": 5546,
+        "sq3a": 93505,
+        "sq3other": 191553,
+        "sq1_body": 29
       },
       "firm_counts": {
         "Heno": 13325,
@@ -10948,12 +11835,21 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 64890,
         "SqUCON1": 5616,
-        "UCON_cyl": 5546
+        "UCON_cyl": 5546,
+        "sq3a": 45059,
+        "sq3other": 177375,
+        "sq1_body": 28
       },
-      "total": 214789,
+      "total": 499876,
       "searched_sets": [
-        "full_41"
-      ]
+        "full_41",
+        "sq1sq3"
+      ],
+      "sim_means": {
+        "sq3a": 0.4509,
+        "sq3other": 0.3221,
+        "sq1_body": 0.1747
+      }
     },
     {
       "taxon": "Thecadactylus_rapicauda_local",
@@ -11000,7 +11896,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4,
         "SqUCON1": 4,
-        "UCON_cyl": 22687
+        "UCON_cyl": 22687,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "firm_counts": {
         "Heno": 20470,
@@ -11043,7 +11942,10 @@
         "Sq3X_Eryx": 0,
         "SqUCON": 4,
         "SqUCON1": 4,
-        "UCON_cyl": 22687
+        "UCON_cyl": 22687,
+        "sq3a": null,
+        "sq3other": null,
+        "sq1_body": null
       },
       "total": 126782,
       "searched_sets": [
