@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SINEdb — Unified Squamata Table</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font:12px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#222;background:#fff;display:flex;flex-direction:column;height:100vh;overflow:hidden}
+a{color:#1a5dab;text-decoration:none}
+a:hover{text-decoration:underline}
+#topbar{display:flex;align-items:center;background:#1a4d8c;color:#fff;padding:0 8px;height:28px;flex-shrink:0;font-size:12px;gap:12px}
+#topbar .title{font-weight:700;font-size:13px;letter-spacing:.5px}
+#topbar .nav-link{color:rgba(255,255,255,.85);font-size:11px;padding:2px 8px;border:1px solid rgba(255,255,255,.3);border-radius:3px}
+#topbar .nav-link:hover{background:rgba(255,255,255,.15);text-decoration:none}
+#topbar .stats{font-size:11px;opacity:.85;margin-left:auto}
+.page-header{padding:8px 16px;background:#f0f4f8;border-bottom:1px solid #d0d4d8}
+.page-header h2{font-size:14px;color:#1a4d8c;margin-bottom:2px}
+.page-header p{font-size:11px;color:#555;max-width:1100px}
+.controls{padding:4px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;border-bottom:1px solid #e0e0e0;background:#fafbfc;min-height:28px}
+.controls label{font-weight:600;font-size:11px}
+.controls select,.controls input[type=number]{font-size:11px;padding:1px 4px;border:1px solid #aaa}
+.controls input[type=checkbox]{vertical-align:middle}
+.filter-group{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+.filter-btn{font-size:10px;padding:1px 6px;cursor:pointer;border:1px solid #999;background:#f0f0f0;border-radius:3px;font-weight:600}
+.filter-btn:hover{background:#ddd}
+.filter-btn.active{background:#1a4d8c;color:#fff;border-color:#1a4d8c}
+.filter-btn.active:hover{background:#15407a}
+.sep{border-left:1px solid #ccc;height:18px;margin:0 2px}
+.table-wrap{overflow:auto;flex:1;min-height:0;padding:0}
+table{border-collapse:separate;border-spacing:0;font-size:10px}
+table th,table td{border:1px solid #d0d0d0;padding:2px 3px;white-space:nowrap}
+table thead th{position:sticky;top:0;z-index:4;background:#1a4d8c;color:#fff;font-size:10px;font-weight:600;cursor:pointer;user-select:none}
+table thead th:hover{background:#15407a}
+table thead tr:nth-child(2) th{top:22px;z-index:3}
+table .sticky-sp{position:sticky;left:0;z-index:2;background:#fff;border-right:2px solid #999;width:170px;min-width:170px;max-width:170px;overflow:hidden;text-overflow:ellipsis;white-space:normal;line-height:1.15}
+table thead .sticky-sp{z-index:5;background:#1a4d8c}
+table .sticky-tot{position:sticky;left:172px;z-index:2;background:#fff;border-right:2px solid #999;min-width:55px;text-align:right;font-weight:700}
+table thead .sticky-tot{z-index:5;background:#1a4d8c}
+table .grp-hdr td{font-weight:700;font-size:10px;border-top:2px solid #888;color:#333}
+.grp-serpentes td{background:#e8f5e9} .grp-serpentes .sticky-sp,.grp-serpentes .sticky-tot{background:#e8f5e9}
+.grp-amphisbaenia td{background:#f3e5f5}
+.grp-anguimorpha td{background:#e3f2fd}
+.grp-dibamia td{background:#f5f5f5}
+.grp-gekkota td{background:#fff3e0}
+.grp-iguania td{background:#e8f5e9}
+.grp-laterata td{background:#e1f5fe}
+.grp-scinciformata td{background:#fce4ec}
+.grp-rhynchocephalia td{background:#e0f2f1}
+table .sf-vert{writing-mode:vertical-lr;text-orientation:mixed;font-size:9px;max-width:26px;min-width:26px;padding:2px 1px}
+table .sf-vert:hover{background:#15407a}
+table .fam-hdr{background:#2c3e50;text-align:center;font-size:10px;letter-spacing:.5px}
+.c-high{background:#1a6b3c;color:#fff}
+.c-med{background:#5ab87a;color:#000}
+.c-low{background:#c8e6c9;color:#333}
+.c-zero{background:#fff;color:#ddd}
+.c-trace{background:#ffecb3;color:#8d6e63}
+.c-na{background:#f0f0f0;color:#bbb;font-style:italic;text-align:center}
+table tfoot td{font-weight:700;background:#e8ecf0;border-top:2px solid #999}
+table tfoot .sticky-sp,table tfoot .sticky-tot{background:#e8ecf0}
+tr:hover td{background-color:rgba(232,240,254,.4)}
+tr:hover .sticky-sp,tr:hover .sticky-tot{background:#e8f0fe}
+td[title]{cursor:help}
+tr.snake-row .sticky-sp{border-left:3px solid #27ae60}
+tr.outgroup-row .sticky-sp{border-left:3px solid #e67e22}
+.clade-separator td{border-top:4px solid #1a4d8c !important;height:4px;padding:0}
+/* Cell curation status */
+td.cell-checked{position:relative}
+td.cell-checked::after{content:'';position:absolute;top:0;right:0;border-style:solid;border-width:0 8px 8px 0;border-color:transparent #1976d2 transparent transparent;pointer-events:none}
+td.cell-working{position:relative}
+td.cell-working::after{content:'';position:absolute;top:0;right:0;border-style:solid;border-width:0 8px 8px 0;border-color:transparent #e53935 transparent transparent;pointer-events:none}
+.status-legend{font-size:10px;display:flex;gap:8px;align-items:center}
+.status-legend .swatch{display:inline-block;width:0;height:0;border-style:solid;border-width:0 8px 8px 0;vertical-align:middle;margin-right:2px}
+.status-legend .sw-checked{border-color:transparent #1976d2 transparent transparent}
+.status-legend .sw-working{border-color:transparent #e53935 transparent transparent}
+.export-btn{font-size:10px;padding:1px 8px;cursor:pointer;border:1px solid #1a4d8c;background:#e3f2fd;border-radius:3px;color:#1a4d8c;font-weight:600}
+.export-btn:hover{background:#bbdefb}
+/* Detail panel */
+#detail{border-top:1px solid #ccc;height:0;overflow:hidden;transition:height .15s;background:#fafbfc;flex-shrink:0}
+#detail.open{height:280px;overflow:auto}
+#detail .detail-header{background:#2c3e50;color:#fff;padding:3px 8px;font-size:11px;font-weight:600;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:2}
+#detail .detail-header button{background:transparent;border:none;color:#fff;font-size:14px;cursor:pointer;padding:0 4px}
+#detail .detail-body{padding:6px 8px;font-size:11px}
+#detail h3{font-size:12px;color:#1a4d8c;margin-bottom:4px;margin-top:6px}
+#detail .detail-row{font-size:11px;margin:2px 0}
+#detail .bar{height:14px;background:#e0e0e0;border-radius:2px;margin:1px 0;position:relative;overflow:hidden}
+#detail .bar-fill{height:100%;position:absolute;left:0;top:0;border-radius:2px}
+#detail .bar-label{position:absolute;left:4px;top:0;font-size:9px;color:#333;line-height:14px;z-index:1}
+/* Modal overlay */
+.modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.35);z-index:100;display:flex;align-items:flex-start;justify-content:center;padding-top:40px}
+.modal{background:#fff;border:1px solid #666;box-shadow:0 4px 20px rgba(0,0,0,.3);max-width:700px;width:95%;max-height:85vh;overflow:auto;font-size:11px}
+.modal-title{background:#1a4d8c;color:#fff;padding:4px 8px;font-weight:700;font-size:12px;display:flex;justify-content:space-between;align-items:center}
+.modal-title button{background:transparent;border:none;color:#fff;font-size:14px;cursor:pointer;padding:0 4px}
+.modal-body{padding:8px}
+.modal-body label{display:block;font-weight:600;margin:4px 0 1px;font-size:10px;color:#555;text-transform:uppercase}
+.modal-body input,.modal-body textarea,.modal-body select{width:100%;margin-bottom:2px;font:11px/1.3 inherit;border:1px solid #aaa;padding:1px 3px;background:#fffef5}
+.modal-body textarea{height:50px;resize:vertical}
+.modal-footer{padding:4px 8px 8px;text-align:right;display:flex;gap:6px;justify-content:flex-end}
+.modal-footer button{font:11px/1.3 inherit;padding:2px 8px;cursor:pointer;border:1px solid #888;background:#f0f0f0;border-radius:2px}
+.modal-footer button:hover{background:#ddd}
+.modal-footer button.primary{background:#1a4d8c;color:#fff;border-color:#1a4d8c}
+.modal-footer button.primary:hover{background:#15407a}
+/* Conservation histogram */
+.conservation-container{margin:8px 0}
+.conservation-canvas{width:100%;border:1px solid #ddd;background:#fafafa;cursor:crosshair;display:block}
+.conservation-legend{font-size:9px;color:#666;display:flex;gap:12px;margin-top:2px}
+.aln-links{margin:6px 0;padding:4px 6px;background:#f0f6ff;border:1px solid #c0d4f0;border-radius:3px;font-size:10px}
+.aln-links a{margin-right:8px;text-decoration:none;color:#1a4d8c;font-weight:600}
+.aln-links a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<div id="topbar">
+  <span class="title">SINEdb — Unified Table</span>
+  <a class="nav-link" href="index.html">← Snake detail</a>
+  <a class="nav-link" href="combined.html">Combined (9 shared)</a>
+  <span class="stats" id="topStats"></span>
+</div>
+
+<div class="page-header">
+  <h2>All Squamata SINE Subfamilies — Unified View</h2>
+  <p id="pageDesc">Loading…</p>
+</div>
+
+<!-- Controls row 1: View presets & clade filter -->
+<div class="controls" id="controlRow1">
+  <label>View:</label>
+  <div class="filter-group" id="presetBtns">
+    <button class="filter-btn active" data-preset="all" onclick="applyPreset('all')">All 41</button>
+    <button class="filter-btn" data-preset="shared9" onclick="applyPreset('shared9')">Shared 9</button>
+    <button class="filter-btn" data-preset="snake_specific" onclick="applyPreset('snake_specific')">Snake-specific</button>
+  </div>
+  <div class="sep"></div>
+  <label>SINE family:</label>
+  <div class="filter-group" id="famBtns"></div>
+  <div class="sep"></div>
+  <label>Clade:</label>
+  <select id="cladeFilter" onchange="render()"><option value="">All</option></select>
+  <label>Family:</label>
+  <select id="famTaxFilter" onchange="render()"><option value="">All</option></select>
+</div>
+
+<!-- Controls row 2: Options -->
+<div class="controls" id="controlRow2">
+  <label><input type="checkbox" id="showSnakes" checked onchange="render()"> Snakes</label>
+  <label><input type="checkbox" id="showOutgroups" checked onchange="render()"> Outgroups</label>
+  <label><input type="checkbox" id="hideZero" onchange="render()"> Hide empty cols</label>
+  <label><input type="checkbox" id="showPct" onchange="render()"> Show %</label>
+  <label><input type="checkbox" id="useFirm" checked onchange="render()"> Firm counts</label>
+  <label>Min:</label>
+  <input type="number" id="minCopies" value="0" min="0" style="width:50px" onchange="render()">
+  <div class="sep"></div>
+  <span class="status-legend"><span class="swatch sw-checked"></span>Checked <span class="swatch sw-working"></span>Working</span>
+  <button class="export-btn" onclick="exportJSON()" title="Download unified_data.json with edits and status">Export JSON</button>
+  <span id="countInfo" style="margin-left:auto;color:#666;font-size:11px"></span>
+</div>
+
+<div class="table-wrap" id="tableWrap"></div>
+
+<div id="detail">
+  <div class="detail-header"><span id="detailTitle"></span><button onclick="closeDetail()">&times;</button></div>
+  <div class="detail-body" id="detailBody"></div>
+</div>
+
+<script>
+let DATA = null;
+let sortCol = null, sortDir = 1;
+let activeFams = new Set(); // which SINE families are visible (empty = all)
+let activePreset = 'all';
+
+const CLADE_CSS = {
+  'Serpentes':'grp-serpentes','Amphisbaenia':'grp-amphisbaenia','Anguimorpha':'grp-anguimorpha',
+  'Dibamia':'grp-dibamia','Gekkota':'grp-gekkota','Iguania':'grp-iguania',
+  'Laterata':'grp-laterata','Scinciformata':'grp-scinciformata','Rhynchocephalia':'grp-rhynchocephalia'
+};
+const CLADE_ORDER = ['Serpentes','Amphisbaenia','Anguimorpha','Dibamia','Gekkota','Iguania','Laterata','Scinciformata','Rhynchocephalia'];
+
+const MSA_VIEWER = 'https://toki-bio.github.io/MSA-viewer/';
+const SINEDB_BASE = 'https://toki-bio.github.io/SINEdb/';
+
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function fmt(n){return (n!=null)?n.toLocaleString():'—';}
+
+function viewerLink(relPath,label){
+  return '<a href="'+MSA_VIEWER+'?url='+encodeURIComponent(SINEDB_BASE+relPath)+'" target="_blank">'+label+'</a>';
+}
+
+// ──── Init ────────────────────────────────────────────────────────────────
+
+async function init(){
+  try{
+    const r = await fetch('unified_data.json');
+    DATA = await r.json();
+  }catch(e){
+    document.getElementById('tableWrap').innerHTML='<p style="padding:20px;color:red">Error: '+e.message+'</p>';
+    return;
+  }
+
+  // Populate clade filter
+  const clades = [...new Set(DATA.species.map(s=>s.clade))];
+  clades.sort((a,b)=>(CLADE_ORDER.indexOf(a)<0?99:CLADE_ORDER.indexOf(a))-(CLADE_ORDER.indexOf(b)<0?99:CLADE_ORDER.indexOf(b)));
+  const cs = document.getElementById('cladeFilter');
+  clades.forEach(c=>{ const o=document.createElement('option'); o.value=c; o.textContent=c+' ('+DATA.species.filter(s=>s.clade===c).length+')'; cs.appendChild(o); });
+
+  // Populate taxonomic family filter
+  const taxFams = [...new Set(DATA.species.map(s=>s.family))].sort();
+  const tf = document.getElementById('famTaxFilter');
+  taxFams.forEach(f=>{ const o=document.createElement('option'); o.value=f; o.textContent=f; tf.appendChild(o); });
+
+  // Build SINE family toggle buttons
+  const famBtns = document.getElementById('famBtns');
+  for(const fam of Object.keys(DATA.sine_families)){
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.dataset.fam = fam;
+    btn.textContent = fam + ' (' + DATA.sine_families[fam].length + ')';
+    btn.onclick = function(){ toggleFam(fam); };
+    famBtns.appendChild(btn);
+  }
+
+  // Stats
+  const nSnakes = DATA.species.filter(s=>s.clade==='Serpentes').length;
+  const nOut = DATA.species.length - nSnakes;
+  document.getElementById('topStats').textContent = nSnakes+' snakes + '+nOut+' outgroups = '+DATA.species.length+' species · '+DATA.subfamilies.length+' subfamilies';
+  document.getElementById('pageDesc').innerHTML = DATA.species.length+' species, '+DATA.subfamilies.length+' SINE subfamilies in '+Object.keys(DATA.sine_families).length+' families. '+
+    '<span style="color:#27ae60">■</span> Snake &nbsp; <span style="color:#e67e22">■</span> Outgroup &nbsp; '+
+    '<span style="color:#bbb;background:#f0f0f0;padding:0 4px; font-style:italic">—</span> Not searched. '+
+    'Right-click cells to mark ✓checked / ⚠working.';
+
+  render();
+}
+
+// ──── Presets & SINE family toggles ────────────────────────────────────────
+
+function applyPreset(preset){
+  activePreset = preset;
+  activeFams.clear();
+  // Update preset buttons
+  document.querySelectorAll('#presetBtns .filter-btn').forEach(b=>{
+    b.classList.toggle('active', b.dataset.preset===preset);
+  });
+  // Clear SINE family buttons
+  document.querySelectorAll('#famBtns .filter-btn').forEach(b=>b.classList.remove('active'));
+  render();
+}
+
+function toggleFam(fam){
+  activePreset = 'custom';
+  document.querySelectorAll('#presetBtns .filter-btn').forEach(b=>b.classList.remove('active'));
+  if(activeFams.has(fam)) activeFams.delete(fam);
+  else activeFams.add(fam);
+  document.querySelectorAll('#famBtns .filter-btn').forEach(b=>{
+    b.classList.toggle('active', activeFams.has(b.dataset.fam));
+  });
+  render();
+}
+
+function getVisibleSubfams(){
+  const shared9 = new Set(DATA.shared_subfamilies);
+  let pool;
+  if(activePreset==='all') pool = DATA.subfamilies.slice();
+  else if(activePreset==='shared9') pool = DATA.subfamilies.filter(sf=>shared9.has(sf));
+  else if(activePreset==='snake_specific') pool = DATA.subfamilies.filter(sf=>!shared9.has(sf));
+  else {
+    // Custom: only selected SINE families
+    pool = [];
+    for(const fam of activeFams){
+      pool.push(...(DATA.sine_families[fam]||[]));
+    }
+    if(pool.length===0) pool = DATA.subfamilies.slice(); // fallback
+  }
+  return pool;
+}
+
+// ──── Render ──────────────────────────────────────────────────────────────
+
+function render(){
+  const clade = document.getElementById('cladeFilter').value;
+  const famTax = document.getElementById('famTaxFilter').value;
+  const minC = parseInt(document.getElementById('minCopies').value)||0;
+  const hideZ = document.getElementById('hideZero').checked;
+  const showPct = document.getElementById('showPct').checked;
+  const showSnakes = document.getElementById('showSnakes').checked;
+  const showOutgroups = document.getElementById('showOutgroups').checked;
+  const useFirm = document.getElementById('useFirm').checked;
+
+  let species = DATA.species.filter(sp=>{
+    if(clade && sp.clade!==clade) return false;
+    if(famTax && sp.family!==famTax) return false;
+    if(!showSnakes && sp.clade==='Serpentes') return false;
+    if(!showOutgroups && sp.clade!=='Serpentes') return false;
+    if(minC>0 && sp.total<minC) return false;
+    return true;
+  });
+
+  if(sortCol==='species') species.sort((a,b)=> sortDir * a.taxon.localeCompare(b.taxon));
+  else if(sortCol==='total') species.sort((a,b)=> sortDir * ((a.total||0) - (b.total||0)));
+  else if(sortCol) species.sort((a,b)=> sortDir * (getVal(a,sortCol,useFirm) - getVal(b,sortCol,useFirm)));
+
+  let visibleSFs = getVisibleSubfams();
+  if(hideZ) visibleSFs = visibleSFs.filter(sf=> species.some(sp=> getVal(sp,sf,useFirm) > 0));
+
+  // Build SINE family group headers for visible subfams
+  const groupHeaders = [];
+  for(const [famName, famSfs] of Object.entries(DATA.sine_families)){
+    const vis = famSfs.filter(sf=>visibleSFs.includes(sf));
+    if(vis.length>0) groupHeaders.push({name:famName, sfs:vis, count:vis.length});
+  }
+
+  // Column stats
+  let colTotals={}, colSnake={}, colOut={};
+  visibleSFs.forEach(sf=>{colTotals[sf]=0;colSnake[sf]=0;colOut[sf]=0;});
+  let grandTotal=0, snakeTotal=0, outTotal=0;
+  species.forEach(sp=>{
+    const isSnake = sp.clade==='Serpentes';
+    visibleSFs.forEach(sf=>{
+      const v=getVal(sp,sf,useFirm);
+      if(v>0){colTotals[sf]+=v; if(isSnake)colSnake[sf]+=v; else colOut[sf]+=v;}
+    });
+    grandTotal+=(sp.total||0);
+    if(isSnake) snakeTotal+=(sp.total||0); else outTotal+=(sp.total||0);
+  });
+
+  let h = '<table id="sumTable"><thead><tr>';
+  h += '<th class="sticky-sp" rowspan="2" onclick="doSort(\'species\')">Species ⇕</th>';
+  h += '<th class="sticky-tot" rowspan="2" onclick="doSort(\'total\')">Tot ⇕</th>';
+  groupHeaders.forEach(g=>{
+    h += '<th class="fam-hdr" colspan="'+g.count+'">'+esc(g.name)+'</th>';
+  });
+  h += '</tr><tr>';
+  visibleSFs.forEach(sf=>{
+    h += '<th class="sf-vert" onclick="doSort(\''+esc(sf)+'\')">'+esc(sf)+'</th>';
+  });
+  h += '</tr></thead><tbody>';
+
+  let lastGroup = '', prevClade = '';
+  species.forEach(sp=>{
+    const isSnake = sp.clade==='Serpentes';
+    if(prevClade==='Serpentes' && !isSnake && !clade){
+      h += '<tr class="clade-separator"><td class="sticky-sp"></td><td class="sticky-tot"></td>';
+      for(let i=0;i<visibleSFs.length;i++) h+='<td></td>';
+      h += '</tr>';
+    }
+    const grpKey = sp.clade+' › '+sp.family;
+    if(grpKey!==lastGroup){
+      const cls=CLADE_CSS[sp.clade]||'';
+      h += '<tr class="grp-hdr '+cls+'"><td class="sticky-sp" colspan="2"><strong>'+esc(grpKey)+'</strong></td>';
+      for(let i=0;i<visibleSFs.length;i++) h+='<td></td>';
+      h += '</tr>';
+      lastGroup = grpKey;
+    }
+    const rowCls = isSnake?'snake-row':'outgroup-row';
+    h += '<tr class="'+rowCls+'" data-taxon="'+esc(sp.taxon)+'">';
+    h += '<td class="sticky-sp"><i>'+esc(sp.taxon.replace(/_/g,' '))+'</i>';
+    h += '<br><span style="color:#888;font-size:9px">'+esc(sp.family)+'</span></td>';
+    h += '<td class="sticky-tot" onclick="showSpeciesInfo(\''+esc(sp.taxon)+'\')">'+fmt(sp.total)+'</td>';
+
+    visibleSFs.forEach(sf=>{
+      const raw = sp.counts[sf];
+      if(raw===null || raw===undefined){
+        // Not searched
+        h += '<td class="c-na" title="'+esc(sf)+': not searched in '+esc(sp.taxon.replace(/_/g,' '))+'">—</td>';
+        return;
+      }
+      const v = useFirm ? (sp.firm_counts[sf]!=null?sp.firm_counts[sf]:raw) : raw;
+      let display;
+      if(showPct && sp.total>0) display=(100*v/sp.total).toFixed(1)+'%';
+      else display=fmt(v);
+
+      let cls;
+      if(v>10000) cls='c-high';
+      else if(v>1000) cls='c-med';
+      else if(v>10) cls='c-low';
+      else if(v>0) cls='c-trace';
+      else cls='c-zero';
+
+      const cStatus = (sp.cell_status&&sp.cell_status[sf])||'';
+      const csCls = cStatus==='checked'?' cell-checked':cStatus==='working'?' cell-working':'';
+      const tip = sf+' in '+sp.taxon.replace(/_/g,' ')+': '+fmt(v)+(useFirm?' firm':'')+' copies';
+      h += '<td class="'+cls+csCls+'" title="'+esc(tip)+'" oncontextmenu="cycleStatus(event,\''+esc(sp.taxon)+'\',\''+esc(sf)+'\')" onclick="showCellInfo(\''+esc(sp.taxon)+'\',\''+esc(sf)+'\')">'+display+'</td>';
+    });
+    h += '</tr>';
+    prevClade = sp.clade;
+  });
+  h += '</tbody><tfoot>';
+
+  if(showSnakes && showOutgroups && !clade && !famTax){
+    h += '<tr><td class="sticky-sp"><strong>Snake subtotal</strong></td><td class="sticky-tot">'+fmt(snakeTotal)+'</td>';
+    visibleSFs.forEach(sf=>{h+='<td style="text-align:right;font-weight:700">'+fmt(colSnake[sf])+'</td>';});
+    h += '</tr>';
+    h += '<tr><td class="sticky-sp"><strong>Outgroup subtotal</strong></td><td class="sticky-tot">'+fmt(outTotal)+'</td>';
+    visibleSFs.forEach(sf=>{h+='<td style="text-align:right;font-weight:700">'+fmt(colOut[sf])+'</td>';});
+    h += '</tr>';
+  }
+  h += '<tr><td class="sticky-sp"><strong>Grand total</strong></td><td class="sticky-tot">'+fmt(grandTotal)+'</td>';
+  visibleSFs.forEach(sf=>{h+='<td style="text-align:right;font-weight:700">'+fmt(colTotals[sf])+'</td>';});
+  h += '</tr>';
+  const nSp = species.length;
+  if(nSp>0){
+    h += '<tr><td class="sticky-sp"><strong>Mean / species</strong></td><td class="sticky-tot">'+fmt(Math.round(grandTotal/nSp))+'</td>';
+    visibleSFs.forEach(sf=>{h+='<td style="text-align:right;font-weight:700;font-size:9px">'+fmt(Math.round(colTotals[sf]/nSp))+'</td>';});
+    h += '</tr>';
+  }
+  h += '</tfoot></table>';
+  document.getElementById('tableWrap').innerHTML = h;
+
+  const nS = species.filter(s=>s.clade==='Serpentes').length;
+  const nO = species.length-nS;
+  document.getElementById('countInfo').textContent = species.length+' species ('+nS+'S+'+nO+'O) × '+visibleSFs.length+' subfamilies';
+}
+
+function getVal(sp,sf,useFirm){
+  const raw = sp.counts[sf];
+  if(raw==null) return 0;
+  if(useFirm && sp.firm_counts && sp.firm_counts[sf]!=null) return sp.firm_counts[sf];
+  return raw;
+}
+
+function doSort(col){
+  if(sortCol===col) sortDir*=-1;
+  else{sortCol=col;sortDir=-1;}
+  if(col==='species') sortDir=sortCol===col?sortDir:1;
+  render();
+}
+
+// ──── Detail / Modal ──────────────────────────────────────────────────────
+
+function showInfoModal(title,bodyHtml){
+  const old=document.getElementById('_infoModal'); if(old)old.remove();
+  const ov=document.createElement('div'); ov.className='modal-overlay'; ov.id='_infoModal';
+  ov.innerHTML='<div class="modal"><div class="modal-title"><span>'+title+'</span><button onclick="this.closest(\'.modal-overlay\').remove()">&times;</button></div><div class="modal-body">'+bodyHtml+'</div><div class="modal-footer"><button onclick="this.closest(\'.modal-overlay\').remove()">Close</button></div></div>';
+  document.body.appendChild(ov);
+  ov.addEventListener('click',e=>{if(e.target===ov) ov.remove();});
+}
+function showModal(title,bodyHtml,onSave){
+  const old=document.getElementById('_infoModal'); if(old)old.remove();
+  const ov=document.createElement('div'); ov.className='modal-overlay'; ov.id='_infoModal';
+  ov.innerHTML='<div class="modal"><div class="modal-title"><span>'+title+'</span><button onclick="this.closest(\'.modal-overlay\').remove()">&times;</button></div><div class="modal-body">'+bodyHtml+'</div><div class="modal-footer"><button onclick="this.closest(\'.modal-overlay\').remove()">Cancel</button><button class="primary" id="modalSaveBtn">Save</button></div></div>';
+  document.body.appendChild(ov);
+  ov.querySelector('#modalSaveBtn').addEventListener('click',function(){if(!onSave||onSave(ov)!==false) ov.remove();});
+  ov.addEventListener('click',function(e){if(e.target===ov) ov.remove();});
+}
+
+function showSpeciesInfo(taxon){
+  const sp = DATA.species.find(s=>s.taxon===taxon);
+  if(!sp) return;
+  const isSnake = sp.clade==='Serpentes';
+  const allSfs = DATA.subfamilies;
+  const sorted = allSfs.filter(sf=>(sp.counts[sf]||0)>0).sort((a,b)=>(sp.counts[b]||0)-(sp.counts[a]||0));
+  const maxVal = sorted.length>0 ? sp.counts[sorted[0]] : 1;
+  let h = '<div style="display:flex;gap:16px;flex-wrap:wrap"><div style="flex:1;min-width:180px">';
+  h += '<div class="detail-row"><span style="display:inline-block;width:10px;height:10px;background:'+(isSnake?'#27ae60':'#e67e22')+';border-radius:2px;vertical-align:middle"></span> '+(isSnake?'Snake':'Non-snake squamate')+'</div>';
+  h += '<div class="detail-row"><b>Family:</b> '+esc(sp.family)+'</div>';
+  h += '<div class="detail-row"><b>Clade:</b> '+esc(sp.clade)+'</div>';
+  h += '<div class="detail-row"><b>Total:</b> '+fmt(sp.total)+'</div>';
+  h += '<div class="detail-row"><b>Searched:</b> '+esc(sp.searched_sets.join(', '))+'</div>';
+  h += '<hr style="margin:4px 0">';
+  sorted.forEach(sf=>{
+    const v = sp.counts[sf]||0;
+    const firmV = sp.firm_counts ? (sp.firm_counts[sf]||0) : v;
+    const softV = v - firmV;
+    const pct = (100*v/maxVal).toFixed(1);
+    const fracOfT = sp.total>0?(100*v/sp.total).toFixed(1):'0';
+    h += '<div class="detail-row"><b>'+esc(sf)+'</b>: '+fmt(v)+' ('+fracOfT+'%)'+(softV>0?' <span style="color:#888;font-size:9px">[firm:'+fmt(firmV)+' soft:'+fmt(softV)+']</span>':'')+'</div>';
+    h += '<div class="bar"><div class="bar-fill" style="width:'+pct+'%;background:'+getBarColor(sf)+'"></div><div class="bar-label">'+fmt(v)+'</div></div>';
+  });
+  h += '</div><div style="flex:2;min-width:300px">';
+  h += '<div style="font-weight:600;font-size:10px;margin-bottom:4px">Divergence Distributions</div>';
+  sorted.forEach(sf=>{
+    const p='plots/'+sp.taxon+'/'+sf+'_divergence.png';
+    h += '<img src="'+p+'" style="max-width:49%;max-height:120px;border:1px solid #ddd;border-radius:4px;margin:2px;vertical-align:top" onerror="this.style.display=\'none\'" />';
+  });
+  h += '</div></div>';
+  showInfoModal(sp.taxon.replace(/_/g,' '), h);
+}
+
+function showCellInfo(taxon,sf){
+  const sp = DATA.species.find(s=>s.taxon===taxon);
+  if(!sp) return;
+  const raw = sp.counts[sf];
+  if(raw===null||raw===undefined){showInfoModal(sf+' × '+taxon.replace(/_/g,' '),'<p>This subfamily was <b>not searched</b> in this species.</p><p>Search set: '+esc(sp.searched_sets.join(', '))+'</p>');return;}
+  const edits = (sp._edits && sp._edits[sf]) || {};
+  const v = edits.copy_count!=null ? edits.copy_count : raw;
+  const curStatus = edits.status || 'present';
+  const curNotes = edits.notes || '';
+  const curCurNotes = edits.curation_notes || '';
+  const curCellStatus = (sp.cell_status&&sp.cell_status[sf])||'';
+  const alnBase = 'alignments/'+taxon+'/'+sf;
+
+  let h='';
+  h += '<label>Subfamily</label><input value="'+esc(sf)+'" disabled style="background:#eee">';
+  h += '<label>Taxon</label><input value="'+esc(taxon.replace(/_/g,' '))+'" disabled style="background:#eee">';
+  h += '<label>Copy count</label><input id="mCopies" type="number" value="'+v+'">';
+  h += '<label>Status</label><select id="mStatus"><option'+(curStatus==='present'?' selected':'')+'>present</option><option'+(curStatus==='absent'?' selected':'')+'>absent</option><option'+(curStatus==='unknown'?' selected':'')+'>unknown</option></select>';
+  h += '<label>Cell Status</label><select id="mCellStatus"><option value=""'+(curCellStatus===''?' selected':'')+'>— not reviewed —</option><option value="checked"'+(curCellStatus==='checked'?' selected':'')+'>✓ Checked</option><option value="working"'+(curCellStatus==='working'?' selected':'')+'>⚠ Working</option></select>';
+  h += '<label>Notes</label><textarea id="mNotes">'+esc(curNotes)+'</textarea>';
+  h += '<label>Curation notes</label><textarea id="mCurNotes" placeholder="Reason for curation...">'+esc(curCurNotes)+'</textarea>';
+  h += '<div style="margin-top:8px"><div class="detail-row"><b>% of total:</b> '+(sp.total>0?(100*v/sp.total).toFixed(1):'0')+'%</div>';
+  const firmV = sp.firm_counts?(sp.firm_counts[sf]||0):v;
+  const softV = v-firmV;
+  h += '<div class="detail-row"><b>Firm:</b> '+fmt(firmV)+(softV>0?' &nbsp; <b>Soft:</b> '+fmt(softV):'')+'</div>';
+  h += '<div class="detail-row"><b>Clade:</b> '+esc(sp.clade)+' · '+esc(sp.family)+' · Searched: '+esc(sp.searched_sets.join(', '))+'</div></div>';
+  let alnLinks = viewerLink(alnBase+'.core.fa','Core')+viewerLink(alnBase+'.best50.fa','Best50')+viewerLink(alnBase+'.subfam.fa','SubFam');
+  h += '<div class="aln-links"><strong>Alignments:</strong> '+alnLinks+'</div>';
+  h += '<div id="conservationPanel" style="margin-top:4px"><div style="color:#888;font-size:10px">Loading conservation…</div></div>';
+  const plotBase = 'plots/'+taxon+'/'+sf;
+  h += '<div style="margin-top:8px">';
+  h += '<div id="divPlotWrap"><div style="font-weight:600;font-size:10px;margin-bottom:4px">Divergence Distribution</div>';
+  h += '<img src="'+plotBase+'_divergence.png" style="max-width:100%;max-height:220px;border:1px solid #ddd;border-radius:4px" onerror="this.parentElement.style.display=\'none\'" /></div>';
+  h += '</div>';
+
+  showModal('Edit: '+sf+' × '+taxon.replace(/_/g,' '), h, function(ov){
+    const newCopies = parseFloat(ov.querySelector('#mCopies').value)||0;
+    const oldCopies = sp.counts[sf]||0;
+    if(!sp._edits) sp._edits={};
+    sp._edits[sf] = {
+      copy_count:newCopies,
+      status:ov.querySelector('#mStatus').value,
+      notes:ov.querySelector('#mNotes').value.trim(),
+      curation_notes:ov.querySelector('#mCurNotes').value.trim()
+    };
+    const newCS = ov.querySelector('#mCellStatus').value;
+    if(!sp.cell_status) sp.cell_status={};
+    if(newCS) sp.cell_status[sf]=newCS; else delete sp.cell_status[sf];
+    sp.counts[sf]=newCopies;
+    sp.total=Math.max(0,(sp.total||0)-oldCopies+newCopies);
+    render();
+  });
+  setTimeout(()=>{
+    const panel=document.getElementById('conservationPanel');
+    if(panel) showConservation(alnBase+'.core.fa',panel);
+  },250);
+}
+
+function closeDetail(){ document.getElementById('detail').classList.remove('open'); }
+
+// ──── Cell status cycling ─────────────────────────────────────────────────
+
+function cycleStatus(event,taxon,sf){
+  event.preventDefault();
+  const sp=DATA.species.find(s=>s.taxon===taxon);
+  if(!sp) return;
+  if(sp.counts[sf]===null||sp.counts[sf]===undefined) return; // can't mark unsearched
+  if(!sp.cell_status) sp.cell_status={};
+  const cur=sp.cell_status[sf]||'';
+  if(cur==='') sp.cell_status[sf]='checked';
+  else if(cur==='checked') sp.cell_status[sf]='working';
+  else delete sp.cell_status[sf];
+  render();
+}
+
+// ──── Export ──────────────────────────────────────────────────────────────
+
+function exportJSON(){
+  const out=JSON.parse(JSON.stringify(DATA));
+  out.species.forEach(sp=>{delete sp._edits;});
+  const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='unified_data.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+// ──── Conservation histogram ──────────────────────────────────────────────
+
+function parseFasta(text){
+  const seqs=[]; const lines=text.split('\n'); let nm=null,sq='';
+  for(let i=0;i<lines.length;i++){
+    const ln=lines[i].trim();
+    if(ln.charAt(0)==='>'){if(nm!=null)seqs.push({name:nm,seq:sq}); nm=ln.substring(1).split(/\s+/)[0]; sq='';}
+    else sq+=ln;
+  }
+  if(nm!=null) seqs.push({name:nm,seq:sq});
+  return seqs;
+}
+
+function calcConservation(seqs){
+  if(!seqs.length)return{cols:[],consMap:[],refLen:0};
+  let len=0; seqs.forEach(s=>{if(s.seq.length>len)len=s.seq.length;});
+  const consMap=[]; const refSeq=seqs[0].seq;
+  for(let p=0;p<len;p++){const rc=(refSeq[p]||'-').toUpperCase(); if(rc!=='-'&&rc!=='N'&&rc!=='.')consMap.push(p);}
+  const cols=[];
+  for(let ci=0;ci<consMap.length;ci++){
+    const p2=consMap[ci];
+    let cb=(refSeq[p2]||'N').toUpperCase(); if(cb==='U')cb='T';
+    const ct={A:0,T:0,G:0,C:0}; let gap=0,match=0;
+    const total=seqs.length-1;
+    for(let si=1;si<seqs.length;si++){
+      let c=(seqs[si].seq[p2]||'-').toUpperCase(); if(c==='U')c='T';
+      if(c==='-'||c==='N') gap++;
+      else { if(ct[c]!==undefined)ct[c]++; if(c===cb)match++; }
+    }
+    const nonGap=total-gap;
+    cols.push({consPos:ci,alnCol:p2,consBase:cb,matchRate:nonGap>0?match/nonGap:0,gapFrac:gap/total,coverage:nonGap/total,ct,nonGap,total});
+  }
+  return{cols,consMap,refLen:consMap.length};
+}
+
+function showConservation(path,container){
+  container.innerHTML='<div style="color:#888;font-size:10px;padding:4px">Loading alignment…</div>';
+  fetch(path).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status); return r.text();})
+  .then(fasta=>{
+    const seqs=parseFasta(fasta);
+    if(seqs.length<2){container.innerHTML='<div style="color:#999;font-size:10px">'+seqs.length+' seq — need ≥2</div>';return;}
+    renderConservationCanvas(calcConservation(seqs),seqs.length-1,container);
+  }).catch(()=>{container.innerHTML='<div style="color:#aaa;font-size:10px">No alignment file</div>';});
+}
+
+function renderConservationCanvas(consData,nSeqs,container){
+  const cons=consData.cols;
+  if(!cons.length){container.innerHTML='<div style="color:#999">No data</div>';return;}
+  const matchH=55,covH=5,compH=35,labelH=14,g1=2,g2=2;
+  const totalH=matchH+g1+covH+g2+compH+labelH;
+  const y0cov=matchH+g1,y0comp=matchH+g1+covH+g2,y0lbl=y0comp+compH+2;
+  let html='<div class="conservation-container">';
+  html+='<div style="font-weight:600;font-size:10px;margin-bottom:2px">Match to consensus ('+nSeqs+' copies, '+cons.length+' pos)</div>';
+  html+='<canvas id="consCanvas" class="conservation-canvas" style="height:'+totalH+'px"></canvas>';
+  html+='<div class="conservation-legend"><span style="color:#1a6b3c">■ ≥80%</span><span style="color:#4CAF50">■ 60–80%</span><span style="color:#FF9800">■ 40–60%</span><span style="color:#f44336">■ <40%</span><span style="color:#90CAF9">▬ cov</span></div>';
+  html+='<div style="font-weight:600;font-size:10px;margin:4px 0 2px">Nucleotide composition</div>';
+  html+='<div class="conservation-legend"><span style="color:#e74c3c">■ A</span><span style="color:#2980b9">■ T</span><span style="color:#27ae60">■ G</span><span style="color:#8e44ad">■ C</span></div>';
+  html+='<div id="consTooltip" style="position:fixed;background:#333;color:#fff;padding:2px 6px;border-radius:3px;font-size:10px;pointer-events:none;display:none;z-index:200"></div>';
+  html+='</div>';
+  container.innerHTML=html;
+  const canvas=document.getElementById('consCanvas'); if(!canvas)return;
+  const cw=container.offsetWidth-20;
+  canvas.style.width=cw+'px';
+  const dpr=window.devicePixelRatio||1;
+  canvas.width=cw*dpr; canvas.height=totalH*dpr;
+  const ctx=canvas.getContext('2d'); ctx.scale(dpr,dpr);
+  const bw=cw/cons.length;
+  for(let i=0;i<cons.length;i++){
+    const d=cons[i],bh=d.matchRate*matchH,x=i*bw;
+    ctx.fillStyle=d.gapFrac>0.5?'#ccc':d.matchRate>=0.8?'#1a6b3c':d.matchRate>=0.6?'#4CAF50':d.matchRate>=0.4?'#FF9800':'#f44336';
+    ctx.fillRect(x,matchH-bh,Math.max(bw-0.3,0.5),bh);
+  }
+  ctx.fillStyle='#e8e8e8'; ctx.fillRect(0,y0cov,cw,covH);
+  for(let i=0;i<cons.length;i++){
+    ctx.fillStyle='rgba(33,150,243,'+(0.2+0.8*cons[i].coverage)+')';
+    ctx.fillRect(i*bw,y0cov,Math.max(bw-0.3,0.5),covH);
+  }
+  const BC={A:'#e74c3c',T:'#2980b9',G:'#27ae60',C:'#8e44ad'};
+  for(let i=0;i<cons.length;i++){
+    const d=cons[i],x=i*bw,w=Math.max(bw-0.3,0.5);
+    if(d.nonGap===0){ctx.fillStyle='#f0f0f0';ctx.fillRect(x,y0comp,w,compH);continue;}
+    let yo=y0comp+compH;
+    for(const b of ['A','T','G','C']){const bh=(d.ct[b]||0)/d.nonGap*compH; ctx.fillStyle=BC[b]; yo-=bh; ctx.fillRect(x,yo,w,bh);}
+  }
+  ctx.fillStyle='#999'; ctx.font='9px sans-serif'; ctx.textAlign='center';
+  const step=Math.max(1,Math.floor(cons.length/8));
+  for(let p=0;p<cons.length;p+=step) ctx.fillText(String(p+1),p*bw+bw/2,y0lbl+10);
+  canvas.addEventListener('mousemove',e=>{
+    const rect=canvas.getBoundingClientRect();
+    const idx=Math.floor((e.clientX-rect.left)/rect.width*cons.length);
+    const tip=document.getElementById('consTooltip');
+    if(idx>=0&&idx<cons.length&&tip){
+      const d=cons[idx],n=d.nonGap;
+      const comp=n>0?['A','T','G','C'].map(b=>b+':'+(100*(d.ct[b]||0)/n).toFixed(0)+'%').join(' '):'no data';
+      tip.textContent='Pos '+(d.consPos+1)+' ('+d.consBase+'): '+(d.matchRate*100).toFixed(1)+'% match | cov '+(d.coverage*100).toFixed(0)+'% | '+comp;
+      tip.style.left=e.clientX+12+'px'; tip.style.top=e.clientY-24+'px'; tip.style.display='block';
+    }
+  });
+  canvas.addEventListener('mouseleave',()=>{const tip=document.getElementById('consTooltip');if(tip)tip.style.display='none';});
+}
+
+function getBarColor(sf){
+  if(sf.startsWith('oph')) return '#e74c3c';
+  if(sf==='Heno') return '#3498db';
+  if(sf.startsWith('sq1')) return '#9b59b6';
+  if(sf.startsWith('sq2')||sf.startsWith('Sq2')) return '#2ecc71';
+  if(sf.startsWith('sq3')||sf.startsWith('Sq3')) return '#e67e22';
+  if(sf.startsWith('SqUCON')||sf==='UCON_cyl') return '#f39c12';
+  return '#7f8c8d';
+}
+
+init();
+</script>
+</body>
+</html>
