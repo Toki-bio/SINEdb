@@ -301,6 +301,15 @@ function render(){
   let visibleSFs = getVisibleSubfams();
   if(hideZ) visibleSFs = visibleSFs.filter(sf=> species.some(sp=> getVal(sp,sf,useFirm) > 0));
 
+  // Reorder visibleSFs to match sine_families grouping order (ensures colspan headers align)
+  let ordered = [];
+  for(const [fn, fSfs] of Object.entries(DATA.sine_families)){
+    fSfs.forEach(sf=>{ if(visibleSFs.includes(sf)) ordered.push(sf); });
+  }
+  // Add any orphans not in sine_families (shouldn't happen, but safety)
+  visibleSFs.forEach(sf=>{ if(!ordered.includes(sf)) ordered.push(sf); });
+  visibleSFs = ordered;
+
   // Build SINE family group headers for visible subfams
   const groupHeaders = [];
   for(const [famName, famSfs] of Object.entries(DATA.sine_families)){
