@@ -182,6 +182,54 @@ const SINEDB_BASE = 'https://toki-bio.github.io/SINEdb/';
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function fmt(n){return (n!=null)?n.toLocaleString():'—';}
 
+// ──── Edit auth ───────────────────────────────────────────────────────────
+// Default password: curator2026  — change by replacing EDIT_PASS_HASH with
+// SHA-256 hex of your new password:  python -c "import hashlib; print(hashlib.sha256(b'yourpass').hexdigest())"
+const EDIT_PASS_HASH = '75f7432572904fd9ac7f3f3f651d3c956f35448d8432be706c09c075a77bd98b';
+let _editAuth = sessionStorage.getItem('sedb_edit') === '1';
+
+function _hashStr(str){
+  return crypto.subtle.digest('SHA-256', new TextEncoder().encode(str))
+    .then(buf => Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join(''));
+}
+
+function requireEditAuth(cb){
+  if(_editAuth){ cb(); return; }
+  const ov = document.createElement('div');
+  ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;display:flex;align-items:center;justify-content:center';
+  ov.innerHTML = '<div style="background:#fff;border-radius:6px;padding:24px;min-width:280px;max-width:320px;box-shadow:0 4px 20px rgba(0,0,0,.35)">'
+    +'<div style="font-weight:700;font-size:14px;margin-bottom:10px;color:#1a4d8c">🔒 Curation password required</div>'
+    +'<input id="_authInput" type="password" autocomplete="current-password" style="width:100%;padding:6px 8px;font-size:13px;border:1px solid #aaa;border-radius:4px" placeholder="Password">'
+    +'<div style="color:#e53935;font-size:11px;margin-top:4px;min-height:14px" id="_authErr"></div>'
+    +'<div style="display:flex;gap:8px;margin-top:14px;justify-content:flex-end">'
+    +'<button onclick="this.closest(\'[data-auth]\').remove()" style="padding:4px 14px;cursor:pointer">Cancel</button>'
+    +'<button id="_authOK" style="padding:4px 14px;background:#1a4d8c;color:#fff;border:none;border-radius:4px;cursor:pointer">Unlock</button>'
+    +'</div></div>';
+  ov.setAttribute('data-auth','1');
+  document.body.appendChild(ov);
+  const inp = ov.querySelector('#_authInput');
+  const err = ov.querySelector('#_authErr');
+  const check = ()=>{
+    const val = inp.value;
+    if(!val){ err.textContent='Enter a password.'; return; }
+    _hashStr(val).then(h=>{
+      if(h === EDIT_PASS_HASH){
+        _editAuth = true;
+        sessionStorage.setItem('sedb_edit','1');
+        ov.remove();
+        cb();
+      } else {
+        err.textContent = 'Incorrect password.';
+        inp.value = ''; inp.focus();
+      }
+    });
+  };
+  ov.querySelector('#_authOK').addEventListener('click', check);
+  inp.addEventListener('keydown', e=>{ if(e.key==='Enter') check(); });
+  ov.addEventListener('click', e=>{ if(e.target===ov) ov.remove(); });
+  setTimeout(()=>inp.focus(), 50);
+}
+
 function viewerLink(relPath,label){
   return '<a href="'+MSA_VIEWER+'?url='+encodeURIComponent(SINEDB_BASE+relPath)+'" target="_blank">'+label+'</a>';
 }
@@ -487,6 +535,11 @@ function showSpeciesInfo(taxon){
 function showCellInfo(taxon,sf){
   const sp = DATA.species.find(s=>s.taxon===taxon);
   if(!sp) return;
+  const _rawCheck = sp.counts[sf];
+  if(_rawCheck!==null&&_rawCheck!==undefined) { requireEditAuth(()=>_showCellInfoBody(taxon,sf)); return; }
+  _showCellInfoBody(taxon,sf);
+}
+function _showCellInfoBody(taxon,sf){
   const raw = sp.counts[sf];
   if(raw===null||raw===undefined){showInfoModal(sf+' × '+taxon.replace(/_/g,' '),'<p>This subfamily was <b>not searched</b> in this species.</p><p>Search set: '+esc(sp.searched_sets.join(', '))+'</p>');return;}
   const edits = (sp._edits && sp._edits[sf]) || {};
@@ -510,8 +563,10 @@ function showCellInfo(taxon,sf){
   const softV = v-firmV;
   h += '<div class="detail-row"><b>Firm:</b> '+fmt(firmV)+(softV>0?' &nbsp; <b>Soft:</b> '+fmt(softV):'')+'</div>';
   h += '<div class="detail-row"><b>Clade:</b> '+esc(sp.clade)+' · '+esc(sp.family)+' · Searched: '+esc(sp.searched_sets.join(', '))+'</div></div>';
-  let alnLinks = viewerLink(alnBase+'.core.fa','Core')+viewerLink(alnBase+'.best50.fa','Best50')+viewerLink(alnBase+'.subfam.fa','SubFam');
-  h += '<div class="aln-links"><strong>Alignments:</strong> '+alnLinks+'</div>';
+  if(v > 0){
+    let alnLinks = viewerLink(alnBase+'.core.fa','Core')+viewerLink(alnBase+'.best50.fa','Best50')+viewerLink(alnBase+'.subfam.fa','SubFam');
+    h += '<div class="aln-links"><strong>Alignments:</strong> '+alnLinks+'</div>';
+  }
   h += '<div id="conservationPanel" style="margin-top:4px"><div style="color:#888;font-size:10px">Loading conservation…</div></div>';
   const plotBase = 'plots/'+taxon+'/'+sf;
   h += '<div style="margin-top:8px">';
@@ -550,13 +605,15 @@ function cycleStatus(event,taxon,sf){
   event.preventDefault();
   const sp=DATA.species.find(s=>s.taxon===taxon);
   if(!sp) return;
-  if(sp.counts[sf]===null||sp.counts[sf]===undefined) return; // can't mark unsearched
-  if(!sp.cell_status) sp.cell_status={};
-  const cur=sp.cell_status[sf]||'';
-  if(cur==='') sp.cell_status[sf]='checked';
-  else if(cur==='checked') sp.cell_status[sf]='working';
-  else delete sp.cell_status[sf];
-  render();
+  if(sp.counts[sf]===null||sp.counts[sf]===undefined) return;
+  requireEditAuth(()=>{
+    if(!sp.cell_status) sp.cell_status={};
+    const cur=sp.cell_status[sf]||'';
+    if(cur==='') sp.cell_status[sf]='checked';
+    else if(cur==='checked') sp.cell_status[sf]='working';
+    else delete sp.cell_status[sf];
+    render();
+  });
 }
 
 // ──── Export ──────────────────────────────────────────────────────────────
