@@ -569,6 +569,18 @@ function _showCellInfoBody(taxon,sf){
     let alnLinks = viewerLink(alnBase+'.core.fa','Core')+viewerLink(alnBase+'.best50.fa','Best50')+viewerLink(alnBase+'.subfam.fa','SubFam');
     h += '<div class="aln-links"><strong>Alignments:</strong> '+alnLinks+'</div>';
   }
+  // Per-species consensus sequence
+  if(sp.consensuses && sp.consensuses[sf]){
+    const cseq = sp.consensuses[sf];
+    h += '<div style="margin-top:8px;border:1px solid #ccd;border-radius:4px;padding:6px;background:#f8f8ff">';
+    h += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">';
+    h += '<span style="font-weight:600;font-size:11px">Consensus ('+cseq.length+' bp)</span>';
+    h += '<button onclick="navigator.clipboard.writeText(\''+cseq+'\');this.textContent=\'Copied!\';setTimeout(()=>this.textContent=\'Copy seq\',1500)" style="font-size:10px;padding:1px 8px;cursor:pointer;border:1px solid #aab;border-radius:3px;background:#eef">Copy seq</button> ';
+    h += '<button onclick="navigator.clipboard.writeText(\'>' +taxon+'_'+sf+'_consensus\\n'+cseq+'\');this.textContent=\'Copied!\';setTimeout(()=>this.textContent=\'Copy FASTA\',1500)" style="font-size:10px;padding:1px 8px;cursor:pointer;border:1px solid #aab;border-radius:3px;background:#eef">Copy FASTA</button>';
+    h += '</div>';
+    h += '<div style="font-family:monospace;font-size:10px;word-break:break-all;line-height:1.4;max-height:80px;overflow-y:auto;color:#335">'+esc(cseq)+'</div>';
+    h += '</div>';
+  }
   h += '<div id="conservationPanel" style="margin-top:4px"><div style="color:#888;font-size:10px">Loading conservation…</div></div>';
   const plotBase = 'plots/'+taxon+'/'+sf;
   h += '<div style="margin-top:8px">';
