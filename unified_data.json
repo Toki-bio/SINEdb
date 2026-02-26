@@ -4174,9 +4174,9 @@
         "SqUCON": 277,
         "SqUCON1": 528,
         "UCON_cyl": 3694,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 10907,
+        "sq3other": 887,
+        "sq1_body": 3844
       },
       "firm_counts": {
         "Heno": 687,
@@ -4220,13 +4220,14 @@
         "SqUCON": 191,
         "SqUCON1": 387,
         "UCON_cyl": 3006,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 6176,
+        "sq3other": 277,
+        "sq1_body": 3634
       },
-      "total": 43860,
+      "total": 59498,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.1356,
@@ -4237,7 +4238,10 @@
         "sq2_Eryx": 0.3315,
         "SqUCON": 0.2181,
         "SqUCON1": 0.2382,
-        "UCON_cyl": 0.2562
+        "UCON_cyl": 0.2562,
+        "sq3a": 0.2811,
+        "sq3other": 0.1525,
+        "sq1_body": 0.5133
       },
       "consensuses": {
         "oph2": "AGGTGGTGAGTGCTCCAACACTGGAGGCATTCAAGAGAAATTTGGACAACCACCTGGCAGATATCCTTTGATTTGTATTCCTGCATGAGCAGGGGGTTGGACTTGATGGCCTTTAGGCCCCTTCCAACTATTT",
@@ -4291,9 +4295,9 @@
         "SqUCON": 203,
         "SqUCON1": 355,
         "UCON_cyl": 857,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 11806,
+        "sq3other": 618,
+        "sq1_body": 41830
       },
       "firm_counts": {
         "Heno": 696,
@@ -4337,13 +4341,14 @@
         "SqUCON": 110,
         "SqUCON1": 286,
         "UCON_cyl": 600,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 8901,
+        "sq3other": 272,
+        "sq1_body": 41616
       },
-      "total": 32965,
+      "total": 87219,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.1382,
@@ -4354,7 +4359,10 @@
         "sq2_Eryx": 0.3559,
         "SqUCON": 0.2171,
         "SqUCON1": 0.2778,
-        "UCON_cyl": 0.2596
+        "UCON_cyl": 0.2596,
+        "sq3a": 0.2447,
+        "sq3other": 0.1377,
+        "sq1_body": 0.5159
       },
       "consensuses": {
         "oph1": "CCCCTGGAGGTTCAAGAAAATTGGACCATCTGTCAGTGCTTTGATTGGATTCCTGCTTGAGCAGGGGGTTGGACTGATGGCCTTAGGCCCTTCCAACTCATATTCTT",
@@ -4754,9 +4762,9 @@
         "SqUCON": 5,
         "SqUCON1": 3,
         "UCON_cyl": 19777,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 100210,
+        "sq3other": 62785,
+        "sq1_body": 1
       },
       "firm_counts": {
         "Heno": 5465,
@@ -4800,13 +4808,14 @@
         "SqUCON": 5,
         "SqUCON1": 3,
         "UCON_cyl": 6517,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 64243,
+        "sq3other": 50274,
+        "sq1_body": 1
       },
-      "total": 80166,
+      "total": 243162,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.1891,
@@ -4817,7 +4826,10 @@
         "sq2_Eryx": 0.3077,
         "SqUCON": 0.09,
         "SqUCON1": 0.1038,
-        "UCON_cyl": 0.2316
+        "UCON_cyl": 0.2316,
+        "sq3a": 0.4313,
+        "sq3other": 0.4116,
+        "sq1_body": 0.1505
       },
       "consensuses": {
         "oph3": "GTGACTAAATTGGATTGTTACCTCTCAGAACGGGATAATTTGGCTTCCAGATACCTGCGAAGGCAGGTGGGTTGGACTAAGATGACCCTGTGGTCCCTTCCAACTCTAATACTAT",
@@ -7382,9 +7394,9 @@
         "SqUCON": 6,
         "SqUCON1": 2,
         "UCON_cyl": 7638,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 157875,
+        "sq3other": 127947,
+        "sq1_body": 29440
       },
       "firm_counts": {
         "Heno": 24225,
@@ -7428,19 +7440,25 @@
         "SqUCON": 6,
         "SqUCON1": 2,
         "UCON_cyl": 6365,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 67710,
+        "sq3other": 107949,
+        "sq1_body": 29216
       },
-      "total": 129729,
+      "total": 444991,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "Heno": "AGCCGATCTCTCAGATCTCAGAAGCTAAGCAGGGTCGCCCTGGTTAGTATTTGGATGGGAGACCACCAAGGAAGTCCAGGGTTGCTAGCAGAGGCAGGCAATGGCAAACCACCTCTGAAGTCTCTTGCCTTGAAAACCCTA",
         "oph1": "GGAGGTGGTGAGCTCCCCCTCCTGGCAGTCTTAAGCAGGGCTGGACAAACTTGTCAGGGATGCTCTAGGCTGATCCTGCATTGAGCAGGGGGTTGGACTAGATGGCCTGTATGGCCCCTTCCAACTCTGTGATTCTATGA",
         "oph2": "GGTGGCTCAGTGGTTAAGACGCTGACTGCAGACCGGAAGGTCGGTAGTTCAGCAGTTCGAGACCCGAGTGCTGCGTGACGGAGTGAGCTCCCGTCTCTGGCCCCAGCTCCTGCCAAC",
         "oph3": "AAAATTGTCAGGTGCTCTAGGCTGATCCTGCATGAGCAGGGGGTTGGACTAGATGGCCTGTATGGCCCCTTCCAACTCTGT"
+      },
+      "sim_means": {
+        "sq3a": 0.5065,
+        "sq3other": 0.3452,
+        "sq1_body": 0.7417
       }
     },
     {
@@ -7489,9 +7507,9 @@
         "SqUCON": 6,
         "SqUCON1": 6,
         "UCON_cyl": 10942,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 238447,
+        "sq3other": 230284,
+        "sq1_body": 42019
       },
       "firm_counts": {
         "Heno": 31889,
@@ -7535,13 +7553,14 @@
         "SqUCON": 6,
         "SqUCON1": 5,
         "UCON_cyl": 8985,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 92460,
+        "sq3other": 211067,
+        "sq1_body": 40557
       },
-      "total": 170582,
+      "total": 681332,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "Heno": "CCCATCTCTCAGATCTCAGAAGCTAAGCAGGGTCGGCCCTGGTTAGTATTTGGATGGGAGACCACCAAGGAAGTCCAGGGTTGCTATGCAGAGGCAGGCAATGGCAAACCACCTCTGAAGTCTCTTGCCTTGAAAACCCTA",
@@ -7549,6 +7568,11 @@
         "oph2": "GGTGGCTCAGGGTTAAGACGCTGACTGCAGACCGGAAGGTCGGTAGTTCGCAGTTCGAGACCCGAGTGCTGCGTGAGGAGTGAGCTCCCTCTCTGGCCCCAGCTCCTGCCAAC",
         "oph3": "GGTGATGCTCTAGGTCCTGCATTGAGCAGGGGGTTGGACTAGATGGCCTTAGGCCCCTTCCAACTCTTT",
         "UCON_cyl": "AGCCTGATCTCTCAGATCTTGGAAGCTAAGCAGGGTCGCCCTGGTAGTATTTGGATGGGAGACCCCAAGGAATACCAGGGTGAGCAGAGGCAGGCAATGGCAAACCACCTCTGAAGTCTCTTGCCT"
+      },
+      "sim_means": {
+        "sq3a": 0.5422,
+        "sq3other": 0.3767,
+        "sq1_body": 0.6383
       }
     },
     {
@@ -7597,9 +7621,9 @@
         "SqUCON": 1,
         "SqUCON1": 6,
         "UCON_cyl": 10214,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 64431,
+        "sq3other": 81316,
+        "sq1_body": 50914
       },
       "firm_counts": {
         "Heno": 10696,
@@ -7643,13 +7667,14 @@
         "SqUCON": 1,
         "SqUCON1": 5,
         "UCON_cyl": 8108,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 33017,
+        "sq3other": 74332,
+        "sq1_body": 47334
       },
-      "total": 109688,
+      "total": 306349,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "oph1": "GCCTAGGGAGGTGGTGAGTTCCCCTTCACTGGCAGTTTTCAAGAAGAGGCTGGATGAATATTTGTCGGGATGCTTTAGGCTGATCCTGCATTGGGCAGGGGGTTGGACTAGATGGTCTGTATGGCCCCTTCCAACTCTATGATTCTATGA",
@@ -7657,6 +7682,11 @@
         "oph_ae": "GGGCATAACAAGGACAAAAGGCTCTCATCACAATCAAAAAA",
         "sq2_Eryx": "TGCTCAGTGGAGAGCATCTGCTTGCATGCAGAAGGTCCCAGGTTCAATCCCGGCATCTCCAGTTAAAAGGATCAGGAGAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCGCTGCCAGTCTGAGTAGACAATACTGACTTGATGGACCAAGGTCTGATTCAGTATAAGGCAGTT",
         "UCON_cyl": "TGTTAAGCAGAGGCTGGATGGATTGTGGGGTGTTTCCGGCAGGGGGTTGGACTAGATGGCCCTGGTCTCTTCCAACTCTAGATTCTATGA"
+      },
+      "sim_means": {
+        "sq3a": 0.4581,
+        "sq3other": 0.3306,
+        "sq1_body": 0.7014
       }
     },
     {
@@ -7705,9 +7735,9 @@
         "SqUCON": 57879,
         "SqUCON1": 921,
         "UCON_cyl": 18333,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 128098,
+        "sq3other": 58008,
+        "sq1_body": 8
       },
       "firm_counts": {
         "Heno": 5785,
@@ -7751,13 +7781,14 @@
         "SqUCON": 57449,
         "SqUCON1": 599,
         "UCON_cyl": 13995,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 29442,
+        "sq3other": 42780,
+        "sq1_body": 8
       },
-      "total": 157765,
+      "total": 343879,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.1852,
@@ -7768,7 +7799,10 @@
         "sq2_Eryx": 0.3491,
         "SqUCON": 0.5242,
         "SqUCON1": 0.4125,
-        "UCON_cyl": 0.2435
+        "UCON_cyl": 0.2435,
+        "sq3a": 0.4084,
+        "sq3other": 0.2499,
+        "sq1_body": 0.1538
       },
       "consensuses": {
         "Heno": "AGCCATCTTCAGATCTCAGAAGCTAAGCAGGGTCGCCCTGGTTAGTATTTGGATGGGAGACCACCAAGGAACCAGGGTTGCTAGCAGAGGCAGGCAATGGCAAACCACCTCTGAATCTCTTGCCTTGAAAACCCA",
@@ -7824,9 +7858,9 @@
         "SqUCON": 61831,
         "SqUCON1": 873,
         "UCON_cyl": 27829,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 173115,
+        "sq3other": 69914,
+        "sq1_body": 6
       },
       "firm_counts": {
         "Heno": 8211,
@@ -7870,13 +7904,14 @@
         "SqUCON": 61466,
         "SqUCON1": 530,
         "UCON_cyl": 21249,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 36790,
+        "sq3other": 51757,
+        "sq1_body": 6
       },
-      "total": 187288,
+      "total": 430323,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "Heno": "AGCCATCTTCAGATCTCAGAAGCTAAGCAGGGTGCCCTGGTTAGTATTTGGATGGGAGACCACCAAGGAACCAGGGTTGCTAGCAGAGGCAGGCAATGGCAAACCACCTCTGAATCTCTTGCCTTGAAAACCCTA",
@@ -7886,6 +7921,11 @@
         "SqUCON1": "GAGCCTCTTGTGGCGCAGAGTGGTAAAGCAGCCGACATGCTGTCTGAAGCTCTGACCATGAGGCTGGGAGTTCAATCCCAGCAGCCGGCTCAAGGTTGACTCAGCCTTCCATCCTTCCGAGGTCGGTAAAATGAGTACCCAGCTTGATGCTGGGGGGTAAAACGGTAATGACTGGGGAAGGCACTGGCAAAACCACCCCGTATTGAGTCTGCCATGAAAACGCTAGAGGGCGTCACCCCAGGGGTCAGACA",
         "SqUCON": "GAGCCTCTTGTGGCGCAGAGTGGTAAAGCAGCCGACATGCTGTCTGAAGCTCTGACCATGAGGCTGGGAGTTCAATCCCAGCAGCCGGCTCAAGGTTGACTCAGCCTTCCATCCTTCCGAGGTCGGTAAAATGAGTACCCAGCTTGATGCTGGGGGGTAAAACGGTAATGACTGGGGAAGGCACTGGCAAAACCACCCCGTATTGAGTCTGCCATGAAAACGCTAGAGGGCGTCACCCCAGGGGTCAGACATGACCCGGTGCTTGCACAGGGGATACCTTTACCTTT",
         "UCON_cyl": "GCATCTGACGGAGAGGCTGATTCTGTGAAGGCTTAAGGGGGTGGCAGGTACAGTGGATGAGCGATAGGTTGTGAGTATCCTGCATAGTGCAGGGGGTTGGACTAGATGACCCAGAGGTCCCTTCCAACTCTATGATTCTATGAT"
+      },
+      "sim_means": {
+        "sq3a": 0.431,
+        "sq3other": 0.2437,
+        "sq1_body": 0.1732
       }
     },
     {
@@ -7934,9 +7974,9 @@
         "SqUCON": 26741,
         "SqUCON1": 284,
         "UCON_cyl": 18909,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 227084,
+        "sq3other": 40805,
+        "sq1_body": 10
       },
       "firm_counts": {
         "Heno": 36051,
@@ -7980,18 +8020,24 @@
         "SqUCON": 26601,
         "SqUCON1": 135,
         "UCON_cyl": 12618,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 77518,
+        "sq3other": 27582,
+        "sq1_body": 10
       },
-      "total": 208876,
+      "total": 476775,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "oph1": "GCTGCCTAAGGAGGTGGTGAGCTCCCCCTCACTGGCAGTCTTCAAGCAGAGGCTGGACAGACACTTATCTTGGATGCTTTAGGCTGATCCTGCATTGAGCAGGGGGTTGGACTAGATGGCCTGTATGGCCCCTTCCAACTCTATGATTCTATGAT",
         "sq2_Eryx": "TGCTCAGTGGAGAGCATCTGCTTGCATGCAGAAGGTCCCAGGTTCAATCCCGGCATCTCCAGTTAAAAGGATCAGGAGAGGTGATGGAAAGACCTCTGCCTGAGACCCTGGAGAGCGCTGCCAGTCGAGTAGACAATACTGACCTTGATGGACCAAGGTCTGATTCAGTATAAGGCAGTT",
         "SqUCON1": "GAGCCTCTTGTGGCGCAGAGTGGTAAAGCAGCCGACATGCTGTCTTGAAGCTCTGACCATGAGGCTGGGAGTTCAATCCCAGCAGCCGGCTCAAGGTTGACTCAGCCTTCCATCCTTCCGAGGTCGGTAAAATGAGTACCCAGCTTGCTGGGGGGTAAACGGTAATGACTGGGGAAGGCAATGGCAAACCACCCCGTATTGAGTCTGCCACGAAAACGCTAAGCAGGGCGTCACCCCAAGGGTCAGACA"
+      },
+      "sim_means": {
+        "sq3a": 0.4863,
+        "sq3other": 0.2892,
+        "sq1_body": 0.1376
       }
     },
     {
@@ -8040,9 +8086,9 @@
         "SqUCON": 0,
         "SqUCON1": 0,
         "UCON_cyl": 11194,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 64679,
+        "sq3other": 10214,
+        "sq1_body": 39647
       },
       "firm_counts": {
         "Heno": 490,
@@ -8086,18 +8132,24 @@
         "SqUCON": 0,
         "SqUCON1": 0,
         "UCON_cyl": 9725,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 59406,
+        "sq3other": 6128,
+        "sq1_body": 39644
       },
-      "total": 22226,
+      "total": 136766,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "oph1": "AGGAGGTGGTGAGTTCCCTTCCTGGAAGTCTTCAAACAGAGGCTGGACAGTCATCTGTCTGGGATGGTTTAATGAATCCTGCATTGAGCAGGGGGTTGGACCCATGACCCTGGAGGTCCCTTCCAACTCTATGATTCTATGA",
         "oph3": "TTCACTGGAAGTCTTCAAACAGAGCTGGACAGTCATCTGTCTGGGATGGTTTATGAATCCTGCATTGAGCAGGGGGTTGGACCCATGACCCTGGAGGTCCCTTCCAACTCTATGATTCT",
         "sq2_Eryx": "AGAACATGTTTTGATGCAAAGGTCGTTCAATCCTGCATCTCCAGAAATTTAAACGAACTCCATAAAATATGATAATAATTT"
+      },
+      "sim_means": {
+        "sq3a": 0.316,
+        "sq3other": 0.2538,
+        "sq1_body": 0.2525
       }
     },
     {
@@ -8853,9 +8905,9 @@
         "SqUCON": 1,
         "SqUCON1": 1,
         "UCON_cyl": 843,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 43699,
+        "sq3other": 42069,
+        "sq1_body": 58570
       },
       "firm_counts": {
         "Heno": 5,
@@ -8899,13 +8951,14 @@
         "SqUCON": 1,
         "SqUCON1": 1,
         "UCON_cyl": 757,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 35411,
+        "sq3other": 39085,
+        "sq1_body": 57966
       },
-      "total": 32798,
+      "total": 177136,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.2013,
@@ -8916,7 +8969,10 @@
         "sq2_Eryx": 0.4158,
         "SqUCON": 0.4066,
         "SqUCON1": 0.4901,
-        "UCON_cyl": 0.2423
+        "UCON_cyl": 0.2423,
+        "sq3a": 0.3307,
+        "sq3other": 0.385,
+        "sq1_body": 0.4008
       },
       "consensuses": {
         "oph2": "GGTTTAAAGGTTGATAGATTCCTGCATTGCAGGGGGTTGGACTAGATGACCCTTGGGTCCCTTCCAACTCT",
@@ -8969,9 +9025,9 @@
         "SqUCON": 5,
         "SqUCON1": 0,
         "UCON_cyl": 3613,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 38353,
+        "sq3other": 5619,
+        "sq1_body": 122211
       },
       "firm_counts": {
         "Heno": 44,
@@ -9015,17 +9071,23 @@
         "SqUCON": 5,
         "SqUCON1": 0,
         "UCON_cyl": 3028,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 31835,
+        "sq3other": 3941,
+        "sq1_body": 122023
       },
-      "total": 78603,
+      "total": 244786,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "oph3": "GATAGCTCAGTTGGTAGAGCATGGCTTTAATCAAGGTTGGGTTCGACCCCATATGGAATTCCTGCATTGCAGGGGGTTGGACTAGATGACCTCAGGGTCCCTTCCAACTCT",
         "UCON_cyl": "TTTGGGGTTTTAAGCAGAGGTTGGATGGCCATGGATGCTTTGTGAGATTCCTGCATTGCAGGGGGTTGGACTAGATGACCCTTGGGGTCCCTTCCAACTCTACATTCTATGAT"
+      },
+      "sim_means": {
+        "sq3a": 0.3554,
+        "sq3other": 0.4054,
+        "sq1_body": 0.4585
       }
     },
     {
@@ -9074,9 +9136,9 @@
         "SqUCON": 4,
         "SqUCON1": 3,
         "UCON_cyl": 3765,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 37559,
+        "sq3other": 6860,
+        "sq1_body": 92399
       },
       "firm_counts": {
         "Heno": 42,
@@ -9120,13 +9182,14 @@
         "SqUCON": 4,
         "SqUCON1": 3,
         "UCON_cyl": 3060,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 30595,
+        "sq3other": 5290,
+        "sq1_body": 92245
       },
-      "total": 80442,
+      "total": 217260,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.1416,
@@ -9137,7 +9200,10 @@
         "sq2_Eryx": 0.4831,
         "SqUCON": 0.0882,
         "SqUCON1": 0.0926,
-        "UCON_cyl": 0.2296
+        "UCON_cyl": 0.2296,
+        "sq3a": 0.3865,
+        "sq3other": 0.4116,
+        "sq1_body": 0.473
       },
       "consensuses": {
         "Heno": "TTTGAAGCTAAGCAGGTTGGTCTGGTAGTCTGGATGGGAGACCCTGGGAACATGTACCTTGTAGAAAAAAATATAAAAAAAAGT",
@@ -9191,9 +9257,9 @@
         "SqUCON": 6,
         "SqUCON1": 0,
         "UCON_cyl": 3835,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 41730,
+        "sq3other": 6433,
+        "sq1_body": 123811
       },
       "firm_counts": {
         "Heno": 46,
@@ -9237,13 +9303,14 @@
         "SqUCON": 6,
         "SqUCON1": 0,
         "UCON_cyl": 3107,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 34152,
+        "sq3other": 4652,
+        "sq1_body": 123546
       },
-      "total": 80702,
+      "total": 252676,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.1315,
@@ -9253,7 +9320,10 @@
         "oph_ae": 0.1138,
         "sq2_Eryx": 0.4971,
         "SqUCON": 0.0982,
-        "UCON_cyl": 0.2374
+        "UCON_cyl": 0.2374,
+        "sq3a": 0.357,
+        "sq3other": 0.4131,
+        "sq1_body": 0.4798
       },
       "consensuses": {
         "oph2": "GAGGTTTTAAGCAGAGGTTGGAGGCACTGTCATGGATGTTTAGTGAGATTCCTGCATTGCAGGGGGTTGGACTAGATGACCCTGGGGTCCCTTCCAACTCTT",
@@ -9308,9 +9378,9 @@
         "SqUCON": 1,
         "SqUCON1": 2,
         "UCON_cyl": 3998,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 28576,
+        "sq3other": 5079,
+        "sq1_body": 75954
       },
       "firm_counts": {
         "Heno": 41,
@@ -9354,13 +9424,14 @@
         "SqUCON": 1,
         "SqUCON1": 2,
         "UCON_cyl": 3219,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 23488,
+        "sq3other": 3543,
+        "sq1_body": 75758
       },
-      "total": 84332,
+      "total": 193941,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.131,
@@ -9371,7 +9442,10 @@
         "sq2_Eryx": 0.4764,
         "SqUCON": 0.0941,
         "SqUCON1": 0.0954,
-        "UCON_cyl": 0.2296
+        "UCON_cyl": 0.2296,
+        "sq3a": 0.3497,
+        "sq3other": 0.3697,
+        "sq1_body": 0.4931
       },
       "consensuses": {
         "oph1": "TGGAGGTCTTTAAGCAGAGGCTTGAAGCATTGTCAGAATGCTTTGATGGTGTTTCCTGCTTGGCAGGGGGTTGGACTGGATGGCCCTTGTGGTCTCTTCCAACTCTATGATTCTATGA",
@@ -9648,9 +9722,9 @@
         "SqUCON": 8,
         "SqUCON1": 4,
         "UCON_cyl": 11270,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 220043,
+        "sq3other": 30974,
+        "sq1_body": 4
       },
       "firm_counts": {
         "Heno": 13986,
@@ -9694,19 +9768,25 @@
         "SqUCON": 8,
         "SqUCON1": 4,
         "UCON_cyl": 9085,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 168540,
+        "sq3other": 13969,
+        "sq1_body": 4
       },
-      "total": 97073,
+      "total": 348094,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "Heno": "AGCCATCTTCAGATCTCGAAGCTAAGCAGGGTCGCCCTGGTTAGTATTGGATGGGAGACCACCAAGGAAGTCCAGGGTTGCTAGCAGAGGCAGGCAATGGCAAACCACCTCTGAAGTCTCTTGCCTTGAAAACCCTA",
         "oph1": "CGGGTGGTGGAGTCTCCTTCTTGGAGGTTTTTAAAGAGAGGCTGGATGGCCATCTGTGGGGTGCTTTGATTGTGTCTTCCTGCCTGGCAGGGGGTTGGACTGGATGGCCCTTGTGGTCTCTTCCAACTCTATGATTCTATGA",
         "oph3": "TGGAGGTTTTTAAACAGAGGCTGGATGGCCATCTGTTGGGAGTGCTTTGATTGTGTCTTCCTGCCTGGCAGGGGGTTGGACTGGATGGCCCTTGTGGTCTCTTCCAACTCTATGATTCT",
         "UCON_cyl": "GGTGGCTTTTGGAGGTTTTTAAAGAGAGGCTGGATGGCCATCTGTGGGAGTGCTTTGATGTGTTTCCTGCTGGCAGGGGGTTGGACTGGATGGCCCTTGTGGTCTCTTCCAACTCTAGATTCTATGA"
+      },
+      "sim_means": {
+        "sq3a": 0.503,
+        "sq3other": 0.3133,
+        "sq1_body": 0.1822
       }
     },
     {
@@ -9755,9 +9835,9 @@
         "SqUCON": 11806,
         "SqUCON1": 882,
         "UCON_cyl": 11130,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 92777,
+        "sq3other": 61411,
+        "sq1_body": 590
       },
       "firm_counts": {
         "Heno": 11878,
@@ -9801,17 +9881,23 @@
         "SqUCON": 11421,
         "SqUCON1": 631,
         "UCON_cyl": 9672,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 60731,
+        "sq3other": 52209,
+        "sq1_body": 430
       },
-      "total": 97814,
+      "total": 252592,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "SqUCON1": "CGTGGCGCAGAGTGGTAAGCTGCAGTACTGCAGTCCAAGCTCTGCTCACGACCTGAGTTCGATCCCGGCGAAGCCGTCTCAGGTAGCCGGCCCAAGGTCGACTCAGCCTTCCATCCTTCCGAGGTCGGTAAAATGAGTACCCAGCTTGCTGGGGGTAAAGGGTAGAAGACTGGGGAAGGCAATGGCAAACCACCCCGTAAACAAAGTCTGCCTAGAAAACGTCGGGATGTGACGTCACCCCATGGGTCAG",
         "UCON_cyl": "GTCTTGTTTTAAGCTGGATGGTTGGGGGGGGGTTCCTGCATGCAGGGGGTTGGACTAGATGCCCTGGGTCTCTTCCAACTCTATGATTCTATGA"
+      },
+      "sim_means": {
+        "sq3a": 0.4865,
+        "sq3other": 0.3603,
+        "sq1_body": 0.3486
       }
     },
     {
@@ -9860,9 +9946,9 @@
         "SqUCON": 33501,
         "SqUCON1": 1486,
         "UCON_cyl": 28455,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 101842,
+        "sq3other": 72422,
+        "sq1_body": 792
       },
       "firm_counts": {
         "Heno": 14365,
@@ -9906,19 +9992,25 @@
         "SqUCON": 33053,
         "SqUCON1": 1209,
         "UCON_cyl": 25804,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 63930,
+        "sq3other": 61730,
+        "sq1_body": 792
       },
-      "total": 156205,
+      "total": 331261,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "Heno": "TAGCCTCTCAGATCTCAGAAGCTAAGCAGGGTCGCCCTGGTTAGTATTTGGATGGGAGACCACCAAGGAAGTCCAGGGTTGCTATGCAGAGGCAGGCAATGGCAAACCACCTCTGAAGTCTCTTGCCTTGAAAACCCTAT",
         "oph2": "TGGAGGTTTTAACAGAGGCTGGATGGCCATCTGTGGAGTGCTTTGATGTGTGTTCCTGCATGGCAGGGGGTTGGACTGGATGGCCCTTGTGGTCTCTTCCAACTCTATGATTCT",
         "sq2_Eryx": "TGCTCAGTGGAGAGCATCTGCTTGCATGCAGAAGGTCCCAGGTTCAATCCCGGCATCTCCAGTTAAAAGGACAGGAGAGGTGATGTGAAAGACCTCTCCTGAGACCCTGGAGAGCCTGCCAGTCGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGTT",
         "SqUCON1": "CGTGGCGCAGAGTGGTAAGCTGCAGTACTGCAGTCCAAGCTCTGCTCACGACCTGAGTTCGATCCCGGCGAAGCCGTCTCAGGTAGCCGGCCCAAGGTCGACTCAGCCTTCCATCCTTCCGAGGTCGGTAAAATGAGTACCCAGCTTGCTGGGGGTAAAGGTAGAAGACTGGGGAAGGCAATGGCAAACCACCCCGTAAACAAAGTCTGCCTAGAAAACGTCGGGATGTGACGTCACCCCATGGGTC"
+      },
+      "sim_means": {
+        "sq3a": 0.4651,
+        "sq3other": 0.3814,
+        "sq1_body": 0.3068
       }
     },
     {
@@ -9967,9 +10059,9 @@
         "SqUCON": 4,
         "SqUCON1": 4,
         "UCON_cyl": 22687,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 125429,
+        "sq3other": 44670,
+        "sq1_body": 270
       },
       "firm_counts": {
         "Heno": 20288,
@@ -10013,13 +10105,14 @@
         "SqUCON": 4,
         "SqUCON1": 4,
         "UCON_cyl": 19666,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 76171,
+        "sq3other": 24713,
+        "sq1_body": 256
       },
-      "total": 126782,
+      "total": 297151,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "Heno": "TAGCCGATCTCTCAGATCTCGAAGCTAAGCAGGGTCGCCCTGGTTAGTATTTGGATGGGAGACCACCAAGGAAGTCCAGGGTTGCTAGCAGAGGCAGGCAATGGCAAACCACCTCTGAAGTCTCTTGCCTTGAAAACCCTA",
@@ -10029,6 +10122,11 @@
         "oph_ae": "AGGGTGGCCTAGGGTGAAGACTGCCTCCCATCAGAAGGTTGAGAGTTCAATCCTAGGTAGGGCAGATTTTCTCTCTCGGGCACAAAGAGAAAATATCTGCTGAAACTCGCATGGGTCAGGAAGGGCATCGGCCAGTAAACTCAGCTCCATTCAGTTGCCCGACTCTACCCGAAAGGGATTAAGGGTTAAAA",
         "sq2_Eryx": "TGCTCAGTGGAGAGCATCTGCTTGCATGCAGAAGGTCCCAGGTTCAATCCCGGCATCTCCAGTTAAAAGGATCAGGAGAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCGCTGCCAGTCGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
         "UCON_cyl": "TGGTTTTTAACAGAGGCTGGATGGCCATTTGGGAGTGCTTTGAGTGTTTCCTGCATGGCAGGGGGTTGGACTGATGGCCCTTGTGGTCTCTTCCAACTCTATGATTCTATGA"
+      },
+      "sim_means": {
+        "sq3a": 0.5187,
+        "sq3other": 0.3277,
+        "sq1_body": 0.5316
       }
     },
     {
@@ -10077,9 +10175,9 @@
         "SqUCON": 5,
         "SqUCON1": 1,
         "UCON_cyl": 9270,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 114980,
+        "sq3other": 38665,
+        "sq1_body": 0
       },
       "firm_counts": {
         "Heno": 21634,
@@ -10123,13 +10221,14 @@
         "SqUCON": 5,
         "SqUCON1": 1,
         "UCON_cyl": 7823,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 79283,
+        "sq3other": 26451,
+        "sq1_body": 0
       },
-      "total": 100223,
+      "total": 253868,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.1896,
@@ -10140,7 +10239,9 @@
         "sq2_Eryx": 0.3503,
         "SqUCON": 0.1073,
         "SqUCON1": 0.0958,
-        "UCON_cyl": 0.2308
+        "UCON_cyl": 0.2308,
+        "sq3a": 0.4886,
+        "sq3other": 0.4131
       },
       "consensuses": {
         "oph1": "GGGAGGTTGTGGGTTCTCCTCTCTGGAGGTTTTTAGGAAGAGGTTAGACAACTACCTTTCAGGGCTCTTTAGGTGGTGTCCTGCACTTGCAGGCAGGGGCTGGACTGATGACCCTTGTGGTCCCTTCCAACCCT",
@@ -10194,9 +10295,9 @@
         "SqUCON": 5,
         "SqUCON1": 5,
         "UCON_cyl": 8527,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 113945,
+        "sq3other": 33647,
+        "sq1_body": 2
       },
       "firm_counts": {
         "Heno": 14090,
@@ -10240,13 +10341,14 @@
         "SqUCON": 4,
         "SqUCON1": 4,
         "UCON_cyl": 7041,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 76201,
+        "sq3other": 22416,
+        "sq1_body": 2
       },
-      "total": 93148,
+      "total": 240742,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.2075,
@@ -10257,7 +10359,10 @@
         "sq2_Eryx": 0.3338,
         "SqUCON": 0.087,
         "SqUCON1": 0.1093,
-        "UCON_cyl": 0.2366
+        "UCON_cyl": 0.2366,
+        "sq3a": 0.5014,
+        "sq3other": 0.4077,
+        "sq1_body": 0.1447
       },
       "consensuses": {
         "oph2": "GCCTGCGGAGGTTGTGGGTTCTCCTCTCTGGAGGTTTTTAGAAGAGGTTGGACAATACCTTTCAGGGCTCTTAAGGGTGTCCTGCACATGCAGGCAGGGGTTGGACTAGATGACCCTTGTGGTCCCTTCCAACCCT",
@@ -10310,9 +10415,9 @@
         "SqUCON": 4672,
         "SqUCON1": 5880,
         "UCON_cyl": 5171,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 42774,
+        "sq3other": 2438,
+        "sq1_body": 19
       },
       "firm_counts": {
         "Heno": 4099,
@@ -10356,13 +10461,14 @@
         "SqUCON": 431,
         "SqUCON1": 5846,
         "UCON_cyl": 3205,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 36010,
+        "sq3other": 109,
+        "sq1_body": 19
       },
-      "total": 153225,
+      "total": 198456,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "oph1": "CACTGGAGTTCAAGAGGCTGGACAGCCATCTGTGGGATGCTTTATTGGATTCCTGCATTGAGCAGGGGGTTGGACTCGATGGCCTTAGGCCCCTTCCAACTCTAATTCTATGA",
@@ -10371,6 +10477,11 @@
         "sq2_Eryx": "TAGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCGGCATCTCCAGGTAGGGCTGGGAAAGACCCTGCTGAAACCCTGGAGAGCGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCGTATAAGGCAGCTTCCTTTT",
         "SqUCON1": "GACCTCCGTGGCGCAGAGTGGTAAGCGGCGGTAACGCAGCCGAAGCTCTGCTCACGGCCGGAGTTCGATTCCAACGGAAGGAGGAAGTCGAATCTCCGGTAAAAGGGGTCGAGGTCCACTCAGCCTTCCATCCATCCGTGGTCGGTAAAATGAGTACCCGGCATATGCTGGGGGGTAAAGAAAGGCCGGGGAAGGAACTGGCAATCCCACCCCATATATACGGTCTGCCTAGTAAACGTCGCAAGACGTCACCCTAAGAGTCGGAAACGACTCGCACTATAAGTGCGGGGACACCTTTACCTTT",
         "UCON_cyl": "CATCTTCTGATCTGGAAGCTAAGCAGGGTCAGGCCTGGTTAGTACTTGGATGGGAGACTCCTGGGAATACGGTGCCTAGGCTTAGAGGAAGGCAATGGTAAACCACCTCTGAATACCTCTTACCATGAAAACCCTATGAATA"
+      },
+      "sim_means": {
+        "sq3a": 0.402,
+        "sq3other": 0.1733,
+        "sq1_body": 0.1433
       }
     },
     {
@@ -10530,9 +10641,9 @@
         "SqUCON": 435,
         "SqUCON1": 140,
         "UCON_cyl": 2573,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 10441,
+        "sq3other": 383,
+        "sq1_body": 42102
       },
       "firm_counts": {
         "Heno": 10,
@@ -10576,13 +10687,14 @@
         "SqUCON": 386,
         "SqUCON1": 134,
         "UCON_cyl": 2413,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 8730,
+        "sq3other": 51,
+        "sq1_body": 42060
       },
-      "total": 25639,
+      "total": 78565,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.1371,
@@ -10592,7 +10704,10 @@
         "sq2_Eryx": 0.3829,
         "SqUCON": 0.4821,
         "SqUCON1": 0.4684,
-        "UCON_cyl": 0.3137
+        "UCON_cyl": 0.3137,
+        "sq3a": 0.3517,
+        "sq3other": 0.2035,
+        "sq1_body": 0.5329
       },
       "consensuses": {
         "Heno": "CTGTGATGCTAAGCAGGTCTGGGTTTGGTCAGTGCTGGATGGGAGACCATGCTTGAGCCATAAGAAAAGGTAAATGAAATAATAAATAATGTATATTACTGAAAAAGTATCAGTATAGAATTT",
@@ -10648,9 +10763,9 @@
         "SqUCON": 2,
         "SqUCON1": 3,
         "UCON_cyl": 773,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 18790,
+        "sq3other": 1835,
+        "sq1_body": 16105
       },
       "firm_counts": {
         "Heno": 117,
@@ -10694,19 +10809,25 @@
         "SqUCON": 2,
         "SqUCON1": 3,
         "UCON_cyl": 695,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 14803,
+        "sq3other": 544,
+        "sq1_body": 15700
       },
-      "total": 39919,
+      "total": 76649,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "Heno": "CTCGATCTGAAGCTAAGCAGGGTCAGCCCTGGTTAGTACTTGGATGGGAGACCACCAAGGAATCCAGGGTAGAGGAGGCAATGGCAAACCACCTCTGATTCTTGCCTAAAACTAT",
         "oph2": "TGAGTTTCAACAGAGGTGGGGCACGTTGAGATGCTTCCTGAGCAGGGGGTTGGACTAGATGACCTCCAAGGCCTTCCAACTCT",
         "sq2_Eryx": "AGCTCAGTGGAGAGCACTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACCCTGCTGAAACCCTGGAGAGCCTGCCAGTCAGGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTAAAGGCAGCTT",
         "UCON_cyl": "CTGGAGATCTTCAAGCAGAGGCTGAAGGCACCTGTGGAGATGCTCTAGGAGGATTTCCTGCTACAGGCAGGGGGTTGGACTAGATGACCTTGTGGGTCCCTTCCAACTCTATGATTCTATGA"
+      },
+      "sim_means": {
+        "sq3a": 0.4043,
+        "sq3other": 0.2709,
+        "sq1_body": 0.5136
       }
     },
     {
@@ -10755,9 +10876,9 @@
         "SqUCON": 5447,
         "SqUCON1": 1104,
         "UCON_cyl": 929,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 22261,
+        "sq3other": 1270,
+        "sq1_body": 2909
       },
       "firm_counts": {
         "Heno": 29,
@@ -10801,19 +10922,25 @@
         "SqUCON": 4849,
         "SqUCON1": 928,
         "UCON_cyl": 877,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 18988,
+        "sq3other": 128,
+        "sq1_body": 2872
       },
-      "total": 30333,
+      "total": 56773,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "oph3": "TTTAAAAGGCTGGTCTTGATTTCCTGCTGAGCAGGGGGTTGGACTAGATGACCTAAGGTCCCTTCCAACTCTT",
         "SqUCON1": "GAGCCTTGTGGCCAGAGTGGTAGGGCAGTACTGCAGCTGAGAACTCTCCCCACGACCTGAGTTCGATCCCAGGGAAGCTGGTTTTCAGGTAGCCGGCTCAAGGTCGACTCAGCCTTCCATCCTTCCGAGGTCGGTAAAATGAGTACCCATCTTGATGGGGGAAAGGTATTAGACTGGGGAAGGCAATGGCAAACCACCCCCTATATAGTCTGCCAGAAAATTAAGTGTCC",
         "SqUCON": "GAGCCTCTGTGGCGCAGAGTGGTAGGTTGCAGTACTGCAGCTGAGAACTCTCCCCACGACCTGAGTTCGATCCCAGGGGAAGCTGGGTTTTCAGGTAGCCGGCTCAAGGTTGACTCAGCCTTCCATCCTTCCGAGGTCGGTAAAATGAGTACCCATCTTGATGGGGGAAAGGTATATGACTGGGGAAGGCAATGGCAAACCACCCCACTATATAGTCTGCCAGAAAACGTCGCTAAGTGGCGTCAACCCCAAGGGTCAGTAATGACTCGGTGCTTGCACAGGGGACCTTTCCTTT",
         "UCON_cyl": "TGGAATAAAAGCGTGGAATTTGGAAGGGGGGTGGACTAGATGACCTTTTAGTCCCTTCCAATTCATGATTTTG"
+      },
+      "sim_means": {
+        "sq3a": 0.4068,
+        "sq3other": 0.1789,
+        "sq1_body": 0.5137
       }
     },
     {
@@ -10862,9 +10989,9 @@
         "SqUCON": 111,
         "SqUCON1": 21,
         "UCON_cyl": 4721,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 20703,
+        "sq3other": 1446,
+        "sq1_body": 533
       },
       "firm_counts": {
         "Heno": 99,
@@ -10908,18 +11035,24 @@
         "SqUCON": 94,
         "SqUCON1": 18,
         "UCON_cyl": 4334,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 16916,
+        "sq3other": 132,
+        "sq1_body": 513
       },
-      "total": 41528,
+      "total": 64210,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "oph_ae": "GCAAGTGACGGCGGTAGCATTCTGAGAATAAAAAGCCTTAAGGCTGCTCTGCTTGCAAATTGATAATCACTACAGGGAAAACAAAAAA",
         "SqUCON1": "GAGCTTGTGGTGCAGAGTGGTAGGCTGCAGTACTGCAGCCGAGAACTCTCCCCAGACCTGAGTTCGATCCCAGGGAAGTGGGATCTCAGGTAGCCGGCTGAGGTGACTCAGCCTTCCATCCTTCGAGGTCGTAAAATGAGTACCCAGCTTGCTGGGGGAAAGGTAACATGACTGGGGAAGGCAATGGCAAACCACCCGCTTATAGTCTGCCATGAAAGTGAAGCGCACACCCCAAGGGTCAGTAATGACT",
         "UCON_cyl": "GCCGATCTGTCTGATCTCGGAAGCTAAGCAGGGTCAGGCCTGGTTAGTACTTGGATGGGAGACCGCCTGGGAATACCGGGTGCTGTAGGCTTATACCATAGTCTTTCGAGACTGAAGGTTGCCAACCAC"
+      },
+      "sim_means": {
+        "sq3a": 0.3828,
+        "sq3other": 0.1777,
+        "sq1_body": 0.5423
       }
     },
     {
@@ -10968,9 +11101,9 @@
         "SqUCON": 1,
         "SqUCON1": 1,
         "UCON_cyl": 92685,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 144817,
+        "sq3other": 3009,
+        "sq1_body": 6
       },
       "firm_counts": {
         "Heno": 202,
@@ -11014,17 +11147,23 @@
         "SqUCON": 1,
         "SqUCON1": 1,
         "UCON_cyl": 89693,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 136747,
+        "sq3other": 122,
+        "sq1_body": 6
       },
-      "total": 198907,
+      "total": 346739,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "oph3": "CGGGTTAAGGGGCTGGACAGCCATCTGTCAGGGATGCTTTATTGGTTCCTGCATTGAGCAGGGGGTTGGACTCGATGGCCTTTAGGCCCCTTCCAACTCTAAT",
         "UCON_cyl": "GTGGCTAGCTGGCTCAGCTTGTCTGAGCGTGGAAAGCTAAGCAGGGTCAGGCCTGGTTATTACTTGGATGGGAGACCCCTCCTCTAGTTTCCTGCATTGAGCAGGGGGTTGGACTCGATGGCCTTGTAGGCTCCTTCCAACTCTATGATCTATGA"
+      },
+      "sim_means": {
+        "sq3a": 0.6066,
+        "sq3other": 0.182,
+        "sq1_body": 0.164
       }
     },
     {
@@ -11421,9 +11560,9 @@
         "SqUCON": 3670,
         "SqUCON1": 1354,
         "UCON_cyl": 3465,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 69029,
+        "sq3other": 85115,
+        "sq1_body": 785
       },
       "firm_counts": {
         "Heno": 5383,
@@ -11467,18 +11606,24 @@
         "SqUCON": 3199,
         "SqUCON1": 1182,
         "UCON_cyl": 3086,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 32889,
+        "sq3other": 70559,
+        "sq1_body": 776
       },
-      "total": 48715,
+      "total": 203644,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "oph1": "GTGGTGTCTCCTTGGAGGTTTTTAAACAGAGGCTGGATGCATTGTCAGGAGTGCTTTGTTGTGTTCCTGCATGCAGGGGGTTGGACTGATGGCCCTTGGGTCTCTTCCAACTCTATGATTCTT",
         "oph2": "GAGGTTTTTAAAAGAGGCTGGATGGCCATTGTCGGAGTGCTTTGATGTGTTCCTGCATGGCAGGGGGTTGGACTGATGGCCCTTGGGTCTCTTCCAACTCTATGATTT",
         "SqUCON1": "TGGCAGAGTGGTAAGCTGCAGTACTGCAGTCAAAGCTCTGCTCACACCTGAGTTCGATCCCAGGAAGTCGTTTCAGGTAGCCGGCTCAAGGTTGACTCAGCCTTCCATCCTTCAGGTTGTAAAATGAGTACCCAGCTTGCTGGGGGTAAAGTGTAGATGACTGGGGAAGGCAATGGCAAACCACCCCATAAACATAGTCTGCCTAGTAAATTGATGTGATCACCCCATGGGTCAGTAAT"
+      },
+      "sim_means": {
+        "sq3a": 0.3805,
+        "sq3other": 0.313,
+        "sq1_body": 0.5082
       }
     },
     {
@@ -11527,9 +11672,9 @@
         "SqUCON": 5190,
         "SqUCON1": 3108,
         "UCON_cyl": 5732,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 98566,
+        "sq3other": 165964,
+        "sq1_body": 8
       },
       "firm_counts": {
         "Heno": 8842,
@@ -11573,18 +11718,24 @@
         "SqUCON": 4051,
         "SqUCON1": 2563,
         "UCON_cyl": 5023,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 40468,
+        "sq3other": 145047,
+        "sq1_body": 8
       },
-      "total": 62648,
+      "total": 327186,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "Heno": "AGCCTGATCTTCAGATCTCAGAAGCTAAGCAGGGTGCCCTGGTTAGTATTGGATGGGAGACCACCAAGGAACCAGGGTTGCTATGCAGAGGCAGGCAATGGCAAACCACCTCTGAATCTCTTGCCTTGAAAACCCTA",
         "SqUCON1": "CGTGGCAGTGGTTGACTGCCACTCACACGTCAGGAGTTCGAGCCCCCTGTGGGTCAGATATCCTGGCAGCTGGCTCATGGTCAACTCAGCCATCCATCCATTCTTGGTGGTAAATGAGTACCTAGCTCATAGCTAGGGGGTAAAGAATAGCTGGGGAAAGCAATGGCAAACTACCCCACAAAAAGCTTGCCTATAAATCACTGCTTGCAGTGGTACCCCAGGGTAAACTGAAGGGGAAACTTT",
         "UCON_cyl": "TTCTTGGTAAGTGGATGGCTGGTTCTGCAGGGGTGATGCCTGGTCTCTTCCAACTCTATGATTCTAT"
+      },
+      "sim_means": {
+        "sq3a": 0.4224,
+        "sq3other": 0.3455,
+        "sq1_body": 0.1595
       }
     },
     {
@@ -11633,9 +11784,9 @@
         "SqUCON": 4492,
         "SqUCON1": 2826,
         "UCON_cyl": 4863,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 85221,
+        "sq3other": 140341,
+        "sq1_body": 6
       },
       "firm_counts": {
         "Heno": 7253,
@@ -11679,19 +11830,25 @@
         "SqUCON": 3620,
         "SqUCON1": 2369,
         "UCON_cyl": 4299,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 34430,
+        "sq3other": 121548,
+        "sq1_body": 6
       },
-      "total": 53205,
+      "total": 278773,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "oph2": "GGTTTTTAAACAGGGGTGTCAGGATGCTTTGTGTTCCTGCATTGCAGGGGGTTGGACTGATGGCCCTTGGTCTCTTCCAACTCTATGATTT",
         "oph3": "GAGGTTTTTAAACAGAGGCTGGATGCATTGTCAGGAGTGCTTTGATTGTGTGTTCCTGCATGCAGGGGGTTGGACTTGATGGCCCTTGGGTCTCTTCCAACTCTATGATTCT",
         "SqUCON": "TGGCAGAGTGGTAAGCTGCAGTACTGCAGTCAAAGCTCTGCTCAGACCTGAGTTCGATCCCAGGAAGTCGTTTCAGGTAGCGGCTCAAGGTTGACTCAGCCTTCCATCCTTCAGGTGGTAAAATGAGTACCCAGCTTGCTGGGGGTAAAGTGTAGATGACTGGGGAAGGCAATGGCAAACCACCCCTAAACAAGTCTGCCTAGTAAATGTGATGTGATCACCCCATGGGTCAGTAATGACCGTGCTTGCACAGGGGACTACCTTTACCTTT",
         "UCON_cyl": "TTGATTAAGTGGATGGAGGTTTGCAAGGGTGGACCGTCTCTTCCAACTTATGATTCT"
+      },
+      "sim_means": {
+        "sq3a": 0.4591,
+        "sq3other": 0.3668,
+        "sq1_body": 0.153
       }
     },
     {
@@ -11740,9 +11897,9 @@
         "SqUCON": 4305,
         "SqUCON1": 833,
         "UCON_cyl": 12327,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 142897,
+        "sq3other": 67876,
+        "sq1_body": 12032
       },
       "firm_counts": {
         "Heno": 28359,
@@ -11786,17 +11943,23 @@
         "SqUCON": 3990,
         "SqUCON1": 684,
         "UCON_cyl": 10313,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 77661,
+        "sq3other": 53164,
+        "sq1_body": 10131
       },
-      "total": 133105,
+      "total": 355910,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "SqUCON1": "GAGCCCGTGGCCAGAGTGGTAAGCTGCAGTACTGCAGTCAAAGCTCTGCTCACGACCTGAGTTCGATCCCGACGGAAGTCGGTTTCAGGTAGCCGGCTCAAGGTTGACTCAGCCTTCCATCCTTCCGAGGTCGGTAAAATGAGTACCCAGCTTGCTGGGGGTAAAGTGTAGATGACTGGGGAAGGCAATGGCAAACCACCCCGTAAACATAGTCTGCCTAGTAAACGTGTGATGTGACTCACCCCATGGGTCAGTAAT",
         "UCON_cyl": "GCTCCTTGGAGGTCTTTAAGCAGAGGCTGGATGGCCATCTGTGGGGTGCTTTGATGTGTTCCTGCATGGCAGGGGGTTGGACTGGATGACCCTTGAGGTCTCTTCCAACTCTATGATTCTATGA"
+      },
+      "sim_means": {
+        "sq3a": 0.6051,
+        "sq3other": 0.3149,
+        "sq1_body": 0.7565
       }
     },
     {
@@ -11958,9 +12121,9 @@
         "SqUCON": 1,
         "SqUCON1": 0,
         "UCON_cyl": 9444,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 14590,
+        "sq3other": 321,
+        "sq1_body": 13822
       },
       "firm_counts": {
         "Heno": 4369,
@@ -12004,13 +12167,14 @@
         "SqUCON": 1,
         "SqUCON1": 0,
         "UCON_cyl": 7047,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 12289,
+        "sq3other": 98,
+        "sq1_body": 13819
       },
-      "total": 34179,
+      "total": 62912,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.2749,
@@ -12019,7 +12183,10 @@
         "oph3": 0.2642,
         "sq2_Eryx": 0.3009,
         "SqUCON": 0.1464,
-        "UCON_cyl": 0.2937
+        "UCON_cyl": 0.2937,
+        "sq3a": 0.3156,
+        "sq3other": 0.2381,
+        "sq1_body": 0.4252
       },
       "consensuses": {
         "oph2": "GGTGGCGCAGAAGGCTAAGGCACTGATCTTTCAATAGGAGGATCGGAGTTCAAGGCCCCTGTCTGCCGTGTGGAGGGGATGAGCGCCCTCTACTGGCCTCTAGCTCTGAATCCTGCATGGAGCAGGGGGTTGGACTCGATGACCCTGGAGGTCCCTTCCAACTCTATGATTCTAT",
@@ -12736,9 +12903,9 @@
         "SqUCON": 4,
         "SqUCON1": 4,
         "UCON_cyl": 22687,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 258966,
+        "sq3other": 70299,
+        "sq1_body": 3
       },
       "firm_counts": {
         "Heno": 20470,
@@ -12782,17 +12949,23 @@
         "SqUCON": 4,
         "SqUCON1": 4,
         "UCON_cyl": 22687,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 160771,
+        "sq3other": 45970,
+        "sq1_body": 3
       },
-      "total": 126782,
+      "total": 456050,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "Heno": "AGCCGATCTCTCAGATCTCAGAAGCTAAGCAGGGTCGCCCTGGTTAGTATTGGATGGGAGACCACCAAGGAAGTCCAGGGTTGCTAGCAGAGGCAGGCAATGGCAAACCACCTCTGAATCTCTTGCCTTGAAAACCCTA",
         "UCON_cyl": "GCTGCCTCGAGTGTGGTGGAGTCTCCTTCTCTGGAGTTTTTAAACAGAGGCTGGATGGCCATCTTTGGGAGTGCTTTGATGTGTATTCCTGCATGGCAGGGGGTTGGACTGGATGGCCCTTGTGGTCTCTTCCAACTCTATGATTCTATGA"
+      },
+      "sim_means": {
+        "sq3a": 0.5329,
+        "sq3other": 0.367,
+        "sq1_body": 0.159
       }
     },
     {
@@ -12841,9 +13014,9 @@
         "SqUCON": 0,
         "SqUCON1": 0,
         "UCON_cyl": 2284,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 76198,
+        "sq3other": 2955,
+        "sq1_body": 6931
       },
       "firm_counts": {
         "Heno": 26,
@@ -12887,18 +13060,24 @@
         "SqUCON": 0,
         "SqUCON1": 0,
         "UCON_cyl": 1773,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 64189,
+        "sq3other": 105,
+        "sq1_body": 6737
       },
-      "total": 34492,
+      "total": 120576,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "oph1": "CCTGAGAGGTGGTGGGCTCTCCCACACTGGAGCATTCAAGAGAAACTGGACAGCCATCTGAGTGGGATGGTGTAATGGTGTCCTGCAACAGCAGGGGGTTGGACTGATGGCCTTCTGGCCCCTTCCAACTCTACTATTCTT",
         "oph2": "CGGAGGTGGGGGCTCTCCCACACTGGAGACATTCAAAAGAAACTGGACAGCCATCTGAGTGGGATGGTGTGACTGGTGTCCTGCAACAGCAGGGGGTTGGACTGATGGCCTTCTGGCCCCTTCCAACTCTCTTTT",
         "sq2_Eryx": "TCAGTGGAGAGCACTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGAGGGGAAAACTGCCTGAAACCCTGGAGAGCCTGCCAGTCAGGTACAATACTGGGCTAGATGGACCAAGGTCTGAGTATAAGGCAGTT"
+      },
+      "sim_means": {
+        "sq3a": 0.4199,
+        "sq3other": 0.2238,
+        "sq1_body": 0.4649
       }
     },
     {
@@ -12947,9 +13126,9 @@
         "SqUCON": 6,
         "SqUCON1": 2,
         "UCON_cyl": 27488,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 72989,
+        "sq3other": 2353,
+        "sq1_body": 7530
       },
       "firm_counts": {
         "Heno": 47,
@@ -12993,18 +13172,24 @@
         "SqUCON": 5,
         "SqUCON1": 2,
         "UCON_cyl": 26731,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 62307,
+        "sq3other": 98,
+        "sq1_body": 7385
       },
-      "total": 59427,
+      "total": 142299,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "consensuses": {
         "Heno": "AAGCTAAGCAGGTGCCTGGTTGGAGGGAGACCATGATCAGGAAAAAAAAAAAAAAAAAAA",
         "oph2": "GAGGTGGGGGCTCTCCCACACTGGAGCATTCAAAAGAAACTGGACAGCCATCTGAGTGGGATGGTGTGATGGTGTCCTGCACAGCAGGGGGTTGGACTGATGGCCTTCTGGCCCCTTCCAACTCTTTTT",
         "oph_ae": "CCAATTGATTTTATAAAAGAAAAAGTAGCCATTCCTTCTTAAAAAA"
+      },
+      "sim_means": {
+        "sq3a": 0.4589,
+        "sq3other": 0.2345,
+        "sq1_body": 0.4322
       }
     },
     {
@@ -13053,9 +13238,9 @@
         "SqUCON": 1,
         "SqUCON1": 1,
         "UCON_cyl": 18569,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 70140,
+        "sq3other": 3240,
+        "sq1_body": 3
       },
       "firm_counts": {
         "Heno": 72,
@@ -13099,13 +13284,14 @@
         "SqUCON": 1,
         "SqUCON1": 1,
         "UCON_cyl": 13108,
-        "sq3a": null,
-        "sq3other": null,
-        "sq1_body": null
+        "sq3a": 63363,
+        "sq3other": 153,
+        "sq1_body": 3
       },
-      "total": 101098,
+      "total": 174481,
       "searched_sets": [
-        "full_41"
+        "full_41",
+        "sq1sq3"
       ],
       "sim_means": {
         "Heno": 0.1497,
@@ -13116,7 +13302,10 @@
         "sq2_Eryx": 0.4594,
         "SqUCON": 0.0887,
         "SqUCON1": 0.1003,
-        "UCON_cyl": 0.4175
+        "UCON_cyl": 0.4175,
+        "sq3a": 0.4928,
+        "sq3other": 0.2141,
+        "sq1_body": 0.1649
       },
       "consensuses": {
         "oph2": "CCTGAGGAGGTGGTGGGCTCTCCTTCATTGGAGGTTTTTAAGCAGAGGCTGGACGGCCATCTGGCAGGGATGCTGTAGTGGTGGATTCCTGCTCTGTGCAGGGGGTTGGACTGGATGATCTCCAAGGTCTCTTCCAACTCTTTGATTCTAT"
