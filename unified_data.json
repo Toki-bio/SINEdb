@@ -6569,11 +6569,11 @@
         "sq3a": 200077,
         "sq3other": 24658,
         "sq1_body": 3079,
-        "g1a_Sphaerodactylus_glaucus": 0,
-        "g1b_Sphaerodactylus_glaucus": 0,
-        "insertion_Sphaerodactylus_glaucus": 0,
-        "g2a_oph_ae_asa": 0,
-        "g2b_Coleonyx_brevis": 0
+        "g1a_Sphaerodactylus_glaucus": 85,
+        "g1b_Sphaerodactylus_glaucus": 11,
+        "insertion_Sphaerodactylus_glaucus": 4687,
+        "g2a_oph_ae_asa": 4,
+        "g2b_Coleonyx_brevis": 17
       },
       "firm_counts": {
         "Heno": 38424,
@@ -6621,7 +6621,7 @@
         "sq3other": 14356,
         "sq1_body": 3073
       },
-      "total": 414817,
+      "total": 419621,
       "searched_sets": [
         "full_41",
         "sq1sq3"
