@@ -10,7 +10,10 @@
     "sq2_Eryx",
     "SqUCON",
     "SqUCON1",
-    "UCON_cyl"
+    "UCON_cyl",
+    "sq3a",
+    "sq3other",
+    "sq1_body"
   ],
   "species": [
     {
@@ -26,7 +29,10 @@
         "sq2_Eryx": 110033,
         "SqUCON": 4672,
         "SqUCON1": 5880,
-        "UCON_cyl": 5171
+        "UCON_cyl": 5171,
+        "sq3a": 42774,
+        "sq3other": 2438,
+        "sq1_body": 19
       },
       "firm_counts": {
         "Heno": 4099,
@@ -37,12 +43,20 @@
         "sq2_Eryx": 90280,
         "SqUCON": 431,
         "SqUCON1": 5846,
-        "UCON_cyl": 3205
+        "UCON_cyl": 3205,
+        "sq3a": 36010,
+        "sq3other": 109,
+        "sq1_body": 19
       },
       "total": 153225,
       "total_loci": 153225,
       "unassigned_n": 30794,
-      "unassigned_pct": 20.1
+      "unassigned_pct": 20.1,
+      "sim_means": {
+        "sq3a": 0.402,
+        "sq3other": 0.1733,
+        "sq1_body": 0.1433
+      }
     },
     {
       "taxon": "Dopasia_gracilis",
@@ -57,7 +71,10 @@
         "sq2_Eryx": 32952,
         "SqUCON": 1,
         "SqUCON1": 1,
-        "UCON_cyl": 7754
+        "UCON_cyl": 7754,
+        "sq3a": 34263,
+        "sq3other": 1380,
+        "sq1_body": 5
       },
       "firm_counts": {
         "Heno": 49,
@@ -68,12 +85,20 @@
         "sq2_Eryx": 21916,
         "SqUCON": 1,
         "SqUCON1": 1,
-        "UCON_cyl": 5845
+        "UCON_cyl": 5845,
+        "sq3a": 30131,
+        "sq3other": 78,
+        "sq1_body": 5
       },
       "total": 59478,
       "total_loci": 59478,
       "unassigned_n": 14842,
-      "unassigned_pct": 24.95
+      "unassigned_pct": 24.95,
+      "sim_means": {
+        "sq3a": 0.5164,
+        "sq3other": 0.1825,
+        "sq1_body": 0.1366
+      }
     },
     {
       "taxon": "Elgaria_multicarinata",
@@ -88,7 +113,10 @@
         "sq2_Eryx": 40244,
         "SqUCON": 7363,
         "SqUCON1": 3426,
-        "UCON_cyl": 1254
+        "UCON_cyl": 1254,
+        "sq3a": 47415,
+        "sq3other": 1856,
+        "sq1_body": 9
       },
       "firm_counts": {
         "Heno": 65,
@@ -99,12 +127,20 @@
         "sq2_Eryx": 26819,
         "SqUCON": 588,
         "SqUCON1": 3418,
-        "UCON_cyl": 839
+        "UCON_cyl": 839,
+        "sq3a": 42204,
+        "sq3other": 89,
+        "sq1_body": 9
       },
       "total": 114565,
       "total_loci": 114565,
       "unassigned_n": 22081,
-      "unassigned_pct": 19.27
+      "unassigned_pct": 19.27,
+      "sim_means": {
+        "sq3a": 0.5013,
+        "sq3other": 0.1643,
+        "sq1_body": 0.1424
+      }
     },
     {
       "taxon": "Anniella_stebbinsi",
@@ -119,7 +155,10 @@
         "sq2_Eryx": 46532,
         "SqUCON": 2,
         "SqUCON1": 1,
-        "UCON_cyl": 876
+        "UCON_cyl": 876,
+        "sq3a": 38941,
+        "sq3other": 1961,
+        "sq1_body": 6
       },
       "firm_counts": {
         "Heno": 59,
@@ -130,12 +169,20 @@
         "sq2_Eryx": 31469,
         "SqUCON": 2,
         "SqUCON1": 1,
-        "UCON_cyl": 357
+        "UCON_cyl": 357,
+        "sq3a": 33863,
+        "sq3other": 75,
+        "sq1_body": 6
       },
       "total": 65285,
       "total_loci": 65285,
       "unassigned_n": 16963,
-      "unassigned_pct": 25.98
+      "unassigned_pct": 25.98,
+      "sim_means": {
+        "sq3a": 0.4684,
+        "sq3other": 0.1618,
+        "sq1_body": 0.1692
+      }
     },
     {
       "taxon": "Heloderma_charlesbogerti",
@@ -150,7 +197,10 @@
         "sq2_Eryx": 67876,
         "SqUCON": 4916,
         "SqUCON1": 277,
-        "UCON_cyl": 11909
+        "UCON_cyl": 11909,
+        "sq3a": 64737,
+        "sq3other": 2796,
+        "sq1_body": 13436
       },
       "firm_counts": {
         "Heno": 307,
@@ -161,12 +211,20 @@
         "sq2_Eryx": 48673,
         "SqUCON": 3369,
         "SqUCON1": 260,
-        "UCON_cyl": 9581
+        "UCON_cyl": 9581,
+        "sq3a": 56376,
+        "sq3other": 79,
+        "sq1_body": 13407
       },
       "total": 125170,
       "total_loci": 125170,
       "unassigned_n": 28946,
-      "unassigned_pct": 23.13
+      "unassigned_pct": 23.13,
+      "sim_means": {
+        "sq3a": 0.5976,
+        "sq3other": 0.1581,
+        "sq1_body": 0.7347
+      }
     },
     {
       "taxon": "Lanthanotus_borneensis",
@@ -181,7 +239,10 @@
         "sq2_Eryx": 39751,
         "SqUCON": 2,
         "SqUCON1": 1,
-        "UCON_cyl": 7109
+        "UCON_cyl": 7109,
+        "sq3a": 85421,
+        "sq3other": 1761,
+        "sq1_body": 224
       },
       "firm_counts": {
         "Heno": 73,
@@ -192,12 +253,20 @@
         "sq2_Eryx": 23802,
         "SqUCON": 2,
         "SqUCON1": 1,
-        "UCON_cyl": 6190
+        "UCON_cyl": 6190,
+        "sq3a": 79941,
+        "sq3other": 104,
+        "sq1_body": 218
       },
       "total": 55049,
       "total_loci": 55049,
       "unassigned_n": 17910,
-      "unassigned_pct": 32.53
+      "unassigned_pct": 32.53,
+      "sim_means": {
+        "sq3a": 0.5013,
+        "sq3other": 0.1781,
+        "sq1_body": 0.5341
+      }
     },
     {
       "taxon": "Shinisaurus_crocodilurus",
@@ -212,7 +281,10 @@
         "sq2_Eryx": 67051,
         "SqUCON": 1,
         "SqUCON1": 1,
-        "UCON_cyl": 92685
+        "UCON_cyl": 92685,
+        "sq3a": 144817,
+        "sq3other": 3009,
+        "sq1_body": 6
       },
       "firm_counts": {
         "Heno": 202,
@@ -223,12 +295,20 @@
         "sq2_Eryx": 46877,
         "SqUCON": 1,
         "SqUCON1": 1,
-        "UCON_cyl": 89693
+        "UCON_cyl": 89693,
+        "sq3a": 136747,
+        "sq3other": 122,
+        "sq1_body": 6
       },
       "total": 198907,
       "total_loci": 198907,
       "unassigned_n": 27054,
-      "unassigned_pct": 13.6
+      "unassigned_pct": 13.6,
+      "sim_means": {
+        "sq3a": 0.6066,
+        "sq3other": 0.182,
+        "sq1_body": 0.164
+      }
     },
     {
       "taxon": "Varanus_acanthurus",
@@ -243,7 +323,10 @@
         "sq2_Eryx": 22115,
         "SqUCON": 0,
         "SqUCON1": 0,
-        "UCON_cyl": 2284
+        "UCON_cyl": 2284,
+        "sq3a": 76198,
+        "sq3other": 2955,
+        "sq1_body": 6931
       },
       "firm_counts": {
         "Heno": 26,
@@ -254,12 +337,20 @@
         "sq2_Eryx": 13964,
         "SqUCON": 0,
         "SqUCON1": 0,
-        "UCON_cyl": 1773
+        "UCON_cyl": 1773,
+        "sq3a": 64189,
+        "sq3other": 105,
+        "sq1_body": 6737
       },
       "total": 34492,
       "total_loci": 34492,
       "unassigned_n": 10038,
-      "unassigned_pct": 29.1
+      "unassigned_pct": 29.1,
+      "sim_means": {
+        "sq3a": 0.4199,
+        "sq3other": 0.2238,
+        "sq1_body": 0.4649
+      }
     },
     {
       "taxon": "Varanus_komodoensis",
@@ -274,7 +365,10 @@
         "sq2_Eryx": 20828,
         "SqUCON": 6,
         "SqUCON1": 2,
-        "UCON_cyl": 27488
+        "UCON_cyl": 27488,
+        "sq3a": 72989,
+        "sq3other": 2353,
+        "sq1_body": 7530
       },
       "firm_counts": {
         "Heno": 47,
@@ -285,12 +379,20 @@
         "sq2_Eryx": 12644,
         "SqUCON": 5,
         "SqUCON1": 2,
-        "UCON_cyl": 26731
+        "UCON_cyl": 26731,
+        "sq3a": 62307,
+        "sq3other": 98,
+        "sq1_body": 7385
       },
       "total": 59427,
       "total_loci": 59427,
       "unassigned_n": 10550,
-      "unassigned_pct": 17.75
+      "unassigned_pct": 17.75,
+      "sim_means": {
+        "sq3a": 0.4589,
+        "sq3other": 0.2345,
+        "sq1_body": 0.4322
+      }
     },
     {
       "taxon": "Dibamus_smithi",
@@ -305,7 +407,10 @@
         "sq2_Eryx": 43773,
         "SqUCON": 3,
         "SqUCON1": 1,
-        "UCON_cyl": 4139
+        "UCON_cyl": 4139,
+        "sq3a": 78346,
+        "sq3other": 3735,
+        "sq1_body": 3
       },
       "firm_counts": {
         "Heno": 45,
@@ -316,12 +421,20 @@
         "sq2_Eryx": 31138,
         "SqUCON": 3,
         "SqUCON1": 1,
-        "UCON_cyl": 3832
+        "UCON_cyl": 3832,
+        "sq3a": 69857,
+        "sq3other": 250,
+        "sq1_body": 3
       },
       "total": 51940,
       "total_loci": 51940,
       "unassigned_n": 13184,
-      "unassigned_pct": 25.38
+      "unassigned_pct": 25.38,
+      "sim_means": {
+        "sq3a": 0.4818,
+        "sq3other": 0.2263,
+        "sq1_body": 0.1766
+      }
     },
     {
       "taxon": "Nephrurus_levis",
@@ -336,7 +449,10 @@
         "sq2_Eryx": 27351,
         "SqUCON": 5,
         "SqUCON1": 3,
-        "UCON_cyl": 19777
+        "UCON_cyl": 19777,
+        "sq3a": 100210,
+        "sq3other": 62785,
+        "sq1_body": 1
       },
       "firm_counts": {
         "Heno": 5465,
@@ -347,12 +463,20 @@
         "sq2_Eryx": 19069,
         "SqUCON": 5,
         "SqUCON1": 3,
-        "UCON_cyl": 6517
+        "UCON_cyl": 6517,
+        "sq3a": 64243,
+        "sq3other": 50274,
+        "sq1_body": 1
       },
       "total": 80166,
       "total_loci": 80166,
       "unassigned_n": 27326,
-      "unassigned_pct": 34.09
+      "unassigned_pct": 34.09,
+      "sim_means": {
+        "sq3a": 0.4313,
+        "sq3other": 0.4116,
+        "sq1_body": 0.1505
+      }
     },
     {
       "taxon": "Correlophus_ciliatus",
@@ -367,7 +491,10 @@
         "sq2_Eryx": 48685,
         "SqUCON": 9,
         "SqUCON1": 7,
-        "UCON_cyl": 13422
+        "UCON_cyl": 13422,
+        "sq3a": 160969,
+        "sq3other": 44371,
+        "sq1_body": 16
       },
       "firm_counts": {
         "Heno": 16535,
@@ -378,7 +505,10 @@
         "sq2_Eryx": 34306,
         "SqUCON": 6,
         "SqUCON1": 4,
-        "UCON_cyl": 10144
+        "UCON_cyl": 10144,
+        "sq3a": 113724,
+        "sq3other": 32810,
+        "sq1_body": 16
       },
       "total": 114444,
       "total_loci": 114444,
@@ -387,7 +517,12 @@
       "assemblies": [
         "Correlophus_ciliatus",
         "Correlophus_ciliatus_local"
-      ]
+      ],
+      "sim_means": {
+        "sq3a": 0.5206,
+        "sq3other": 0.4528,
+        "sq1_body": 0.1747
+      }
     },
     {
       "taxon": "Correlophus_sarasinorum",
@@ -402,7 +537,10 @@
         "sq2_Eryx": 47713,
         "SqUCON": 4,
         "SqUCON1": 6,
-        "UCON_cyl": 12783
+        "UCON_cyl": 12783,
+        "sq3a": 162688,
+        "sq3other": 46168,
+        "sq1_body": 12
       },
       "firm_counts": {
         "Heno": 16253,
@@ -413,12 +551,20 @@
         "sq2_Eryx": 34000,
         "SqUCON": 3,
         "SqUCON1": 5,
-        "UCON_cyl": 9641
+        "UCON_cyl": 9641,
+        "sq3a": 115324,
+        "sq3other": 35083,
+        "sq1_body": 11
       },
       "total": 112268,
       "total_loci": 112268,
       "unassigned_n": 20359,
-      "unassigned_pct": 18.13
+      "unassigned_pct": 18.13,
+      "sim_means": {
+        "sq3a": 0.5209,
+        "sq3other": 0.4756,
+        "sq1_body": 0.1513
+      }
     },
     {
       "taxon": "Coleonyx_brevis",
@@ -433,7 +579,10 @@
         "sq2_Eryx": 45250,
         "SqUCON": 5771,
         "SqUCON1": 3416,
-        "UCON_cyl": 4893
+        "UCON_cyl": 4893,
+        "sq3a": 77420,
+        "sq3other": 54571,
+        "sq1_body": 5
       },
       "firm_counts": {
         "Heno": 4811,
@@ -444,12 +593,20 @@
         "sq2_Eryx": 33383,
         "SqUCON": 2828,
         "SqUCON1": 3285,
-        "UCON_cyl": 4357
+        "UCON_cyl": 4357,
+        "sq3a": 58060,
+        "sq3other": 37826,
+        "sq1_body": 5
       },
       "total": 70050,
       "total_loci": 70050,
       "unassigned_n": 16212,
-      "unassigned_pct": 23.14
+      "unassigned_pct": 23.14,
+      "sim_means": {
+        "sq3a": 0.5012,
+        "sq3other": 0.3225,
+        "sq1_body": 0.1651
+      }
     },
     {
       "taxon": "Coleonyx_elegans",
@@ -464,7 +621,10 @@
         "sq2_Eryx": 35588,
         "SqUCON": 4283,
         "SqUCON1": 3079,
-        "UCON_cyl": 2005
+        "UCON_cyl": 2005,
+        "sq3a": 65406,
+        "sq3other": 41811,
+        "sq1_body": 33
       },
       "firm_counts": {
         "Heno": 3094,
@@ -475,12 +635,20 @@
         "sq2_Eryx": 28008,
         "SqUCON": 1737,
         "SqUCON1": 3001,
-        "UCON_cyl": 1757
+        "UCON_cyl": 1757,
+        "sq3a": 49664,
+        "sq3other": 31104,
+        "sq1_body": 33
       },
       "total": 50409,
       "total_loci": 50409,
       "unassigned_n": 10636,
-      "unassigned_pct": 21.1
+      "unassigned_pct": 21.1,
+      "sim_means": {
+        "sq3a": 0.4739,
+        "sq3other": 0.3161,
+        "sq1_body": 0.3722
+      }
     },
     {
       "taxon": "Eublepharis_macularius",
@@ -495,7 +663,10 @@
         "sq2_Eryx": 50985,
         "SqUCON": 13072,
         "SqUCON1": 1258,
-        "UCON_cyl": 3541
+        "UCON_cyl": 3541,
+        "sq3a": 90516,
+        "sq3other": 95852,
+        "sq1_body": 16
       },
       "firm_counts": {
         "Heno": 6800,
@@ -506,7 +677,10 @@
         "sq2_Eryx": 38316,
         "SqUCON": 12457,
         "SqUCON1": 870,
-        "UCON_cyl": 2936
+        "UCON_cyl": 2936,
+        "sq3a": 66641,
+        "sq3other": 72827,
+        "sq1_body": 16
       },
       "total": 89467,
       "total_loci": 89467,
@@ -515,7 +689,12 @@
       "assemblies": [
         "Eublepharis_macularius",
         "Eublepharis_macularius_local"
-      ]
+      ],
+      "sim_means": {
+        "sq3a": 0.5254,
+        "sq3other": 0.418,
+        "sq1_body": 0.1585
+      }
     },
     {
       "taxon": "Christinus_marmoratus",
@@ -530,7 +709,10 @@
         "sq2_Eryx": 93851,
         "SqUCON": 8,
         "SqUCON1": 2,
-        "UCON_cyl": 15906
+        "UCON_cyl": 15906,
+        "sq3a": 200077,
+        "sq3other": 24658,
+        "sq1_body": 3079
       },
       "firm_counts": {
         "Heno": 38424,
@@ -541,12 +723,20 @@
         "sq2_Eryx": 77418,
         "SqUCON": 5,
         "SqUCON1": 2,
-        "UCON_cyl": 12511
+        "UCON_cyl": 12511,
+        "sq3a": 82626,
+        "sq3other": 14356,
+        "sq1_body": 3073
       },
       "total": 187003,
       "total_loci": 187003,
       "unassigned_n": 24917,
-      "unassigned_pct": 13.32
+      "unassigned_pct": 13.32,
+      "sim_means": {
+        "sq3a": 0.583,
+        "sq3other": 0.3158,
+        "sq1_body": 0.6373
+      }
     },
     {
       "taxon": "Gehyra_mutilata",
@@ -596,7 +786,10 @@
         "sq2_Eryx": 84089,
         "SqUCON": 3,
         "SqUCON1": 3,
-        "UCON_cyl": 9638
+        "UCON_cyl": 9638,
+        "sq3a": 169894,
+        "sq3other": 138078,
+        "sq1_body": 59340
       },
       "firm_counts": {
         "Heno": 24464,
@@ -607,12 +800,20 @@
         "sq2_Eryx": 67170,
         "SqUCON": 3,
         "SqUCON1": 3,
-        "UCON_cyl": 7503
+        "UCON_cyl": 7503,
+        "sq3a": 71876,
+        "sq3other": 123159,
+        "sq1_body": 57095
       },
       "total": 137942,
       "total_loci": 137942,
       "unassigned_n": 20130,
-      "unassigned_pct": 14.59
+      "unassigned_pct": 14.59,
+      "sim_means": {
+        "sq3a": 0.5624,
+        "sq3other": 0.3688,
+        "sq1_body": 0.7811
+      }
     },
     {
       "taxon": "Gekko_japonicus",
@@ -627,7 +828,10 @@
         "sq2_Eryx": 75274,
         "SqUCON": 4,
         "SqUCON1": 5,
-        "UCON_cyl": 8391
+        "UCON_cyl": 8391,
+        "sq3a": 147263,
+        "sq3other": 130715,
+        "sq1_body": 84299
       },
       "firm_counts": {
         "Heno": 23909,
@@ -638,7 +842,10 @@
         "sq2_Eryx": 60774,
         "SqUCON": 4,
         "SqUCON1": 5,
-        "UCON_cyl": 6596
+        "UCON_cyl": 6596,
+        "sq3a": 62880,
+        "sq3other": 118787,
+        "sq1_body": 77533
       },
       "total": 124418,
       "total_loci": 124418,
@@ -647,7 +854,12 @@
       "assemblies": [
         "Gekko_japonicus",
         "Gekko_japonicus_local"
-      ]
+      ],
+      "sim_means": {
+        "sq3a": 0.5052,
+        "sq3other": 0.3497,
+        "sq1_body": 0.7475
+      }
     },
     {
       "taxon": "Hemidactylus_brookii",
@@ -662,7 +874,10 @@
         "sq2_Eryx": 109446,
         "SqUCON": 64761,
         "SqUCON1": 5745,
-        "UCON_cyl": 5593
+        "UCON_cyl": 5593,
+        "sq3a": 59184,
+        "sq3other": 55834,
+        "sq1_body": 35408
       },
       "firm_counts": {
         "Heno": 13199,
@@ -673,12 +888,20 @@
         "sq2_Eryx": 93781,
         "SqUCON": 61148,
         "SqUCON1": 5359,
-        "UCON_cyl": 4669
+        "UCON_cyl": 4669,
+        "sq3a": 28577,
+        "sq3other": 50270,
+        "sq1_body": 29719
       },
       "total": 214810,
       "total_loci": 214810,
       "unassigned_n": 21035,
-      "unassigned_pct": 9.79
+      "unassigned_pct": 9.79,
+      "sim_means": {
+        "sq3a": 0.3843,
+        "sq3other": 0.2787,
+        "sq1_body": 0.5993
+      }
     },
     {
       "taxon": "Hemidactylus_flaviviridis",
@@ -693,7 +916,10 @@
         "sq2_Eryx": 35326,
         "SqUCON": 2,
         "SqUCON1": 2,
-        "UCON_cyl": 16938
+        "UCON_cyl": 16938,
+        "sq3a": 77791,
+        "sq3other": 76224,
+        "sq1_body": 54884
       },
       "firm_counts": {
         "Heno": 5574,
@@ -704,12 +930,20 @@
         "sq2_Eryx": 26444,
         "SqUCON": 2,
         "SqUCON1": 2,
-        "UCON_cyl": 5553
+        "UCON_cyl": 5553,
+        "sq3a": 34430,
+        "sq3other": 68106,
+        "sq1_body": 48744
       },
       "total": 76268,
       "total_loci": 76268,
       "unassigned_n": 37484,
-      "unassigned_pct": 49.15
+      "unassigned_pct": 49.15,
+      "sim_means": {
+        "sq3a": 0.4135,
+        "sq3other": 0.2903,
+        "sq1_body": 0.6366
+      }
     },
     {
       "taxon": "Hemidactylus_frenatus",
@@ -724,7 +958,10 @@
         "sq2_Eryx": 32079,
         "SqUCON": 12,
         "SqUCON1": 4,
-        "UCON_cyl": 11404
+        "UCON_cyl": 11404,
+        "sq3a": 75982,
+        "sq3other": 75624,
+        "sq1_body": 59273
       },
       "firm_counts": {
         "Heno": 5588,
@@ -735,12 +972,20 @@
         "sq2_Eryx": 22548,
         "SqUCON": 12,
         "SqUCON1": 3,
-        "UCON_cyl": 7913
+        "UCON_cyl": 7913,
+        "sq3a": 32085,
+        "sq3other": 66345,
+        "sq1_body": 49827
       },
       "total": 121704,
       "total_loci": 121704,
       "unassigned_n": 13932,
-      "unassigned_pct": 11.45
+      "unassigned_pct": 11.45,
+      "sim_means": {
+        "sq3a": 0.3822,
+        "sq3other": 0.2991,
+        "sq1_body": 0.6255
+      }
     },
     {
       "taxon": "Hemidactylus_mabouia",
@@ -755,7 +1000,10 @@
         "sq2_Eryx": 30200,
         "SqUCON": 8,
         "SqUCON1": 3,
-        "UCON_cyl": 32442
+        "UCON_cyl": 32442,
+        "sq3a": 66662,
+        "sq3other": 70394,
+        "sq1_body": 71778
       },
       "firm_counts": {
         "Heno": 5578,
@@ -766,12 +1014,20 @@
         "sq2_Eryx": 21025,
         "SqUCON": 8,
         "SqUCON1": 2,
-        "UCON_cyl": 29818
+        "UCON_cyl": 29818,
+        "sq3a": 30525,
+        "sq3other": 62591,
+        "sq1_body": 62208
       },
       "total": 102205,
       "total_loci": 102205,
       "unassigned_n": 17688,
-      "unassigned_pct": 17.31
+      "unassigned_pct": 17.31,
+      "sim_means": {
+        "sq3a": 0.3847,
+        "sq3other": 0.3115,
+        "sq1_body": 0.6697
+      }
     },
     {
       "taxon": "Hemidactylus_macropholis",
@@ -786,7 +1042,10 @@
         "sq2_Eryx": 26035,
         "SqUCON": 0,
         "SqUCON1": 0,
-        "UCON_cyl": 23112
+        "UCON_cyl": 23112,
+        "sq3a": 62995,
+        "sq3other": 65713,
+        "sq1_body": 27439
       },
       "firm_counts": {
         "Heno": 3340,
@@ -797,12 +1056,20 @@
         "sq2_Eryx": 16328,
         "SqUCON": 0,
         "SqUCON1": 0,
-        "UCON_cyl": 17998
+        "UCON_cyl": 17998,
+        "sq3a": 27385,
+        "sq3other": 58145,
+        "sq1_body": 18618
       },
       "total": 69028,
       "total_loci": 69028,
       "unassigned_n": 28539,
-      "unassigned_pct": 41.34
+      "unassigned_pct": 41.34,
+      "sim_means": {
+        "sq3a": 0.3726,
+        "sq3other": 0.2794,
+        "sq1_body": 0.5676
+      }
     },
     {
       "taxon": "Heteronotia_binoei",
@@ -817,7 +1084,10 @@
         "sq2_Eryx": 111681,
         "SqUCON": 67548,
         "SqUCON1": 5574,
-        "UCON_cyl": 5653
+        "UCON_cyl": 5653,
+        "sq3a": 95050,
+        "sq3other": 193091,
+        "sq1_body": 39
       },
       "firm_counts": {
         "Heno": 13407,
@@ -828,7 +1098,10 @@
         "sq2_Eryx": 95491,
         "SqUCON": 62886,
         "SqUCON1": 4913,
-        "UCON_cyl": 4668
+        "UCON_cyl": 4668,
+        "sq3a": 45094,
+        "sq3other": 177977,
+        "sq1_body": 39
       },
       "total": 220915,
       "total_loci": 220915,
@@ -837,7 +1110,12 @@
       "assemblies": [
         "Heteronotia_binoei",
         "Heteronotia_binoei_local"
-      ]
+      ],
+      "sim_means": {
+        "sq3a": 0.4576,
+        "sq3other": 0.3155,
+        "sq1_body": 0.1726
+      }
     },
     {
       "taxon": "Lepidodactylus_listeri",
@@ -852,7 +1130,10 @@
         "sq2_Eryx": 84367,
         "SqUCON": 6,
         "SqUCON1": 2,
-        "UCON_cyl": 7638
+        "UCON_cyl": 7638,
+        "sq3a": 157875,
+        "sq3other": 127947,
+        "sq1_body": 29440
       },
       "firm_counts": {
         "Heno": 24225,
@@ -863,12 +1144,20 @@
         "sq2_Eryx": 69322,
         "SqUCON": 6,
         "SqUCON1": 2,
-        "UCON_cyl": 6365
+        "UCON_cyl": 6365,
+        "sq3a": 67710,
+        "sq3other": 107949,
+        "sq1_body": 29216
       },
       "total": 129729,
       "total_loci": 129729,
       "unassigned_n": 16911,
-      "unassigned_pct": 13.04
+      "unassigned_pct": 13.04,
+      "sim_means": {
+        "sq3a": 0.5065,
+        "sq3other": 0.3452,
+        "sq1_body": 0.7417
+      }
     },
     {
       "taxon": "Lepidodactylus_lugubris",
@@ -883,7 +1172,10 @@
         "sq2_Eryx": 109035,
         "SqUCON": 6,
         "SqUCON1": 6,
-        "UCON_cyl": 10942
+        "UCON_cyl": 10942,
+        "sq3a": 238447,
+        "sq3other": 230284,
+        "sq1_body": 42019
       },
       "firm_counts": {
         "Heno": 31889,
@@ -894,12 +1186,20 @@
         "sq2_Eryx": 84607,
         "SqUCON": 6,
         "SqUCON1": 5,
-        "UCON_cyl": 8985
+        "UCON_cyl": 8985,
+        "sq3a": 92460,
+        "sq3other": 211067,
+        "sq1_body": 40557
       },
       "total": 170582,
       "total_loci": 170582,
       "unassigned_n": 27267,
-      "unassigned_pct": 15.98
+      "unassigned_pct": 15.98,
+      "sim_means": {
+        "sq3a": 0.5422,
+        "sq3other": 0.3767,
+        "sq1_body": 0.6383
+      }
     },
     {
       "taxon": "Mediodactylus_kotschyi",
@@ -914,7 +1214,10 @@
         "sq2_Eryx": 45098,
         "SqUCON": 1,
         "SqUCON1": 6,
-        "UCON_cyl": 10214
+        "UCON_cyl": 10214,
+        "sq3a": 64431,
+        "sq3other": 81316,
+        "sq1_body": 50914
       },
       "firm_counts": {
         "Heno": 10696,
@@ -925,12 +1228,20 @@
         "sq2_Eryx": 34041,
         "SqUCON": 1,
         "SqUCON1": 5,
-        "UCON_cyl": 8108
+        "UCON_cyl": 8108,
+        "sq3a": 33017,
+        "sq3other": 74332,
+        "sq1_body": 47334
       },
       "total": 109688,
       "total_loci": 109688,
       "unassigned_n": 13907,
-      "unassigned_pct": 12.68
+      "unassigned_pct": 12.68,
+      "sim_means": {
+        "sq3a": 0.4581,
+        "sq3other": 0.3306,
+        "sq1_body": 0.7014
+      }
     },
     {
       "taxon": "Paroedura_picta",
@@ -945,7 +1256,10 @@
         "sq2_Eryx": 34120,
         "SqUCON": 57879,
         "SqUCON1": 921,
-        "UCON_cyl": 18333
+        "UCON_cyl": 18333,
+        "sq3a": 128098,
+        "sq3other": 58008,
+        "sq1_body": 8
       },
       "firm_counts": {
         "Heno": 5785,
@@ -956,12 +1270,20 @@
         "sq2_Eryx": 25443,
         "SqUCON": 57449,
         "SqUCON1": 599,
-        "UCON_cyl": 13995
+        "UCON_cyl": 13995,
+        "sq3a": 29442,
+        "sq3other": 42780,
+        "sq1_body": 8
       },
       "total": 157765,
       "total_loci": 157765,
       "unassigned_n": 16320,
-      "unassigned_pct": 10.34
+      "unassigned_pct": 10.34,
+      "sim_means": {
+        "sq3a": 0.4084,
+        "sq3other": 0.2499,
+        "sq1_body": 0.1538
+      }
     },
     {
       "taxon": "Paroedura_stumpffi",
@@ -976,7 +1298,10 @@
         "sq2_Eryx": 41425,
         "SqUCON": 61831,
         "SqUCON1": 873,
-        "UCON_cyl": 27829
+        "UCON_cyl": 27829,
+        "sq3a": 173115,
+        "sq3other": 69914,
+        "sq1_body": 6
       },
       "firm_counts": {
         "Heno": 8211,
@@ -987,12 +1312,20 @@
         "sq2_Eryx": 31999,
         "SqUCON": 61466,
         "SqUCON1": 530,
-        "UCON_cyl": 21249
+        "UCON_cyl": 21249,
+        "sq3a": 36790,
+        "sq3other": 51757,
+        "sq1_body": 6
       },
       "total": 187288,
       "total_loci": 187288,
       "unassigned_n": 23101,
-      "unassigned_pct": 12.33
+      "unassigned_pct": 12.33,
+      "sim_means": {
+        "sq3a": 0.431,
+        "sq3other": 0.2437,
+        "sq1_body": 0.1732
+      }
     },
     {
       "taxon": "Phelsuma_laticauda",
@@ -1007,7 +1340,10 @@
         "sq2_Eryx": 57114,
         "SqUCON": 26741,
         "SqUCON1": 284,
-        "UCON_cyl": 18909
+        "UCON_cyl": 18909,
+        "sq3a": 227084,
+        "sq3other": 40805,
+        "sq1_body": 10
       },
       "firm_counts": {
         "Heno": 36051,
@@ -1018,12 +1354,20 @@
         "sq2_Eryx": 44857,
         "SqUCON": 26601,
         "SqUCON1": 135,
-        "UCON_cyl": 12618
+        "UCON_cyl": 12618,
+        "sq3a": 77518,
+        "sq3other": 27582,
+        "sq1_body": 10
       },
       "total": 208876,
       "total_loci": 208876,
       "unassigned_n": 20036,
-      "unassigned_pct": 9.59
+      "unassigned_pct": 9.59,
+      "sim_means": {
+        "sq3a": 0.4863,
+        "sq3other": 0.2892,
+        "sq1_body": 0.1376
+      }
     },
     {
       "taxon": "Asaccus_caudivolvulus",
@@ -1038,7 +1382,10 @@
         "sq2_Eryx": 60322,
         "SqUCON": 9,
         "SqUCON1": 13,
-        "UCON_cyl": 17834
+        "UCON_cyl": 17834,
+        "sq3a": 101366,
+        "sq3other": 67097,
+        "sq1_body": 2165
       },
       "firm_counts": {
         "Heno": 24381,
@@ -1049,12 +1396,20 @@
         "sq2_Eryx": 47529,
         "SqUCON": 8,
         "SqUCON1": 5,
-        "UCON_cyl": 15934
+        "UCON_cyl": 15934,
+        "sq3a": 67433,
+        "sq3other": 58261,
+        "sq1_body": 2162
       },
       "total": 119374,
       "total_loci": 119374,
       "unassigned_n": 15461,
-      "unassigned_pct": 12.95
+      "unassigned_pct": 12.95,
+      "sim_means": {
+        "sq3a": 0.4881,
+        "sq3other": 0.4262,
+        "sq1_body": 0.2393
+      }
     },
     {
       "taxon": "Phyllodactylus_wirshingi",
@@ -1069,7 +1424,10 @@
         "sq2_Eryx": 54115,
         "SqUCON": 8,
         "SqUCON1": 4,
-        "UCON_cyl": 11270
+        "UCON_cyl": 11270,
+        "sq3a": 220043,
+        "sq3other": 30974,
+        "sq1_body": 4
       },
       "firm_counts": {
         "Heno": 13986,
@@ -1080,12 +1438,20 @@
         "sq2_Eryx": 41131,
         "SqUCON": 8,
         "SqUCON1": 4,
-        "UCON_cyl": 9085
+        "UCON_cyl": 9085,
+        "sq3a": 168540,
+        "sq3other": 13969,
+        "sq1_body": 4
       },
       "total": 97073,
       "total_loci": 97073,
       "unassigned_n": 18078,
-      "unassigned_pct": 18.62
+      "unassigned_pct": 18.62,
+      "sim_means": {
+        "sq3a": 0.503,
+        "sq3other": 0.3133,
+        "sq1_body": 0.1822
+      }
     },
     {
       "taxon": "Tarentola_annularis",
@@ -1100,7 +1466,10 @@
         "sq2_Eryx": 48608,
         "SqUCON": 11806,
         "SqUCON1": 882,
-        "UCON_cyl": 11130
+        "UCON_cyl": 11130,
+        "sq3a": 92777,
+        "sq3other": 61411,
+        "sq1_body": 590
       },
       "firm_counts": {
         "Heno": 11878,
@@ -1111,12 +1480,20 @@
         "sq2_Eryx": 37946,
         "SqUCON": 11421,
         "SqUCON1": 631,
-        "UCON_cyl": 9672
+        "UCON_cyl": 9672,
+        "sq3a": 60731,
+        "sq3other": 52209,
+        "sq1_body": 430
       },
       "total": 97814,
       "total_loci": 97814,
       "unassigned_n": 13849,
-      "unassigned_pct": 14.16
+      "unassigned_pct": 14.16,
+      "sim_means": {
+        "sq3a": 0.4865,
+        "sq3other": 0.3603,
+        "sq1_body": 0.3486
+      }
     },
     {
       "taxon": "Tarentola_mauritanica",
@@ -1131,7 +1508,10 @@
         "sq2_Eryx": 51148,
         "SqUCON": 33501,
         "SqUCON1": 1486,
-        "UCON_cyl": 28455
+        "UCON_cyl": 28455,
+        "sq3a": 101842,
+        "sq3other": 72422,
+        "sq1_body": 792
       },
       "firm_counts": {
         "Heno": 14365,
@@ -1142,12 +1522,20 @@
         "sq2_Eryx": 39085,
         "SqUCON": 33053,
         "SqUCON1": 1209,
-        "UCON_cyl": 25804
+        "UCON_cyl": 25804,
+        "sq3a": 63930,
+        "sq3other": 61730,
+        "sq1_body": 792
       },
       "total": 156205,
       "total_loci": 156205,
       "unassigned_n": 17863,
-      "unassigned_pct": 11.44
+      "unassigned_pct": 11.44,
+      "sim_means": {
+        "sq3a": 0.4651,
+        "sq3other": 0.3814,
+        "sq1_body": 0.3068
+      }
     },
     {
       "taxon": "Thecadactylus_rapicauda",
@@ -1162,7 +1550,10 @@
         "sq2_Eryx": 62080,
         "SqUCON": 4,
         "SqUCON1": 4,
-        "UCON_cyl": 22687
+        "UCON_cyl": 22687,
+        "sq3a": 125429,
+        "sq3other": 44670,
+        "sq1_body": 270
       },
       "firm_counts": {
         "Heno": 20288,
@@ -1173,7 +1564,10 @@
         "sq2_Eryx": 48552,
         "SqUCON": 4,
         "SqUCON1": 4,
-        "UCON_cyl": 19666
+        "UCON_cyl": 19666,
+        "sq3a": 76171,
+        "sq3other": 24713,
+        "sq1_body": 256
       },
       "total": 126782,
       "total_loci": 126782,
@@ -1182,7 +1576,12 @@
       "assemblies": [
         "Thecadactylus_rapicauda",
         "Thecadactylus_rapicauda_local"
-      ]
+      ],
+      "sim_means": {
+        "sq3a": 0.5187,
+        "sq3other": 0.3277,
+        "sq1_body": 0.5316
+      }
     },
     {
       "taxon": "Lialis_burtonis",
@@ -1197,7 +1596,10 @@
         "sq2_Eryx": 42411,
         "SqUCON": 5,
         "SqUCON1": 1,
-        "UCON_cyl": 9270
+        "UCON_cyl": 9270,
+        "sq3a": 114980,
+        "sq3other": 38665,
+        "sq1_body": 0
       },
       "firm_counts": {
         "Heno": 21634,
@@ -1208,12 +1610,19 @@
         "sq2_Eryx": 30167,
         "SqUCON": 5,
         "SqUCON1": 1,
-        "UCON_cyl": 7823
+        "UCON_cyl": 7823,
+        "sq3a": 79283,
+        "sq3other": 26451,
+        "sq1_body": 0
       },
       "total": 100223,
       "total_loci": 100223,
       "unassigned_n": 17381,
-      "unassigned_pct": 17.34
+      "unassigned_pct": 17.34,
+      "sim_means": {
+        "sq3a": 0.4886,
+        "sq3other": 0.4131
+      }
     },
     {
       "taxon": "Pygopus_nigriceps",
@@ -1228,7 +1637,10 @@
         "sq2_Eryx": 39723,
         "SqUCON": 5,
         "SqUCON1": 5,
-        "UCON_cyl": 8527
+        "UCON_cyl": 8527,
+        "sq3a": 113945,
+        "sq3other": 33647,
+        "sq1_body": 2
       },
       "firm_counts": {
         "Heno": 14090,
@@ -1239,12 +1651,20 @@
         "sq2_Eryx": 28001,
         "SqUCON": 4,
         "SqUCON1": 4,
-        "UCON_cyl": 7041
+        "UCON_cyl": 7041,
+        "sq3a": 76201,
+        "sq3other": 22416,
+        "sq1_body": 2
       },
       "total": 93148,
       "total_loci": 93148,
       "unassigned_n": 15880,
-      "unassigned_pct": 17.05
+      "unassigned_pct": 17.05,
+      "sim_means": {
+        "sq3a": 0.5014,
+        "sq3other": 0.4077,
+        "sq1_body": 0.1447
+      }
     },
     {
       "taxon": "Aristelliger_praesignis",
@@ -1259,7 +1679,10 @@
         "sq2_Eryx": 44117,
         "SqUCON": 78952,
         "SqUCON1": 6077,
-        "UCON_cyl": 40620
+        "UCON_cyl": 40620,
+        "sq3a": 139441,
+        "sq3other": 75813,
+        "sq1_body": 304
       },
       "firm_counts": {
         "Heno": 19558,
@@ -1270,12 +1693,20 @@
         "sq2_Eryx": 33808,
         "SqUCON": 76829,
         "SqUCON1": 5125,
-        "UCON_cyl": 36638
+        "UCON_cyl": 36638,
+        "sq3a": 67542,
+        "sq3other": 54520,
+        "sq1_body": 304
       },
       "total": 226659,
       "total_loci": 226659,
       "unassigned_n": 22905,
-      "unassigned_pct": 10.11
+      "unassigned_pct": 10.11,
+      "sim_means": {
+        "sq3a": 0.4772,
+        "sq3other": 0.3701,
+        "sq1_body": 0.1721
+      }
     },
     {
       "taxon": "Euleptes_europaea",
@@ -1290,7 +1721,10 @@
         "sq2_Eryx": 115131,
         "SqUCON": 38809,
         "SqUCON1": 2679,
-        "UCON_cyl": 8160
+        "UCON_cyl": 8160,
+        "sq3a": 114433,
+        "sq3other": 104074,
+        "sq1_body": 31
       },
       "firm_counts": {
         "Heno": 31007,
@@ -1301,12 +1735,20 @@
         "sq2_Eryx": 103063,
         "SqUCON": 37818,
         "SqUCON1": 2354,
-        "UCON_cyl": 5724
+        "UCON_cyl": 5724,
+        "sq3a": 54773,
+        "sq3other": 88760,
+        "sq1_body": 31
       },
       "total": 230756,
       "total_loci": 230756,
       "unassigned_n": 16561,
-      "unassigned_pct": 7.18
+      "unassigned_pct": 7.18,
+      "sim_means": {
+        "sq3a": 0.5182,
+        "sq3other": 0.3409,
+        "sq1_body": 0.1556
+      }
     },
     {
       "taxon": "Gonatodes_alexandermendesi",
@@ -1321,7 +1763,10 @@
         "sq2_Eryx": 17319,
         "SqUCON": 1854,
         "SqUCON1": 633,
-        "UCON_cyl": 1966
+        "UCON_cyl": 1966,
+        "sq3a": 50615,
+        "sq3other": 94355,
+        "sq1_body": 0
       },
       "firm_counts": {
         "Heno": 1203,
@@ -1332,12 +1777,19 @@
         "sq2_Eryx": 15967,
         "SqUCON": 1599,
         "SqUCON1": 509,
-        "UCON_cyl": 1837
+        "UCON_cyl": 1837,
+        "sq3a": 23036,
+        "sq3other": 85763,
+        "sq1_body": 0
       },
       "total": 24302,
       "total_loci": 24302,
       "unassigned_n": 2088,
-      "unassigned_pct": 8.59
+      "unassigned_pct": 8.59,
+      "sim_means": {
+        "sq3a": 0.411,
+        "sq3other": 0.3387
+      }
     },
     {
       "taxon": "Sphaerodactylus_glaucus",
@@ -1352,7 +1804,10 @@
         "sq2_Eryx": 28743,
         "SqUCON": 3670,
         "SqUCON1": 1354,
-        "UCON_cyl": 3465
+        "UCON_cyl": 3465,
+        "sq3a": 69029,
+        "sq3other": 85115,
+        "sq1_body": 785
       },
       "firm_counts": {
         "Heno": 5383,
@@ -1363,12 +1818,20 @@
         "sq2_Eryx": 22989,
         "SqUCON": 3199,
         "SqUCON1": 1182,
-        "UCON_cyl": 3086
+        "UCON_cyl": 3086,
+        "sq3a": 32889,
+        "sq3other": 70559,
+        "sq1_body": 776
       },
       "total": 48715,
       "total_loci": 48715,
       "unassigned_n": 7112,
-      "unassigned_pct": 14.6
+      "unassigned_pct": 14.6,
+      "sim_means": {
+        "sq3a": 0.3805,
+        "sq3other": 0.313,
+        "sq1_body": 0.5082
+      }
     },
     {
       "taxon": "Sphaerodactylus_inigoi",
@@ -1383,7 +1846,10 @@
         "sq2_Eryx": 34725,
         "SqUCON": 5190,
         "SqUCON1": 3108,
-        "UCON_cyl": 5732
+        "UCON_cyl": 5732,
+        "sq3a": 98566,
+        "sq3other": 165964,
+        "sq1_body": 8
       },
       "firm_counts": {
         "Heno": 8842,
@@ -1394,12 +1860,20 @@
         "sq2_Eryx": 25241,
         "SqUCON": 4051,
         "SqUCON1": 2563,
-        "UCON_cyl": 5023
+        "UCON_cyl": 5023,
+        "sq3a": 40468,
+        "sq3other": 145047,
+        "sq1_body": 8
       },
       "total": 62648,
       "total_loci": 62648,
       "unassigned_n": 12554,
-      "unassigned_pct": 20.04
+      "unassigned_pct": 20.04,
+      "sim_means": {
+        "sq3a": 0.4224,
+        "sq3other": 0.3455,
+        "sq1_body": 0.1595
+      }
     },
     {
       "taxon": "Sphaerodactylus_townsendi",
@@ -1414,7 +1888,10 @@
         "sq2_Eryx": 29542,
         "SqUCON": 4492,
         "SqUCON1": 2826,
-        "UCON_cyl": 4863
+        "UCON_cyl": 4863,
+        "sq3a": 85221,
+        "sq3other": 140341,
+        "sq1_body": 6
       },
       "firm_counts": {
         "Heno": 7253,
@@ -1425,12 +1902,20 @@
         "sq2_Eryx": 22468,
         "SqUCON": 3620,
         "SqUCON1": 2369,
-        "UCON_cyl": 4299
+        "UCON_cyl": 4299,
+        "sq3a": 34430,
+        "sq3other": 121548,
+        "sq1_body": 6
       },
       "total": 53205,
       "total_loci": 53205,
       "unassigned_n": 9532,
-      "unassigned_pct": 17.92
+      "unassigned_pct": 17.92,
+      "sim_means": {
+        "sq3a": 0.4591,
+        "sq3other": 0.3668,
+        "sq1_body": 0.153
+      }
     },
     {
       "taxon": "Teratoscincus_roborowskii",
@@ -1445,7 +1930,10 @@
         "sq2_Eryx": 69274,
         "SqUCON": 4305,
         "SqUCON1": 833,
-        "UCON_cyl": 12327
+        "UCON_cyl": 12327,
+        "sq3a": 142897,
+        "sq3other": 67876,
+        "sq1_body": 12032
       },
       "firm_counts": {
         "Heno": 28359,
@@ -1456,12 +1944,20 @@
         "sq2_Eryx": 55364,
         "SqUCON": 3990,
         "SqUCON1": 684,
-        "UCON_cyl": 10313
+        "UCON_cyl": 10313,
+        "sq3a": 77661,
+        "sq3other": 53164,
+        "sq1_body": 10131
       },
       "total": 133105,
       "total_loci": 133105,
       "unassigned_n": 18986,
-      "unassigned_pct": 14.26
+      "unassigned_pct": 14.26,
+      "sim_means": {
+        "sq3a": 0.6051,
+        "sq3other": 0.3149,
+        "sq1_body": 0.7565
+      }
     },
     {
       "taxon": "Laudakia_wui",
@@ -1476,7 +1972,10 @@
         "sq2_Eryx": 10832,
         "SqUCON": 277,
         "SqUCON1": 528,
-        "UCON_cyl": 3694
+        "UCON_cyl": 3694,
+        "sq3a": 10907,
+        "sq3other": 887,
+        "sq1_body": 3844
       },
       "firm_counts": {
         "Heno": 687,
@@ -1487,12 +1986,20 @@
         "sq2_Eryx": 6550,
         "SqUCON": 191,
         "SqUCON1": 387,
-        "UCON_cyl": 3006
+        "UCON_cyl": 3006,
+        "sq3a": 6176,
+        "sq3other": 277,
+        "sq1_body": 3634
       },
       "total": 43860,
       "total_loci": 43860,
       "unassigned_n": 7486,
-      "unassigned_pct": 17.07
+      "unassigned_pct": 17.07,
+      "sim_means": {
+        "sq3a": 0.2811,
+        "sq3other": 0.1525,
+        "sq1_body": 0.5133
+      }
     },
     {
       "taxon": "Pogona_vitticeps",
@@ -1507,7 +2014,10 @@
         "sq2_Eryx": 11497,
         "SqUCON": 203,
         "SqUCON1": 355,
-        "UCON_cyl": 857
+        "UCON_cyl": 857,
+        "sq3a": 11806,
+        "sq3other": 618,
+        "sq1_body": 41830
       },
       "firm_counts": {
         "Heno": 696,
@@ -1518,12 +2028,20 @@
         "sq2_Eryx": 7180,
         "SqUCON": 110,
         "SqUCON1": 286,
-        "UCON_cyl": 600
+        "UCON_cyl": 600,
+        "sq3a": 8901,
+        "sq3other": 272,
+        "sq1_body": 41616
       },
       "total": 32965,
       "total_loci": 32965,
       "unassigned_n": 6401,
-      "unassigned_pct": 19.42
+      "unassigned_pct": 19.42,
+      "sim_means": {
+        "sq3a": 0.2447,
+        "sq3other": 0.1377,
+        "sq1_body": 0.5159
+      }
     },
     {
       "taxon": "Chamaeleo_calyptratus",
@@ -1538,7 +2056,10 @@
         "sq2_Eryx": 4951,
         "SqUCON": 20,
         "SqUCON1": 123,
-        "UCON_cyl": 173
+        "UCON_cyl": 173,
+        "sq3a": 4024,
+        "sq3other": 155,
+        "sq1_body": 139553
       },
       "firm_counts": {
         "Heno": 363,
@@ -1549,12 +2070,20 @@
         "sq2_Eryx": 3417,
         "SqUCON": 17,
         "SqUCON1": 122,
-        "UCON_cyl": 139
+        "UCON_cyl": 139,
+        "sq3a": 2961,
+        "sq3other": 63,
+        "sq1_body": 137016
       },
       "total": 15400,
       "total_loci": 15400,
       "unassigned_n": 2195,
-      "unassigned_pct": 14.25
+      "unassigned_pct": 14.25,
+      "sim_means": {
+        "sq3a": 0.2333,
+        "sq3other": 0.1521,
+        "sq1_body": 0.6263
+      }
     },
     {
       "taxon": "Furcifer_pardalis",
@@ -1569,7 +2098,10 @@
         "sq2_Eryx": 5445,
         "SqUCON": 35,
         "SqUCON1": 154,
-        "UCON_cyl": 182
+        "UCON_cyl": 182,
+        "sq3a": 4531,
+        "sq3other": 127,
+        "sq1_body": 145321
       },
       "firm_counts": {
         "Heno": 427,
@@ -1580,12 +2112,20 @@
         "sq2_Eryx": 3516,
         "SqUCON": 26,
         "SqUCON1": 154,
-        "UCON_cyl": 154
+        "UCON_cyl": 154,
+        "sq3a": 3573,
+        "sq3other": 49,
+        "sq1_body": 142973
       },
       "total": 17235,
       "total_loci": 17235,
       "unassigned_n": 2501,
-      "unassigned_pct": 14.51
+      "unassigned_pct": 14.51,
+      "sim_means": {
+        "sq3a": 0.2415,
+        "sq3other": 0.1396,
+        "sq1_body": 0.6667
+      }
     },
     {
       "taxon": "Basiliscus_vittatus",
@@ -1600,7 +2140,10 @@
         "sq2_Eryx": 14949,
         "SqUCON": 16,
         "SqUCON1": 17,
-        "UCON_cyl": 16519
+        "UCON_cyl": 16519,
+        "sq3a": 22237,
+        "sq3other": 2793,
+        "sq1_body": 293
       },
       "firm_counts": {
         "Heno": 17834,
@@ -1611,12 +2154,20 @@
         "sq2_Eryx": 9742,
         "SqUCON": 14,
         "SqUCON1": 16,
-        "UCON_cyl": 13466
+        "UCON_cyl": 13466,
+        "sq3a": 13747,
+        "sq3other": 295,
+        "sq1_body": 277
       },
       "total": 60287,
       "total_loci": 60287,
       "unassigned_n": 17432,
-      "unassigned_pct": 28.92
+      "unassigned_pct": 28.92,
+      "sim_means": {
+        "sq3a": 0.3258,
+        "sq3other": 0.2864,
+        "sq1_body": 0.5581
+      }
     },
     {
       "taxon": "Gambelia_wislizenii",
@@ -1631,7 +2182,10 @@
         "sq2_Eryx": 16683,
         "SqUCON": 28,
         "SqUCON1": 76,
-        "UCON_cyl": 46643
+        "UCON_cyl": 46643,
+        "sq3a": 21124,
+        "sq3other": 706,
+        "sq1_body": 12
       },
       "firm_counts": {
         "Heno": 20637,
@@ -1642,12 +2196,20 @@
         "sq2_Eryx": 10323,
         "SqUCON": 23,
         "SqUCON1": 68,
-        "UCON_cyl": 26843
+        "UCON_cyl": 26843,
+        "sq3a": 17773,
+        "sq3other": 138,
+        "sq1_body": 12
       },
       "total": 128986,
       "total_loci": 128986,
       "unassigned_n": 36266,
-      "unassigned_pct": 28.12
+      "unassigned_pct": 28.12,
+      "sim_means": {
+        "sq3a": 0.2804,
+        "sq3other": 0.1707,
+        "sq1_body": 0.163
+      }
     },
     {
       "taxon": "Anolis_carolinensis",
@@ -1662,7 +2224,10 @@
         "sq2_Eryx": 4666,
         "SqUCON": 1213,
         "SqUCON1": 16,
-        "UCON_cyl": 9895
+        "UCON_cyl": 9895,
+        "sq3a": 4973,
+        "sq3other": 129,
+        "sq1_body": 91074
       },
       "firm_counts": {
         "Heno": 3733,
@@ -1673,12 +2238,20 @@
         "sq2_Eryx": 2849,
         "SqUCON": 1185,
         "SqUCON1": 14,
-        "UCON_cyl": 8470
+        "UCON_cyl": 8470,
+        "sq3a": 3986,
+        "sq3other": 49,
+        "sq1_body": 87128
       },
       "total": 32112,
       "total_loci": 32112,
       "unassigned_n": 4699,
-      "unassigned_pct": 14.63
+      "unassigned_pct": 14.63,
+      "sim_means": {
+        "sq3a": 0.209,
+        "sq3other": 0.1735,
+        "sq1_body": 0.4639
+      }
     },
     {
       "taxon": "Brachylophus_fasciatus",
@@ -1693,7 +2266,10 @@
         "sq2_Eryx": 16315,
         "SqUCON": 8,
         "SqUCON1": 14,
-        "UCON_cyl": 10807
+        "UCON_cyl": 10807,
+        "sq3a": 29669,
+        "sq3other": 1324,
+        "sq1_body": 4
       },
       "firm_counts": {
         "Heno": 11249,
@@ -1704,12 +2280,20 @@
         "sq2_Eryx": 9929,
         "SqUCON": 7,
         "SqUCON1": 12,
-        "UCON_cyl": 9385
+        "UCON_cyl": 9385,
+        "sq3a": 27302,
+        "sq3other": 197,
+        "sq1_body": 4
       },
       "total": 47797,
       "total_loci": 47797,
       "unassigned_n": 10217,
-      "unassigned_pct": 21.38
+      "unassigned_pct": 21.38,
+      "sim_means": {
+        "sq3a": 0.2726,
+        "sq3other": 0.1914,
+        "sq1_body": 0.1588
+      }
     },
     {
       "taxon": "Cyclura_pinguis",
@@ -1724,7 +2308,10 @@
         "sq2_Eryx": 16455,
         "SqUCON": 11,
         "SqUCON1": 40,
-        "UCON_cyl": 20594
+        "UCON_cyl": 20594,
+        "sq3a": 30924,
+        "sq3other": 1612,
+        "sq1_body": 8
       },
       "firm_counts": {
         "Heno": 14938,
@@ -1735,12 +2322,20 @@
         "sq2_Eryx": 9445,
         "SqUCON": 9,
         "SqUCON1": 39,
-        "UCON_cyl": 18089
+        "UCON_cyl": 18089,
+        "sq3a": 28280,
+        "sq3other": 228,
+        "sq1_body": 7
       },
       "total": 73864,
       "total_loci": 73864,
       "unassigned_n": 14747,
-      "unassigned_pct": 19.97
+      "unassigned_pct": 19.97,
+      "sim_means": {
+        "sq3a": 0.2916,
+        "sq3other": 0.1793,
+        "sq1_body": 0.1233
+      }
     },
     {
       "taxon": "Iguana_iguana",
@@ -1755,7 +2350,10 @@
         "sq2_Eryx": 15923,
         "SqUCON": 8,
         "SqUCON1": 71,
-        "UCON_cyl": 19575
+        "UCON_cyl": 19575,
+        "sq3a": 29677,
+        "sq3other": 1587,
+        "sq1_body": 7
       },
       "firm_counts": {
         "Heno": 14393,
@@ -1766,12 +2364,20 @@
         "sq2_Eryx": 9275,
         "SqUCON": 4,
         "SqUCON1": 70,
-        "UCON_cyl": 17437
+        "UCON_cyl": 17437,
+        "sq3a": 27168,
+        "sq3other": 235,
+        "sq1_body": 7
       },
       "total": 72252,
       "total_loci": 72252,
       "unassigned_n": 14086,
-      "unassigned_pct": 19.5
+      "unassigned_pct": 19.5,
+      "sim_means": {
+        "sq3a": 0.2666,
+        "sq3other": 0.1881,
+        "sq1_body": 0.1589
+      }
     },
     {
       "taxon": "Tretioscincus_oriximinensis",
@@ -1786,7 +2392,10 @@
         "sq2_Eryx": 484,
         "SqUCON": 0,
         "SqUCON1": 0,
-        "UCON_cyl": 11194
+        "UCON_cyl": 11194,
+        "sq3a": 64679,
+        "sq3other": 10214,
+        "sq1_body": 39647
       },
       "firm_counts": {
         "Heno": 490,
@@ -1797,12 +2406,20 @@
         "sq2_Eryx": 480,
         "SqUCON": 0,
         "SqUCON1": 0,
-        "UCON_cyl": 9725
+        "UCON_cyl": 9725,
+        "sq3a": 59406,
+        "sq3other": 6128,
+        "sq1_body": 39644
       },
       "total": 22226,
       "total_loci": 22226,
       "unassigned_n": 2388,
-      "unassigned_pct": 10.74
+      "unassigned_pct": 10.74,
+      "sim_means": {
+        "sq3a": 0.316,
+        "sq3other": 0.2538,
+        "sq1_body": 0.2525
+      }
     },
     {
       "taxon": "Gallotia_galloti",
@@ -1817,7 +2434,10 @@
         "sq2_Eryx": 38284,
         "SqUCON": 0,
         "SqUCON1": 1,
-        "UCON_cyl": 3969
+        "UCON_cyl": 3969,
+        "sq3a": 21526,
+        "sq3other": 3381,
+        "sq1_body": 5834
       },
       "firm_counts": {
         "Heno": 12,
@@ -1828,12 +2448,20 @@
         "sq2_Eryx": 29202,
         "SqUCON": 0,
         "SqUCON1": 1,
-        "UCON_cyl": 3206
+        "UCON_cyl": 3206,
+        "sq3a": 17124,
+        "sq3other": 2460,
+        "sq1_body": 5816
       },
       "total": 66027,
       "total_loci": 66027,
       "unassigned_n": 12036,
-      "unassigned_pct": 18.23
+      "unassigned_pct": 18.23,
+      "sim_means": {
+        "sq3a": 0.4081,
+        "sq3other": 0.397,
+        "sq1_body": 0.4216
+      }
     },
     {
       "taxon": "Lacerta_agilis",
@@ -1848,7 +2476,10 @@
         "sq2_Eryx": 41757,
         "SqUCON": 6,
         "SqUCON1": 2,
-        "UCON_cyl": 3902
+        "UCON_cyl": 3902,
+        "sq3a": 42859,
+        "sq3other": 14416,
+        "sq1_body": 61201
       },
       "firm_counts": {
         "Heno": 42,
@@ -1859,12 +2490,20 @@
         "sq2_Eryx": 31345,
         "SqUCON": 6,
         "SqUCON1": 2,
-        "UCON_cyl": 3155
+        "UCON_cyl": 3155,
+        "sq3a": 32755,
+        "sq3other": 12879,
+        "sq1_body": 61046
       },
       "total": 78485,
       "total_loci": 78485,
       "unassigned_n": 13683,
-      "unassigned_pct": 17.43
+      "unassigned_pct": 17.43,
+      "sim_means": {
+        "sq3a": 0.3428,
+        "sq3other": 0.3925,
+        "sq1_body": 0.4591
+      }
     },
     {
       "taxon": "Latastia_doriai",
@@ -1879,7 +2518,10 @@
         "sq2_Eryx": 24363,
         "SqUCON": 1,
         "SqUCON1": 1,
-        "UCON_cyl": 843
+        "UCON_cyl": 843,
+        "sq3a": 43699,
+        "sq3other": 42069,
+        "sq1_body": 58570
       },
       "firm_counts": {
         "Heno": 5,
@@ -1890,12 +2532,20 @@
         "sq2_Eryx": 18270,
         "SqUCON": 1,
         "SqUCON1": 1,
-        "UCON_cyl": 757
+        "UCON_cyl": 757,
+        "sq3a": 35411,
+        "sq3other": 39085,
+        "sq1_body": 57966
       },
       "total": 32798,
       "total_loci": 32798,
       "unassigned_n": 6567,
-      "unassigned_pct": 20.02
+      "unassigned_pct": 20.02,
+      "sim_means": {
+        "sq3a": 0.3307,
+        "sq3other": 0.385,
+        "sq1_body": 0.4008
+      }
     },
     {
       "taxon": "Podarcis_cretensis",
@@ -1910,7 +2560,10 @@
         "sq2_Eryx": 40497,
         "SqUCON": 5,
         "SqUCON1": 0,
-        "UCON_cyl": 3613
+        "UCON_cyl": 3613,
+        "sq3a": 38353,
+        "sq3other": 5619,
+        "sq1_body": 122211
       },
       "firm_counts": {
         "Heno": 44,
@@ -1921,12 +2574,20 @@
         "sq2_Eryx": 29914,
         "SqUCON": 5,
         "SqUCON1": 0,
-        "UCON_cyl": 3028
+        "UCON_cyl": 3028,
+        "sq3a": 31835,
+        "sq3other": 3941,
+        "sq1_body": 122023
       },
       "total": 78603,
       "total_loci": 78603,
       "unassigned_n": 13117,
-      "unassigned_pct": 16.69
+      "unassigned_pct": 16.69,
+      "sim_means": {
+        "sq3a": 0.3554,
+        "sq3other": 0.4054,
+        "sq1_body": 0.4585
+      }
     },
     {
       "taxon": "Podarcis_lilfordi",
@@ -1941,7 +2602,10 @@
         "sq2_Eryx": 41896,
         "SqUCON": 4,
         "SqUCON1": 3,
-        "UCON_cyl": 3765
+        "UCON_cyl": 3765,
+        "sq3a": 37559,
+        "sq3other": 6860,
+        "sq1_body": 92399
       },
       "firm_counts": {
         "Heno": 42,
@@ -1952,12 +2616,20 @@
         "sq2_Eryx": 30824,
         "SqUCON": 4,
         "SqUCON1": 3,
-        "UCON_cyl": 3060
+        "UCON_cyl": 3060,
+        "sq3a": 30595,
+        "sq3other": 5290,
+        "sq1_body": 92245
       },
       "total": 80442,
       "total_loci": 80442,
       "unassigned_n": 14009,
-      "unassigned_pct": 17.42
+      "unassigned_pct": 17.42,
+      "sim_means": {
+        "sq3a": 0.3865,
+        "sq3other": 0.4116,
+        "sq1_body": 0.473
+      }
     },
     {
       "taxon": "Podarcis_muralis",
@@ -1972,7 +2644,10 @@
         "sq2_Eryx": 42374,
         "SqUCON": 6,
         "SqUCON1": 0,
-        "UCON_cyl": 3835
+        "UCON_cyl": 3835,
+        "sq3a": 41730,
+        "sq3other": 6433,
+        "sq1_body": 123811
       },
       "firm_counts": {
         "Heno": 46,
@@ -1983,12 +2658,20 @@
         "sq2_Eryx": 31234,
         "SqUCON": 6,
         "SqUCON1": 0,
-        "UCON_cyl": 3107
+        "UCON_cyl": 3107,
+        "sq3a": 34152,
+        "sq3other": 4652,
+        "sq1_body": 123546
       },
       "total": 80702,
       "total_loci": 80702,
       "unassigned_n": 14320,
-      "unassigned_pct": 17.74
+      "unassigned_pct": 17.74,
+      "sim_means": {
+        "sq3a": 0.357,
+        "sq3other": 0.4131,
+        "sq1_body": 0.4798
+      }
     },
     {
       "taxon": "Zootoca_vivipara",
@@ -2003,7 +2686,10 @@
         "sq2_Eryx": 39363,
         "SqUCON": 1,
         "SqUCON1": 2,
-        "UCON_cyl": 3998
+        "UCON_cyl": 3998,
+        "sq3a": 28576,
+        "sq3other": 5079,
+        "sq1_body": 75954
       },
       "firm_counts": {
         "Heno": 41,
@@ -2014,12 +2700,20 @@
         "sq2_Eryx": 28726,
         "SqUCON": 1,
         "SqUCON1": 2,
-        "UCON_cyl": 3219
+        "UCON_cyl": 3219,
+        "sq3a": 23488,
+        "sq3other": 3543,
+        "sq1_body": 75758
       },
       "total": 84332,
       "total_loci": 84332,
       "unassigned_n": 14172,
-      "unassigned_pct": 16.81
+      "unassigned_pct": 16.81,
+      "sim_means": {
+        "sq3a": 0.3497,
+        "sq3other": 0.3697,
+        "sq1_body": 0.4931
+      }
     },
     {
       "taxon": "Aspidoscelis_tigris",
@@ -2034,7 +2728,10 @@
         "sq2_Eryx": 3655,
         "SqUCON": 1,
         "SqUCON1": 2,
-        "UCON_cyl": 1469
+        "UCON_cyl": 1469,
+        "sq3a": 126260,
+        "sq3other": 35548,
+        "sq1_body": 3
       },
       "firm_counts": {
         "Heno": 1799,
@@ -2045,12 +2742,20 @@
         "sq2_Eryx": 1976,
         "SqUCON": 1,
         "SqUCON1": 2,
-        "UCON_cyl": 1051
+        "UCON_cyl": 1051,
+        "sq3a": 116087,
+        "sq3other": 29914,
+        "sq1_body": 2
       },
       "total": 14727,
       "total_loci": 14727,
       "unassigned_n": 3131,
-      "unassigned_pct": 21.26
+      "unassigned_pct": 21.26,
+      "sim_means": {
+        "sq3a": 0.3485,
+        "sq3other": 0.3418,
+        "sq1_body": 0.168
+      }
     },
     {
       "taxon": "Salvator_merianae",
@@ -2065,7 +2770,10 @@
         "sq2_Eryx": 7362,
         "SqUCON": 1,
         "SqUCON1": 0,
-        "UCON_cyl": 9444
+        "UCON_cyl": 9444,
+        "sq3a": 14590,
+        "sq3other": 321,
+        "sq1_body": 13822
       },
       "firm_counts": {
         "Heno": 4369,
@@ -2076,12 +2784,20 @@
         "sq2_Eryx": 3848,
         "SqUCON": 1,
         "SqUCON1": 0,
-        "UCON_cyl": 7047
+        "UCON_cyl": 7047,
+        "sq3a": 12289,
+        "sq3other": 98,
+        "sq1_body": 13819
       },
       "total": 34179,
       "total_loci": 34179,
       "unassigned_n": 8019,
-      "unassigned_pct": 23.46
+      "unassigned_pct": 23.46,
+      "sim_means": {
+        "sq3a": 0.3156,
+        "sq3other": 0.2381,
+        "sq1_body": 0.4252
+      }
     },
     {
       "taxon": "Hemicordylus_capensis",
@@ -2096,7 +2812,10 @@
         "sq2_Eryx": 207298,
         "SqUCON": 6,
         "SqUCON1": 70,
-        "UCON_cyl": 920
+        "UCON_cyl": 920,
+        "sq3a": 78214,
+        "sq3other": 3132,
+        "sq1_body": 10
       },
       "firm_counts": {
         "Heno": 971,
@@ -2107,12 +2826,20 @@
         "sq2_Eryx": 189805,
         "SqUCON": 3,
         "SqUCON1": 67,
-        "UCON_cyl": 807
+        "UCON_cyl": 807,
+        "sq3a": 73807,
+        "sq3other": 311,
+        "sq1_body": 10
       },
       "total": 212170,
       "total_loci": 212170,
       "unassigned_n": 18136,
-      "unassigned_pct": 8.55
+      "unassigned_pct": 8.55,
+      "sim_means": {
+        "sq3a": 0.5223,
+        "sq3other": 0.2453,
+        "sq1_body": 0.1569
+      }
     },
     {
       "taxon": "Cryptoblepharus_egeriae",
@@ -2127,7 +2854,10 @@
         "sq2_Eryx": 11594,
         "SqUCON": 2,
         "SqUCON1": 4,
-        "UCON_cyl": 23149
+        "UCON_cyl": 23149,
+        "sq3a": 12733,
+        "sq3other": 626,
+        "sq1_body": 21260
       },
       "firm_counts": {
         "Heno": 31,
@@ -2138,12 +2868,20 @@
         "sq2_Eryx": 7597,
         "SqUCON": 2,
         "SqUCON1": 4,
-        "UCON_cyl": 22702
+        "UCON_cyl": 22702,
+        "sq3a": 10947,
+        "sq3other": 80,
+        "sq1_body": 19128
       },
       "total": 42977,
       "total_loci": 42977,
       "unassigned_n": 6262,
-      "unassigned_pct": 14.57
+      "unassigned_pct": 14.57,
+      "sim_means": {
+        "sq3a": 0.3441,
+        "sq3other": 0.1875,
+        "sq1_body": 0.4726
+      }
     },
     {
       "taxon": "Lerista_edwardsae",
@@ -2158,7 +2896,10 @@
         "sq2_Eryx": 19913,
         "SqUCON": 435,
         "SqUCON1": 140,
-        "UCON_cyl": 2573
+        "UCON_cyl": 2573,
+        "sq3a": 10441,
+        "sq3other": 383,
+        "sq1_body": 42102
       },
       "firm_counts": {
         "Heno": 10,
@@ -2169,12 +2910,20 @@
         "sq2_Eryx": 13988,
         "SqUCON": 386,
         "SqUCON1": 134,
-        "UCON_cyl": 2413
+        "UCON_cyl": 2413,
+        "sq3a": 8730,
+        "sq3other": 51,
+        "sq1_body": 42060
       },
       "total": 25639,
       "total_loci": 25639,
       "unassigned_n": 6726,
-      "unassigned_pct": 26.23
+      "unassigned_pct": 26.23,
+      "sim_means": {
+        "sq3a": 0.3517,
+        "sq3other": 0.2035,
+        "sq1_body": 0.5329
+      }
     },
     {
       "taxon": "Marisora_unimarginata",
@@ -2189,7 +2938,10 @@
         "sq2_Eryx": 35962,
         "SqUCON": 2,
         "SqUCON1": 3,
-        "UCON_cyl": 773
+        "UCON_cyl": 773,
+        "sq3a": 18790,
+        "sq3other": 1835,
+        "sq1_body": 16105
       },
       "firm_counts": {
         "Heno": 117,
@@ -2200,12 +2952,20 @@
         "sq2_Eryx": 25331,
         "SqUCON": 2,
         "SqUCON1": 3,
-        "UCON_cyl": 695
+        "UCON_cyl": 695,
+        "sq3a": 14803,
+        "sq3other": 544,
+        "sq1_body": 15700
       },
       "total": 39919,
       "total_loci": 39919,
       "unassigned_n": 11072,
-      "unassigned_pct": 27.74
+      "unassigned_pct": 27.74,
+      "sim_means": {
+        "sq3a": 0.4043,
+        "sq3other": 0.2709,
+        "sq1_body": 0.5136
+      }
     },
     {
       "taxon": "Spondylurus_nitidus",
@@ -2220,7 +2980,10 @@
         "sq2_Eryx": 21349,
         "SqUCON": 5447,
         "SqUCON1": 1104,
-        "UCON_cyl": 929
+        "UCON_cyl": 929,
+        "sq3a": 22261,
+        "sq3other": 1270,
+        "sq1_body": 2909
       },
       "firm_counts": {
         "Heno": 29,
@@ -2231,12 +2994,20 @@
         "sq2_Eryx": 14446,
         "SqUCON": 4849,
         "SqUCON1": 928,
-        "UCON_cyl": 877
+        "UCON_cyl": 877,
+        "sq3a": 18988,
+        "sq3other": 128,
+        "sq1_body": 2872
       },
       "total": 30333,
       "total_loci": 30333,
       "unassigned_n": 7905,
-      "unassigned_pct": 26.06
+      "unassigned_pct": 26.06,
+      "sim_means": {
+        "sq3a": 0.4068,
+        "sq3other": 0.1789,
+        "sq1_body": 0.5137
+      }
     },
     {
       "taxon": "Tiliqua_scincoides",
@@ -2251,7 +3022,10 @@
         "sq2_Eryx": 33902,
         "SqUCON": 111,
         "SqUCON1": 21,
-        "UCON_cyl": 4721
+        "UCON_cyl": 4721,
+        "sq3a": 20703,
+        "sq3other": 1446,
+        "sq1_body": 533
       },
       "firm_counts": {
         "Heno": 99,
@@ -2262,12 +3036,20 @@
         "sq2_Eryx": 21478,
         "SqUCON": 94,
         "SqUCON1": 18,
-        "UCON_cyl": 4334
+        "UCON_cyl": 4334,
+        "sq3a": 16916,
+        "sq3other": 132,
+        "sq1_body": 513
       },
       "total": 41528,
       "total_loci": 41528,
       "unassigned_n": 13388,
-      "unassigned_pct": 32.24
+      "unassigned_pct": 32.24,
+      "sim_means": {
+        "sq3a": 0.3828,
+        "sq3other": 0.1777,
+        "sq1_body": 0.5423
+      }
     },
     {
       "taxon": "Xantusia_vigilis",
@@ -2282,7 +3064,10 @@
         "sq2_Eryx": 35403,
         "SqUCON": 1,
         "SqUCON1": 1,
-        "UCON_cyl": 18569
+        "UCON_cyl": 18569,
+        "sq3a": 70140,
+        "sq3other": 3240,
+        "sq1_body": 3
       },
       "firm_counts": {
         "Heno": 72,
@@ -2293,12 +3078,20 @@
         "sq2_Eryx": 22764,
         "SqUCON": 1,
         "SqUCON1": 1,
-        "UCON_cyl": 13108
+        "UCON_cyl": 13108,
+        "sq3a": 63363,
+        "sq3other": 153,
+        "sq1_body": 3
       },
       "total": 101098,
       "total_loci": 101098,
       "unassigned_n": 26244,
-      "unassigned_pct": 25.96
+      "unassigned_pct": 25.96,
+      "sim_means": {
+        "sq3a": 0.4928,
+        "sq3other": 0.2141,
+        "sq1_body": 0.1649
+      }
     }
   ]
 }
