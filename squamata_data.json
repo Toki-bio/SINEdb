@@ -1,6 +1,6 @@
 {
-  "title": "Squamata Non-Snake \u2014 SINE Copy Counts",
-  "description": "Non-snake squamate species analyzed with snake SINE consensuses (73 species, 9 subfamilies)",
+  "title": "Squamata Non-Snake — SINE Copy Counts",
+  "description": "Non-snake squamate species analyzed with snake SINE consensuses (73 species, 17 subfamilies, includes gecko-specific SINEs)",
   "subfamilies": [
     "Heno",
     "oph1",
@@ -13,7 +13,12 @@
     "UCON_cyl",
     "sq3a",
     "sq3other",
-    "sq1_body"
+    "sq1_body",
+    "g1a_Sphaerodactylus_glaucus",
+    "g1b_Sphaerodactylus_glaucus",
+    "insertion_Sphaerodactylus_glaucus",
+    "g2a_oph_ae_asa",
+    "g2b_Coleonyx_brevis"
   ],
   "species": [
     {
@@ -452,7 +457,12 @@
         "UCON_cyl": 19777,
         "sq3a": 100210,
         "sq3other": 62785,
-        "sq1_body": 1
+        "sq1_body": 1,
+        "g1a_Sphaerodactylus_glaucus": 66,
+        "g1b_Sphaerodactylus_glaucus": 51,
+        "insertion_Sphaerodactylus_glaucus": 48,
+        "g2a_oph_ae_asa": 10,
+        "g2b_Coleonyx_brevis": 76
       },
       "firm_counts": {
         "Heno": 5465,
@@ -466,16 +476,26 @@
         "UCON_cyl": 6517,
         "sq3a": 64243,
         "sq3other": 50274,
-        "sq1_body": 1
+        "sq1_body": 1,
+        "g1a_Sphaerodactylus_glaucus": 66,
+        "g1b_Sphaerodactylus_glaucus": 51,
+        "insertion_Sphaerodactylus_glaucus": 48,
+        "g2a_oph_ae_asa": 10,
+        "g2b_Coleonyx_brevis": 76
       },
-      "total": 80166,
+      "total": 80417,
       "total_loci": 80166,
       "unassigned_n": 27326,
       "unassigned_pct": 34.09,
       "sim_means": {
         "sq3a": 0.4313,
         "sq3other": 0.4116,
-        "sq1_body": 0.1505
+        "sq1_body": 0.1505,
+        "g1a_Sphaerodactylus_glaucus": 0.0,
+        "g1b_Sphaerodactylus_glaucus": 0.0,
+        "insertion_Sphaerodactylus_glaucus": 0.0,
+        "g2a_oph_ae_asa": 0.0,
+        "g2b_Coleonyx_brevis": 0.0
       }
     },
     {
@@ -494,7 +514,12 @@
         "UCON_cyl": 13422,
         "sq3a": 160969,
         "sq3other": 44371,
-        "sq1_body": 16
+        "sq1_body": 16,
+        "g1a_Sphaerodactylus_glaucus": 66,
+        "g1b_Sphaerodactylus_glaucus": 5,
+        "insertion_Sphaerodactylus_glaucus": 83,
+        "g2a_oph_ae_asa": 7,
+        "g2b_Coleonyx_brevis": 730
       },
       "firm_counts": {
         "Heno": 16535,
@@ -508,9 +533,14 @@
         "UCON_cyl": 10144,
         "sq3a": 113724,
         "sq3other": 32810,
-        "sq1_body": 16
+        "sq1_body": 16,
+        "g1a_Sphaerodactylus_glaucus": 66,
+        "g1b_Sphaerodactylus_glaucus": 5,
+        "insertion_Sphaerodactylus_glaucus": 83,
+        "g2a_oph_ae_asa": 7,
+        "g2b_Coleonyx_brevis": 730
       },
-      "total": 114444,
+      "total": 115335,
       "total_loci": 114444,
       "unassigned_n": 21202,
       "unassigned_pct": 18.53,
@@ -521,7 +551,12 @@
       "sim_means": {
         "sq3a": 0.5206,
         "sq3other": 0.4528,
-        "sq1_body": 0.1747
+        "sq1_body": 0.1747,
+        "g1a_Sphaerodactylus_glaucus": 0.0,
+        "g1b_Sphaerodactylus_glaucus": 0.0,
+        "insertion_Sphaerodactylus_glaucus": 0.0,
+        "g2a_oph_ae_asa": 0.0,
+        "g2b_Coleonyx_brevis": 0.0
       }
     },
     {
@@ -582,7 +617,12 @@
         "UCON_cyl": 4893,
         "sq3a": 77420,
         "sq3other": 54571,
-        "sq1_body": 5
+        "sq1_body": 5,
+        "g1a_Sphaerodactylus_glaucus": 5909,
+        "g1b_Sphaerodactylus_glaucus": 85,
+        "insertion_Sphaerodactylus_glaucus": 52,
+        "g2a_oph_ae_asa": 4,
+        "g2b_Coleonyx_brevis": 1338
       },
       "firm_counts": {
         "Heno": 4811,
@@ -596,16 +636,26 @@
         "UCON_cyl": 4357,
         "sq3a": 58060,
         "sq3other": 37826,
-        "sq1_body": 5
+        "sq1_body": 5,
+        "g1a_Sphaerodactylus_glaucus": 5909,
+        "g1b_Sphaerodactylus_glaucus": 85,
+        "insertion_Sphaerodactylus_glaucus": 52,
+        "g2a_oph_ae_asa": 4,
+        "g2b_Coleonyx_brevis": 1338
       },
-      "total": 70050,
+      "total": 77438,
       "total_loci": 70050,
       "unassigned_n": 16212,
       "unassigned_pct": 23.14,
       "sim_means": {
         "sq3a": 0.5012,
         "sq3other": 0.3225,
-        "sq1_body": 0.1651
+        "sq1_body": 0.1651,
+        "g1a_Sphaerodactylus_glaucus": 0.0,
+        "g1b_Sphaerodactylus_glaucus": 0.0,
+        "insertion_Sphaerodactylus_glaucus": 0.0,
+        "g2a_oph_ae_asa": 0.0,
+        "g2b_Coleonyx_brevis": 0.0
       }
     },
     {
@@ -666,7 +716,12 @@
         "UCON_cyl": 3541,
         "sq3a": 90516,
         "sq3other": 95852,
-        "sq1_body": 16
+        "sq1_body": 16,
+        "g1a_Sphaerodactylus_glaucus": 13185,
+        "g1b_Sphaerodactylus_glaucus": 25,
+        "insertion_Sphaerodactylus_glaucus": 33,
+        "g2a_oph_ae_asa": 3,
+        "g2b_Coleonyx_brevis": 7
       },
       "firm_counts": {
         "Heno": 6800,
@@ -680,9 +735,14 @@
         "UCON_cyl": 2936,
         "sq3a": 66641,
         "sq3other": 72827,
-        "sq1_body": 16
+        "sq1_body": 16,
+        "g1a_Sphaerodactylus_glaucus": 13185,
+        "g1b_Sphaerodactylus_glaucus": 25,
+        "insertion_Sphaerodactylus_glaucus": 33,
+        "g2a_oph_ae_asa": 3,
+        "g2b_Coleonyx_brevis": 7
       },
-      "total": 89467,
+      "total": 102720,
       "total_loci": 89467,
       "unassigned_n": 14508,
       "unassigned_pct": 16.22,
@@ -693,7 +753,12 @@
       "sim_means": {
         "sq3a": 0.5254,
         "sq3other": 0.418,
-        "sq1_body": 0.1585
+        "sq1_body": 0.1585,
+        "g1a_Sphaerodactylus_glaucus": 0.0,
+        "g1b_Sphaerodactylus_glaucus": 0.0,
+        "insertion_Sphaerodactylus_glaucus": 0.0,
+        "g2a_oph_ae_asa": 0.0,
+        "g2b_Coleonyx_brevis": 0.0
       }
     },
     {
@@ -712,7 +777,12 @@
         "UCON_cyl": 15906,
         "sq3a": 200077,
         "sq3other": 24658,
-        "sq1_body": 3079
+        "sq1_body": 3079,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 38424,
@@ -726,7 +796,12 @@
         "UCON_cyl": 12511,
         "sq3a": 82626,
         "sq3other": 14356,
-        "sq1_body": 3073
+        "sq1_body": 3073,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "total": 187003,
       "total_loci": 187003,
@@ -735,7 +810,12 @@
       "sim_means": {
         "sq3a": 0.583,
         "sq3other": 0.3158,
-        "sq1_body": 0.6373
+        "sq1_body": 0.6373,
+        "g1a_Sphaerodactylus_glaucus": 0.0,
+        "g1b_Sphaerodactylus_glaucus": 0.0,
+        "insertion_Sphaerodactylus_glaucus": 0.0,
+        "g2a_oph_ae_asa": 0.0,
+        "g2b_Coleonyx_brevis": 0.0
       }
     },
     {
@@ -831,7 +911,12 @@
         "UCON_cyl": 8391,
         "sq3a": 147263,
         "sq3other": 130715,
-        "sq1_body": 84299
+        "sq1_body": 84299,
+        "g1a_Sphaerodactylus_glaucus": 196,
+        "g1b_Sphaerodactylus_glaucus": 4,
+        "insertion_Sphaerodactylus_glaucus": 3,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 2
       },
       "firm_counts": {
         "Heno": 23909,
@@ -845,9 +930,14 @@
         "UCON_cyl": 6596,
         "sq3a": 62880,
         "sq3other": 118787,
-        "sq1_body": 77533
+        "sq1_body": 77533,
+        "g1a_Sphaerodactylus_glaucus": 196,
+        "g1b_Sphaerodactylus_glaucus": 4,
+        "insertion_Sphaerodactylus_glaucus": 3,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 2
       },
-      "total": 124418,
+      "total": 124623,
       "total_loci": 124418,
       "unassigned_n": 17059,
       "unassigned_pct": 13.71,
@@ -858,7 +948,12 @@
       "sim_means": {
         "sq3a": 0.5052,
         "sq3other": 0.3497,
-        "sq1_body": 0.7475
+        "sq1_body": 0.7475,
+        "g1a_Sphaerodactylus_glaucus": 0.0,
+        "g1b_Sphaerodactylus_glaucus": 0.0,
+        "insertion_Sphaerodactylus_glaucus": 0.0,
+        "g2a_oph_ae_asa": 0.0,
+        "g2b_Coleonyx_brevis": 0.0
       }
     },
     {

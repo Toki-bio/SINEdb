@@ -1,5 +1,5 @@
 {
-  "title": "SINEdb \u2014 Unified Squamata SINE Table",
+  "title": "SINEdb — Unified Squamata SINE Table",
   "description": "All SINE subfamilies across all squamate species",
   "sine_families": {
     "Heno": [
@@ -57,6 +57,13 @@
       "SqUCON",
       "SqUCON1",
       "UCON_cyl"
+    ],
+    "Gekkota_SINEs": [
+      "g1a_Sphaerodactylus_glaucus",
+      "g1b_Sphaerodactylus_glaucus",
+      "insertion_Sphaerodactylus_glaucus",
+      "g2a_oph_ae_asa",
+      "g2b_Coleonyx_brevis"
     ]
   },
   "subfamilies": [
@@ -103,7 +110,12 @@
     "sq3other",
     "SqUCON",
     "SqUCON1",
-    "UCON_cyl"
+    "UCON_cyl",
+    "g1a_Sphaerodactylus_glaucus",
+    "g1b_Sphaerodactylus_glaucus",
+    "insertion_Sphaerodactylus_glaucus",
+    "g2a_oph_ae_asa",
+    "g2b_Coleonyx_brevis"
   ],
   "shared_subfamilies": [
     "Heno",
@@ -168,7 +180,12 @@
         "UCON_cyl": 770,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 10326,
@@ -298,7 +315,12 @@
         "UCON_cyl": 1591,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 17302,
@@ -425,7 +447,12 @@
         "UCON_cyl": 1326,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 18662,
@@ -552,7 +579,12 @@
         "UCON_cyl": 1598,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 19229,
@@ -688,7 +720,12 @@
         "UCON_cyl": 1594,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 18255,
@@ -820,7 +857,12 @@
         "UCON_cyl": 1535,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 19756,
@@ -955,7 +997,12 @@
         "UCON_cyl": 1210,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 17015,
@@ -1020,7 +1067,8 @@
         "sq3c_mala": "GAGAGCCAGTTTGGTCTAGTGGTTAAGGCTCCAGGCTAGAAACCAGGAGACTGTGAGTTCTAGTCCCCTTAGGCATGAAAGCCGCTGGGTGACTTTGGGCCAGTCACTCTCTCTCAGCCCAGATCAGGCTCGGACAAGCGGTGTCAATTCCTGTCAACCAAGGATCAACATTGGTTGATCAAAAAGGACCCTGCACCTGGGAAAAACTAGGAAGAAAAAAA",
         "SqUCON1": "GAGCCTCGTGTGGCGCAGAGTGGTAGGCGGCAGTATTGCAACCGAAACTCTCCCCACGACCTGAGTTCGATCCCAGCGGAAGCTGGATTCTCAGGTAGCCGGCTCAGGTCGACTCAGCCTTCCATCCTTCCGAGGTCGGTAAAATGAGTACCCAGCTTGCTGGGGGAAAGGAATTATGACTGGGGAAGGCAATGGCAAACCACCCCGCTATAGTCTGCCAAGAAAACTCGCGAAAGCGGCATCCCCCAAGGGTCAGAAAATGACTCGGGGACCTTTCTTCTT",
         "UCON_cyl": "GGTCCCTCACTGGAGGTTTTCAAGAAAGTTGGACAGCCATTTGTCTGGGATGGTTGAGGATTCCTGCCTGGGCAGGGGGTTGGACTAGAAGACCTCCAAGGTCCCTTCCAACCCTATGATTCTATGA"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Eryx_tataricus",
@@ -1070,7 +1118,12 @@
         "UCON_cyl": 1536,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 18262,
@@ -1135,7 +1188,8 @@
         "sq1Pb6": "TGCTGCAGACCCCGTCGTTAAAGAATTCCATCTGGCGGGGTCGAGGAGGCGGGCCTTCTCTGCTGTGGCTCCCGCCCTATGGAACATGCTGCCCCCAGAGGTGCGATATCCCCGTCCCTCCGGACTTCCGAAGGATGAAGACCTGGCTTTGCCGTCTGCTTGGGGCGAGGGAGGAACAGTCCACTGGGGCTGGTTGGTGCTGAGCCCCCCCCCACCCTATTGGTCTTTAACATCTTTTAATAGTATTTAACATCCATCTTGGATTTTATTTTTTTTTTATTTATTGTTTTAAATGTATAGTTTTATTTGTTTGTTGTAAACCGCCCAGAGTCCCCTGTTGGGGGAGTTGGGCGGGGATAAATTAATAAATAAAAAAA",
         "Sq3A_Eryx": "TGTTAGTGGTTAAGGTGTTGGACTAGGAGGGAGACCCAGGTTCAAGTCCACCCTCAGCCATGGAACTCACTGGGTGACTTTGGGCCAGTCACTTCTCTCAGCCCAACCTACCTCACAGGGTTGTTGTGGGGAAAAGGGGGGACTATGTACCCTTGAGCTCCTGGAAAAGGGGATATAAATTAAAAAAAA",
         "sq3c_mala": "GAGAGCCAGTTTGGTCTAGTGGTTAAGGCTCCAGGCTAGAAACCAGGAGACTGTGAGTTCTAGTCCGCCTTAGGCATGAAAGCCGGCTGGGTGACTTTGGGCCAGTCACTCTCTCTCAGCCCAAGTCAGGCTCGGGACAAGCCGTGTCAATTCCTGTCAACCAAGGATCAACATTGGTTGATCAAAAAGCGACCCTGCACCTGGGGAAAAACTAGGAAGAAAAAAA"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Lichanura_trivirgata",
@@ -1185,7 +1239,12 @@
         "UCON_cyl": 1622,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 19002,
@@ -1264,7 +1323,8 @@
         "SqUCON1": "GAGCCTCGTGTGGCGCAGAGTGGTAGGCGGCAGTATTGCAACCGAAACTCTCCCCACGACCTGAGTTCGATCCCAGCGGAAGCTGGTTCTCAGGTAGCCGGCTCAGGTCGACTCAGCCTTCCATCCTTCCGAGGTCGGTAAAATGAGTACCCAGCTTGCTGGGGGAAAGGTAATTACGACTGGGGAAGGCAATGGCAAACCACCCCGCTCTATAGTCTGCCAGGAAAACGTCGCGAAAGCGGCGTCTCCCCAGGGGTCATGACTGTGTTCACCTTTCT",
         "SqUCON": "GAGCCTCGTGTGGCGCAGAGTGGTAGGCGGCAGTACTGCAACCGAAACTCTCCCCACGACCTGAGTTCGATCCCAGCGGAAGTTGGTTTCTCAGGTAGCCGGCTCAGGTCGACTCAGCCTTCCATCCTTCCGAGGTCGGTAAAATGAGTACCCAGCTTGCTGGGGGAAAGGTAATCACGACTGGGGAAGGCAATGGCAAACCACCCCGCTCTATAGTCTGCCAAGAAAACGTCAGCGAAAGCGGCGTCCCTCCAAAGGGTCAGTAATGACTCGGTGCTTGCACAGAGGACCTTTCACTTT",
         "UCON_cyl": "GGGGCTCCATCACTGGAGGTTTTCAAGAAAGTTGGACAGCCATTTGTCGGGATGGTTGAGGATTCCTGCCTGGGCAGGGGGTTGGACTAGAAGACCTCCAAGGTCCCTTCCAACCCTATGATTCTATGA"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Arizona_elegans",
@@ -1314,7 +1374,12 @@
         "UCON_cyl": 3839,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 6932,
@@ -1394,7 +1459,8 @@
         "SqUCON1": "GAGCCCAGGTGGCGCAGTGGTTAGAGTGCAGTACTGCAGCTACTTCAGCTGACTGCTAGTTCAGCAGATCAGCGGATCAAATCTCACCGGCTCAAGGTTGACTCAGCCTTCCATCCTTCCGAGGTGGGTAAAATGAGGACCCAGATTGTTGGGGGCAATATGCTATTTAGTATACTGTCTTTGGTGTAAGCCGCCCAGAGTCCTCGGAGAGTGGGCGGCATAGAAATATGATAATAAA",
         "SqUCON": "GAGCCTGGTGGCGCAGTTAGATAGTACTGAGCACTCTTACTGCCAGCTGCCTGCAATTTGAGTTCGAATCTCACCAGGCTCAAGGTTGACTCAGCCTTCCATCCTTCCGAGGTGGTAAAATGAGGACCCAGATTGTGGGGGCAATAGCTGACTTGTAACCGCTTAGGGGCTAAAGCCACTAGAGGTATAAAAA",
         "UCON_cyl": "CACTGGAGGTTTTCAAGAAAATGGACACCATTTGTCGATGGTATAGGGGGGGTTGGACTAGAAGACCTCCAAGGTCCCTTCCAACCCTATGATTCTAT"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Elaphe_schrenckii",
@@ -1444,7 +1510,12 @@
         "UCON_cyl": 4034,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 6994,
@@ -1509,7 +1580,8 @@
         "Sq3X_Eryx": "AGAGCCAGTTTGGTGTAGTGGTTAAGGCACAGGCTAGAAACGGAGACTGAGTTCTAGTCCTCCTTAGGCACAAAGCCAGCTGGGTGACCTTGGGCCAGTCACTTCTCTCAGCCCTAGGAAGAGGCAATGGCAAACCACTTCTGAAAATCTTGCCAAGAAAACTGCAGGGACTTGTCCAGGCAGTCCAGGATCAAATGATAAA",
         "SqUCON1": "GAGCCGAGGTGGCGCAGTGGTTAGAGTGCAGTACTGCAGCTACTTCAGCTGACTGCTAGTTCAGCAGATCAGCGGATCAAATCTCACCGGCTCAAGGTTGACTCAGCCTTCCATCCTTCCGAGGTGGGTAAAATGAGGACCCAGATTGTTGGGGGCAATATGCTATTTAGTATACTGTCTTTGGTGTAAGCCGCCCAGAGTCCTCGGAGAGTGGGCGGCATAGAAATATGATAATAAAA",
         "SqUCON": "GAGCCTGGTGGCGCAGTGGAAATGCGTAATACCTTCTGCCAGCTGCCTGCAATTTGAGTTCAAATCTCACCAGGCTCAAGGTTGACTCAGCCTTCCATCCTTCCGAGGTGGTAAAATGAGGACCCAGATTGTGGGGGCAATAGCTGACTTTGTAACCGCTTAGGGGCAAAGCCTACAAGCGGTATATAAATA"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Cylindrophis_ruffus",
@@ -1559,7 +1631,12 @@
         "UCON_cyl": 23409,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 17964,
@@ -1637,7 +1714,8 @@
         "sq3c_mala": "GAGAGCCAGTTTGGTCTAGTGGTTAAGGCACCAGGCTAGAAACCAGGAGACTGTGAGTTCTAGTCCGCCTTAGGCATGAAAGCCGGCTGGGTGACTTTGGGCCAGTCACTCTCTCTCAGCCCACAGTCAGGCTCGGGACAAGCCGTGGTCAATTCCTGTCCAACCAATGGATCAACATTGGTTGATCAAAAGCGACCCTGCACCTGGGGAAAATGCTAGGAAGAAAAAAA",
         "Sq3X_Eryx": "GAGAGCCAGTTTGGTGTAGTGGTTAAGGCACCAGGCTAGAAACGGAGACGTGAGTTCTAGTCCTGCCTTAGGCACAAAGCCAGCTGGGTGACCTTGGGCCAGTCACTCTCTCTCAGCCCTAGGAAGAGGCAATGGCAAACCACTTCTGAAAATCTTGCCAAGAAAACTGCAGGGACTTGTCCAGGCAGTCCCAGGAGTCAAACTGACTAAGG",
         "UCON_cyl": "CAGAGAGATGCCAACTGAGAGCCGATCTCGGCTGATCTTGGAAGCTAAGCAGGGTCAGGCCTGGTTAGTACCTGGATGGGTACGCCTGGGAATACTGGGTGCTGCAGGCTGGGGATTGGACTAGAAGACCTCCAAGGTCCCTTCCAACCCTAGATTCTATGAT"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Hydrophis_major",
@@ -1687,7 +1765,12 @@
         "UCON_cyl": 1915,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 6109,
@@ -1765,7 +1848,8 @@
         "SqUCON1": "CGGTGGCCAGTGGTTAGAATGCAGTATTGCAGGCTAATTCTGCTACTGCCGCAGTTCGATTCTCACCGGCTCAAGGTTGACTCAGCCTTCCATCCTTCCGAGGTGGTAAAATGAGGACCCAGATTGTTGGGGGCAATAGCTGACTCTGTAAACGCTTAGAGAGGGCTGTAAAGCACTTGAAGGGTATATAAGTCTAAGTGCTATTGCT",
         "SqUCON": "GGTGGCCAGTGGTTAGAATGCAGTATGCAGGCTAATTCTGCTGACTGCCGCGTGATATCTTACGGCTCAAGGTTGACTCAGCCTTCCATCCTTCCGAGGTGGTAAAATGAGGACCCAGATTGTTGGGGGCAATATGCTGACTCTGTAAACGCTTAGAGAGGGCTGTAAAGCACTGTAAGGTATATAAGTCTAAGTGCTATCT",
         "UCON_cyl": "CACTGGAGGTTTTCAAGAAAGATGGACACCATTTGCCGGATGGTATAGGCTGAGGGGGTTGGACTAGAAGACCTCCAAGGTCCCTTCCACCCTATGATTCTAT"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Naja_naja",
@@ -1815,7 +1899,12 @@
         "UCON_cyl": 431,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 6867,
@@ -1959,7 +2048,12 @@
         "UCON_cyl": 1243,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 5924,
@@ -2025,7 +2119,8 @@
         "SqUCON1": "AGCCGGTGGCGCAGTGGTTAGAATGCAGTATGCAGGCTAATTCTGCTGACTGCCAGCAGTTCAATCCTACGGCTCAAGGTTGACTCAGCCTTCCATCCTTCCGAGGTGGTAAAATGAGGACCCAGATTGTTGGGGGCAATATGCTGACTCTGTAAACGCTTAGAGAGGGCTGTAAAGCACTAAGGGTATATAAGTCTAAGTGCTATTG",
         "SqUCON": "GAGCCTGGTGGGCAGTGGTTAGAATGCAGTATTGCAGGCTAATTCTGCTACTGCCAGATTGATCCTGACGGCTCAAGGTTGACTCAGCCTTCCATCCTTCCGAGGTCGGTAAAATGAGGACCCAGATTGTTGGGGGCAATATGCTGACTCTGTAAACGCTTAGAGAGGGCTGTAAAGCACTGTGAAGGGTATATAAGTCTAAGTGTTATGC",
         "UCON_cyl": "TCACTGGAGGTTTTCAAGAATGGACACCATTTGTCGATGGTGGGGGGGTTGGACTAGAAGACCTCCAAGGTCCCTTCCACCCTATGATTCTAT"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Myanophis_thanlyinensis",
@@ -2075,7 +2170,12 @@
         "UCON_cyl": 1735,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 7176,
@@ -2141,7 +2241,8 @@
         "Sq3C_Eryx": "ATTTGGTTAGTGGTTAAGGCCAGGCTAGAAACCAGGAGACTGTGAGTTCTAGTCCCCTTAGGCATGAAAGCCAGCTGGGTGACTTTGGGCCAGTCACTCTCTCTCAGCCCAACCCACCTCACAGGGTTGTTGTTGTGGGGAAAATAGGAGGAGGAAGGAGTATTGTATGTTCCCTTGAGTTATTTATAAAAATAATAAAGGGGATAAAATAAAAA",
         "Sq3X_Eryx": "AGAGCCAGTTTGGTGTAGTGGTTAAGGCACAGGCTAGAAACGGAGACTGAGTTCTAGTCCTCCTTAGGCACAAAGCCAGCTGGGTGACCTTGGGCCAGTCACTCTCTCTCAGCCCTAGGAAGAGGCAATGGCAAACCACTTCTGAAATCTTGCCAAGAAAACTGCAGGGACTTGTCCAGGCAGTCCCAGATCAAATGATAAA",
         "SqUCON": "GCTGGTGGCGCAGTGGTTAGAATGCAGTATTGCAGGCTAACTCTGCCCACTGCCAGAGTTCGATCCTGACCGGCTCAAGGTTGACTCAGCCTTCCATCCTTCGAGGTGGTAAAATGAGGACCCAGATTGTTGGGGGCAATATGCTGACTCTGTAAACCCTTAGAGAGGGCTGTAAAGCACTAAGCGGTATATAAGTCTAAGGCTATTGCTAA"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Loxocemus_bicolor",
@@ -2191,7 +2292,12 @@
         "UCON_cyl": 1483,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 20049,
@@ -2254,7 +2360,8 @@
         "sq3_anilios": "AATTCAAACCCATCCATGAAATGGTGACTTGGTTCAGCCTAACCTACCTCACAGGGTTGTTGTGAGATAAAATGATCTTGGAAAAGGAAAAAA",
         "sq3c_mala": "GAGAGCCAGTTTGGTCTAGTGGTTAAGGCCCAGGCTAGAAACCAGGAGACTGTGAGTTCTAGTCCCCTTAGGCATGAAAGCCGGCTGGGTGACTTTGGGCCAGTCACTCTCTCTCAGCCCACGACGTCAGGCTCGGGGACAAGCCGGTGGTCAATTCCTGTCGCAACCAATGGATCAACATTGGTTGATCAAAAAAAGCGACCCTGCACCTGGGGAAAAATGCTAGGAAGAAAAAAA",
         "UCON_cyl": "GGGCTCCATCACTGGAGGTTTTCAAGCAAAGGTGGACAGCCATTTGTCGGGATGGTTGAGGATTCCTGCCTGGGCAGGGGGTTGGACTAGAAGACCTCCAAGGTCCCTTCCAACCCTATGATTCTATGA"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Liasis_olivaceus",
@@ -2304,7 +2411,12 @@
         "UCON_cyl": 1684,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 20690,
@@ -2441,7 +2553,12 @@
         "UCON_cyl": 1189,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 20781,
@@ -2581,7 +2698,12 @@
         "UCON_cyl": 1262,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 20281,
@@ -2709,7 +2831,12 @@
         "UCON_cyl": 1499,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 19959,
@@ -2847,7 +2974,12 @@
         "UCON_cyl": 1485,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 20535,
@@ -2975,7 +3107,12 @@
         "UCON_cyl": 877,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 12267,
@@ -3096,7 +3233,12 @@
         "UCON_cyl": 639,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 20486,
@@ -3219,7 +3361,12 @@
         "UCON_cyl": 1769,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 7881,
@@ -3279,7 +3426,8 @@
         "sq3_anilios": "AGTGTAGCAGTGGAAAGAGTGGTGGAATGGAGTTAAGATCGACTCCATGAGTTCAAATCCCCCTCTGCCCATGAAACTCACTGGGTGACCTTGGGCCAGTCACTTCTCCCAGCCTAACCTACCTCACAGGGTTGTTGTGGGGATAGAACTTAAAGATGTGCACCTCGAGTTCTTGAAGGGAGGGTTATAAATATGAAAATAAA",
         "Sq3C_Eryx": "AGCCAGTTTGGTCTAGTGGTTAAGGTGCTGGACTAAGGGAAACCTGAGTTCTAGTCCTGCCTTGGGCATGAAAGCCAGCTGGGTGACCTTGGGCCAGTCCTCCCTCTCAGCCAAAAAATTAGTTAAAAA",
         "SqUCON1": "CCTGGCAGAGTGGAAAGCTGCAGTACTGCAGTCAGAAGCTCTGCTCAACCTGAGTTCATCCTGAATCAGGTAGCGCTCAAGGTTGACTCAGCCTTCCATCCTTCGAGGTCGTAAAATGAGTACCCAGCTTTGCTGGGGGTAATAGGTTGATGACTGGGGAAGGCAATGGCAAACCACCCCTATACAAGTCTGCCAAGAAAAGTGGATGTGACATCACCCCATGGGTCAGAAAT"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Indotyphlops_braminus",
@@ -3329,7 +3477,12 @@
         "UCON_cyl": 2758,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 13668,
@@ -3396,7 +3549,8 @@
         "sq3_anilios": "ACAGTGTAGCCAGTGGAAAAGAGGGTGGAATGTGAGTCGTAAATCGGACTCCATGAGTTCAATCCCCGCTCTGCCCATGAAACTCACTGGGTGGCCTTGGGCCAGTCACTTGCTCCCAGCCTAACCTACCTCACAGGGGTGTTGTGGGGATTGTAACTTAAAGTATGTGTACACCGCTTGAGTTCTTGGAAGGGAAGCGGGTTATAAATATGATAAATAAATA",
         "sq3c_mala": "AGCCAGTTTGGTCTAGTGGTTAAGTCTGATAAAGGGAAACTGAGTTCTAGTCCTGCCTTGGGCATGAAAGCCAGCTGGGTGACTTGGGCCAGTCACTCCTAAAAAAACTGAAAAAA",
         "SqUCON1": "TGGCAGAGTGGAAAGCTGCAGTACTGCAGTCAGAAGCTCTGCTCACGACCTGAGTTTGATCCTCAGGTAGCGCTCAAGGTTGACTCAGCCTTCCATCCTTCCAAGGTTGGTAAAATGAGTACCCAGCTTTGCTGGGGGTAATAGGTGATGACTGGGGAAGGCAATGGCAAACCACCCCTATACAAGTCTGCCAAGAAAAGTTGGGATGTGATCACCCCATGGGTCAGAAATGAC"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Rhinophis_saffragamus",
@@ -3446,7 +3600,12 @@
         "UCON_cyl": 1621,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 13179,
@@ -3587,7 +3746,12 @@
         "UCON_cyl": 2348,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 8005,
@@ -3657,7 +3821,8 @@
         "sq3c_mala": "ACAGTTTGGTCTAGTGGTTAAGGCACCAGGCTAGAAACCAGGAGACTGTGAGTTCTAGTCCCCTTAGGCATGAAAGCGCTGGGTGACTTTGGGCCAGTCACTTTCTCAGCCCAATCAGGCTGGACAAGCGTGTCAATTCCTGTCAACCAATGGATCAACAGTTGATCAAAAAAGCCTGCACTTGGGAAAACTAGGAAAAAA",
         "Sq3X_Eryx": "AGAGCCAGTTTGGTGTAGTGGTTAAGGCACAGGCTAGAAACGGAGACTGTGAGTTCTAGTCCTCCTTAGGCACAAAGCCAGCTGGGTGACCTTGGGCCAGTCACTCTCTCTCAGCCCTAGGAAGGAGGCAATGGCAAACCACTTCTGAAAACTTGCCAAGAAAACTGCAGGGACTTGTCCAGGCAGTCCCAGATCAAATGATA",
         "SqUCON": "CGGTGGCGCAGTGGTTAGAATGCAGTATTGCAGGCTAACTCTGCCCACTGCCAGGAGTTCGATCCTGACCGGCTCAAGGTTGACTCAGCCTTCCATCCTTCCGAGGTCGGTAAAATGAGGACCCAGATTGTTGGGGGAATATGCTGACTCTGTAAACCTAGAGAGGGCTGTAAAGCACTTGAGCGGTATATAGCTAGTGCG"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Crotalus_horridus",
@@ -3707,7 +3872,12 @@
         "UCON_cyl": 1769,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 7191,
@@ -3786,7 +3956,8 @@
         "SqUCON1": "GCTGGTGGCGCAGTGGTTAGAATGCAGTATTGCAGGCTAATCTGCTACTGCCAGCAGTTCGATCCTACGGCTCAAGGTTGACTCAGCCTTCCATCCTTCCGAGGTCGGTAAAATGAGGACCCAGATTGTTGGGGGCAATATGCTGACTTGTAAACCGCTTAGAGAGGCTGTAAACACTTAAGGGTATATAAGTCTAATT",
         "SqUCON": "GAGCCTGGTGGCGCAGTGGTTAGAATGCAGTATTGCAGGCTAACTCTGCCCACTGCCAGAGTTCGATCCTGACCGGCTCAAGGTTGACTCAGCCTTCCATCCTTCGAGGTGGTAAAATGAGGACCCAGATTGTTGGGGGCAATATGCTGACTCTGTAAACCCTTAGAGAGGGCTGTAAAGCACTTGAAGCGTATATAAGTCTAAGGCTATTGCTA",
         "UCON_cyl": "CATCACTGGAGGTTTTCAAGAAAGATGGACACCATTTGTCGGATGGTATAAGGTCCTGCTTGGAGGGGGTTGGACTAGAAGACCTCCAAGGTCCCTTCCAACCCTATGATTCTAT"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Vipera_latastei",
@@ -3836,7 +4007,12 @@
         "UCON_cyl": 1687,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 7030,
@@ -3898,7 +4074,8 @@
         "sq3_anilios": "TATTAAATTCAAATCTCCATCCATGAATCACTGTTGGCCAGCTTTTCAATATCACAGTTGTTGTGAATAAAACGAGTCTTTATAAAATAAAATAAATA",
         "Sq3C_Eryx": "TTTGGTTAGTGGTTAAGGCAGGCTAGAAACCAGGAGACTGTGAGTTCTAGTCCCCTTAGGCATGAAAGCCAGCTGGGTGACTTTGGGCCAGTCACTCTCTCTCAGCCCAACCCACCTCACAGGGTTGTTGTTGTGGGGAAAATAGGAGGAGGAAGGGTATTAGTATGTTCCCTTGAGTTATTTATAAAAATAATAAAGGGGATAAAATAAAAAA",
         "sq3c_mala": "CAGTTTGGTCTAGTGGTTAAGGCACCAGGCTAGAAACCAGGAGACTGTGAGTTCTAGTCCTCCTTAGGCATGAAAGCCGCTGGGTGACTTTGGGCCAGTCACTCTCTCTCAGCCCAATCAGGCTGGACAAGCGTGTCAATTCCTGTCAACCAATGGATCAACACTGTTGATCAAAAAAAGACCCTGCACTTGGGAAAACTAGGAAAAAAA"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Achalinus_rufescens",
@@ -3948,7 +4125,12 @@
         "UCON_cyl": 3671,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 5813,
@@ -4013,7 +4195,8 @@
         "sq3c_mala": "GAGAGCCAGTTTGGTCTAGTGGTTAAGACACCAGGCTAGAAAGCAACTGTGAGTTCAAGTCCGCCTTAGCCATGAAAGCCAGCTGGGTGACTTTGGGCCAGTCACTCTCTCTCAGCCTGTGCTAGATGACCTGGTCCTTCCAAATAAAAAAAAA",
         "Sq3X_Eryx": "AGAGCCAGTTTGGTGTAGTGGTTAAGGCACAGGCTAGAAACGGAGACTGAGTTCTAGTCCTCCTTAGGCACAAAGCCAGCTGGGTGACCTTGGGCCAGTCACTCTCTCTCAGCCCTAGGAAGAGGCAATGGCAAACCACTTCTGAAAATCTTGCCAAGAAAACTGCAGGGACTTGTCCAGGCAGTCCAGATCAAATGATAAA",
         "UCON_cyl": "TGGTGCTCCATCCTGGAGGTTTTCAAGAAAGTGGACACCATTTGCTGGGATGGTATAGGTCCTGCCTTGGCAGGGGGTTGGACTAGAAGACCTCCAAGGTCCCTTCCAACCCTATGATTCTAT"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Xenopeltis_unicolor",
@@ -4063,7 +4246,12 @@
         "UCON_cyl": 1995,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 19015,
@@ -4126,7 +4314,8 @@
         "sq3_anilios": "AATTCAAATCCCCTACCATAACTCACTGGGTGACTTGGATCTTTCAGCCTAACCTACCTCACAGGTTGTTGTGAGGATAAAAATCTTGGAGAAAAAAAAAAAA",
         "Sq3A_Eryx": "TTGTTAGTGGTTAAGGTGTTGGACTAGGAGGGAGACCCAGGTTCAAGTCCCCCTCAGCCATGGAAGCTCACTGGGTGACTTTGGGCCAGTCATTCTCTCAGCCCAACCTACCTCACAGGGTTGTTGTGGGAAAAAAGGACTATGTACCCTTGAGCTCCTGAAAGGAGGATATAAATTAAAAAAAAA",
         "Sq3C_Eryx": "AGAGCCAGTTTGGTTAGTGGTTAAGGCGCTAGAAACCAGGAGACTGTGAGTTCTAGTCCTCCTTAGGCATGAAAGCCGGCTGGGTGACTTTGGGCCAGTCACTCTCTCTCAGCCCAACCCACCTCACAGGGTTGTTGTTGTGGGGAAAATAGGAGGAGGAAGGAGTATTAGGTATGTTCCCCCTTGAGTTATTTATAAAAATAATAAAGGGGGATAAAAAAAAAAAAA"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Laudakia_wui",
@@ -4176,7 +4365,12 @@
         "UCON_cyl": 3694,
         "sq3a": 10907,
         "sq3other": 887,
-        "sq1_body": 3844
+        "sq1_body": 3844,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 687,
@@ -4297,7 +4491,12 @@
         "UCON_cyl": 857,
         "sq3a": 11806,
         "sq3other": 618,
-        "sq1_body": 41830
+        "sq1_body": 41830,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 696,
@@ -4419,7 +4618,12 @@
         "UCON_cyl": 7754,
         "sq3a": 34263,
         "sq3other": 1380,
-        "sq1_body": 5
+        "sq1_body": 5,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 49,
@@ -4540,7 +4744,12 @@
         "UCON_cyl": 1254,
         "sq3a": 47415,
         "sq3other": 1856,
-        "sq1_body": 9
+        "sq1_body": 9,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 65,
@@ -4652,7 +4861,12 @@
         "UCON_cyl": 876,
         "sq3a": 38941,
         "sq3other": 1961,
-        "sq1_body": 6
+        "sq1_body": 6,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 59,
@@ -4764,7 +4978,12 @@
         "UCON_cyl": 19777,
         "sq3a": 100210,
         "sq3other": 62785,
-        "sq1_body": 1
+        "sq1_body": 1,
+        "g1a_Sphaerodactylus_glaucus": 66,
+        "g1b_Sphaerodactylus_glaucus": 51,
+        "insertion_Sphaerodactylus_glaucus": 48,
+        "g2a_oph_ae_asa": 10,
+        "g2b_Coleonyx_brevis": 76
       },
       "firm_counts": {
         "Heno": 5465,
@@ -4812,7 +5031,7 @@
         "sq3other": 50274,
         "sq1_body": 1
       },
-      "total": 243162,
+      "total": 243413,
       "searched_sets": [
         "full_41",
         "sq1sq3"
@@ -4829,7 +5048,12 @@
         "UCON_cyl": 0.2316,
         "sq3a": 0.4313,
         "sq3other": 0.4116,
-        "sq1_body": 0.1505
+        "sq1_body": 0.1505,
+        "g1a_Sphaerodactylus_glaucus": 0.0,
+        "g1b_Sphaerodactylus_glaucus": 0.0,
+        "insertion_Sphaerodactylus_glaucus": 0.0,
+        "g2a_oph_ae_asa": 0.0,
+        "g2b_Coleonyx_brevis": 0.0
       },
       "consensuses": {
         "oph3": "GTGACTAAATTGGATTGTTACCTCTCAGAACGGGATAATTTGGCTTCCAGATACCTGCGAAGGCAGGTGGGTTGGACTAAGATGACCCTGTGGTCCCTTCCAACTCTAATACTAT",
@@ -4884,7 +5108,12 @@
         "UCON_cyl": 173,
         "sq3a": 4024,
         "sq3other": 155,
-        "sq1_body": 139553
+        "sq1_body": 139553,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 363,
@@ -4998,7 +5227,12 @@
         "UCON_cyl": 182,
         "sq3a": 4531,
         "sq3other": 127,
-        "sq1_body": 145321
+        "sq1_body": 145321,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 427,
@@ -5120,7 +5354,12 @@
         "UCON_cyl": 920,
         "sq3a": 78214,
         "sq3other": 3132,
-        "sq1_body": 10
+        "sq1_body": 10,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 971,
@@ -5232,7 +5471,12 @@
         "UCON_cyl": 16519,
         "sq3a": 22237,
         "sq3other": 2793,
-        "sq1_body": 293
+        "sq1_body": 293,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 17834,
@@ -5345,7 +5589,12 @@
         "UCON_cyl": 46643,
         "sq3a": 21124,
         "sq3other": 706,
-        "sq1_body": 12
+        "sq1_body": 12,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 20637,
@@ -5457,7 +5706,12 @@
         "UCON_cyl": 9895,
         "sq3a": 4973,
         "sq3other": 129,
-        "sq1_body": 91074
+        "sq1_body": 91074,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 3733,
@@ -5569,7 +5823,12 @@
         "UCON_cyl": 4139,
         "sq3a": 78346,
         "sq3other": 3735,
-        "sq1_body": 3
+        "sq1_body": 3,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 45,
@@ -5688,7 +5947,12 @@
         "UCON_cyl": 13422,
         "sq3a": 160969,
         "sq3other": 44371,
-        "sq1_body": 16
+        "sq1_body": 16,
+        "g1a_Sphaerodactylus_glaucus": 66,
+        "g1b_Sphaerodactylus_glaucus": 5,
+        "insertion_Sphaerodactylus_glaucus": 83,
+        "g2a_oph_ae_asa": 7,
+        "g2b_Coleonyx_brevis": 730
       },
       "firm_counts": {
         "Heno": 16535,
@@ -5736,7 +6000,7 @@
         "sq3other": 32810,
         "sq1_body": 16
       },
-      "total": 319800,
+      "total": 320691,
       "searched_sets": [
         "full_41",
         "sq1sq3"
@@ -5744,7 +6008,12 @@
       "sim_means": {
         "sq3a": 0.5206,
         "sq3other": 0.4528,
-        "sq1_body": 0.1747
+        "sq1_body": 0.1747,
+        "g1a_Sphaerodactylus_glaucus": 0.0,
+        "g1b_Sphaerodactylus_glaucus": 0.0,
+        "insertion_Sphaerodactylus_glaucus": 0.0,
+        "g2a_oph_ae_asa": 0.0,
+        "g2b_Coleonyx_brevis": 0.0
       },
       "consensuses": {
         "oph2": "AGAGGTTGTGAGTTCTCCAACTCTGGAGGTTTTTAAGAAGAGGCTGGACAGCCACCTCTCAGGGATGGTCTAACTGGTTTCCTGCATGATGCAGGGGGTTGGACTAGATGATCCTTGTGGTCCCTTCCAACTCCAAAATTCTATGA",
@@ -5799,7 +6068,12 @@
         "UCON_cyl": 12783,
         "sq3a": 162688,
         "sq3other": 46168,
-        "sq1_body": 12
+        "sq1_body": 12,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 16253,
@@ -5911,7 +6185,12 @@
         "UCON_cyl": 4893,
         "sq3a": 77420,
         "sq3other": 54571,
-        "sq1_body": 5
+        "sq1_body": 5,
+        "g1a_Sphaerodactylus_glaucus": 5909,
+        "g1b_Sphaerodactylus_glaucus": 85,
+        "insertion_Sphaerodactylus_glaucus": 52,
+        "g2a_oph_ae_asa": 4,
+        "g2b_Coleonyx_brevis": 1338
       },
       "firm_counts": {
         "Heno": 4811,
@@ -5959,7 +6238,7 @@
         "sq3other": 37826,
         "sq1_body": 5
       },
-      "total": 202046,
+      "total": 209434,
       "searched_sets": [
         "full_41",
         "sq1sq3"
@@ -5976,7 +6255,12 @@
         "UCON_cyl": 0.2579,
         "sq3a": 0.5012,
         "sq3other": 0.3225,
-        "sq1_body": 0.1651
+        "sq1_body": 0.1651,
+        "g1a_Sphaerodactylus_glaucus": 0.0,
+        "g1b_Sphaerodactylus_glaucus": 0.0,
+        "insertion_Sphaerodactylus_glaucus": 0.0,
+        "g2a_oph_ae_asa": 0.0,
+        "g2b_Coleonyx_brevis": 0.0
       },
       "consensuses": {
         "oph2": "ATAGGCTGCCTCAAAGTGTGGTGGAGCCTTCTTTGGACATTTTTAAAGAGAGGCTGGATGGCCACTTGAGGGACTGCTTTGATGGTGTCTTCCTGCATGGCAGGGGGTTGGACTAGATGGCCCTTGTGGTCTCTTCCAACTCT",
@@ -6032,7 +6316,12 @@
         "UCON_cyl": 2005,
         "sq3a": 65406,
         "sq3other": 41811,
-        "sq1_body": 33
+        "sq1_body": 33,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 3094,
@@ -6153,7 +6442,12 @@
         "UCON_cyl": 3541,
         "sq3a": 90516,
         "sq3other": 95852,
-        "sq1_body": 16
+        "sq1_body": 16,
+        "g1a_Sphaerodactylus_glaucus": 13185,
+        "g1b_Sphaerodactylus_glaucus": 25,
+        "insertion_Sphaerodactylus_glaucus": 33,
+        "g2a_oph_ae_asa": 3,
+        "g2b_Coleonyx_brevis": 7
       },
       "firm_counts": {
         "Heno": 6800,
@@ -6201,7 +6495,7 @@
         "sq3other": 72827,
         "sq1_body": 16
       },
-      "total": 275851,
+      "total": 289104,
       "searched_sets": [
         "full_41",
         "sq1sq3"
@@ -6209,7 +6503,12 @@
       "sim_means": {
         "sq3a": 0.5254,
         "sq3other": 0.418,
-        "sq1_body": 0.1585
+        "sq1_body": 0.1585,
+        "g1a_Sphaerodactylus_glaucus": 0.0,
+        "g1b_Sphaerodactylus_glaucus": 0.0,
+        "insertion_Sphaerodactylus_glaucus": 0.0,
+        "g2a_oph_ae_asa": 0.0,
+        "g2b_Coleonyx_brevis": 0.0
       },
       "consensuses": {
         "Heno": "CCGATCTTCAGATCTCAGAAGCTAAGCAGGGTCGCCTGGTTAGTATTGGATGGGAGACCACCAAGGAAGACCAGGGTCTATGCAGAGGCAGGCAATGGCAAACCACCTCTGTGTCTCTTGCCTTGAAAACCCA",
@@ -6269,7 +6568,12 @@
         "UCON_cyl": 15906,
         "sq3a": 200077,
         "sq3other": 24658,
-        "sq1_body": 3079
+        "sq1_body": 3079,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 38424,
@@ -6325,7 +6629,12 @@
       "sim_means": {
         "sq3a": 0.583,
         "sq3other": 0.3158,
-        "sq1_body": 0.6373
+        "sq1_body": 0.6373,
+        "g1a_Sphaerodactylus_glaucus": 0.0,
+        "g1b_Sphaerodactylus_glaucus": 0.0,
+        "insertion_Sphaerodactylus_glaucus": 0.0,
+        "g2a_oph_ae_asa": 0.0,
+        "g2b_Coleonyx_brevis": 0.0
       },
       "consensuses": {
         "Heno": "TAGCCGATCTCTCAGATCTCGGAAGCTAAGCAGGGTCGGCCCTGGTTAGTATTTGGATGGGAGACCACCAAGGAAGTCCAGGGTTGCTACGCAGAGGCAGGCAATGGCAAACCACCTCTGAACGTCTCTTGCCTTGAAAACCCTAG",
@@ -6382,7 +6691,12 @@
         "UCON_cyl": 9435,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 11769,
@@ -6433,7 +6747,8 @@
       "total": 178497,
       "searched_sets": [
         "shared_9"
-      ]
+      ],
+      "sim_means": {}
     },
     {
       "taxon": "Gekko_gecko",
@@ -6483,7 +6798,12 @@
         "UCON_cyl": 9638,
         "sq3a": 169894,
         "sq3other": 138078,
-        "sq1_body": 59340
+        "sq1_body": 59340,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 24464,
@@ -6604,7 +6924,12 @@
         "UCON_cyl": 8391,
         "sq3a": 147263,
         "sq3other": 130715,
-        "sq1_body": 84299
+        "sq1_body": 84299,
+        "g1a_Sphaerodactylus_glaucus": 196,
+        "g1b_Sphaerodactylus_glaucus": 4,
+        "insertion_Sphaerodactylus_glaucus": 3,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 2
       },
       "firm_counts": {
         "Heno": 23909,
@@ -6652,7 +6977,7 @@
         "sq3other": 118787,
         "sq1_body": 77533
       },
-      "total": 486695,
+      "total": 486900,
       "searched_sets": [
         "full_41",
         "sq1sq3"
@@ -6668,7 +6993,12 @@
         "UCON_cyl": 0.3035,
         "sq3a": 0.5052,
         "sq3other": 0.3497,
-        "sq1_body": 0.7475
+        "sq1_body": 0.7475,
+        "g1a_Sphaerodactylus_glaucus": 0.0,
+        "g1b_Sphaerodactylus_glaucus": 0.0,
+        "insertion_Sphaerodactylus_glaucus": 0.0,
+        "g2a_oph_ae_asa": 0.0,
+        "g2b_Coleonyx_brevis": 0.0
       },
       "consensuses": {
         "Heno": "AGCCGATCTCTCAGATCTCAGAAGCTAAGCAGGGTCGGCCCTGGTTAGTATTTGGATGGGAGACCACCAAGGAAGTCCAGGGTTGCTAGCAGAGGCAGGCAATGGCAAACCACCTCTGAAGTCTCTTGCCTTGAAAACCCA",
@@ -6725,7 +7055,12 @@
         "UCON_cyl": 5593,
         "sq3a": 59184,
         "sq3other": 55834,
-        "sq1_body": 35408
+        "sq1_body": 35408,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 13199,
@@ -6838,7 +7173,12 @@
         "UCON_cyl": 16938,
         "sq3a": 77791,
         "sq3other": 76224,
-        "sq1_body": 54884
+        "sq1_body": 54884,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 5574,
@@ -6951,7 +7291,12 @@
         "UCON_cyl": 11404,
         "sq3a": 75982,
         "sq3other": 75624,
-        "sq1_body": 59273
+        "sq1_body": 59273,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 5588,
@@ -7063,7 +7408,12 @@
         "UCON_cyl": 32442,
         "sq3a": 66662,
         "sq3other": 70394,
-        "sq1_body": 71778
+        "sq1_body": 71778,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 5578,
@@ -7173,7 +7523,12 @@
         "UCON_cyl": 23112,
         "sq3a": 62995,
         "sq3other": 65713,
-        "sq1_body": 27439
+        "sq1_body": 27439,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 3340,
@@ -7284,7 +7639,12 @@
         "UCON_cyl": 5653,
         "sq3a": 95050,
         "sq3other": 193091,
-        "sq1_body": 39
+        "sq1_body": 39,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 13407,
@@ -7396,7 +7756,12 @@
         "UCON_cyl": 7638,
         "sq3a": 157875,
         "sq3other": 127947,
-        "sq1_body": 29440
+        "sq1_body": 29440,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 24225,
@@ -7509,7 +7874,12 @@
         "UCON_cyl": 10942,
         "sq3a": 238447,
         "sq3other": 230284,
-        "sq1_body": 42019
+        "sq1_body": 42019,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 31889,
@@ -7623,7 +7993,12 @@
         "UCON_cyl": 10214,
         "sq3a": 64431,
         "sq3other": 81316,
-        "sq1_body": 50914
+        "sq1_body": 50914,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 10696,
@@ -7737,7 +8112,12 @@
         "UCON_cyl": 18333,
         "sq3a": 128098,
         "sq3other": 58008,
-        "sq1_body": 8
+        "sq1_body": 8,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 5785,
@@ -7860,7 +8240,12 @@
         "UCON_cyl": 27829,
         "sq3a": 173115,
         "sq3other": 69914,
-        "sq1_body": 6
+        "sq1_body": 6,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 8211,
@@ -7976,7 +8361,12 @@
         "UCON_cyl": 18909,
         "sq3a": 227084,
         "sq3other": 40805,
-        "sq1_body": 10
+        "sq1_body": 10,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 36051,
@@ -8088,7 +8478,12 @@
         "UCON_cyl": 11194,
         "sq3a": 64679,
         "sq3other": 10214,
-        "sq1_body": 39647
+        "sq1_body": 39647,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 490,
@@ -8200,7 +8595,12 @@
         "UCON_cyl": 11909,
         "sq3a": 64737,
         "sq3other": 2796,
-        "sq1_body": 13436
+        "sq1_body": 13436,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 307,
@@ -8312,7 +8712,12 @@
         "UCON_cyl": 10807,
         "sq3a": 29669,
         "sq3other": 1324,
-        "sq1_body": 4
+        "sq1_body": 4,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 11249,
@@ -8425,7 +8830,12 @@
         "UCON_cyl": 20594,
         "sq3a": 30924,
         "sq3other": 1612,
-        "sq1_body": 8
+        "sq1_body": 8,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 14938,
@@ -8545,7 +8955,12 @@
         "UCON_cyl": 19575,
         "sq3a": 29677,
         "sq3other": 1587,
-        "sq1_body": 7
+        "sq1_body": 7,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 14393,
@@ -8667,7 +9082,12 @@
         "UCON_cyl": 3969,
         "sq3a": 21526,
         "sq3other": 3381,
-        "sq1_body": 5834
+        "sq1_body": 5834,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 12,
@@ -8786,7 +9206,12 @@
         "UCON_cyl": 3902,
         "sq3a": 42859,
         "sq3other": 14416,
-        "sq1_body": 61201
+        "sq1_body": 61201,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 42,
@@ -8907,7 +9332,12 @@
         "UCON_cyl": 843,
         "sq3a": 43699,
         "sq3other": 42069,
-        "sq1_body": 58570
+        "sq1_body": 58570,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 5,
@@ -9027,7 +9457,12 @@
         "UCON_cyl": 3613,
         "sq3a": 38353,
         "sq3other": 5619,
-        "sq1_body": 122211
+        "sq1_body": 122211,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 44,
@@ -9138,7 +9573,12 @@
         "UCON_cyl": 3765,
         "sq3a": 37559,
         "sq3other": 6860,
-        "sq1_body": 92399
+        "sq1_body": 92399,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 42,
@@ -9259,7 +9699,12 @@
         "UCON_cyl": 3835,
         "sq3a": 41730,
         "sq3other": 6433,
-        "sq1_body": 123811
+        "sq1_body": 123811,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 46,
@@ -9380,7 +9825,12 @@
         "UCON_cyl": 3998,
         "sq3a": 28576,
         "sq3other": 5079,
-        "sq1_body": 75954
+        "sq1_body": 75954,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 41,
@@ -9501,7 +9951,12 @@
         "UCON_cyl": 7109,
         "sq3a": 85421,
         "sq3other": 1761,
-        "sq1_body": 224
+        "sq1_body": 224,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 73,
@@ -9612,7 +10067,12 @@
         "UCON_cyl": 17834,
         "sq3a": 101366,
         "sq3other": 67097,
-        "sq1_body": 2165
+        "sq1_body": 2165,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 24381,
@@ -9724,7 +10184,12 @@
         "UCON_cyl": 11270,
         "sq3a": 220043,
         "sq3other": 30974,
-        "sq1_body": 4
+        "sq1_body": 4,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 13986,
@@ -9837,7 +10302,12 @@
         "UCON_cyl": 11130,
         "sq3a": 92777,
         "sq3other": 61411,
-        "sq1_body": 590
+        "sq1_body": 590,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 11878,
@@ -9948,7 +10418,12 @@
         "UCON_cyl": 28455,
         "sq3a": 101842,
         "sq3other": 72422,
-        "sq1_body": 792
+        "sq1_body": 792,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 14365,
@@ -10061,7 +10536,12 @@
         "UCON_cyl": 22687,
         "sq3a": 125429,
         "sq3other": 44670,
-        "sq1_body": 270
+        "sq1_body": 270,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 20288,
@@ -10177,7 +10657,12 @@
         "UCON_cyl": 9270,
         "sq3a": 114980,
         "sq3other": 38665,
-        "sq1_body": 0
+        "sq1_body": 0,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 21634,
@@ -10297,7 +10782,12 @@
         "UCON_cyl": 8527,
         "sq3a": 113945,
         "sq3other": 33647,
-        "sq1_body": 2
+        "sq1_body": 2,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 14090,
@@ -10417,7 +10907,12 @@
         "UCON_cyl": 5171,
         "sq3a": 42774,
         "sq3other": 2438,
-        "sq1_body": 19
+        "sq1_body": 19,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 4099,
@@ -10532,7 +11027,12 @@
         "UCON_cyl": 23149,
         "sq3a": 12733,
         "sq3other": 626,
-        "sq1_body": 21260
+        "sq1_body": 21260,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 31,
@@ -10643,7 +11143,12 @@
         "UCON_cyl": 2573,
         "sq3a": 10441,
         "sq3other": 383,
-        "sq1_body": 42102
+        "sq1_body": 42102,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 10,
@@ -10765,7 +11270,12 @@
         "UCON_cyl": 773,
         "sq3a": 18790,
         "sq3other": 1835,
-        "sq1_body": 16105
+        "sq1_body": 16105,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 117,
@@ -10878,7 +11388,12 @@
         "UCON_cyl": 929,
         "sq3a": 22261,
         "sq3other": 1270,
-        "sq1_body": 2909
+        "sq1_body": 2909,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 29,
@@ -10991,7 +11506,12 @@
         "UCON_cyl": 4721,
         "sq3a": 20703,
         "sq3other": 1446,
-        "sq1_body": 533
+        "sq1_body": 533,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 99,
@@ -11103,7 +11623,12 @@
         "UCON_cyl": 92685,
         "sq3a": 144817,
         "sq3other": 3009,
-        "sq1_body": 6
+        "sq1_body": 6,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 202,
@@ -11214,7 +11739,12 @@
         "UCON_cyl": 40620,
         "sq3a": 139441,
         "sq3other": 75813,
-        "sq1_body": 304
+        "sq1_body": 304,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 19558,
@@ -11329,7 +11859,12 @@
         "UCON_cyl": 8160,
         "sq3a": 114433,
         "sq3other": 104074,
-        "sq1_body": 31
+        "sq1_body": 31,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 31007,
@@ -11451,7 +11986,12 @@
         "UCON_cyl": 1966,
         "sq3a": 50615,
         "sq3other": 94355,
-        "sq1_body": 0
+        "sq1_body": 0,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 1203,
@@ -11562,7 +12102,12 @@
         "UCON_cyl": 3465,
         "sq3a": 69029,
         "sq3other": 85115,
-        "sq1_body": 785
+        "sq1_body": 785,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 5383,
@@ -11674,7 +12219,12 @@
         "UCON_cyl": 5732,
         "sq3a": 98566,
         "sq3other": 165964,
-        "sq1_body": 8
+        "sq1_body": 8,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 8842,
@@ -11786,7 +12336,12 @@
         "UCON_cyl": 4863,
         "sq3a": 85221,
         "sq3other": 140341,
-        "sq1_body": 6
+        "sq1_body": 6,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 7253,
@@ -11899,7 +12454,12 @@
         "UCON_cyl": 12327,
         "sq3a": 142897,
         "sq3other": 67876,
-        "sq1_body": 12032
+        "sq1_body": 12032,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 28359,
@@ -12010,7 +12570,12 @@
         "UCON_cyl": 1469,
         "sq3a": 126260,
         "sq3other": 35548,
-        "sq1_body": 3
+        "sq1_body": 3,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 1799,
@@ -12123,7 +12688,12 @@
         "UCON_cyl": 9444,
         "sq3a": 14590,
         "sq3other": 321,
-        "sq1_body": 13822
+        "sq1_body": 13822,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 4369,
@@ -12242,7 +12812,12 @@
         "UCON_cyl": 13422,
         "sq3a": 165892,
         "sq3other": 48386,
-        "sq1_body": 19
+        "sq1_body": 19,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 16653,
@@ -12349,7 +12924,12 @@
         "UCON_cyl": 3541,
         "sq3a": 91299,
         "sq3other": 95934,
-        "sq1_body": 15
+        "sq1_body": 15,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 6848,
@@ -12465,7 +13045,12 @@
         "UCON_cyl": 8420,
         "sq3a": null,
         "sq3other": null,
-        "sq1_body": null
+        "sq1_body": null,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 24076,
@@ -12522,7 +13107,8 @@
         "oph1": "GGAGGTGGTGAGCTCCCCTCACTGGCAGTTAAGCAGGGCTGGACAAATTGTCAGGGATGCTTAGGCTGTCCTGCATTGGCAGGGGGTTGGACTAGATGGCCTGTATGGCCCCTTCCAACTCTTGATTCTATGA",
         "oph2": "GGTGGCTCAAGTGGTTAAGACGCTGAACTGCAGGCTGTGGAAGGTCGGTAGTTCAGCAGTTCGAGACCCGAGTGTGCCGCATGACGGAGTGAGCTCCCGTCTCTGGCCCAGCTCCTGCCAAC",
         "oph3": "GGTTAAGCTTGTCCTGCAGGGCAGGGGGTTGGACTAGATGCCTAAGGCCCTTCCAACTCTT"
-      }
+      },
+      "sim_means": {}
     },
     {
       "taxon": "Gehyra_mutilata_local",
@@ -12572,7 +13158,12 @@
         "UCON_cyl": 9435,
         "sq3a": 73315,
         "sq3other": 147963,
-        "sq1_body": 36465
+        "sq1_body": 36465,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 11861,
@@ -12682,7 +13273,12 @@
         "UCON_cyl": 8391,
         "sq3a": 152292,
         "sq3other": 136959,
-        "sq1_body": 88958
+        "sq1_body": 88958,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 24118,
@@ -12794,7 +13390,12 @@
         "UCON_cyl": 5546,
         "sq3a": 93505,
         "sq3other": 191553,
-        "sq1_body": 29
+        "sq1_body": 29,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 13325,
@@ -12905,7 +13506,12 @@
         "UCON_cyl": 22687,
         "sq3a": 258966,
         "sq3other": 70299,
-        "sq1_body": 3
+        "sq1_body": 3,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 20470,
@@ -13016,7 +13622,12 @@
         "UCON_cyl": 2284,
         "sq3a": 76198,
         "sq3other": 2955,
-        "sq1_body": 6931
+        "sq1_body": 6931,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 26,
@@ -13128,7 +13739,12 @@
         "UCON_cyl": 27488,
         "sq3a": 72989,
         "sq3other": 2353,
-        "sq1_body": 7530
+        "sq1_body": 7530,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 47,
@@ -13240,7 +13856,12 @@
         "UCON_cyl": 18569,
         "sq3a": 70140,
         "sq3other": 3240,
-        "sq1_body": 3
+        "sq1_body": 3,
+        "g1a_Sphaerodactylus_glaucus": 0,
+        "g1b_Sphaerodactylus_glaucus": 0,
+        "insertion_Sphaerodactylus_glaucus": 0,
+        "g2a_oph_ae_asa": 0,
+        "g2b_Coleonyx_brevis": 0
       },
       "firm_counts": {
         "Heno": 72,

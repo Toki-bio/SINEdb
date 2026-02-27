@@ -102,7 +102,7 @@ td[title]{cursor:help}
 <div class="page-header">
   <h2>Non-Snake Squamate SINE Copy Counts</h2>
   <p>Snake SINE consensus sequences searched against non-snake squamate genomes using the SINEderella pipeline.
-     Subfamilies shown are the same as in the snake analysis (Heno, oph1–3, oph_ae, sq2_Eryx, SqUCON, SqUCON1, UCON_cyl).</p>
+     Subfamilies include shared snake SINEs (Heno, oph1–3, oph_ae, sq2_Eryx, SqUCON, SqUCON1, UCON_cyl) and gecko-specific SINEs (g1a, g1b, insertion, g2a, g2b).</p>
 </div>
 
 <div class="status-banner" id="statusBanner" style="display:none"></div>
@@ -172,13 +172,15 @@ function showModal(title, bodyHtml, onSave){
 }
 
 // Subfamily display order (matching snake table)
-const SF_ORDER = ['Heno','oph1','oph2','oph3','oph_ae','sq2_Eryx','SqUCON','SqUCON1','UCON_cyl'];
+const SF_ORDER = ['Heno','oph1','oph2','oph3','oph_ae','sq2_Eryx','SqUCON','SqUCON1','UCON_cyl',
+  'g1a_Sphaerodactylus_glaucus','g1b_Sphaerodactylus_glaucus','insertion_Sphaerodactylus_glaucus','g2a_oph_ae_asa','g2b_Coleonyx_brevis'];
 
 // Family grouping of SINE subfamilies (for colspan headers)
 const SINE_GROUPS = [
   {name:'Heno', sfs:['Heno']},
   {name:'Ophidia', sfs:['oph1','oph2','oph3','oph_ae']},
   {name:'Squamata', sfs:['sq2_Eryx','SqUCON','SqUCON1','UCON_cyl']},
+  {name:'Gekkota SINEs', sfs:['g1a_Sphaerodactylus_glaucus','g1b_Sphaerodactylus_glaucus','insertion_Sphaerodactylus_glaucus','g2a_oph_ae_asa','g2b_Coleonyx_brevis']},
 ];
 
 // Colors for sparklines
@@ -216,7 +218,7 @@ async function init(){
     banner.textContent = '⏳ ' + DATA.species.length + ' of 73 unique species loaded. ' + pending + ' pending.';
   }
 
-  document.getElementById('topStats').textContent = DATA.species.length + ' species • 9 subfamilies';
+  document.getElementById('topStats').textContent = DATA.species.length + ' species • ' + SF_ORDER.length + ' subfamilies';
   render();
 }
 
