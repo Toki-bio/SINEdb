@@ -69,10 +69,13 @@ td.cell-checked{position:relative}
 td.cell-checked::after{content:'';position:absolute;top:0;right:0;border-style:solid;border-width:0 8px 8px 0;border-color:transparent #1976d2 transparent transparent;pointer-events:none}
 td.cell-working{position:relative}
 td.cell-working::after{content:'';position:absolute;top:0;right:0;border-style:solid;border-width:0 8px 8px 0;border-color:transparent #e53935 transparent transparent;pointer-events:none}
+td.cell-edited{position:relative}
+td.cell-edited::before{content:'';position:absolute;top:0;left:0;border-style:solid;border-width:8px 8px 0 0;border-color:#ff9800 transparent transparent transparent;pointer-events:none}
 .status-legend{font-size:10px;display:flex;gap:8px;align-items:center}
 .status-legend .swatch{display:inline-block;width:0;height:0;border-style:solid;border-width:0 8px 8px 0;vertical-align:middle;margin-right:2px}
 .status-legend .sw-checked{border-color:transparent #1976d2 transparent transparent}
 .status-legend .sw-working{border-color:transparent #e53935 transparent transparent}
+.status-legend .sw-edited{border-color:#ff9800 transparent transparent transparent;border-width:8px 8px 0 0}
 .export-btn{font-size:10px;padding:1px 8px;cursor:pointer;border:1px solid #1a4d8c;background:#e3f2fd;border-radius:3px;color:#1a4d8c;font-weight:600}
 .export-btn:hover{background:#bbdefb}
 /* Detail panel */
@@ -151,7 +154,7 @@ td.cell-working::after{content:'';position:absolute;top:0;right:0;border-style:s
   <label>Min:</label>
   <input type="number" id="minCopies" value="0" min="0" style="width:50px" onchange="render()">
   <div class="sep"></div>
-  <span class="status-legend"><span class="swatch sw-checked"></span>Checked <span class="swatch sw-working"></span>Working</span>
+  <span class="status-legend"><span class="swatch sw-checked"></span>Checked <span class="swatch sw-working"></span>Working <span class="swatch sw-edited"></span>Edited</span>
   <button class="export-btn" onclick="exportJSON()" title="Download unified_data.json with edits and status">Export JSON</button>
   <button class="export-btn" onclick="clearLocalEdits()" title="Discard all browser-stored edits and reload from JSON" style="background:#fee;color:#c33;border-color:#c99">Clear local edits</button>
   <span id="countInfo" style="margin-left:auto;color:#666;font-size:11px"></span>
@@ -276,15 +279,17 @@ function _loadEditsFromLocalStorage(){
     if(!spEdits) return;
     if(spEdits._edits){
       sp._edits = spEdits._edits;
-      // Re-apply copy_count changes to sp.counts and sp.total
+      // Re-apply copy_count changes to sp.counts, sp.firm_counts and sp.total
       for(const sf in spEdits._edits){
         const ed = spEdits._edits[sf];
         if(ed.copy_count != null && sp.counts[sf] != null){
           const oldV = sp.counts[sf];
           sp.counts[sf] = ed.copy_count;
+          if(sp.firm_counts && sp.firm_counts[sf]!=null) sp.firm_counts[sf] = ed.copy_count;
           sp.total = Math.max(0, (sp.total||0) - oldV + ed.copy_count);
           count++;
         }
+        if(ed.consensus){ if(!sp.consensuses) sp.consensuses={}; sp.consensuses[sf]=ed.consensus; }
       }
     }
     if(spEdits.cell_status) sp.cell_status = spEdits.cell_status;
@@ -500,8 +505,9 @@ function render(){
 
       const cStatus = (sp.cell_status&&sp.cell_status[sf])||'';
       const csCls = cStatus==='checked'?' cell-checked':cStatus==='working'?' cell-working':'';
+      const editedCls = (sp._edits&&sp._edits[sf])?' cell-edited':'';
       const tip = sf+' in '+sp.taxon.replace(/_/g,' ')+': '+fmt(v)+(useFirm?' firm':'')+' copies';
-      h += '<td class="'+cls+csCls+'" title="'+esc(tip)+'" oncontextmenu="cycleStatus(event,\''+esc(sp.taxon)+'\',\''+esc(sf)+'\')" onclick="showCellInfo(\''+esc(sp.taxon)+'\',\''+esc(sf)+'\')">'+display+'</td>';
+      h += '<td class="'+cls+csCls+editedCls+'" title="'+esc(tip)+'" oncontextmenu="cycleStatus(event,\''+esc(sp.taxon)+'\',\''+esc(sf)+'\')"\ onclick="showCellInfo(\''+esc(sp.taxon)+'\',\''+esc(sf)+'\')">'+display+'</td>';
     });
     h += '</tr>';
     prevClade = sp.clade;
@@ -628,6 +634,8 @@ function _showCellInfoBody(taxon,sf){
   h += '<label>Cell Status</label><select id="mCellStatus"><option value=""'+(curCellStatus===''?' selected':'')+'>— not reviewed —</option><option value="checked"'+(curCellStatus==='checked'?' selected':'')+'>✓ Checked</option><option value="working"'+(curCellStatus==='working'?' selected':'')+'>⚠ Working</option></select>';
   h += '<label>Notes</label><textarea id="mNotes">'+esc(curNotes)+'</textarea>';
   h += '<label>Curation notes</label><textarea id="mCurNotes" placeholder="Reason for curation...">'+esc(curCurNotes)+'</textarea>';
+  const curConsensus = (sp.consensuses&&sp.consensuses[sf]) || (edits.consensus||'');
+  h += '<label>Consensus sequence (FASTA / raw)</label><textarea id="mConsensus" placeholder="Paste consensus sequence here (raw or FASTA)…" style="font-family:monospace;font-size:10px;height:60px">'+esc(curConsensus)+'</textarea>';
   h += '<div style="margin-top:8px"><div class="detail-row"><b>% of total:</b> '+(sp.total>0?(100*v/sp.total).toFixed(1):'0')+'%</div>';
   const firmV = sp.firm_counts?(sp.firm_counts[sf]||0):v;
   const softV = v-firmV;
@@ -660,16 +668,25 @@ function _showCellInfoBody(taxon,sf){
     const newCopies = parseInt(ov.querySelector('#mCopies').value,10)||0;
     const oldCopies = sp.counts[sf]||0;
     if(!sp._edits) sp._edits={};
+    // Parse consensus: strip FASTA header lines, join sequence lines
+    let rawCons = ov.querySelector('#mConsensus').value.trim();
+    if(rawCons){
+      const lines = rawCons.split(/\n/).filter(l=>!l.startsWith('>'));
+      rawCons = lines.join('').replace(/[^A-Za-z]/g,'').toUpperCase();
+    }
     sp._edits[sf] = {
       copy_count:newCopies,
       status:ov.querySelector('#mStatus').value,
       notes:ov.querySelector('#mNotes').value.trim(),
-      curation_notes:ov.querySelector('#mCurNotes').value.trim()
+      curation_notes:ov.querySelector('#mCurNotes').value.trim(),
+      consensus:rawCons||''
     };
+    if(rawCons){ if(!sp.consensuses) sp.consensuses={}; sp.consensuses[sf]=rawCons; }
     const newCS = ov.querySelector('#mCellStatus').value;
     if(!sp.cell_status) sp.cell_status={};
     if(newCS) sp.cell_status[sf]=newCS; else delete sp.cell_status[sf];
     sp.counts[sf]=newCopies;
+    if(sp.firm_counts && sp.firm_counts[sf]!=null) sp.firm_counts[sf]=newCopies;
     sp.total=Math.max(0,(sp.total||0)-oldCopies+newCopies);
     _saveEditsToLocalStorage();
     render();
