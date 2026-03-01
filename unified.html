@@ -227,7 +227,8 @@ function requireEditAuth(cb){
   };
   ov.querySelector('#_authOK').addEventListener('click', check);
   inp.addEventListener('keydown', e=>{ if(e.key==='Enter') check(); });
-  ov.addEventListener('click', e=>{ if(e.target===ov) ov.remove(); });
+  let _mdt2=null; ov.addEventListener('mousedown', e=>{_mdt2=e.target;});
+  ov.addEventListener('click', e=>{ if(e.target===ov&&_mdt2===ov) ov.remove(); });
   setTimeout(()=>inp.focus(), 50);
 }
 
@@ -553,7 +554,8 @@ function showInfoModal(title,bodyHtml){
   const ov=document.createElement('div'); ov.className='modal-overlay'; ov.id='_infoModal';
   ov.innerHTML='<div class="modal"><div class="modal-title"><span>'+title+'</span><button onclick="this.closest(\'.modal-overlay\').remove()">&times;</button></div><div class="modal-body">'+bodyHtml+'</div><div class="modal-footer"><button onclick="this.closest(\'.modal-overlay\').remove()">Close</button></div></div>';
   document.body.appendChild(ov);
-  ov.addEventListener('click',e=>{if(e.target===ov) ov.remove();});
+  let _mdt=null; ov.addEventListener('mousedown',e=>{_mdt=e.target;});
+  ov.addEventListener('click',e=>{if(e.target===ov&&_mdt===ov) ov.remove();});
 }
 function showModal(title,bodyHtml,onSave){
   const old=document.getElementById('_infoModal'); if(old)old.remove();
@@ -561,7 +563,8 @@ function showModal(title,bodyHtml,onSave){
   ov.innerHTML='<div class="modal"><div class="modal-title"><span>'+title+'</span><button onclick="this.closest(\'.modal-overlay\').remove()">&times;</button></div><div class="modal-body">'+bodyHtml+'</div><div class="modal-footer"><button onclick="this.closest(\'.modal-overlay\').remove()">Cancel</button><button class="primary" id="modalSaveBtn">Save</button></div></div>';
   document.body.appendChild(ov);
   ov.querySelector('#modalSaveBtn').addEventListener('click',function(){if(!onSave||onSave(ov)!==false) ov.remove();});
-  ov.addEventListener('click',function(e){if(e.target===ov) ov.remove();});
+  let _mdt=null; ov.addEventListener('mousedown',function(e){_mdt=e.target;});
+  ov.addEventListener('click',function(e){if(e.target===ov&&_mdt===ov) ov.remove();});
 }
 
 function showSpeciesInfo(taxon){
