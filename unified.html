@@ -118,6 +118,7 @@ td.cell-edited::before{content:'';position:absolute;top:0;left:0;border-style:so
   <span class="title">SINEdb — Unified Table</span>
   <a class="nav-link" href="index.html">← Snake detail</a>
   <a class="nav-link" href="combined.html">Combined (9 shared)</a>
+  <a class="nav-link" href="subfamily_detail.html?sf=sq1_boa" title="sq1_boa sub-subfamily analysis">sq1_boa subs</a>
   <span class="stats" id="topStats"></span>
 </div>
 
@@ -182,6 +183,7 @@ const CLADE_ORDER = ['Serpentes','Amphisbaenia','Anguimorpha','Dibamia','Gekkota
 
 const MSA_VIEWER = 'https://toki-bio.github.io/MSA-viewer/';
 const SINEDB_BASE = 'https://toki-bio.github.io/SINEdb/';
+const SUB_SF_AVAIL = new Set(['sq1_boa']); // subfamilies with sub-subfamily detail pages
 
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function fmt(n){return (n!=null)?n.toLocaleString():'—';}
@@ -458,7 +460,8 @@ function render(){
   });
   h += '</tr><tr>';
   visibleSFs.forEach(sf=>{
-    h += '<th class="sf-vert" onclick="doSort(\''+esc(sf)+'\')">'+esc(sf)+'</th>';
+    const subLink = SUB_SF_AVAIL.has(sf) ? ' <a href="subfamily_detail.html?sf='+encodeURIComponent(sf)+'" style="color:#ffeb3b;font-size:8px;writing-mode:horizontal-tb;text-decoration:none" title="Open sub-subfamily detail" onclick="event.stopPropagation()">◈</a>' : '';
+    h += '<th class="sf-vert" onclick="doSort(\''+esc(sf)+'\')">'+esc(sf)+subLink+'</th>';
   });
   h += '</tr></thead><tbody>';
 
