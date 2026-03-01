@@ -153,6 +153,7 @@ td.cell-working::after{content:'';position:absolute;top:0;right:0;border-style:s
   <div class="sep"></div>
   <span class="status-legend"><span class="swatch sw-checked"></span>Checked <span class="swatch sw-working"></span>Working</span>
   <button class="export-btn" onclick="exportJSON()" title="Download unified_data.json with edits and status">Export JSON</button>
+  <button class="export-btn" onclick="clearLocalEdits()" title="Discard all browser-stored edits and reload from JSON" style="background:#fee;color:#c33;border-color:#c99">Clear local edits</button>
   <span id="countInfo" style="margin-left:auto;color:#666;font-size:11px"></span>
 </div>
 
@@ -234,6 +235,67 @@ function viewerLink(relPath,label){
   return '<a href="'+MSA_VIEWER+'?url='+encodeURIComponent(SINEDB_BASE+relPath)+'" target="_blank">'+label+'</a>';
 }
 
+// ──── localStorage persistence ────────────────────────────────────────────
+const LS_KEY = 'sinekb_edits_v1';
+
+function _saveEditsToLocalStorage(){
+  if(!DATA || !DATA.species) return;
+  const edits = {};
+  DATA.species.forEach(sp=>{
+    const spEdits = {};
+    let hasAny = false;
+    if(sp._edits && Object.keys(sp._edits).length > 0){
+      spEdits._edits = sp._edits;
+      hasAny = true;
+    }
+    if(sp.cell_status && Object.keys(sp.cell_status).length > 0){
+      spEdits.cell_status = sp.cell_status;
+      hasAny = true;
+    }
+    if(hasAny) edits[sp.taxon] = spEdits;
+  });
+  try {
+    localStorage.setItem(LS_KEY, JSON.stringify(edits));
+  } catch(e){
+    console.warn('Failed to save edits to localStorage:', e);
+  }
+}
+
+function _loadEditsFromLocalStorage(){
+  if(!DATA || !DATA.species) return;
+  let edits;
+  try {
+    const raw = localStorage.getItem(LS_KEY);
+    if(!raw) return;
+    edits = JSON.parse(raw);
+  } catch(e){ return; }
+  let count = 0;
+  DATA.species.forEach(sp=>{
+    const spEdits = edits[sp.taxon];
+    if(!spEdits) return;
+    if(spEdits._edits){
+      sp._edits = spEdits._edits;
+      // Re-apply copy_count changes to sp.counts and sp.total
+      for(const sf in spEdits._edits){
+        const ed = spEdits._edits[sf];
+        if(ed.copy_count != null && sp.counts[sf] != null){
+          const oldV = sp.counts[sf];
+          sp.counts[sf] = ed.copy_count;
+          sp.total = Math.max(0, (sp.total||0) - oldV + ed.copy_count);
+          count++;
+        }
+      }
+    }
+    if(spEdits.cell_status) sp.cell_status = spEdits.cell_status;
+  });
+  if(count > 0) console.log('[SINE-KB] Restored ' + count + ' edits from localStorage');
+}
+
+function clearLocalEdits(){
+  localStorage.removeItem(LS_KEY);
+  location.reload();
+}
+
 // ──── Init ────────────────────────────────────────────────────────────────
 
 async function init(){
@@ -244,6 +306,9 @@ async function init(){
     document.getElementById('tableWrap').innerHTML='<p style="padding:20px;color:red">Error: '+e.message+'</p>';
     return;
   }
+
+  // Restore any saved edits from localStorage
+  _loadEditsFromLocalStorage();
 
   // Populate clade filter
   const clades = [...new Set(DATA.species.map(s=>s.clade))];
@@ -555,7 +620,7 @@ function _showCellInfoBody(taxon,sf){
   let h='';
   h += '<label>Subfamily</label><input value="'+esc(sf)+'" disabled style="background:#eee">';
   h += '<label>Taxon</label><input value="'+esc(taxon.replace(/_/g,' '))+'" disabled style="background:#eee">';
-  h += '<label>Copy count</label><input id="mCopies" type="number" value="'+v+'">';
+  h += '<label>Copy count</label><input id="mCopies" type="text" inputmode="numeric" pattern="[0-9]*" value="'+v+'">';
   h += '<label>Status</label><select id="mStatus"><option'+(curStatus==='present'?' selected':'')+'>present</option><option'+(curStatus==='absent'?' selected':'')+'>absent</option><option'+(curStatus==='unknown'?' selected':'')+'>unknown</option></select>';
   h += '<label>Cell Status</label><select id="mCellStatus"><option value=""'+(curCellStatus===''?' selected':'')+'>— not reviewed —</option><option value="checked"'+(curCellStatus==='checked'?' selected':'')+'>✓ Checked</option><option value="working"'+(curCellStatus==='working'?' selected':'')+'>⚠ Working</option></select>';
   h += '<label>Notes</label><textarea id="mNotes">'+esc(curNotes)+'</textarea>';
@@ -589,7 +654,7 @@ function _showCellInfoBody(taxon,sf){
   h += '</div>';
 
   showModal('Edit: '+sf+' × '+taxon.replace(/_/g,' '), h, function(ov){
-    const newCopies = parseFloat(ov.querySelector('#mCopies').value)||0;
+    const newCopies = parseInt(ov.querySelector('#mCopies').value,10)||0;
     const oldCopies = sp.counts[sf]||0;
     if(!sp._edits) sp._edits={};
     sp._edits[sf] = {
@@ -603,6 +668,7 @@ function _showCellInfoBody(taxon,sf){
     if(newCS) sp.cell_status[sf]=newCS; else delete sp.cell_status[sf];
     sp.counts[sf]=newCopies;
     sp.total=Math.max(0,(sp.total||0)-oldCopies+newCopies);
+    _saveEditsToLocalStorage();
     render();
   });
   setTimeout(()=>{
@@ -626,6 +692,7 @@ function cycleStatus(event,taxon,sf){
     if(cur==='') sp.cell_status[sf]='checked';
     else if(cur==='checked') sp.cell_status[sf]='working';
     else delete sp.cell_status[sf];
+    _saveEditsToLocalStorage();
     render();
   });
 }
