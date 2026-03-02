@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,502 +9,396 @@
 body{font:12px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#222;background:#fff;display:flex;flex-direction:column;height:100vh;overflow:hidden}
 a{color:#1a5dab;text-decoration:none}
 a:hover{text-decoration:underline}
-#topbar{display:flex;align-items:center;background:#5b2d8e;color:#fff;padding:0 8px;height:28px;flex-shrink:0;font-size:12px;gap:12px}
+#topbar{display:flex;align-items:center;background:#1a4d8c;color:#fff;padding:0 8px;height:28px;flex-shrink:0;font-size:12px;gap:12px}
 #topbar .title{font-weight:700;font-size:13px;letter-spacing:.5px}
 #topbar .nav-link{color:rgba(255,255,255,.85);font-size:11px;padding:2px 8px;border:1px solid rgba(255,255,255,.3);border-radius:3px}
 #topbar .nav-link:hover{background:rgba(255,255,255,.15);text-decoration:none}
 #topbar .stats{font-size:11px;opacity:.85;margin-left:auto}
-.page-header{padding:8px 16px;background:#f4f0f8;border-bottom:1px solid #d0c4d8}
-.page-header h2{font-size:14px;color:#5b2d8e;margin-bottom:2px}
+.page-header{padding:8px 16px;background:#f0f4f8;border-bottom:1px solid #d0d4d8}
+.page-header h2{font-size:14px;color:#1a4d8c;margin-bottom:2px}
 .page-header p{font-size:11px;color:#555;max-width:1100px}
 .controls{padding:4px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;border-bottom:1px solid #e0e0e0;background:#fafbfc;min-height:28px}
 .controls label{font-weight:600;font-size:11px}
+.controls select,.controls input[type=number]{font-size:11px;padding:1px 4px;border:1px solid #aaa}
+.controls input[type=checkbox]{vertical-align:middle}
+.filter-btn{font-size:10px;padding:1px 6px;cursor:pointer;border:1px solid #999;background:#f0f0f0;border-radius:3px;font-weight:600}
+.filter-btn:hover{background:#ddd}
 .sep{border-left:1px solid #ccc;height:18px;margin:0 2px}
-.btn{font-size:10px;padding:2px 10px;cursor:pointer;border:1px solid #888;background:#f0f0f0;border-radius:3px;font-weight:600}
-.btn:hover{background:#ddd}
-.btn-primary{background:#5b2d8e;color:#fff;border-color:#5b2d8e}
-.btn-primary:hover{background:#4a2375}
-.btn-danger{background:#fee;color:#c33;border-color:#c99}
-.btn-danger:hover{background:#fdd}
-.main-area{display:flex;flex:1;min-height:0;overflow:hidden}
-/* Left panel: groups & unassigned */
-#leftPanel{width:280px;min-width:200px;max-width:350px;border-right:2px solid #d0c4d8;display:flex;flex-direction:column;background:#faf8fc;overflow:hidden}
-#leftPanel .panel-header{background:#5b2d8e;color:#fff;padding:4px 8px;font-weight:700;font-size:11px;display:flex;justify-content:space-between;align-items:center}
-#leftPanel .panel-body{flex:1;overflow-y:auto;padding:4px}
-.grp-section{margin-bottom:8px;border:1px solid #d0c4d8;border-radius:4px;background:#fff}
-.grp-header{display:flex;align-items:center;gap:4px;padding:3px 6px;background:#e8e0f0;border-radius:3px 3px 0 0;cursor:pointer;font-weight:600;font-size:11px;color:#5b2d8e}
-.grp-header .grp-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.grp-header .grp-count{font-size:9px;color:#888;font-weight:400}
-.grp-header button{border:none;background:none;cursor:pointer;font-size:12px;color:#888;padding:0 2px}
-.grp-header button:hover{color:#c33}
-.grp-body{padding:2px 4px;max-height:200px;overflow-y:auto}
-.seq-item{display:flex;align-items:center;gap:4px;padding:2px 4px;margin:1px 0;border-radius:3px;font-size:10px;cursor:pointer;border:1px solid transparent}
-.seq-item:hover{background:#f0eef8;border-color:#d0c4d8}
-.seq-item .seq-drag{cursor:grab;color:#bbb;font-size:12px}
-.seq-item .seq-id{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.seq-item .seq-count{color:#888;font-size:9px;min-width:30px;text-align:right}
-.unassigned-section{margin-top:8px}
-.unassigned-section .grp-header{background:#fff3e0;color:#e65100}
-/* Right panel: matrix table */
-#rightPanel{flex:1;overflow:auto;padding:0}
+.table-wrap{overflow:auto;flex:1;min-height:0;padding:0}
 table{border-collapse:separate;border-spacing:0;font-size:10px}
-table th,table td{border:1px solid #d0d0d0;padding:2px 4px;white-space:nowrap}
-table thead th{position:sticky;top:0;z-index:4;background:#5b2d8e;color:#fff;font-size:10px;font-weight:600;cursor:pointer;user-select:none}
-table thead th:hover{background:#4a2375}
+table th,table td{border:1px solid #d0d0d0;padding:2px 3px;white-space:nowrap}
+table thead th{position:sticky;top:0;z-index:4;background:#1a4d8c;color:#fff;font-size:10px;font-weight:600;cursor:pointer;user-select:none}
+table thead th:hover{background:#15407a}
 table .sticky-sp{position:sticky;left:0;z-index:2;background:#fff;border-right:2px solid #999;width:170px;min-width:170px;max-width:170px;overflow:hidden;text-overflow:ellipsis;white-space:normal;line-height:1.15}
-table thead .sticky-sp{z-index:5;background:#5b2d8e}
-table td.has-seq{background:#e8f5e9;cursor:pointer}
-table td.has-seq:hover{background:#c8e6c9}
-table td.empty-cell{background:#fafafa;color:#ccc;text-align:center}
-table td.unassigned-cell{background:#fff8e1;cursor:pointer;text-align:center;color:#e65100;font-weight:600}
-table td.unassigned-cell:hover{background:#ffecb3}
+table thead .sticky-sp{z-index:5;background:#1a4d8c}
+table .sticky-tot{position:sticky;left:172px;z-index:2;background:#fff;border-right:2px solid #999;min-width:55px;text-align:right;font-weight:700}
+table thead .sticky-tot{z-index:5;background:#1a4d8c}
+table .sf-vert{writing-mode:vertical-lr;text-orientation:mixed;font-size:9px;max-width:26px;min-width:26px;padding:2px 1px}
+table .sf-vert:hover{background:#15407a}
+.c-high{background:#1a6b3c;color:#fff}
+.c-med{background:#5ab87a;color:#000}
+.c-low{background:#c8e6c9;color:#333}
+.c-zero{background:#fff;color:#ddd}
+.c-trace{background:#ffecb3;color:#8d6e63}
+.c-na{background:#f0f0f0;color:#bbb;font-style:italic;text-align:center}
 table tfoot td{font-weight:700;background:#e8ecf0;border-top:2px solid #999}
-table tfoot .sticky-sp{background:#e8ecf0}
-tr:hover td{background-color:rgba(232,224,254,.3)}
-tr:hover .sticky-sp{background:#f0eef8}
-/* Modal overlay */
+table tfoot .sticky-sp,table tfoot .sticky-tot{background:#e8ecf0}
+tr:hover td{background-color:rgba(232,240,254,.4)}
+tr:hover .sticky-sp,tr:hover .sticky-tot{background:#e8f0fe}
+td[title]{cursor:help}
+td.cell-checked{position:relative}
+td.cell-checked::after{content:'';position:absolute;top:0;right:0;border-style:solid;border-width:0 8px 8px 0;border-color:transparent #1976d2 transparent transparent;pointer-events:none}
+td.cell-working{position:relative}
+td.cell-working::after{content:'';position:absolute;top:0;right:0;border-style:solid;border-width:0 8px 8px 0;border-color:transparent #e53935 transparent transparent;pointer-events:none}
+td.cell-edited{position:relative}
+td.cell-edited::before{content:'';position:absolute;top:0;left:0;border-style:solid;border-width:8px 8px 0 0;border-color:#ff9800 transparent transparent transparent;pointer-events:none}
+.status-legend{font-size:10px;display:flex;gap:8px;align-items:center}
+.status-legend .swatch{display:inline-block;width:0;height:0;border-style:solid;border-width:0 8px 8px 0;vertical-align:middle;margin-right:2px}
+.status-legend .sw-checked{border-color:transparent #1976d2 transparent transparent}
+.status-legend .sw-working{border-color:transparent #e53935 transparent transparent}
+.status-legend .sw-edited{border-color:#ff9800 transparent transparent transparent;border-width:8px 8px 0 0}
+.export-btn{font-size:10px;padding:1px 8px;cursor:pointer;border:1px solid #1a4d8c;background:#e3f2fd;border-radius:3px;color:#1a4d8c;font-weight:600}
+.export-btn:hover{background:#bbdefb}
 .modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.35);z-index:100;display:flex;align-items:flex-start;justify-content:center;padding-top:40px}
 .modal{background:#fff;border:1px solid #666;box-shadow:0 4px 20px rgba(0,0,0,.3);max-width:700px;width:95%;max-height:85vh;overflow:auto;font-size:11px}
-.modal-title{background:#5b2d8e;color:#fff;padding:4px 8px;font-weight:700;font-size:12px;display:flex;justify-content:space-between;align-items:center}
+.modal-title{background:#1a4d8c;color:#fff;padding:4px 8px;font-weight:700;font-size:12px;display:flex;justify-content:space-between;align-items:center}
 .modal-title button{background:transparent;border:none;color:#fff;font-size:14px;cursor:pointer;padding:0 4px}
 .modal-body{padding:8px}
 .modal-body label{display:block;font-weight:600;margin:4px 0 1px;font-size:10px;color:#555;text-transform:uppercase}
-.modal-body input,.modal-body textarea,.modal-body select{width:100%;margin-bottom:2px;font:11px/1.3 inherit;border:1px solid #aaa;padding:2px 4px;background:#fffef5}
+.modal-body input,.modal-body textarea,.modal-body select{width:100%;margin-bottom:2px;font:11px/1.3 inherit;border:1px solid #aaa;padding:1px 3px;background:#fffef5}
 .modal-body textarea{height:50px;resize:vertical}
 .modal-footer{padding:4px 8px 8px;text-align:right;display:flex;gap:6px;justify-content:flex-end}
 .modal-footer button{font:11px/1.3 inherit;padding:2px 8px;cursor:pointer;border:1px solid #888;background:#f0f0f0;border-radius:2px}
 .modal-footer button:hover{background:#ddd}
-.modal-footer button.primary{background:#5b2d8e;color:#fff;border-color:#5b2d8e}
-.modal-footer button.primary:hover{background:#4a2375}
+.modal-footer button.primary{background:#1a4d8c;color:#fff;border-color:#1a4d8c}
+.modal-footer button.primary:hover{background:#15407a}
 </style>
 </head>
 <body>
 
 <div id="topbar">
-  <span class="title" id="pageTitle">SINEdb — Sub-subfamilies</span>
+  <span class="title">SINEdb — Sub-subfamily Detail</span>
   <a class="nav-link" href="unified.html">← Unified Table</a>
   <span class="stats" id="topStats"></span>
 </div>
 
 <div class="page-header">
-  <h2 id="headerTitle">Loading…</h2>
-  <p id="headerDesc"></p>
+  <h2 id="pageTitle">Loading…</h2>
+  <p id="pageDesc"></p>
 </div>
 
-<div class="controls">
-  <button class="btn btn-primary" onclick="addGroup()">+ New Group</button>
-  <button class="btn" onclick="autoGroupByPrefix()">Auto-group by prefix</button>
+<div class="controls" id="controlRow1">
+  <label><input type="checkbox" id="hideEmpty" onchange="render()"> Hide empty columns</label>
+  <label><input type="checkbox" id="hideEmptyRows" onchange="render()"> Hide empty rows</label>
   <div class="sep"></div>
-  <button class="btn" onclick="exportJSON()">Export JSON</button>
-  <button class="btn btn-danger" onclick="clearEdits()">Clear local edits</button>
+  <span class="status-legend"><span class="swatch sw-checked"></span>Checked <span class="swatch sw-working"></span>Working <span class="swatch sw-edited"></span>Edited</span>
+  <button class="export-btn" onclick="exportJSON()" title="Download sub-subfamily JSON with edits">Export JSON</button>
+  <button class="export-btn" onclick="clearLocalEdits()" title="Discard all browser-stored edits and reload" style="background:#fee;color:#c33;border-color:#c99">Clear local edits</button>
   <span id="countInfo" style="margin-left:auto;color:#666;font-size:11px"></span>
 </div>
 
-<div class="main-area">
-  <div id="leftPanel">
-    <div class="panel-header"><span>Groups & Sequences</span></div>
-    <div class="panel-body" id="groupList"></div>
-  </div>
-  <div id="rightPanel">
-    <div id="tableWrap" style="padding:4px"></div>
-  </div>
-</div>
+<div class="table-wrap" id="tableWrap"></div>
 
 <script>
-/* ──── Globals ──────────────────────────────────────────────────────────── */
-let DATA = null;          // parsed JSON
-let LS_KEY = '';          // localStorage key, set after loading
-const PARENT_SF = new URLSearchParams(location.search).get('sf') || 'sq1_boa';
+let DATA = null;
+let sortCol = null, sortDir = 1;
 
-/* ──── Auth (same password as unified.html) ─────────────────────────────── */
-const EDIT_PASS_HASH='75f7432572904fd9ac7f3f3f651d3c956f35448d8432be706c09c075a77bd98b';
-let _editAuth=sessionStorage.getItem('sedb_edit')==='1';
-function _hashStr(s){return crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)).then(b=>Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join(''));}
-function requireAuth(cb){
-  if(_editAuth){cb();return;}
-  const ov=document.createElement('div');
-  ov.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;display:flex;align-items:center;justify-content:center';
-  ov.innerHTML='<div style="background:#fff;border-radius:6px;padding:24px;min-width:280px;max-width:320px;box-shadow:0 4px 20px rgba(0,0,0,.35)">'
-    +'<div style="font-weight:700;font-size:14px;margin-bottom:10px;color:#5b2d8e">\u{1F512} Curation password</div>'
-    +'<input id="_authI" type="password" autocomplete="current-password" style="width:100%;padding:6px 8px;font-size:13px;border:1px solid #aaa;border-radius:4px" placeholder="Password">'
-    +'<div style="color:#e53935;font-size:11px;margin-top:4px;min-height:14px" id="_authE"></div>'
+let COLUMNS = [];
+let ENTRY_MAP = {};
+let TAXON_ENTRIES = {};
+
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function fmt(n){return (n!=null&&n!=='')?Number(n).toLocaleString():'—';}
+
+const EDIT_PASS_HASH = '75f7432572904fd9ac7f3f3f651d3c956f35448d8432be706c09c075a77bd98b';
+let _editAuth = sessionStorage.getItem('sedb_edit') === '1';
+
+function _hashStr(str){
+  return crypto.subtle.digest('SHA-256', new TextEncoder().encode(str))
+    .then(buf => Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join(''));
+}
+
+function requireEditAuth(cb){
+  if(_editAuth){ cb(); return; }
+  const ov = document.createElement('div');
+  ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;display:flex;align-items:center;justify-content:center';
+  ov.innerHTML = '<div style="background:#fff;border-radius:6px;padding:24px;min-width:280px;max-width:320px;box-shadow:0 4px 20px rgba(0,0,0,.35)">'
+    +'<div style="font-weight:700;font-size:14px;margin-bottom:10px;color:#1a4d8c">🔒 Curation password required</div>'
+    +'<input id="_authInput" type="password" autocomplete="current-password" style="width:100%;padding:6px 8px;font-size:13px;border:1px solid #aaa;border-radius:4px" placeholder="Password">'
+    +'<div style="color:#e53935;font-size:11px;margin-top:4px;min-height:14px" id="_authErr"></div>'
     +'<div style="display:flex;gap:8px;margin-top:14px;justify-content:flex-end">'
     +'<button onclick="this.closest(\'[data-auth]\').remove()" style="padding:4px 14px;cursor:pointer">Cancel</button>'
-    +'<button id="_authOK" style="padding:4px 14px;background:#5b2d8e;color:#fff;border:none;border-radius:4px;cursor:pointer">Unlock</button>'
+    +'<button id="_authOK" style="padding:4px 14px;background:#1a4d8c;color:#fff;border:none;border-radius:4px;cursor:pointer">Unlock</button>'
     +'</div></div>';
   ov.setAttribute('data-auth','1');
   document.body.appendChild(ov);
-  const inp=ov.querySelector('#_authI'),err=ov.querySelector('#_authE');
-  const check=()=>{const v=inp.value;if(!v){err.textContent='Enter password.';return;}_hashStr(v).then(h=>{if(h===EDIT_PASS_HASH){_editAuth=true;sessionStorage.setItem('sedb_edit','1');ov.remove();cb();}else{err.textContent='Incorrect.';inp.value='';inp.focus();}});};
-  ov.querySelector('#_authOK').addEventListener('click',check);
-  inp.addEventListener('keydown',e=>{if(e.key==='Enter')check();});
-  let _mdt=null;ov.addEventListener('mousedown',e=>{_mdt=e.target;});ov.addEventListener('click',e=>{if(e.target===ov&&_mdt===ov)ov.remove();});
-  setTimeout(()=>inp.focus(),50);
+  const inp = ov.querySelector('#_authInput');
+  const err = ov.querySelector('#_authErr');
+  const check = ()=>{
+    const val = inp.value;
+    if(!val){ err.textContent='Enter a password.'; return; }
+    _hashStr(val).then(h=>{
+      if(h === EDIT_PASS_HASH){
+        _editAuth = true;
+        sessionStorage.setItem('sedb_edit','1');
+        ov.remove();
+        cb();
+      } else {
+        err.textContent = 'Incorrect password.';
+        inp.value = ''; inp.focus();
+      }
+    });
+  };
+  ov.querySelector('#_authOK').addEventListener('click', check);
+  inp.addEventListener('keydown', e=>{ if(e.key==='Enter') check(); });
+  let _mdt2=null; ov.addEventListener('mousedown', e=>{_mdt2=e.target;});
+  ov.addEventListener('click', e=>{ if(e.target===ov&&_mdt2===ov) ov.remove(); });
+  setTimeout(()=>inp.focus(), 50);
 }
 
-/* ──── Helpers ──────────────────────────────────────────────────────────── */
-function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-function fmt(n){return(n!=null)?n.toLocaleString():'—';}
-function uid(){return 'g'+Date.now()+'_'+Math.random().toString(36).slice(2,6);}
+function _lsKey(){ return 'sinekb_subsf_' + (DATA ? DATA.parent : 'unknown'); }
 
-/* ──── Modal ───────────────────────────────────────────────────────────── */
-function showModal(title,bodyHtml,onSave){
-  const old=document.querySelector('.modal-overlay');if(old)old.remove();
-  const ov=document.createElement('div');ov.className='modal-overlay';
-  ov.innerHTML='<div class="modal"><div class="modal-title"><span>'+title+'</span><button onclick="this.closest(\'.modal-overlay\').remove()">&times;</button></div><div class="modal-body">'+bodyHtml+'</div><div class="modal-footer">'+(onSave?'<button onclick="this.closest(\'.modal-overlay\').remove()">Cancel</button><button class="primary" id="_mSave">Save</button>':'<button onclick="this.closest(\'.modal-overlay\').remove()">Close</button>')+'</div></div>';
-  document.body.appendChild(ov);
-  if(onSave){ov.querySelector('#_mSave').addEventListener('click',()=>{if(!onSave||onSave(ov)!==false)ov.remove();});}
-  let _mdt=null;ov.addEventListener('mousedown',e=>{_mdt=e.target;});ov.addEventListener('click',e=>{if(e.target===ov&&_mdt===ov)ov.remove();});
+function _saveEditsToLocalStorage(){
+  if(!DATA) return;
+  const edits = {};
+  DATA.entries.forEach(e=>{
+    const obj = {};
+    let hasAny = false;
+    if(e._edits && Object.keys(e._edits).length > 0){ obj._edits = e._edits; hasAny = true; }
+    if(e.cell_status){ obj.cell_status = e.cell_status; hasAny = true; }
+    if(hasAny) edits[e.id] = obj;
+  });
+  try { localStorage.setItem(_lsKey(), JSON.stringify(edits)); }
+  catch(ex){ console.warn('Failed to save edits:', ex); }
 }
 
-/* ──── localStorage ────────────────────────────────────────────────────── */
-function saveToLS(){
-  if(!DATA)return;
-  try{localStorage.setItem(LS_KEY,JSON.stringify(DATA));}catch(e){console.warn('LS save error',e);}
+function _loadEditsFromLocalStorage(){
+  if(!DATA) return;
+  let edits;
+  try {
+    const raw = localStorage.getItem(_lsKey());
+    if(!raw) return;
+    edits = JSON.parse(raw);
+  } catch(ex){ return; }
+  let count = 0;
+  DATA.entries.forEach(e=>{
+    const saved = edits[e.id];
+    if(!saved) return;
+    if(saved._edits){
+      e._edits = saved._edits;
+      if(saved._edits.copy_count != null){ e.copy_count = saved._edits.copy_count; count++; }
+      if(saved._edits.notes != null) e.notes = saved._edits.notes;
+      if(saved._edits.companion != null) e.companion = saved._edits.companion;
+      if(saved._edits.consensus) e.seq = saved._edits.consensus;
+    }
+    if(saved.cell_status) e.cell_status = saved.cell_status;
+  });
+  if(count > 0) console.log('[SINE-KB] Restored ' + count + ' sub-subfamily edits from localStorage');
 }
-function loadFromLS(){
-  try{
-    const raw=localStorage.getItem(LS_KEY);
-    if(!raw)return null;
-    return JSON.parse(raw);
-  }catch(e){return null;}
-}
-function clearEdits(){
-  if(!confirm('Discard all local edits for '+PARENT_SF+' sub-subfamilies?'))return;
-  localStorage.removeItem(LS_KEY);
+
+function clearLocalEdits(){
+  localStorage.removeItem(_lsKey());
   location.reload();
 }
 
-/* ──── Init ─────────────────────────────────────────────────────────────── */
 async function init(){
-  LS_KEY='sinekb_subsf_'+PARENT_SF;
-  document.getElementById('pageTitle').textContent='SINEdb — '+PARENT_SF+' sub-subfamilies';
-  document.title='SINEdb — '+PARENT_SF+' sub-subfamilies';
-
-  // Try localStorage first (has user edits)
-  const saved=loadFromLS();
-  if(saved){
-    DATA=saved;
-  } else {
-    try{
-      const r=await fetch('sub_subfamilies/'+PARENT_SF+'.json');
-      if(!r.ok) throw new Error('HTTP '+r.status);
-      DATA=await r.json();
-    }catch(e){
-      document.getElementById('tableWrap').innerHTML='<p style="padding:20px;color:red">No sub-subfamily data for <b>'+esc(PARENT_SF)+'</b>. '+e.message+'</p>';
-      return;
-    }
+  const params = new URLSearchParams(location.search);
+  const sf = params.get('sf') || 'sq1_boa';
+  try{
+    const r = await fetch('sub_subfamilies/' + encodeURIComponent(sf) + '.json');
+    if(!r.ok) throw new Error('HTTP ' + r.status);
+    DATA = await r.json();
+  }catch(e){
+    document.getElementById('tableWrap').innerHTML='<p style="padding:20px;color:red">Error loading data: '+e.message+'</p>';
+    return;
   }
-
-  document.getElementById('headerTitle').textContent=DATA.parent+' Sub-subfamilies';
-  document.getElementById('headerDesc').textContent=DATA.description+' — '+DATA.entries.length+' consensus sequences across '+DATA.taxa_order.length+' taxa';
-  document.getElementById('topStats').textContent=DATA.entries.length+' seqs · '+DATA.taxa_order.length+' taxa · '+DATA.groups.length+' groups';
-
-  renderAll();
-}
-
-/* ──── Group Management ────────────────────────────────────────────────── */
-function addGroup(){
-  requireAuth(()=>{
-    let h='<label>Group name</label><input id="_gName" value="'+esc(PARENT_SF)+'_'+(DATA.groups.length+1)+'" autofocus>';
-    h+='<label>Notes</label><textarea id="_gNotes"></textarea>';
-    showModal('New Group',h,ov=>{
-      const name=ov.querySelector('#_gName').value.trim();
-      if(!name){alert('Name required');return false;}
-      if(DATA.groups.find(g=>g.name===name)){alert('Name already used');return false;}
-      DATA.groups.push({id:uid(),name,notes:ov.querySelector('#_gNotes').value.trim()});
-      saveToLS();renderAll();
-    });
+  _loadEditsFromLocalStorage();
+  COLUMNS = DATA.entries.map(e => e.id);
+  ENTRY_MAP = {};
+  TAXON_ENTRIES = {};
+  DATA.entries.forEach(e=>{
+    ENTRY_MAP[e.id] = e;
+    if(!TAXON_ENTRIES[e.taxon]) TAXON_ENTRIES[e.taxon] = {};
+    TAXON_ENTRIES[e.taxon][e.id] = e;
   });
+  document.getElementById('pageTitle').textContent = DATA.parent + ' — Sub-subfamily Detail';
+  document.getElementById('pageDesc').innerHTML = DATA.taxa_order.length + ' species, ' + DATA.entries.length + ' consensus sequences. Click a cell to view/edit. Right-click to cycle status.';
+  document.getElementById('topStats').textContent = DATA.entries.length + ' sequences × ' + DATA.taxa_order.length + ' taxa';
+  render();
 }
 
-function renameGroup(gid){
-  requireAuth(()=>{
-    const grp=DATA.groups.find(g=>g.id===gid);
-    if(!grp)return;
-    let h='<label>Group name</label><input id="_gName" value="'+esc(grp.name)+'" autofocus>';
-    h+='<label>Notes</label><textarea id="_gNotes">'+esc(grp.notes||'')+'</textarea>';
-    showModal('Rename Group',h,ov=>{
-      const name=ov.querySelector('#_gName').value.trim();
-      if(!name){alert('Name required');return false;}
-      grp.name=name;
-      grp.notes=ov.querySelector('#_gNotes').value.trim();
-      saveToLS();renderAll();
+function render(){
+  const hideEmpty = document.getElementById('hideEmpty').checked;
+  const hideEmptyRows = document.getElementById('hideEmptyRows').checked;
+  let visCols = COLUMNS.slice();
+  if(hideEmpty) visCols = visCols.filter(id => ENTRY_MAP[id] && ENTRY_MAP[id].copy_count > 0);
+  let visTaxa = DATA.taxa_order.slice();
+  if(hideEmptyRows) visTaxa = visTaxa.filter(t => TAXON_ENTRIES[t] && Object.keys(TAXON_ENTRIES[t]).length > 0);
+  if(sortCol === 'species'){
+    visTaxa.sort((a,b) => sortDir * a.localeCompare(b));
+  } else if(sortCol === 'total'){
+    visTaxa.sort((a,b) => {
+      const ta = TAXON_ENTRIES[a] ? Object.values(TAXON_ENTRIES[a]).reduce((s,e)=>s+e.copy_count,0) : 0;
+      const tb = TAXON_ENTRIES[b] ? Object.values(TAXON_ENTRIES[b]).reduce((s,e)=>s+e.copy_count,0) : 0;
+      return sortDir * (ta - tb);
     });
-  });
-}
-
-function deleteGroup(gid){
-  requireAuth(()=>{
-    const grp=DATA.groups.find(g=>g.id===gid);
-    if(!grp)return;
-    const assigned=DATA.entries.filter(e=>e.group_id===gid);
-    if(!confirm('Delete group "'+grp.name+'"? '+assigned.length+' sequences will become unassigned.'))return;
-    DATA.entries.forEach(e=>{if(e.group_id===gid)e.group_id=null;});
-    DATA.groups=DATA.groups.filter(g=>g.id!==gid);
-    saveToLS();renderAll();
-  });
-}
-
-function moveGroupUp(gid){
-  const idx=DATA.groups.findIndex(g=>g.id===gid);
-  if(idx<=0)return;
-  [DATA.groups[idx-1],DATA.groups[idx]]=[DATA.groups[idx],DATA.groups[idx-1]];
-  saveToLS();renderAll();
-}
-
-function moveGroupDown(gid){
-  const idx=DATA.groups.findIndex(g=>g.id===gid);
-  if(idx<0||idx>=DATA.groups.length-1)return;
-  [DATA.groups[idx],DATA.groups[idx+1]]=[DATA.groups[idx+1],DATA.groups[idx]];
-  saveToLS();renderAll();
-}
-
-function autoGroupByPrefix(){
-  requireAuth(()=>{
-    // Auto-create one group per species abbreviation prefix
-    // Find unique prefixes
-    const prefixes=new Map();
-    DATA.entries.forEach(e=>{
-      const prefix=e.id.split('_')[0];
-      if(!prefixes.has(prefix))prefixes.set(prefix,e.taxon);
+  } else if(sortCol){
+    visTaxa.sort((a,b) => {
+      const ea = TAXON_ENTRIES[a] && TAXON_ENTRIES[a][sortCol];
+      const eb = TAXON_ENTRIES[b] && TAXON_ENTRIES[b][sortCol];
+      return sortDir * ((ea?ea.copy_count:0) - (eb?eb.copy_count:0));
     });
-    if(!confirm('Create '+prefixes.size+' groups (one per species prefix: '+[...prefixes.keys()].join(', ')+')? Existing groups will not be affected.'))return;
-    prefixes.forEach((taxon,prefix)=>{
-      const name=prefix+'_group';
-      if(DATA.groups.find(g=>g.name===name))return; // skip existing
-      const gid=uid();
-      DATA.groups.push({id:gid,name,notes:'Auto-created for '+taxon});
-      DATA.entries.forEach(e=>{
-        if(e.group_id===null && e.id.split('_')[0]===prefix) e.group_id=gid;
-      });
-    });
-    saveToLS();renderAll();
+  }
+  const colTotals = {};
+  visCols.forEach(id => { colTotals[id] = ENTRY_MAP[id].copy_count || 0; });
+  let grandTotal = 0;
+  visTaxa.forEach(t => {
+    const te = TAXON_ENTRIES[t];
+    if(te) Object.values(te).forEach(e => { if(visCols.includes(e.id)) grandTotal += e.copy_count; });
   });
-}
-
-/* ──── Sequence Assignment ─────────────────────────────────────────────── */
-function assignSeq(entryId,targetGroupId){
-  requireAuth(()=>{
-    const entry=DATA.entries.find(e=>e.id===entryId);
-    if(!entry)return;
-    entry.group_id=targetGroupId;
-    saveToLS();renderAll();
+  let h = '<table id="sumTable"><thead><tr>';
+  h += '<th class="sticky-sp" onclick="doSort(\'species\')">Species ⇕</th>';
+  h += '<th class="sticky-tot" onclick="doSort(\'total\')">Tot ⇕</th>';
+  visCols.forEach(id => {
+    const e = ENTRY_MAP[id];
+    h += '<th class="sf-vert" onclick="doSort(\''+esc(id)+'\')" title="'+esc(id)+' ('+esc(e.taxon.replace(/_/g,' '))+', '+e.copy_count+' copies)">'+esc(id)+'</th>';
   });
-}
-
-function showAssignModal(entryId){
-  requireAuth(()=>{
-    const entry=DATA.entries.find(e=>e.id===entryId);
-    if(!entry)return;
-    let h='<p><b>'+esc(entry.id)+'</b> — '+esc(entry.taxon.replace(/_/g,' '))+' ('+entry.copy_count+' seqs)</p>';
-    h+='<label>Assign to group</label><select id="_aGrp"><option value="">— Unassigned —</option>';
-    DATA.groups.forEach(g=>{
-      h+='<option value="'+esc(g.id)+'"'+(entry.group_id===g.id?' selected':'')+'>'+esc(g.name)+'</option>';
-    });
-    h+='</select>';
-    h+='<label>Copy count</label><input id="_aCopy" type="text" inputmode="numeric" value="'+entry.copy_count+'">';
-    h+='<label>Notes</label><textarea id="_aNotes">'+esc(entry.notes||'')+'</textarea>';
-    h+='<label>Consensus ('+entry.seq.length+' bp)</label><textarea id="_aSeq" style="font-family:monospace;font-size:10px;height:80px">'+esc(entry.seq)+'</textarea>';
-    h+='<div style="margin-top:8px"><b>Header:</b> <code style="font-size:10px;word-break:break-all">'+esc(entry.header)+'</code></div>';
-    showModal('Sequence: '+entry.id,h,ov=>{
-      entry.group_id=ov.querySelector('#_aGrp').value||null;
-      entry.copy_count=parseInt(ov.querySelector('#_aCopy').value,10)||0;
-      entry.notes=ov.querySelector('#_aNotes').value.trim();
-      let rawSeq=ov.querySelector('#_aSeq').value.trim();
-      if(rawSeq){
-        const lines=rawSeq.split(/\n/).filter(l=>!l.startsWith('>'));
-        rawSeq=lines.join('').replace(/[^A-Za-z]/g,'').toUpperCase();
+  h += '</tr></thead><tbody>';
+  visTaxa.forEach(taxon => {
+    const te = TAXON_ENTRIES[taxon] || {};
+    const rowTotal = Object.values(te).reduce((s,e) => s + (visCols.includes(e.id) ? e.copy_count : 0), 0);
+    h += '<tr data-taxon="'+esc(taxon)+'">';
+    h += '<td class="sticky-sp"><i>'+esc(taxon.replace(/_/g,' '))+'</i></td>';
+    h += '<td class="sticky-tot">'+fmt(rowTotal)+'</td>';
+    visCols.forEach(id => {
+      const entry = te[id];
+      if(!entry){
+        h += '<td class="c-na">—</td>';
+        return;
       }
-      entry.seq=rawSeq;
-      saveToLS();renderAll();
+      const v = entry.copy_count;
+      let cls;
+      if(v > 10000) cls = 'c-high';
+      else if(v > 1000) cls = 'c-med';
+      else if(v > 10) cls = 'c-low';
+      else if(v > 0) cls = 'c-trace';
+      else cls = 'c-zero';
+      const cStatus = entry.cell_status || '';
+      const csCls = cStatus==='checked'?' cell-checked' : cStatus==='working'?' cell-working' : '';
+      const editedCls = (entry._edits && Object.keys(entry._edits).length > 0) ? ' cell-edited' : '';
+      const tip = id + ' in ' + taxon.replace(/_/g,' ') + ': ' + fmt(v) + ' copies';
+      h += '<td class="'+cls+csCls+editedCls+'" title="'+esc(tip)+'" onclick="showCellInfo(\''+esc(id)+'\')" oncontextmenu="cycleStatus(event,\''+esc(id)+'\')">'+fmt(v)+'</td>';
     });
+    h += '</tr>';
+  });
+  h += '</tbody><tfoot>';
+  h += '<tr><td class="sticky-sp"><strong>Total</strong></td><td class="sticky-tot">'+fmt(grandTotal)+'</td>';
+  visCols.forEach(id => { h += '<td style="text-align:right;font-weight:700">'+fmt(colTotals[id])+'</td>'; });
+  h += '</tr></tfoot></table>';
+  document.getElementById('tableWrap').innerHTML = h;
+  document.getElementById('countInfo').textContent = visTaxa.length + ' taxa × ' + visCols.length + ' sequences';
+}
+
+function doSort(col){
+  if(sortCol===col) sortDir*=-1;
+  else{sortCol=col;sortDir=-1;}
+  if(col==='species') sortDir=sortCol===col?sortDir:1;
+  render();
+}
+
+function cycleStatus(event, entryId){
+  event.preventDefault();
+  const entry = ENTRY_MAP[entryId];
+  if(!entry) return;
+  requireEditAuth(()=>{
+    const cur = entry.cell_status || '';
+    if(cur === '') entry.cell_status = 'checked';
+    else if(cur === 'checked') entry.cell_status = 'working';
+    else delete entry.cell_status;
+    _saveEditsToLocalStorage();
+    render();
   });
 }
 
-function showUnassignedForTaxon(taxon){
-  const entries=DATA.entries.filter(e=>e.taxon===taxon&&e.group_id===null);
-  if(entries.length===0){showModal('Unassigned — '+taxon.replace(/_/g,' '),'<p>No unassigned sequences for this taxon.</p>');return;}
-  let h='<p>'+entries.length+' unassigned sequence(s) for <i>'+esc(taxon.replace(/_/g,' '))+'</i>:</p>';
-  h+='<table style="width:100%;border-collapse:collapse;margin-top:4px"><thead><tr><th style="text-align:left;padding:2px 4px;border-bottom:1px solid #ccc">ID</th><th style="text-align:right;padding:2px 4px;border-bottom:1px solid #ccc"># Seqs</th><th style="padding:2px 4px;border-bottom:1px solid #ccc">Assign to</th></tr></thead><tbody>';
-  entries.forEach(e=>{
-    h+='<tr><td style="padding:2px 4px;font-size:10px;cursor:pointer" onclick="this.closest(\'.modal-overlay\').remove();showAssignModal(\''+esc(e.id)+'\')"><b>'+esc(e.id)+'</b></td>';
-    h+='<td style="text-align:right;padding:2px 4px;font-size:10px">'+e.copy_count+'</td>';
-    h+='<td style="padding:2px 4px"><select style="font-size:10px;width:100%" onchange="assignSeq(\''+esc(e.id)+'\',this.value||null);this.closest(\'.modal-overlay\').remove()"><option value="">— pick —</option>';
-    DATA.groups.forEach(g=>{h+='<option value="'+esc(g.id)+'">'+esc(g.name)+'</option>';});
-    h+='</select></td></tr>';
-  });
-  h+='</tbody></table>';
-  showModal('Unassigned — '+taxon.replace(/_/g,' '),h);
+function showModal(title, bodyHtml, onSave){
+  const old = document.getElementById('_infoModal'); if(old) old.remove();
+  const ov = document.createElement('div'); ov.className='modal-overlay'; ov.id='_infoModal';
+  ov.innerHTML = '<div class="modal"><div class="modal-title"><span>'+title+'</span><button onclick="this.closest(\'.modal-overlay\').remove()">&times;</button></div><div class="modal-body">'+bodyHtml+'</div><div class="modal-footer"><button onclick="this.closest(\'.modal-overlay\').remove()">Cancel</button>'+(onSave?'<button class="primary" id="modalSaveBtn">Save</button>':'')+'</div></div>';
+  document.body.appendChild(ov);
+  if(onSave) ov.querySelector('#modalSaveBtn').addEventListener('click', function(){ if(!onSave || onSave(ov)!==false) ov.remove(); });
+  let _mdt=null; ov.addEventListener('mousedown', function(e){_mdt=e.target;});
+  ov.addEventListener('click', function(e){if(e.target===ov&&_mdt===ov) ov.remove();});
 }
 
-function showCellDetail(taxon,gid){
-  const entries=DATA.entries.filter(e=>e.taxon===taxon&&e.group_id===gid);
-  const grp=DATA.groups.find(g=>g.id===gid);
-  if(!grp||entries.length===0)return;
-  requireAuth(()=>{
-    if(entries.length===1){
-      showAssignModal(entries[0].id);
-      return;
+function showCellInfo(entryId){
+  const entry = ENTRY_MAP[entryId];
+  if(!entry) return;
+  requireEditAuth(()=> _showCellInfoBody(entryId));
+}
+
+function _showCellInfoBody(entryId){
+  const entry = ENTRY_MAP[entryId];
+  if(!entry) return;
+  const edits = entry._edits || {};
+  const v = edits.copy_count != null ? edits.copy_count : entry.copy_count;
+  const curNotes = edits.notes != null ? edits.notes : (entry.notes || '');
+  const curCellStatus = entry.cell_status || '';
+  const curCompanion = edits.companion != null ? edits.companion : (entry.companion || '');
+  let h = '';
+  h += '<label>Entry ID</label><input value="'+esc(entryId)+'" disabled style="background:#eee">';
+  h += '<label>Taxon</label><input value="'+esc(entry.taxon.replace(/_/g,' '))+'" disabled style="background:#eee">';
+  h += '<label>Copy count</label><input id="mCopies" type="text" inputmode="numeric" pattern="[0-9]*" value="'+v+'">';
+  h += '<label>Cell Status</label><select id="mCellStatus"><option value=""'+(curCellStatus===''?' selected':'')+'>— not reviewed —</option><option value="checked"'+(curCellStatus==='checked'?' selected':'')+'>✓ Checked</option><option value="working"'+(curCellStatus==='working'?' selected':'')+'>⚠ Working</option></select>';
+  h += '<label>Notes</label><textarea id="mNotes">'+esc(curNotes)+'</textarea>';
+  h += '<label>Consensus sequence</label>';
+  h += '<textarea id="mConsensus" style="font-family:monospace;font-size:10px;height:60px">'+esc(entry.seq || '')+'</textarea>';
+  h += '<label>LINE partner / companion sequence</label>';
+  h += '<textarea id="mCompanion" placeholder="Paste FASTA or raw sequence of the LINE partner or other companion…" style="font-family:monospace;font-size:10px;height:60px">'+esc(curCompanion)+'</textarea>';
+  h += '<div style="margin-top:8px;font-size:10px;color:#666">';
+  h += '<div><b>Header:</b> '+esc(entry.header || '')+'</div>';
+  h += '<div><b>Sequence length:</b> '+(entry.seq ? entry.seq.length : 0)+' bp</div>';
+  h += '</div>';
+  showModal('Edit: '+entryId+' × '+entry.taxon.replace(/_/g,' '), h, function(ov){
+    const newCopies = parseInt(ov.querySelector('#mCopies').value, 10) || 0;
+    const newNotes = ov.querySelector('#mNotes').value.trim();
+    const newCellStatus = ov.querySelector('#mCellStatus').value;
+    let rawCons = ov.querySelector('#mConsensus').value.trim();
+    if(rawCons){
+      const lines = rawCons.split(/\n/).filter(l=>!l.startsWith('>'));
+      rawCons = lines.join('').replace(/[^A-Za-z]/g,'').toUpperCase();
     }
-    // Multiple entries in same cell — show picker
-    let h='<p>'+entries.length+' sequences in <b>'+esc(grp.name)+'</b> for <i>'+esc(taxon.replace(/_/g,' '))+'</i>:</p>';
-    entries.forEach(e=>{
-      h+='<div style="margin:4px 0;padding:4px;border:1px solid #ddd;border-radius:3px;cursor:pointer" onclick="this.closest(\'.modal-overlay\').remove();showAssignModal(\''+esc(e.id)+'\')">';
-      h+='<b>'+esc(e.id)+'</b> — '+e.copy_count+' seqs';
-      if(e.notes) h+=' <span style="color:#888;font-size:9px">('+esc(e.notes)+')</span>';
-      h+='</div>';
-    });
-    showModal(grp.name+' — '+taxon.replace(/_/g,' '),h);
+    let rawComp = ov.querySelector('#mCompanion').value.trim();
+    if(rawComp){
+      const lines = rawComp.split(/\n/).filter(l=>!l.startsWith('>'));
+      rawComp = lines.join('').replace(/[^A-Za-z]/g,'').toUpperCase();
+    }
+    if(!entry._edits) entry._edits = {};
+    entry._edits.copy_count = newCopies;
+    entry._edits.notes = newNotes;
+    entry._edits.companion = rawComp || '';
+    if(rawCons) entry._edits.consensus = rawCons;
+    entry.copy_count = newCopies;
+    entry.notes = newNotes;
+    entry.companion = rawComp || '';
+    if(rawCons) entry.seq = rawCons;
+    if(newCellStatus) entry.cell_status = newCellStatus;
+    else delete entry.cell_status;
+    _saveEditsToLocalStorage();
+    render();
   });
 }
 
-/* ──── Export ───────────────────────────────────────────────────────────── */
 function exportJSON(){
-  const blob=new Blob([JSON.stringify(DATA,null,2)],{type:'application/json'});
-  const a=document.createElement('a');
-  a.href=URL.createObjectURL(blob);
-  a.download=PARENT_SF+'_sub_subfamilies.json';
+  const out = JSON.parse(JSON.stringify(DATA));
+  out.entries.forEach(e=>{ delete e._edits; delete e.cell_status; });
+  const blob = new Blob([JSON.stringify(out,null,2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = DATA.parent + '_sub_subfamilies.json';
   a.click();
   URL.revokeObjectURL(a.href);
 }
 
-/* ──── Render ──────────────────────────────────────────────────────────── */
-function renderAll(){
-  renderGroupList();
-  renderTable();
-  // Update stats
-  const nAssigned=DATA.entries.filter(e=>e.group_id!==null).length;
-  document.getElementById('topStats').textContent=DATA.entries.length+' seqs · '+DATA.taxa_order.length+' taxa · '+DATA.groups.length+' groups';
-  document.getElementById('countInfo').textContent=nAssigned+'/'+DATA.entries.length+' assigned · '+DATA.groups.length+' groups';
-}
-
-function renderGroupList(){
-  const gl=document.getElementById('groupList');
-  let h='';
-  DATA.groups.forEach((grp,gi)=>{
-    const entries=DATA.entries.filter(e=>e.group_id===grp.id);
-    h+='<div class="grp-section">';
-    h+='<div class="grp-header" ondblclick="renameGroup(\''+esc(grp.id)+'\')">';
-    h+='<span class="grp-name" title="Double-click to rename">'+esc(grp.name)+'</span>';
-    h+='<span class="grp-count">('+entries.length+')</span>';
-    h+='<button onclick="event.stopPropagation();moveGroupUp(\''+esc(grp.id)+'\')" title="Move up">&uarr;</button>';
-    h+='<button onclick="event.stopPropagation();moveGroupDown(\''+esc(grp.id)+'\')" title="Move down">&darr;</button>';
-    h+='<button onclick="event.stopPropagation();renameGroup(\''+esc(grp.id)+'\')" title="Rename">✏</button>';
-    h+='<button onclick="event.stopPropagation();deleteGroup(\''+esc(grp.id)+'\')" title="Delete">&times;</button>';
-    h+='</div>';
-    if(entries.length>0){
-      h+='<div class="grp-body">';
-      entries.forEach(e=>{
-        h+='<div class="seq-item" onclick="showAssignModal(\''+esc(e.id)+'\')">';
-        h+='<span class="seq-id" title="'+esc(e.header)+'">'+esc(e.id)+'</span>';
-        h+='<span class="seq-count">'+e.copy_count+'</span>';
-        h+='</div>';
-      });
-      h+='</div>';
-    }
-    h+='</div>';
-  });
-
-  // Unassigned section
-  const unassigned=DATA.entries.filter(e=>e.group_id===null);
-  h+='<div class="grp-section unassigned-section">';
-  h+='<div class="grp-header"><span class="grp-name">Unassigned</span><span class="grp-count">('+unassigned.length+')</span></div>';
-  if(unassigned.length>0){
-    h+='<div class="grp-body">';
-    // Group unassigned by taxon
-    const byTaxon=new Map();
-    unassigned.forEach(e=>{
-      if(!byTaxon.has(e.taxon))byTaxon.set(e.taxon,[]);
-      byTaxon.get(e.taxon).push(e);
-    });
-    byTaxon.forEach((entries,taxon)=>{
-      h+='<div style="font-size:9px;color:#888;margin:4px 0 1px;font-weight:600">'+esc(taxon.replace(/_/g,' '))+' ('+entries.length+')</div>';
-      entries.forEach(e=>{
-        h+='<div class="seq-item" onclick="showAssignModal(\''+esc(e.id)+'\')">';
-        h+='<span class="seq-id" title="'+esc(e.header)+'">'+esc(e.id)+'</span>';
-        h+='<span class="seq-count">'+e.copy_count+'</span>';
-        h+='</div>';
-      });
-    });
-    h+='</div>';
-  }
-  h+='</div>';
-
-  gl.innerHTML=h;
-}
-
-function renderTable(){
-  const tw=document.getElementById('tableWrap');
-  if(DATA.groups.length===0){
-    tw.innerHTML='<div style="padding:20px;color:#888;text-align:center"><p style="font-size:14px;margin-bottom:8px">No groups defined yet.</p><p>Click <b>+ New Group</b> to create sub-subfamily groups, or <b>Auto-group by prefix</b> to create one group per species abbreviation.</p><p style="margin-top:8px">Then assign sequences to groups from the left panel.</p></div>';
-    return;
-  }
-
-  // Build matrix: taxon → {gid → [entries]}
-  const matrix=new Map();
-  DATA.taxa_order.forEach(t=>matrix.set(t,new Map()));
-  DATA.entries.forEach(e=>{
-    if(!matrix.has(e.taxon))return;
-    const row=matrix.get(e.taxon);
-    const key=e.group_id||'__unassigned';
-    if(!row.has(key))row.set(key,[]);
-    row.get(key).push(e);
-  });
-
-  let h='<table><thead><tr>';
-  h+='<th class="sticky-sp">Species</th>';
-  DATA.groups.forEach(g=>{
-    h+='<th title="'+esc(g.notes||g.name)+'" ondblclick="renameGroup(\''+esc(g.id)+'\')">'+esc(g.name)+'</th>';
-  });
-  h+='<th style="background:#e65100" title="Unassigned sequences">Unasgn</th>';
-  h+='</tr></thead><tbody>';
-
-  let colTotals={};
-  DATA.groups.forEach(g=>{colTotals[g.id]=0;});
-  let unTot=0;
-
-  DATA.taxa_order.forEach(taxon=>{
-    const row=matrix.get(taxon);
-    // Check if this taxon has any data
-    const hasAny=DATA.entries.some(e=>e.taxon===taxon);
-    if(!hasAny)return;
-
-    h+='<tr><td class="sticky-sp"><i>'+esc(taxon.replace(/_/g,' '))+'</i></td>';
-    DATA.groups.forEach(g=>{
-      const cellEntries=row.get(g.id)||[];
-      if(cellEntries.length>0){
-        const totalCopies=cellEntries.reduce((s,e)=>s+e.copy_count,0);
-        colTotals[g.id]+=totalCopies;
-        const label=cellEntries.length>1 ? fmt(totalCopies)+' ('+cellEntries.length+')' : fmt(totalCopies);
-        const tip=cellEntries.map(e=>e.id+': '+e.copy_count).join('\n');
-        h+='<td class="has-seq" title="'+esc(tip)+'" onclick="showCellDetail(\''+esc(taxon)+'\',\''+esc(g.id)+'\')">'+label+'</td>';
-      } else {
-        h+='<td class="empty-cell">·</td>';
-      }
-    });
-    // Unassigned column
-    const unEntries=row.get('__unassigned')||[];
-    if(unEntries.length>0){
-      unTot+=unEntries.reduce((s,e)=>s+e.copy_count,0);
-      h+='<td class="unassigned-cell" onclick="showUnassignedForTaxon(\''+esc(taxon)+'\')">'+unEntries.length+'</td>';
-    } else {
-      h+='<td class="empty-cell">·</td>';
-    }
-    h+='</tr>';
-  });
-
-  h+='</tbody><tfoot><tr><td class="sticky-sp"><b>Total</b></td>';
-  DATA.groups.forEach(g=>{
-    h+='<td style="text-align:right">'+fmt(colTotals[g.id])+'</td>';
-  });
-  h+='<td style="text-align:right;color:#e65100">'+fmt(unTot)+'</td>';
-  h+='</tr></tfoot></table>';
-
-  tw.innerHTML=h;
-}
-
-/* ──── Boot ─────────────────────────────────────────────────────────────── */
 init();
 </script>
 </body>
