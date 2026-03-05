@@ -515,15 +515,6 @@
       "group_id": "gX10"
     },
     {
-      "id": "Afe_consensus_72seqs",
-      "taxon": "Azemiops_feae",
-      "copy_count": 72,
-      "seq": "GGGAGGTGGCTCAGTGGTTAAGACGCTGAGTCTTAGACCGTTAAAGGTCTATAGCTCGGCAGTTTGAGACCCGAGTGCCGCGAGACGGAGTGAGCTCCCGTCACTTGTCCCAGCTCCTGCCAACCTAGCAGTTCGAAAGCATGCAAATGCAAGTAGATGAATAGGTACCACATATAAGCATGCGGGAAGGTAACAGCATTCCGTGTTTCGCCATATGCTCTGTGCTGCGGCGTGATGTCATGCTGGCCACATGACTGTGGAAACATCTCCGGACAATGCTGGCTCTTTGGCTTAAGAAACGGAGATGAGCACTGCCCCCTAAAGTCGGTCACGACTAGCGGGGTAAAACCCGCAGGGACACCTTTACCTTT",
-      "header": "Afe_consensus_72seqs Azemiops feae",
-      "notes": "consensus of 72 sequences",
-      "group_id": "consensus_72seqs"
-    },
-    {
       "id": "Agr_check1",
       "taxon": "Acrochordus_granulatus",
       "copy_count": 2892,
@@ -687,14 +678,14 @@
     }
   ],
   "taxa_order": [
-    "Lichanura_trivirgata",
-    "Vipera_latastei",
     "Acrochordus_granulatus",
+    "Lichanura_trivirgata",
     "Arizona_elegans",
     "Naja_naja",
+    "Indotyphlops_braminus",
     "Azemiops_feae",
     "Crotalus_horridus",
-    "Indotyphlops_braminus"
+    "Vipera_latastei"
   ],
   "group_order": [
     "g1",
@@ -712,7 +703,6 @@
     "gX8",
     "gX9",
     "gX10",
-    "consensus_72seqs",
     "check1",
     "check2",
     "check3",

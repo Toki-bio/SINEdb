@@ -41,6 +41,7 @@ table .sf-vert:hover{background:#15407a}
 .c-zero{background:#fff;color:#ddd}
 .c-trace{background:#ffecb3;color:#8d6e63}
 .c-na{background:#f0f0f0;color:#bbb;font-style:italic;text-align:center}
+.c-missing{background:repeating-linear-gradient(45deg,#f8f8f8,#f8f8f8 3px,#eaeaea 3px,#eaeaea 6px);color:#999;font-style:italic;text-align:center}
 table tfoot td{font-weight:700;background:#e8ecf0;border-top:2px solid #999}
 table tfoot .sticky-sp,table tfoot .sticky-tot{background:#e8ecf0}
 tr:hover td{background-color:rgba(232,240,254,.4)}
@@ -112,6 +113,8 @@ th.type-uncertain:hover{background:#616161 !important}
   <label><input type="checkbox" id="hideEmptyRows" onchange="render()"> Hide empty rows</label>
   <div class="sep"></div>
   <span class="status-legend"><span class="swatch sw-checked"></span>Checked <span class="swatch sw-working"></span>Working <span class="swatch sw-edited"></span>Edited</span>
+  <div class="sep"></div>
+  <span class="status-legend" style="gap:10px"><span style="background:#f0f0f0;color:#bbb;font-style:italic;padding:0 4px;font-size:10px;border:1px solid #ddd">—</span> not in species <span style="background:repeating-linear-gradient(45deg,#f8f8f8,#f8f8f8 3px,#eaeaea 3px,#eaeaea 6px);color:#999;font-style:italic;padding:0 4px;font-size:10px;border:1px solid #ddd">?</span> no data yet <span style="background:#fff;color:#ddd;padding:0 4px;font-size:10px;border:1px solid #ddd">0</span> verified absent</span>
   <div class="sep"></div>
   <span class="type-legend"><span class="tl-swatch tl-sine"></span>SINE <span class="tl-swatch tl-partner"></span>partner <span class="tl-swatch tl-line"></span>LINE <span class="tl-swatch tl-composite"></span>composite</span>
   <button class="export-btn" onclick="exportJSON()" title="Download sub-subfamily JSON with edits">Export JSON</button>
@@ -273,7 +276,7 @@ function _getCellEntry(colId, taxon){
 function _groupColTotal(grp){
   const ge = GROUP_ENTRIES[grp];
   if(!ge) return 0;
-  return Object.values(ge).reduce((s,e) => s + (e.copy_count || 0), 0);
+  return Object.values(ge).reduce((s,e) => s + (e.copy_count != null ? e.copy_count : 0), 0);
 }
 
 function _groupType(grp){
@@ -301,15 +304,17 @@ function render(){
     visTaxa.sort((a,b) => sortDir * a.localeCompare(b));
   } else if(sortCol === 'total'){
     visTaxa.sort((a,b) => {
-      const ta = TAXON_ENTRIES[a] ? Object.values(TAXON_ENTRIES[a]).reduce((s,e)=>s+(e.copy_count||0),0) : 0;
-      const tb = TAXON_ENTRIES[b] ? Object.values(TAXON_ENTRIES[b]).reduce((s,e)=>s+(e.copy_count||0),0) : 0;
+      const ta = TAXON_ENTRIES[a] ? Object.values(TAXON_ENTRIES[a]).reduce((s,e)=>s+(e.copy_count!=null?e.copy_count:0),0) : 0;
+      const tb = TAXON_ENTRIES[b] ? Object.values(TAXON_ENTRIES[b]).reduce((s,e)=>s+(e.copy_count!=null?e.copy_count:0),0) : 0;
       return sortDir * (ta - tb);
     });
   } else if(sortCol){
     visTaxa.sort((a,b) => {
       const ea = _getCellEntry(sortCol, a);
       const eb = _getCellEntry(sortCol, b);
-      return sortDir * ((ea?ea.copy_count:0) - (eb?eb.copy_count:0));
+      const va = ea && ea.copy_count != null ? ea.copy_count : -1;
+      const vb = eb && eb.copy_count != null ? eb.copy_count : -1;
+      return sortDir * (va - vb);
     });
   }
   // Column totals
@@ -318,14 +323,14 @@ function render(){
     if(GROUPED){
       colTotals[col] = _groupColTotal(col);
     } else {
-      colTotals[col] = (ENTRY_MAP[col] && ENTRY_MAP[col].copy_count) || 0;
+      colTotals[col] = (ENTRY_MAP[col] && ENTRY_MAP[col].copy_count != null) ? ENTRY_MAP[col].copy_count : 0;
     }
   });
   let grandTotal = 0;
   visTaxa.forEach(t => {
     visCols.forEach(col => {
       const e = _getCellEntry(col, t);
-      if(e) grandTotal += (e.copy_count || 0);
+      if(e && e.copy_count != null) grandTotal += e.copy_count;
     });
   });
   // Build table
@@ -353,7 +358,7 @@ function render(){
     let rowTotal = 0;
     visCols.forEach(col => {
       const e = _getCellEntry(col, taxon);
-      if(e) rowTotal += (e.copy_count || 0);
+      if(e && e.copy_count != null) rowTotal += e.copy_count;
     });
     h += '<tr data-taxon="'+esc(taxon)+'">';
     h += '<td class="sticky-sp"><i>'+esc(taxon.replace(/_/g,' '))+'</i></td>';
@@ -364,17 +369,22 @@ function render(){
         h += '<td class="c-na">—</td>';
         return;
       }
-      const v = entry.copy_count || 0;
+      const v = entry.copy_count;
+      const cStatus = entry.cell_status || '';
+      const csCls = cStatus==='checked'?' cell-checked' : cStatus==='working'?' cell-working' : '';
+      const editedCls = (entry._edits && Object.keys(entry._edits).length > 0) ? ' cell-edited' : '';
+      const entryId = entry.id;
+      if(v == null){
+        const tip = entryId + ' in ' + taxon.replace(/_/g,' ') + ': no data yet';
+        h += '<td class="c-missing'+csCls+editedCls+'" title="'+esc(tip)+'" onclick="showCellInfo(\''+esc(entryId)+'\')" oncontextmenu="cycleStatus(event,\''+esc(entryId)+'\')">&quest;</td>';
+        return;
+      }
       let cls;
       if(v > 10000) cls = 'c-high';
       else if(v > 1000) cls = 'c-med';
       else if(v > 10) cls = 'c-low';
       else if(v > 0) cls = 'c-trace';
       else cls = 'c-zero';
-      const cStatus = entry.cell_status || '';
-      const csCls = cStatus==='checked'?' cell-checked' : cStatus==='working'?' cell-working' : '';
-      const editedCls = (entry._edits && Object.keys(entry._edits).length > 0) ? ' cell-edited' : '';
-      const entryId = entry.id;
       const tip = entryId + ' in ' + taxon.replace(/_/g,' ') + ': ' + fmt(v) + ' copies';
       h += '<td class="'+cls+csCls+editedCls+'" title="'+esc(tip)+'" onclick="showCellInfo(\''+esc(entryId)+'\')" oncontextmenu="cycleStatus(event,\''+esc(entryId)+'\')">'+fmt(v)+'</td>';
     });
@@ -441,7 +451,7 @@ function _showCellInfoBody(entryId){
     const badgeCls = 'badge-' + etype;
     h += '<label>Type</label><div><span class="type-badge '+badgeCls+'">'+etype.toUpperCase()+'</span> <span style="font-size:10px;color:#666">This entry is not a SINE element</span></div>';
   }
-  h += '<label>Copy count</label><input id="mCopies" type="text" inputmode="numeric" pattern="[0-9]*" value="'+v+'">';
+  h += '<label>Copy count <span style="font-weight:400;color:#999">(leave empty = no data yet)</span></label><input id="mCopies" type="text" inputmode="numeric" pattern="[0-9]*" value="'+(v != null ? v : '')+'" placeholder="not analyzed">';
   h += '<label>Cell Status</label><select id="mCellStatus"><option value=""'+(curCellStatus===''?' selected':'')+'>— not reviewed —</option><option value="checked"'+(curCellStatus==='checked'?' selected':'')+'>✓ Checked</option><option value="working"'+(curCellStatus==='working'?' selected':'')+'>⚠ Working</option></select>';
   h += '<label>Notes</label><textarea id="mNotes">'+esc(curNotes)+'</textarea>';
   h += '<label>Consensus sequence</label>';
@@ -453,7 +463,8 @@ function _showCellInfoBody(entryId){
   h += '<div><b>Sequence length:</b> '+(entry.seq ? entry.seq.length : 0)+' bp</div>';
   h += '</div>';
   showModal('Edit: '+entryId+' × '+entry.taxon.replace(/_/g,' '), h, function(ov){
-    const newCopies = parseInt(ov.querySelector('#mCopies').value, 10) || 0;
+    const rawCopies = ov.querySelector('#mCopies').value.trim();
+    const newCopies = rawCopies === '' ? null : (parseInt(rawCopies, 10) || 0);
     const newNotes = ov.querySelector('#mNotes').value.trim();
     const newCellStatus = ov.querySelector('#mCellStatus').value;
     let rawCons = ov.querySelector('#mConsensus').value.trim();
