@@ -128,6 +128,8 @@ let sortCol = null, sortDir = 1;
 let COLUMNS = [];
 let ENTRY_MAP = {};
 let TAXON_ENTRIES = {};
+let GROUPED = false;
+let GROUP_ENTRIES = {};
 
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function fmt(n){return (n!=null&&n!=='')?Number(n).toLocaleString():'—';}
@@ -235,73 +237,134 @@ async function init(){
     return;
   }
   _loadEditsFromLocalStorage();
-  COLUMNS = DATA.entries.map(e => e.id);
   ENTRY_MAP = {};
   TAXON_ENTRIES = {};
+  GROUP_ENTRIES = {};
   DATA.entries.forEach(e=>{
     ENTRY_MAP[e.id] = e;
     if(!TAXON_ENTRIES[e.taxon]) TAXON_ENTRIES[e.taxon] = {};
     TAXON_ENTRIES[e.taxon][e.id] = e;
   });
+  // Detect grouped mode
+  GROUPED = !!(DATA.group_order && DATA.group_order.length > 0);
+  if(GROUPED){
+    COLUMNS = DATA.group_order.slice();
+    DATA.entries.forEach(e=>{
+      const g = e.group_id;
+      if(!g) return;
+      if(!GROUP_ENTRIES[g]) GROUP_ENTRIES[g] = {};
+      GROUP_ENTRIES[g][e.taxon] = e;
+    });
+  } else {
+    COLUMNS = DATA.entries.map(e => e.id);
+  }
   document.getElementById('pageTitle').textContent = DATA.parent + ' — Sub-subfamily Detail';
-  document.getElementById('pageDesc').innerHTML = DATA.taxa_order.length + ' species, ' + DATA.entries.length + ' consensus sequences. Click a cell to view/edit. Right-click to cycle status.';
-  document.getElementById('topStats').textContent = DATA.entries.length + ' sequences × ' + DATA.taxa_order.length + ' taxa';
+  const nCols = GROUPED ? DATA.group_order.length + ' groups' : DATA.entries.length + ' sequences';
+  document.getElementById('pageDesc').innerHTML = DATA.taxa_order.length + ' species, ' + nCols + '. Click a cell to view/edit. Right-click to cycle status.';
+  document.getElementById('topStats').textContent = (GROUPED ? DATA.group_order.length + ' groups' : DATA.entries.length + ' sequences') + ' × ' + DATA.taxa_order.length + ' taxa';
   render();
+}
+
+function _getCellEntry(colId, taxon){
+  if(GROUPED) return (GROUP_ENTRIES[colId] && GROUP_ENTRIES[colId][taxon]) || null;
+  return (TAXON_ENTRIES[taxon] && TAXON_ENTRIES[taxon][colId]) || null;
+}
+
+function _groupColTotal(grp){
+  const ge = GROUP_ENTRIES[grp];
+  if(!ge) return 0;
+  return Object.values(ge).reduce((s,e) => s + (e.copy_count || 0), 0);
+}
+
+function _groupType(grp){
+  const ge = GROUP_ENTRIES[grp];
+  if(!ge) return 'SINE';
+  const types = new Set(Object.values(ge).map(e => e.type || 'SINE'));
+  if(types.size === 1) return types.values().next().value;
+  return 'SINE';
 }
 
 function render(){
   const hideEmpty = document.getElementById('hideEmpty').checked;
   const hideEmptyRows = document.getElementById('hideEmptyRows').checked;
   let visCols = COLUMNS.slice();
-  if(hideEmpty) visCols = visCols.filter(id => ENTRY_MAP[id] && ENTRY_MAP[id].copy_count > 0);
+  if(hideEmpty){
+    if(GROUPED){
+      visCols = visCols.filter(grp => _groupColTotal(grp) > 0);
+    } else {
+      visCols = visCols.filter(id => ENTRY_MAP[id] && ENTRY_MAP[id].copy_count > 0);
+    }
+  }
   let visTaxa = DATA.taxa_order.slice();
   if(hideEmptyRows) visTaxa = visTaxa.filter(t => TAXON_ENTRIES[t] && Object.keys(TAXON_ENTRIES[t]).length > 0);
   if(sortCol === 'species'){
     visTaxa.sort((a,b) => sortDir * a.localeCompare(b));
   } else if(sortCol === 'total'){
     visTaxa.sort((a,b) => {
-      const ta = TAXON_ENTRIES[a] ? Object.values(TAXON_ENTRIES[a]).reduce((s,e)=>s+e.copy_count,0) : 0;
-      const tb = TAXON_ENTRIES[b] ? Object.values(TAXON_ENTRIES[b]).reduce((s,e)=>s+e.copy_count,0) : 0;
+      const ta = TAXON_ENTRIES[a] ? Object.values(TAXON_ENTRIES[a]).reduce((s,e)=>s+(e.copy_count||0),0) : 0;
+      const tb = TAXON_ENTRIES[b] ? Object.values(TAXON_ENTRIES[b]).reduce((s,e)=>s+(e.copy_count||0),0) : 0;
       return sortDir * (ta - tb);
     });
   } else if(sortCol){
     visTaxa.sort((a,b) => {
-      const ea = TAXON_ENTRIES[a] && TAXON_ENTRIES[a][sortCol];
-      const eb = TAXON_ENTRIES[b] && TAXON_ENTRIES[b][sortCol];
+      const ea = _getCellEntry(sortCol, a);
+      const eb = _getCellEntry(sortCol, b);
       return sortDir * ((ea?ea.copy_count:0) - (eb?eb.copy_count:0));
     });
   }
+  // Column totals
   const colTotals = {};
-  visCols.forEach(id => { colTotals[id] = ENTRY_MAP[id].copy_count || 0; });
+  visCols.forEach(col => {
+    if(GROUPED){
+      colTotals[col] = _groupColTotal(col);
+    } else {
+      colTotals[col] = (ENTRY_MAP[col] && ENTRY_MAP[col].copy_count) || 0;
+    }
+  });
   let grandTotal = 0;
   visTaxa.forEach(t => {
-    const te = TAXON_ENTRIES[t];
-    if(te) Object.values(te).forEach(e => { if(visCols.includes(e.id)) grandTotal += e.copy_count; });
+    visCols.forEach(col => {
+      const e = _getCellEntry(col, t);
+      if(e) grandTotal += (e.copy_count || 0);
+    });
   });
+  // Build table
   let h = '<table id="sumTable"><thead><tr>';
   h += '<th class="sticky-sp" onclick="doSort(\'species\')">Species ⇕</th>';
   h += '<th class="sticky-tot" onclick="doSort(\'total\')">Tot ⇕</th>';
-  visCols.forEach(id => {
-    const e = ENTRY_MAP[id];
-    const etype = e.type || 'SINE';
-    const typeCls = etype !== 'SINE' ? ' type-' + etype : '';
-    const typeLbl = etype !== 'SINE' ? ' [' + etype.toUpperCase() + ']' : '';
-    h += '<th class="sf-vert'+typeCls+'" onclick="doSort(\''+esc(id)+'\')"\ title="'+esc(id)+' ('+esc(e.taxon.replace(/_/g,' '))+', '+e.copy_count+' copies)'+typeLbl+'">'+esc(id)+'</th>';
+  visCols.forEach(col => {
+    if(GROUPED){
+      const gtype = _groupType(col);
+      const typeCls = gtype !== 'SINE' ? ' type-' + gtype : '';
+      const ge = GROUP_ENTRIES[col] || {};
+      const nSp = Object.keys(ge).length;
+      const tip = col + ' (' + nSp + ' species, total ' + fmt(colTotals[col]) + ')';
+      h += '<th class="sf-vert'+typeCls+'" onclick="doSort(\''+esc(col)+'\')" title="'+esc(tip)+'">'+esc(col)+'</th>';
+    } else {
+      const e = ENTRY_MAP[col];
+      const etype = e.type || 'SINE';
+      const typeCls = etype !== 'SINE' ? ' type-' + etype : '';
+      const typeLbl = etype !== 'SINE' ? ' [' + etype.toUpperCase() + ']' : '';
+      h += '<th class="sf-vert'+typeCls+'" onclick="doSort(\''+esc(col)+'\')" title="'+esc(col)+' ('+esc(e.taxon.replace(/_/g,' '))+', '+(e.copy_count||0)+' copies)'+typeLbl+'">'+esc(col)+'</th>';
+    }
   });
   h += '</tr></thead><tbody>';
   visTaxa.forEach(taxon => {
-    const te = TAXON_ENTRIES[taxon] || {};
-    const rowTotal = Object.values(te).reduce((s,e) => s + (visCols.includes(e.id) ? e.copy_count : 0), 0);
+    let rowTotal = 0;
+    visCols.forEach(col => {
+      const e = _getCellEntry(col, taxon);
+      if(e) rowTotal += (e.copy_count || 0);
+    });
     h += '<tr data-taxon="'+esc(taxon)+'">';
     h += '<td class="sticky-sp"><i>'+esc(taxon.replace(/_/g,' '))+'</i></td>';
     h += '<td class="sticky-tot">'+fmt(rowTotal)+'</td>';
-    visCols.forEach(id => {
-      const entry = te[id];
+    visCols.forEach(col => {
+      const entry = _getCellEntry(col, taxon);
       if(!entry){
         h += '<td class="c-na">—</td>';
         return;
       }
-      const v = entry.copy_count;
+      const v = entry.copy_count || 0;
       let cls;
       if(v > 10000) cls = 'c-high';
       else if(v > 1000) cls = 'c-med';
@@ -311,17 +374,18 @@ function render(){
       const cStatus = entry.cell_status || '';
       const csCls = cStatus==='checked'?' cell-checked' : cStatus==='working'?' cell-working' : '';
       const editedCls = (entry._edits && Object.keys(entry._edits).length > 0) ? ' cell-edited' : '';
-      const tip = id + ' in ' + taxon.replace(/_/g,' ') + ': ' + fmt(v) + ' copies';
-      h += '<td class="'+cls+csCls+editedCls+'" title="'+esc(tip)+'" onclick="showCellInfo(\''+esc(id)+'\')" oncontextmenu="cycleStatus(event,\''+esc(id)+'\')">'+fmt(v)+'</td>';
+      const entryId = entry.id;
+      const tip = entryId + ' in ' + taxon.replace(/_/g,' ') + ': ' + fmt(v) + ' copies';
+      h += '<td class="'+cls+csCls+editedCls+'" title="'+esc(tip)+'" onclick="showCellInfo(\''+esc(entryId)+'\')" oncontextmenu="cycleStatus(event,\''+esc(entryId)+'\')">'+fmt(v)+'</td>';
     });
     h += '</tr>';
   });
   h += '</tbody><tfoot>';
   h += '<tr><td class="sticky-sp"><strong>Total</strong></td><td class="sticky-tot">'+fmt(grandTotal)+'</td>';
-  visCols.forEach(id => { h += '<td style="text-align:right;font-weight:700">'+fmt(colTotals[id])+'</td>'; });
+  visCols.forEach(col => { h += '<td style="text-align:right;font-weight:700">'+fmt(colTotals[col])+'</td>'; });
   h += '</tr></tfoot></table>';
   document.getElementById('tableWrap').innerHTML = h;
-  document.getElementById('countInfo').textContent = visTaxa.length + ' taxa × ' + visCols.length + ' sequences';
+  document.getElementById('countInfo').textContent = visTaxa.length + ' taxa × ' + visCols.length + (GROUPED ? ' groups' : ' sequences');
 }
 
 function doSort(col){
