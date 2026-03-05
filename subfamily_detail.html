@@ -59,6 +59,26 @@ td.cell-edited::before{content:'';position:absolute;top:0;left:0;border-style:so
 .status-legend .sw-edited{border-color:#ff9800 transparent transparent transparent;border-width:8px 8px 0 0}
 .export-btn{font-size:10px;padding:1px 8px;cursor:pointer;border:1px solid #1a4d8c;background:#e3f2fd;border-radius:3px;color:#1a4d8c;font-weight:600}
 .export-btn:hover{background:#bbdefb}
+/* Type badges for non-SINE entries */
+th.type-partner{background:#2979ff !important}
+th.type-partner:hover{background:#2962ff !important}
+th.type-line{background:#e65100 !important}
+th.type-line:hover{background:#bf360c !important}
+th.type-composite{background:#7b1fa2 !important}
+th.type-composite:hover{background:#6a1b9a !important}
+th.type-uncertain{background:#757575 !important}
+th.type-uncertain:hover{background:#616161 !important}
+.type-badge{display:inline-block;font-size:8px;padding:0 3px;border-radius:2px;color:#fff;font-weight:700;vertical-align:middle;margin-left:3px;letter-spacing:.3px}
+.badge-partner{background:#2979ff}
+.badge-line{background:#e65100}
+.badge-composite{background:#7b1fa2}
+.badge-uncertain{background:#757575}
+.type-legend{font-size:10px;display:flex;gap:6px;align-items:center}
+.type-legend .tl-swatch{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:middle;margin-right:2px}
+.tl-sine{background:#1a4d8c}
+.tl-partner{background:#2979ff}
+.tl-line{background:#e65100}
+.tl-composite{background:#7b1fa2}
 .modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.35);z-index:100;display:flex;align-items:flex-start;justify-content:center;padding-top:40px}
 .modal{background:#fff;border:1px solid #666;box-shadow:0 4px 20px rgba(0,0,0,.3);max-width:700px;width:95%;max-height:85vh;overflow:auto;font-size:11px}
 .modal-title{background:#1a4d8c;color:#fff;padding:4px 8px;font-weight:700;font-size:12px;display:flex;justify-content:space-between;align-items:center}
@@ -92,6 +112,8 @@ td.cell-edited::before{content:'';position:absolute;top:0;left:0;border-style:so
   <label><input type="checkbox" id="hideEmptyRows" onchange="render()"> Hide empty rows</label>
   <div class="sep"></div>
   <span class="status-legend"><span class="swatch sw-checked"></span>Checked <span class="swatch sw-working"></span>Working <span class="swatch sw-edited"></span>Edited</span>
+  <div class="sep"></div>
+  <span class="type-legend"><span class="tl-swatch tl-sine"></span>SINE <span class="tl-swatch tl-partner"></span>partner <span class="tl-swatch tl-line"></span>LINE <span class="tl-swatch tl-composite"></span>composite</span>
   <button class="export-btn" onclick="exportJSON()" title="Download sub-subfamily JSON with edits">Export JSON</button>
   <button class="export-btn" onclick="clearLocalEdits()" title="Discard all browser-stored edits and reload" style="background:#fee;color:#c33;border-color:#c99">Clear local edits</button>
   <span id="countInfo" style="margin-left:auto;color:#666;font-size:11px"></span>
@@ -261,7 +283,10 @@ function render(){
   h += '<th class="sticky-tot" onclick="doSort(\'total\')">Tot ⇕</th>';
   visCols.forEach(id => {
     const e = ENTRY_MAP[id];
-    h += '<th class="sf-vert" onclick="doSort(\''+esc(id)+'\')" title="'+esc(id)+' ('+esc(e.taxon.replace(/_/g,' '))+', '+e.copy_count+' copies)">'+esc(id)+'</th>';
+    const etype = e.type || 'SINE';
+    const typeCls = etype !== 'SINE' ? ' type-' + etype : '';
+    const typeLbl = etype !== 'SINE' ? ' [' + etype.toUpperCase() + ']' : '';
+    h += '<th class="sf-vert'+typeCls+'" onclick="doSort(\''+esc(id)+'\')"\ title="'+esc(id)+' ('+esc(e.taxon.replace(/_/g,' '))+', '+e.copy_count+' copies)'+typeLbl+'">'+esc(id)+'</th>';
   });
   h += '</tr></thead><tbody>';
   visTaxa.forEach(taxon => {
@@ -347,6 +372,11 @@ function _showCellInfoBody(entryId){
   let h = '';
   h += '<label>Entry ID</label><input value="'+esc(entryId)+'" disabled style="background:#eee">';
   h += '<label>Taxon</label><input value="'+esc(entry.taxon.replace(/_/g,' '))+'" disabled style="background:#eee">';
+  const etype = entry.type || 'SINE';
+  if(etype !== 'SINE'){
+    const badgeCls = 'badge-' + etype;
+    h += '<label>Type</label><div><span class="type-badge '+badgeCls+'">'+etype.toUpperCase()+'</span> <span style="font-size:10px;color:#666">This entry is not a SINE element</span></div>';
+  }
   h += '<label>Copy count</label><input id="mCopies" type="text" inputmode="numeric" pattern="[0-9]*" value="'+v+'">';
   h += '<label>Cell Status</label><select id="mCellStatus"><option value=""'+(curCellStatus===''?' selected':'')+'>— not reviewed —</option><option value="checked"'+(curCellStatus==='checked'?' selected':'')+'>✓ Checked</option><option value="working"'+(curCellStatus==='working'?' selected':'')+'>⚠ Working</option></select>';
   h += '<label>Notes</label><textarea id="mNotes">'+esc(curNotes)+'</textarea>';
