@@ -71,6 +71,15 @@ td.cell-working{position:relative}
 td.cell-working::after{content:'';position:absolute;top:0;right:0;border-style:solid;border-width:0 8px 8px 0;border-color:transparent #e53935 transparent transparent;pointer-events:none}
 td.cell-edited{position:relative}
 td.cell-edited::before{content:'';position:absolute;top:0;left:0;border-style:solid;border-width:8px 8px 0 0;border-color:#ff9800 transparent transparent transparent;pointer-events:none}
+/* Assembly QC flags */
+tr.qc-warn .sticky-sp{background:#fff0f0 !important}
+tr.qc-warn .sticky-sp i::after{content:' ⚠';color:#e53935;font-style:normal;font-size:9px}
+tr.qc-caution .sticky-sp{background:#fffde7 !important}
+tr.qc-caution .sticky-sp i::after{content:' ◆';color:#f9a825;font-style:normal;font-size:8px}
+.qc-badge{display:inline-block;font-size:8px;padding:0 3px;border-radius:2px;margin-left:3px;vertical-align:middle;font-weight:700;font-style:normal}
+.qc-badge.qc-solid{background:#c8e6c9;color:#2e7d32}
+.qc-badge.qc-caution{background:#fff9c4;color:#f57f17}
+.qc-badge.qc-warn{background:#ffcdd2;color:#c62828}
 .status-legend{font-size:10px;display:flex;gap:8px;align-items:center}
 .status-legend .swatch{display:inline-block;width:0;height:0;border-style:solid;border-width:0 8px 8px 0;vertical-align:middle;margin-right:2px}
 .status-legend .sw-checked{border-color:transparent #1976d2 transparent transparent}
@@ -156,7 +165,9 @@ td.cell-edited::before{content:'';position:absolute;top:0;left:0;border-style:so
   <label>Min:</label>
   <input type="number" id="minCopies" value="0" min="0" style="width:50px" onchange="render()">
   <div class="sep"></div>
-  <span class="status-legend"><span class="swatch sw-checked"></span>Checked <span class="swatch sw-working"></span>Working <span class="swatch sw-edited"></span>Edited</span>
+  <label><input type="checkbox" id="hideQcWarn" onchange="render()"> Hide QC-warn</label>
+  <div class="sep"></div>
+  <span class="status-legend"><span class="swatch sw-checked"></span>Checked <span class="swatch sw-working"></span>Working <span class="swatch sw-edited"></span>Edited &nbsp;⚠WARN ◆CAUTION</span>
   <button class="export-btn" onclick="exportJSON()" title="Download unified_data.json with edits and status">Export JSON</button>
   <button class="export-btn" onclick="clearLocalEdits()" title="Discard all browser-stored edits and reload from JSON" style="background:#fee;color:#c33;border-color:#c99">Clear local edits</button>
   <span id="countInfo" style="margin-left:auto;color:#666;font-size:11px"></span>
@@ -424,6 +435,7 @@ function render(){
   const showSnakes = document.getElementById('showSnakes').checked;
   const showOutgroups = document.getElementById('showOutgroups').checked;
   const useFirm = document.getElementById('useFirm').checked;
+  const hideQcWarn = document.getElementById('hideQcWarn').checked;
 
   let species = DATA.species.filter(sp=>{
     if(clade && sp.clade!==clade) return false;
@@ -431,6 +443,7 @@ function render(){
     if(!showSnakes && sp.clade==='Serpentes') return false;
     if(!showOutgroups && sp.clade!=='Serpentes') return false;
     if(minC>0 && sp.total<minC) return false;
+    if(hideQcWarn && sp.assembly_qc==='WARN') return false;
     return true;
   });
 
@@ -500,7 +513,9 @@ function render(){
       h += '</tr>';
       lastGroup = grpKey;
     }
-    const rowCls = isSnake?'snake-row':'outgroup-row';
+    let rowCls = isSnake?'snake-row':'outgroup-row';
+    if(sp.assembly_qc==='WARN') rowCls+=' qc-warn';
+    else if(sp.assembly_qc==='CAUTION') rowCls+=' qc-caution';
     h += '<tr class="'+rowCls+'" data-taxon="'+esc(sp.taxon)+'">';
     h += '<td class="sticky-sp"><i>'+esc(sp.taxon.replace(/_/g,' '))+'</i>';
     h += '<br><span style="color:#888;font-size:9px">'+esc(sp.family)+'</span></td>';
@@ -608,6 +623,15 @@ function showSpeciesInfo(taxon){
   h += '<div class="detail-row"><b>Clade:</b> '+esc(sp.clade)+'</div>';
   h += '<div class="detail-row"><b>Total:</b> '+fmt(sp.total)+'</div>';
   h += '<div class="detail-row"><b>Searched:</b> '+esc(sp.searched_sets.join(', '))+'</div>';
+  if(sp.assembly_qc){
+    const qcCls = sp.assembly_qc==='WARN'?'qc-warn':sp.assembly_qc==='CAUTION'?'qc-caution':'qc-solid';
+    h += '<div class="detail-row"><b>Assembly QC:</b> <span class="qc-badge '+qcCls+'">'+esc(sp.assembly_qc)+'</span>';
+    if(sp.assembly_n50) h += ' &nbsp;N50: '+fmt(sp.assembly_n50);
+    if(sp.assembly_gap_pct!=null) h += ' &nbsp;Gap: '+sp.assembly_gap_pct.toFixed(1)+'%';
+    if(sp.assembly_edge_n_pct!=null) h += ' &nbsp;Edge-N: '+sp.assembly_edge_n_pct.toFixed(1)+'%';
+    if(sp.assembly_flags&&sp.assembly_flags.length) h += '<br><span style="font-size:9px;color:#888">Flags: '+esc(sp.assembly_flags.join(', '))+'</span>';
+    h += '</div>';
+  }
   h += '<hr style="margin:4px 0">';
   sorted.forEach(sf=>{
     const v = sp.counts[sf]||0;
