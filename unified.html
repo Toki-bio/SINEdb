@@ -71,11 +71,16 @@ td.cell-working{position:relative}
 td.cell-working::after{content:'';position:absolute;top:0;right:0;border-style:solid;border-width:0 8px 8px 0;border-color:transparent #e53935 transparent transparent;pointer-events:none}
 td.cell-edited{position:relative}
 td.cell-edited::before{content:'';position:absolute;top:0;left:0;border-style:solid;border-width:8px 8px 0 0;border-color:#ff9800 transparent transparent transparent;pointer-events:none}
-/* Assembly QC flags */
-tr.qc-warn .sticky-sp{background:#fff0f0 !important}
-tr.qc-warn .sticky-sp i::after{content:' ⚠';color:#e53935;font-style:normal;font-size:9px}
-tr.qc-caution .sticky-sp{background:#fffde7 !important}
-tr.qc-caution .sticky-sp i::after{content:' ◆';color:#f9a825;font-style:normal;font-size:8px}
+/* Assembly QC flags – species-name indicators (genome-level) */
+td.sp-qc-warn{background:#fff0f0 !important}
+td.sp-qc-warn i::after{content:' ⚠';color:#e53935;font-style:normal;font-size:9px}
+td.sp-qc-caution{background:#fffde7 !important}
+td.sp-qc-caution i::after{content:' ◆';color:#f9a825;font-style:normal;font-size:8px}
+/* Per-cell QC flags (assembly quality × copy count) */
+td.qc-warn-cell{position:relative}
+td.qc-warn-cell::after{content:'';position:absolute;bottom:0;left:0;border-style:solid;border-width:0 0 6px 6px;border-color:transparent transparent #e53935 transparent;pointer-events:none}
+td.qc-caution-cell{position:relative}
+td.qc-caution-cell::after{content:'';position:absolute;bottom:0;left:0;border-style:solid;border-width:0 0 6px 6px;border-color:transparent transparent #f9a825 transparent;pointer-events:none}
 .qc-badge{display:inline-block;font-size:8px;padding:0 3px;border-radius:2px;margin-left:3px;vertical-align:middle;font-weight:700;font-style:normal}
 .qc-badge.qc-solid{background:#c8e6c9;color:#2e7d32}
 .qc-badge.qc-caution{background:#fff9c4;color:#f57f17}
@@ -195,7 +200,23 @@ const CLADE_ORDER = ['Serpentes','Amphisbaenia','Anguimorpha','Dibamia','Gekkota
 
 const MSA_VIEWER = 'https://toki-bio.github.io/MSA-viewer/';
 const SINEDB_BASE = 'https://toki-bio.github.io/SINEdb/';
-const SUB_SF_AVAIL = new Set(['sq1_boa', 'sq1_boa_new']); // subfamilies with sub-subfamily detail pages
+const SUB_SF_AVAIL = new Set(['sq1_boa', 'sq1_boa_new', 'sq2_Eryx']); // subfamilies with sub-subfamily detail pages
+
+// Per-cell QC: combine genome assembly quality with per-subfamily copy count
+function cellQcClass(assemblyQc, copyCount){
+  if(!assemblyQc || assemblyQc==='SOLID') return '';
+  if(copyCount===null || copyCount===undefined) return ''; // not searched
+  if(assemblyQc==='WARN'){
+    if(copyCount<=10) return ' qc-warn-cell';
+    if(copyCount<=100) return ' qc-caution-cell';
+    return ''; // high count = reliable despite bad assembly
+  }
+  if(assemblyQc==='CAUTION'){
+    if(copyCount<=10) return ' qc-caution-cell';
+    return '';
+  }
+  return '';
+}
 
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function fmt(n){return (n!=null)?n.toLocaleString():'—';}
@@ -514,10 +535,9 @@ function render(){
       lastGroup = grpKey;
     }
     let rowCls = isSnake?'snake-row':'outgroup-row';
-    if(sp.assembly_qc==='WARN') rowCls+=' qc-warn';
-    else if(sp.assembly_qc==='CAUTION') rowCls+=' qc-caution';
     h += '<tr class="'+rowCls+'" data-taxon="'+esc(sp.taxon)+'">';
-    h += '<td class="sticky-sp"><i>'+esc(sp.taxon.replace(/_/g,' '))+'</i>';
+    let spQcCls = sp.assembly_qc==='WARN'?' sp-qc-warn':sp.assembly_qc==='CAUTION'?' sp-qc-caution':'';
+    h += '<td class="sticky-sp'+spQcCls+'"><i>'+esc(sp.taxon.replace(/_/g,' '))+'</i>';
     h += '<br><span style="color:#888;font-size:9px">'+esc(sp.family)+'</span></td>';
     h += '<td class="sticky-tot" onclick="showSpeciesInfo(\''+esc(sp.taxon)+'\')">'+fmt(sp.total)+'</td>';
 
@@ -543,8 +563,9 @@ function render(){
       const cStatus = (sp.cell_status&&sp.cell_status[sf])||'';
       const csCls = cStatus==='checked'?' cell-checked':cStatus==='working'?' cell-working':'';
       const editedCls = (sp._edits&&sp._edits[sf])?' cell-edited':'';
+      const qcCls = cellQcClass(sp.assembly_qc, raw);
       const tip = sf+' in '+sp.taxon.replace(/_/g,' ')+': '+fmt(v)+(useFirm?' firm':'')+' copies';
-      h += '<td class="'+cls+csCls+editedCls+'" title="'+esc(tip)+'" oncontextmenu="cycleStatus(event,\''+esc(sp.taxon)+'\',\''+esc(sf)+'\')"\ onclick="showCellInfo(\''+esc(sp.taxon)+'\',\''+esc(sf)+'\')">'+display+'</td>';
+      h += '<td class="'+cls+csCls+editedCls+qcCls+'" title="'+esc(tip)+'" oncontextmenu="cycleStatus(event,\''+esc(sp.taxon)+'\',\''+esc(sf)+'\')"\ onclick="showCellInfo(\''+esc(sp.taxon)+'\',\''+esc(sf)+'\')">'+display+'</td>';
     });
     h += '</tr>';
     prevClade = sp.clade;
