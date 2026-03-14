@@ -1,1131 +1,1129 @@
-﻿{
-    "parent":  "sq2_Eryx",
-    "description":  "sq2_Eryx (Squam2) — universal Eryx-based consensus. Per-species consensus sequences pending.",
-    "taxa_order":  [
-                       "Hemicordylus_capensis",
-                       "Euleptes_europaea",
-                       "Heteronotia_binoei",
-                       "Rhineura_floridana",
-                       "Hemidactylus_brookii",
-                       "Heteronotia_binoei_local",
-                       "Lepidodactylus_lugubris",
-                       "Christinus_marmoratus",
-                       "Lepidodactylus_listeri",
-                       "Gekko_gecko",
-                       "Gehyra_mutilata_hifi",
-                       "Gekko_japonicus_local",
-                       "Gekko_japonicus",
-                       "Teratoscincus_roborowskii",
-                       "Heloderma_charlesbogerti",
-                       "Shinisaurus_crocodilurus",
-                       "Thecadactylus_rapicauda_local",
-                       "Thecadactylus_rapicauda",
-                       "Asaccus_caudivolvulus",
-                       "Phelsuma_laticauda",
-                       "Phyllodactylus_wirshingi",
-                       "Tarentola_mauritanica",
-                       "Eublepharis_macularius",
-                       "Eublepharis_macularius_local",
-                       "Correlophus_ciliatus",
-                       "Correlophus_ciliatus_local",
-                       "Tarentola_annularis",
-                       "Correlophus_sarasinorum",
-                       "Anniella_stebbinsi",
-                       "Gehyra_mutilata",
-                       "Gehyra_mutilata_local",
-                       "Coleonyx_brevis",
-                       "Mediodactylus_kotschyi",
-                       "Aristelliger_praesignis",
-                       "Dibamus_smithi",
-                       "Lialis_burtonis",
-                       "Podarcis_muralis",
-                       "Podarcis_lilfordi",
-                       "Lacerta_agilis",
-                       "Paroedura_stumpffi",
-                       "Podarcis_cretensis",
-                       "Elgaria_multicarinata",
-                       "Lanthanotus_borneensis",
-                       "Pygopus_nigriceps",
-                       "Zootoca_vivipara",
-                       "Gallotia_galloti",
-                       "Marisora_unimarginata",
-                       "Coleonyx_elegans",
-                       "Xantusia_vigilis",
-                       "Hemidactylus_flaviviridis",
-                       "Sphaerodactylus_inigoi",
-                       "Paroedura_picta",
-                       "Tiliqua_scincoides",
-                       "Dopasia_gracilis",
-                       "Hemidactylus_frenatus",
-                       "Hemidactylus_mabouia",
-                       "Sphaerodactylus_townsendi",
-                       "Sphaerodactylus_glaucus",
-                       "Nephrurus_levis",
-                       "Hemidactylus_macropholis",
-                       "Latastia_doriai",
-                       "Varanus_acanthurus",
-                       "Spondylurus_nitidus",
-                       "Varanus_komodoensis",
-                       "Lerista_edwardsae",
-                       "Gonatodes_alexandermendesi",
-                       "Gambelia_wislizenii",
-                       "Cyclura_pinguis",
-                       "Brachylophus_fasciatus",
-                       "Iguana_iguana",
-                       "Basiliscus_vittatus",
-                       "Cryptoblepharus_egeriae",
-                       "Pogona_vitticeps",
-                       "Laudakia_wui",
-                       "Loxocemus_bicolor",
-                       "Salvator_merianae",
-                       "Liasis_olivaceus",
-                       "Python_bivittatus",
-                       "Morelia_viridis",
-                       "Lichanura_trivirgata",
-                       "Charina_bottae",
-                       "Candoia_aspera",
-                       "Indotyphlops_braminus",
-                       "Malayopython_reticulatus",
-                       "Xenopeltis_unicolor",
-                       "Eryx_tataricus",
-                       "Corallus_caninus",
-                       "Morelia_carinata",
-                       "Cylindrophis_ruffus",
-                       "Boa_constrictor",
-                       "Anilius_scytale",
-                       "Furcifer_pardalis",
-                       "Eryx_jayakari",
-                       "Chamaeleo_calyptratus",
-                       "Simalia_tracyae",
-                       "Simalia_boeleni",
-                       "Anolis_carolinensis",
-                       "Rhinophis_saffragamus",
-                       "Aspidoscelis_tigris",
-                       "Acrochordus_granulatus",
-                       "Anilios_bituberculatus",
-                       "Azemiops_feae",
-                       "Elaphe_schrenckii",
-                       "Myanophis_thanlyinensis",
-                       "Crotalus_horridus",
-                       "Arizona_elegans",
-                       "Vipera_latastei",
-                       "Achalinus_rufescens",
-                       "Hypsiscopus_plumbea",
-                       "Hydrophis_major",
-                       "Naja_naja",
-                       "Tretioscincus_oriximinensis"
-                   ],
-    "groups":  [
-
-               ],
-    "entries":  [
-                    {
-                        "id":  "Hemicordylus_capensis_sq2",
-                        "taxon":  "Hemicordylus_capensis",
-                        "copy_count":  207298,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Hemicordylus capensis sq2_Eryx (207298 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Euleptes_europaea_sq2",
-                        "taxon":  "Euleptes_europaea",
-                        "copy_count":  115131,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Euleptes europaea sq2_Eryx (115131 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Heteronotia_binoei_sq2",
-                        "taxon":  "Heteronotia_binoei",
-                        "copy_count":  111681,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Heteronotia binoei sq2_Eryx (111681 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Rhineura_floridana_sq2",
-                        "taxon":  "Rhineura_floridana",
-                        "copy_count":  110033,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Rhineura floridana sq2_Eryx (110033 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Hemidactylus_brookii_sq2",
-                        "taxon":  "Hemidactylus_brookii",
-                        "copy_count":  109446,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Hemidactylus brookii sq2_Eryx (109446 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Heteronotia_binoei_local_sq2",
-                        "taxon":  "Heteronotia_binoei_local",
-                        "copy_count":  109441,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Heteronotia binoei local sq2_Eryx (109441 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Lepidodactylus_lugubris_sq2",
-                        "taxon":  "Lepidodactylus_lugubris",
-                        "copy_count":  109035,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Lepidodactylus lugubris sq2_Eryx (109035 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Christinus_marmoratus_sq2",
-                        "taxon":  "Christinus_marmoratus",
-                        "copy_count":  93851,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Christinus marmoratus sq2_Eryx (93851 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Lepidodactylus_listeri_sq2",
-                        "taxon":  "Lepidodactylus_listeri",
-                        "copy_count":  84367,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Lepidodactylus listeri sq2_Eryx (84367 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Gekko_gecko_sq2",
-                        "taxon":  "Gekko_gecko",
-                        "copy_count":  84089,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Gekko gecko sq2_Eryx (84089 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Gehyra_mutilata_hifi_sq2",
-                        "taxon":  "Gehyra_mutilata_hifi",
-                        "copy_count":  75290,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Gehyra mutilata hifi sq2_Eryx (75290 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Gekko_japonicus_local_sq2",
-                        "taxon":  "Gekko_japonicus_local",
-                        "copy_count":  75274,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Gekko japonicus local sq2_Eryx (75274 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Gekko_japonicus_sq2",
-                        "taxon":  "Gekko_japonicus",
-                        "copy_count":  75274,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Gekko japonicus sq2_Eryx (75274 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Teratoscincus_roborowskii_sq2",
-                        "taxon":  "Teratoscincus_roborowskii",
-                        "copy_count":  69274,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Teratoscincus roborowskii sq2_Eryx (69274 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Heloderma_charlesbogerti_sq2",
-                        "taxon":  "Heloderma_charlesbogerti",
-                        "copy_count":  67876,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Heloderma charlesbogerti sq2_Eryx (67876 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Shinisaurus_crocodilurus_sq2",
-                        "taxon":  "Shinisaurus_crocodilurus",
-                        "copy_count":  67051,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Shinisaurus crocodilurus sq2_Eryx (67051 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Thecadactylus_rapicauda_local_sq2",
-                        "taxon":  "Thecadactylus_rapicauda_local",
-                        "copy_count":  62080,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Thecadactylus rapicauda local sq2_Eryx (62080 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Thecadactylus_rapicauda_sq2",
-                        "taxon":  "Thecadactylus_rapicauda",
-                        "copy_count":  62080,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Thecadactylus rapicauda sq2_Eryx (62080 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Asaccus_caudivolvulus_sq2",
-                        "taxon":  "Asaccus_caudivolvulus",
-                        "copy_count":  60322,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Asaccus caudivolvulus sq2_Eryx (60322 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Phelsuma_laticauda_sq2",
-                        "taxon":  "Phelsuma_laticauda",
-                        "copy_count":  57114,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Phelsuma laticauda sq2_Eryx (57114 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Phyllodactylus_wirshingi_sq2",
-                        "taxon":  "Phyllodactylus_wirshingi",
-                        "copy_count":  54115,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Phyllodactylus wirshingi sq2_Eryx (54115 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Tarentola_mauritanica_sq2",
-                        "taxon":  "Tarentola_mauritanica",
-                        "copy_count":  51148,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Tarentola mauritanica sq2_Eryx (51148 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Eublepharis_macularius_sq2",
-                        "taxon":  "Eublepharis_macularius",
-                        "copy_count":  50985,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Eublepharis macularius sq2_Eryx (50985 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Eublepharis_macularius_local_sq2",
-                        "taxon":  "Eublepharis_macularius_local",
-                        "copy_count":  50985,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Eublepharis macularius local sq2_Eryx (50985 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Correlophus_ciliatus_sq2",
-                        "taxon":  "Correlophus_ciliatus",
-                        "copy_count":  48685,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Correlophus ciliatus sq2_Eryx (48685 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Correlophus_ciliatus_local_sq2",
-                        "taxon":  "Correlophus_ciliatus_local",
-                        "copy_count":  48685,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Correlophus ciliatus local sq2_Eryx (48685 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Tarentola_annularis_sq2",
-                        "taxon":  "Tarentola_annularis",
-                        "copy_count":  48608,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Tarentola annularis sq2_Eryx (48608 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Correlophus_sarasinorum_sq2",
-                        "taxon":  "Correlophus_sarasinorum",
-                        "copy_count":  47713,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Correlophus sarasinorum sq2_Eryx (47713 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Anniella_stebbinsi_sq2",
-                        "taxon":  "Anniella_stebbinsi",
-                        "copy_count":  46532,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Anniella stebbinsi sq2_Eryx (46532 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Gehyra_mutilata_sq2",
-                        "taxon":  "Gehyra_mutilata",
-                        "copy_count":  46507,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Gehyra mutilata sq2_Eryx (46507 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Gehyra_mutilata_local_sq2",
-                        "taxon":  "Gehyra_mutilata_local",
-                        "copy_count":  46507,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Gehyra mutilata local sq2_Eryx (46507 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Coleonyx_brevis_sq2",
-                        "taxon":  "Coleonyx_brevis",
-                        "copy_count":  45250,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Coleonyx brevis sq2_Eryx (45250 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Mediodactylus_kotschyi_sq2",
-                        "taxon":  "Mediodactylus_kotschyi",
-                        "copy_count":  45098,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Mediodactylus kotschyi sq2_Eryx (45098 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Aristelliger_praesignis_sq2",
-                        "taxon":  "Aristelliger_praesignis",
-                        "copy_count":  44117,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Aristelliger praesignis sq2_Eryx (44117 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Dibamus_smithi_sq2",
-                        "taxon":  "Dibamus_smithi",
-                        "copy_count":  43773,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Dibamus smithi sq2_Eryx (43773 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Lialis_burtonis_sq2",
-                        "taxon":  "Lialis_burtonis",
-                        "copy_count":  42411,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Lialis burtonis sq2_Eryx (42411 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Podarcis_muralis_sq2",
-                        "taxon":  "Podarcis_muralis",
-                        "copy_count":  42374,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Podarcis muralis sq2_Eryx (42374 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Podarcis_lilfordi_sq2",
-                        "taxon":  "Podarcis_lilfordi",
-                        "copy_count":  41896,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Podarcis lilfordi sq2_Eryx (41896 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Lacerta_agilis_sq2",
-                        "taxon":  "Lacerta_agilis",
-                        "copy_count":  41757,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Lacerta agilis sq2_Eryx (41757 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Paroedura_stumpffi_sq2",
-                        "taxon":  "Paroedura_stumpffi",
-                        "copy_count":  41425,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Paroedura stumpffi sq2_Eryx (41425 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Podarcis_cretensis_sq2",
-                        "taxon":  "Podarcis_cretensis",
-                        "copy_count":  40497,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Podarcis cretensis sq2_Eryx (40497 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Elgaria_multicarinata_sq2",
-                        "taxon":  "Elgaria_multicarinata",
-                        "copy_count":  40244,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Elgaria multicarinata sq2_Eryx (40244 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Lanthanotus_borneensis_sq2",
-                        "taxon":  "Lanthanotus_borneensis",
-                        "copy_count":  39751,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Lanthanotus borneensis sq2_Eryx (39751 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Pygopus_nigriceps_sq2",
-                        "taxon":  "Pygopus_nigriceps",
-                        "copy_count":  39723,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Pygopus nigriceps sq2_Eryx (39723 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Zootoca_vivipara_sq2",
-                        "taxon":  "Zootoca_vivipara",
-                        "copy_count":  39363,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Zootoca vivipara sq2_Eryx (39363 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Gallotia_galloti_sq2",
-                        "taxon":  "Gallotia_galloti",
-                        "copy_count":  38284,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Gallotia galloti sq2_Eryx (38284 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Marisora_unimarginata_sq2",
-                        "taxon":  "Marisora_unimarginata",
-                        "copy_count":  35962,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Marisora unimarginata sq2_Eryx (35962 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Coleonyx_elegans_sq2",
-                        "taxon":  "Coleonyx_elegans",
-                        "copy_count":  35588,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Coleonyx elegans sq2_Eryx (35588 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Xantusia_vigilis_sq2",
-                        "taxon":  "Xantusia_vigilis",
-                        "copy_count":  35403,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Xantusia vigilis sq2_Eryx (35403 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Hemidactylus_flaviviridis_sq2",
-                        "taxon":  "Hemidactylus_flaviviridis",
-                        "copy_count":  35326,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Hemidactylus flaviviridis sq2_Eryx (35326 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Sphaerodactylus_inigoi_sq2",
-                        "taxon":  "Sphaerodactylus_inigoi",
-                        "copy_count":  34725,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Sphaerodactylus inigoi sq2_Eryx (34725 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Paroedura_picta_sq2",
-                        "taxon":  "Paroedura_picta",
-                        "copy_count":  34120,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Paroedura picta sq2_Eryx (34120 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Tiliqua_scincoides_sq2",
-                        "taxon":  "Tiliqua_scincoides",
-                        "copy_count":  33902,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Tiliqua scincoides sq2_Eryx (33902 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Dopasia_gracilis_sq2",
-                        "taxon":  "Dopasia_gracilis",
-                        "copy_count":  32952,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Dopasia gracilis sq2_Eryx (32952 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Hemidactylus_frenatus_sq2",
-                        "taxon":  "Hemidactylus_frenatus",
-                        "copy_count":  32079,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Hemidactylus frenatus sq2_Eryx (32079 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Hemidactylus_mabouia_sq2",
-                        "taxon":  "Hemidactylus_mabouia",
-                        "copy_count":  30200,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Hemidactylus mabouia sq2_Eryx (30200 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Sphaerodactylus_townsendi_sq2",
-                        "taxon":  "Sphaerodactylus_townsendi",
-                        "copy_count":  29542,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Sphaerodactylus townsendi sq2_Eryx (29542 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Sphaerodactylus_glaucus_sq2",
-                        "taxon":  "Sphaerodactylus_glaucus",
-                        "copy_count":  28743,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Sphaerodactylus glaucus sq2_Eryx (28743 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Nephrurus_levis_sq2",
-                        "taxon":  "Nephrurus_levis",
-                        "copy_count":  27351,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Nephrurus levis sq2_Eryx (27351 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Hemidactylus_macropholis_sq2",
-                        "taxon":  "Hemidactylus_macropholis",
-                        "copy_count":  26035,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Hemidactylus macropholis sq2_Eryx (26035 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Latastia_doriai_sq2",
-                        "taxon":  "Latastia_doriai",
-                        "copy_count":  24363,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Latastia doriai sq2_Eryx (24363 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Varanus_acanthurus_sq2",
-                        "taxon":  "Varanus_acanthurus",
-                        "copy_count":  22115,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Varanus acanthurus sq2_Eryx (22115 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Spondylurus_nitidus_sq2",
-                        "taxon":  "Spondylurus_nitidus",
-                        "copy_count":  21349,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Spondylurus nitidus sq2_Eryx (21349 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Varanus_komodoensis_sq2",
-                        "taxon":  "Varanus_komodoensis",
-                        "copy_count":  20828,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Varanus komodoensis sq2_Eryx (20828 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Lerista_edwardsae_sq2",
-                        "taxon":  "Lerista_edwardsae",
-                        "copy_count":  19913,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Lerista edwardsae sq2_Eryx (19913 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Gonatodes_alexandermendesi_sq2",
-                        "taxon":  "Gonatodes_alexandermendesi",
-                        "copy_count":  17319,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Gonatodes alexandermendesi sq2_Eryx (17319 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Gambelia_wislizenii_sq2",
-                        "taxon":  "Gambelia_wislizenii",
-                        "copy_count":  16683,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Gambelia wislizenii sq2_Eryx (16683 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Cyclura_pinguis_sq2",
-                        "taxon":  "Cyclura_pinguis",
-                        "copy_count":  16455,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Cyclura pinguis sq2_Eryx (16455 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Brachylophus_fasciatus_sq2",
-                        "taxon":  "Brachylophus_fasciatus",
-                        "copy_count":  16315,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Brachylophus fasciatus sq2_Eryx (16315 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Iguana_iguana_sq2",
-                        "taxon":  "Iguana_iguana",
-                        "copy_count":  15923,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Iguana iguana sq2_Eryx (15923 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Basiliscus_vittatus_sq2",
-                        "taxon":  "Basiliscus_vittatus",
-                        "copy_count":  14949,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Basiliscus vittatus sq2_Eryx (14949 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Cryptoblepharus_egeriae_sq2",
-                        "taxon":  "Cryptoblepharus_egeriae",
-                        "copy_count":  11594,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Cryptoblepharus egeriae sq2_Eryx (11594 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Pogona_vitticeps_sq2",
-                        "taxon":  "Pogona_vitticeps",
-                        "copy_count":  11497,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Pogona vitticeps sq2_Eryx (11497 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Laudakia_wui_sq2",
-                        "taxon":  "Laudakia_wui",
-                        "copy_count":  10832,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Laudakia wui sq2_Eryx (10832 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Loxocemus_bicolor_sq2",
-                        "taxon":  "Loxocemus_bicolor",
-                        "copy_count":  7408,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Loxocemus bicolor sq2_Eryx (7408 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Salvator_merianae_sq2",
-                        "taxon":  "Salvator_merianae",
-                        "copy_count":  7362,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Salvator merianae sq2_Eryx (7362 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Liasis_olivaceus_sq2",
-                        "taxon":  "Liasis_olivaceus",
-                        "copy_count":  7353,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Liasis olivaceus sq2_Eryx (7353 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Python_bivittatus_sq2",
-                        "taxon":  "Python_bivittatus",
-                        "copy_count":  7196,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Python bivittatus sq2_Eryx (7196 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Morelia_viridis_sq2",
-                        "taxon":  "Morelia_viridis",
-                        "copy_count":  7140,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Morelia viridis sq2_Eryx (7140 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Lichanura_trivirgata_sq2",
-                        "taxon":  "Lichanura_trivirgata",
-                        "copy_count":  7070,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Lichanura trivirgata sq2_Eryx (7070 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Charina_bottae_sq2",
-                        "taxon":  "Charina_bottae",
-                        "copy_count":  6991,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Charina bottae sq2_Eryx (6991 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Candoia_aspera_sq2",
-                        "taxon":  "Candoia_aspera",
-                        "copy_count":  6814,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Candoia aspera sq2_Eryx (6814 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Indotyphlops_braminus_sq2",
-                        "taxon":  "Indotyphlops_braminus",
-                        "copy_count":  6781,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Indotyphlops braminus sq2_Eryx (6781 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Malayopython_reticulatus_sq2",
-                        "taxon":  "Malayopython_reticulatus",
-                        "copy_count":  6685,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Malayopython reticulatus sq2_Eryx (6685 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Xenopeltis_unicolor_sq2",
-                        "taxon":  "Xenopeltis_unicolor",
-                        "copy_count":  6673,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Xenopeltis unicolor sq2_Eryx (6673 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Eryx_tataricus_sq2",
-                        "taxon":  "Eryx_tataricus",
-                        "copy_count":  6565,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Eryx tataricus sq2_Eryx (6565 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Corallus_caninus_sq2",
-                        "taxon":  "Corallus_caninus",
-                        "copy_count":  6483,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Corallus caninus sq2_Eryx (6483 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Morelia_carinata_sq2",
-                        "taxon":  "Morelia_carinata",
-                        "copy_count":  6284,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Morelia carinata sq2_Eryx (6284 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Cylindrophis_ruffus_sq2",
-                        "taxon":  "Cylindrophis_ruffus",
-                        "copy_count":  6280,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Cylindrophis ruffus sq2_Eryx (6280 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Boa_constrictor_sq2",
-                        "taxon":  "Boa_constrictor",
-                        "copy_count":  5822,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Boa constrictor sq2_Eryx (5822 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Anilius_scytale_sq2",
-                        "taxon":  "Anilius_scytale",
-                        "copy_count":  5471,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Anilius scytale sq2_Eryx (5471 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Furcifer_pardalis_sq2",
-                        "taxon":  "Furcifer_pardalis",
-                        "copy_count":  5445,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Furcifer pardalis sq2_Eryx (5445 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Eryx_jayakari_sq2",
-                        "taxon":  "Eryx_jayakari",
-                        "copy_count":  5437,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Eryx jayakari sq2_Eryx (5437 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Chamaeleo_calyptratus_sq2",
-                        "taxon":  "Chamaeleo_calyptratus",
-                        "copy_count":  4951,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Chamaeleo calyptratus sq2_Eryx (4951 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Simalia_tracyae_sq2",
-                        "taxon":  "Simalia_tracyae",
-                        "copy_count":  4870,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Simalia tracyae sq2_Eryx (4870 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Simalia_boeleni_sq2",
-                        "taxon":  "Simalia_boeleni",
-                        "copy_count":  4846,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Simalia boeleni sq2_Eryx (4846 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Anolis_carolinensis_sq2",
-                        "taxon":  "Anolis_carolinensis",
-                        "copy_count":  4666,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Anolis carolinensis sq2_Eryx (4666 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Rhinophis_saffragamus_sq2",
-                        "taxon":  "Rhinophis_saffragamus",
-                        "copy_count":  3700,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Rhinophis saffragamus sq2_Eryx (3700 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Aspidoscelis_tigris_sq2",
-                        "taxon":  "Aspidoscelis_tigris",
-                        "copy_count":  3655,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Aspidoscelis tigris sq2_Eryx (3655 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Acrochordus_granulatus_sq2",
-                        "taxon":  "Acrochordus_granulatus",
-                        "copy_count":  2951,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Acrochordus granulatus sq2_Eryx (2951 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Anilios_bituberculatus_sq2",
-                        "taxon":  "Anilios_bituberculatus",
-                        "copy_count":  2834,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Anilios bituberculatus sq2_Eryx (2834 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Azemiops_feae_sq2",
-                        "taxon":  "Azemiops_feae",
-                        "copy_count":  2573,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Azemiops feae sq2_Eryx (2573 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Elaphe_schrenckii_sq2",
-                        "taxon":  "Elaphe_schrenckii",
-                        "copy_count":  2232,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Elaphe schrenckii sq2_Eryx (2232 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Myanophis_thanlyinensis_sq2",
-                        "taxon":  "Myanophis_thanlyinensis",
-                        "copy_count":  2155,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Myanophis thanlyinensis sq2_Eryx (2155 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Crotalus_horridus_sq2",
-                        "taxon":  "Crotalus_horridus",
-                        "copy_count":  2150,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Crotalus horridus sq2_Eryx (2150 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Arizona_elegans_sq2",
-                        "taxon":  "Arizona_elegans",
-                        "copy_count":  2097,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Arizona elegans sq2_Eryx (2097 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Vipera_latastei_sq2",
-                        "taxon":  "Vipera_latastei",
-                        "copy_count":  2058,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Vipera latastei sq2_Eryx (2058 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Achalinus_rufescens_sq2",
-                        "taxon":  "Achalinus_rufescens",
-                        "copy_count":  1931,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Achalinus rufescens sq2_Eryx (1931 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Hypsiscopus_plumbea_sq2",
-                        "taxon":  "Hypsiscopus_plumbea",
-                        "copy_count":  1721,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Hypsiscopus plumbea sq2_Eryx (1721 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Hydrophis_major_sq2",
-                        "taxon":  "Hydrophis_major",
-                        "copy_count":  1660,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Hydrophis major sq2_Eryx (1660 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Naja_naja_sq2",
-                        "taxon":  "Naja_naja",
-                        "copy_count":  816,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Naja naja sq2_Eryx (816 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    },
-                    {
-                        "id":  "Tretioscincus_oriximinensis_sq2",
-                        "taxon":  "Tretioscincus_oriximinensis",
-                        "copy_count":  484,
-                        "seq":  "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
-                        "header":  "Tretioscincus oriximinensis sq2_Eryx (484 copies)",
-                        "notes":  "",
-                        "group_id":  null
-                    }
-                ]
+{
+    "parent": "sq2_Eryx",
+    "description": "sq2_Eryx (Squam2) \u2014 per-species consensus sequences from pairwise alignment (threshold 30, coverage 10).",
+    "taxa_order": [
+        "Hemicordylus_capensis",
+        "Euleptes_europaea",
+        "Heteronotia_binoei",
+        "Rhineura_floridana",
+        "Hemidactylus_brookii",
+        "Heteronotia_binoei_local",
+        "Lepidodactylus_lugubris",
+        "Christinus_marmoratus",
+        "Lepidodactylus_listeri",
+        "Gekko_gecko",
+        "Gehyra_mutilata_hifi",
+        "Gekko_japonicus_local",
+        "Gekko_japonicus",
+        "Teratoscincus_roborowskii",
+        "Heloderma_charlesbogerti",
+        "Shinisaurus_crocodilurus",
+        "Thecadactylus_rapicauda_local",
+        "Thecadactylus_rapicauda",
+        "Asaccus_caudivolvulus",
+        "Phelsuma_laticauda",
+        "Phyllodactylus_wirshingi",
+        "Tarentola_mauritanica",
+        "Eublepharis_macularius",
+        "Eublepharis_macularius_local",
+        "Correlophus_ciliatus",
+        "Correlophus_ciliatus_local",
+        "Tarentola_annularis",
+        "Correlophus_sarasinorum",
+        "Anniella_stebbinsi",
+        "Gehyra_mutilata",
+        "Gehyra_mutilata_local",
+        "Coleonyx_brevis",
+        "Mediodactylus_kotschyi",
+        "Aristelliger_praesignis",
+        "Dibamus_smithi",
+        "Lialis_burtonis",
+        "Podarcis_muralis",
+        "Podarcis_lilfordi",
+        "Lacerta_agilis",
+        "Paroedura_stumpffi",
+        "Podarcis_cretensis",
+        "Elgaria_multicarinata",
+        "Lanthanotus_borneensis",
+        "Pygopus_nigriceps",
+        "Zootoca_vivipara",
+        "Gallotia_galloti",
+        "Marisora_unimarginata",
+        "Coleonyx_elegans",
+        "Xantusia_vigilis",
+        "Hemidactylus_flaviviridis",
+        "Sphaerodactylus_inigoi",
+        "Paroedura_picta",
+        "Tiliqua_scincoides",
+        "Dopasia_gracilis",
+        "Hemidactylus_frenatus",
+        "Hemidactylus_mabouia",
+        "Sphaerodactylus_townsendi",
+        "Sphaerodactylus_glaucus",
+        "Nephrurus_levis",
+        "Hemidactylus_macropholis",
+        "Latastia_doriai",
+        "Varanus_acanthurus",
+        "Spondylurus_nitidus",
+        "Varanus_komodoensis",
+        "Lerista_edwardsae",
+        "Gonatodes_alexandermendesi",
+        "Gambelia_wislizenii",
+        "Cyclura_pinguis",
+        "Brachylophus_fasciatus",
+        "Iguana_iguana",
+        "Basiliscus_vittatus",
+        "Cryptoblepharus_egeriae",
+        "Pogona_vitticeps",
+        "Laudakia_wui",
+        "Loxocemus_bicolor",
+        "Salvator_merianae",
+        "Liasis_olivaceus",
+        "Python_bivittatus",
+        "Morelia_viridis",
+        "Lichanura_trivirgata",
+        "Charina_bottae",
+        "Candoia_aspera",
+        "Indotyphlops_braminus",
+        "Malayopython_reticulatus",
+        "Xenopeltis_unicolor",
+        "Eryx_tataricus",
+        "Corallus_caninus",
+        "Morelia_carinata",
+        "Cylindrophis_ruffus",
+        "Boa_constrictor",
+        "Anilius_scytale",
+        "Furcifer_pardalis",
+        "Eryx_jayakari",
+        "Chamaeleo_calyptratus",
+        "Simalia_tracyae",
+        "Simalia_boeleni",
+        "Anolis_carolinensis",
+        "Rhinophis_saffragamus",
+        "Aspidoscelis_tigris",
+        "Acrochordus_granulatus",
+        "Anilios_bituberculatus",
+        "Azemiops_feae",
+        "Elaphe_schrenckii",
+        "Myanophis_thanlyinensis",
+        "Crotalus_horridus",
+        "Arizona_elegans",
+        "Vipera_latastei",
+        "Achalinus_rufescens",
+        "Hypsiscopus_plumbea",
+        "Hydrophis_major",
+        "Naja_naja",
+        "Tretioscincus_oriximinensis"
+    ],
+    "groups": [],
+    "entries": [
+        {
+            "id": "Hemicordylus_capensis_sq2",
+            "taxon": "Hemicordylus_capensis",
+            "copy_count": 207298,
+            "seq": "CGGGGTAGAGCACTGCTTTGCATGCAGAAGGTTCCAAGTTCCCTCCCTGGCATCTCCAAGATAGGGCTGAGAGAGACTCCTGCCTGCAACCTTGGAGAAGCCGCTGCCAGTCTGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTATATGGCAGCTTCCTATGTT",
+            "header": "Hemicordylus capensis sq2_Eryx (207298 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Euleptes_europaea_sq2",
+            "taxon": "Euleptes_europaea",
+            "copy_count": 115131,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCCGGCATCTCCAGTTAAAGGGACTAGGCAAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCCGCTGCCAGTCTGAGTAGACAATACTGACTTTGATGGACCAAGGGTCTGATTCAGTATAAGGCAGCTTCATGTGTT",
+            "header": "Euleptes europaea sq2_Eryx (115131 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Heteronotia_binoei_sq2",
+            "taxon": "Heteronotia_binoei",
+            "copy_count": 111681,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGTAAGCAGAAGGTCCCAGGTTCAATCCCCGGCATCTCCAATTAAAAAGGGTCCAGGCAAATAGGTGTGAAAAACCTCAGCTTGAGACCCTGGAGAGCCGCTGCCAGTCTGAGTAGACAATACTGACTTTGATGGACCAAGGGTCTGATTCAGTATAAGGCAGCTTCATATGTT",
+            "header": "Heteronotia binoei sq2_Eryx (111681 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Rhineura_floridana_sq2",
+            "taxon": "Rhineura_floridana",
+            "copy_count": 110033,
+            "seq": "TAGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACCCCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATGTT",
+            "header": "Rhineura floridana sq2_Eryx (110033 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Hemidactylus_brookii_sq2",
+            "taxon": "Hemidactylus_brookii",
+            "copy_count": 109446,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCAAGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAAGGGTCCAGGCAAATAGGTGTGAAAAACCTCAGCTTGAGACCCTGGAGAGCCGCTGCCAGTCTGAGTAGACAATACTGACTTTGATGGACCAAGGGTCTGATTCAGTATAAGGCAGCTTCATATGTT",
+            "header": "Hemidactylus brookii sq2_Eryx (109446 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Heteronotia_binoei_local_sq2",
+            "taxon": "Heteronotia_binoei_local",
+            "copy_count": 109441,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCAAGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAATTAAAAAGGGTCCAGGCAAATAGGTGTGAAAAACCTCAGCTTGAGACCCTGGAGAGCCGCTGCCAGTCTGAGTAGACAATACTGACTTTGATGGACCAAGGGTCTGATTCAGTATAAGGCAGCTTCATATGTT",
+            "header": "Heteronotia binoei local sq2_Eryx (109441 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Lepidodactylus_lugubris_sq2",
+            "taxon": "Lepidodactylus_lugubris",
+            "copy_count": 109035,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Lepidodactylus lugubris sq2_Eryx (109035 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Christinus_marmoratus_sq2",
+            "taxon": "Christinus_marmoratus",
+            "copy_count": 93851,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCCGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCCGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Christinus marmoratus sq2_Eryx (93851 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Lepidodactylus_listeri_sq2",
+            "taxon": "Lepidodactylus_listeri",
+            "copy_count": 84367,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCCGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTTC",
+            "header": "Lepidodactylus listeri sq2_Eryx (84367 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Gekko_gecko_sq2",
+            "taxon": "Gekko_gecko",
+            "copy_count": 84089,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCCGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTTCAT",
+            "header": "Gekko gecko sq2_Eryx (84089 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Gehyra_mutilata_hifi_sq2",
+            "taxon": "Gehyra_mutilata_hifi",
+            "copy_count": 75290,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCCGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTTCAT",
+            "header": "Gehyra mutilata hifi sq2_Eryx (75290 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Gekko_japonicus_local_sq2",
+            "taxon": "Gekko_japonicus_local",
+            "copy_count": 75274,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCCGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTTC",
+            "header": "Gekko japonicus local sq2_Eryx (75274 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Gekko_japonicus_sq2",
+            "taxon": "Gekko_japonicus",
+            "copy_count": 75274,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCCGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTTC",
+            "header": "Gekko japonicus sq2_Eryx (75274 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Teratoscincus_roborowskii_sq2",
+            "taxon": "Teratoscincus_roborowskii",
+            "copy_count": 69274,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTTCA",
+            "header": "Teratoscincus roborowskii sq2_Eryx (69274 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Heloderma_charlesbogerti_sq2",
+            "taxon": "Heloderma_charlesbogerti",
+            "copy_count": 67876,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACTCCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTGACAATACTGGGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATGTT",
+            "header": "Heloderma charlesbogerti sq2_Eryx (67876 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Shinisaurus_crocodilurus_sq2",
+            "taxon": "Shinisaurus_crocodilurus",
+            "copy_count": 67051,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCCGGCATCTCCAGGTAGGGCTGGGAAAGACTCCTGCCTGAAACCCTGGAGAGCCGCTGCCAGTCAGTGTAGACAATACTGGGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATGTT",
+            "header": "Shinisaurus crocodilurus sq2_Eryx (67051 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Thecadactylus_rapicauda_local_sq2",
+            "taxon": "Thecadactylus_rapicauda_local",
+            "copy_count": 62080,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCCGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Thecadactylus rapicauda local sq2_Eryx (62080 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Thecadactylus_rapicauda_sq2",
+            "taxon": "Thecadactylus_rapicauda",
+            "copy_count": 62080,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCCGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Thecadactylus rapicauda sq2_Eryx (62080 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Asaccus_caudivolvulus_sq2",
+            "taxon": "Asaccus_caudivolvulus",
+            "copy_count": 60322,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Asaccus caudivolvulus sq2_Eryx (60322 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Phelsuma_laticauda_sq2",
+            "taxon": "Phelsuma_laticauda",
+            "copy_count": 57114,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCCGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Phelsuma laticauda sq2_Eryx (57114 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Phyllodactylus_wirshingi_sq2",
+            "taxon": "Phyllodactylus_wirshingi",
+            "copy_count": 54115,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Phyllodactylus wirshingi sq2_Eryx (54115 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Tarentola_mauritanica_sq2",
+            "taxon": "Tarentola_mauritanica",
+            "copy_count": 51148,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Tarentola mauritanica sq2_Eryx (51148 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Eublepharis_macularius_sq2",
+            "taxon": "Eublepharis_macularius",
+            "copy_count": 50985,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCAGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTTC",
+            "header": "Eublepharis macularius sq2_Eryx (50985 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Eublepharis_macularius_local_sq2",
+            "taxon": "Eublepharis_macularius_local",
+            "copy_count": 50985,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCAGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTTCAT",
+            "header": "Eublepharis macularius local sq2_Eryx (50985 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Correlophus_ciliatus_sq2",
+            "taxon": "Correlophus_ciliatus",
+            "copy_count": 48685,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCAGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Correlophus ciliatus sq2_Eryx (48685 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Correlophus_ciliatus_local_sq2",
+            "taxon": "Correlophus_ciliatus_local",
+            "copy_count": 48685,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Correlophus ciliatus local sq2_Eryx (48685 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Tarentola_annularis_sq2",
+            "taxon": "Tarentola_annularis",
+            "copy_count": 48608,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Tarentola annularis sq2_Eryx (48608 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Correlophus_sarasinorum_sq2",
+            "taxon": "Correlophus_sarasinorum",
+            "copy_count": 47713,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCAGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Correlophus sarasinorum sq2_Eryx (47713 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Anniella_stebbinsi_sq2",
+            "taxon": "Anniella_stebbinsi",
+            "copy_count": 46532,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTAGGAAAGAATCCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTCGACAATACTGGGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATGTT",
+            "header": "Anniella stebbinsi sq2_Eryx (46532 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Gehyra_mutilata_sq2",
+            "taxon": "Gehyra_mutilata",
+            "copy_count": 46507,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Gehyra mutilata sq2_Eryx (46507 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Gehyra_mutilata_local_sq2",
+            "taxon": "Gehyra_mutilata_local",
+            "copy_count": 46507,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCCGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Gehyra mutilata local sq2_Eryx (46507 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Coleonyx_brevis_sq2",
+            "taxon": "Coleonyx_brevis",
+            "copy_count": 45250,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCAGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTTT",
+            "header": "Coleonyx brevis sq2_Eryx (45250 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Mediodactylus_kotschyi_sq2",
+            "taxon": "Mediodactylus_kotschyi",
+            "copy_count": 45098,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTTCAT",
+            "header": "Mediodactylus kotschyi sq2_Eryx (45098 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Aristelliger_praesignis_sq2",
+            "taxon": "Aristelliger_praesignis",
+            "copy_count": 44117,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Aristelliger praesignis sq2_Eryx (44117 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Dibamus_smithi_sq2",
+            "taxon": "Dibamus_smithi",
+            "copy_count": 43773,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAGGTTCTCAGGTGGAAGGTGATGTGAAAGACCTTAGCCTGAGACCCTGGAGAGCTGCTGCCAGTCAGAGTAGACAATACTGACCTAGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTTCTAT",
+            "header": "Dibamus smithi sq2_Eryx (43773 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Lialis_burtonis_sq2",
+            "taxon": "Lialis_burtonis",
+            "copy_count": 42411,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCAGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Lialis burtonis sq2_Eryx (42411 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Podarcis_muralis_sq2",
+            "taxon": "Podarcis_muralis",
+            "copy_count": 42374,
+            "seq": "TAGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACCCCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATGTT",
+            "header": "Podarcis muralis sq2_Eryx (42374 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Podarcis_lilfordi_sq2",
+            "taxon": "Podarcis_lilfordi",
+            "copy_count": 41896,
+            "seq": "TAGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACCCCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATGT",
+            "header": "Podarcis lilfordi sq2_Eryx (41896 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Lacerta_agilis_sq2",
+            "taxon": "Lacerta_agilis",
+            "copy_count": 41757,
+            "seq": "TAGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACCCCTGCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATGT",
+            "header": "Lacerta agilis sq2_Eryx (41757 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Paroedura_stumpffi_sq2",
+            "taxon": "Paroedura_stumpffi",
+            "copy_count": 41425,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGACAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTTC",
+            "header": "Paroedura stumpffi sq2_Eryx (41425 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Podarcis_cretensis_sq2",
+            "taxon": "Podarcis_cretensis",
+            "copy_count": 40497,
+            "seq": "TAGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACCCCTGTCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATGTT",
+            "header": "Podarcis cretensis sq2_Eryx (40497 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Elgaria_multicarinata_sq2",
+            "taxon": "Elgaria_multicarinata",
+            "copy_count": 40244,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAAATCCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTCGACAATACTGGGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATGTT",
+            "header": "Elgaria multicarinata sq2_Eryx (40244 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Lanthanotus_borneensis_sq2",
+            "taxon": "Lanthanotus_borneensis",
+            "copy_count": 39751,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACTCCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGGGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATGTT",
+            "header": "Lanthanotus borneensis sq2_Eryx (39751 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Pygopus_nigriceps_sq2",
+            "taxon": "Pygopus_nigriceps",
+            "copy_count": 39723,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Pygopus nigriceps sq2_Eryx (39723 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Zootoca_vivipara_sq2",
+            "taxon": "Zootoca_vivipara",
+            "copy_count": 39363,
+            "seq": "TAGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACCCCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATGT",
+            "header": "Zootoca vivipara sq2_Eryx (39363 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Gallotia_galloti_sq2",
+            "taxon": "Gallotia_galloti",
+            "copy_count": 38284,
+            "seq": "TAGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACCCCTGTCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATGTT",
+            "header": "Gallotia galloti sq2_Eryx (38284 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Marisora_unimarginata_sq2",
+            "taxon": "Marisora_unimarginata",
+            "copy_count": 35962,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACCCCTGTCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTAT",
+            "header": "Marisora unimarginata sq2_Eryx (35962 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Coleonyx_elegans_sq2",
+            "taxon": "Coleonyx_elegans",
+            "copy_count": 35588,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCAGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Coleonyx elegans sq2_Eryx (35588 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Xantusia_vigilis_sq2",
+            "taxon": "Xantusia_vigilis",
+            "copy_count": 35403,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACCCCTGTCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATGT",
+            "header": "Xantusia vigilis sq2_Eryx (35403 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Hemidactylus_flaviviridis_sq2",
+            "taxon": "Hemidactylus_flaviviridis",
+            "copy_count": 35326,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTTCA",
+            "header": "Hemidactylus flaviviridis sq2_Eryx (35326 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Sphaerodactylus_inigoi_sq2",
+            "taxon": "Sphaerodactylus_inigoi",
+            "copy_count": 34725,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCAGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Sphaerodactylus inigoi sq2_Eryx (34725 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Paroedura_picta_sq2",
+            "taxon": "Paroedura_picta",
+            "copy_count": 34120,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGACCAGGAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Paroedura picta sq2_Eryx (34120 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Tiliqua_scincoides_sq2",
+            "taxon": "Tiliqua_scincoides",
+            "copy_count": 33902,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACCCCTGTCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTAT",
+            "header": "Tiliqua scincoides sq2_Eryx (33902 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Dopasia_gracilis_sq2",
+            "taxon": "Dopasia_gracilis",
+            "copy_count": 32952,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACTCCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTGACAATACTGGGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATGTT",
+            "header": "Dopasia gracilis sq2_Eryx (32952 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Hemidactylus_frenatus_sq2",
+            "taxon": "Hemidactylus_frenatus",
+            "copy_count": 32079,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTGGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTTCAT",
+            "header": "Hemidactylus frenatus sq2_Eryx (32079 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Hemidactylus_mabouia_sq2",
+            "taxon": "Hemidactylus_mabouia",
+            "copy_count": 30200,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTTA",
+            "header": "Hemidactylus mabouia sq2_Eryx (30200 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Sphaerodactylus_townsendi_sq2",
+            "taxon": "Sphaerodactylus_townsendi",
+            "copy_count": 29542,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCAGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Sphaerodactylus townsendi sq2_Eryx (29542 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Sphaerodactylus_glaucus_sq2",
+            "taxon": "Sphaerodactylus_glaucus",
+            "copy_count": 28743,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Sphaerodactylus glaucus sq2_Eryx (28743 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Nephrurus_levis_sq2",
+            "taxon": "Nephrurus_levis",
+            "copy_count": 27351,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Nephrurus levis sq2_Eryx (27351 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Hemidactylus_macropholis_sq2",
+            "taxon": "Hemidactylus_macropholis",
+            "copy_count": 26035,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCTGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTTC",
+            "header": "Hemidactylus macropholis sq2_Eryx (26035 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Latastia_doriai_sq2",
+            "taxon": "Latastia_doriai",
+            "copy_count": 24363,
+            "seq": "TAGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACCCCTGTCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATGT",
+            "header": "Latastia doriai sq2_Eryx (24363 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Varanus_acanthurus_sq2",
+            "taxon": "Varanus_acanthurus",
+            "copy_count": 22115,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACTCCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTGACAATACTGGGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTAT",
+            "header": "Varanus acanthurus sq2_Eryx (22115 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Spondylurus_nitidus_sq2",
+            "taxon": "Spondylurus_nitidus",
+            "copy_count": 21349,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACCCCTGTCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTAT",
+            "header": "Spondylurus nitidus sq2_Eryx (21349 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Varanus_komodoensis_sq2",
+            "taxon": "Varanus_komodoensis",
+            "copy_count": 20828,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGAAAAACTCCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTTGACAATACTGGGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATT",
+            "header": "Varanus komodoensis sq2_Eryx (20828 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Lerista_edwardsae_sq2",
+            "taxon": "Lerista_edwardsae",
+            "copy_count": 19913,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACCCCTGTCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTAT",
+            "header": "Lerista edwardsae sq2_Eryx (19913 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Gonatodes_alexandermendesi_sq2",
+            "taxon": "Gonatodes_alexandermendesi",
+            "copy_count": 17319,
+            "seq": "TGGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGTTAAAAGGATCAGGTAGTAGGTGATGTGAAAGACCTCTGCCTGAGACCCTGGAGAGCTGCTGCCAGTCAGAGTAGACAATACTGACCTTGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTT",
+            "header": "Gonatodes alexandermendesi sq2_Eryx (17319 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Gambelia_wislizenii_sq2",
+            "taxon": "Gambelia_wislizenii",
+            "copy_count": 16683,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACTCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTTAGTATAAGGCAGCTTCCTATT",
+            "header": "Gambelia wislizenii sq2_Eryx (16683 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Cyclura_pinguis_sq2",
+            "taxon": "Cyclura_pinguis",
+            "copy_count": 16455,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACTCCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATT",
+            "header": "Cyclura pinguis sq2_Eryx (16455 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Brachylophus_fasciatus_sq2",
+            "taxon": "Brachylophus_fasciatus",
+            "copy_count": 16315,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACTCCTGTCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTTAGTATAAGGCAGCTTCCTATGT",
+            "header": "Brachylophus fasciatus sq2_Eryx (16315 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Iguana_iguana_sq2",
+            "taxon": "Iguana_iguana",
+            "copy_count": 15923,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACTCCTGTCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTTAGTATAAGGCAGCTTCCTATT",
+            "header": "Iguana iguana sq2_Eryx (15923 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Basiliscus_vittatus_sq2",
+            "taxon": "Basiliscus_vittatus",
+            "copy_count": 14949,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACTCCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATT",
+            "header": "Basiliscus vittatus sq2_Eryx (14949 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Cryptoblepharus_egeriae_sq2",
+            "taxon": "Cryptoblepharus_egeriae",
+            "copy_count": 11594,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACCCTGTCTGAAACCCTGGAGAGCTACTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCTAT",
+            "header": "Cryptoblepharus egeriae sq2_Eryx (11594 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Pogona_vitticeps_sq2",
+            "taxon": "Pogona_vitticeps",
+            "copy_count": 11497,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGAATCCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTGACAATACTGGGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATT",
+            "header": "Pogona vitticeps sq2_Eryx (11497 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Laudakia_wui_sq2",
+            "taxon": "Laudakia_wui",
+            "copy_count": 10832,
+            "seq": "TAGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGAATCCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGGGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATT",
+            "header": "Laudakia wui sq2_Eryx (10832 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Loxocemus_bicolor_sq2",
+            "taxon": "Loxocemus_bicolor",
+            "copy_count": 7408,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Loxocemus bicolor sq2_Eryx (7408 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Salvator_merianae_sq2",
+            "taxon": "Salvator_merianae",
+            "copy_count": 7362,
+            "seq": "TAGCTCAGTGGTAGAGCATCTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAACTCCTGTCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGATTCAGTATAAGGCAGCTTCCTAT",
+            "header": "Salvator merianae sq2_Eryx (7362 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Liasis_olivaceus_sq2",
+            "taxon": "Liasis_olivaceus",
+            "copy_count": 7353,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Liasis olivaceus sq2_Eryx (7353 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Python_bivittatus_sq2",
+            "taxon": "Python_bivittatus",
+            "copy_count": 7196,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Python bivittatus sq2_Eryx (7196 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Morelia_viridis_sq2",
+            "taxon": "Morelia_viridis",
+            "copy_count": 7140,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Morelia viridis sq2_Eryx (7140 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Lichanura_trivirgata_sq2",
+            "taxon": "Lichanura_trivirgata",
+            "copy_count": 7070,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Lichanura trivirgata sq2_Eryx (7070 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Charina_bottae_sq2",
+            "taxon": "Charina_bottae",
+            "copy_count": 6991,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Charina bottae sq2_Eryx (6991 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Candoia_aspera_sq2",
+            "taxon": "Candoia_aspera",
+            "copy_count": 6814,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Candoia aspera sq2_Eryx (6814 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Indotyphlops_braminus_sq2",
+            "taxon": "Indotyphlops_braminus",
+            "copy_count": 6781,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Indotyphlops braminus sq2_Eryx (6781 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Malayopython_reticulatus_sq2",
+            "taxon": "Malayopython_reticulatus",
+            "copy_count": 6685,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Malayopython reticulatus sq2_Eryx (6685 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Xenopeltis_unicolor_sq2",
+            "taxon": "Xenopeltis_unicolor",
+            "copy_count": 6673,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Xenopeltis unicolor sq2_Eryx (6673 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Eryx_tataricus_sq2",
+            "taxon": "Eryx_tataricus",
+            "copy_count": 6565,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Eryx tataricus sq2_Eryx (6565 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Corallus_caninus_sq2",
+            "taxon": "Corallus_caninus",
+            "copy_count": 6483,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Corallus caninus sq2_Eryx (6483 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Morelia_carinata_sq2",
+            "taxon": "Morelia_carinata",
+            "copy_count": 6284,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Morelia carinata sq2_Eryx (6284 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Cylindrophis_ruffus_sq2",
+            "taxon": "Cylindrophis_ruffus",
+            "copy_count": 6280,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Cylindrophis ruffus sq2_Eryx (6280 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Boa_constrictor_sq2",
+            "taxon": "Boa_constrictor",
+            "copy_count": 5822,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Boa constrictor sq2_Eryx (5822 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Anilius_scytale_sq2",
+            "taxon": "Anilius_scytale",
+            "copy_count": 5471,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Anilius scytale sq2_Eryx (5471 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Furcifer_pardalis_sq2",
+            "taxon": "Furcifer_pardalis",
+            "copy_count": 5445,
+            "seq": "AGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTAGGAAAGAATCCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTTGACAATACTGGCTAGATGGACCAATGGTCTGACTCAGTATAAGGCAGCTTCCTATT",
+            "header": "Furcifer pardalis sq2_Eryx (5445 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Eryx_jayakari_sq2",
+            "taxon": "Eryx_jayakari",
+            "copy_count": 5437,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Eryx jayakari sq2_Eryx (5437 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Chamaeleo_calyptratus_sq2",
+            "taxon": "Chamaeleo_calyptratus",
+            "copy_count": 4951,
+            "seq": "AGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTAGGAAAGAATCCTGCCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTTGACAATACTGAGCTAGATGGACCAATGGTCTGACTTAGTATAAGGCAGCTTCCTAT",
+            "header": "Chamaeleo calyptratus sq2_Eryx (4951 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Simalia_tracyae_sq2",
+            "taxon": "Simalia_tracyae",
+            "copy_count": 4870,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Simalia tracyae sq2_Eryx (4870 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Simalia_boeleni_sq2",
+            "taxon": "Simalia_boeleni",
+            "copy_count": 4846,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Simalia boeleni sq2_Eryx (4846 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Anolis_carolinensis_sq2",
+            "taxon": "Anolis_carolinensis",
+            "copy_count": 4666,
+            "seq": "AGCTCAGTGGTAGAGCACATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACTCTGTCTGAAACCCTGGAGAGCTACTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGATTAGTATAAGGCAGCTTCCTAT",
+            "header": "Anolis carolinensis sq2_Eryx (4666 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Rhinophis_saffragamus_sq2",
+            "taxon": "Rhinophis_saffragamus",
+            "copy_count": 3700,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Rhinophis saffragamus sq2_Eryx (3700 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Aspidoscelis_tigris_sq2",
+            "taxon": "Aspidoscelis_tigris",
+            "copy_count": 3655,
+            "seq": "AGCTCAGTGGTAGAGCACTGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAGGGCTGGGAAAGACTCCTGTCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGATTTAGTATAAGGCAGCTTTCTAT",
+            "header": "Aspidoscelis tigris sq2_Eryx (3655 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Acrochordus_granulatus_sq2",
+            "taxon": "Acrochordus_granulatus",
+            "copy_count": 2951,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Acrochordus granulatus sq2_Eryx (2951 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Anilios_bituberculatus_sq2",
+            "taxon": "Anilios_bituberculatus",
+            "copy_count": 2834,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Anilios bituberculatus sq2_Eryx (2834 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Azemiops_feae_sq2",
+            "taxon": "Azemiops_feae",
+            "copy_count": 2573,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Azemiops feae sq2_Eryx (2573 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Elaphe_schrenckii_sq2",
+            "taxon": "Elaphe_schrenckii",
+            "copy_count": 2232,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Elaphe schrenckii sq2_Eryx (2232 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Myanophis_thanlyinensis_sq2",
+            "taxon": "Myanophis_thanlyinensis",
+            "copy_count": 2155,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Myanophis thanlyinensis sq2_Eryx (2155 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Crotalus_horridus_sq2",
+            "taxon": "Crotalus_horridus",
+            "copy_count": 2150,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Crotalus horridus sq2_Eryx (2150 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Arizona_elegans_sq2",
+            "taxon": "Arizona_elegans",
+            "copy_count": 2097,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Arizona elegans sq2_Eryx (2097 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Vipera_latastei_sq2",
+            "taxon": "Vipera_latastei",
+            "copy_count": 2058,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Vipera latastei sq2_Eryx (2058 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Achalinus_rufescens_sq2",
+            "taxon": "Achalinus_rufescens",
+            "copy_count": 1931,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Achalinus rufescens sq2_Eryx (1931 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Hypsiscopus_plumbea_sq2",
+            "taxon": "Hypsiscopus_plumbea",
+            "copy_count": 1721,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Hypsiscopus plumbea sq2_Eryx (1721 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Hydrophis_major_sq2",
+            "taxon": "Hydrophis_major",
+            "copy_count": 1660,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Hydrophis major sq2_Eryx (1660 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Naja_naja_sq2",
+            "taxon": "Naja_naja",
+            "copy_count": 816,
+            "seq": "TATTTATTATAATTGTATAANTTTGAAAGGGACGCGGTGGCGCAGCGGCTTAATGACGCTGGAAGTTGCCGGCCAGAAATGGTCGACACTTCAGCGGTTCGAGCCCAAGCTCCGCGCGGCGGGGTGAGCTCCCGTCTTGCGCCCTCAGCTCCTGCCCACCTAGCAGCTCGAAAGCNTAAGCGAGTAGATAAATAGGTACTCTCACCCCGGTGGGAGGAAAAACGCTGGCGGCGCCTTGCACGGGAAAACGGGAATCGGTTGCCGGTTGCTGGACGCAACGCAATGGAAGAGACTCGATTTCCTGCGACCGCCAGCTGGGCTCCGCCCTAGGAAGGAGGCAATGGCAAACCACTTCCGAAAAAACCTTGCCAGGAAAACTGCAGGGACTCGTCCAGGCAGTCTCCGTAGAATCGGTCACGATTGAAAGCGGATTAAAAAAAAAAAAA",
+            "header": "Naja naja sq2_Eryx (816 copies)",
+            "notes": "",
+            "group_id": null
+        },
+        {
+            "id": "Tretioscincus_oriximinensis_sq2",
+            "taxon": "Tretioscincus_oriximinensis",
+            "copy_count": 484,
+            "seq": "AGCTCAGTGGTAGAGCATATGCTTTGCATGCAGAAGGTCCCAGGTTCAATCCCTGGCATCTCCAGGTAAGGCTGGAAAAATTCCTGTCTGAAACCCTGGAGAGCTGCTGCCAGTCAGTGTAGACAATACTGAGCTAGATGGACCAATGGTCTGATTTAGTATAAGGCAGTTTTCTAT",
+            "header": "Tretioscincus oriximinensis sq2_Eryx (484 copies)",
+            "notes": "",
+            "group_id": null
+        }
+    ]
 }
