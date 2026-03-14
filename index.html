@@ -412,8 +412,10 @@ function renderTab(){
 
 // ===================== SORTING =====================
 function sortBy(col){
-  if(sortCol===col) sortDir*=-1;
-  else { sortCol=col; sortDir=1; }
+  if(sortCol===col){
+    if(sortDir===-1) { sortCol=null; sortDir=1; }
+    else sortDir*=-1;
+  } else { sortCol=col; sortDir=1; }
   renderTab();
 }
 

@@ -271,8 +271,8 @@ function render(){
 
   // Header row 1: SINE family groups
   h += '<thead><tr>';
-  h += '<th class="sticky-sp" rowspan="2" onclick="doSort(\'species\')">Species ⇕</th>';
-  h += '<th class="sticky-tot" rowspan="2" onclick="doSort(\'total\')">Total ⇕</th>';
+  h += '<th class="sticky-sp" rowspan="2" onclick="doSort(\'species\')">Species '+sortArrow('species')+'</th>';
+  h += '<th class="sticky-tot" rowspan="2" onclick="doSort(\'total\')">Total '+sortArrow('total')+'</th>';
   groupHeaders.forEach(g=>{
     h += '<th class="fam-hdr" colspan="'+g.count+'">'+esc(g.name)+'</th>';
   });
@@ -337,10 +337,12 @@ function render(){
   document.getElementById('countInfo').textContent = species.length + ' species × ' + visibleSFs.length + ' subfamilies';
 }
 
+function sortArrow(col){ return sortCol===col ? (sortDir>0?'▲':'▼') : '⇕'; }
 function doSort(col){
-  if(sortCol===col) sortDir *= -1;
-  else { sortCol=col; sortDir=-1; } // default desc for counts
-  if(col==='species') sortDir = sortCol===col ? sortDir : 1;
+  if(sortCol===col){
+    if((col==='species' && sortDir===-1) || (col!=='species' && sortDir===1)) { sortCol=null; sortDir=1; }
+    else sortDir*=-1;
+  } else { sortCol=col; sortDir = col==='species' ? 1 : -1; }
   render();
 }
 

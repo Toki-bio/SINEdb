@@ -506,8 +506,8 @@ function render(){
   });
 
   let h = '<table id="sumTable"><thead><tr>';
-  h += '<th class="sticky-sp" rowspan="2" onclick="doSort(\'species\')">Species ⇕</th>';
-  h += '<th class="sticky-tot" rowspan="2" onclick="doSort(\'total\')">Tot ⇕</th>';
+  h += '<th class="sticky-sp" rowspan="2" onclick="doSort(\'species\')">Species '+sortArrow('species')+'</th>';
+  h += '<th class="sticky-tot" rowspan="2" onclick="doSort(\'total\')">Tot '+sortArrow('total')+'</th>';
   groupHeaders.forEach(g=>{
     h += '<th class="fam-hdr" colspan="'+g.count+'">'+esc(g.name)+'</th>';
   });
@@ -604,10 +604,12 @@ function getVal(sp,sf,useFirm){
   return raw;
 }
 
+function sortArrow(col){ return sortCol===col ? (sortDir>0?'▲':'▼') : '⇕'; }
 function doSort(col){
-  if(sortCol===col) sortDir*=-1;
-  else{sortCol=col;sortDir=-1;}
-  if(col==='species') sortDir=sortCol===col?sortDir:1;
+  if(sortCol===col){
+    if((col==='species' && sortDir===-1) || (col!=='species' && sortDir===1)) { sortCol=null; sortDir=1; }
+    else sortDir*=-1;
+  } else { sortCol=col; sortDir = col==='species' ? 1 : -1; }
   render();
 }
 

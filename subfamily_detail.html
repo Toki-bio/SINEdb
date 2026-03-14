@@ -335,8 +335,8 @@ function render(){
   });
   // Build table
   let h = '<table id="sumTable"><thead><tr>';
-  h += '<th class="sticky-sp" onclick="doSort(\'species\')">Species ⇕</th>';
-  h += '<th class="sticky-tot" onclick="doSort(\'total\')">Tot ⇕</th>';
+  h += '<th class="sticky-sp" onclick="doSort(\'species\')">Species '+sortArrow('species')+'</th>';
+  h += '<th class="sticky-tot" onclick="doSort(\'total\')">Tot '+sortArrow('total')+'</th>';
   visCols.forEach(col => {
     if(GROUPED){
       const gtype = _groupType(col);
@@ -398,10 +398,12 @@ function render(){
   document.getElementById('countInfo').textContent = visTaxa.length + ' taxa × ' + visCols.length + (GROUPED ? ' groups' : ' sequences');
 }
 
+function sortArrow(col){ return sortCol===col ? (sortDir>0?'▲':'▼') : '⇕'; }
 function doSort(col){
-  if(sortCol===col) sortDir*=-1;
-  else{sortCol=col;sortDir=-1;}
-  if(col==='species') sortDir=sortCol===col?sortDir:1;
+  if(sortCol===col){
+    if((col==='species' && sortDir===-1) || (col!=='species' && sortDir===1)) { sortCol=null; sortDir=1; }
+    else sortDir*=-1;
+  } else { sortCol=col; sortDir = col==='species' ? 1 : -1; }
   render();
 }
 
