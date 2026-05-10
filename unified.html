@@ -201,6 +201,7 @@ const CLADE_ORDER = ['Serpentes','Amphisbaenia','Anguimorpha','Dibamia','Gekkota
 const MSA_VIEWER = 'https://toki-bio.github.io/MSA-viewer/';
 const SINEDB_BASE = 'https://toki-bio.github.io/SINEdb/';
 const SUB_SF_AVAIL = new Set(['sq1_boa', 'sq1_boa_new', 'sq2_Eryx']); // subfamilies with sub-subfamily detail pages
+const SQ2_MERGED_SFS = new Set(['sq2_long_gecko_dibamus', 'sq2_short_general']);
 
 // Per-cell QC: combine genome assembly quality with per-subfamily copy count
 function cellQcClass(assemblyQc, copyCount){
@@ -272,6 +273,22 @@ function requireEditAuth(cb){
 
 function viewerLink(relPath,label){
   return '<a href="'+MSA_VIEWER+'?url='+encodeURIComponent(SINEDB_BASE+relPath)+'" target="_blank">'+label+'</a>';
+}
+
+function alignmentInfo(taxon,sf){
+  if(SQ2_MERGED_SFS.has(sf)){
+    const mergedPath = 'alignments/'+taxon+'/sq2_merged.subfam.'+taxon+'.fa';
+    return {links:[{path:mergedPath,label:'Merged SubFam'}], conservationPath:mergedPath};
+  }
+  const alnBase = 'alignments/'+taxon+'/'+sf;
+  return {
+    links:[
+      {path:alnBase+'.core.fa',label:'Core'},
+      {path:alnBase+'.best50.fa',label:'Best50'},
+      {path:alnBase+'.subfam.fa',label:'SubFam'}
+    ],
+    conservationPath:alnBase+'.core.fa'
+  };
 }
 
 // ──── localStorage persistence ────────────────────────────────────────────
@@ -693,7 +710,6 @@ function _showCellInfoBody(taxon,sf){
   const curNotes = edits.notes || '';
   const curCurNotes = edits.curation_notes || '';
   const curCellStatus = (sp.cell_status&&sp.cell_status[sf])||'';
-  const alnBase = 'alignments/'+taxon+'/'+sf;
 
   let h='';
   h += '<label>Subfamily</label><input value="'+esc(sf)+'" disabled style="background:#eee">';
@@ -704,6 +720,7 @@ function _showCellInfoBody(taxon,sf){
   h += '<label>Notes</label><textarea id="mNotes">'+esc(curNotes)+'</textarea>';
   h += '<label>Curation notes</label><textarea id="mCurNotes" placeholder="Reason for curation...">'+esc(curCurNotes)+'</textarea>';
   const curConsensus = (sp.consensuses&&sp.consensuses[sf]) || (edits.consensus||'');
+  const alnInfo = alignmentInfo(taxon,sf);
   h += '<label>Consensus sequence (FASTA / raw)</label><textarea id="mConsensus" placeholder="Paste consensus sequence here (raw or FASTA)…" style="font-family:monospace;font-size:10px;height:60px">'+esc(curConsensus)+'</textarea>';
   h += '<div style="margin-top:8px"><div class="detail-row"><b>% of total:</b> '+(sp.total>0?(100*v/sp.total).toFixed(1):'0')+'%</div>';
   const firmV = sp.firm_counts?(sp.firm_counts[sf]||0):v;
@@ -711,7 +728,7 @@ function _showCellInfoBody(taxon,sf){
   h += '<div class="detail-row"><b>Firm:</b> '+fmt(firmV)+(softV>0?' &nbsp; <b>Soft:</b> '+fmt(softV):'')+'</div>';
   h += '<div class="detail-row"><b>Clade:</b> '+esc(sp.clade)+' · '+esc(sp.family)+' · Searched: '+esc(sp.searched_sets.join(', '))+'</div></div>';
   if(v > 0){
-    let alnLinks = viewerLink(alnBase+'.core.fa','Core')+viewerLink(alnBase+'.best50.fa','Best50')+viewerLink(alnBase+'.subfam.fa','SubFam');
+    let alnLinks = alnInfo.links.map(link=>viewerLink(link.path,link.label)).join('');
     h += '<div class="aln-links"><strong>Alignments:</strong> '+alnLinks+'</div>';
   }
   // Per-species consensus sequence
@@ -763,7 +780,7 @@ function _showCellInfoBody(taxon,sf){
   });
   setTimeout(()=>{
     const panel=document.getElementById('conservationPanel');
-    if(panel) showConservation(alnBase+'.core.fa',panel);
+    if(panel) showConservation(alnInfo.conservationPath,panel);
   },250);
 }
 
