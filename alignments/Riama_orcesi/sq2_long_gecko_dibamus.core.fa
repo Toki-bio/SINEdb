@@ -17,7 +17,7 @@ ggtcaatctctcaaattataag-----ttaaa-------------atattgcataactac
 --gagagcta-ttgct-----------------------------------------gtt
 c-------------------aggtagactgtagtaagttagatgg-----------atga
 ataactgaagtgact------------aaaccacaaagtcagtttcccaccaacccagta
-actcagaaattgagtcccaccttgtttttctccttctca--t
+actcagaaattgagtcccaccttgtttttctccttctcat--
 >ptg000004l:193893-194057(-)|sq2_long_gecko_dibamus|368(-)
 ------------------------------------------------------------
 -------------------------------------tctatg-gctactagaagggatg
@@ -266,8 +266,8 @@ gtttgctcctcagcttctccct-----ggaaataggaaatg---------gcaaagc-ac
 ttct-------------------ggatctctgccaagaaaactg----------------
 --catggagg-tgtcc------------atgcaatcaaacag--------------aagt
 c-------------agttctaacttgatggtaccaagctataaca-----------aacg
-ggaactcgaattggg------------ttgggtttgatcctggtgtt-------------
----------------------------------------agt
+ggaactcgaattggg------------ttgggtttgatcctggtgttagt----------
+------------------------------------------
 >ptg000028l:846063-846231(+)|sq2_long_gecko_dibamus|390(+)
 ------------------------------------------------cttttgaaaaga
 ---------------------------aatggaggggttgaaatatagtttgtgcaggaa
@@ -437,7 +437,7 @@ gtttcaaacattgaatgttcag-----ctagggatgggaagaattaggtagcaggag-a-
 --gtgatcta-cttct-----------------------------------------g--
 --------------------aggtagaaaacaccaggcttg-tag-----------gaca
 acagtgtggcagggt------------gggaagttgcttcctatcttctgattctgagaa
-gttgtaccttttcatacaaaatcctcacatttt-----taaa
+gttgtaccttttcatacaaaatcctcacatttttaaa-----
 >ptg000052l:233264-233439(+)|sq2_long_gecko_dibamus|370(+)
 ------------------------------------------------------------
 ---------------------------------------tgaa-gccgctgggagaggtc
