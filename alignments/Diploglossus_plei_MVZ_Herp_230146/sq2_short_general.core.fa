@@ -7,8 +7,7 @@ ag----gttcaatccct---ggcatctccaaggtagggct-------gggaaagac----
 --tcctgcctgaaaccctggagaagct-----gctgcc--agtcagt--------gtaga
 caa--tactga--gctagatgg--accaatg--gtctgactcagt--ataaggc------
 ---------agct------tcctatgtt--------------------------------
-------------------------------------------------------------
-------
+-----------------------
 >ptg000001l:89161-89326(-)|sq2_short_general|1203(-)
 ------------------------------------------------------------
 ----------------------------------------tattgaaaatatgaggctgt
@@ -18,8 +17,7 @@ ta----gtgtaatccct---ggcatctct-aggcagggct-------aggaaggaa----
 --------------tcctagag-agct-----actacc--agacagt--------ataaa
 caa--tactgg--ggttgatgg--accaagg--gtctgactcaga--ataaggc------
 ---------agct------tcctgtgtccctgtgtccacatactcagtcgggacaaacat
-caggtcaattcgcaccat------------------------------------------
-------
+caggtcaattcgcaccat-----
 >ptg000001l:111346-111531(-)|sq2_short_general|1325(-)
 ------------------------------------------------------------
 ----------------------------------------gggtcacatttgatatgccc
@@ -29,8 +27,7 @@ ag----gttctatcccc---agcgtctcc-atgtagggca-------aggaaagaa----
 --tcctgcctgaaaccctggaa-agcc-----actgct--gttcaat--------gttga
 caa--tactgg--actagatgg-gaccagtg--ttctgattcagt--ataaggc------
 ---------agcg------tcctatattcttgtgtttcacttctggctactgctgccacc
-tttgcttcccacagtcagt-----------------------------------------
-------
+tttgcttcccacagtcagt----
 >ptg000001l:216417-216599(-)|sq2_short_general|1461(-)
 ------------------------------------------------------------
 ----------------------------------------gaacacttgagagcagatct
@@ -40,8 +37,7 @@ ag----gtttaatccct---agcatctcc-aggtagtact-------aagaaaaaa----
 --ttctatctgaattcagggaa-agcc-----actgcc--agtctgt--------gttga
 caa--tactgg--gctagatgg--gccaatg--gtctgactcagt--ataaggc------
 ---------agct------tcctgtgttcctgcctttcctaacgtggtgttctcaaggtg
-tgttgcacaatagcggcac-----------------------------------------
-------
+tgttgcacaatagcggcac----
 >ptg000001l:276187-276368(+)|sq2_short_general|1197(+)
 ------------------------------------------------------------
 ---------------------------------------ttgtgggggtcggggggcact
@@ -51,8 +47,7 @@ ag----gttcgatccct---ggcgtctcc-agagttggcc-------aagaaagaa----
 --tcctgtctgaaacctgagag-agccgc--tgctgcc--ggccagt--------gttga
 caa--tactag--gctgggcag--accaagg--gtctgattccac--ctgaagc------
 ---------agct------gcccactgtcctcatttcctgaggatgtctgcgagccacac
-tgcgggctcagagg----------------------------------------------
-------
+tgcgggctcagagg---------
 >ptg000001l:319052-319234(+)|sq2_short_general|1006(+)
 ------------------------------------------------------------
 ---------------------------------------agcggcatgatatttgagatc
@@ -62,8 +57,7 @@ cg----gctcaaacgcc---ggtgcctcc-aggtaggggt-------ggcaaaaagc---
 -ctcctgtctgaatccctggag-ggctgt--tgctgcc--agccagt--------gccga
 caa--tactgg--gctacatgg--accagca--gctggactcagt--agatgtt------
 ---------tgtt------ccctgagagctgcaggctagcttggtgatggaactcacagt
-tctctcctccaac-----------------------------------------------
-------
+tctctcctccaac----------
 >ptg000001l:357345-357523(+)|sq2_short_general|908(+)
 ------------------------------------------------------------
 ---------------------------------------acaccccacgcgcacgcctgt
@@ -73,8 +67,7 @@ gg----gttcaatcact--tggcatctcc-ggctaggtct-------gaaaaagac----
 --ctctgcctgaaaccctggtg-agct-----gctgct--aatcaat--------tggcc
 tgt--gaaaga--gctcaaggg--agcgatg--ccgcgatttgtg--ataaagc------
 ---------acct------tcctcgcaccctgttgaatgccagtcaatcagcctggagat
-gtgaacaagctaa-----------------------------------------------
-------
+gtgaacaagctaa----------
 >ptg000001l:438444-438627(-)|sq2_short_general|845(-)
 ------------------------------------------------------------
 ----------------------------------------ttttcattcaattggtcaag
@@ -84,8 +77,7 @@ agccaggcttattcccc---agcctctca-atatgggact-------aggaaagac----
 --tcctgcttcaaacccaagag-agccattcagctgcc--agccagt--------gtcaa
 cta--caatgg--gctaggtgg------------gctgattcagg--atacggc------
 ---------cacc------tcttgtgctcctcagtgaaaatggagcttttctttttaaag
-acagaattatttattgcgt-----------------------------------------
-------
+acagaattatttattgcgt----
 >ptg000001l:560245-560415(+)|sq2_short_general|1166(+)
 ------------------------------------------------------------
 ---------------------------------------gtcctactcttctattctata
@@ -95,8 +87,7 @@ ag--------------------cttctcc-agttagggct------gggggaaaag----
 --ccctgcctgaatccctagac-aagc-----actgcc--agtccgt--------gttga
 caa--tactgg--gctagatga--tccaatg--ggctgactcagt--agaaggc------
 ---------cact------tcctaggtttccgatgaacaaagctaggcccagttgatttc
-catcctgctgtccagggc------------------------------------------
-------
+catcctgctgtccagggc-----
 >ptg000001l:865387-865561(+)|sq2_short_general|808(+)
 ------------------------------------------------------------
 ---------------------------------------aaaatatcccctctctccaca
@@ -106,8 +97,7 @@ ggaaaaatgctaaaacaaggggaggacctctggctca-----------gagg--------
 --tcatgcccaaaaccctggag-agac-----actgcc--agtcaag-------tgtaga
 caa--tagtca--gctagatca--acccatt-tgcctgactcact--acaatac------
 ---------aattt-----ttctgtgttcctaactgatcactacttttctaagatggctg
-tttgtgtgtggttctagg------------------------------------------
-------
+tttgtgtgtggttctagg-----
 >ptg000001l:1047262-1047450(-)|sq2_short_general|854(-)
 ------------------------------------------------------------
 ----------------------------------------tgcagaagggatatatgttg
@@ -117,8 +107,7 @@ gggaaggatcttcactgtggggacaggctgtagctca-----------gtgt--------
 ------ctctggaaccttggag-agct-----cttgcc--agccattccatctagggaag
 caa--cactgg--gctaggtgg--accaatg--gtctgactcgat--atagggg------
 ---------cact------cccttcattcgtttggtaatgagactgaagaggcctgcccc
-aggccccatgcaaagctattgtg-------------------------------------
-------
+aggccccatgcaaagctattgtg
 >ptg000001l:1217079-1217241(+)|sq2_short_general|1007(+)
 ------------------------------------------------------------
 -------------------------------------------------tctgaagtcac
@@ -128,8 +117,7 @@ ag----gtttgatcccc---agcatctc--aggtggggtt---------ggaagac----
 --tcctttctgaca-cctggag-agcc-----tcagtc--agtctgt--------gctga
 cag--tactgg--gctagatga--accagtg--gtc------agc--aaaagga------
 ---------aact------tcctgtgttcagtgcataggtaggaaggacactgactgaga
-acatcttgaatgacatta------------------------------------------
-------
+acatcttgaatgacatta-----
 >ptg000001l:1827894-1828076(+)|sq2_short_general|1288(+)
 ------------------------------------------------------------
 ---------------------------------------ataaaaccccagagccatcct
@@ -139,8 +127,7 @@ ag----gtttgattcct---ggcatctcc-acacagaat--------ttggaaaaa----
 --tcctgcctgaaaccctggag-agctgc--ggctgcc--agtcggt--------gcaga
 cta--tactga--gctacatgg--accagtg--gtctgactgagt--gtaagac------
 ---------agct------tcctatgttcctgtgaggaagaagttgaaggaagggaaggg
-aagggaagtgtggtgtag------------------------------------------
-------
+aagggaagtgtggtgtag-----
 >ptg000001l:1989092-1989258(+)|sq2_short_general|785(+)
 ------------------------------------------------------------
 -------------------------------------------------tttccaaatcc
@@ -150,8 +137,7 @@ ag----cttcagtccct---gacatctcc-aaatatgaac-------aagaacaat----
 --ccttgtctaaaacccaggaa-agct-----gctgcc--agactgt--------gtcca
 cag--tactga--gctatggggctggctcta--ccattaaacaga--gtaaggt------
 ---------agat------gctccaggaagtagattcggggtgtcatgaaagagcagtgg
-actgttattta-------------------------------------------------
-------
+actgttattta------------
 >ptg000001l:2006061-2006234(+)|sq2_short_general|914(+)
 ------------------------------------------------------------
 ---------------------------------------gctttaacattgcagagatgg
@@ -161,8 +147,7 @@ ag----gttcagtccc----agaatttcc-aattagaagga--tgatgggtgatac----
 --ctctatcttagatcctgaag-tact-----gttgcc--agacaga--------gtaga
 caa--cactgg--gcttcatgg--acacata-ggtctgacatata--atataat------
 ---------aata-----ataatatgattataattttgcatttctatcccatcccacctt
-ctt---------------------------------------------------------
-------
+ctt--------------------
 >ptg000001l:2052946-2053139(-)|sq2_short_general|700(-)
 ------------------------------------------------------------
 ----------------------------------------aaacctaattttgaaagcaa
@@ -172,8 +157,7 @@ ag----gctcaatcccc---agcatgtcc-gaggatcgcgaaatggctagaatgac---c
 tcttctgacagggatcctagag-agct-----gtggcc--catgaga--------acaga
 cag--tacagg--acgagatgg--agaaatg--gcacaatgtggta-ttaaagc------
 ---------acct------gcctatgctaggttgggtggtatttatgaccagtgaacaaa
-gacccctttcattttgagt-----------------------------------------
-------
+gacccctttcattttgagt----
 >ptg000001l:2116443-2116602(-)|sq2_short_general|825(-)
 ------------------------------------------------------------
 -----------------------------------------gcaggctgataattattgg
@@ -183,8 +167,7 @@ gg----gttcaatcctt---gccatctcc-agctatggc--------agggaaaat----
 --tcttg-------------------------cctgcc--aatcatt--------gtgca
 cca--aac---------gatgg--accaatatcatctggcttggt--ataaggc------
 ---------agct------tcctgtgttccaggcaaaggaggagtttgatcctttctttc
-cttgctgtggtgaatctct-----------------------------------------
-------
+cttgctgtggtgaatctct----
 >ptg000001l:2147901-2148061(-)|sq2_short_general|768(-)
 ------------------------------------------------------------
 ----------------------------------------cacccgtggtctcaagcctg
@@ -194,8 +177,7 @@ aa----attcagtccct---tacatgtct-gggcagagc--------ttggaaagt----
 --tcttccctgaaactctgggt-agct-----gctgcc--aataagc-------------
 ------------------------gccagtg--gtctggctcaatagatagggt------
 ---------aact------tcctatgttcctaactgccccttcatcctcttttaaatcca
-caaactaagcttttttaaa-----------------------------------------
-------
+caaactaagcttttttaaa----
 >ptg000001l:2331542-2331703(-)|sq2_short_general|800(-)
 ------------------------------------------------------------
 ----------------------------------------ccacatttttgccctaacag
@@ -205,8 +187,7 @@ ag----gttcagtcccc---ggcacctct-gggtagagct-------gagaaagac----
 --atccgtctgaagccgtatac-agcc-----atttgc--agtttgt--------gtaga
 caa--tactga--atgagaaag--ccctaga--gccatactcagg--ccatagc-gtaca
 aa-------aaccttggc----------tatttggacatcttacaaaagttgtgg-----
-------------------------------------------------------------
-------
+-----------------------
 >ptg000001l:2427577-2427856(+)|sq2_short_general|1148(+)
 ccgctgcctgatgcaaccacctcaccatgtctaacaagagggccggccctgtgcctaatg
 cagtattagcttattggtccatctggtccagtatgatctactttgatgatcaacatttct
@@ -216,8 +197,7 @@ ag----gttcaatgcct---ggcatctcc-aggtcaggc--------aagaaaaac----
 --atctgcctgaagccccaagg-agcc-----actgcc--agtcagg--------gtcaa
 caa--tactgg--gctagatgg--accac---agtctacttcagt--ataagac------
 ---------agct------tcctgtgttcccagcccagcaatctgcaatccattacaaca
-gggatgacaaggactgtg------------------------------------------
-------
+gggatgacaaggactgtg-----
 >ptg000001l:2635470-2635641(+)|sq2_short_general|987(+)
 ------------------------------------------------------------
 ---------------------------------------acctactcagccttccctggg
@@ -227,8 +207,7 @@ ag----gtttgatccca---ggcatctcc-acggaaagc--------tggaaatat----
 --ttctgcctgccgccttggag-agct-----actgct--catcagt--------gcag-
 -------------gctagatag--ggaaccg--gtcggactcaac--ataaggc------
 ---------agtt------tcttgtgttccttatgagtacctgtaagaaaattgactatt
-gcatatccaccctctgga------------------------------------------
-------
+gcatatccaccctctgga-----
 >ptg000001l:2687664-2687827(+)|sq2_short_general|704(+)
 ------------------------------------------------------------
 ---------------------------------------ctatggagcccttgctctggc
@@ -238,8 +217,7 @@ tg----gctcgatcc---------------agggtgggc--------agcaaacac----
 --atctgcctgaaaccctgggg-cagt-----gctgcc--aggttgc--------atcag
 cag------------ctgcttg--accaaca--gcctggctcagt--gtaaggc------
 ---------agcttc--c-ttatatgttcctcatatgctcctagtcgctcaggcacccct
-ccaggtcccccttcatct------------------------------------------
-------
+ccaggtcccccttcatct-----
 >ptg000001l:2754483-2754640(+)|sq2_short_general|814(+)
 ------------------------------------------------------------
 ---------------------------------------ggatggagtgtaaatgaaaca
@@ -249,8 +227,7 @@ ag----gttcattgcct---ggcatctgc-tggtaggga--------tgcaaaaat----
 --ccctgtcagctaccctggaa-agct-----gctgccc-acttaat--------gtgga
 caa--tactgt--ccttggtcc--accagtg--ggctaattctat--ccaaggc------
 ---------agctt-----tcttatagtcatgtgattttagcgggactcatttccatccc
-gagtgcatttag------------------------------------------------
-------
+gagtgcatttag-----------
 >ptg000001l:2851727-2851906(-)|sq2_short_general|896(-)
 ------------------------------------------------------------
 ----------------------gtgccaaagacctcagggaaaggagggactgggctacc
@@ -260,8 +237,7 @@ aa----ggtccattccc---ggcatctca-tggagga----------ctggaaaac----
 --acttgcttgaaaccctggaa-tgcc-----gctacc--agtcagc--------gtgga
 cag--cactgg--gctagatgg--acca-----cactgtctcaga--gtatagc------
 ---------agct------ttcaatggtggtctgtgttcctatcaaagcttgcccaaacg
-tataacctcaacacttaaa-----------------------------------------
-------
+tataacctcaacacttaaa----
 >ptg000001l:2859430-2859588(-)|sq2_short_general|736(-)
 ------------------------------------------------------------
 --------------------------------------------attactgatgactctg
@@ -271,8 +247,7 @@ a-------------------gaaatttcc-aggcaaatct-------aaggaaaac----
 --ccctggctaaaaccctggag-agtc-----actacc--agtgagg--------ttaga
 caa--tactga--gctagatgg--attagtg--ttttaattta----------t------
 ---------agtt------tcccatgttcctcatttaaaagtattgctttttatatttct
-cgtttgaatggagtgctgg-----------------------------------------
-------
+cgtttgaatggagtgctgg----
 >ptg000001l:2896560-2896738(-)|sq2_short_general|1133(-)
 ------------------------------------------------------------
 -----------------------------------------tgagtgagtgagtgagtga
@@ -282,8 +257,7 @@ ag----gttcagtct-----tggtactcc-aggtagagt--------aggaagaac----
 --tgctgcctgcaaccctgggt-aact-----gctgcc--agtcagt--------gttga
 tgg--tattgg--gctggatac--accacag--gggtgtctcagt--acaaggc------
 ---------aggt------ccctatgttgatgtgttggactgcagcccccatcattcgca
-gtctgcatggacaatgaga-----------------------------------------
-------
+gtctgcatggacaatgaga----
 >ptg000001l:2905727-2905905(-)|sq2_short_general|958(-)
 ------------------------------------------------------------
 ----------------------------------------atcttgggccatcatggttt
@@ -293,8 +267,7 @@ ag----tttcagtcttt---ggcttcttc-aagtatgctt-------gaaaaagac----
 --acctgtctaaaaacttcgag-agat-----atcgtc--agc------------ctggc
 caa--tactga--ccaagatga--accgatg--gtctgcctcgat--ctgaggt------
 ---------atat------tcctattttacttcatgtgtgtgtgtgagagagagacagaa
-cccttggttccactaagca-----------------------------------------
-------
+cccttggttccactaagca----
 >ptg000001l:2974685-2974840(+)|sq2_short_general|992(+)
 ------------------------------------------------------------
 ------------------------------------------------gggtcttcacaa
@@ -304,8 +277,7 @@ ca----gttcagtcccc---aggttctcc-aagtagggag------aggaaaagaa----
 --tcccactgaaaagcctgggg-acct-----gctgct--cgtcagc--------atcaa
 caa--tagtga--gctaggtgg--accaatg--gcctgactcagg--ctgtgtc------
 ---------caca------ct-------aagcaggatatagtgggatgaacgtgagatgg
-aaaa--------------------------------------------------------
-------
+aaaa-------------------
 >ptg000001l:2997467-2997641(+)|sq2_short_general|808(+)
 ------------------------------------------------------------
 ----------------------------------gttctggccagcaagtgcgatgtcct
@@ -315,8 +287,7 @@ tg----gttcagtcccc---aacatctcc-aagtagggt--------tggaaataa----
 --ctctgtctgaaactctaaag-agcc-----actcct--tatcaat--------aatag
 tg-----------gctttgtgg--aacaatg--atctgattcattg---aaggc------
 ---------agct------tcccaattccttccactaacacacctcgaatttcacatatg
-tccccagtcaaaca----------------------------------------------
-------
+tccccagtcaaaca---------
 >ptg000001l:3128152-3128338(-)|sq2_short_general|678(-)
 ------------------------------------------------------------
 -------------------------------------------------taggcgatccc
@@ -326,8 +297,7 @@ gg----atccaatactt---ggtgtcttc-aggtaaggga-------ggaacaaat----
 --tcatatctgaaatcccaggg-agca-----cctgcc--attc---------ttgtgaa
 cac--ccatga--gctagatgg--atcagtg--gtctaagcccat--acatggc------
 ---------aact------tcctgagttgttcacgctaaataagattttcacgaaattat
-gatagggaagcgagtggat-----------------------------------------
-------
+gatagggaagcgagtggat----
 >ptg000001l:3224089-3224268(+)|sq2_short_general|1085(+)
 ------------------------------------------------------------
 ----------------------------------------tagaaatcatacatatatac
@@ -337,8 +307,7 @@ ag----gttcaatccct---tatatctca-agttgcaggt----gatgggaaagac----
 --ttctctctgagatgctgatg-tgac-----atcacc------aga--------gtagg
 caa--tattgg--gctagatgg--acaaata--gtctgtcctggt--ataaggc------
 ---------aggt------tcttatgtccacatgtccaagagttgtgccccagcatcctc
-tgaaacattagagggtc-------------------------------------------
-------
+tgaaacattagagggtc------
 >ptg000001l:3426000-3426175(-)|sq2_short_general|1314(-)
 ------------------------------------------------------------
 -----------------------------------------agctaatcaaggctacttt
@@ -348,8 +317,7 @@ gttcggttcaagaacacaatgcagggaccacagcaca-----------gcgg--------
 --ttgtgtctgcaaccctggga-agcc-----actgcc--agtcact--------gttga
 caa--tactga--gctagacgg--aacaatg--gtgtgactcagc--atgaagc------
 ---------agct------tcctatgttcctgagcgtgggtcaaccattctttatgcaag
-taacgagtcaccatccata-----------------------------------------
-------
+taacgagtcaccatccata----
 >ptg000001l:3619060-3619227(-)|sq2_short_general|788(-)
 ------------------------------------------------------------
 ----------------------------------------ccatagttgggaaagaggtg
@@ -359,8 +327,7 @@ tg----gttcaatcctt---ggcatcccc-------------------------------
 -cacctgcctgaaaccttggag-agct-----gcttct--tgtgagt--------ggcaa
 caa--cactga--ctgcaatgg--gtcagaa--gagtaagttcct--atctagccct---
 ---------agct------gcttgtgttagagtgatgaaggccctgttcagaagacatct
-aaaccatggtggttacctg-----------------------------------------
-------
+aaaccatggtggttacctg----
 >ptg000001l:3698345-3698500(-)|sq2_short_general|736(-)
 ------------------------------------------------------------
 ----------------------------------------cggtacaaaaaagcaataat
@@ -370,8 +337,7 @@ ag----gtccagtcccc---agcatatcc-agatagttc--------tgaaaaaat----
 --tcctgcctgcaaccctggaa-agcc-----atttcc--agtcagt--------gtcaa
 taa--tgtcag--gattgatga--atcaatg--agctggcaggat--atagtgggataga
 aaaggtaggagcc---------------acagcaagcatgatgaagcagaataaaa----
-------------------------------------------------------------
-------
+-----------------------
 >ptg000001l:3807657-3807808(-)|sq2_short_general|1005(-)
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -381,8 +347,7 @@ aaaggtaggagcc---------------acagcaagcatgatgaagcagaataaaa----
 --tccaacctgaaaccctggag-ggtc------ctgcc--agtaaga--------gtcaa
 caa--tattga--ggtagatga--accaatg--gcc------agt--gcaaggc------
 ---------agct------gcctgtgctcctatgctcctgaataactgagttgtttacca
-gaggctcactgaaacacag-----------------------------------------
-------
+gaggctcactgaaacacag----
 >ptg000001l:4165935-4166086(+)|sq2_short_general|778(+)
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -392,8 +357,7 @@ ag----gttctgttcct---ggaagctcc-aagtaaa----------aggaccaca----
 --agcaataggggaggagaaag-ggtt-----gctgct--ggtcaga--------gtaga
 cag--catggg--gctagatgc--accaaag--gcctgacctggt--atgaggc------
 ---------aact------tcttgcattacattggcaaagcattacatgagaagaacaaa
-gtcaccccaacct-----------------------------------------------
-------
+gtcaccccaacct----------
 >ptg000001l:4281817-4281972(+)|sq2_short_general|976(+)
 ------------------------------------------------------------
 ---------------------------------------tataccaagagcagccaaatg
@@ -403,8 +367,7 @@ ag----gtgcaatccct---ggcatcccc-aaggatagct-------aggaaagaa----
 --ccttccctggaaacttgggg-agct-----tctgcc--aggcagt--------gtcat
 cga--cactga--cctaagtgg--actaaca--gtcagtgtaatg--at-----------
 ---------ccct------tcttgaaataaacagacactggagtagcaaccagagg----
-------------------------------------------------------------
-------
+-----------------------
 >ptg000001l:4578041-4578192(+)|sq2_short_general|785(+)
 ------------------------------------------------------------
 -------------------------------------------------ccagtgaatca
@@ -414,8 +377,7 @@ g-----gttcacgcccc----acatctcc-aggcagggct-------ggaagacctc---
 -----------------------cgtt-----gccacg--aggcagc--------gtcaa
 caa--gactgc--cctaggtag--accaagg--gcctaacttcgt--ttaaggc------
 ---------cgct------tccgatgttcctccgatgttctgacctctccccatgcttca
-ggaacacagcccatcttt------------------------------------------
-------
+ggaacacagcccatcttt-----
 >ptg000001l:4580766-4580942(+)|sq2_short_general|1258(+)
 ------------------------------------------------------------
 ---------------------------------------tgcataatgcatctcttcagg
@@ -425,8 +387,7 @@ aa----tttcaatatct---ggcatcttc-aggtaggatg-------aggaaagaa----
 --tcctacccgaaattctggaagagcc-----actgcca----------------gtaaa
 caa--tactgg--actagatgg--accaatg--gcatgactctgc--ctaaggc------
 ---------agct------tcctatgtaaccatttaaaaagttaatggggaccttacatt
-ttattgcagaagacact-------------------------------------------
-------
+ttattgcagaagacact------
 >ptg000001l:4897247-4897402(+)|sq2_short_general|936(+)
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -436,8 +397,7 @@ at----gctcaatccct---gctttctct-gggtagag----------------------
 --ccctgtctgaaatcctggag-agca-----gctgcc--agtcaat--------ataaa
 caa--tgcaga--gtgagatgg--atcaatg--tccttacttggt--gtaagac------
 ---------agct------tcctatgaatctaaaggagatgttccctaaatctcagcatg
-gcacctccaggcacta--------------------------------------------
-------
+gcacctccaggcacta-------
 >ptg000001l:4982262-4982420(-)|sq2_short_general|969(-)
 ------------------------------------------------------------
 ----------------------------------------cctataaaagcctgggaatt
@@ -447,8 +407,7 @@ cg----gttcaatcccc---tataacttc-aggaagggct-------agcagaaac----
 --tcctgaccaaaatccaggag-agcc-----actgcc--agtcagt--------gtcaa
 cta--taatgg--gctagatgg--agtaata--gccagactggga--cctaatc------
 ---------cgcacc-------------aaacaggatatagcactatgaaagcagtatgt
-ga----------------------------------------------------------
-------
+ga---------------------
 >ptg000001l:4994762-4994922(-)|sq2_short_general|865(-)
 ------------------------------------------------------------
 -----------------------------------------------gctgaacggcttg
@@ -458,8 +417,7 @@ gg----gttcaacccca---agtttctct------------------agggaaaac----
 --tcctgcctg-aaccctggag-agccac--tgctgcc--agtcagg--------gtcag
 cta----------aatgaacca--atgaatg--gcctgatttagt--ataaggc------
 ---------agtg------tcccatgtggacagatgcctttcttctagaaattgctcatt
-gtcagctgttggaaccag------------------------------------------
-------
+gtcagctgttggaaccag-----
 >ptg000001l:5007582-5007751(-)|sq2_short_general|1106(-)
 ------------------------------------------------------------
 ----------------------------------------------------actaggtt
@@ -469,8 +427,7 @@ a-----gtttactccct---ggcttctcc-atggaggtc--------acgaaaaac----
 --tcctgcctgaaatcctgggg-agcc-----actgcc--ggtcaga--------gttga
 caa--tactgg--gctagaaga--acccaag--atctaacacagt--agaagga------
 ---------agct------tcctgagttcctatgtagcatagcatttcatgaatttttgg
-gtgtcctgttacatgacta-----------------------------------------
-------
+gtgtcctgttacatgacta----
 >ptg000001l:5124157-5124338(+)|sq2_short_general|1336(+)
 ------------------------------------------------------------
 ---------------------------------------acatttttagtggtaaggtct
@@ -480,8 +437,7 @@ ag----gttcgatcccc---agaatctcc-aggtacgagt-------gaaaaaaac----
 --cctgctttgaaaccatggag-agct-----gctgcc--agtcagt--------gtcaa
 caa--cactgg--gctagatgg--accaact--gtctgactcaga--at-atgc------
 ---------agct------tcctacattcctatggacacccaggctagtcttgctattta
-cactactactgttaggat------------------------------------------
-------
+cactactactgttaggat-----
 >ptg000001l:5134241-5134425(-)|sq2_short_general|899(-)
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -491,8 +447,7 @@ ag---gtgccaatctct---ggcataatccacttagaaag---tataatgagaaaatctt
 ctccctgcctgagaccatggag-acct-----gctgct--ggtcaga--------acaga
 caatttaatgg--gctagatgg--ccaaata--atcagacttggt--atatggt------
 ---------gact------tactgtgttctgtactccaaatataactagtaaaagcactg
-tcgtttccataagatgggc-----------------------------------------
-------
+tcgtttccataagatgggc----
 >ptg000001l:5184593-5184777(+)|sq2_short_general|967(+)
 ------------------------------------------------------------
 ---------------------------------------ttcctcaacctggtcccctcc
@@ -502,8 +457,7 @@ ag----gatcaatccccagtggcttatcc-aggtacaga--------tggaaaaaa----
 --tcctgcttgaaaccttgaag-aaca-----cctgct------agt--------gttgc
 taa--tactga--gctagatgg--atcaaag-ggctggattcact--ataaggg------
 ---------cgct------ttctatattcccatgatttcatcctctatcaattccaacca
-ccatggcccataatcaga------------------------------------------
-------
+ccatggcccataatcaga-----
 >ptg000001l:5187273-5187455(-)|sq2_short_general|1033(-)
 ------------------------------------------------------------
 -----------------------------------------actgccattgtctttaact
@@ -513,8 +467,7 @@ gg----gtttgatccct---ggcaaattccaggtagggc--------aggaaaaac----
 --tccttcccgaaactccaggg-aactgt---gttgtcaaagtcagt--------gttga
 caa---attgg--gctaagtgg--accaaag--gtttgac--agt--ataaact------
 ---------gcta------tcccatgttcctttgttttctttctcatttttactgtcatt
-tgtttccttgacaggcaaa-----------------------------------------
-------
+tgtttccttgacaggcaaa----
 >ptg000001l:5207047-5207225(-)|sq2_short_general|1073(-)
 ------------------------------------------------------------
 ----------------------------------------atttgctgcctgctgtaaaa
@@ -524,8 +477,7 @@ ag----tttcca------gtggcatcttc-aggtccagt--------gggaagtat----
 --tcttgactgaaaccccagag-agcg-----actgcc--tgtcact--------attag
 caa--tactgg--gctagatgg--aatactg--gtccaatgcgac--ataaggc------
 ---------agca------tcctgtgctcccatataaagcacgcgtttgaatattaaaac
-agctttagcagatcaaatc-----------------------------------------
-------
+agctttagcagatcaaatc----
 >ptg000001l:5238683-5238840(+)|sq2_short_general|733(+)
 ------------------------------------------------------------
 -------------------------------------------aaaggcgcaagcgccgt
@@ -535,8 +487,7 @@ ag----gttcagtccct---ggcatctcc-agacaggac--------gggaaaggg----
 ---cctgtctgagacccaggaagagccac-----------ggtccgt--------gctgg
 cag--cgccggcggccacatgg-----------gcatgactccgc--ataaggc------
 ---------agct------tcctatattcataatggccccaaaccaaggatcccttgaaa
-tcatgaaaagatggtgat------------------------------------------
-------
+tcatgaaaagatggtgat-----
 >ptg000001l:5265807-5265977(+)|sq2_short_general|958(+)
 ------------------------------------------------------------
 ---------------------------------------cctgctttgcaggcaaaaggt
@@ -546,8 +497,7 @@ gg---ggttcaatccccaggggcatctgc-aggtaggata-------aggaaacaa----
 --gcccgcctgaaaccctggag-agct-----gttgcc--agtcagt--------gctg-
 ------actga--gctagatgg--agccacg--ggcctattccgt--actaagc------
 ---------agga------catagcggtgtggacgtggggtgaaaacggggtgtagaaag
-taggagc-----------------------------------------------------
-------
+taggagc----------------
 >ptg000001l:5267660-5267827(+)|sq2_short_general|1135(+)
 ------------------------------------------------------------
 ---------------------------------------caaaaggcatcctggtgccca
@@ -557,5 +507,4 @@ ag----gttcaacaccc---agcatctcc-aagtagggca-------aggaaagaa----
 --tcctgcctgaaaatccagag-agcc-----gctgct---gccagt--------gttga
 caa--tatcgg--gctacatgg--acccatc--gtctgacccagt--ataacat------
 ---------cgtatga---cccttgtttgactctttgccgtgtgaaggtggttttcctt-
-------------------------------------------------------------
-------
+-----------------------
