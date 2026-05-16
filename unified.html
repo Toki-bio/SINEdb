@@ -202,6 +202,7 @@ const CLADE_ORDER = ['Serpentes','Amphisbaenia','Anguimorpha','Dibamia','Gekkota
 const MSA_VIEWER = 'https://toki-bio.github.io/MSA-viewer/';
 const SINEDB_BASE = 'https://toki-bio.github.io/SINEdb/';
 const SUB_SF_AVAIL = new Set(['sq1_boa', 'sq1_boa_new', 'sq2_Eryx']); // subfamilies with sub-subfamily detail pages
+const SQ2_INITIAL_STEP1_SFS = new Set(['sq2_long_gecko_dibamus', 'sq2_short_general', 'sq2_unassigned']);
 
 // Per-cell QC: combine genome assembly quality with per-subfamily copy count
 function cellQcClass(assemblyQc, copyCount){
@@ -273,6 +274,14 @@ function requireEditAuth(cb){
 
 function viewerLink(relPath,label){
   return '<a href="'+MSA_VIEWER+'?url='+encodeURIComponent(SINEDB_BASE+relPath)+'" target="_blank">'+label+'</a>';
+}
+
+function hasSq2InitialStep1(sp){
+  return SQ2_INITIAL_STEP1_SFS.size > 0 && [...SQ2_INITIAL_STEP1_SFS].some(sf=>sp.counts && sp.counts[sf]!==null && sp.counts[sf]!==undefined);
+}
+
+function sq2InitialStep1Link(taxon){
+  return viewerLink('alignments/'+taxon+'/sq2_initial_subfam_step1.fa','Initial SubFam <=30000');
 }
 
 // ──── localStorage persistence ────────────────────────────────────────────
@@ -647,6 +656,9 @@ function showSpeciesInfo(taxon){
   h += '<div class="detail-row"><b>Clade:</b> '+esc(sp.clade)+'</div>';
   h += '<div class="detail-row"><b>Total:</b> '+fmt(sp.total)+'</div>';
   h += '<div class="detail-row"><b>Searched:</b> '+esc(sp.searched_sets.join(', '))+'</div>';
+  if(hasSq2InitialStep1(sp)){
+    h += '<div class="detail-row"><b>SQ2 initial SubFam:</b> '+sq2InitialStep1Link(sp.taxon)+'</div>';
+  }
   if(sp.assembly_qc){
     const qcCls = sp.assembly_qc==='WARN'?'qc-warn':sp.assembly_qc==='CAUTION'?'qc-caution':'qc-solid';
     h += '<div class="detail-row"><b>Assembly QC:</b> <span class="qc-badge '+qcCls+'">'+esc(sp.assembly_qc)+'</span>';
@@ -711,8 +723,10 @@ function _showCellInfoBody(taxon,sf){
   const softV = v-firmV;
   h += '<div class="detail-row"><b>Firm:</b> '+fmt(firmV)+(softV>0?' &nbsp; <b>Soft:</b> '+fmt(softV):'')+'</div>';
   h += '<div class="detail-row"><b>Clade:</b> '+esc(sp.clade)+' · '+esc(sp.family)+' · Searched: '+esc(sp.searched_sets.join(', '))+'</div></div>';
-  if(v > 0){
-    let alnLinks = viewerLink(alnBase+'.core.fa','Core')+viewerLink(alnBase+'.best50.fa','Best50')+viewerLink(alnBase+'.subfam.fa','SubFam');
+  const showInitialStep1 = SQ2_INITIAL_STEP1_SFS.has(sf) && hasSq2InitialStep1(sp);
+  if(v > 0 || showInitialStep1){
+    let alnLinks = v > 0 ? viewerLink(alnBase+'.core.fa','Core')+viewerLink(alnBase+'.best50.fa','Best50')+viewerLink(alnBase+'.subfam.fa','SubFam') : '';
+    if(showInitialStep1) alnLinks += sq2InitialStep1Link(taxon);
     h += '<div class="aln-links"><strong>Alignments:</strong> '+alnLinks+'</div>';
   }
   // Per-species consensus sequence

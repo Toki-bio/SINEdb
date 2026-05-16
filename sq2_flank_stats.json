@@ -1,6 +1,7 @@
 {
   "abnormal_clustered_loci": 204595,
   "analyzed_loci": 6168536,
+  "candidate_limit_rows": 0,
   "category_totals": {
     "dispersed_cross_contig_loci": 125821,
     "same_contig_local_loci": 49437,
@@ -11,6 +12,7 @@
   "coordinate_rows_with_skipped_large_buckets": 9,
   "normal_singleton_loci": 5963941,
   "pct_abnormal_clustered_loci": 3.3168,
+  "skipped_bucket_rows": 9,
   "species_count": 136,
   "subfamily_rows": 408,
   "top_species": [
