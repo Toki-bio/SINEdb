@@ -32,6 +32,38 @@
       "tracker_row": "Leech genome SINEs",
       "year": 2025,
       "access": "user-supplied PDF+supplementary (MDPI blocks all automated access)"
+    },
+    {
+      "id": "sineu_kojima2015",
+      "file": "manuscripts/sineu_kojima2015.md",
+      "family": "SINEU (3 families)",
+      "tracker_row": "SINEU (3 families)",
+      "year": 2015,
+      "access": "user-supplied supplementary zip (Europe PMC wrongly reported zero supplementary files)"
+    },
+    {
+      "id": "urop_kosushkin2026",
+      "file": "manuscripts/urop_kosushkin2026.md",
+      "family": "Urop",
+      "tracker_row": "Urop",
+      "year": 2026,
+      "access": "user's own original research data (not from the paper's PDF)"
+    },
+    {
+      "id": "afusine_kanhayuwa2016",
+      "file": "manuscripts/afusine_kanhayuwa2016.md",
+      "family": "AfuSINE2/AfuSINE3 (×13)",
+      "tracker_row": "AfuSINE2/AfuSINE3 (×13)",
+      "year": 2016,
+      "access": "open access (PLoS ONE) - sequences in the paper's own Table 1"
+    },
+    {
+      "id": "sine28_longo2015",
+      "file": "manuscripts/sine28_longo2015.md",
+      "family": "SINE28",
+      "tracker_row": "SINE28",
+      "year": 2015,
+      "access": "open access (GBE) - loci from supplementary table, fetched via UCSC"
     }
   ]
 }
