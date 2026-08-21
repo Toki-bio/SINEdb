@@ -751,13 +751,13 @@ body.gate-locked > .wrap { display: none; }
           <td><span class="pill ok">Open access (BMC)</span></td>
           <td class="notes">5 named families in P. xylostella (PxSE1&ndash;3 tRNA-derived, PxSE4&ndash;5 5S-rRNA-derived) plus evidence of horizontal transfer into baculovirus genomes &mdash; a genuinely large, multi-species gap.</td>
         </tr>
-        <tr data-family="9 unnamed SINEs" data-status="0" data-cite="Firsov et al. 2022" data-taxon="Blattella germanica (German cockroach)" data-access="2">
-          <td class="family">9 SINEs <span class="sub">first description in this species</span></td>
+        <tr data-family="Sbg1&ndash;Sbg9" data-status="0" data-cite="Firsov et al. 2022" data-taxon="Blattella germanica (German cockroach)" data-access="2">
+          <td class="family">Sbg1&ndash;Sbg9 <span class="sub">first description in this species</span></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
           <td class="cite"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0266699" target="_blank" rel="noopener">Firsov, Kosherova &amp; Mukha 2022</a><span class="venue">PLOS ONE 17(6):e0266699</span></td>
           <td class="taxon">German cockroach</td>
           <td><span class="pill ok">Open access</span></td>
-          <td class="notes">First SINEs described in this species/order via genomic + small-RNA-seq data (tRNA-promoter-driven, 7 of 9 mapped to piRNA clusters). Full text fetched and checked directly (PLOS full HTML, not just abstract): the paper genuinely does not assign individual family names/IDs to the 9 SINEs in its main text &mdash; they're referenced generically, unlike most other rows here. A supplementary table (S1 Table) may have per-locus detail not captured in this fetch.</td>
+          <td class="notes"><strong>Correction (2026-08-21, user-caught):</strong> the 9 SINEs ARE individually named - Sbg1 through Sbg9 (Sbg = "SINE B. germanica") - directly quoted from the paper's own text: "we created a database containing all copies of Sbg1-Sbg9 localized in the genome". This was wrongly logged as "genuinely unnamed" earlier: the full text had already been fetched, but the search for names used only literal patterns like "SINE1"/"designated"/"named" and never tried the actual species-abbreviation naming convention used here - a real search-method failure, not a real absence. First SINEs described in this species/order via genomic + small-RNA-seq data (tRNA-promoter-driven, 7 of 9 mapped to piRNA clusters).</td>
         </tr>
         <tr data-family="21-species bivalve SINE set" data-status="0" data-cite="Peona, Martelossi et al. 2024" data-taxon="21 mollusk/bivalve species" data-access="2">
           <td class="family">Dozens of named families <span class="sub">e.g. Oden_SINE-1&ndash;5, Rphil_SINE-1/4/5, Ssol_SINE-2/5/6...</span></td>
@@ -810,7 +810,7 @@ body.gate-locked > .wrap { display: none; }
     <div id="dfam-orphaned-list"><p style="color: var(--ink-soft);">Loading Dfam entries&hellip;</p></div>
     <p style="margin-top: 10px;"><a href="literature-gap-tracker_dfam_citation_report.txt" target="_blank" rel="noopener">full citation-check report (241 species)</a></p>
     <h3>RepBase</h3>
-    <p style="color: var(--ink-soft); font-size: 13.5px;">This cross-reference has NOT been done. RepBase (girinst.org) is behind a subscription/registration requirement, not freely queryable via an open API the way Dfam is - confirmed directly against girinst.org's own site (its navigation reads "Subscription... Register... Subscribe... Download"). Programmatic bulk cross-referencing the way this page does for Dfam is not currently possible without a paid/licensed account; a manual, account-holder-driven check would be needed instead. No RepBase entries have been checked or included here.</p>
+    <p style="color: var(--ink-soft); font-size: 13.5px;"><strong>Correction (2026-08-21):</strong> RepBase's own site (girinst.org) is genuinely subscription-gated - confirmed directly (nav reads "Subscription... Register... Subscribe... Download") - but its SINE family <em>content</em> is not actually locked away: Dfam has absorbed RepBase's consensus sequences under a CC0 public-domain license (confirmed directly against Dfam's own release notes) and every Dfam record carries the original RepBase family name as a cross-reference (e.g. querying <code>dfam.org/api/families?name=AluJb&amp;format=full</code> returns <code>"aliases":[{"database":"Repbase","alias":"AluJb"}]</code> alongside the taxon and consensus sequence). This means the Dfam cross-reference already done throughout this page substantially covers what a "RepBase cross-reference" would have found - not a separate unfinished task. girinst.org itself (as of this check) also has a news item stating GIRI plans to release RepBase under CC0 and partner formally with Dfam, though the live RepBase site still gates its own pages pending that.</p>
   </div>
 
   <footer class="foot">
@@ -931,7 +931,7 @@ var CITATION_GRAPH_DATA = {
     { "id": "olive",        "label": "Olive tree SINEs",             "cite": "Barghini et al. 2016",      "status": "unverified",        "taxon": "Olea europaea",          "sinebase_edge": "confirmed" },
     { "id": "sauria",       "label": "Sauria (Bov-B associated)",    "cite": "Nakatsuka & Ohshima 2026",  "status": "existing-updated",  "taxon": "Squamata" },
     { "id": "pxse1-5",      "label": "PxSE1-5 (+18 related)",        "cite": "Han et al. 2021",           "status": "new",               "taxon": "Lepidoptera + baculovirus" },
-    { "id": "cockroach",    "label": "9 unnamed SINEs",              "cite": "Firsov et al. 2022",        "status": "new",               "taxon": "Blattella germanica" }
+    { "id": "cockroach",    "label": "Sbg1-Sbg9",                   "cite": "Firsov et al. 2022",        "status": "new",               "taxon": "Blattella germanica" }
   ],
   "edges_confirmed_cites_sinebase": [
     "urop", "can", "b2dipves", "angio-sine", "amphioxus", "sine28", "grass-sines", "cmisines", "hcd-bivalve", "olive", "salis"
