@@ -509,7 +509,7 @@ body.gate-locked > .wrap { display: none; }
 
   <div class="graph-section">
     <h2>Citation Graph</h2>
-    <p class="graph-sub">How these 31 publications connect to SINEBase and to each other. Hover a dot to see its name, click to jump to its row in the table below, drag to reposition. Individual names are hidden by default - with this many nodes packed around one hub, showing them all at once made every label overlap.</p>
+    <p class="graph-sub">How these 31 publications connect to SINEBase and to each other. Click a dot to jump to its row in the table below, drag to reposition. Labels auto-space themselves so they stay readable even with this many nodes packed around one hub - a thin line connects a label back to its dot whenever it had to be nudged away from directly underneath.</p>
     <div class="graph-controls">
       <label><input type="radio" name="edge-mode" value="citation" checked> Citation edges</label>
       <label><input type="radio" name="edge-mode" value="authors"> Shared-author clusters</label>
@@ -1338,43 +1338,95 @@ var OLDER_WORKS_DATA = {
       }
     });
 
-    // Permanently drawing every satellite's label produces unreadable overlap
-    // once there are more than a handful of nodes packed near the hub (seen
-    // directly in a real screenshot - dozens of labels stacked on top of each
-    // other). Standard fix for dense force graphs: only the hub and bucket
-    // labels (few, meaningful as a fixed backdrop) stay always-on; individual
-    // publication labels only render on hover/drag, with the hovered node's
-    // label drawn last (on top of everything) so it's never itself obscured.
-    var alwaysLabeled = [];
-    var hoverLabeled = null;
-    nodes.forEach(function (n) {
-      if (n.isHub || n.isBucket) alwaysLabeled.push(n);
-      else if (n === hoveredNode || n === draggedNode) hoverLabeled = n;
-    });
-    function drawLabel(n) {
+    // All labels stay visible (per feedback - hiding them removes real
+    // information, the actual problem was that they overlapped). Real fix:
+    // greedy label placement. Each node's default anchor is straight below
+    // it; if that box collides with an already-placed label, try a few
+    // alternate anchors (above/left/right), and failing that push the label
+    // further out along the hub->node radial direction until it clears
+    // everything already placed. When a label ends up displaced from its
+    // default position, draw a thin leader line back to its node so it's
+    // still unambiguous which label belongs to which dot.
+    ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+    var placed = []; // {x, y, w, h} rects already committed this frame
+    function rectsOverlap(a, b) {
+      return !(a.x + a.w < b.x || b.x + b.w < a.x || a.y + a.h < b.y || b.y + b.h < a.y);
+    }
+    function overlapsAny(rect) {
+      for (var k = 0; k < placed.length; k++) if (rectsOverlap(rect, placed[k])) return true;
+      return false;
+    }
+    // Hub first (highest priority, biggest font), then satellites in
+    // whatever order they're stored - stable enough frame-to-frame that
+    // labels don't visibly jitter once the layout settles.
+    var hubNode = nodes.filter(function (n) { return n.isHub; })[0] || { x: 0, y: 0 };
+    var order = nodes.filter(function (n) { return n.isHub; })
+      .concat(nodes.filter(function (n) { return !n.isHub; }));
+
+    order.forEach(function (n) {
       var sx = (n.x * cos - n.y * sin) * viewScale + viewX;
       var sy = (n.x * sin + n.y * cos) * viewScale + viewY;
       var r = n.radius * sizeScale;
       var fs = (n.isHub ? 13 : 11) * sizeScale;
       var label = n.label;
       if (label.length > 22 && !n.isHub) label = label.substring(0, 20) + '\u2026';
-      if (n === hoverLabeled) {
-        // small backing plate so the on-demand label is legible over other
-        // nodes/edges it happens to land on, not just floating text
-        ctx.font = fs + 'px -apple-system, "Segoe UI", sans-serif';
-        var w = ctx.measureText(label).width;
-        ctx.fillStyle = colors.surface;
-        ctx.globalAlpha = 0.9;
-        ctx.fillRect(sx - w / 2 - 4, sy + r + 2 * sizeScale, w + 8, fs + 6);
+      ctx.font = (n.isHub ? '600 ' : '') + fs + 'px -apple-system, "Segoe UI", sans-serif';
+      var w = ctx.measureText(label).width;
+      var h = fs + 4;
+
+      // Candidate anchors around the node: below, above, right, left.
+      var gap = 3 * sizeScale;
+      var candidates = [
+        { x: sx - w / 2, y: sy + r + gap },
+        { x: sx - w / 2, y: sy - r - gap - h },
+        { x: sx + r + gap, y: sy - h / 2 },
+        { x: sx - r - gap - w, y: sy - h / 2 },
+      ];
+      var chosen = null;
+      for (var c = 0; c < candidates.length; c++) {
+        var rect = { x: candidates[c].x, y: candidates[c].y, w: w, h: h };
+        if (!overlapsAny(rect)) { chosen = rect; break; }
+      }
+      if (!chosen) {
+        // Nothing clear nearby - push outward along the hub->node radial
+        // direction in small steps until the label finds open space (capped
+        // so it can't run away indefinitely on a crowded frame).
+        var dx = n.x - hubNode.x;
+        var dy = n.y - hubNode.y;
+        var dist = Math.sqrt(dx * dx + dy * dy) || 1;
+        var ux = dx / dist, uy = dy / dist;
+        var step = (r + gap);
+        var tries = 0;
+        var rect;
+        do {
+          var ex = sx + ux * (r + gap + tries * step);
+          var ey = sy + uy * (r + gap + tries * step);
+          rect = { x: ex - w / 2, y: ey - h / 2, w: w, h: h };
+          tries++;
+        } while (overlapsAny(rect) && tries < 12);
+        chosen = rect;
+      }
+      placed.push(chosen);
+
+      // Leader line if the label ended up more than a few px from its
+      // default just-below position, so displaced labels stay traceable.
+      var defaultY = sy + r + gap;
+      var labelCenterX = chosen.x + chosen.w / 2, labelCenterY = chosen.y + chosen.h / 2;
+      if (Math.abs(chosen.x - (sx - w / 2)) > 2 || Math.abs(chosen.y - defaultY) > 2) {
+        ctx.strokeStyle = colors.line; ctx.lineWidth = 1; ctx.globalAlpha = 0.6;
+        ctx.beginPath(); ctx.moveTo(sx, sy); ctx.lineTo(labelCenterX, labelCenterY); ctx.stroke();
+        ctx.globalAlpha = 1;
+      }
+
+      if (n === hoveredNode || n === draggedNode) {
+        ctx.fillStyle = colors.surface; ctx.globalAlpha = 0.9;
+        ctx.fillRect(chosen.x - 3, chosen.y - 2, chosen.w + 6, chosen.h + 4);
         ctx.globalAlpha = 1;
       }
       ctx.fillStyle = n.isHub ? colors.ink : colors.inkSoft;
       ctx.font = (n.isHub ? '600 ' : '') + fs + 'px -apple-system, "Segoe UI", sans-serif';
-      ctx.textAlign = 'center'; ctx.textBaseline = 'top';
-      ctx.fillText(label, sx, sy + r + 4 * sizeScale);
-    }
-    alwaysLabeled.forEach(drawLabel);
-    if (hoverLabeled) drawLabel(hoverLabeled);
+      ctx.fillText(label, chosen.x + chosen.w / 2, chosen.y);
+    });
   }
 
   function findNodeAt(mx, my) {
