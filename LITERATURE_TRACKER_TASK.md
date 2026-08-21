@@ -4,14 +4,12 @@
 `literature-gap-tracker.html` already exists in this repo (a pre-seeded working
 copy of a SINE literature gap tracker built and verified elsewhere - it
 renders correctly, has a working interactive citation graph with pan/zoom/
-rotate, a sortable table, and no console errors). This repo (SINEdb, a
-GitHub Pages site) already has several other standalone HTML pages at the
-root (`index.html`, `unified.html`, `squamata.html`, etc.), each paired with
-a sibling `*_data.json` file that the page `fetch()`s at load time rather
-than embedding data inline - **this is the established convention in this
-repo and this task should follow it**, not the inline-embedding approach
-`literature-gap-tracker.html` currently uses (that approach was a workaround
-for a different hosting environment's restrictions, which don't apply here).
+rotate, a sortable table, and no console errors). This is a GitHub Pages
+static site. Other pages in this site load their data via `fetch()` of a
+sibling JSON file at page load, rather than embedding data inline in a
+`<script>` block - follow that same pattern here. The inline-embedding this
+page currently uses was a workaround for a different hosting environment's
+content-security restrictions, which don't apply on this site.
 
 Four small data files are already provided as siblings - read and use them,
 do not modify them:
@@ -21,7 +19,7 @@ do not modify them:
   data (currently embedded inline as `OLDER_WORKS_DATA`)
 - `literature-gap-tracker_orphaned_dfam.json` - 19 Dfam SINE entries with
   genuinely zero attached citation (raw automated pipeline deposits, not
-  yet linked to any paper) - NOT currently used anywhere in the HTML, needs
+  yet linked to any paper) - not currently used anywhere in the HTML, needs
   a new section built for it (see Requirement 3 below)
 - `literature-gap-tracker_dfam_citation_report.txt` - a full text report
   (241 species checked) - just needs to be linked as a downloadable/viewable
@@ -93,29 +91,22 @@ Inside this section, two subsections:
   or pretend this was checked. Just state plainly this is a planned future
   addition.
 
-## Requirement 4: minimal nav link back to the main site
-
-Add one small link near the top of the page (below the `<h1>`, above the
-summary stats) back to `index.html`, e.g. "&larr; Back to SINE-KB". Do not
-add anything else that touches navigation elsewhere in the page.
-
 ## Ground rules - important, read carefully
 - Do NOT modify any of the four `literature-gap-tracker_*.json`/`.txt` sibling
   files - they are already-verified data, read-only for this task.
-- Do NOT touch, rename, or delete ANY other file in this repository -
-  `index.html`, `unified.html`, `squamata.html`, `data.json`,
-  `unified_data.json`, anything under `alignments/`, `plots/`,
-  `sub_subfamilies/`, `viz/`, `MSA-viewer/`, etc. This task's ONLY allowed
-  edit target is `literature-gap-tracker.html` itself. If you believe a
-  change elsewhere is needed, stop and describe it in the progress file
-  instead of making it.
+- This task's ONLY allowed edit target is `literature-gap-tracker.html`
+  itself. Do not touch, rename, or delete any other file that exists in this
+  repository, whatever it may be called. Do not add a navigation link to any
+  other page - that will be handled separately, outside this task. If you
+  believe a change to some other file is needed, stop and describe it in the
+  progress file instead of making it.
 - Commit incrementally: externalize the data fetch and commit, then add the
   subsection headers and commit, then add the orphaned-entries section and
-  commit, then the nav link and commit - not one giant final commit.
+  commit - not one giant final commit.
 - Verify your own JS changes are syntactically sound before committing
-  (`node -c` won't work on an HTML file, but do a careful manual read-through
-  of every brace/paren you touch, especially around the fetch/.then()
-  refactor, since a mismatched brace there would break the entire page).
+  (a mismatched brace around the fetch/.then() refactor would break the
+  entire page) - do a careful manual read-through of every brace/paren you
+  touch.
 - When done, describe in your progress file exactly what to check (open the
   page locally via a simple static server, confirm the graph renders, confirm
   all 4 main sections + the 2 orphaned subsections are visible, confirm
