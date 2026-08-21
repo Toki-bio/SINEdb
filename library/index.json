@@ -24,6 +24,14 @@
       "tracker_row": "Angio-SINE (24 families)",
       "year": 2019,
       "access": "user-supplied PDF (automated fetch had marked this NOT_AVAILABLE/paywalled)"
+    },
+    {
+      "id": "leech_muller2025",
+      "file": "manuscripts/leech_muller2025.md",
+      "family": "HvSINE1-4 + 18 more (Leech SINEs)",
+      "tracker_row": "Leech genome SINEs",
+      "year": 2025,
+      "access": "user-supplied PDF+supplementary (MDPI blocks all automated access)"
     }
   ]
 }
