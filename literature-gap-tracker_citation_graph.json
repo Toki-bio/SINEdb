@@ -35,6 +35,8 @@
     { "id": "pxse1-5",      "label": "PxSE1-5 (+18 related)",        "cite": "Han et al. 2021",           "status": "new",               "taxon": "Lepidoptera + baculovirus" },
     { "id": "cockroach",    "label": "Sbg1-Sbg9",                   "cite": "Firsov et al. 2022",        "status": "new",               "taxon": "Blattella germanica" },
     { "id": "amaranthaceae","label": "22 Amaranthaceae SINE families","cite": "Schwichtenberg et al. 2015", "status": "new",             "taxon": "Amaranthaceae" },
+    { "id": "sineu",        "label": "SINEU (3 families)",           "cite": "Kojima 2015",                "status": "new",             "taxon": "Crocodilia" },
+    { "id": "passerine",    "label": "De-novo passerine SINEs",      "cite": "Suh, Bachg et al. 2017",     "status": "new",             "taxon": "Passeriformes" },
     { "id": "leech",        "label": "Leech SINEs (unnamed)",        "cite": "Müller 2025",           "status": "new",               "taxon": "Hirudinida (leeches)" },
     { "id": "coilia",       "label": "Coilia nasus SINE",            "cite": "Liu, Yang et al. 2020",      "status": "new",               "taxon": "Coilia nasus (fish)" }
   ],
