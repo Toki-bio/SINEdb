@@ -508,7 +508,7 @@ body.gate-locked > .wrap { display: none; }
 
   <div class="graph-section">
     <h2>Citation Graph</h2>
-    <p class="graph-sub">How these 26 publications connect to SINEBase and to each other. Click any node to jump to its row in the table below. Drag nodes to reposition.</p>
+    <p class="graph-sub">How these 31 publications connect to SINEBase and to each other. Hover a dot to see its name, click to jump to its row in the table below, drag to reposition. Individual names are hidden by default - with this many nodes packed around one hub, showing them all at once made every label overlap.</p>
     <div class="graph-controls">
       <label><input type="radio" name="edge-mode" value="citation" checked> Citation edges</label>
       <label><input type="radio" name="edge-mode" value="authors"> Shared-author clusters</label>
@@ -1219,10 +1219,26 @@ var OLDER_WORKS_DATA = {
         var dx = nodes[i].x - nodes[j].x;
         var dy = nodes[i].y - nodes[j].y;
         var d2 = dx * dx + dy * dy;
-        if (d2 < 1) d2 = 1;
-        var d = Math.sqrt(d2);
+        // Two nodes landing on the *exact* same coordinates (a real,
+        // observed failure mode - with enough nodes/iterations, some pair
+        // eventually converges to floating-point-identical positions) used
+        // to zero out this force entirely: dx=dy=0 makes (dx/d)*f collapse
+        // to 0 regardless of the d2 floor below, so that pair could never
+        // repel apart again - and once stuck, everything else piles on top
+        // of them via the spring+gravity pull, collapsing the whole graph
+        // to one point. Give an exactly-coincident pair a random push
+        // direction instead of a zero vector so they can separate.
+        var dirX = dx, dirY = dy;
+        if (d2 === 0) {
+          var randAngle = Math.random() * 2 * Math.PI;
+          dirX = Math.cos(randAngle); dirY = Math.sin(randAngle);
+          d2 = 1;
+        } else if (d2 < 1) {
+          d2 = 1;
+        }
+        var d = Math.sqrt(dirX * dirX + dirY * dirY) || 1;
         var f = repulsion / d2;
-        var fx = (dx / d) * f, fy = (dy / d) * f;
+        var fx = (dirX / d) * f, fy = (dirY / d) * f;
         nodes[i].vx += fx; nodes[i].vy += fy;
         nodes[j].vx -= fx; nodes[j].vy -= fy;
       }
@@ -1321,18 +1337,43 @@ var OLDER_WORKS_DATA = {
       }
     });
 
+    // Permanently drawing every satellite's label produces unreadable overlap
+    // once there are more than a handful of nodes packed near the hub (seen
+    // directly in a real screenshot - dozens of labels stacked on top of each
+    // other). Standard fix for dense force graphs: only the hub and bucket
+    // labels (few, meaningful as a fixed backdrop) stay always-on; individual
+    // publication labels only render on hover/drag, with the hovered node's
+    // label drawn last (on top of everything) so it's never itself obscured.
+    var alwaysLabeled = [];
+    var hoverLabeled = null;
     nodes.forEach(function (n) {
+      if (n.isHub || n.isBucket) alwaysLabeled.push(n);
+      else if (n === hoveredNode || n === draggedNode) hoverLabeled = n;
+    });
+    function drawLabel(n) {
       var sx = (n.x * cos - n.y * sin) * viewScale + viewX;
       var sy = (n.x * sin + n.y * cos) * viewScale + viewY;
       var r = n.radius * sizeScale;
-      ctx.fillStyle = n.isHub ? colors.ink : colors.inkSoft;
       var fs = (n.isHub ? 13 : 11) * sizeScale;
-      ctx.font = (n.isHub ? '600 ' : '') + fs + 'px -apple-system, "Segoe UI", sans-serif';
-      ctx.textAlign = 'center'; ctx.textBaseline = 'top';
       var label = n.label;
       if (label.length > 22 && !n.isHub) label = label.substring(0, 20) + '\u2026';
+      if (n === hoverLabeled) {
+        // small backing plate so the on-demand label is legible over other
+        // nodes/edges it happens to land on, not just floating text
+        ctx.font = fs + 'px -apple-system, "Segoe UI", sans-serif';
+        var w = ctx.measureText(label).width;
+        ctx.fillStyle = colors.surface;
+        ctx.globalAlpha = 0.9;
+        ctx.fillRect(sx - w / 2 - 4, sy + r + 2 * sizeScale, w + 8, fs + 6);
+        ctx.globalAlpha = 1;
+      }
+      ctx.fillStyle = n.isHub ? colors.ink : colors.inkSoft;
+      ctx.font = (n.isHub ? '600 ' : '') + fs + 'px -apple-system, "Segoe UI", sans-serif';
+      ctx.textAlign = 'center'; ctx.textBaseline = 'top';
       ctx.fillText(label, sx, sy + r + 4 * sizeScale);
-    });
+    }
+    alwaysLabeled.forEach(drawLabel);
+    if (hoverLabeled) drawLabel(hoverLabeled);
   }
 
   function findNodeAt(mx, my) {
