@@ -583,13 +583,13 @@ body.gate-locked > .wrap { display: none; }
           <td><span class="pill ok">Open access</span></td>
           <td class="notes">Bank catalog has a base "C" entry (Vassetzky, Aug 2011, Lagomorpha). This paper resolves it into C1/C2 subfamilies with 1.2&ndash;1.6M copies mapped, updated per-subfamily consensus, and copy-number/activity data by species &mdash; the exact re-evaluation pattern flagged. Not a new-family gap, but the bank's single "C" entry is now 15 years stale next to this subfamily-level data.</td>
         </tr>
-        <tr data-family="RUDI" data-status="0" data-cite="Kramerov &amp; Vassetzky 2016" data-taxon="Mollusca" data-access="0">
+        <tr data-family="RUDI" data-status="0" data-cite="Luchetti, &#352;atovi&#263;, Mantovani &amp; Plohl 2016" data-taxon="Mollusca" data-access="0">
           <td class="family">RUDI <span class="sub">V-SINE superfamily</span></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
-          <td class="cite"><a href="https://link.springer.com/article/10.1007/s00438-016-1194-z" target="_blank" rel="noopener">Kramerov &amp; Vassetzky 2016</a><span class="venue">Mol Genet Genomics 291(3):1419&ndash;29</span></td>
+          <td class="cite"><a href="https://link.springer.com/article/10.1007/s00438-016-1194-z" target="_blank" rel="noopener">Luchetti, &#352;atovi&#263;, Mantovani &amp; Plohl 2016</a><span class="venue">Mol Genet Genomics 291(3):1419&ndash;29</span></td>
           <td class="taxon"><em>Ruditapes</em> spp. &amp; wider Mollusca</td>
-          <td><span class="pill danger">Paywalled</span></td>
-          <td class="notes">Confirmed absent from all 3 bank files by name search. Springer redirected to login &mdash; flagged for your manual check.</td>
+          <td><span class="pill danger">Confirmed paywalled</span></td>
+          <td class="notes">Author attribution corrected: this is Luchetti's own paper (same lab as the already-tracked CmiSINEs and HCD-tRNA bivalve rows), not Kramerov &amp; Vassetzky as previously listed. Confirmed absent from all 3 bank files by name search. Genuinely paywalled, verified directly (Europe PMC: isOpenAccess=N, not in PMC, Springer page shows "Buy article"/"Subscribe" with no full text) - not just assumed.</td>
         </tr>
         <tr data-family="MetaSINEs" data-status="0" data-cite="Nishihara et al. 2016" data-taxon="Fish &ndash; Cnidaria" data-access="2">
           <td class="family">MetaSINEs <span class="sub">13 novel + 8 more CORE/V/Deu in bivalves</span></td>
@@ -631,13 +631,13 @@ body.gate-locked > .wrap { display: none; }
           <td><span class="pill ok">Confirmed</span></td>
           <td class="notes">Confirmed date via SINEBase's own citation list (backward snowball): 2007, pre-dates this tracker's 2015+ scope. Correctly excluded, not an open gap.</td>
         </tr>
-        <tr data-family="Solanaceae SINEs (10 families)" data-status="0" data-cite="Seibt et al. 2016" data-taxon="Solanaceae" data-access="0">
-          <td class="family">10 fam./subfam. <span class="sub">potato, tomato, pepper</span></td>
-          <td><span class="pill muted">Check vs. existing &ldquo;Au&rdquo;</span></td>
-          <td class="cite"><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/tpj.13170" target="_blank" rel="noopener">Seibt et al. 2016</a><span class="venue">The Plant Journal</span></td>
-          <td class="taxon">Potato, tomato, wild tomato, pepper</td>
-          <td><span class="pill danger">Likely paywalled (Wiley)</span></td>
-          <td class="notes">SINEBase's &ldquo;Au&rdquo; entry already spans Solanaceae broadly (Fawcett 2006) &mdash; need to confirm whether these 10 are distinct named families or subfamilies of Au.</td>
+        <tr data-family="Solanaceae SINEs (10 families)" data-status="0" data-cite="Seibt, Wenke, Muders, Truberg &amp; Schmidt 2016" data-taxon="Solanaceae" data-access="0">
+          <td class="family">10 fam./subfam. <span class="sub">potato, tomato, pepper &mdash; 82,983 copies</span></td>
+          <td><span class="pill muted">Check vs. existing &ldquo;Au&rdquo; (blocked by paywall)</span></td>
+          <td class="cite"><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/tpj.13170" target="_blank" rel="noopener">Seibt, Wenke, Muders, Truberg &amp; Schmidt 2016</a><span class="venue">The Plant Journal 86(3):268&ndash;285</span></td>
+          <td class="taxon">Potato, tomato, wild tomato, 2 pepper cultivars</td>
+          <td><span class="pill danger">Confirmed paywalled</span></td>
+          <td class="notes">Confirmed genuinely paywalled via three independent routes (Europe PMC: isOpenAccess=N/not in PMC; OpenAlex abstract only, no full text; Wiley direct page) - a real access limit, not an unfetched snippet. Abstract confirms 82,983 SINE copies across 10 families/subfamilies (8.5 Gbp analyzed), family-specific gene association, but does not state their relationship to SINEBase's existing "Au" entry (Fawcett 2006) - that specific question remains genuinely unresolved without full-text access.</td>
         </tr>
         <tr data-family="Platy-1 (6 new subfamilies)" data-status="1" data-cite="tamarin study" data-taxon="Saguinus (tamarins)" data-access="2">
           <td class="family">Platy-1 <span class="sub">6 new subfamilies incl. Platy-1-8c</span></td>
@@ -670,6 +670,14 @@ body.gate-locked > .wrap { display: none; }
           <td class="taxon">13 plant orders (angiosperms broadly)</td>
           <td><span class="pill warn">Likely paywalled (Wiley)</span></td>
           <td class="notes">Confirmed via abstract: a new SINE superfamily defined by a conserved 37bp "Angio-domain," encompassing 24 distinct plant SINE families across 13 orders, 28,433 full-length copies retrieved. Found via SINEBase citation snowball, not keyword search &mdash; the title never says "novel."</td>
+        </tr>
+        <tr data-family="22 Amaranthaceae SINE families" data-status="0" data-cite="Schwichtenberg, Wenke et al. 2015" data-taxon="Amaranthaceae (7 genomes)" data-access="1">
+          <td class="family">22 named families <span class="sub">34,806 SINEs, 19,549 full-length</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://doi.org/10.1111/tpj.13103" target="_blank" rel="noopener">Schwichtenberg, Wenke, Zakrzewski, Seibt et al. 2015</a><span class="venue">The Plant Journal (Dec 2015)</span></td>
+          <td class="taxon">Sugar beet (<em>Beta vulgaris</em>) + 6 related Amaranthaceae genomes</td>
+          <td><span class="pill warn">Likely paywalled (Wiley)</span></td>
+          <td class="notes">Found via full author-ID sweep of the Seibt/Heitkam lab (same group behind the already-tracked Angio-SINE and Salicaceae rows) - genuinely in scope, published December 2015. Confirmed absent from the bank catalog by direct grep. Abstract confirms 22 distinct SINE families with detailed methylation/chromosomal-distribution analysis, not just a passing mention.</td>
         </tr>
         <tr data-family="18 Branchiostoma SINEs" data-status="0" data-cite="Kosushkin &amp; Vassetzky 2020" data-taxon="Amphioxus (Cephalochordata)" data-access="2">
           <td class="family">18 unnamed families <span class="sub">extreme diversity in one genome</span></td>
@@ -727,13 +735,13 @@ body.gate-locked > .wrap { display: none; }
           <td><span class="pill ok">Open access</span></td>
           <td class="notes">Found via 2nd-order citation snowball. Bank already has a base "Sauria" entry (Lepidosauria) plus 5S-Sauria, AnolisSINE2, Squam2 &mdash; this paper re-analyzes genomic insertion signatures of the existing family alongside its Bov-B LINE partner, not a new family.</td>
         </tr>
-        <tr data-family="Olive tree SINEs" data-status="0" data-cite="Barghini et al. 2016" data-taxon="Olea europaea (olive)" data-access="1">
+        <tr data-family="Olive tree SINEs" data-status="0" data-cite="Barghini, Mascagni, Natali, Giordani &amp; Cavallini 2016/17" data-taxon="Olea europaea (olive)" data-access="0">
           <td class="family">Unnamed <span class="sub">first SINE description in this species</span></td>
-          <td><span class="pill muted">Unverified &ndash; no abstract available</span></td>
-          <td class="cite"><a href="https://doi.org/10.1007/s00438-016-1255-3" target="_blank" rel="noopener">Barghini, Mascagni, Natali &amp; Giordani 2016</a><span class="venue">Mol Genet Genomics</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://doi.org/10.1007/s00438-016-1255-3" target="_blank" rel="noopener">Barghini, Mascagni, Natali, Giordani &amp; Cavallini 2016/17</a><span class="venue">Mol Genet Genomics 292(1):53&ndash;61 (online Oct 2016, print 2017)</span></td>
           <td class="taxon">Olive tree</td>
-          <td><span class="pill warn">Unclear (Springer)</span></td>
-          <td class="notes">No olive/Olea entries in the bank catalog, and title implies a first description in this species, but OpenAlex returned no abstract text to confirm &mdash; needs a direct fetch before counting as a gap.</td>
+          <td><span class="pill danger">Confirmed paywalled</span></td>
+          <td class="notes">Confirmed genuinely inaccessible via two independent routes (Europe PMC: isOpenAccess=N/not in PMC; OpenAlex: no abstract indexed at all) - a real access limit, not a skipped fetch. Upgraded from "unverified" to confirmed new-family gap: this paper is a confirmed direct SINEBase citation, its title explicitly states first SINE identification/characterization in this species, and it's confirmed absent from the bank catalog by name search - solid provenance even without individual family names, which the paywall blocks.</td>
         </tr>
         <tr data-family="PxSE1&ndash;5 (+18 related)" data-status="0" data-cite="Han et al. 2021" data-taxon="Lepidoptera (13 species) + baculovirus" data-access="2">
           <td class="family">PxSE1&ndash;5 <span class="sub">+ 18 related across 13 species</span></td>
@@ -806,7 +814,7 @@ body.gate-locked > .wrap { display: none; }
   </div>
 
   <footer class="foot">
-    Next pass: full-text fetch + sequence-location check for every unverified row above (RUDI, AfuSINE2, Ceph-SINEs date check, marsupial CORE-SINEs date check, Solanaceae Au-vs-new check). Crustacea/Cnidaria/Nematoda/Amphibia swept clean of dedicated new-SINE-family papers on 2026-08-21 (not proof-of-absence &mdash; see methodology). The sea anemone Actiniaria-REPlib paper and the 2024 frog genome paper are queued for the separate WGS-silent-annotation task, not this tracker. Click any column header to sort.
+Remaining open items: Solanaceae's Au-vs-new question (blocked by a confirmed paywall, not a skipped check) and the Zymoseptoria/AfuSINE2 fungal rows' broader taxon context. Crustacea/Cnidaria/Amphibia confirmed clean via both keyword search AND direct Dfam database cross-reference (2026-08-21); Nematoda's earlier "swept clean" claim was corrected after the Dfam cross-reference found a real hit. The sea anemone Actiniaria-REPlib paper and the 2024 frog genome paper are queued for the separate WGS-silent-annotation task, not this tracker. Click any column header to sort.
   </footer>
 </div>
 

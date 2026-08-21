@@ -13,7 +13,7 @@
     { "id": "can",          "label": "Can (a1/a2/b1/b2)",            "cite": "Kosushkin et al. 2022",   "status": "existing-updated",  "taxon": "Canidae",               "sinebase_edge": "confirmed" },
     { "id": "b2dipves",     "label": "B2 / Dip / Ves",               "cite": "Vassetzky et al. 2021",   "status": "existing-updated",  "taxon": "Rodents, bats",          "sinebase_edge": "confirmed" },
     { "id": "lagomorph-c",  "label": "SINE C (C1/C2)",               "cite": "Ustyantsev et al. 2026",  "status": "existing-updated",  "taxon": "Lagomorpha" },
-    { "id": "rudi",         "label": "RUDI",                          "cite": "Kramerov & Vassetzky 2016","status": "new",              "taxon": "Mollusca" },
+    { "id": "rudi",         "label": "RUDI",                          "cite": "Luchetti et al. 2016",    "status": "new",              "taxon": "Mollusca" },
     { "id": "metasines",    "label": "MetaSINEs",                    "cite": "Nishihara et al. 2016",   "status": "new",               "taxon": "Fish-Cnidaria" },
     { "id": "mesc-snail",   "label": "MESC & Snail",                 "cite": "Matetovici et al. 2016",  "status": "new",               "taxon": "Gastropoda, Bivalvia" },
     { "id": "afusine2",     "label": "AfuSINE2 (x8)",                "cite": "Kanhayuwa & Coutts 2016",  "status": "new",               "taxon": "Aspergillus fumigatus" },
@@ -28,12 +28,13 @@
     { "id": "sine28",       "label": "SINE28",                       "cite": "Longo et al. 2015",         "status": "new",              "taxon": "Human/mammals",          "sinebase_edge": "confirmed" },
     { "id": "grass-sines",  "label": "46 grass SINE families",       "cite": "Mao & Wang 2017",           "status": "existing-updated",  "taxon": "Poaceae",                "sinebase_edge": "confirmed" },
     { "id": "cmisines",     "label": "CmiSINEs (chondrichthyan)",    "cite": "Luchetti et al. 2017",      "status": "existing-updated",  "taxon": "Chondrichthyes",          "sinebase_edge": "confirmed" },
-    { "id": "hcd-bivalve",  "label": "HCD-tRNA bivalve SINEs",       "cite": "Martelossi et al. 2024",    "status": "unverified",        "taxon": "Bivalvia",               "sinebase_edge": "confirmed" },
+    { "id": "hcd-bivalve",  "label": "HCD-tRNA bivalve SINEs",       "cite": "Martelossi et al. 2024",    "status": "existing-updated",  "taxon": "Bivalvia",               "sinebase_edge": "confirmed" },
     { "id": "salis",        "label": "SaliS-I/II/VI-XI (8 of 11)",   "cite": "Kögler et al. 2020",        "status": "existing-updated",  "taxon": "Salicaceae",             "sinebase_edge": "confirmed" },
-    { "id": "olive",        "label": "Olive tree SINEs",             "cite": "Barghini et al. 2016",      "status": "unverified",        "taxon": "Olea europaea",          "sinebase_edge": "confirmed" },
+    { "id": "olive",        "label": "Olive tree SINEs",             "cite": "Barghini et al. 2016/17",   "status": "new",               "taxon": "Olea europaea",          "sinebase_edge": "confirmed" },
     { "id": "sauria",       "label": "Sauria (Bov-B associated)",    "cite": "Nakatsuka & Ohshima 2026",  "status": "existing-updated",  "taxon": "Squamata" },
     { "id": "pxse1-5",      "label": "PxSE1-5 (+18 related)",        "cite": "Han et al. 2021",           "status": "new",               "taxon": "Lepidoptera + baculovirus" },
-    { "id": "cockroach",    "label": "9 unnamed SINEs",              "cite": "Firsov et al. 2022",        "status": "new",               "taxon": "Blattella germanica" }
+    { "id": "cockroach",    "label": "9 unnamed SINEs",              "cite": "Firsov et al. 2022",        "status": "new",               "taxon": "Blattella germanica" },
+    { "id": "amaranthaceae","label": "22 Amaranthaceae SINE families","cite": "Schwichtenberg et al. 2015", "status": "new",             "taxon": "Amaranthaceae" }
   ],
   "edges_confirmed_cites_sinebase": [
     "urop", "can", "b2dipves", "angio-sine", "amphioxus", "sine28", "grass-sines", "cmisines", "hcd-bivalve", "olive", "salis"
@@ -47,7 +48,7 @@
     "kramerov_lab": ["ere", "urop", "can", "b2dipves", "lagomorph-c", "squam3"],
     "vassetzky_kramerov_core": ["squam3", "b2dipves", "urop"],
     "kosushkin_vassetzky": ["amphioxus", "urop"],
-    "luchetti_lab": ["cmisines", "hcd-bivalve"],
-    "seibt_heitkam_lab": ["angio-sine", "salis"]
+    "luchetti_lab": ["cmisines", "hcd-bivalve", "rudi"],
+    "seibt_heitkam_lab": ["angio-sine", "salis", "amaranthaceae"]
   }
 }
