@@ -241,6 +241,17 @@ tbody tr.section-header:hover { background: var(--accent-soft); }
   color: var(--ink-soft);
   margin-top: 2px;
 }
+.family .seq-link {
+  display: inline-block;
+  font-family: -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  color: var(--accent, #0a7);
+  text-decoration: none;
+  margin-top: 2px;
+  margin-right: 4px;
+}
+.family .seq-link:hover { text-decoration: underline; }
 
 .pill {
   display: inline-block;
@@ -560,7 +571,7 @@ body.gate-locked > .wrap { display: none; }
           <td class="notes">SINEBase has EreA/B1/B2 for horse only; this paper adds rhino and tapir consensus sequences.</td>
         </tr>
         <tr data-family="Urop" data-status="0" data-cite="Kosushkin et al. 2026" data-taxon="Shrew mole (Uropsilus gracilis)" data-access="2">
-          <td class="family">Urop <span class="sub">dimeric 7SL-derived SINE, subfamilies a/b/c</span></td>
+          <td class="family">Urop <span class="sub">dimeric 7SL-derived SINE, subfamilies a/b/c</span> <a href="literature-gap-tracker_sequences/Urop_a-b-c_consensus_Kosushkin2026.fasta" class="seq-link" title="Download FASTA">[3 consensus]</a> <a href="literature-gap-tracker_sequences/Urop_300rawcopies_Kosushkin2026.fasta" class="seq-link" title="Download FASTA">[300 raw copies]</a></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
           <td class="cite"><a href="https://doi.org/10.1186/s12915-026-02550-6" target="_blank" rel="noopener">Kosushkin, Vassetzky, Borodulina &amp; Kramerov 2026</a><span class="venue">BMC Biology (bioRxiv preprint 2024)</span></td>
           <td class="taxon"><em>Uropsilus gracilis</em> (Talpidae, shrew mole)</td>
@@ -592,7 +603,7 @@ body.gate-locked > .wrap { display: none; }
           <td class="notes">Resolves SINEBase's single 15-year-old "C" entry into C1/C2 subfamilies with updated consensus and copy-number data.</td>
         </tr>
         <tr data-family="RUDI" data-status="0" data-cite="Luchetti, &#352;atovi&#263;, Mantovani &amp; Plohl 2016" data-taxon="Mollusca" data-access="0">
-          <td class="family">RUDI <span class="sub">V-SINE superfamily</span></td>
+          <td class="family">RUDI <span class="sub">V-SINE superfamily</span> <a href="literature-gap-tracker_sequences/RUDI_raw_clones_Luchetti2016.fasta" class="seq-link" title="Download FASTA">[3 raw clones]</a></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
           <td class="cite"><a href="https://link.springer.com/article/10.1007/s00438-016-1194-z" target="_blank" rel="noopener">Luchetti, &#352;atovi&#263;, Mantovani &amp; Plohl 2016</a><span class="venue">Mol Genet Genomics 291(3):1419&ndash;29</span></td>
           <td class="taxon"><em>Ruditapes</em> spp. &amp; wider Mollusca</td>
@@ -608,7 +619,7 @@ body.gate-locked > .wrap { display: none; }
           <td class="notes">New superfamily spanning fish to Cnidaria (~640 Myr span). Deposited in Repbase only (subscription-gated), absent from Dfam - genuinely inaccessible.</td>
         </tr>
         <tr data-family="MESC &amp; Snail" data-status="0" data-cite="Matetovici et al. 2016" data-taxon="Gastropoda, Bivalvia" data-access="2">
-          <td class="family">MESC <span class="sub">+ Snail superfamily</span></td>
+          <td class="family">MESC <span class="sub">+ Snail superfamily</span> <a href="literature-gap-tracker_sequences/MESC_Lsa_rawcopies_Matetovici2016.fasta" class="seq-link" title="Download FASTA">[8 Lsa raw copies]</a></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
           <td class="cite"><a href="https://academic.oup.com/gbe/article/8/1/253/2574347" target="_blank" rel="noopener">Matetovici, Sajgo, Ianc, Ochis, Bulzu, Popescu &amp; Damert 2016</a><span class="venue">GBE 8(1):253</span></td>
           <td class="taxon">Caenogastropoda, Vetigastropoda, all 4 Bivalvia subclasses</td>
@@ -616,7 +627,7 @@ body.gate-locked > .wrap { display: none; }
           <td class="notes">Two new superfamilies (MESC, Snail) plus a genuinely novel LP-SINE (LINE-derived promoter, not the usual tRNA/5S head) in gastropods/bivalves. 8 raw discovery copies obtained; the main superfamily consensus sequences remain figure-only. <a href="library/library.html#mesc_snail_matetovici2016">Full summary</a>.</td>
         </tr>
         <tr data-family="AfuSINE2/AfuSINE3 (×13)" data-status="0" data-cite="Kanhayuwa &amp; Coutts 2016" data-taxon="Aspergillus fumigatus" data-access="2">
-          <td class="family">AfuSINE2 (8, tRNA-derived) + AfuSINE3 (5, 5S rRNA-derived)</td>
+          <td class="family">AfuSINE2 (8, tRNA-derived) + AfuSINE3 (5, 5S rRNA-derived) <a href="literature-gap-tracker_sequences/AfuSINE2-3_13seqs_Kanhayuwa2016.fasta" class="seq-link" title="Download FASTA">[all 13 seqs]</a></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
           <td class="cite"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5063351/" target="_blank" rel="noopener">Kanhayuwa &amp; Coutts 2016</a><span class="venue">PLOS ONE 11(10):e0163215</span></td>
           <td class="taxon">Fungus &mdash; confirmed zero fungal entries in the bank (grepped taxon field directly)</td>
@@ -656,7 +667,7 @@ body.gate-locked > .wrap { display: none; }
           <td class="notes">Base family Platy-1 is likely already catalogued; this paper adds 6 new subfamilies (notably Platy-1-8c) in tamarins.</td>
         </tr>
         <tr data-family="SINE1-1_EBu" data-status="0" data-cite="hagfish study" data-taxon="Eptatretus burgeri (hagfish)" data-access="2">
-          <td class="family">SINE1&#8209;1_EBu</td>
+          <td class="family">SINE1&#8209;1_EBu <a href="literature-gap-tracker_sequences/SINE1-1_EBu_20copies_hagfish2020.fasta" class="seq-link" title="Download FASTA">[20 copies]</a></td>
           <td><span class="pill danger">Not in SINEBase (likely)</span></td>
           <td class="cite"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7245038/" target="_blank" rel="noopener">Hagfish genome reveals parallel evolution of 7SL RNA-derived SINEs</a></td>
           <td class="taxon">Seashore hagfish</td>
@@ -664,7 +675,7 @@ body.gate-locked > .wrap { display: none; }
           <td class="notes">New SINE in hagfish (Agnatha), an entirely uncovered lineage. 20 individual genomic copies obtained from the paper's own supplementary alignment.</td>
         </tr>
         <tr data-family="Squam3 (A/B/C)" data-status="0" data-cite="Vassetzky et al. 2021" data-taxon="Squamata (lizards, snakes) + tuatara" data-access="2">
-          <td class="family">Squam3 <span class="sub">subfamilies A / B / C</span></td>
+          <td class="family">Squam3 <span class="sub">subfamilies A / B / C</span> <a href="literature-gap-tracker_sequences/Squam3A-B-C_Vassetzky2021.fasta" class="seq-link" title="Download FASTA">[A/B/C consensus]</a></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
           <td class="cite"><a href="https://pubmed.ncbi.nlm.nih.gov/33752750/" target="_blank" rel="noopener">Vassetzky, Kosushkin, Korchagin &amp; Ryskov 2021</a><span class="venue">Mobile DNA 12:10</span></td>
           <td class="taxon"><em>Darevskia</em> &amp; <em>Anolis</em> lizards, squamates broadly, tuatara</td>
@@ -672,7 +683,7 @@ body.gate-locked > .wrap { display: none; }
           <td class="notes">New Ther1-derived SINE in squamates and tuatara, from the same lab that runs SINEBase. 3 subfamily consensus sequences (A/B/C) obtained from the paper's supplementary alignment file.</td>
         </tr>
         <tr data-family="Angio-SINE (24 families)" data-status="0" data-cite="Seibt, Schmidt &amp; Heitkam 2019" data-taxon="Higher plants, 13 orders" data-access="1">
-          <td class="family">Angio-SINE <span class="sub">superfamily, 24 families</span></td>
+          <td class="family">Angio-SINE <span class="sub">superfamily, 24 families</span> <a href="literature-gap-tracker_sequences/AngioSINE_24families_Seibt2019.fasta" class="seq-link" title="Download FASTA">[24 consensus (degapped)]</a> <a href="literature-gap-tracker_sequences/AngioSINE_24families_aligned_Seibt2019.fasta" class="seq-link" title="Download FASTA">[aligned]</a></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
           <td class="cite"><a href="https://doi.org/10.1111/tpj.14567" target="_blank" rel="noopener">Seibt, Schmidt &amp; Heitkam 2019</a><span class="venue">The Plant Journal</span></td>
           <td class="taxon">13 plant orders (angiosperms broadly)</td>
@@ -688,7 +699,7 @@ body.gate-locked > .wrap { display: none; }
           <td class="notes">22 new SINE families across sugar beet and 6 related genomes (34,806 copies). Likely paywalled (Wiley); sequences not yet obtained.</td>
         </tr>
         <tr data-family="SINEU (3 families)" data-status="0" data-cite="Kojima 2015" data-taxon="Crocodilia" data-access="2">
-          <td class="family">SINEU-1/2/3 <span class="sub">novel snRNA(U1/U2)-derived origin</span></td>
+          <td class="family">SINEU-1/2/3 <span class="sub">novel snRNA(U1/U2)-derived origin</span> <a href="literature-gap-tracker_sequences/SINEU_130copies_Kojima2015.fasta" class="seq-link" title="Download FASTA">[130 copies]</a></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
           <td class="cite"><a href="https://doi.org/10.1093/gbe/evv100" target="_blank" rel="noopener">Kojima 2015</a><span class="venue">GBE 7(6):1702&ndash;1712</span></td>
           <td class="taxon">Alligators, crocodiles, gharials (Crocodilia)</td>
@@ -696,7 +707,7 @@ body.gate-locked > .wrap { display: none; }
           <td class="notes">3 new families with a genuinely novel U1/U2 snRNA-derived origin in Crocodilia. 130 individual genomic copies obtained via a scaffold-to-accession mapping against the paper's original genome assembly submission. <a href="library/library.html#sineu_kojima2015">Full summary</a>.</td>
         </tr>
         <tr data-family="De-novo passerine SINEs" data-status="0" data-cite="Suh, Bachg et al. 2017" data-taxon="Passeriformes (songbirds)" data-access="2">
-          <td class="family">Unnamed <span class="sub">de-novo SINE emergence in a bird lineage</span></td>
+          <td class="family">Unnamed <span class="sub">de-novo SINE emergence in a bird lineage</span> <a href="literature-gap-tracker_sequences/PittSINE_Suh2017.fasta" class="seq-link" title="Download FASTA">[PittSINE]</a></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
           <td class="cite"><a href="https://doi.org/10.1186/s13100-017-0104-1" target="_blank" rel="noopener">Suh, Bachg, Donnellan, Joseph, Brosius, Kriegs &amp; Schmitz 2017</a><span class="venue">Mobile DNA 8:6</span></td>
           <td class="taxon">Passerine birds (Eupasseres)</td>
@@ -712,7 +723,7 @@ body.gate-locked > .wrap { display: none; }
           <td class="notes">18 new SINE families identified in a single lancelet genome - an entirely new taxon (Cephalochordata) for this tracker. No accessible full text or deposit found; sequences not yet obtained.</td>
         </tr>
         <tr data-family="SINE28" data-status="0" data-cite="Longo et al. 2015" data-taxon="Human / mammals" data-access="2">
-          <td class="family">SINE28 <span class="sub">28S rDNA-derived, novel origin</span></td>
+          <td class="family">SINE28 <span class="sub">28S rDNA-derived, novel origin</span> <a href="literature-gap-tracker_sequences/SINE28_50loci_Longo2015.fasta" class="seq-link" title="Download FASTA">[50 loci]</a></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
           <td class="cite"><a href="https://doi.org/10.1093/gbe/evv015" target="_blank" rel="noopener">Longo, Brown, Zhang &amp; O&rsquo;Neill 2015</a><span class="venue">GBE</span></td>
           <td class="taxon">Human (27 loci in reference genome) + other mammals</td>
@@ -768,7 +779,7 @@ body.gate-locked > .wrap { display: none; }
           <td class="notes">First SINE description in olive tree. Confirmed genuinely paywalled; a real gap, but the sequence has not yet been obtained.</td>
         </tr>
         <tr data-family="PxSE1&ndash;5 (+18 related)" data-status="0" data-cite="Han et al. 2021" data-taxon="Lepidoptera (13 species) + baculovirus" data-access="2">
-          <td class="family">PxSE1&ndash;5 <span class="sub">+ 18 related across 13 species</span></td>
+          <td class="family">PxSE1&ndash;5 <span class="sub">+ 18 related across 13 species</span> <a href="literature-gap-tracker_sequences/PxSE1-5_plus_related_Han2021.fasta" class="seq-link" title="Download FASTA">[224 copies]</a></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
           <td class="cite"><a href="https://link.springer.com/article/10.1186/s12864-021-07543-z" target="_blank" rel="noopener">Han, Zhang, Jiang et al. 2021</a><span class="venue">BMC Genomics 22:230</span></td>
           <td class="taxon"><em>Plutella xylostella</em> (diamondback moth) + 12 other lepidopterans + baculovirus</td>
@@ -776,7 +787,7 @@ body.gate-locked > .wrap { display: none; }
           <td class="notes">5 named families (PxSE1-5) plus 18 related, across 13 Lepidoptera species and even baculovirus (evidence of horizontal transfer). 224 individual genomic copies obtained via GenBank accession ranges.</td>
         </tr>
         <tr data-family="Sbg1&ndash;Sbg9" data-status="0" data-cite="Firsov et al. 2022" data-taxon="Blattella germanica (German cockroach)" data-access="2">
-          <td class="family">Sbg1&ndash;Sbg9 <span class="sub">first description in this species</span></td>
+          <td class="family">Sbg1&ndash;Sbg9 <span class="sub">first description in this species</span> <a href="literature-gap-tracker_sequences/Sbg1-9_Firsov2022.fasta" class="seq-link" title="Download FASTA">[9 consensus]</a></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
           <td class="cite"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0266699" target="_blank" rel="noopener">Firsov, Kosherova &amp; Mukha 2022</a><span class="venue">PLOS ONE 17(6):e0266699</span></td>
           <td class="taxon">German cockroach</td>
@@ -784,7 +795,7 @@ body.gate-locked > .wrap { display: none; }
           <td class="notes">9 named SINEs (Sbg1-9) - first SINE description in German cockroach. All 9 consensus sequences obtained from the paper's own supplementary figure.</td>
         </tr>
         <tr data-family="21-species bivalve SINE set" data-status="0" data-cite="Peona, Martelossi et al. 2024" data-taxon="21 mollusk/bivalve species" data-access="2">
-          <td class="family">Dozens of named families <span class="sub">e.g. Oden_SINE-1&ndash;5, Rphil_SINE-1/4/5, Ssol_SINE-2/5/6...</span></td>
+          <td class="family">Dozens of named families <span class="sub">e.g. Oden_SINE-1&ndash;5, Rphil_SINE-1/4/5, Ssol_SINE-2/5/6...</span> <a href="literature-gap-tracker_sequences/bivalve_21species_dfam_consensus.fasta" class="seq-link" title="Download FASTA">[57 Dfam consensus]</a></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
           <td class="cite"><a href="https://doi.org/10.1186/s13100-024-00319-8" target="_blank" rel="noopener">Peona, Martelossi et al. 2024</a><span class="venue">Mobile DNA 15:10, "...a tardigrade perspective" (crowd-sourced curation/teaching paper)</span></td>
           <td class="taxon"><em>Ostrea</em>, <em>Ruditapes</em>, <em>Solen</em>, <em>Mytilus</em>, <em>Magallana</em>, <em>Pinctada</em> and 15 more bivalve/mollusk genera</td>
@@ -792,7 +803,7 @@ body.gate-locked > .wrap { display: none; }
           <td class="notes">Dozens of named SINE families across 21 bivalve/mollusk species, found via Dfam (the underlying paper never engages with SINE-specific literature). All 57 consensus sequences obtained directly from Dfam.</td>
         </tr>
         <tr data-family="Zymoseptoria tritici SINE" data-status="0" data-cite="Baril &amp; Croll 2023" data-taxon="Zymoseptoria tritici (wheat pathogen fungus)" data-access="2">
-          <td class="family">ZymTri_2023_family_98 <span class="sub">2nd fungal SINE ever seen in this tracker</span></td>
+          <td class="family">ZymTri_2023_family_98 <span class="sub">2nd fungal SINE ever seen in this tracker</span> <a href="literature-gap-tracker_sequences/ZymTri_family98_Baril2023.fasta" class="seq-link" title="Download FASTA">[consensus]</a></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
           <td class="cite"><a href="https://doi.org/10.1186/s13104-023-06613-7" target="_blank" rel="noopener">Baril &amp; Croll 2023</a><span class="venue">BMC Research Notes 16:335</span></td>
           <td class="taxon">Wheat leaf-blotch fungus</td>
@@ -816,7 +827,7 @@ body.gate-locked > .wrap { display: none; }
           <td class="notes">30 named consensus records across 19 Heliconiine butterfly species, found via Dfam. Every supplementary file checked directly - no sequence deposit exists; genuinely unavailable.</td>
         </tr>
         <tr data-family="Castor bean SINE (SINE_rCom)" data-status="0" data-cite="Kong, Zhang &amp; Ma 2024" data-taxon="Ricinus communis (castor bean)" data-access="2">
-          <td class="family">SINE_rCom <span class="sub">retrotransposon impact study</span></td>
+          <td class="family">SINE_rCom <span class="sub">retrotransposon impact study</span> <a href="literature-gap-tracker_sequences/SINE_rCom_Kong2024.fasta" class="seq-link" title="Download FASTA">[2 seqs]</a></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
           <td class="cite"><a href="https://doi.org/10.3389/fpls.2024.1397215" target="_blank" rel="noopener">Kong, Zhang &amp; Ma 2024</a><span class="venue">Frontiers in Plant Science 15:1397215</span></td>
           <td class="taxon">Castor bean (oil plant)</td>
@@ -824,7 +835,7 @@ body.gate-locked > .wrap { display: none; }
           <td class="notes">New SINE in castor bean, found via Dfam. 2 sequences obtained from the paper's own curated supplementary FASTA.</td>
         </tr>
         <tr data-family="Leech genome SINEs (unnamed)" data-status="0" data-cite="M&uuml;ller 2025" data-taxon="Leech genomes (Hirudinida)" data-access="2">
-          <td class="family">HvSINE1&ndash;4 <span class="sub">+ 18 more, 5 leech species</span></td>
+          <td class="family">HvSINE1&ndash;4 <span class="sub">+ 18 more, 5 leech species</span> <a href="literature-gap-tracker_sequences/Leech_SINEs_22seqs_Muller2025.fasta" class="seq-link" title="Download FASTA">[22 seqs]</a></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
           <td class="cite"><a href="https://doi.org/10.3390/dna5020030" target="_blank" rel="noopener">M&uuml;ller 2025</a><span class="venue">DNA 5(2):30 (MDPI, open access)</span></td>
           <td class="taxon">Leech genomes (Hirudinida) - previously neglected taxon for TE/SINE work</td>
@@ -832,7 +843,7 @@ body.gate-locked > .wrap { display: none; }
           <td class="notes">22 named SINEs (HvSINE1-4 and homologs) across 5 leech species - first molecular SINE description in this phylum. All 22 sequences obtained from the paper's supplementary figures. <a href="library/library.html#leech_muller2025">Full summary</a>.</td>
         </tr>
         <tr data-family="Coilia nasus SINE" data-status="0" data-cite="Liu, Yang et al. 2020" data-taxon="Coilia nasus (Japanese grenadier anchovy)" data-access="2">
-          <td class="family">Novel SINE family <span class="sub">tRNA-like head, LINE-derived tail</span></td>
+          <td class="family">Novel SINE family <span class="sub">tRNA-like head, LINE-derived tail</span> <a href="literature-gap-tracker_sequences/Coilia_nasus_SINE_Liu2020.fasta" class="seq-link" title="Download FASTA">[consensus]</a></td>
           <td><span class="pill danger">Not in SINEBase</span></td>
           <td class="cite"><a href="https://doi.org/10.1186/s13100-019-0198-8" target="_blank" rel="noopener">Liu, Yang, Tang, Zhang, Royster &amp; Zhang 2020</a><span class="venue">Mobile DNA 11:2</span></td>
           <td class="taxon">Coilia nasus (Japanese grenadier anchovy, fish)</td>
