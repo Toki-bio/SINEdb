@@ -176,6 +176,56 @@ tbody td {
 }
 tbody tr:last-child td { border-bottom: none; }
 tbody tr:hover { background: var(--accent-soft); }
+tbody tr.section-header th {
+  background: var(--accent-soft);
+  color: var(--ink);
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 14px;
+  text-transform: none;
+  letter-spacing: 0;
+  border-bottom: 1px solid var(--line);
+  border-top: 2px solid var(--accent);
+}
+tbody tr.section-header:hover { background: var(--accent-soft); }
+.graph-section h3 {
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 16px 0 8px;
+  color: var(--ink);
+}
+.dfam-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+}
+.dfam-table th {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+.dfam-table th:nth-child(2) { text-align: right; width: 70px; }
+.dfam-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.dfam-table td:nth-child(2) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+}
+.dfam-table td:nth-child(3) {
+  color: var(--ink-soft);
+  font-family: "SF Mono", "Cascadia Code", "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12px;
+}
 
 .family {
   font-family: "SF Mono", "Cascadia Code", "IBM Plex Mono", ui-monospace, monospace;
@@ -677,6 +727,16 @@ tbody tr.graph-highlight {
     </table>
   </div>
 
+  <div class="graph-section" id="orphaned-entries">
+    <h2>Predicted / Orphaned Entries &mdash; Awaiting Direct Verification</h2>
+    <p class="graph-sub">These are NOT literature-confirmed gaps like the table above. They are raw entries from public repeat databases with no discovery paper behind them at all, included here so they aren't lost, pending manual verification directly against real genome assemblies.</p>
+    <h3>Dfam</h3>
+    <div id="dfam-orphaned-list"><p style="color: var(--ink-soft);">Loading Dfam entries&hellip;</p></div>
+    <p style="margin-top: 10px;"><a href="literature-gap-tracker_dfam_citation_report.txt" target="_blank" rel="noopener">full citation-check report (241 species)</a></p>
+    <h3>RepBase</h3>
+    <p style="color: var(--ink-soft); font-size: 13.5px;">This cross-reference has NOT been done yet. RepBase requires registration and is not freely queryable via API the way Dfam is. This is a planned future addition &mdash; no RepBase entries have been checked or included here.</p>
+  </div>
+
   <footer class="foot">
     Next pass: full-text fetch + sequence-location check for every unverified row above (RUDI, AfuSINE2, Ceph-SINEs date check, marsupial CORE-SINEs date check, Solanaceae Au-vs-new check). Crustacea/Cnidaria/Nematoda/Amphibia swept clean of dedicated new-SINE-family papers on 2026-08-21 (not proof-of-absence &mdash; see methodology). The sea anemone Actiniaria-REPlib paper and the 2024 frog genome paper are queued for the separate WGS-silent-annotation task, not this tracker. Click any column header to sort.
   </footer>
@@ -686,12 +746,49 @@ tbody tr.graph-highlight {
 (function () {
   const table = document.getElementById('t');
   const tbody = table.querySelector('tbody');
-  const statusOrder = { danger: 0, warn: 1, muted: 2 };
+
+  const SECTION_NAMES = {
+    '1': 'Confirmed New-Family Gaps',
+    '2': 'Existing Family, Updated or New Taxa',
+    '3': 'Resolved, Not a Gap',
+    '4': 'Still Unverified'
+  };
+
+  function getSectionFromRow(row) {
+    const pill = row.querySelector('.pill');
+    if (!pill) return null;
+    if (pill.classList.contains('danger')) return '1';
+    if (pill.classList.contains('warn')) return '2';
+    if (pill.classList.contains('ok')) return '3';
+    if (pill.classList.contains('muted')) return '4';
+    return null;
+  }
+
+  function rebuildSections(sortedRows) {
+    const grouped = { '1': [], '2': [], '3': [], '4': [] };
+    sortedRows.forEach(r => {
+      const s = getSectionFromRow(r);
+      if (s) grouped[s].push(r);
+    });
+    while (tbody.firstChild) tbody.removeChild(tbody.firstChild);
+    ['1', '2', '3', '4'].forEach(s => {
+      if (grouped[s].length === 0) return;
+      const header = document.createElement('tr');
+      header.className = 'section-header';
+      header.innerHTML = '<th colspan="6">' + SECTION_NAMES[s] + '</th>';
+      tbody.appendChild(header);
+      grouped[s].forEach(r => tbody.appendChild(r));
+    });
+  }
+
+  // Initial grouping on page load
+  rebuildSections(Array.from(tbody.querySelectorAll('tr')));
+
   document.querySelectorAll('thead th').forEach(th => {
     let asc = true;
     th.addEventListener('click', () => {
       const key = th.dataset.k;
-      const rows = Array.from(tbody.querySelectorAll('tr'));
+      const rows = Array.from(tbody.querySelectorAll('tr:not(.section-header)'));
       rows.sort((a, b) => {
         let av, bv;
         if (key === 'status') {
@@ -708,7 +805,7 @@ tbody tr.graph-highlight {
         if (av > bv) return asc ? 1 : -1;
         return 0;
       });
-      rows.forEach(r => tbody.appendChild(r));
+      rebuildSections(rows);
       asc = !asc;
     });
   });
@@ -716,7 +813,13 @@ tbody tr.graph-highlight {
 </script>
 
 <script>
-// Citation graph data - embedded from citation_graph_data.json (no runtime fetch needed)
+Promise.all([
+  fetch('literature-gap-tracker_citation_graph.json').then(function (r) { return r.json(); }),
+  fetch('literature-gap-tracker_older_works.json').then(function (r) { return r.json(); })
+]).then(function (results) {
+  var CITATION_GRAPH_DATA = results[0];
+  var OLDER_WORKS_DATA = results[1];
+/* INLINE DATA REMOVED - now fetched from sibling JSON files
 var CITATION_GRAPH_DATA = {
   "_readme": "Nodes/edges for the SINE Literature Gap Tracker's citation graph. Built from real OpenAlex API queries run 2026-08-21, not fabricated. 'confirmed' edges were verified by matching a paper's DOI against the actual list of 176 papers that cite the SINEBase database paper (pulled via OpenAlex filter=cites:W2106788283). 'unconfirmed' edges mean the paper was found via keyword/author search but its citation of SINEBase was not independently re-checked - render these visually distinct (e.g. dashed) from confirmed edges, never identical.",
   "hub": {
@@ -805,7 +908,7 @@ var OLDER_WORKS_DATA = {
     { "id": "old_bovb_sines_2007", "label": "Bov-B-mobilized SINEs in vertebrates", "cite": "2007", "venue": "Gene", "taxon": "Vertebrates (broad)", "lineage_to": "sauria" },
     { "id": "old_ceph_sines_2009", "label": "Ceph-SINEs described (squid, cuttlefish)", "cite": "2009", "venue": "Gene", "taxon": "Cephalopods", "lineage_to": "ceph-sines" }
   ]
-};
+*/
 
 (function () {
   'use strict';
@@ -1306,5 +1409,31 @@ var OLDER_WORKS_DATA = {
   initPositions();
   buildEdges();
   animate();
+})();
+});
+</script>
+
+<script>
+(function () {
+  function escapeHtml(s) {
+    return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+  fetch('literature-gap-tracker_orphaned_dfam.json')
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      var html = '<table class="dfam-table">' +
+        '<thead><tr><th>Taxon</th><th>Records</th><th>Family names</th></tr></thead><tbody>';
+      data.forEach(function (entry) {
+        var names = (entry.names || []).filter(function (n) { return n; });
+        html += '<tr><td>' + escapeHtml(entry.taxon) + '</td>' +
+          '<td>' + entry.count + '</td>' +
+          '<td>' + names.map(escapeHtml).join(', ') + '</td></tr>';
+      });
+      html += '</tbody></table>';
+      document.getElementById('dfam-orphaned-list').innerHTML = html;
+    })
+    .catch(function () {
+      document.getElementById('dfam-orphaned-list').innerHTML = '<p style="color: var(--danger);">Failed to load Dfam entries.</p>';
+    });
 })();
 </script>
