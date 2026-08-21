@@ -1,0 +1,29 @@
+{
+  "_readme": "Index of manuscript summaries in this library. Each entry's markdown file is fetched and rendered as a section on library.html. Add one entry here per new manuscript processed.",
+  "manuscripts": [
+    {
+      "id": "rudi_luchetti2016",
+      "file": "manuscripts/rudi_luchetti2016.md",
+      "family": "RUDI",
+      "tracker_row": "RUDI",
+      "year": 2016,
+      "access": "user-supplied PDF (paywalled to the public)"
+    },
+    {
+      "id": "mesc_snail_matetovici2016",
+      "file": "manuscripts/mesc_snail_matetovici2016.md",
+      "family": "MESC & Snail",
+      "tracker_row": "MESC & Snail",
+      "year": 2016,
+      "access": "open access (GBE)"
+    },
+    {
+      "id": "angio_sine_seibt2019",
+      "file": "manuscripts/angio_sine_seibt2019.md",
+      "family": "Angio-SINE (24 families)",
+      "tracker_row": "Angio-SINE (24 families)",
+      "year": 2019,
+      "access": "user-supplied PDF (automated fetch had marked this NOT_AVAILABLE/paywalled)"
+    }
+  ]
+}

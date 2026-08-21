@@ -1,0 +1,209 @@
+<meta charset="utf-8">
+<title>SINE Manuscript Library</title>
+<style>
+:root {
+  --bg: #f5f7f2;
+  --surface: #ffffff;
+  --ink: #1b2420;
+  --ink-soft: #4b5750;
+  --line: #dde3d8;
+  --accent: #3d6b52;
+  --accent-soft: #e7efe8;
+  --ok: #3d6b52;
+  --ok-bg: #e3efe6;
+  --warn: #8a5a15;
+  --warn-bg: #f7ecd6;
+  --danger: #8a3830;
+  --danger-bg: #f6e4e1;
+  --muted: #5c6862;
+  --muted-bg: #eaeeea;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141815;
+    --surface: #1c2119;
+    --ink: #e9ede7;
+    --ink-soft: #b3bdb4;
+    --line: #333d34;
+    --accent: #7fb096;
+    --accent-soft: #22322a;
+    --ok: #7fb096;
+    --ok-bg: #223129;
+    --warn: #d9ab5b;
+    --warn-bg: #3a2f1c;
+    --danger: #d98d84;
+    --danger-bg: #3a2320;
+    --muted: #97a49b;
+    --muted-bg: #262b26;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141815;
+  --surface: #1c2119;
+  --ink: #e9ede7;
+  --ink-soft: #b3bdb4;
+  --line: #333d34;
+  --accent: #7fb096;
+  --accent-soft: #22322a;
+  --ok: #7fb096;
+  --ok-bg: #223129;
+  --warn: #d9ab5b;
+  --warn-bg: #3a2f1c;
+  --danger: #d98d84;
+  --danger-bg: #3a2320;
+  --muted: #97a49b;
+  --muted-bg: #262b26;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+.wrap { max-width: 900px; margin: 0 auto; padding: 32px 24px 80px; }
+header.page { margin-bottom: 28px; }
+.eyebrow {
+  text-transform: uppercase; letter-spacing: 0.08em; font-size: 11.5px;
+  color: var(--ink-soft); font-weight: 600;
+}
+h1 { font-size: 28px; margin: 6px 0 10px; letter-spacing: -0.01em; }
+.dek { color: var(--ink-soft); max-width: 68ch; }
+.back-link { display: inline-block; margin-top: 10px; font-size: 13px; color: var(--accent); text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+
+.toc {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 16px 20px; margin-bottom: 28px;
+}
+.toc h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); margin: 0 0 10px; }
+.toc ul { margin: 0; padding-left: 20px; }
+.toc li { margin: 4px 0; }
+.toc a { color: var(--ink); text-decoration: none; }
+.toc a:hover { color: var(--accent); }
+.toc .meta { color: var(--ink-soft); font-size: 12.5px; }
+
+.manuscript {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 26px 28px; margin-bottom: 24px; scroll-margin-top: 20px;
+}
+.manuscript h1 { font-size: 20px; margin: 0 0 12px; }
+.manuscript .badge-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.badge {
+  display: inline-block; font-size: 11.5px; font-weight: 600; padding: 3px 9px;
+  border-radius: 999px; background: var(--accent-soft); color: var(--accent);
+}
+.badge.access { background: var(--muted-bg); color: var(--muted); }
+.manuscript h2 {
+  font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-soft);
+  margin: 22px 0 8px; padding-top: 14px; border-top: 1px solid var(--line);
+}
+.manuscript h2:first-of-type { border-top: none; padding-top: 0; margin-top: 16px; }
+.manuscript p { margin: 0 0 12px; }
+.manuscript p:last-child { margin-bottom: 0; }
+.manuscript strong { color: var(--ink); }
+
+.extraction-note {
+  font-size: 12.5px; color: var(--ink-soft); background: var(--accent-soft);
+  border-radius: 8px; padding: 8px 12px; margin-bottom: 18px;
+}
+
+.loading, .error { color: var(--ink-soft); padding: 20px; text-align: center; }
+.error { color: var(--danger); }
+
+footer.foot {
+  color: var(--ink-soft); font-size: 12.5px; margin-top: 30px; padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+</style>
+
+<div class="wrap">
+  <header class="page">
+    <div class="eyebrow">SINEdb &middot; manuscript library</div>
+    <h1>SINE Manuscript Library</h1>
+    <p class="dek">Detailed, per-manuscript summaries of papers relevant to the <a href="../literature-gap-tracker.html" style="color:inherit">literature gap tracker</a> &mdash; each written from a full read of the paper's own text (not just its abstract), covering Results &amp; Discussion in depth, what's in the supplementary material, and exactly what data-availability/accession information the paper states. Source PDFs live locally; this page renders the generated summaries.</p>
+    <a class="back-link" href="../literature-gap-tracker.html">&larr; back to the literature gap tracker</a>
+  </header>
+
+  <div class="toc" id="toc">
+    <h2>Manuscripts in this library</h2>
+    <ul id="toc-list"><li class="loading">Loading index&hellip;</li></ul>
+  </div>
+
+  <div id="manuscripts">
+    <div class="loading">Loading manuscript summaries&hellip;</div>
+  </div>
+
+  <footer class="foot">
+    Each summary is generated from a full plain-text extraction of the source PDF, then written by GLM-5.2 against a fixed 5-section template (citation, one-paragraph summary, detailed Results &amp; Discussion, supplementary-material summary, data availability) — key claims are spot-checked against the raw extracted text before being accepted, not trusted blind. To add a manuscript: drop the PDF in <code>pdf-library/</code>, run <code>pdftotext -layout</code>, run it through the summarization task, add an entry to <code>index.json</code>.
+  </footer>
+</div>
+
+<script>
+// Minimal markdown-to-HTML: this page's .md files are written to a fixed,
+// simple template (# / ## headers, plain paragraphs) - no need for a full
+// markdown library for that narrow a subset.
+function mdToHtml(md) {
+  var lines = md.split('\n');
+  var html = '';
+  var para = [];
+  function flushPara() {
+    if (para.length) {
+      html += '<p>' + para.join(' ').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</p>';
+      para = [];
+    }
+  }
+  lines.forEach(function (line) {
+    var h1 = line.match(/^# (.+)/);
+    var h2 = line.match(/^## (.+)/);
+    var bold = line.match(/^\*\*(.+?)\*\*\s*(.*)/);
+    if (h1) { flushPara(); html += '<h1>' + h1[1] + '</h1>'; }
+    else if (h2) { flushPara(); html += '<h2>' + h2[1] + '</h2>'; }
+    else if (line.trim() === '') { flushPara(); }
+    else if (bold) { flushPara(); html += '<p><strong>' + bold[1] + '</strong> ' + bold[2] + '</p>'; }
+    else { para.push(line); }
+  });
+  flushPara();
+  return html;
+}
+
+fetch('index.json').then(function (r) { return r.json(); }).then(function (idx) {
+  var tocList = document.getElementById('toc-list');
+  var container = document.getElementById('manuscripts');
+  tocList.innerHTML = '';
+  container.innerHTML = '';
+
+  var fetches = idx.manuscripts.map(function (m) {
+    return fetch(m.file).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status + ' for ' + m.file);
+      return r.text();
+    }).then(function (mdText) { return { meta: m, md: mdText }; });
+  });
+
+  Promise.all(fetches).then(function (results) {
+    results.forEach(function (r) {
+      var li = document.createElement('li');
+      li.innerHTML = '<a href="#' + r.meta.id + '">' + r.meta.family + '</a> <span class="meta">(' + r.meta.year + ')</span>';
+      tocList.appendChild(li);
+
+      var section = document.createElement('div');
+      section.className = 'manuscript';
+      section.id = r.meta.id;
+      var badges = '<div class="badge-row">' +
+        '<span class="badge">' + r.meta.family + '</span>' +
+        '<span class="badge access">' + r.meta.access + '</span>' +
+        '</div>';
+      section.innerHTML = badges + mdToHtml(r.md);
+      container.appendChild(section);
+    });
+  }).catch(function (e) {
+    container.innerHTML = '<div class="error">Failed to load manuscript summaries: ' + e.message + '</div>';
+  });
+}).catch(function (e) {
+  document.getElementById('toc-list').innerHTML = '<li class="error">Failed to load index.json: ' + e.message + '</li>';
+  document.getElementById('manuscripts').innerHTML = '';
+});
+</script>
