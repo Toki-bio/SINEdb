@@ -1,0 +1,226 @@
+[
+  {
+    "taxon": "Peromyscus maniculatus",
+    "count": 28,
+    "names": [
+      "Pman_ALU_6.15393",
+      "Pman_ALU_6.2108",
+      "Pman_ALU_6.7041",
+      "Pman_ALU_6.3823",
+      "Pman_ALU_3.62",
+      "Pman_ALU_6.2822",
+      "Pman_ALU_4.11",
+      "Pman_ALU_6.4482",
+      "Pman_ALU_4.159",
+      "Pman_ALU_6.8706",
+      "Pman_ALU_4.548",
+      "Pman_ALU_4.539",
+      "Pman_ALU_5.373",
+      "Pman_B4_6.2891",
+      "Pman_ALU_4.139",
+      "Pman_ALU_6.12233",
+      "Pman_B4_6.6324",
+      "Pman_B2_6.8065",
+      "Pman_B2_6.1736",
+      "Pman_ALU_6.7682",
+      "Pman_B4_6.3142",
+      "Pman_B2_5.661",
+      "Pman_B2_6.3731",
+      "Pman_B4_6.3553",
+      "Pman_ALU_5.1881",
+      "Pman_MIR_6.141",
+      "Pman_MIR_6.2859",
+      "Pman_MIR_6.1523"
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Halyomorpha halys",
+    "count": 14,
+    "names": [
+      "Halyomorpha_halys-1_family-77",
+      "Halyomorpha_halys-1_family-78",
+      "Halyomorpha_halys-1_family-121",
+      "Halyomorpha_halys-1_family-53",
+      "Halyomorpha_halys-1_family-142",
+      "Halyomorpha_halys-1_family-56",
+      "Halyomorpha_halys-1_family-137",
+      "Halyomorpha_halys-1_family-75",
+      "Halyomorpha_halys-2_family-62",
+      "Halyomorpha_halys-3_family-34",
+      "Halyomorpha_halys-4_family-1734",
+      "Halyomorpha_halys-5_family-410",
+      "Halyomorpha_halys-5_family-1803",
+      "Halyomorpha_halys-6_family-2057"
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Chrysochloris asiatica",
+    "count": 9,
+    "names": [
+      "AFROSINE-1_ChrAsi",
+      "ChrAsi-1.0",
+      "ChrAsi-1.144",
+      "ChrAsi-1.14",
+      "ChrAsi-1.18",
+      "ChrAsi-1.26",
+      "ChrAsi-1.48",
+      "ChrAsi-1.4",
+      "ChrAsi-1.83"
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Solen grandis",
+    "count": 7,
+    "names": [
+      "SINE_S.grandis_cons_12",
+      "SINE_S.grandis_cons_11",
+      "SINE_S.grandis_cons_4",
+      "SINE_S.grandis_cons_13",
+      "SINE_S.grandis_cons_5",
+      "SINE_S.grandis_cons_7",
+      "Sgra_SINE-5_Meta"
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Astatotilapia calliptera",
+    "count": 4,
+    "names": [
+      "5S-Deu-L2-3_AstCal",
+      "5S-Deu-L2-1_AstCal",
+      "5S-Deu-L2-4_AstCal",
+      "tRNA-Core-RTE-1_AstCal"
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Megalonaias nervosa",
+    "count": 4,
+    "names": [
+      "SINE_M.nervosa_cons_1",
+      "SINE_M.nervosa_cons_2",
+      "SINE_M.nervosa_cons_5",
+      "SINE_M.nervosa_cons_3"
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Anadara broughtonii",
+    "count": 4,
+    "names": [
+      "SINE_S.broughtonii_cons_20",
+      "SINE_S.broughtonii_cons_45",
+      "SINE_S.broughtonii_cons_56",
+      "SINE_S.broughtonii_cons_75"
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Molossus molossus",
+    "count": 3,
+    "names": [
+      "Ves1_mMol",
+      "Ves2_mMol",
+      "Ves4_mMol"
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Archivesica marissinica",
+    "count": 3,
+    "names": [
+      "SINE_A.marissinica_cons_2",
+      "SINE_A.marissinica_cons_4",
+      "SINE_A.marissinica_cons_5"
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Magallana gigas",
+    "count": 3,
+    "names": [
+      "SINE_C.gigas_cons_1_sub2",
+      "SINE_C.gigas_cons_6",
+      "SINE_C.gigas_cons_4"
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Heligmosomoides polygyrus bakeri",
+    "count": 2,
+    "names": [
+      null,
+      null
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Tegillarca granosa",
+    "count": 2,
+    "names": [
+      "SINE_T.granosa_cons_48",
+      "SINE_T.granosa_cons_7_sub3"
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Mizuhopecten yessoensis",
+    "count": 2,
+    "names": [
+      "SINE_M.yessoensis_cons_2",
+      "SINE_M.yessoensis_cons_9"
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Hominidae",
+    "count": 1,
+    "names": [
+      "AluYe6"
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Pipistrellus kuhlii",
+    "count": 1,
+    "names": [
+      "Helitron8_pKuh"
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Rousettus aegyptiacus",
+    "count": 1,
+    "names": [
+      "Meg1_rAeg"
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Rhinolophus ferrumequinum",
+    "count": 1,
+    "names": [
+      "Rhin-1h_rFer"
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Heligmosomoides polygyrus",
+    "count": 1,
+    "names": [
+      null
+    ],
+    "citations": []
+  },
+  {
+    "taxon": "Pecten maximus",
+    "count": 1,
+    "names": [
+      "SINE_P.maximus_cons_3"
+    ],
+    "citations": []
+  }
+]

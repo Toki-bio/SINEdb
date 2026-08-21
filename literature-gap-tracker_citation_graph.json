@@ -1,0 +1,53 @@
+{
+  "_readme": "Nodes/edges for the SINE Literature Gap Tracker's citation graph. Built from real OpenAlex API queries run 2026-08-21, not fabricated. 'confirmed' edges were verified by matching a paper's DOI against the actual list of 176 papers that cite the SINEBase database paper (pulled via OpenAlex filter=cites:W2106788283). 'unconfirmed' edges mean the paper was found via keyword/author search but its citation of SINEBase was not independently re-checked - render these visually distinct (e.g. dashed) from confirmed edges, never identical.",
+  "hub": {
+    "id": "sinebase",
+    "label": "SINEBase",
+    "cite": "Vassetzky & Kramerov 2013",
+    "venue": "Nucleic Acids Research",
+    "type": "hub"
+  },
+  "nodes": [
+    { "id": "ere",          "label": "Ere (EreA/EreB)",              "cite": "Ustyantsev et al. 2024",  "status": "existing-updated", "taxon": "Perissodactyla" },
+    { "id": "urop",         "label": "Urop",                          "cite": "Kosushkin et al. 2026",   "status": "new",               "taxon": "Shrew mole",            "sinebase_edge": "confirmed" },
+    { "id": "can",          "label": "Can (a1/a2/b1/b2)",            "cite": "Kosushkin et al. 2022",   "status": "existing-updated",  "taxon": "Canidae",               "sinebase_edge": "confirmed" },
+    { "id": "b2dipves",     "label": "B2 / Dip / Ves",               "cite": "Vassetzky et al. 2021",   "status": "existing-updated",  "taxon": "Rodents, bats",          "sinebase_edge": "confirmed" },
+    { "id": "lagomorph-c",  "label": "SINE C (C1/C2)",               "cite": "Ustyantsev et al. 2026",  "status": "existing-updated",  "taxon": "Lagomorpha" },
+    { "id": "rudi",         "label": "RUDI",                          "cite": "Kramerov & Vassetzky 2016","status": "new",              "taxon": "Mollusca" },
+    { "id": "metasines",    "label": "MetaSINEs",                    "cite": "Nishihara et al. 2016",   "status": "new",               "taxon": "Fish-Cnidaria" },
+    { "id": "mesc-snail",   "label": "MESC & Snail",                 "cite": "Matetovici et al. 2016",  "status": "new",               "taxon": "Gastropoda, Bivalvia" },
+    { "id": "afusine2",     "label": "AfuSINE2 (x8)",                "cite": "Kanhayuwa & Coutts 2016",  "status": "new",               "taxon": "Aspergillus fumigatus" },
+    { "id": "ceph-sines",   "label": "Ceph-SINEs",                   "cite": "2009 (pre-2015)",           "status": "resolved-not-gap",  "taxon": "Cephalopods" },
+    { "id": "marsupial-core","label": "young CORE-SINEs",            "cite": "2007 (pre-2015)",           "status": "resolved-not-gap",  "taxon": "Marsupialia" },
+    { "id": "solanaceae",   "label": "Solanaceae SINEs (10 fam.)",   "cite": "Seibt et al. 2016",        "status": "existing-updated",  "taxon": "Solanaceae" },
+    { "id": "platy1",       "label": "Platy-1 (6 subfamilies)",      "cite": "tamarin study",            "status": "existing-updated",  "taxon": "Saguinus" },
+    { "id": "hagfish",      "label": "SINE1-1_EBu",                  "cite": "hagfish study",             "status": "new",              "taxon": "Eptatretus burgeri" },
+    { "id": "squam3",       "label": "Squam3 (A/B/C)",               "cite": "Vassetzky et al. 2021",   "status": "new",               "taxon": "Squamata + tuatara" },
+    { "id": "angio-sine",   "label": "Angio-SINE (24 families)",     "cite": "Seibt, Schmidt & Heitkam 2019", "status": "new",         "taxon": "13 plant orders",        "sinebase_edge": "confirmed" },
+    { "id": "amphioxus",    "label": "18 Branchiostoma SINEs",       "cite": "Kosushkin & Vassetzky 2020","status": "new",             "taxon": "Cephalochordata",         "sinebase_edge": "confirmed" },
+    { "id": "sine28",       "label": "SINE28",                       "cite": "Longo et al. 2015",         "status": "new",              "taxon": "Human/mammals",          "sinebase_edge": "confirmed" },
+    { "id": "grass-sines",  "label": "46 grass SINE families",       "cite": "Mao & Wang 2017",           "status": "existing-updated",  "taxon": "Poaceae",                "sinebase_edge": "confirmed" },
+    { "id": "cmisines",     "label": "CmiSINEs (chondrichthyan)",    "cite": "Luchetti et al. 2017",      "status": "existing-updated",  "taxon": "Chondrichthyes",          "sinebase_edge": "confirmed" },
+    { "id": "hcd-bivalve",  "label": "HCD-tRNA bivalve SINEs",       "cite": "Martelossi et al. 2024",    "status": "unverified",        "taxon": "Bivalvia",               "sinebase_edge": "confirmed" },
+    { "id": "salis",        "label": "SaliS-I/II/VI-XI (8 of 11)",   "cite": "Kögler et al. 2020",        "status": "existing-updated",  "taxon": "Salicaceae",             "sinebase_edge": "confirmed" },
+    { "id": "olive",        "label": "Olive tree SINEs",             "cite": "Barghini et al. 2016",      "status": "unverified",        "taxon": "Olea europaea",          "sinebase_edge": "confirmed" },
+    { "id": "sauria",       "label": "Sauria (Bov-B associated)",    "cite": "Nakatsuka & Ohshima 2026",  "status": "existing-updated",  "taxon": "Squamata" },
+    { "id": "pxse1-5",      "label": "PxSE1-5 (+18 related)",        "cite": "Han et al. 2021",           "status": "new",               "taxon": "Lepidoptera + baculovirus" },
+    { "id": "cockroach",    "label": "9 unnamed SINEs",              "cite": "Firsov et al. 2022",        "status": "new",               "taxon": "Blattella germanica" }
+  ],
+  "edges_confirmed_cites_sinebase": [
+    "urop", "can", "b2dipves", "angio-sine", "amphioxus", "sine28", "grass-sines", "cmisines", "hcd-bivalve", "olive", "salis"
+  ],
+  "second_order_edges": [
+    { "from": "salis", "to": "angio-sine", "relation": "cites" },
+    { "from": "sauria", "to": "hagfish", "relation": "cites" }
+  ],
+  "shared_author_clusters": {
+    "_note": "Papers sharing 2+ authors from the same core lab, verified via OpenAlex authorships - a second real relationship type distinct from citation, useful for a 'group by lab' toggle.",
+    "kramerov_lab": ["ere", "urop", "can", "b2dipves", "lagomorph-c", "squam3"],
+    "vassetzky_kramerov_core": ["squam3", "b2dipves", "urop"],
+    "kosushkin_vassetzky": ["amphioxus", "urop"],
+    "luchetti_lab": ["cmisines", "hcd-bivalve"],
+    "seibt_heitkam_lab": ["angio-sine", "salis"]
+  }
+}
