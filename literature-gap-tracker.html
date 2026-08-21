@@ -401,6 +401,72 @@ tbody tr.graph-highlight {
 }
 </style>
 
+<style>
+#access-gate {
+  position: fixed; inset: 0; z-index: 9999;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg); color: var(--ink);
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+#access-gate .box {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 28px 32px; max-width: 380px; text-align: center;
+}
+#access-gate h2 { margin: 0 0 10px; font-size: 18px; font-weight: 600; }
+#access-gate p { margin: 0 0 16px; font-size: 13px; color: var(--ink-soft); line-height: 1.5; }
+#access-gate input {
+  width: 100%; padding: 8px 10px; font-size: 14px; border: 1px solid var(--line);
+  border-radius: 6px; margin-bottom: 10px; background: var(--bg); color: var(--ink);
+}
+#access-gate button {
+  width: 100%; padding: 8px 10px; font-size: 13px; font-weight: 600;
+  border: none; border-radius: 6px; background: var(--accent); color: var(--surface);
+  cursor: pointer;
+}
+#access-gate .err { color: var(--danger); font-size: 12px; margin-top: 8px; min-height: 16px; }
+body.gate-locked > .wrap { display: none; }
+</style>
+
+<div id="access-gate">
+  <div class="box">
+    <h2>Restricted content</h2>
+    <p>This page may reference sequence data subject to distribution restrictions. Enter the access password to continue. (Note: this is a casual-access deterrent only, not real security - the underlying page and data files remain fetchable directly by anyone with the URL.)</p>
+    <input type="password" id="access-gate-input" placeholder="Password" autocomplete="off">
+    <button id="access-gate-btn" type="button">Enter</button>
+    <div class="err" id="access-gate-err"></div>
+  </div>
+</div>
+<script>
+(function () {
+  var PASSWORD = 'Bahrom';
+  var body = document.body;
+  var gate = document.getElementById('access-gate');
+  function unlock() {
+    body.classList.remove('gate-locked');
+    gate.style.display = 'none';
+    try { sessionStorage.setItem('lgt-unlocked', '1'); } catch (e) {}
+  }
+  function tryUnlock() {
+    var input = document.getElementById('access-gate-input');
+    var err = document.getElementById('access-gate-err');
+    if (input.value === PASSWORD) { unlock(); }
+    else { err.textContent = 'Incorrect password.'; input.value = ''; input.focus(); }
+  }
+  var already = false;
+  try { already = sessionStorage.getItem('lgt-unlocked') === '1'; } catch (e) {}
+  if (already) {
+    unlock();
+  } else {
+    body.classList.add('gate-locked');
+    document.getElementById('access-gate-btn').addEventListener('click', tryUnlock);
+    document.getElementById('access-gate-input').addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') tryUnlock();
+    });
+    document.getElementById('access-gate-input').focus();
+  }
+})();
+</script>
+
 <div class="wrap">
   <header class="page">
     <div class="eyebrow">SINEBase cross-reference &middot; started 2026-08-21</div>
