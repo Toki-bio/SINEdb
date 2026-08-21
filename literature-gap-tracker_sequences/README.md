@@ -4,6 +4,10 @@ Actual FASTA sequences retrieved for rows in [`literature-gap-tracker.html`](../
 
 ---
 
+### `AngioSINE_24families_Seibt2019.fasta` (degapped) + `AngioSINE_24families_aligned_Seibt2019.fasta` (original alignment) — 24 sequences each
+**Citation:** Seibt, Schmidt & Heitkam 2019, The Plant Journal 101(3):681–699
+**Extraction method:** This paper's own Data Statement names a real deposit ("Data S1 lists the 24 Angio-SINE consensus sequences in fasta format"), but Wiley's site returns a Cloudflare bot-challenge (403) to all automated access, including headless Chrome - the same wall hit on Leech SINEs/MDPI. User downloaded `tpj14567-sup-0003-datas1.zip` directly via their own institutional access (Uzbekistan Hinari/Research4Life, visible in the PDF's own download footer) and supplied it directly. Unzipped to `tpj14567-sup-0003-DataS1.fas` - confirmed exactly 24 records (SolS-II, EriS-I/II/III, AmaS-XXII, RanuS-I, SaliS-IV/V, and 17 more), matching the paper's own family count exactly. The deposited file is an **alignment** (contains gap characters) - kept as-is in the `_aligned` file, and a degapped ungapped-sequence version was also produced (the plain `AngioSINE_24families_Seibt2019.fasta`) for direct use as consensus sequences.
+
 ### `PxSE1-5_plus_related_Han2021.fasta` — 224 sequences
 **Citation:** Han et al. 2021, BMC Genomics 22:230
 **Extraction method:** Paper's text gives explicit GenBank accession ranges (PxSE1: MW068006–MW068073; PxSE2/PxSE3: MW068074–MW068156; PxSE4/PxSE5: MW068157–MW068229). Built the full ID list programmatically, fetched all 224 in one batch call via NCBI `efetch` (`db=nucleotide&rettype=fasta`). These are **raw individual element copies**, not a single deposited consensus per family — the paper's own consensus sequences are shown only as alignments in its figures.
@@ -50,6 +54,6 @@ Actual FASTA sequences retrieved for rows in [`literature-gap-tracker.html`](../
 - **MetaSINEs** (Nishihara et al. 2016) — confirmed genuinely inaccessible: deposited in Repbase only (subscription-gated), absent from Dfam.
 - **Leech SINEs** (Müller 2025, MDPI) — supplementary material link returns HTTP 403 to automated fetches (including headless Chrome); needs a different retrieval approach.
 - 7 of the 8 rows marked `FIGURE_TABLE_ONLY` in the tracker (Urop, MESC & Snail, AfuSINE2, SINE1-1_EBu, SINEU, SINE28, ZenoSINE1+metulj families) — Squam3 (the 8th) is now resolved via supplementary data, see above; the rest still need a supplementary-file check first, then image transcription only if that comes up empty.
-- The 5 rows marked `NOT_AVAILABLE` (Solanaceae, Angio-SINE, Amaranthaceae, 18 Branchiostoma SINEs, Nematode/Heligmosomoides) — no accessible full text or deposit found as of this pass.
+- 4 of the 5 rows marked `NOT_AVAILABLE` (Solanaceae, Amaranthaceae, 18 Branchiostoma SINEs, Nematode/Heligmosomoides) — no accessible full text or deposit found as of this pass. Angio-SINE (the 5th) is now resolved, see above - it was genuinely accessible all along, just blocked to bots by Wiley.
 
 See the tracker's own "Consensus availability" notes per row for the full verification detail behind each verdict.
