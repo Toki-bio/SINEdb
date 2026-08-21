@@ -4,6 +4,10 @@ Actual FASTA sequences retrieved for rows in [`literature-gap-tracker.html`](../
 
 ---
 
+### `Urop_a-b-c_consensus_Kosushkin2026.fasta` (3 sequences) + `Urop_300rawcopies_Kosushkin2026.fasta` (300 sequences)
+**Citation:** Kosushkin, Vassetzky, Borodulina & Kramerov 2026, BMC Biology 12:10
+**Extraction method:** Different from every other file in this collection - not extracted from any PDF at all. This is the user's own original research data for this exact paper, found in a local project directory (`C:\work\urop\`) with file timestamps from October-November 2025 (including a `resubmission2` folder), well before this tracker's fetch pass and consistent with the paper's own 2024 preprint → 2026 publication timeline. Each of the three subfamily alignment files (`Urop_a.fas`, `Urop_b.fas`, `Urop_c.fas`) contains a pre-computed consensus as its first record plus 100 real genomic copies (scaffold ID, coordinates, and strand given in each header) from the actual *Uropsilus gracilis* genome assembly. Degapped the consensus record from each of the three files for the primary sequences; degapped all 300 raw copies (100 per subfamily) into a second file. Authenticity corroborated independently: each consensus visibly contains an internal ~120 bp unit repeated twice - exactly the dimeric structure the tracker's own notes describe ("independently-evolved Alu-like dimeric 7SL-derived SINE").
+
 ### `SINEU_130copies_Kojima2015.fasta` — 130 sequences
 **Citation:** Kojima 2015, GBE 7(6):1702–1712
 **Extraction method:** Europe PMC's supplementary-files endpoint had wrongly reported zero files for this paper (see the correction above/the tracker's own notes) - user supplied the real file directly (`evv100_Supplementary_Data.zip`, containing a 29-page `SFigs.pdf`). Text-extracted all 29 pages via PyMuPDF: pages 5-28 contain dense RepeatMasker-style alignment output - one line per hit, giving the query scaffold name, an embedded coordinate pair in the scaffold's own filename (e.g. `scaffold-13046_[52228-52646]_[51228-53646]`), the matched repeat name, and divergence statistics. Filtered for rows where the query is SINEU-tagged and self-matches a SINEU family name, yielding 181 raw hits (13 subfamilies: SINEU-1A through 1J, 1G2, SINEU-2, SINEU-3) across the *Crocodylus porosus* scaffold set.
@@ -80,7 +84,6 @@ The scaffold names (`scaffold-N`) don't resolve to a GenBank accession under the
 
 ## Not yet gathered
 - **MetaSINEs** (Nishihara et al. 2016) — confirmed genuinely inaccessible: deposited in Repbase only (subscription-gated), absent from Dfam.
-- **Urop** (Kosushkin et al. 2026) — checked Additional File 2 directly (a .docx, hoping for a Squam3-style text escape hatch): confirmed it's only image-license credits, not sequence data. Consensus sequences remain figure-only (Figs. 2/3 of the main PDF).
 - **ZenoSINE1 + metulj families** (Ray, Grimshaw et al. 2019) — checked the full 6.7MB supplementary data zip directly (17 figures + 4 spreadsheets): every spreadsheet contains only genome-content proportions/community-membership data, no sequence columns; the one figure that might have had tail alignments (Fig. S7) is a pure image with zero extractable text. Confirmed no sequence deposit exists anywhere in this paper's materials.
 - The 4 rows marked `NOT_AVAILABLE` still unresolved (Solanaceae, Amaranthaceae, 18 Branchiostoma SINEs, Nematode/Heligmosomoides) — no accessible full text or deposit found as of this pass.
 
