@@ -1,0 +1,1310 @@
+<title>SINE Literature Gap Tracker</title>
+<style>
+:root {
+  --bg: #f5f7f2;
+  --surface: #ffffff;
+  --ink: #1b2420;
+  --ink-soft: #4b5750;
+  --line: #dde3d8;
+  --accent: #3d6b52;
+  --accent-soft: #e7efe8;
+  --ok: #3d6b52;
+  --ok-bg: #e3efe6;
+  --warn: #8a5a15;
+  --warn-bg: #f7ecd6;
+  --danger: #8a3830;
+  --danger-bg: #f6e4e1;
+  --muted: #5c6862;
+  --muted-bg: #eaeeea;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141815;
+    --surface: #1c2119;
+    --ink: #e9ede7;
+    --ink-soft: #b3bdb4;
+    --line: #333d34;
+    --accent: #7fb096;
+    --accent-soft: #22322a;
+    --ok: #7fb096;
+    --ok-bg: #223129;
+    --warn: #d9ab5b;
+    --warn-bg: #3a2f1c;
+    --danger: #d98d84;
+    --danger-bg: #3a2320;
+    --muted: #97a49b;
+    --muted-bg: #262b26;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141815;
+  --surface: #1c2119;
+  --ink: #e9ede7;
+  --ink-soft: #b3bdb4;
+  --line: #333d34;
+  --accent: #7fb096;
+  --accent-soft: #22322a;
+  --ok: #7fb096;
+  --ok-bg: #223129;
+  --warn: #d9ab5b;
+  --warn-bg: #3a2f1c;
+  --danger: #d98d84;
+  --danger-bg: #3a2320;
+  --muted: #97a49b;
+  --muted-bg: #262b26;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+.wrap { max-width: 1180px; margin: 0 auto; padding: 40px 28px 80px; }
+
+header.page {
+  margin-bottom: 28px;
+}
+.eyebrow {
+  font-family: "SF Mono", "Cascadia Code", "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+h1 {
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: -0.01em;
+  margin: 0 0 10px;
+  text-wrap: balance;
+  color: var(--ink);
+}
+.dek {
+  max-width: 62ch;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+.dek code {
+  font-family: "SF Mono", "Cascadia Code", ui-monospace, monospace;
+  background: var(--accent-soft);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 26px 0 30px;
+}
+.stat {
+  background: var(--surface);
+  padding: 16px 18px;
+}
+.stat .n {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+.stat .l {
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+.stat.ok .n { color: var(--ok); }
+.stat.warn .n { color: var(--warn); }
+.stat.danger .n { color: var(--danger); }
+
+.methodology {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 30px;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+}
+.methodology strong { color: var(--ink); font-weight: 600; }
+
+.table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 900px;
+}
+thead th {
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  font-weight: 600;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  background: var(--accent-soft);
+  position: sticky;
+  top: 0;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+thead th:hover { color: var(--ink); }
+thead th .arrow { opacity: 0.4; font-size: 10px; margin-left: 3px; }
+tbody td {
+  padding: 13px 14px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--accent-soft); }
+
+.family {
+  font-family: "SF Mono", "Cascadia Code", "IBM Plex Mono", ui-monospace, monospace;
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--ink);
+}
+.family .sub {
+  display: block;
+  font-family: -apple-system, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+.pill {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.pill.ok { background: var(--ok-bg); color: var(--ok); }
+.pill.warn { background: var(--warn-bg); color: var(--warn); }
+.pill.danger { background: var(--danger-bg); color: var(--danger); }
+.pill.muted { background: var(--muted-bg); color: var(--muted); }
+
+.cite { font-size: 13px; }
+.cite a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 2px;
+}
+.cite a:hover { text-decoration-color: var(--accent); }
+.cite .venue { color: var(--ink-soft); font-size: 12px; display: block; margin-top: 2px; }
+
+.taxon { color: var(--ink-soft); font-size: 13px; }
+.notes { color: var(--ink-soft); font-size: 12.5px; max-width: 26ch; }
+
+footer.foot {
+  margin-top: 30px;
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.graph-section {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 30px;
+}
+.graph-section h2 {
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  font-weight: 400;
+  font-size: 22px;
+  margin: 0 0 4px;
+  color: var(--ink);
+}
+.graph-section .graph-sub {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+  max-width: 70ch;
+}
+.graph-controls {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+.graph-controls label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+.graph-controls input[type="radio"] {
+  accent-color: var(--accent);
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+}
+.graph-controls .vc-spacer { margin-left: auto; }
+.vc-btn {
+  font-family: inherit;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+  line-height: 1.4;
+}
+.vc-btn:hover { color: var(--ink); border-color: var(--accent); }
+.vc-btn:active { background: var(--accent-soft); }
+.vc-btn.rot { font-size: 15px; padding: 2px 9px; }
+.graph-canvas-wrap {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg);
+  border: 1px solid var(--line);
+}
+.graph-canvas-wrap canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.graph-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 12.5px;
+  color: var(--ink);
+  max-width: 260px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.13);
+  z-index: 10;
+  display: none;
+  line-height: 1.45;
+}
+.graph-tooltip .tt-label {
+  font-family: "SF Mono", "Cascadia Code", "IBM Plex Mono", ui-monospace, monospace;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+.graph-tooltip .tt-cite { color: var(--ink); font-size: 12.5px; }
+.graph-tooltip .tt-venue { color: var(--accent); font-size: 11.5px; margin-top: 3px; }
+.graph-tooltip .tt-taxon { color: var(--ink-soft); font-size: 12px; margin-top: 2px; }
+.graph-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 12px;
+  font-size: 11.5px;
+  color: var(--ink-soft);
+}
+.graph-legend .lg-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.graph-legend .lg-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.graph-legend .lg-line {
+  width: 22px;
+  border-top-width: 2px;
+  border-top-style: solid;
+  flex-shrink: 0;
+}
+.graph-legend .lg-line.dashed {
+  border-top-style: dashed;
+}
+tbody tr.graph-highlight {
+  background: var(--accent-soft) !important;
+}
+</style>
+
+<div class="wrap">
+  <header class="page">
+    <div class="eyebrow">SINEBase cross-reference &middot; started 2026-08-21</div>
+    <h1>SINE Literature Gap Tracker</h1>
+    <p class="dek">Candidate publications (2015&ndash;present) describing SINE consensus sequences not represented in the <a href="https://sines.eimb.ru/" style="color:inherit">SINEBase</a> bank files (<code>SINEs.bnk</code>, <code>COREs.bnk</code>, <code>LINEs.bnk</code> &mdash; 244 entries, 75 unique citations catalogued). First pass: broad search, snippet-level only, not yet individually fetched or sequence-verified except where marked.</p>
+  </header>
+
+  <div class="summary">
+    <div class="stat danger"><div class="n">17</div><div class="l">New family, gap confirmed</div></div>
+    <div class="stat warn"><div class="n">10</div><div class="l">Existing family, updated / new taxa</div></div>
+    <div class="stat ok"><div class="n">2</div><div class="l">Resolved, not a gap</div></div>
+    <div class="stat muted"><div class="n">2</div><div class="l">Candidates, unverified</div></div>
+    <div class="stat"><div class="n">31</div><div class="l">Total logged so far (+19 more preserved for direct genome verification, not counted here)</div></div>
+  </div>
+
+  <div class="methodology">
+    <strong>Scan strategy (updated 2026-08-21):</strong> keyword search only surfaces papers that announce a novel family name in the title/abstract, which misses two entire classes of relevant work: (1) papers re-evaluating a family SINEBase already has, and (2) papers that describe new families without using words like "novel" up front. The fix is <strong>citation snowballing</strong>, which doesn't depend on guessing the right keyword:
+    <ul style="margin:8px 0 4px 20px; padding:0;">
+      <li><strong>Backward from the database itself:</strong> pulled all 176 papers (2015+) that cite the SINEBase paper directly (<a href="https://doi.org/10.1093/nar/gkr1067" target="_blank" rel="noopener">Vassetzky &amp; Kramerov 2013, NAR</a>) via OpenAlex's <code>cites:</code> filter &mdash; virtually every SINE-family paper cites the database it's comparing against, so this one query surfaces most of the field in one shot, independent of what any individual paper calls its new family.</li>
+      <li><strong>Forward, author-by-author:</strong> full 2015&ndash;2026 output pulled per OpenAlex author ID for each core lab member (Kramerov done; Vassetzky/Ustyantsev/Kosushkin/Borodulina/Luchetti queued), not just their co-authored papers with each other.</li>
+      <li><strong>Every existing-vs-new call is checked against the actual parsed bank catalogue</strong> (<code>sinebase_catalog.json</code>, name + taxon fields), not a species-name guess or a plausible-looking match &mdash; this caught that SacSINE1/LmeSINE1/CM-1 already exist (so the 2017 chondrichthyan paper is a re-evaluation, not a gap) and that "C" already exists for Lagomorpha (so the 2026 rabbit/pika paper is too).</li>
+      <li><strong>2nd-order widening (run this pass):</strong> pulled citations of 4 newly confirmed new-family papers (Angio-SINE, SINE28, hagfish, Ere) &mdash; found 2 more genuine leads (Salicaceae SaliS extension, reptile Sauria re-analysis) purely by following the citation graph one hop further, with no new keywords at all. This step compounds: each round's finds become next round's seeds.</li>
+    </ul>
+    The 1st-order citation-snowball query (176 papers, one request) surfaced 8 of the 12 confirmed new-family rows below, several of which no keyword sweep in this tracker's earlier passes had found (Angio-SINE superfamily, SINE28, 18 amphioxus families, grass SINEs) &mdash; direct evidence the earlier keyword-only method was systematically under-counting. The 2nd-order pass added 2 more from just 4 seed papers. <strong>3rd-order + full author-ID sweep completed (2026-08-21):</strong> citations of the Salicaceae paper ran dry (methylation/repeat-profiling papers, no new SINE families); Vassetzky/Ustyantsev/Kosushkin/Borodulina's own first-author output overlaps almost entirely with Kramerov's (same core lab, shared co-authorship), no new rows beyond what's already tracked; Luchetti's own output surfaced one borderline case ("Persaeus", a CR1-LINE-derived short internally-deleted element in Lepidoptera) that's arguably outside strict SINE scope (LINE-derived, not tRNA/7SL/rRNA-derived) &mdash; noted but not added as a tracker row pending a scope decision. <strong>Taxa swept clean (keyword-based, still due for a citation-snowball pass):</strong> crustaceans, cnidarians, nematodes, amphibians. <strong>Blattella cockroach and HCD-tRNA bivalve papers both resolved (2026-08-21)</strong> via direct full-text fetch (both open access, real content pulled and searched, not snippets): Blattella genuinely doesn't name its 9 SINEs individually in the main text (a real negative result); the bivalve paper turned out to be a comparative/distributional survey of the already-known HCD-tRNA superfamily across 40+ genomes, not a new-family-naming paper, so it's reclassified from "unverified" to "existing superfamily, broader survey." <strong>New search axis added (2026-08-21): Dfam cross-reference, for "isolated" publications a citation-network search structurally cannot find.</strong> Citation-snowballing (from SINEBase or from author networks) only surfaces papers that are already aware of, and cite, the SINE-specific literature - it cannot find a genome paper that ran generic repeat annotation and happened to name a SINE without ever engaging with that literature (the tuatara-genome pattern). Dfam is a much larger (1,510 SINE-type entries vs. SINEBase's 244), broadly-fed database - pulled the full list directly via its API and cross-referenced species/taxon coverage against the bank. Found: a 21-species bivalve/mollusk SINE set and a 2nd-ever fungal SINE entry (Zymoseptoria tritici), both below. Caveat found in the process: most Dfam SINE entries are automated RepeatModeler/SINE_Scan pipeline output from large genome consortiums (DNA Zoo, Zoonomia-style projects) with no individual discovery paper behind them at all - a different problem than "the paper exists but isn't in SINEBase," and arguably belongs more to the separate WGS-silent-annotation task than this citation tracker. <strong>Exhaustive Dfam diff completed (2026-08-21):</strong> wrote a script comparing all 1,510 Dfam SINE records against all 244 SINEBase entries by taxon (241 species-level gaps found, but ~99% are automated mammalian genome-consortium output with no paper behind them at all). Filtering to non-mammalian taxa surfaced one genuinely important correction: a real nematode SINE (Heligmosomoides, found in a 2023 host-parasite population-genomics preprint) that directly contradicts this tracker's earlier keyword-based "nematodes swept clean" claim - proof that citation/keyword search structurally cannot find papers that never engage with the SINE literature, which is exactly why the Dfam axis was worth adding. <strong>Chewed through the remaining non-mammalian Dfam candidates one by one (2026-08-21):</strong> of 9 remaining taxa (after excluding the already-resolved bivalve and Lepidoptera batches), checked each Dfam record's own citation field directly - 2 more confirmed gaps (19-species Heliconiine butterfly SINE paper, castor bean), 1 pure-automation exclusion with zero citation at all (Halyomorpha halys stink bug - raw "RepeatModeler Generated" output, no paper exists), and 3 that trace to pre-2015 sources (zebrafish to the 2013 reference genome paper, C. elegans to a 1996 paper, one cichlid entry uncited) - correctly excluded as out of this tracker's 2015+ scope.
+
+<strong>Correction after user feedback (2026-08-21): "generated" SINEs are not noise to discard, they're candidates awaiting a different verification method.</strong> Ran a full per-species citation check (not a sample) across all 241 Dfam gaps, one Dfam API lookup per species. Result: 222 had SOME citation attached, but a deeper look found 185 of those (83%) all cite the exact same paper - Hubley et al. 2016, "Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies" (PMID 26802115) - which is a methods paper about the RepeatModeler pipeline itself, automatically credited on every pipeline run, not a real per-species discovery paper. That means the true "has a real, specific discovery paper" count is much smaller than 222 - most of the "cited" bucket is exactly as automated as the "uncited" bucket, just with a boilerplate citation attached instead of none. This directly validates the concern: don't treat "has some citation" as proof of real discovery, and don't discard "no citation" as proof of nothing there. <strong>Full uncited list (19 species, genuinely zero citation of any kind) is preserved in <code>dfam_uncited_candidates.json</code></strong> and the complete per-species citation breakdown (all 241, cited and uncited) is in <code>dfam_citation_check_report.txt</code> - both committed alongside this tracker, not discarded, for direct genome-level verification/rejection outside this literature-citation workflow. One real find from the citation check: the Zymoseptoria row below now has its actual source paper (was previously untraceable).
+
+<strong>Resolving the remaining unverified rows</strong> is still open.
+  </div>
+
+  <div class="graph-section">
+    <h2>Citation Graph</h2>
+    <p class="graph-sub">How these 26 publications connect to SINEBase and to each other. Click any node to jump to its row in the table below. Drag nodes to reposition.</p>
+    <div class="graph-controls">
+      <label><input type="radio" name="edge-mode" value="citation" checked> Citation edges</label>
+      <label><input type="radio" name="edge-mode" value="authors"> Shared-author clusters</label>
+      <label><input type="radio" name="edge-mode" value="taxonomy"> Group by taxonomy</label>
+      <label style="margin-left:8px;"><input type="checkbox" id="show-older-works"> Show older SINEBase-cited works</label>
+      <span class="vc-spacer"></span>
+      <button type="button" class="vc-btn rot" id="rotate-left" title="Rotate view left">&#8634;</button>
+      <button type="button" class="vc-btn rot" id="rotate-right" title="Rotate view right">&#8635;</button>
+      <button type="button" class="vc-btn" id="reset-view" title="Reset zoom, pan and rotation">Reset view</button>
+    </div>
+    <div class="graph-canvas-wrap">
+      <canvas id="graph-canvas"></canvas>
+      <div class="graph-tooltip" id="graph-tooltip"></div>
+    </div>
+    <div class="graph-legend">
+      <span class="lg-item"><span class="lg-swatch" style="background:var(--accent)"></span> SINEBase hub</span>
+      <span class="lg-item"><span class="lg-swatch" style="background:var(--danger)"></span> New family (gap)</span>
+      <span class="lg-item"><span class="lg-swatch" style="background:var(--warn)"></span> Existing, updated</span>
+      <span class="lg-item"><span class="lg-swatch" style="background:var(--muted)"></span> Unverified</span>
+      <span class="lg-item"><span class="lg-swatch" style="background:var(--ok)"></span> Resolved, not a gap</span>
+      <span class="lg-item"><span class="lg-swatch" style="background:transparent;border:2px solid var(--ink-soft)"></span> Older SINEBase-cited work</span>
+      <span class="lg-item"><span class="lg-swatch" style="background:var(--accent-soft);border:1px solid var(--ink)"></span> Taxonomy bucket</span>
+      <span class="lg-item"><span class="lg-line" style="border-color:var(--accent)"></span> Confirmed citation</span>
+      <span class="lg-item"><span class="lg-line dashed" style="border-color:var(--muted)"></span> Unconfirmed</span>
+      <span class="lg-item"><span class="lg-line dashed" style="border-color:var(--ink-soft)"></span> Historical lineage</span>
+    </div>
+  </div>
+
+  <div class="table-scroll">
+    <table id="t">
+      <thead>
+        <tr>
+          <th data-k="family">Family <span class="arrow">&#8597;</span></th>
+          <th data-k="status">Status vs. SINEBase <span class="arrow">&#8597;</span></th>
+          <th data-k="cite">Publication <span class="arrow">&#8597;</span></th>
+          <th data-k="taxon">Taxon <span class="arrow">&#8597;</span></th>
+          <th data-k="access">Access <span class="arrow">&#8597;</span></th>
+          <th data-k="notes">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-family="Ere (EreA/EreB)" data-status="1" data-cite="Ustyantsev et al. 2024" data-taxon="Odd-toed ungulates" data-access="2">
+          <td class="family">Ere <span class="sub">EreA / EreB subfamilies</span></td>
+          <td><span class="pill warn">Existing family, new taxa</span></td>
+          <td class="cite"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11240701/" target="_blank" rel="noopener">Ustyantsev, Kosushkin, Borodulina, Vassetzky &amp; Kramerov 2024</a><span class="venue">Animals 14(13):1982</span></td>
+          <td class="taxon">Horse (covered) + black rhino, Malayan tapir (new)</td>
+          <td><span class="pill ok">Open access</span></td>
+          <td class="notes">SINEBase has ERE&#8209;A/B1/B2 for horse only. This paper's Fig. 1 + supplementary give consensus sequences for rhino and tapir &mdash; verified by direct fetch. (Author order corrected: Ustyantsev is first author, not Kosushkin.)</td>
+        </tr>
+        <tr data-family="Urop" data-status="0" data-cite="Kosushkin et al. 2026" data-taxon="Shrew mole (Uropsilus gracilis)" data-access="2">
+          <td class="family">Urop <span class="sub">dimeric 7SL-derived SINE, subfamilies a/b/c</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://doi.org/10.1186/s12915-026-02550-6" target="_blank" rel="noopener">Kosushkin, Vassetzky, Borodulina &amp; Kramerov 2026</a><span class="venue">BMC Biology (bioRxiv preprint 2024)</span></td>
+          <td class="taxon"><em>Uropsilus gracilis</em> (Talpidae, shrew mole)</td>
+          <td><span class="pill ok">Open access (BMC)</span></td>
+          <td class="notes">Confirmed absent from bank files ("Urop" 0 hits). Not a re-evaluation &mdash; a genuinely new family: an independently-evolved Alu-like dimeric 7SL-derived SINE outside primates/rodents/tree shrews/hagfish, the only other taxa known to have one. Highest-priority new gap from this pass.</td>
+        </tr>
+        <tr data-family="Can (a1/a2/b1/b2)" data-status="1" data-cite="Kosushkin et al. 2022" data-taxon="Canidae (dogs)" data-access="2">
+          <td class="family">Can <span class="sub">subfamilies a1 / a2 / b1 / b2</span></td>
+          <td><span class="pill warn">Existing family, updated consensus</span></td>
+          <td class="cite"><a href="https://doi.org/10.3390/biology11101403" target="_blank" rel="noopener">Kosushkin, Ustyantsev, Borodulina, Vassetzky &amp; Kramerov 2022</a><span class="venue">Biology 11(10):1403</span></td>
+          <td class="taxon">Canidae, esp. dog breeds</td>
+          <td><span class="pill ok">Open access</span></td>
+          <td class="notes">SINEBase already has a base "CAN" entry. This paper re-divides it into 4 age-resolved subfamilies (a1/a2 older, b1/b2 younger, b2 currently active) with updated per-subfamily consensus &mdash; the "re-evaluate with updated consensus" pattern you flagged. Worth checking whether SINEBase's CAN entry needs a subfamily-level update.</td>
+        </tr>
+        <tr data-family="B2 / Dip / Ves" data-status="1" data-cite="Vassetzky et al. 2021" data-taxon="Rodents (B2, Dip), bats (Ves)" data-access="2">
+          <td class="family">B2, Dip, Ves <span class="sub">indel-resolved subfamilies</span></td>
+          <td><span class="pill warn">Existing families, updated consensus</span></td>
+          <td class="cite"><a href="https://doi.org/10.3390/ijms22189897" target="_blank" rel="noopener">Vassetzky, Borodulina, Ustyantsev, Kosushkin &amp; Kramerov 2021</a><span class="venue">IJMS 22(18):9897</span></td>
+          <td class="taxon">Mice/rodents (B2), jerboas (Dip), vespertilionid bats (Ves)</td>
+          <td><span class="pill ok">Open access</span></td>
+          <td class="notes">All three base families already in SINEBase. Paper divides each into age-resolved subfamilies via long indels, with per-subfamily terminator/poly(A) analysis &mdash; another instance of the same re-evaluation pattern, not a new-family gap on its own.</td>
+        </tr>
+        <tr data-family="C (Lagomorpha, C1/C2)" data-status="1" data-cite="Ustyantsev et al. 2026" data-taxon="Leporidae, Ochotonidae" data-access="2">
+          <td class="family">SINE C <span class="sub">subfamilies C1 / C2</span></td>
+          <td><span class="pill warn">Existing family, updated consensus</span></td>
+          <td class="cite"><a href="https://doi.org/10.3390/ani16050765" target="_blank" rel="noopener">Ustyantsev, Kosushkin, Kramerov, Stasenko &amp; Borodulina 2026</a><span class="venue">Animals 16(5):765</span></td>
+          <td class="taxon">Hares, rabbits (Leporidae), pikas (Ochotonidae)</td>
+          <td><span class="pill ok">Open access</span></td>
+          <td class="notes">Bank catalog has a base "C" entry (Vassetzky, Aug 2011, Lagomorpha). This paper resolves it into C1/C2 subfamilies with 1.2&ndash;1.6M copies mapped, updated per-subfamily consensus, and copy-number/activity data by species &mdash; the exact re-evaluation pattern flagged. Not a new-family gap, but the bank's single "C" entry is now 15 years stale next to this subfamily-level data.</td>
+        </tr>
+        <tr data-family="RUDI" data-status="0" data-cite="Kramerov &amp; Vassetzky 2016" data-taxon="Mollusca" data-access="0">
+          <td class="family">RUDI <span class="sub">V-SINE superfamily</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://link.springer.com/article/10.1007/s00438-016-1194-z" target="_blank" rel="noopener">Kramerov &amp; Vassetzky 2016</a><span class="venue">Mol Genet Genomics 291(3):1419&ndash;29</span></td>
+          <td class="taxon"><em>Ruditapes</em> spp. &amp; wider Mollusca</td>
+          <td><span class="pill danger">Paywalled</span></td>
+          <td class="notes">Confirmed absent from all 3 bank files by name search. Springer redirected to login &mdash; flagged for your manual check.</td>
+        </tr>
+        <tr data-family="MetaSINEs" data-status="0" data-cite="Nishihara et al. 2016" data-taxon="Fish &ndash; Cnidaria" data-access="2">
+          <td class="family">MetaSINEs <span class="sub">13 novel + 8 more CORE/V/Deu in bivalves</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://academic.oup.com/gbe/article/8/3/528/2574134" target="_blank" rel="noopener">Nishihara, Plazzi, Passamonti &amp; Okada 2016</a><span class="venue">GBE 8(3):528</span></td>
+          <td class="taxon">Fish through Cnidaria (~640 Myr span); bivalves</td>
+          <td><span class="pill ok">Open access (GBE)</span></td>
+          <td class="notes">Confirmed via abstract: a 5th SINE superfamily (after CORE/V/Deu/Ceph) built on a shared 66-bp central domain, 15 SINEs total (13 novel) plus 8 further new bivalve SINEs in the existing CORE/V/Deu superfamilies. High-confidence gap.</td>
+        </tr>
+        <tr data-family="MESC &amp; Snail" data-status="0" data-cite="Matetovici et al. 2016" data-taxon="Gastropoda, Bivalvia" data-access="2">
+          <td class="family">MESC <span class="sub">+ Snail superfamily</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://academic.oup.com/gbe/article/8/1/253/2574347" target="_blank" rel="noopener">Matetovici, Sajgo, Ianc, Ochis, Bulzu, Popescu &amp; Damert 2016</a><span class="venue">GBE 8(1):253</span></td>
+          <td class="taxon">Caenogastropoda, Vetigastropoda, all 4 Bivalvia subclasses</td>
+          <td><span class="pill ok">Open access (GBE)</span></td>
+          <td class="notes">Two new superfamilies distinct from RUDI (different lab/authors, confirmed): MESC shared across snails+mussels, Snail restricted to Caenogastropoda. Also extends CORE-SINE range into gastropods/bivalves.</td>
+        </tr>
+        <tr data-family="AfuSINE2 (×8)" data-status="0" data-cite="Kanhayuwa &amp; Coutts 2016" data-taxon="Aspergillus fumigatus" data-access="2">
+          <td class="family">AfuSINE2 <span class="sub">8 predicted tRNA-related families</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5063351/" target="_blank" rel="noopener">Kanhayuwa &amp; Coutts 2016</a><span class="venue">PLOS ONE 11(10):e0163215</span></td>
+          <td class="taxon">Fungus &mdash; confirmed zero fungal entries in the bank (grepped taxon field directly)</td>
+          <td><span class="pill ok">Open access (PMC)</span></td>
+          <td class="notes">Confirmed via Europe PMC + direct bank grep: fungi are an entirely uncovered kingdom in SINEBase, not just this one paper missing.</td>
+        </tr>
+        <tr data-family="Ceph-SINEs" data-status="1" data-cite="2009 (pre-2015)" data-taxon="Squid, cuttlefish" data-access="1">
+          <td class="family">Ceph-SINEs</td>
+          <td><span class="pill ok">Resolved: pre-2015, not a gap</span></td>
+          <td class="cite">&ldquo;Characterization of a novel SINE superfamily from invertebrates: &lsquo;Ceph-SINEs&rsquo; from the genomes of squids and cuttlefish&rdquo;, 2009<span class="venue">Gene (found in SINEBase's own reference list, OpenAlex W2015409591)</span></td>
+          <td class="taxon">Cephalopods</td>
+          <td><span class="pill ok">Confirmed</span></td>
+          <td class="notes">Confirmed date via SINEBase's own citation list (backward snowball): this is the original 2009 description, matching the existing COREs.bnk "Ceph domain [Akasaki 2010]" entry. Pre-dates this tracker's 2015+ scope &mdash; correctly excluded, not an open gap.</td>
+        </tr>
+        <tr data-family="CORE-SINEs (marsupial)" data-status="1" data-cite="2007 (pre-2015)" data-taxon="Marsupials" data-access="1">
+          <td class="family">young CORE&#8209;SINEs</td>
+          <td><span class="pill ok">Resolved: pre-2015, not a gap</span></td>
+          <td class="cite">&ldquo;Newly discovered young CORE-SINEs in marsupial genomes&rdquo;, 2007<span class="venue">Gene (found in SINEBase's own reference list, OpenAlex W1979507098)</span></td>
+          <td class="taxon">Marsupialia</td>
+          <td><span class="pill ok">Confirmed</span></td>
+          <td class="notes">Confirmed date via SINEBase's own citation list (backward snowball): 2007, pre-dates this tracker's 2015+ scope. Correctly excluded, not an open gap.</td>
+        </tr>
+        <tr data-family="Solanaceae SINEs (10 families)" data-status="0" data-cite="Seibt et al. 2016" data-taxon="Solanaceae" data-access="0">
+          <td class="family">10 fam./subfam. <span class="sub">potato, tomato, pepper</span></td>
+          <td><span class="pill muted">Check vs. existing &ldquo;Au&rdquo;</span></td>
+          <td class="cite"><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/tpj.13170" target="_blank" rel="noopener">Seibt et al. 2016</a><span class="venue">The Plant Journal</span></td>
+          <td class="taxon">Potato, tomato, wild tomato, pepper</td>
+          <td><span class="pill danger">Likely paywalled (Wiley)</span></td>
+          <td class="notes">SINEBase's &ldquo;Au&rdquo; entry already spans Solanaceae broadly (Fawcett 2006) &mdash; need to confirm whether these 10 are distinct named families or subfamilies of Au.</td>
+        </tr>
+        <tr data-family="Platy-1 (6 new subfamilies)" data-status="1" data-cite="tamarin study" data-taxon="Saguinus (tamarins)" data-access="2">
+          <td class="family">Platy-1 <span class="sub">6 new subfamilies incl. Platy-1-8c</span></td>
+          <td><span class="pill warn">Existing family, new subfamilies</span></td>
+          <td class="cite"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10378772/" target="_blank" rel="noopener">Extensive Independent Amplification of Platy-1 in Tamarins</a></td>
+          <td class="taxon"><em>Saguinus</em> spp.</td>
+          <td><span class="pill ok">Open access (PMC)</span></td>
+          <td class="notes">Base family Platy-1 likely already catalogued (primate-associated) &mdash; the 6 new subfamilies (esp. Platy-1&#8209;8c) are the actual new content.</td>
+        </tr>
+        <tr data-family="SINE1-1_EBu" data-status="0" data-cite="hagfish study" data-taxon="Eptatretus burgeri (hagfish)" data-access="2">
+          <td class="family">SINE1&#8209;1_EBu</td>
+          <td><span class="pill danger">Not in SINEBase (likely)</span></td>
+          <td class="cite"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7245038/" target="_blank" rel="noopener">Hagfish genome reveals parallel evolution of 7SL RNA-derived SINEs</a></td>
+          <td class="taxon">Seashore hagfish</td>
+          <td><span class="pill ok">Open access (PMC)</span></td>
+          <td class="notes">Named, dated young lineage; hagfish/Agnatha not obviously present in current bank taxa seen so far.</td>
+        </tr>
+        <tr data-family="Squam3 (A/B/C)" data-status="0" data-cite="Vassetzky et al. 2021" data-taxon="Squamata (lizards, snakes) + tuatara" data-access="2">
+          <td class="family">Squam3 <span class="sub">subfamilies A / B / C</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://pubmed.ncbi.nlm.nih.gov/33752750/" target="_blank" rel="noopener">Vassetzky, Kosushkin, Korchagin &amp; Ryskov 2021</a><span class="venue">Mobile DNA 12, article 6</span></td>
+          <td class="taxon"><em>Darevskia</em> &amp; <em>Anolis</em> lizards, squamates broadly, tuatara</td>
+          <td><span class="pill ok">Open access (BMC)</span></td>
+          <td class="notes">Confirmed via independent search: Ther1-derived SINE, 3 named consensus subfamilies. From the same lab that runs SINEBase itself &mdash; likely just not yet folded into the bank.</td>
+        </tr>
+        <tr data-family="Angio-SINE (24 families)" data-status="0" data-cite="Seibt, Schmidt &amp; Heitkam 2019" data-taxon="Higher plants, 13 orders" data-access="1">
+          <td class="family">Angio-SINE <span class="sub">superfamily, 24 families</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://doi.org/10.1111/tpj.14567" target="_blank" rel="noopener">Seibt, Schmidt &amp; Heitkam 2019</a><span class="venue">The Plant Journal</span></td>
+          <td class="taxon">13 plant orders (angiosperms broadly)</td>
+          <td><span class="pill warn">Likely paywalled (Wiley)</span></td>
+          <td class="notes">Confirmed via abstract: a new SINE superfamily defined by a conserved 37bp "Angio-domain," encompassing 24 distinct plant SINE families across 13 orders, 28,433 full-length copies retrieved. Found via SINEBase citation snowball, not keyword search &mdash; the title never says "novel."</td>
+        </tr>
+        <tr data-family="18 Branchiostoma SINEs" data-status="0" data-cite="Kosushkin &amp; Vassetzky 2020" data-taxon="Amphioxus (Cephalochordata)" data-access="2">
+          <td class="family">18 unnamed families <span class="sub">extreme diversity in one genome</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://doi.org/10.7124/bc.000a1d" target="_blank" rel="noopener">Kosushkin &amp; Vassetzky 2020</a><span class="venue">Biopolymers and Cell</span></td>
+          <td class="taxon"><em>Branchiostoma belcheri</em> (lancelet)</td>
+          <td><span class="pill ok">Open access</span></td>
+          <td class="notes">Confirmed via abstract: 18 distinct SINE families identified and analyzed in a single lancelet genome. Cephalochordata is an entirely new taxon for this tracker &mdash; no amphioxus/Branchiostoma entries in the bank at all.</td>
+        </tr>
+        <tr data-family="SINE28" data-status="0" data-cite="Longo et al. 2015" data-taxon="Human / mammals" data-access="2">
+          <td class="family">SINE28 <span class="sub">28S rDNA-derived, novel origin</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://doi.org/10.1093/gbe/evv015" target="_blank" rel="noopener">Longo, Brown, Zhang &amp; O&rsquo;Neill 2015</a><span class="venue">GBE</span></td>
+          <td class="taxon">Human (27 loci in reference genome) + other mammals</td>
+          <td><span class="pill ok">Open access (GBE)</span></td>
+          <td class="notes">Confirmed via abstract: a previously unknown SINE derived from the 3&prime; end of 28S rDNA (LSU), a genuinely novel progenitor RNA distinct from the usual tRNA/7SL/5S origins. Notable because it's a mammalian/human-genome gap, the best-studied taxon in the whole bank &mdash; shows even "obvious" genomes have missed families.</td>
+        </tr>
+        <tr data-family="46 grass SINE families" data-status="1" data-cite="Mao &amp; Wang 2017" data-taxon="Poaceae (grasses)" data-access="2">
+          <td class="family">46 of 61 <span class="sub">"first described" in this paper</span></td>
+          <td><span class="pill warn">Check vs. existing &ldquo;Au&rdquo;</span></td>
+          <td class="cite"><a href="https://doi.org/10.1093/gbe/evx145" target="_blank" rel="noopener">Mao &amp; Wang 2017</a><span class="venue">GBE</span></td>
+          <td class="taxon">14 grass genomes + 5 other flowering plants</td>
+          <td><span class="pill ok">Open access (GBE)</span></td>
+          <td class="notes">SINEBase's bank has one generic "Au" entry spanning Poaceae/Fabaceae/Solanaceae/Gramineae (Fawcett 2006). This paper names 61 individual grass SINE families (46 newly described) &mdash; almost certainly real new content given the huge count-vs-one-entry mismatch, but needs the same Au-relationship check as the Solanaceae row above before counting as confirmed.</td>
+        </tr>
+        <tr data-family="CmiSINEs (chondrichthyan)" data-status="1" data-cite="Luchetti, Plazzi &amp; Mantovani 2017" data-taxon="Elephant shark, sharks, coelacanth" data-access="2">
+          <td class="family">CmiSINEs <span class="sub">+ SacSINE1-CM</span></td>
+          <td><span class="pill warn">Existing family group, needs overlap check</span></td>
+          <td class="cite"><a href="https://doi.org/10.1093/gbe/evx094" target="_blank" rel="noopener">Luchetti, Plazzi &amp; Mantovani 2017</a><span class="venue">GBE</span></td>
+          <td class="taxon"><em>Callorhinchus milii</em>, sharks, coelacanth</td>
+          <td><span class="pill ok">Open access (GBE)</span></td>
+          <td class="notes">Bank already has SacSINE1 (dogfish shark), LmeSINE1 (coelacanth), and CM-1 (<em>C. milii</em> itself) &mdash; caught by direct catalog grep, not assumed. This paper's "CmiSINEs" and "SacSINE1-CM"/"LmeSINE1s" look like an extension/re-evaluation of these three existing entries rather than a clean new gap. Needs a direct sequence-level check before concluding either way.</td>
+        </tr>
+        <tr data-family="HCD-tRNA bivalve SINEs" data-status="1" data-cite="Martelossi et al. 2024" data-taxon="Bivalvia (40+ genomes)" data-access="2">
+          <td class="family">HCD-tRNA SINEs <span class="sub">novel SINE&ndash;LINE pairings, no new family names</span></td>
+          <td><span class="pill warn">Existing superfamily, broader survey</span></td>
+          <td class="cite"><a href="https://doi.org/10.1186/s13100-024-00332-x" target="_blank" rel="noopener">Martelossi, Iannello, Ghiselli &amp; Luchetti 2024</a><span class="venue">Mobile DNA</span></td>
+          <td class="taxon">40+ bivalve genomes</td>
+          <td><span class="pill ok">Open access (Mobile DNA)</span></td>
+          <td class="notes">Resolved via full-text fetch: this is a comparative/distributional analysis of the already-known "HCD-tRNA SINE" superfamily across 40+ bivalve genomes (4 distinct LINE clade partnerships found), not a paper minting new individual family names &mdash; different in kind from RUDI/MetaSINEs/MESC/Snail (all of which do name new families). Real content (novel SINE-LINE partnerships, broad taxonomic survey), just not a "new family" gap in the strict sense.</td>
+        </tr>
+        <tr data-family="SaliS-I/II/VI&ndash;XI (8 of 11)" data-status="1" data-cite="K&ouml;gler, Seibt, Heitkam &amp; Morgenstern 2020" data-taxon="Salicaceae (poplars, willow)" data-access="1">
+          <td class="family">8 of 11 SaliS families <span class="sub">III/IV/V already catalogued</span></td>
+          <td><span class="pill warn">Existing family group, extended</span></td>
+          <td class="cite"><a href="https://doi.org/10.1111/tpj.14721" target="_blank" rel="noopener">K&ouml;gler, Seibt, Heitkam &amp; Morgenstern 2020</a><span class="venue">The Plant Journal</span></td>
+          <td class="taxon">6 <em>Populus</em>/<em>Salix</em> species</td>
+          <td><span class="pill warn">Likely paywalled (Wiley)</span></td>
+          <td class="notes">Found via 2nd-order citation snowball (citing the Angio-SINE paper). Bank catalog already has SaliS-III/IV/V (Populus trichocarpa); this paper describes 11 total (SaliS-I to XI) across 6 species &mdash; so I/II and VI&ndash;XI (8 families) look like genuinely new additions to an existing group, not a clean new-family gap.</td>
+        </tr>
+        <tr data-family="Sauria (Bov-B associated)" data-status="1" data-cite="Nakatsuka &amp; Ohshima 2026" data-taxon="Squamata" data-access="2">
+          <td class="family">Sauria SINE <span class="sub">insertion-signature re-analysis</span></td>
+          <td><span class="pill warn">Existing family, mechanism re-evaluation</span></td>
+          <td class="cite"><a href="https://doi.org/10.3390/biology15120927" target="_blank" rel="noopener">Nakatsuka &amp; Ohshima 2026</a><span class="venue">Biology</span></td>
+          <td class="taxon">Various squamates</td>
+          <td><span class="pill ok">Open access</span></td>
+          <td class="notes">Found via 2nd-order citation snowball. Bank already has a base "Sauria" entry (Lepidosauria) plus 5S-Sauria, AnolisSINE2, Squam2 &mdash; this paper re-analyzes genomic insertion signatures of the existing family alongside its Bov-B LINE partner, not a new family.</td>
+        </tr>
+        <tr data-family="Olive tree SINEs" data-status="0" data-cite="Barghini et al. 2016" data-taxon="Olea europaea (olive)" data-access="1">
+          <td class="family">Unnamed <span class="sub">first SINE description in this species</span></td>
+          <td><span class="pill muted">Unverified &ndash; no abstract available</span></td>
+          <td class="cite"><a href="https://doi.org/10.1007/s00438-016-1255-3" target="_blank" rel="noopener">Barghini, Mascagni, Natali &amp; Giordani 2016</a><span class="venue">Mol Genet Genomics</span></td>
+          <td class="taxon">Olive tree</td>
+          <td><span class="pill warn">Unclear (Springer)</span></td>
+          <td class="notes">No olive/Olea entries in the bank catalog, and title implies a first description in this species, but OpenAlex returned no abstract text to confirm &mdash; needs a direct fetch before counting as a gap.</td>
+        </tr>
+        <tr data-family="PxSE1&ndash;5 (+18 related)" data-status="0" data-cite="Han et al. 2021" data-taxon="Lepidoptera (13 species) + baculovirus" data-access="2">
+          <td class="family">PxSE1&ndash;5 <span class="sub">+ 18 related across 13 species</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://link.springer.com/article/10.1186/s12864-021-07543-z" target="_blank" rel="noopener">Han, Zhang, Jiang et al. 2021</a><span class="venue">BMC Genomics 22:230</span></td>
+          <td class="taxon"><em>Plutella xylostella</em> (diamondback moth) + 12 other lepidopterans + baculovirus</td>
+          <td><span class="pill ok">Open access (BMC)</span></td>
+          <td class="notes">5 named families in P. xylostella (PxSE1&ndash;3 tRNA-derived, PxSE4&ndash;5 5S-rRNA-derived) plus evidence of horizontal transfer into baculovirus genomes &mdash; a genuinely large, multi-species gap.</td>
+        </tr>
+        <tr data-family="9 unnamed SINEs" data-status="0" data-cite="Firsov et al. 2022" data-taxon="Blattella germanica (German cockroach)" data-access="2">
+          <td class="family">9 SINEs <span class="sub">first description in this species</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0266699" target="_blank" rel="noopener">Firsov, Kosherova &amp; Mukha 2022</a><span class="venue">PLOS ONE 17(6):e0266699</span></td>
+          <td class="taxon">German cockroach</td>
+          <td><span class="pill ok">Open access</span></td>
+          <td class="notes">First SINEs described in this species/order via genomic + small-RNA-seq data (tRNA-promoter-driven, 7 of 9 mapped to piRNA clusters). Full text fetched and checked directly (PLOS full HTML, not just abstract): the paper genuinely does not assign individual family names/IDs to the 9 SINEs in its main text &mdash; they're referenced generically, unlike most other rows here. A supplementary table (S1 Table) may have per-locus detail not captured in this fetch.</td>
+        </tr>
+        <tr data-family="21-species bivalve SINE set" data-status="0" data-cite="Peona, Martelossi et al. 2024" data-taxon="21 mollusk/bivalve species" data-access="2">
+          <td class="family">Dozens of named families <span class="sub">e.g. Oden_SINE-1&ndash;5, Rphil_SINE-1/4/5, Ssol_SINE-2/5/6...</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://doi.org/10.1186/s13100-024-00319-8" target="_blank" rel="noopener">Peona, Martelossi et al. 2024</a><span class="venue">Mobile DNA 15:10, "...a tardigrade perspective" (crowd-sourced curation/teaching paper)</span></td>
+          <td class="taxon"><em>Ostrea</em>, <em>Ruditapes</em>, <em>Solen</em>, <em>Mytilus</em>, <em>Magallana</em>, <em>Pinctada</em> and 15 more bivalve/mollusk genera</td>
+          <td><span class="pill ok">Open access (Mobile DNA)</span></td>
+          <td class="notes">Found via a different search axis: Dfam's own database (1,510 SINE-type entries total, cross-checked directly against the bank) rather than citation-snowballing, since these were never going to cite SINEBase. Genuinely new, superfamily-tagged consensus names (suffixes _Deu/_Meta/_MD/_CORE/_V match known superfamilies but the species-specific family IDs are new). The attached paper's actual subject is tardigrade TE curation training &mdash; these 21 bivalve species look like other training-exercise output from the same crowd-sourced curation event (co-authored by Martelossi, who also co-authored the already-tracked HCD-tRNA bivalve row), deposited in Dfam without ever becoming their own discovery paper. A genuinely different kind of "isolated" publication than the rest of this tracker: real, curated, citable data that a citation-network search would never surface.</td>
+        </tr>
+        <tr data-family="Zymoseptoria tritici SINE" data-status="0" data-cite="Baril &amp; Croll 2023" data-taxon="Zymoseptoria tritici (wheat pathogen fungus)" data-access="2">
+          <td class="family">ZymTri_2023_family_98 <span class="sub">2nd fungal SINE ever seen in this tracker</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://doi.org/10.1186/s13104-023-06613-7" target="_blank" rel="noopener">Baril &amp; Croll 2023</a><span class="venue">BMC Research Notes 16:335</span></td>
+          <td class="taxon">Wheat leaf-blotch fungus</td>
+          <td><span class="pill ok">Open access (PMC)</span></td>
+          <td class="notes">Citation resolved via a systematic per-species Dfam citation check (241 species checked individually, not this one in isolation): "A pangenome-guided manually curated library of transposable elements for Zymoseptoria tritici" - a real, manually-curated TE library paper, not a raw automated deposit. Only the 2nd fungal SINE entry in this whole tracker (after AfuSINE2/Aspergillus) - a genuinely rare taxon for this database.</td>
+        </tr>
+        <tr data-family="Nematode SINE (Heligmosomoides)" data-status="0" data-cite="Stevens, Martinez-Ugalde et al. 2023" data-taxon="Heligmosomoides polygyrus / bakeri" data-access="2">
+          <td class="family">3 SINE families <span class="sub">corrects the earlier "nematodes swept clean" claim</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://www.biorxiv.org/content/10.1101/2023.04.17.535870v1" target="_blank" rel="noopener">Stevens, Martinez-Ugalde, King et al. 2023</a><span class="venue">bioRxiv preprint (host-parasite population genomics)</span></td>
+          <td class="taxon">Parasitic gut nematodes (house mouse parasites)</td>
+          <td><span class="pill ok">Open access (bioRxiv)</span></td>
+          <td class="notes">Found via the exhaustive Dfam-vs-SINEBase diff (1,510 vs 244 entries, full script comparison, not a manual sample) - confirmed via the paper's own abstract that this is a host-parasite balancing-selection/population-genomics study, not a SINE-focused paper; the 3 SINE families (earlGrey + manual curation per Goubert et al. 2022 protocol) were annotated as standard genome-repeat characterization, exactly the "silently annotated in a WGS paper" pattern (same category as the tuatara genome benchmark case). This directly corrects the earlier keyword-based sweep, which had reported nematodes as "swept clean" - that sweep used citation/keyword search, which structurally cannot find a paper like this one that never engages with the SINE literature at all.</td>
+        </tr>
+        <tr data-family="ZenoSINE1 + metulj families" data-status="0" data-cite="Ray, Grimshaw et al. 2019" data-taxon="19 Heliconiine butterfly species" data-access="2">
+          <td class="family">30 named consensus records <span class="sub">across 19 Heliconiini/Heliconius species</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://doi.org/10.1093/gbe/evz125" target="_blank" rel="noopener">Ray, Grimshaw, Halsey, Korstian et al. 2019</a><span class="venue">Genome Biology and Evolution 11(8):2162&ndash;2177</span></td>
+          <td class="taxon">19 Heliconiini/Heliconius butterfly species</td>
+          <td><span class="pill ok">Open access (PMC)</span></td>
+          <td class="notes">Found via the Dfam-vs-SINEBase diff, then confirmed the paper is real and open access via Europe PMC (PMC6685494). Title literally says "Multiple SINE Births and Deaths" - a genuine, dedicated multi-species SINE discovery/evolution paper, not a generic genome-announcement paper. Confirmed absent from the 176-paper SINEBase-citation list (checked directly against <code>citing_sinebase.txt</code>) - this paper never engages with the SINE-specific literature at all, exactly the "isolated publication" pattern citation-snowballing structurally cannot find.</td>
+        </tr>
+        <tr data-family="Castor bean SINE (SINE_rCom)" data-status="0" data-cite="Kong, Zhang &amp; Ma 2024" data-taxon="Ricinus communis (castor bean)" data-access="2">
+          <td class="family">SINE_rCom <span class="sub">retrotransposon impact study</span></td>
+          <td><span class="pill danger">Not in SINEBase</span></td>
+          <td class="cite"><a href="https://doi.org/10.3389/fpls.2024.1397215" target="_blank" rel="noopener">Kong, Zhang &amp; Ma 2024</a><span class="venue">Frontiers in Plant Science 15:1397215</span></td>
+          <td class="taxon">Castor bean (oil plant)</td>
+          <td><span class="pill ok">Open access</span></td>
+          <td class="notes">Found via the Dfam-vs-SINEBase diff; citation confirmed via the Dfam record itself (attached PMID). Title is "The impact of retrotransposons on castor bean genomes" - a broader TE-impact study, not purely SINE-focused, but the SINE family itself is real, named, and genuinely absent from SINEBase.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="foot">
+    Next pass: full-text fetch + sequence-location check for every unverified row above (RUDI, AfuSINE2, Ceph-SINEs date check, marsupial CORE-SINEs date check, Solanaceae Au-vs-new check). Crustacea/Cnidaria/Nematoda/Amphibia swept clean of dedicated new-SINE-family papers on 2026-08-21 (not proof-of-absence &mdash; see methodology). The sea anemone Actiniaria-REPlib paper and the 2024 frog genome paper are queued for the separate WGS-silent-annotation task, not this tracker. Click any column header to sort.
+  </footer>
+</div>
+
+<script>
+(function () {
+  const table = document.getElementById('t');
+  const tbody = table.querySelector('tbody');
+  const statusOrder = { danger: 0, warn: 1, muted: 2 };
+  document.querySelectorAll('thead th').forEach(th => {
+    let asc = true;
+    th.addEventListener('click', () => {
+      const key = th.dataset.k;
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      rows.sort((a, b) => {
+        let av, bv;
+        if (key === 'status') {
+          av = parseInt(a.dataset.status, 10);
+          bv = parseInt(b.dataset.status, 10);
+        } else if (key === 'access') {
+          av = parseInt(a.dataset.access, 10);
+          bv = parseInt(b.dataset.access, 10);
+        } else {
+          av = (a.dataset[key] || '').toLowerCase();
+          bv = (b.dataset[key] || '').toLowerCase();
+        }
+        if (av < bv) return asc ? -1 : 1;
+        if (av > bv) return asc ? 1 : -1;
+        return 0;
+      });
+      rows.forEach(r => tbody.appendChild(r));
+      asc = !asc;
+    });
+  });
+})();
+</script>
+
+<script>
+// Citation graph data - embedded from citation_graph_data.json (no runtime fetch needed)
+var CITATION_GRAPH_DATA = {
+  "_readme": "Nodes/edges for the SINE Literature Gap Tracker's citation graph. Built from real OpenAlex API queries run 2026-08-21, not fabricated. 'confirmed' edges were verified by matching a paper's DOI against the actual list of 176 papers that cite the SINEBase database paper (pulled via OpenAlex filter=cites:W2106788283). 'unconfirmed' edges mean the paper was found via keyword/author search but its citation of SINEBase was not independently re-checked - render these visually distinct (e.g. dashed) from confirmed edges, never identical.",
+  "hub": {
+    "id": "sinebase",
+    "label": "SINEBase",
+    "cite": "Vassetzky & Kramerov 2013",
+    "venue": "Nucleic Acids Research",
+    "type": "hub"
+  },
+  "nodes": [
+    { "id": "ere",          "label": "Ere (EreA/EreB)",              "cite": "Ustyantsev et al. 2024",  "status": "existing-updated", "taxon": "Perissodactyla" },
+    { "id": "urop",         "label": "Urop",                          "cite": "Kosushkin et al. 2026",   "status": "new",               "taxon": "Shrew mole",            "sinebase_edge": "confirmed" },
+    { "id": "can",          "label": "Can (a1/a2/b1/b2)",            "cite": "Kosushkin et al. 2022",   "status": "existing-updated",  "taxon": "Canidae",               "sinebase_edge": "confirmed" },
+    { "id": "b2dipves",     "label": "B2 / Dip / Ves",               "cite": "Vassetzky et al. 2021",   "status": "existing-updated",  "taxon": "Rodents, bats",          "sinebase_edge": "confirmed" },
+    { "id": "lagomorph-c",  "label": "SINE C (C1/C2)",               "cite": "Ustyantsev et al. 2026",  "status": "existing-updated",  "taxon": "Lagomorpha" },
+    { "id": "rudi",         "label": "RUDI",                          "cite": "Kramerov & Vassetzky 2016","status": "new",              "taxon": "Mollusca" },
+    { "id": "metasines",    "label": "MetaSINEs",                    "cite": "Nishihara et al. 2016",   "status": "new",               "taxon": "Fish-Cnidaria" },
+    { "id": "mesc-snail",   "label": "MESC & Snail",                 "cite": "Matetovici et al. 2016",  "status": "new",               "taxon": "Gastropoda, Bivalvia" },
+    { "id": "afusine2",     "label": "AfuSINE2 (x8)",                "cite": "Kanhayuwa & Coutts 2016",  "status": "new",               "taxon": "Aspergillus fumigatus" },
+    { "id": "ceph-sines",   "label": "Ceph-SINEs",                   "cite": "2009 (pre-2015)",           "status": "resolved-not-gap",  "taxon": "Cephalopods" },
+    { "id": "marsupial-core","label": "young CORE-SINEs",            "cite": "2007 (pre-2015)",           "status": "resolved-not-gap",  "taxon": "Marsupialia" },
+    { "id": "solanaceae",   "label": "Solanaceae SINEs (10 fam.)",   "cite": "Seibt et al. 2016",        "status": "existing-updated",  "taxon": "Solanaceae" },
+    { "id": "platy1",       "label": "Platy-1 (6 subfamilies)",      "cite": "tamarin study",            "status": "existing-updated",  "taxon": "Saguinus" },
+    { "id": "hagfish",      "label": "SINE1-1_EBu",                  "cite": "hagfish study",             "status": "new",              "taxon": "Eptatretus burgeri" },
+    { "id": "squam3",       "label": "Squam3 (A/B/C)",               "cite": "Vassetzky et al. 2021",   "status": "new",               "taxon": "Squamata + tuatara" },
+    { "id": "angio-sine",   "label": "Angio-SINE (24 families)",     "cite": "Seibt, Schmidt & Heitkam 2019", "status": "new",         "taxon": "13 plant orders",        "sinebase_edge": "confirmed" },
+    { "id": "amphioxus",    "label": "18 Branchiostoma SINEs",       "cite": "Kosushkin & Vassetzky 2020","status": "new",             "taxon": "Cephalochordata",         "sinebase_edge": "confirmed" },
+    { "id": "sine28",       "label": "SINE28",                       "cite": "Longo et al. 2015",         "status": "new",              "taxon": "Human/mammals",          "sinebase_edge": "confirmed" },
+    { "id": "grass-sines",  "label": "46 grass SINE families",       "cite": "Mao & Wang 2017",           "status": "existing-updated",  "taxon": "Poaceae",                "sinebase_edge": "confirmed" },
+    { "id": "cmisines",     "label": "CmiSINEs (chondrichthyan)",    "cite": "Luchetti et al. 2017",      "status": "existing-updated",  "taxon": "Chondrichthyes",          "sinebase_edge": "confirmed" },
+    { "id": "hcd-bivalve",  "label": "HCD-tRNA bivalve SINEs",       "cite": "Martelossi et al. 2024",    "status": "existing-updated",  "taxon": "Bivalvia",               "sinebase_edge": "confirmed" },
+    { "id": "salis",        "label": "SaliS-I/II/VI-XI (8 of 11)",   "cite": "Kögler et al. 2020",        "status": "existing-updated",  "taxon": "Salicaceae",             "sinebase_edge": "confirmed" },
+    { "id": "olive",        "label": "Olive tree SINEs",             "cite": "Barghini et al. 2016",      "status": "unverified",        "taxon": "Olea europaea",          "sinebase_edge": "confirmed" },
+    { "id": "sauria",       "label": "Sauria (Bov-B associated)",    "cite": "Nakatsuka & Ohshima 2026",  "status": "existing-updated",  "taxon": "Squamata" },
+    { "id": "pxse1-5",      "label": "PxSE1-5 (+18 related)",        "cite": "Han et al. 2021",           "status": "new",               "taxon": "Lepidoptera + baculovirus" },
+    { "id": "cockroach",    "label": "9 unnamed SINEs",              "cite": "Firsov et al. 2022",        "status": "new",               "taxon": "Blattella germanica" }
+  ],
+  "edges_confirmed_cites_sinebase": [
+    "urop", "can", "b2dipves", "angio-sine", "amphioxus", "sine28", "grass-sines", "cmisines", "hcd-bivalve", "olive", "salis"
+  ],
+  "second_order_edges": [
+    { "from": "salis", "to": "angio-sine", "relation": "cites" },
+    { "from": "sauria", "to": "hagfish", "relation": "cites" }
+  ],
+  "shared_author_clusters": {
+    "_note": "Papers sharing 2+ authors from the same core lab, verified via OpenAlex authorships - a second real relationship type distinct from citation, useful for a 'group by lab' toggle.",
+    "kramerov_lab": ["ere", "urop", "can", "b2dipves", "lagomorph-c", "squam3"],
+    "vassetzky_kramerov_core": ["squam3", "b2dipves", "urop"],
+    "kosushkin_vassetzky": ["amphioxus", "urop"],
+    "luchetti_lab": ["cmisines", "hcd-bivalve"],
+    "seibt_heitkam_lab": ["angio-sine", "salis"]
+  }
+};
+
+// Older SINEBase-cited works - embedded from older_works_data.json
+var OLDER_WORKS_DATA = {
+  "_readme": "A curated subset of the 100 works SINEBase's own foundational paper (Vassetzky & Kramerov 2013, W2106788283) cites - pulled directly via OpenAlex referenced_works, real data, not fabricated. Filtered down from the full 100 to ~26 genuine SINE-family-naming/discovery papers, excluding generic tools/databases (Repbase, WebLogo, tRNAdb), reviews, and unrelated whole-genome papers not primarily about a SINE family. 'lineage_to' connects an older work to a currently-tracked (2015+) node where a real, documented relationship exists.",
+  "older_works": [
+    { "id": "old_b1_1980", "label": "Mouse B1 (first description)", "cite": "1980", "venue": "Nucleic Acids Research", "taxon": "Mouse" },
+    { "id": "old_human_repeats_1981", "label": "300bp repeated human DNA clones", "cite": "1981", "venue": "J Mol Biol", "taxon": "Human" },
+    { "id": "old_b2_1982", "label": "Mouse B2 sequencing", "cite": "1982", "venue": "Nucleic Acids Research", "taxon": "Mouse" },
+    { "id": "old_alu_1983", "label": "Alu (2nd major class)", "cite": "1983", "venue": "Nucleic Acids Research", "taxon": "Primates" },
+    { "id": "old_rabbit_c_1984", "label": "Rabbit C family", "cite": "1984", "venue": "J Mol Biol", "taxon": "Rabbit (Lagomorpha)", "lineage_to": "lagomorph-c" },
+    { "id": "old_insect_sine_1985", "label": "First insect SINE family", "cite": "1985", "venue": "DNA", "taxon": "Insecta" },
+    { "id": "old_bombyx_1986", "label": "Bombyx mori interspersed elements", "cite": "1986", "venue": "J Mol Biol", "taxon": "Silkworm (Lepidoptera)" },
+    { "id": "old_swine_sine_1987", "label": "Miniature swine SINE", "cite": "1987", "venue": "Nucleic Acids Research", "taxon": "Pig" },
+    { "id": "old_salmonid_1991", "label": "Salmonid tRNA-derived SINEs", "cite": "1991", "venue": "PNAS", "taxon": "Salmonids" },
+    { "id": "old_galago_1991", "label": "3rd major SINE family, galago", "cite": "1991", "venue": "Nucleic Acids Research", "taxon": "Galago (primate)" },
+    { "id": "old_psine1_rice_1992", "label": "p-SINE1, rice", "cite": "1992", "venue": "Jpn J Genet", "taxon": "Rice", "lineage_to": "grass-sines" },
+    { "id": "old_squid_1993", "label": "Squid SINE, common ancestral retrovirus hypothesis", "cite": "1993", "venue": "PNAS", "taxon": "Squid (Cephalopoda)", "lineage_to": "ceph-sines" },
+    { "id": "old_tRNA_origin_1994", "label": "Novel tRNA-origin SINE concept", "cite": "1994", "venue": "J Mol Biol", "taxon": "General/mechanism" },
+    { "id": "old_mir_1995", "label": "MIRs (tRNA-derived, pre-mammalian-radiation)", "cite": "1995", "venue": "Nucleic Acids Research", "taxon": "Mammals (broad)" },
+    { "id": "old_cichlid_1998", "label": "Cichlid SINEs (Lake Tanganyika)", "cite": "1998", "venue": "MBE", "taxon": "Cichlid fish" },
+    { "id": "old_cetacean_1999", "label": "tRNA(Glu)-derived SINE superfamily, cetaceans/artiodactyls", "cite": "1999", "venue": "MBE", "taxon": "Cetaceans, Artiodactyla" },
+    { "id": "old_elasmobranch_1999", "label": "SINEs/LINEs in elasmobranchs", "cite": "1999", "venue": "MBE", "taxon": "Sharks, rays", "lineage_to": "cmisines" },
+    { "id": "old_core_sines_2000", "label": "CORE-SINEs across mammals", "cite": "2000", "venue": "J Mol Biol", "taxon": "Mammals (broad)", "lineage_to": "marsupial-core" },
+    { "id": "old_arabidopsis_2001", "label": "SINEs in Arabidopsis thaliana", "cite": "2001", "venue": "Genes & Genetic Systems", "taxon": "Arabidopsis" },
+    { "id": "old_au_2001", "label": "Au family (Aegilops umbellulata)", "cite": "2001", "venue": "TAG", "taxon": "Wheat relative (Poaceae)", "lineage_to": "grass-sines" },
+    { "id": "old_v_sines_2002", "label": "V-SINEs superfamily described", "cite": "2002", "venue": "Genome Research", "taxon": "Vertebrates (broad)", "lineage_to": "rudi" },
+    { "id": "old_can_2002", "label": "CAN, pan-carnivore SINE family", "cite": "2002", "venue": "Mammalian Genome", "taxon": "Carnivora", "lineage_to": "can" },
+    { "id": "old_5s_rrna_sine_2003", "label": "First 5S rRNA-derived SINE class", "cite": "2003", "venue": "MBE", "taxon": "General/mechanism" },
+    { "id": "old_das_sine_2004", "label": "DAS-SINEs, nine-banded armadillo", "cite": "2004", "venue": "MBE", "taxon": "Armadillo (Xenarthra)" },
+    { "id": "old_sauria_2006", "label": "Sauria SINEs described", "cite": "2006", "venue": "J Mol Evol", "taxon": "Reptiles (broad)", "lineage_to": "sauria" },
+    { "id": "old_plant_sine_review_2006", "label": "SINEs in Plants: Origin, Classification, Markers", "cite": "2006", "venue": "Systematic Biology", "taxon": "Plants (broad)", "lineage_to": "angio-sine" },
+    { "id": "old_squamate_repeats_2006", "label": "New interspersed repeats, squamate reptiles", "cite": "2006", "venue": "Molecular Biology", "taxon": "Squamata", "lineage_to": "squam3" },
+    { "id": "old_bovb_sines_2007", "label": "Bov-B-mobilized SINEs in vertebrates", "cite": "2007", "venue": "Gene", "taxon": "Vertebrates (broad)", "lineage_to": "sauria" },
+    { "id": "old_ceph_sines_2009", "label": "Ceph-SINEs described (squid, cuttlefish)", "cite": "2009", "venue": "Gene", "taxon": "Cephalopods", "lineage_to": "ceph-sines" }
+  ]
+};
+
+(function () {
+  'use strict';
+
+  var DATA = CITATION_GRAPH_DATA;
+  var OLDER = OLDER_WORKS_DATA.older_works;
+  var canvas = document.getElementById('graph-canvas');
+  var ctx = canvas.getContext('2d');
+  var tooltip = document.getElementById('graph-tooltip');
+  var wrap = canvas.parentElement;
+  var tbody = document.querySelector('#t tbody');
+
+  var colors = {};
+  var nodes = [];
+  var edges = [];
+  var edgeMode = 'citation';
+  var showOlderWorks = false;
+  var hoveredNode = null;
+  var draggedNode = null;
+  var dragStart = null;
+  var simulationRunning = true;
+  var iteration = 0;
+  var width = 0, height = 0, dpr = 1;
+  var viewScale = 1, viewRotation = 0, viewX = 0, viewY = 0;
+  var sizeScale = 1;
+  var panning = false, panStart = null;
+
+  function readColors() {
+    var s = getComputedStyle(document.documentElement);
+    colors = {
+      bg: s.getPropertyValue('--bg').trim(),
+      surface: s.getPropertyValue('--surface').trim(),
+      ink: s.getPropertyValue('--ink').trim(),
+      inkSoft: s.getPropertyValue('--ink-soft').trim(),
+      line: s.getPropertyValue('--line').trim(),
+      accent: s.getPropertyValue('--accent').trim(),
+      danger: s.getPropertyValue('--danger').trim(),
+      warn: s.getPropertyValue('--warn').trim(),
+      muted: s.getPropertyValue('--muted').trim(),
+      ok: s.getPropertyValue('--ok').trim(),
+      accentSoft: s.getPropertyValue('--accent-soft').trim()
+    };
+  }
+
+  function taxonomyBucket(taxon) {
+    var t = (taxon || '').toLowerCase();
+    if (/plant|poaceae|solanaceae|salicaceae|olea |arabidopsis|\brice\b|wheat|angio|grass/.test(t)) return 'Plants';
+    if (/fung|aspergillus/.test(t)) return 'Fungi';
+    if (/lepidoptera|insecta|blattella|cockroach|silkworm/.test(t)) return 'Insects';
+    if (/mollus|gastropod|bivalv|cephalopod|squid|snail/.test(t)) return 'Mollusks';
+    if (/squamata|reptile|tuatara|lepidosauria|sauria/.test(t)) return 'Reptiles';
+    if (/chondrichthyes|fish|shark|eptatretus|cichlid|salmonid|hagfish|elasmobranch/.test(t)) return 'Fish';
+    if (/cephalochordata|cnidaria|amphioxus/.test(t)) return 'Other chordates';
+    if (/general|mechanism/.test(t)) return 'General/mechanism';
+    return 'Mammals';
+  }
+
+  function buildNodes() {
+    var oldPos = {};
+    nodes.forEach(function (n) { oldPos[n.id] = { x: n.x, y: n.y }; });
+
+    nodes = [];
+    nodes.push({
+      id: DATA.hub.id, label: DATA.hub.label, cite: DATA.hub.cite,
+      venue: DATA.hub.venue, taxon: '', status: 'hub', isHub: true,
+      radius: 16, x: 0, y: 0, vx: 0, vy: 0, tableIndex: -1
+    });
+    DATA.nodes.forEach(function (n, i) {
+      nodes.push({
+        id: n.id, label: n.label, cite: n.cite, venue: '', taxon: n.taxon,
+        status: n.status, isHub: false, radius: 7,
+        x: 0, y: 0, vx: 0, vy: 0, tableIndex: i
+      });
+    });
+
+    if (showOlderWorks) {
+      OLDER.forEach(function (n) {
+        nodes.push({
+          id: n.id, label: n.label, cite: n.cite, venue: n.venue, taxon: n.taxon,
+          status: 'older-work', isHub: false, isOlder: true, radius: 5,
+          x: 0, y: 0, vx: 0, vy: 0, tableIndex: -1
+        });
+      });
+    }
+
+    if (edgeMode === 'taxonomy') {
+      var buckets = {};
+      nodes.forEach(function (n) {
+        if (n.isHub) return;
+        var b = taxonomyBucket(n.taxon);
+        buckets[b] = true;
+      });
+      Object.keys(buckets).forEach(function (b) {
+        nodes.push({
+          id: 'bucket_' + b, label: b, cite: '', venue: '', taxon: '',
+          status: 'bucket', isHub: false, isBucket: true, radius: 12,
+          x: 0, y: 0, vx: 0, vy: 0, tableIndex: -1
+        });
+      });
+    }
+
+    // preserve existing positions across rebuilds (avoids the whole graph
+    // jumping/re-scattering every time a checkbox/radio is toggled)
+    nodes.forEach(function (n) {
+      if (oldPos[n.id]) { n.x = oldPos[n.id].x; n.y = oldPos[n.id].y; }
+    });
+  }
+
+  function buildEdges() {
+    edges = [];
+    var idx = {};
+    nodes.forEach(function (n, i) { idx[n.id] = i; });
+
+    if (edgeMode === 'citation') {
+      var confirmed = {};
+      DATA.edges_confirmed_cites_sinebase.forEach(function (id) { confirmed[id] = true; });
+      DATA.edges_confirmed_cites_sinebase.forEach(function (id) {
+        if (idx[id] !== undefined) edges.push({ source: 0, target: idx[id], type: 'confirmed' });
+      });
+      DATA.second_order_edges.forEach(function (e) {
+        if (idx[e.from] !== undefined && idx[e.to] !== undefined)
+          edges.push({ source: idx[e.from], target: idx[e.to], type: 'second-order' });
+      });
+      nodes.forEach(function (n, i) {
+        if (!n.isHub && !n.isOlder && !confirmed[n.id])
+          edges.push({ source: 0, target: i, type: 'unconfirmed' });
+      });
+    } else if (edgeMode === 'authors') {
+      Object.keys(DATA.shared_author_clusters).forEach(function (key) {
+        if (key === '_note') return;
+        var ids = DATA.shared_author_clusters[key];
+        for (var i = 0; i < ids.length; i++) {
+          for (var j = i + 1; j < ids.length; j++) {
+            if (idx[ids[i]] !== undefined && idx[ids[j]] !== undefined)
+              edges.push({ source: idx[ids[i]], target: idx[ids[j]], type: 'author' });
+          }
+        }
+      });
+    } else if (edgeMode === 'taxonomy') {
+      nodes.forEach(function (n, i) {
+        if (n.isHub || n.isBucket) return;
+        var bIdx = idx['bucket_' + taxonomyBucket(n.taxon)];
+        if (bIdx !== undefined) edges.push({ source: i, target: bIdx, type: 'taxonomy' });
+      });
+    }
+
+    if (showOlderWorks) {
+      OLDER.forEach(function (n) {
+        if (n.lineage_to && idx[n.id] !== undefined && idx[n.lineage_to] !== undefined)
+          edges.push({ source: idx[n.id], target: idx[n.lineage_to], type: 'lineage' });
+      });
+    }
+  }
+
+  function resizeCanvas() {
+    dpr = window.devicePixelRatio || 1;
+    var rect = wrap.getBoundingClientRect();
+    width = rect.width;
+    height = rect.height;
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function initPositions(onlyNew) {
+    var cx = width / 2, cy = height / 2;
+    nodes.forEach(function (n, i) {
+      if (onlyNew && (n.x !== 0 || n.y !== 0)) return;
+      if (n.isHub) { n.x = cx; n.y = cy; }
+      else {
+        var angle = (i / nodes.length) * 2 * Math.PI;
+        var r = 150 + Math.random() * 50;
+        n.x = cx + Math.cos(angle) * r;
+        n.y = cy + Math.sin(angle) * r;
+      }
+      n.vx = 0; n.vy = 0;
+    });
+  }
+
+  function simulationStep() {
+    var cx = width / 2, cy = height / 2;
+    var repulsion = 5000, springLength = 80, springStrength = 0.04;
+    var centerGravity = 0.015, damping = 0.82, maxSpeed = 12;
+
+    for (var i = 0; i < nodes.length; i++) {
+      for (var j = i + 1; j < nodes.length; j++) {
+        var dx = nodes[i].x - nodes[j].x;
+        var dy = nodes[i].y - nodes[j].y;
+        var d2 = dx * dx + dy * dy;
+        if (d2 < 1) d2 = 1;
+        var d = Math.sqrt(d2);
+        var f = repulsion / d2;
+        var fx = (dx / d) * f, fy = (dy / d) * f;
+        nodes[i].vx += fx; nodes[i].vy += fy;
+        nodes[j].vx -= fx; nodes[j].vy -= fy;
+      }
+    }
+    edges.forEach(function (e) {
+      var a = nodes[e.source], b = nodes[e.target];
+      var dx = b.x - a.x, dy = b.y - a.y;
+      var d = Math.sqrt(dx * dx + dy * dy);
+      if (d < 1) d = 1;
+      var f = (d - springLength) * springStrength;
+      var fx = (dx / d) * f, fy = (dy / d) * f;
+      a.vx += fx; a.vy += fy; b.vx -= fx; b.vy -= fy;
+    });
+    nodes.forEach(function (n) {
+      if (n === draggedNode) return;
+      n.vx += (cx - n.x) * centerGravity;
+      n.vy += (cy - n.y) * centerGravity;
+      n.vx *= damping; n.vy *= damping;
+      var sp = Math.sqrt(n.vx * n.vx + n.vy * n.vy);
+      if (sp > maxSpeed) { n.vx = (n.vx / sp) * maxSpeed; n.vy = (n.vy / sp) * maxSpeed; }
+      n.x += n.vx; n.y += n.vy;
+      var m = n.radius + 2;
+      if (n.x < m) n.x = m; if (n.x > width - m) n.x = width - m;
+      if (n.y < m) n.y = m; if (n.y > height - m) n.y = height - m;
+    });
+  }
+
+  function render() {
+    ctx.clearRect(0, 0, width, height);
+    var cos = Math.cos(viewRotation), sin = Math.sin(viewRotation);
+    sizeScale = Math.pow(viewScale, 0.5);
+
+    edges.forEach(function (e) {
+      var a = nodes[e.source], b = nodes[e.target];
+      var ax = (a.x * cos - a.y * sin) * viewScale + viewX;
+      var ay = (a.x * sin + a.y * cos) * viewScale + viewY;
+      var bx = (b.x * cos - b.y * sin) * viewScale + viewX;
+      var by = (b.x * sin + b.y * cos) * viewScale + viewY;
+      ctx.beginPath();
+      ctx.moveTo(ax, ay);
+      ctx.lineTo(bx, by);
+      if (e.type === 'confirmed') {
+        ctx.strokeStyle = colors.accent; ctx.lineWidth = 1.5 * sizeScale;
+        ctx.globalAlpha = 0.7; ctx.setLineDash([]);
+      } else if (e.type === 'unconfirmed') {
+        ctx.strokeStyle = colors.muted; ctx.lineWidth = 0.8 * sizeScale;
+        ctx.globalAlpha = 0.25; ctx.setLineDash([3, 5]);
+      } else if (e.type === 'second-order') {
+        ctx.strokeStyle = colors.inkSoft; ctx.lineWidth = 1.2 * sizeScale;
+        ctx.globalAlpha = 0.5; ctx.setLineDash([]);
+      } else if (e.type === 'author') {
+        ctx.strokeStyle = colors.accent; ctx.lineWidth = 1 * sizeScale;
+        ctx.globalAlpha = 0.35; ctx.setLineDash([4, 3]);
+      } else if (e.type === 'taxonomy') {
+        ctx.strokeStyle = colors.ink; ctx.lineWidth = 1 * sizeScale;
+        ctx.globalAlpha = 0.3; ctx.setLineDash([]);
+      } else if (e.type === 'lineage') {
+        ctx.strokeStyle = colors.inkSoft; ctx.lineWidth = 1 * sizeScale;
+        ctx.globalAlpha = 0.45; ctx.setLineDash([2, 4]);
+      }
+      ctx.stroke();
+    });
+    ctx.globalAlpha = 1; ctx.setLineDash([]);
+
+    nodes.forEach(function (n) {
+      var sx = (n.x * cos - n.y * sin) * viewScale + viewX;
+      var sy = (n.x * sin + n.y * cos) * viewScale + viewY;
+      var r = n.radius * sizeScale;
+      ctx.beginPath();
+      ctx.arc(sx, sy, r, 0, 2 * Math.PI);
+      if (n.isOlder) {
+        ctx.fillStyle = colors.surface;
+        ctx.fill();
+        ctx.strokeStyle = colors.inkSoft; ctx.lineWidth = 1.5 * sizeScale; ctx.setLineDash([]);
+        ctx.stroke();
+      } else if (n.isBucket) {
+        ctx.fillStyle = colors.accentSoft;
+        ctx.fill();
+        ctx.strokeStyle = colors.ink; ctx.lineWidth = 1.5 * sizeScale;
+        ctx.stroke();
+      } else {
+        if (n.isHub) ctx.fillStyle = colors.accent;
+        else if (n.status === 'new') ctx.fillStyle = colors.danger;
+        else if (n.status === 'existing-updated') ctx.fillStyle = colors.warn;
+        else if (n.status === 'resolved-not-gap') ctx.fillStyle = colors.ok;
+        else ctx.fillStyle = colors.muted;
+        ctx.fill();
+        ctx.strokeStyle = colors.surface; ctx.lineWidth = 2 * sizeScale; ctx.stroke();
+      }
+
+      if (n === hoveredNode) {
+        ctx.beginPath();
+        ctx.arc(sx, sy, r + 4, 0, 2 * Math.PI);
+        ctx.strokeStyle = colors.ink; ctx.lineWidth = 1.5;
+        ctx.globalAlpha = 0.6; ctx.stroke(); ctx.globalAlpha = 1;
+      }
+    });
+
+    nodes.forEach(function (n) {
+      var sx = (n.x * cos - n.y * sin) * viewScale + viewX;
+      var sy = (n.x * sin + n.y * cos) * viewScale + viewY;
+      var r = n.radius * sizeScale;
+      ctx.fillStyle = n.isHub ? colors.ink : colors.inkSoft;
+      var fs = (n.isHub ? 13 : 11) * sizeScale;
+      ctx.font = (n.isHub ? '600 ' : '') + fs + 'px -apple-system, "Segoe UI", sans-serif';
+      ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+      var label = n.label;
+      if (label.length > 22 && !n.isHub) label = label.substring(0, 20) + '\u2026';
+      ctx.fillText(label, sx, sy + r + 4 * sizeScale);
+    });
+  }
+
+  function findNodeAt(mx, my) {
+    var cos = Math.cos(viewRotation), sin = Math.sin(viewRotation);
+    for (var i = nodes.length - 1; i >= 0; i--) {
+      var n = nodes[i];
+      var sx = (n.x * cos - n.y * sin) * viewScale + viewX;
+      var sy = (n.x * sin + n.y * cos) * viewScale + viewY;
+      var r = n.radius * sizeScale + 3;
+      var dx = mx - sx, dy = my - sy;
+      if (dx * dx + dy * dy <= r * r) return n;
+    }
+    return null;
+  }
+
+  function screenToWorld(sx, sy) {
+    var cos = Math.cos(viewRotation), sin = Math.sin(viewRotation);
+    var dx = sx - viewX, dy = sy - viewY;
+    return {
+      x: (dx * cos + dy * sin) / viewScale,
+      y: (-dx * sin + dy * cos) / viewScale
+    };
+  }
+
+  function rotateView(dAngle) {
+    var cx = width / 2, cy = height / 2;
+    var w = screenToWorld(cx, cy);
+    viewRotation += dAngle;
+    var cos = Math.cos(viewRotation), sin = Math.sin(viewRotation);
+    viewX = cx - (w.x * cos - w.y * sin) * viewScale;
+    viewY = cy - (w.x * sin + w.y * cos) * viewScale;
+  }
+
+  function resetView() {
+    viewScale = 1; viewRotation = 0; viewX = 0; viewY = 0;
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function showTooltip(node, clientX, clientY) {
+    var rect = wrap.getBoundingClientRect();
+    var html = '<div class="tt-label">' + escapeHtml(node.label) + '</div>';
+    if (node.cite) html += '<div class="tt-cite">' + escapeHtml(node.cite) + '</div>';
+    if (node.venue) html += '<div class="tt-venue">' + escapeHtml(node.venue) + '</div>';
+    if (node.taxon) html += '<div class="tt-taxon">' + escapeHtml(node.taxon) + '</div>';
+    tooltip.innerHTML = html;
+    tooltip.style.display = 'block';
+    var ttRect = tooltip.getBoundingClientRect();
+    var tx = clientX - rect.left + 14, ty = clientY - rect.top + 14;
+    if (tx + ttRect.width > rect.width) tx = clientX - rect.left - ttRect.width - 14;
+    if (ty + ttRect.height > rect.height) ty = clientY - rect.top - ttRect.height - 14;
+    if (tx < 0) tx = 0; if (ty < 0) ty = 0;
+    tooltip.style.left = tx + 'px';
+    tooltip.style.top = ty + 'px';
+  }
+
+  function hideTooltip() { tooltip.style.display = 'none'; }
+
+  function handleNodeClick(node) {
+    if (node.isHub || node.tableIndex < 0) return;
+    var rows = tbody.querySelectorAll('tr');
+    if (node.tableIndex < rows.length) {
+      var row = rows[node.tableIndex];
+      row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      row.classList.add('graph-highlight');
+      setTimeout(function () { row.classList.remove('graph-highlight'); }, 2000);
+    }
+  }
+
+  canvas.addEventListener('mousemove', function (e) {
+    var rect = canvas.getBoundingClientRect();
+    var mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    if (draggedNode) {
+      var w = screenToWorld(mx, my);
+      draggedNode.x = w.x; draggedNode.y = w.y;
+      draggedNode.vx = 0; draggedNode.vy = 0;
+      if (!simulationRunning) { simulationRunning = true; iteration = 0; }
+      return;
+    }
+    if (panning) {
+      viewX = panStart.viewX + (mx - panStart.x);
+      viewY = panStart.viewY + (my - panStart.y);
+      return;
+    }
+    var node = findNodeAt(mx, my);
+    if (node !== hoveredNode) {
+      hoveredNode = node;
+      canvas.style.cursor = node ? 'pointer' : 'default';
+    }
+    if (node) showTooltip(node, e.clientX, e.clientY);
+    else hideTooltip();
+  });
+
+  canvas.addEventListener('mousedown', function (e) {
+    e.preventDefault();
+    var rect = canvas.getBoundingClientRect();
+    var mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    var node = findNodeAt(mx, my);
+    if (node) {
+      draggedNode = node;
+      dragStart = { x: mx, y: my };
+      canvas.style.cursor = 'grabbing';
+    } else {
+      panning = true;
+      panStart = { x: mx, y: my, viewX: viewX, viewY: viewY };
+      canvas.style.cursor = 'grabbing';
+    }
+  });
+
+  canvas.addEventListener('mouseup', function (e) {
+    if (draggedNode && dragStart) {
+      var rect = canvas.getBoundingClientRect();
+      var mx = e.clientX - rect.left, my = e.clientY - rect.top;
+      if (Math.abs(mx - dragStart.x) < 5 && Math.abs(my - dragStart.y) < 5)
+        handleNodeClick(draggedNode);
+    }
+    draggedNode = null; dragStart = null;
+    panning = false; panStart = null;
+    canvas.style.cursor = hoveredNode ? 'pointer' : 'default';
+  });
+
+  canvas.addEventListener('mouseleave', function () {
+    hoveredNode = null; hideTooltip();
+    draggedNode = null; dragStart = null;
+    panning = false; panStart = null;
+  });
+
+  document.querySelectorAll('input[name="edge-mode"]').forEach(function (radio) {
+    radio.addEventListener('change', function (e) {
+      edgeMode = e.target.value;
+      buildNodes();
+      initPositions(true);
+      buildEdges();
+      simulationRunning = true; iteration = 0;
+    });
+  });
+
+  document.getElementById('show-older-works').addEventListener('change', function (e) {
+    showOlderWorks = e.target.checked;
+    buildNodes();
+    initPositions(true);
+    buildEdges();
+    simulationRunning = true; iteration = 0;
+  });
+
+  canvas.addEventListener('wheel', function (e) {
+    e.preventDefault();
+    var rect = canvas.getBoundingClientRect();
+    var mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    var factor = e.deltaY < 0 ? 1.1 : 1 / 1.1;
+    var newScale = Math.max(0.3, Math.min(4, viewScale * factor));
+    var w = screenToWorld(mx, my);
+    var cos = Math.cos(viewRotation), sin = Math.sin(viewRotation);
+    viewX = mx - (w.x * cos - w.y * sin) * newScale;
+    viewY = my - (w.x * sin + w.y * cos) * newScale;
+    viewScale = newScale;
+  }, { passive: false });
+
+  document.getElementById('rotate-left').addEventListener('click', function () {
+    rotateView(-Math.PI / 12);
+  });
+  document.getElementById('rotate-right').addEventListener('click', function () {
+    rotateView(Math.PI / 12);
+  });
+  document.getElementById('reset-view').addEventListener('click', resetView);
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+    readColors();
+  });
+  new MutationObserver(function () { readColors(); })
+    .observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+  window.addEventListener('resize', function () {
+    resizeCanvas();
+    simulationRunning = true; iteration = 0;
+  });
+
+  function animate() {
+    if (simulationRunning) {
+      simulationStep();
+      iteration++;
+      if (iteration > 300) simulationRunning = false;
+    }
+    render();
+    requestAnimationFrame(animate);
+  }
+
+  readColors();
+  buildNodes();
+  resizeCanvas();
+  initPositions();
+  buildEdges();
+  animate();
+})();
+</script>

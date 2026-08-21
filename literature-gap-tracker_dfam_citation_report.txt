@@ -1,0 +1,964 @@
+Dfam citation-check report - every uncovered species checked directly
+Generated: 2026-08-21T12:29:02.325Z
+Total uncovered species-level taxa checked: 241
+With an attached citation: 222
+No citation (raw pipeline deposit, needs direct genome verification): 19
+
+======================================================================
+CITED (has an attached publication - may need date/scope check)
+======================================================================
+
+=== Spermophilus dauricus (27 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: SpeDau-1.105, SpeDau-1.107, SpeDau-1.110, SpeDau-1.114, SpeDau-1.131, SpeDau-1.13, SpeDau-1.149, SpeDau-1.152, SpeDau-1.153, SpeDau-1.222, ...
+
+=== Heliconiini (19 records) ===
+  Genome Biol Evol 2019;11:2162-2177 - Simultaneous TE Analysis of 19 Heliconiine Butterflies Yields Novel Insights into Rapid TE-Based Genome Diversification and Multiple SINE Births and Deaths. (PMID 31214686)
+  records: metulj_2132, metulj_2594, metulj_270, metulj_444, metulj_472, metulj_8, metulj_m15, metulj_m25, metulj_m30, metulj_m4, ...
+
+=== Chaetophractus vellerosus (19 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: ChaVel-1.0, ChaVel-1.11, ChaVel-1.125, ChaVel-1.131, ChaVel-1.13, ChaVel-1.15, ChaVel-1.21, ChaVel-1.25, ChaVel-1.2, ChaVel-1.3, ...
+
+=== Craseonycteris thonglongyai (18 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CraTho-1.14, CraTho-1.17, CraTho-1.20, CraTho-1.22, CraTho-1.23, CraTho-1.25, CraTho-1.27, CraTho-1.29, CraTho-1.2, CraTho-1.31, ...
+
+=== Dasypus novemcinctus (17 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: DasNov-1.0, DasNov-1.13, DasNov-1.14, DasNov-1.15, DasNov-1.16, DasNov-1.17, DasNov-1.18, DasNov-1.1, DasNov-1.20, DasNov-1.24, ...
+
+=== Myocastor coypus (17 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MyoCoy-1.15, MyoCoy-1.1, MyoCoy-1.2, MyoCoy-1.35, MyoCoy-1.46, MyoCoy-1.49, MyoCoy-1.5, MyoCoy-1.6, MyoCoy-1.7, MyoCoy-1.93, ...
+
+=== Orientallactaga bullata (15 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: AllBul-1.14, AllBul-1.17, AllBul-1.19, AllBul-1.1, AllBul-1.20, AllBul-1.21, AllBul-1.24, AllBul-1.25, AllBul-1.30, AllBul-1.3, ...
+
+=== Capromys pilorides (15 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CapPil-1.13, CapPil-1.14, CapPil-1.18, CapPil-1.19, CapPil-1.20, CapPil-1.25, CapPil-1.41, CapPil-1.50, CapPil-1.57, CapPil-1.60, ...
+
+=== Erinaceus europaeus (14 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: EriEur-1.10, EriEur-1.111, EriEur-1.132, EriEur-1.15, EriEur-1.19, EriEur-1.2, EriEur-1.31, EriEur-1.3, EriEur-1.52, EriEur-1.54, ...
+
+=== Galeopterus variegatus (14 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: GalVar-1.0, GalVar-1.12, GalVar-1.14, GalVar-1.15, GalVar-1.16, GalVar-1.17, GalVar-1.18, GalVar-1.1, GalVar-1.2, GalVar-1.6, ...
+
+=== Lycaon pictus (14 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: LycPic-1.11, LycPic-1.12, LycPic-1.14, LycPic-1.15, LycPic-1.16, LycPic-1.17, LycPic-1.18, LycPic-1.19, LycPic-1.22, LycPic-1.2, ...
+
+=== Vulpes lagopus (14 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: VulLag-1.14, VulLag-1.15, VulLag-1.16, VulLag-1.18, VulLag-1.19, VulLag-1.1, VulLag-1.30, VulLag-1.32, VulLag-1.35, VulLag-1.61, ...
+
+=== Marmota marmota (13 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MarMar-1.0, MarMar-1.10, MarMar-1.11, MarMar-1.17, MarMar-1.1, MarMar-1.20, MarMar-1.21, MarMar-1.29, MarMar-1.38, MarMar-1.40, ...
+
+=== Mellivora capensis (13 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MelCap-1.0, MelCap-1.10, MelCap-1.11, MelCap-1.14, MelCap-1.15, MelCap-1.16, MelCap-1.1, MelCap-1.24, MelCap-1.2, MelCap-1.4, ...
+
+=== Octodon degus (13 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: OctDeg-1.135, OctDeg-1.1, OctDeg-1.33, OctDeg-1.34, OctDeg-1.40, OctDeg-1.49, OctDeg-1.55, OctDeg-1.64, OctDeg-1.6, OctDeg-1.8, ...
+
+=== Tolypeutes matacus (13 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: TolMat-1.0, TolMat-1.10, TolMat-1.12, TolMat-1.15, TolMat-1.16, TolMat-1.1, TolMat-1.21, TolMat-1.2, TolMat-1.31, TolMat-1.4, ...
+
+=== Bos mutus (12 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: BosMut-1.105, BosMut-1.106, BosMut-1.114, BosMut-1.115, BosMut-1.118, BosMut-1.119, BosMut-1.145, BosMut-1.147, BosMut-1.148, BosMut-1.35, ...
+
+=== Catagonus wagneri (12 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CatWag-1.0, CatWag-1.11, CatWag-1.1, CatWag-1.23, CatWag-1.26, CatWag-1.27, CatWag-1.28, CatWag-1.2, CatWag-1.44, CatWag-1.4, ...
+
+=== Ctenomys sociabilis (12 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CteSoc-1.0, CteSoc-1.1, CteSoc-1.22, CteSoc-1.2, CteSoc-1.30, CteSoc-1.40, CteSoc-1.52, CteSoc-1.54, CteSoc-1.5, CteSoc-1.87, ...
+
+=== Glis glis (12 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: GliGli-1.0, GliGli-1.10, GliGli-1.11, GliGli-1.22, GliGli-1.2, GliGli-1.40, GliGli-1.41, GliGli-1.42, GliGli-1.4, GliGli-3.141, ...
+
+=== Nesogale talazaci (12 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MicHir-1.8, MicHir-1.9, MicTal-1.20, MicTal-1.22, MicTal-1.23, MicTal-1.25, MicTal-1.30, MicTal-1.31, MicTal-1.34, MicTal-1.35, ...
+
+=== Nycticebus coucang (12 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: NycCou-1.0, NycCou-1.14, NycCou-1.15, NycCou-1.16, NycCou-1.17, NycCou-1.19, NycCou-1.25, NycCou-1.35, NycCou-1.37, NycCou-1.6, ...
+
+=== Orycteropus afer (12 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: OryAfe-1.0, OryAfe-1.33, OryAfe-1.35, OryAfe-1.36, OryAfe-1.3, OryAfe-1.52, OryAfe-1.56, OryAfe-1.5, OryAfe-1.63, OryAfe-1.78, ...
+
+=== Zalophus californianus (12 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: ZalCal-1.0, ZalCal-1.10, ZalCal-1.16, ZalCal-1.18, ZalCal-1.27, ZalCal-1.3, ZalCal-1.7, ZalCal-1.9, ZalCal-2.58, ZalCal-5.1614, ...
+
+=== Heliconius (11 records) ===
+  Genome Biol Evol 2019;11:2162-2177 - Simultaneous TE Analysis of 19 Heliconiine Butterflies Yields Novel Insights into Rapid TE-Based Genome Diversification and Multiple SINE Births and Deaths. (PMID 31214686)
+  records: ZenoSINE1_hBur, ZenoSINE1_hDem, ZenoSINE1_hSar, ZenoSINE1_hTel, ZenoSINE1_lDor, ZenoSINE2_hBur, ZenoSINE2_hDem, ZenoSINE2_lDor, ZenoSINE3_lDor, ZenoSINE4_lDor, ...
+
+=== Ailurus fulgens (11 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: AilFul-1.12, AilFul-1.13, AilFul-1.15, AilFul-1.17, AilFul-1.20, AilFul-1.21, AilFul-1.23, AilFul-1.3, AilFul-1.4, AilFul-1.5, ...
+
+=== Bison bison (11 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: BisBis-1.102, BisBis-1.36, BisBis-1.42, BisBis-1.44, BisBis-1.79, BisBis-1.83, BisBis-1.88, BisBis-1.91, BisBis-1.92, BisBis-1.93, ...
+
+=== Crocidura indochinensis (11 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CroInd-1.1, CroInd-1.30, CroInd-1.31, CroInd-1.33, CroInd-1.39, CroInd-1.54, CroInd-1.5, CroInd-1.7, CroInd-1.8, CroInd-4.849, ...
+
+=== Giraffa tippelskirchi (11 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: GirTip-1.100, GirTip-1.18, GirTip-1.28, GirTip-1.73, GirTip-1.79, GirTip-1.80, GirTip-1.84, GirTip-1.90, GirTip-1.91, GirTip-1.96, ...
+
+=== Xerus inauris (11 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: XerIna-1.10, XerIna-1.11, XerIna-1.13, XerIna-1.15, XerIna-1.1, XerIna-1.23, XerIna-1.28, XerIna-1.31, XerIna-1.35, XerIna-1.39, ...
+
+=== Bubalus bubalis (10 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: BubBub-1.106, BubBub-1.109, BubBub-1.112, BubBub-1.113, BubBub-1.114, BubBub-1.119, BubBub-1.137, BubBub-1.149, BubBub-1.54, BubBub-1.67
+
+=== Equus przewalskii (10 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: EquPrz-1.0, EquPrz-1.11, EquPrz-1.13, EquPrz-1.15, EquPrz-1.17, EquPrz-1.19, EquPrz-1.2, EquPrz-1.4, EquPrz-1.6, EquPrz-1.8
+
+=== Jaculus jaculus (10 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: JacJac-1.0, JacJac-1.10, JacJac-1.17, JacJac-1.20, JacJac-1.21, JacJac-1.30, JacJac-1.6, JacJac-1.9, JacJac-5.305, JacJac-6.1519
+
+=== Muscardinus avellanarius (10 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MusAve-1.10, MusAve-1.11, MusAve-1.1, MusAve-1.35, MusAve-1.44, MusAve-1.54, MusAve-1.62, MusAve-1.66, MusAve-1.71, MusAve-1.7
+
+=== Okapia johnstoni (10 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: OkaJoh-1.100, OkaJoh-1.112, OkaJoh-1.123, OkaJoh-1.125, OkaJoh-1.56, OkaJoh-1.63, OkaJoh-1.71, OkaJoh-1.77, OkaJoh-1.90, OkaJoh-1.91
+
+=== Onychomys torridus (10 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: OnyTor-1.10, OnyTor-1.18, OnyTor-1.22, OnyTor-1.23, OnyTor-1.46, OnyTor-1.63, OnyTor-2.15, OnyTor-4.157, OnyTor-5.35, OnyTor-5.442
+
+=== Pantholops hodgsonii (10 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: PanHod-1.107, PanHod-1.112, PanHod-1.113, PanHod-1.115, PanHod-1.116, PanHod-1.119, PanHod-1.12, PanHod-1.41, PanHod-1.62, PanHod-1.98
+
+=== Panthera onca (10 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: PanOnc-1.11, PanOnc-1.14, PanOnc-1.15, PanOnc-1.16, PanOnc-1.27, PanOnc-1.30, PanOnc-1.32, PanOnc-1.39, PanOnc-1.3, PanOnc-1.9
+
+=== Panthera pardus (10 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: PanPar-1.0, PanPar-1.11, PanPar-1.15, PanPar-1.18, PanPar-1.20, PanPar-1.22, PanPar-1.24, PanPar-1.29, PanPar-1.30, PanPar-1.32
+
+=== Tragulus javanicus (10 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: TraJav-1.14, TraJav-1.15, TraJav-1.18, TraJav-1.25, TraJav-1.27, TraJav-1.28, TraJav-1.31, TraJav-1.32, TraJav-1.7, TraJav-5.490
+
+=== Homo sapiens (9 records) ===
+  Mol Cell Biol 1988;8:4566-9 - Recently amplified Alu family members share a common parental Alu sequence. (PMID 3185561)
+  Nucleic Acids Res 1990;18:6793-8 - Structure and variability of recently inserted Alu family members. (PMID 2175877)
+  Mol Cell Biol 1990;10:5424-32 - A transpositionally and transcriptionally competent Alu subfamily. (PMID 2169023)
+  records: AluYa5, AluYa8, AluYb8, AluYb9, AluYd8, AluYk11, AluYk12, AluYg6, AluYi6
+
+=== Acinonyx jubatus (9 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: AciJub-1.10, AciJub-1.15, AciJub-1.17, AciJub-1.25, AciJub-1.26, AciJub-1.27, AciJub-1.2, AciJub-1.40, AciJub-1.8
+
+=== Ailuropoda melanoleuca (9 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: AilMel-1.10, AilMel-1.11, AilMel-1.12, AilMel-1.144, AilMel-1.18, AilMel-1.21, AilMel-1.9, AilMel-5.25, AilMel-5.756
+
+=== Antilocapra americana peninsularis (9 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: AntAme-1.11, AntAme-1.50, AntAme-1.62, AntAme-1.65, AntAme-1.77, AntAme-1.79, AntAme-1.93, AntAme-1.9, AntAme-3.559
+
+=== Bramus lutescens (9 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: EllLut-1.12, EllLut-1.17, EllLut-1.20, EllLut-2.91, EllLut-4.639, EllLut-5.1241, EllLut-5.2843, EllLut-5.534, EllLut-6.5
+
+=== Felis nigripes (9 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: FelNig-1.0, FelNig-1.16, FelNig-1.17, FelNig-1.23, FelNig-1.24, FelNig-1.26, FelNig-1.2, FelNig-1.31, FelNig-1.34
+
+=== Hippopotamus amphibius (9 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: HipAmp-1.001, HipAmp-1.14, HipAmp-1.1, HipAmp-1.2, HipAmp-1.301, HipAmp-1.3, HipAmp-1.401, HipAmp-1.4, HipAmp-1.6
+
+=== Hipposideros galeritus (9 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: HipGal-1.0, HipGal-1.13, HipGal-1.14, HipGal-1.17, HipGal-1.1, HipGal-1.20, HipGal-1.3, HipGal-1.4, HipGal-6.152
+
+=== Lipotes vexillifer (9 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: LipVex-1.10, LipVex-1.11, LipVex-1.15, LipVex-1.21, LipVex-1.2, LipVex-1.4, LipVex-1.6, LipVex-1.7, LipVex-1.9
+
+=== Moschus moschiferus (9 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MosMos-1.102, MosMos-1.103, MosMos-1.114, MosMos-1.116, MosMos-1.118, MosMos-1.128, MosMos-1.144, MosMos-1.27, MosMos-1.5
+
+=== Mungos mungo (9 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MunMun-1.0, MunMun-1.11, MunMun-1.14, MunMun-1.15, MunMun-1.18, MunMun-1.21, MunMun-1.2, MunMun-4.141, MunMun-4.298
+
+=== Otolemur garnettii (9 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: OtoGar-1.13, OtoGar-1.18, OtoGar-1.28, OtoGar-1.3, OtoGar-3.155a, OtoGar-3.155b, OtoGar-5.26, OtoGar-5.972, OtoGar-6.545
+
+=== Saiga tatarica tatarica (9 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: SaiTat-1.107, SaiTat-1.109, SaiTat-1.110, SaiTat-1.136, SaiTat-1.31, SaiTat-1.64, SaiTat-1.87, SaiTat-1.89, SaiTat-1.9
+
+=== Ziphius cavirostris (9 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: ZipCav-1.0, ZipCav-1.14, ZipCav-1.1, ZipCav-1.2, ZipCav-1.4, ZipCav-1.6, ZipCav-1.7, ZipCav-1.8, ZipCav-4.3
+
+=== Cavia aperea (8 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CavApe-1.3, CavApe-1.7, CavApe-3.42, CavApe-4.172, CavApe-4.26, CavApe-4.28, CavApe-5.139, CavApe-5.288
+
+=== Cryptoprocta ferox (8 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CryFer-1.19, CryFer-1.1, CryFer-1.25, CryFer-1.26, CryFer-1.2, CryFer-1.8, CryFer-5.58, CryFer-6.605
+
+=== Ellobius talpinus (8 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: EllTal-1.12, EllTal-1.15, EllTal-1.19, EllTal-1.294, EllTal-4.158, EllTal-5.825, EllTal-6.444, EllTal-6.455
+
+=== Nilgiritragus hylocrius (8 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: HemHyl-1.105, HemHyl-1.119, HemHyl-1.121, HemHyl-1.124, HemHyl-1.128, HemHyl-1.149, HemHyl-1.69, HemHyl-1.97
+
+=== Hipposideros armiger (8 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: HipArm-1.0, HipArm-1.11, HipArm-1.16, HipArm-1.36, HipArm-1.3, HipArm-1.5, HipArm-1.9, HipArm-2.17
+
+=== Hyaena hyaena (8 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: HyaHya-1.12, HyaHya-1.13, HyaHya-1.14, HyaHya-1.19, HyaHya-1.24, HyaHya-1.27, HyaHya-1.3, HyaHya-4.127
+
+=== Mustela putorius (8 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MusPut-1.0, MusPut-1.12, MusPut-1.1, MusPut-1.26, MusPut-1.2, MusPut-1.32, MusPut-1.6, MusPut-1.7
+
+=== Ovis aries (8 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: OviAri-1.108, OviAri-1.113, OviAri-1.116, OviAri-1.21, OviAri-1.42, OviAri-1.57, OviAri-1.93, OviAri-3.22
+
+=== Paradoxurus hermaphroditus (8 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: ParHer-1.13, ParHer-1.14, ParHer-1.17, ParHer-1.25, ParHer-1.39, ParHer-1.3, ParHer-1.7, ParHer-1.9
+
+=== Rhizomys pruinosus (8 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: RhiPru-1.0, RhiPru-1.10, RhiPru-1.23, RhiPru-1.30, RhiPru-1.32, RhiPru-1.7, RhiPru-5.216, RhiPru-6.1336
+
+=== Spilogale gracilis (8 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: SpiGra-1.0, SpiGra-1.12, SpiGra-1.14, SpiGra-1.1, SpiGra-1.2, SpiGra-1.6, SpiGra-1.8, SpiGra-4.125
+
+=== Tapirus terrestris (8 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: TapTer-1.14, TapTer-1.16, TapTer-1.18, TapTer-1.19, TapTer-1.23, TapTer-1.31, TapTer-1.3, TapTer-1.5
+
+=== Trichechus manatus (8 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: TriMan-1.10, TriMan-1.12, TriMan-1.15, TriMan-1.19, TriMan-1.20, TriMan-1.3, TriMan-1.46, TriMan-1.4
+
+=== Ammotragus lervia (7 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: AmmLer-1.0, AmmLer-1.108, AmmLer-1.113, AmmLer-1.115, AmmLer-1.42, AmmLer-1.95, AmmLer-1.97
+
+=== Aplodontia rufa (7 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: AplRuf-1.13, AplRuf-1.16, AplRuf-1.24, AplRuf-1.2, AplRuf-1.5, AplRuf-1.9, AplRuf-4.183
+
+=== Bos indicus (7 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: BosInd-1.110, BosInd-1.54, BosInd-1.87, BosInd-1.89, BosInd-1.95, BosInd-1.96, BosInd-1.98
+
+=== Condylura cristata (7 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: ConCri-1.0, ConCri-1.10, ConCri-1.12, ConCri-1.14, ConCri-1.4, ConCri-1.8, ConCri-3.29
+
+=== Elaphurus davidianus (7 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: ElaDav-1.100, ElaDav-1.110, ElaDav-1.22, ElaDav-1.85, ElaDav-1.89, ElaDav-1.93, ElaDav-1.94
+
+=== Elephantulus edwardii (7 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: EleEdw-1.33, EleEdw-1.36, EleEdw-1.3, EleEdw-1.41, EleEdw-1.42, EleEdw-1.44, EleEdw-1.58
+
+=== Eubalaena japonica (7 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: EubJap-1.10, EubJap-1.1, EubJap-1.2, EubJap-1.4, EubJap-1.6, EubJap-5.1218, EubJap-5.255
+
+=== Lepus americanus (7 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: LepAme-1.10, LepAme-1.20, LepAme-1.25, LepAme-1.34, LepAme-1.41, LepAme-1.4, LepAme-6.9
+
+=== Lyroderma lyra (7 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MegLyr-1.10, MegLyr-1.118, MegLyr-1.124, MegLyr-1.13, MegLyr-1.3, MegLyr-1.4, MegLyr-1.8
+
+=== Noctilio leporinus (7 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: NocLep-1.0, NocLep-1.16, NocLep-1.1, NocLep-1.8, NocLep-1.9, NocLep-3.1, NocLep-3.210
+
+=== Puma concolor (7 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: PumCon-1.11, PumCon-1.14, PumCon-1.16, PumCon-1.25, PumCon-1.28, PumCon-1.30, PumCon-1.34
+
+=== Sigmodon hispidus (7 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: SigHis-1.11, SigHis-1.13, SigHis-1.1, SigHis-1.2, SigHis-1.3, SigHis-1.4, SigHis-5.1121
+
+=== Sorex araneus (7 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: SorAra-1.0, SorAra-1.1, SorAra-1.26, SorAra-1.33, SorAra-1.6, SorAra-1.8, SorAra-5.663
+
+=== Uropsilus gracilis (7 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: UroGra-1.12, UroGra-1.13, UroGra-1.14, UroGra-1.15, UroGra-1.1, UroGra-1.2, UroGra-1.8
+
+=== Myomorpha (6 records) ===
+  Nature 2002;420:520-62 - Initial sequencing and comparative analysis of the mouse genome. (PMID 12466850)
+  records: ID_B1, PB1D10, B1F1, PB1D7, B1F2, B1F
+
+=== Acomys cahirinus (6 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: AcoCah-1.13, AcoCah-1.14, AcoCah-1.15, AcoCah-1.17, AcoCah-1.18, AcoCah-1.4
+
+=== Diceros bicornis michaeli (6 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: DicBic-1.12, DicBic-1.3, DicBic-1.5, DicBic-1.6, DicBic-1.8, DicBic-1.9
+
+=== Dicerorhinus sumatrensis (6 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: DicSum-1.12, DicSum-1.15, DicSum-1.6, DicSum-1.7, DicSum-1.8, DicSum-2.1
+
+=== Graphiurus murinus (6 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: GraMur-1.16, GraMur-1.17, GraMur-1.20, GraMur-1.24, GraMur-1.29, GraMur-1.4
+
+=== Inia geoffrensis (6 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: IniGeo-1.0, IniGeo-1.1, IniGeo-1.27, IniGeo-1.2, IniGeo-1.6, IniGeo-5.26
+
+=== Microtus ochrogaster (6 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MicOch-1.12, MicOch-1.14, MicOch-1.20, MicOch-1.24, MicOch-1.5, MicOch-4.121
+
+=== Miniopterus schreibersii (6 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MinSch-1.1, MinSch-1.2, MinSch-1.4, MinSch-1.5, MinSch-1.6, MinSch-1.8
+
+=== Mirounga angustirostris (6 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MirAng-1.14, MirAng-1.20, MirAng-1.4, MirAng-4.39, MirAng-6.1356, MirAng-6.3017
+
+=== Murina feae (6 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MurFea-1.10, MurFea-1.16, MurFea-1.19, MurFea-1.21, MurFea-1.23, MurFea-1.45
+
+=== Myotis brandtii (6 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MyoBra-1.11, MyoBra-1.14, MyoBra-1.199, MyoBra-1.20, MyoBra-1.7, MyoBra-1.8
+
+=== Odobenus rosmarus (6 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: OdoRos-1.10, OdoRos-1.17, OdoRos-1.19, OdoRos-1.1, OdoRos-1.31, OdoRos-1.6
+
+=== Odocoileus virginianus (6 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: OdoVir-1.21, OdoVir-1.26, OdoVir-1.38, OdoVir-1.41, OdoVir-1.67, OdoVir-1.76
+
+=== Panthera tigris (6 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: PanTig-1.10, PanTig-1.12, PanTig-1.13, PanTig-1.19, PanTig-1.22, PanTig-1.32
+
+=== Rangifer tarandus (6 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: RanTar-1.19, RanTar-1.47, RanTar-1.58, RanTar-1.60, RanTar-1.74, RanTar-1.77
+
+=== Suricata suricatta (6 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: SurSur-1.0, SurSur-1.11, SurSur-1.14, SurSur-1.15, SurSur-1.16, SurSur-1.4
+
+=== Tadarida brasiliensis (6 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: TadBra-1.1, TadBra-1.2, TadBra-1.3, TadBra-1.5, TadBra-1.7, TadBra-1.8
+
+=== Tupaia chinensis (6 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: TupChi-1.22, TupChi-1.37, TupChi-1.49, TupChi-1.51, TupChi-1.64, TupChi-3.112
+
+=== Anoura caudifer (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: AnoCau-1.0, AnoCau-1.2, AnoCau-1.3, AnoCau-1.5, AnoCau-1.8
+
+=== Artibeus jamaicensis (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: ArtJam-1.1, ArtJam-1.2, ArtJam-1.3, ArtJam-1.4, ArtJam-1.7
+
+=== Beatragus hunteri (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: BeaHun-1.105, BeaHun-1.85, BeaHun-1.86, BeaHun-1.94, BeaHun-1.99
+
+=== Desmodus rotundus (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: DesRot-1.11, DesRot-1.2, DesRot-1.3, DesRot-1.7, DesRot-1.8
+
+=== Dinomys branickii (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: DinBra-1.0, DinBra-1.32, DinBra-1.3, DinBra-1.46, DinBra-5.1402
+
+=== Dipodomys stephensi (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: DipSte-1.14, DipSte-1.20, DipSte-1.6, DipSte-1.7, DipSte-1.9
+
+=== Helogale parvula (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: HelPar-1.10, HelPar-1.11, HelPar-1.21, HelPar-1.6, HelPar-1.7
+
+=== Hystrix cristata (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: HysCri-1.0, HysCri-1.157, HysCri-1.24, HysCri-1.3, HysCri-1.5
+
+=== Lasiurus borealis (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: LasBor-1.1, LasBor-1.38, LasBor-1.4, LasBor-1.9, LasBor-6.607
+
+=== Myrmecophaga tridactyla (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MyrTri-1.22, MyrTri-1.32, MyrTri-1.45, MyrTri-1.70, MyrTri-6.1379
+
+=== Nannospalax galili (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: NanGal-1.12, NanGal-1.29, NanGal-1.3, NanGal-1.8, NanGal-6.658
+
+=== Neophocaena asiaeorientalis (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: NeoAsi-1.11, NeoAsi-1.1, NeoAsi-1.2, NeoAsi-1.6, NeoAsi-4.904
+
+=== Neomonachus schauinslandi (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: NeoSch-1.1, NeoSch-1.3, NeoSch-1.9, NeoSch-5.248, NeoSch-6.2125
+
+=== Ondatra zibethicus (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: OndZib-1.18, OndZib-1.23, OndZib-1.31, OndZib-1.4, OndZib-1.5
+
+=== Perognathus longimembris pacificus (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: PerLon-1.11, PerLon-1.14, PerLon-1.18, PerLon-1.3, PerLon-1.5
+
+=== Pontoporia blainvillei (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: PonBla-1.0, PonBla-1.10, PonBla-1.11, PonBla-1.24, PonBla-1.87
+
+=== Pteronura brasiliensis (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: PteBra-1.27, PteBra-1.2, PteBra-1.6, PteBra-1.7, PteBra-5.834
+
+=== Rhinolophus sinicus (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: RhiSin-1.10, RhiSin-1.15, RhiSin-1.1, RhiSin-1.30, RhiSin-1.71
+
+=== Tamandua tetradactyla (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: TamTet-1.28, TamTet-1.35, TamTet-1.38, TamTet-4.396, TamTet-5.1758
+
+=== Tapirus indicus (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: TapInd-1.12, TapInd-1.16, TapInd-1.17, TapInd-1.2, TapInd-1.9
+
+=== Tonatia saurophila (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: TonSau-1.0, TonSau-1.15, TonSau-1.3, TonSau-1.4, TonSau-1.8
+
+=== Zapus hudsonius (5 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: ZapHud-1.11, ZapHud-1.19, ZapHud-1.7, ZapHud-6.129, ZapHud-6.2448
+
+=== Plutella xylostella (5 records) ===
+  BMC Genomics 2021;22:226 - Diversity of short interspersed nuclear elements (SINEs) in lepidopteran insects and evidence of horizontal SINE transfer between baculovirus and lepidopteran hosts. (PMID 33789582)
+  records: PxSE1, PxSE2, PxSE3, PxSE4, PxSE5
+
+=== Castor canadensis (4 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CasCan-1.0, CasCan-1.1, CasCan-1.4, CasCan-1.5
+
+=== Chinchilla lanigera (4 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: ChiLan-1.0, ChiLan-1.31, ChiLan-1.4, ChiLan-1.6
+
+=== Enhydra lutris (4 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: EnhLut-1.12, EnhLut-1.2, EnhLut-1.3, EnhLut-1.5
+
+=== Kogia breviceps (4 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: KogBre-1.14, KogBre-1.1, KogBre-1.2, KogBre-1.3
+
+=== Meriones unguiculatus (4 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MerUng-1.14, MerUng-1.22, MerUng-1.3, MerUng-1.8
+
+=== Mesoplodon bidens (4 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MesBid-1.1, MesBid-1.5, MesBid-1.9, MesBid-3.75
+
+=== Mirza coquereli (4 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MirCoq-1.2, MirCoq-1.3, MirCoq-1.9, MirCoq-4.315
+
+=== Monodon monoceros (4 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MonMon-1.11, MonMon-1.1, MonMon-1.31, MonMon-1.3
+
+=== Mus pahari (4 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MusPah-1.10, MusPah-1.12, MusPah-2.26, MusPah-5.422
+
+=== Mus spretus (4 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MusSpr-1.10, MusSpr-1.7, MusSpr-4.198, MusSpr-5.887
+
+=== Propithecus coquereli (4 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: ProCoq-1.1, ProCoq-3.14, ProCoq-6.789, ProCoq-6.8
+
+=== Scalopus aquaticus (4 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: ScaAqu-1.0, ScaAqu-1.11, ScaAqu-1.13, ScaAqu-1.7
+
+=== Thryonomys swinderianus (4 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: ThrSwi-1.2, ThrSwi-1.31, ThrSwi-4.14, ThrSwi-5.150
+
+=== Tursiops truncatus (4 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: TurTru-1.2, TurTru-1.5, TurTru-2.21, TurTru-5.1462
+
+=== Ursus maritimus (4 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: UrsMar-1.13, UrsMar-1.15, UrsMar-1.18, UrsMar-6.1536
+
+=== Mytilus coruscus (4 records) ===
+  Mob DNA 2024;15:10 - Teaching transposon classification as a means to crowd source the curation of repeat annotation - a tardigrade perspective. (PMID 38711146)
+  records: SINE_M.coruscus_cons_4, SINE_M.coruscus_cons_1, SINE_M.coruscus_cons_7, SINE_M.coruscus_cons_22
+
+=== Ostrea denselamellosa (4 records) ===
+  Mob DNA 2024;15:10 - Teaching transposon classification as a means to crowd source the curation of repeat annotation - a tardigrade perspective. (PMID 38711146)
+  records: Oden_SINE-5_Deu, Oden_SINE-4_V, Oden_SINE-3_MD, Oden_SINE-1_CORE
+
+=== Balaenoptera bonaerensis (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: BalBon-1.3, BalBon-1.6, BalBon-1.9
+
+=== Camelus dromedarius (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CamDro-1.15, CamDro-1.18, CamDro-3.128
+
+=== Cheirogaleus medius (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CheMed-1.1, CheMed-4.872, CheMed-5.1566
+
+=== Cuniculus paca (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CunPac-1.12, CunPac-1.1, CunPac-1.2
+
+=== Delphinapterus leucas (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: DelLeu-1.2, DelLeu-1.3, DelLeu-1.5
+
+=== Dolichotis patagonum (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: DolPat-1.0, DolPat-1.5, DolPat-6.728
+
+=== Echinops telfairi (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: EchTel-1.10, EchTel-1.2, EchTel-5.1293
+
+=== Eulemur flavifrons (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: EulFla-1.1, EulFla-4.1227, EulFla-5.31
+
+=== Fukomys damarensis (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: FukDam-1.25, FukDam-1.2, FukDam-1.42
+
+=== Hydrochoerus hydrochaeris (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: HydHyd-1.0, HydHyd-1.16, HydHyd-4.943
+
+=== Indri indri (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: IndInd-1.1, IndInd-1.2, IndInd-3.27
+
+=== Lemur catta (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: LemCat-1.1, LemCat-1.3, LemCat-1.6
+
+=== Macroglossus sobrinus (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MacSob-1.132, MacSob-1.150, MacSob-1.45
+
+=== Microcebus murinus (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MicMur-1.1, MicMur-1.6, MicMur-3.78
+
+=== Mormoops blainvillei (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MorBla-1.1, MorBla-1.4, MorBla-1.7
+
+=== Mus caroli (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: MusCar-1.15, MusCar-1.9, MusCar-4.236
+
+=== Ochotona princeps (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: OchPri-1.20, OchPri-1.40, OchPri-6.59
+
+=== Orcinus orca (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: OrcOrc-1.1, OrcOrc-1.4, OrcOrc-5.146
+
+=== Psammomys obesus (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: PsaObe-1.16, PsaObe-1.2, PsaObe-6.937
+
+=== Pteronotus parnellii (3 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: PtePar-1.1, PtePar-1.2, PtePar-1.5
+
+=== Lerema accius (3 records) ===
+  BMC Genomics 2021;22:226 - Diversity of short interspersed nuclear elements (SINEs) in lepidopteran insects and evidence of horizontal SINE transfer between baculovirus and lepidopteran hosts. (PMID 33789582)
+  records: LaSE1, LaSE2, ObSE2
+
+=== Sinonovacula constricta (3 records) ===
+  Mob DNA 2024;15:10 - Teaching transposon classification as a means to crowd source the curation of repeat annotation - a tardigrade perspective. (PMID 38711146)
+  records: SINE_S.constricta_cons_1, SINE_S.constricta_cons_2, SINE_S.constricta_cons_3
+
+=== Spisula solida (3 records) ===
+  Mob DNA 2024;15:10 - Teaching transposon classification as a means to crowd source the curation of repeat annotation - a tardigrade perspective. (PMID 38711146)
+  records: Ssol_SINE-2_Meta, Ssol_SINE-6_Meta, Ssol_SINE-5_MD
+
+=== Ruditapes philippinarum (3 records) ===
+  Mob DNA 2024;15:10 - Teaching transposon classification as a means to crowd source the curation of repeat annotation - a tardigrade perspective. (PMID 38711146)
+  records: Rphil_SINE-4_V, Rphil_SINE-5_Deu, Rphil_SINE-1_MD
+
+=== Muridae (2 records) ===
+  J Mol Evol 1989;28:299-305 - Successive waves of fixation of B1 variants in rodent lineage history. (PMID 2471838)
+  Nature 2002;420:520-62 - Initial sequencing and comparative analysis of the mouse genome. (PMID 12466850)
+  records: B1_Mus1, B1_Mus2
+
+=== Camelus bactrianus (2 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CamBac-1.12, CamBac-1.9
+
+=== Camelus ferus (2 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CamFer-1.12, CamFer-2.72
+
+=== Capra aegagrus (2 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CapAeg-1.103, CapAeg-1.154
+
+=== Ctenodactylus gundi (2 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CteGun-1.1, CteGun-1.20
+
+=== Dasyprocta punctata (2 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: DasPun-1.20, DasPun-5.1240
+
+=== Daubentonia madagascariensis (2 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: DauMad-1.0, DauMad-1.2
+
+=== Eschrichtius robustus (2 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: EscRob-1.3, EscRob-1.4
+
+=== Papio anubis (2 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: PapAnu-1.6, PapAnu-4.489
+
+=== Petromus typicus (2 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: PetTyp-1.0, PetTyp-1.18
+
+=== Pteropus alecto (2 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: PteAle-1.129, PteAle-1.45
+
+=== Rhinopithecus roxellana (2 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: RhiRox-1.21, RhiRox-1.23
+
+=== Tupaia tana (2 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: TupTan-1.25, TupTan-1.35
+
+=== Vicugna pacos (2 records) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: VicPac-1.21, VicPac-1.22
+
+=== Chilo suppressalis (2 records) ===
+  BMC Genomics 2021;22:226 - Diversity of short interspersed nuclear elements (SINEs) in lepidopteran insects and evidence of horizontal SINE transfer between baculovirus and lepidopteran hosts. (PMID 33789582)
+  records: CsSE1, CsSE2
+
+=== Manduca sexta (2 records) ===
+  BMC Genomics 2021;22:226 - Diversity of short interspersed nuclear elements (SINEs) in lepidopteran insects and evidence of horizontal SINE transfer between baculovirus and lepidopteran hosts. (PMID 33789582)
+  records: MsSE1, MsSE2
+
+=== Cyclina sinensis (2 records) ===
+  Mob DNA 2024;15:10 - Teaching transposon classification as a means to crowd source the curation of repeat annotation - a tardigrade perspective. (PMID 38711146)
+  records: Csin_SINE-8_Core, Csin_SINE-2_V
+
+=== Mytilus edulis (2 records) ===
+  Mob DNA 2024;15:10 - Teaching transposon classification as a means to crowd source the curation of repeat annotation - a tardigrade perspective. (PMID 38711146)
+  records: Medu_SINE-8_V, Medu_SINE-12_Meta
+
+=== Murinae (1 record) ===
+  J Mol Evol 1989;28:191-9 - Similarity and divergence among rodent repetitive DNA sequences. (PMID 2494349)
+  Nature 2002;420:520-62 - Initial sequencing and comparative analysis of the mouse genome. (PMID 12466850)
+  records: B2_Mm2
+
+=== Uraeginthus cyanocephalus (1 record) ===
+  Genes (Basel) 2019;10: - The Genome of Blue-Capped Cordon-Bleu Uncovers Hidden Diversity of LTR Retrotransposons in Zebra Finch. (PMID 31013951)
+  records: TguSINE1_Ucy
+
+=== Aotus nancymaae (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: AotNan-1.3
+
+=== Plecturocebus donacophilus (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CalDon-1.15
+
+=== Cavia tschudii (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CavTsc-1.2
+
+=== Cebus capucinus (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CebCap-4.127
+
+=== Cercocebus atys (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CerAty-1.11
+
+=== Cercopithecus neglectus (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: CerNeg-1.2
+
+=== Colobus angolensis (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: ColAng-1.5
+
+=== Eidolon helvum (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: EidHel-6.3589
+
+=== Eulemur fulvus (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: EulFul-1.0
+
+=== Heterohyrax brucei (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: HetBru-1.6
+
+=== Leptonychotes weddellii (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: LepWed-1.7
+
+=== Mandrillus leucophaeus (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: ManLeu-6.876
+
+=== Nasalis larvatus (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: NasLar-5.2379
+
+=== Nomascus leucogenys (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: NomLeu-6.377
+
+=== Phocoena phocoena (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: PhoPho-5.685
+
+=== Piliocolobus tephrosceles (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: PilTep-4.374
+
+=== Platanista minor (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: PlaGan-1.9
+
+=== Pygathrix nemaeus (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: PygNem-1.7
+
+=== Rhinopithecus bieti (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: RhiBie-1.23
+
+=== Solenodon paradoxus (1 record) ===
+  Genome Biol Evol 2016;8:403-10 - Accurate Transposable Element Annotation Is Vital When Analyzing New Genome Assemblies. (PMID 26802115)
+  records: SolPar-1.0
+
+=== Choristoneura fumiferana (1 record) ===
+  BMC Genomics 2021;22:226 - Diversity of short interspersed nuclear elements (SINEs) in lepidopteran insects and evidence of horizontal SINE transfer between baculovirus and lepidopteran hosts. (PMID 33789582)
+  records: CfSE1
+
+=== Gesta propertius (1 record) ===
+  BMC Genomics 2021;22:226 - Diversity of short interspersed nuclear elements (SINEs) in lepidopteran insects and evidence of horizontal SINE transfer between baculovirus and lepidopteran hosts. (PMID 33789582)
+  records: EpSE1
+
+=== Operophtera brumata (1 record) ===
+  BMC Genomics 2021;22:226 - Diversity of short interspersed nuclear elements (SINEs) in lepidopteran insects and evidence of horizontal SINE transfer between baculovirus and lepidopteran hosts. (PMID 33789582)
+  records: ObSE1
+
+=== Papilio glaucus (1 record) ===
+  BMC Genomics 2021;22:226 - Diversity of short interspersed nuclear elements (SINEs) in lepidopteran insects and evidence of horizontal SINE transfer between baculovirus and lepidopteran hosts. (PMID 33789582)
+  records: PgSE1
+
+=== Papilio machaon (1 record) ===
+  BMC Genomics 2021;22:226 - Diversity of short interspersed nuclear elements (SINEs) in lepidopteran insects and evidence of horizontal SINE transfer between baculovirus and lepidopteran hosts. (PMID 33789582)
+  records: PmSE1
+
+=== Papilio zelicaon (1 record) ===
+  BMC Genomics 2021;22:226 - Diversity of short interspersed nuclear elements (SINEs) in lepidopteran insects and evidence of horizontal SINE transfer between baculovirus and lepidopteran hosts. (PMID 33789582)
+  records: PzSE1
+
+=== Spodoptera exigua (1 record) ===
+  BMC Genomics 2021;22:226 - Diversity of short interspersed nuclear elements (SINEs) in lepidopteran insects and evidence of horizontal SINE transfer between baculovirus and lepidopteran hosts. (PMID 33789582)
+  records: SeSE1
+
+=== Spodoptera frugiperda (1 record) ===
+  BMC Genomics 2021;22:226 - Diversity of short interspersed nuclear elements (SINEs) in lepidopteran insects and evidence of horizontal SINE transfer between baculovirus and lepidopteran hosts. (PMID 33789582)
+  records: SfSE1
+
+=== Spodoptera littoralis (1 record) ===
+  BMC Genomics 2021;22:226 - Diversity of short interspersed nuclear elements (SINEs) in lepidopteran insects and evidence of horizontal SINE transfer between baculovirus and lepidopteran hosts. (PMID 33789582)
+  records: SlittSE1
+
+=== Spodoptera litura (1 record) ===
+  BMC Genomics 2021;22:226 - Diversity of short interspersed nuclear elements (SINEs) in lepidopteran insects and evidence of horizontal SINE transfer between baculovirus and lepidopteran hosts. (PMID 33789582)
+  records: SlituSE1
+
+=== Tridacna crocea (1 record) ===
+  Mob DNA 2024;15:10 - Teaching transposon classification as a means to crowd source the curation of repeat annotation - a tardigrade perspective. (PMID 38711146)
+  records: Tcro_SINE-3_Deu
+
+=== Ricinus communis (1 record) ===
+  Front Plant Sci 2024;15:1397215 - The impact of retrotransposons on castor bean genomes. (PMID 39109065)
+  records: SINE_rCom
+
+=== Mactra quadrangularis (1 record) ===
+  Mob DNA 2024;15:10 - Teaching transposon classification as a means to crowd source the curation of repeat annotation - a tardigrade perspective. (PMID 38711146)
+  records: Mqua_SINE-1_CORE
+
+=== Gigantidas platifrons (1 record) ===
+  Mob DNA 2024;15:10 - Teaching transposon classification as a means to crowd source the curation of repeat annotation - a tardigrade perspective. (PMID 38711146)
+  records: Bpla_SINE-1_Meta
+
+=== Magallana ariakensis (1 record) ===
+  Mob DNA 2024;15:10 - Teaching transposon classification as a means to crowd source the curation of repeat annotation - a tardigrade perspective. (PMID 38711146)
+  records: Cari_SINE-3_CORE
+
+=== Anadara kagoshimensis (1 record) ===
+  Mob DNA 2024;15:10 - Teaching transposon classification as a means to crowd source the curation of repeat annotation - a tardigrade perspective. (PMID 38711146)
+  records: Akag_SINE-1_CORE
+
+=== Pinctada fucata (1 record) ===
+  Mob DNA 2024;15:10 - Teaching transposon classification as a means to crowd source the curation of repeat annotation - a tardigrade perspective. (PMID 38711146)
+  records: Pfuc_SINE-1_CORE
+
+=== Zymoseptoria tritici (1 record) ===
+  BMC Res Notes 2023;16:335 - A pangenome-guided manually curated library of transposable elements for Zymoseptoria tritici. (PMID 37974222)
+  records: ZymTri_2023_family_98
+
+=== Salmo salar (1 record) ===
+  Nature 2016;533:200-5 - The Atlantic salmon genome provides insights into rediploidization. (PMID 27088604)
+  G3 (Bethesda) 2023;13: - Functional validation of transposable element-derived cis-regulatory elements in Atlantic salmon. (PMID 36753570)
+  records: Ssa_2004
+
+======================================================================
+UNCITED - raw pipeline deposits, NOT discarded, need direct genome verification
+======================================================================
+
+=== Peromyscus maniculatus (28 records) ===
+Pman_ALU_6.15393, Pman_ALU_6.2108, Pman_ALU_6.7041, Pman_ALU_6.3823, Pman_ALU_3.62, Pman_ALU_6.2822, Pman_ALU_4.11, Pman_ALU_6.4482, Pman_ALU_4.159, Pman_ALU_6.8706, Pman_ALU_4.548, Pman_ALU_4.539, Pman_ALU_5.373, Pman_B4_6.2891, Pman_ALU_4.139, Pman_ALU_6.12233, Pman_B4_6.6324, Pman_B2_6.8065, Pman_B2_6.1736, Pman_ALU_6.7682, Pman_B4_6.3142, Pman_B2_5.661, Pman_B2_6.3731, Pman_B4_6.3553, Pman_ALU_5.1881, Pman_MIR_6.141, Pman_MIR_6.2859, Pman_MIR_6.1523
+
+=== Halyomorpha halys (14 records) ===
+Halyomorpha_halys-1_family-77, Halyomorpha_halys-1_family-78, Halyomorpha_halys-1_family-121, Halyomorpha_halys-1_family-53, Halyomorpha_halys-1_family-142, Halyomorpha_halys-1_family-56, Halyomorpha_halys-1_family-137, Halyomorpha_halys-1_family-75, Halyomorpha_halys-2_family-62, Halyomorpha_halys-3_family-34, Halyomorpha_halys-4_family-1734, Halyomorpha_halys-5_family-410, Halyomorpha_halys-5_family-1803, Halyomorpha_halys-6_family-2057
+
+=== Chrysochloris asiatica (9 records) ===
+AFROSINE-1_ChrAsi, ChrAsi-1.0, ChrAsi-1.144, ChrAsi-1.14, ChrAsi-1.18, ChrAsi-1.26, ChrAsi-1.48, ChrAsi-1.4, ChrAsi-1.83
+
+=== Solen grandis (7 records) ===
+SINE_S.grandis_cons_12, SINE_S.grandis_cons_11, SINE_S.grandis_cons_4, SINE_S.grandis_cons_13, SINE_S.grandis_cons_5, SINE_S.grandis_cons_7, Sgra_SINE-5_Meta
+
+=== Astatotilapia calliptera (4 records) ===
+5S-Deu-L2-3_AstCal, 5S-Deu-L2-1_AstCal, 5S-Deu-L2-4_AstCal, tRNA-Core-RTE-1_AstCal
+
+=== Megalonaias nervosa (4 records) ===
+SINE_M.nervosa_cons_1, SINE_M.nervosa_cons_2, SINE_M.nervosa_cons_5, SINE_M.nervosa_cons_3
+
+=== Anadara broughtonii (4 records) ===
+SINE_S.broughtonii_cons_20, SINE_S.broughtonii_cons_45, SINE_S.broughtonii_cons_56, SINE_S.broughtonii_cons_75
+
+=== Molossus molossus (3 records) ===
+Ves1_mMol, Ves2_mMol, Ves4_mMol
+
+=== Archivesica marissinica (3 records) ===
+SINE_A.marissinica_cons_2, SINE_A.marissinica_cons_4, SINE_A.marissinica_cons_5
+
+=== Magallana gigas (3 records) ===
+SINE_C.gigas_cons_1_sub2, SINE_C.gigas_cons_6, SINE_C.gigas_cons_4
+
+=== Heligmosomoides polygyrus bakeri (2 records) ===
+, 
+
+=== Tegillarca granosa (2 records) ===
+SINE_T.granosa_cons_48, SINE_T.granosa_cons_7_sub3
+
+=== Mizuhopecten yessoensis (2 records) ===
+SINE_M.yessoensis_cons_2, SINE_M.yessoensis_cons_9
+
+=== Hominidae (1 record) ===
+AluYe6
+
+=== Pipistrellus kuhlii (1 record) ===
+Helitron8_pKuh
+
+=== Rousettus aegyptiacus (1 record) ===
+Meg1_rAeg
+
+=== Rhinolophus ferrumequinum (1 record) ===
+Rhin-1h_rFer
+
+=== Heligmosomoides polygyrus (1 record) ===
+
+
+=== Pecten maximus (1 record) ===
+SINE_P.maximus_cons_3
+
