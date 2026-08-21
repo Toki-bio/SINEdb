@@ -445,6 +445,13 @@ body.gate-locked > .wrap { display: none; }
     body.classList.remove('gate-locked');
     gate.style.display = 'none';
     try { sessionStorage.setItem('lgt-unlocked', '1'); } catch (e) {}
+    // the citation graph sizes its canvas once, immediately on data load,
+    // against whatever the container measures at that instant - while gated,
+    // the container is display:none (0x0), so the canvas never gets a real
+    // size unless something re-measures after the content becomes visible.
+    requestAnimationFrame(function () {
+      window.dispatchEvent(new Event('resize'));
+    });
   }
   function tryUnlock() {
     var input = document.getElementById('access-gate-input');
