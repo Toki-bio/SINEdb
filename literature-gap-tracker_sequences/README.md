@@ -1,8 +1,13 @@
 # Gathered SINE sequences from the literature-gap tracker
 
-Actual FASTA sequences retrieved for rows in [`literature-gap-tracker.html`](../literature-gap-tracker.html), gathered 2026-08-21 to 2026-08-22. **921 sequences across 22 files**, one file per source (or per source-pair where both an aligned and a degapped version are kept). No sequence here was fabricated or estimated — every one traces to a specific accession, Dfam family ID, or a specific supplementary file. For each file below, the **exact extraction method** is documented so the provenance is reproducible, not just cited. Where a sequence required reconstruction (e.g. concatenating alignment fragments) rather than a single clean pull, that is stated explicitly, not glossed over.
+Actual FASTA sequences retrieved for rows in [`literature-gap-tracker.html`](../literature-gap-tracker.html), gathered 2026-08-21 to 2026-08-22. **923 sequences across 23 files**, one file per source (or per source-pair where both an aligned and a degapped version are kept). No sequence here was fabricated or estimated — every one traces to a specific accession, Dfam family ID, or a specific supplementary file. For each file below, the **exact extraction method** is documented so the provenance is reproducible, not just cited. Where a sequence required reconstruction (e.g. concatenating alignment fragments) rather than a single clean pull, that is stated explicitly, not glossed over.
 
 ---
+
+### `C1C2_consensus_Ustyantsev2026.fasta` — 2 sequences
+**Citation:** Ustyantsev, Kosushkin, Kramerov, Stasenko & Borodulina 2026, Animals 16(5):765
+**Extraction method:** User supplied both C1 and C2 consensus sequences directly (rabbit-derived, matching the paper's Fig. 3), pasted as aligned text with IUPAC ambiguity codes. Degapped by stripping `-` characters.
+**Result:** 2 consensus sequences — C1 (328 bp), C2 (359 bp).
 
 ### `Can_a1a2b1b2_consensus_Kosushkin2022.fasta` — 4 sequences
 **Citation:** Kosushkin, Ustyantsev, Borodulina, Vassetzky & Kramerov 2022, Biology 11(10):1403
