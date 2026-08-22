@@ -4,6 +4,13 @@ Actual FASTA sequences retrieved for rows in [`literature-gap-tracker.html`](../
 
 **[`ALL_SEQUENCES_COMBINED.fasta`](ALL_SEQUENCES_COMBINED.fasta)** concatenates all 36 per-source files above into one 1428-sequence FASTA, in the same order as this README, for anyone who wants everything gathered so far in a single file rather than per-manuscript.
 
+**[`CONSENSUS_SEQUENCES.fasta`](CONSENSUS_SEQUENCES.fasta)** (397 seqs) and **[`INDIVIDUAL_LOCI.fasta`](INDIVIDUAL_LOCI.fasta)** (1007 seqs) split the same pool by sequence type: family/subfamily consensus sequences (one representative sequence per family, whether reconstructed from an alignment of multiple copies or directly deposited) vs. individual raw genomic copies (real single-locus instances with their own coordinates/clone IDs, including PCR clones, RepeatMasker hits, and named gene-mutation insertions). `AngioSINE_24families_aligned_Seibt2019.fasta` (the deliberately gap-containing alignment kept alongside its degapped twin) is excluded from both splits to avoid double-counting; 397 + 1007 = 1404 = 1428 − 24.
+
+**Bugs found and fixed while building these three files (2026-08-22, seqkit-verified: `seqkit seq -v` exit 0, zero unexpected gap/character issues on every file after fixes):**
+- `Platy1_6newSubfam_Saguinus_StorerEtAl.fasta` — the 6 sequences were copied from the source RepeatMasker library without stripping internal `-` alignment-gap characters (a genuine omission during extraction, not a source-file property). Degapped; bp counts in headers recomputed to match.
+- `B2_6copies_geneMutations_FigS4_Vassetzky2021.fasta` — same omission; only `TNF` had a visible internal gap run, but the fix was applied file-wide. Degapped; bp counts recomputed.
+- `Urop_AdditionalFile1_117seqs_Kosushkin2026.fasta` — one record (`PVHY01033845_1:9058-9541`) had the literal text `SUBFAMILYUROPB` appended to its 3' end: the source PDF's "Subfamily Urop_b." section-break line (marking the transition from Urop_c to Urop_b examples within the same figure) was absorbed into the sequence by a parser that only recognized `Figure S\d` boundaries, not subfamily-transition lines. Confirmed against the raw extracted source text before fixing (only one such transition line exists in the source, so this was the only affected record). Trimmed the trailing garbage; bp count corrected from 457 to 443.
+
 ---
 
 ### `HCDtRNA_bivalve_104seqs_Martelossi2024.fasta` — 104 sequences
