@@ -64,6 +64,14 @@
       "tracker_row": "SINE28",
       "year": 2015,
       "access": "open access (GBE) - loci from supplementary table, fetched via UCSC"
+    },
+    {
+      "id": "metasines_nishihara2016",
+      "file": "manuscripts/metasines_nishihara2016.md",
+      "family": "MetaSINEs",
+      "tracker_row": "MetaSINEs",
+      "year": 2016,
+      "access": "open access (GBE) - 63 seqs from supplementary Fig. S1, corrects prior 'genuinely inaccessible' verdict"
     }
   ]
 }

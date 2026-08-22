@@ -1,8 +1,13 @@
 # Gathered SINE sequences from the literature-gap tracker
 
-Actual FASTA sequences retrieved for rows in [`literature-gap-tracker.html`](../literature-gap-tracker.html), gathered 2026-08-21 to 2026-08-22. **936 sequences across 26 files**, one file per source (or per source-pair where both an aligned and a degapped version are kept). No sequence here was fabricated or estimated — every one traces to a specific accession, Dfam family ID, or a specific supplementary file. For each file below, the **exact extraction method** is documented so the provenance is reproducible, not just cited. Where a sequence required reconstruction (e.g. concatenating alignment fragments) rather than a single clean pull, that is stated explicitly, not glossed over.
+Actual FASTA sequences retrieved for rows in [`literature-gap-tracker.html`](../literature-gap-tracker.html), gathered 2026-08-21 to 2026-08-22. **999 sequences across 27 files**, one file per source (or per source-pair where both an aligned and a degapped version are kept). No sequence here was fabricated or estimated — every one traces to a specific accession, Dfam family ID, or a specific supplementary file. For each file below, the **exact extraction method** is documented so the provenance is reproducible, not just cited. Where a sequence required reconstruction (e.g. concatenating alignment fragments) rather than a single clean pull, that is stated explicitly, not glossed over.
 
 ---
+
+### `MetaSINEs_63seqs_Nishihara2016.fasta` — 63 sequences
+**Citation:** Nishihara, Plazzi, Passamonti & Okada 2016, GBE 8(3):528–539
+**Extraction method:** Previously marked "genuinely inaccessible" (Repbase-only, absent from Dfam) — that verdict covered the consensus sequences shown in the paper's own figures, which was correct as far as it went, but incomplete: the user pointed to the actual supplementary zip, `evw029_Supplementary_Data.zip`, containing `SupplementaryMaterial.pdf`. Its **Supplementary Fig. S1** ("Sequence alignments of the SINE families in bivalves") is genuinely extractable plain text via `pdftotext -layout` — unlike the main-text Figs. 2 and 4 (confirmed image-only by fetching the paper's full-text XML directly from Europe PMC, PMC4824008: the `<fig>` nodes contain only captions). Parsed all 7 bivalve SINE families shown in this supplementary alignment (panels A–G: BivaMeta-SINE1, BivaMD-SINE1, BivaV-SINE1, BivaV-SINE2, BivaV-SINE3, BivaCORE-SINE1, BivaCORE-SINE2), concatenating each named sequence's row across all wrapped alignment blocks and stripping gap characters. **Verified before accepting**: the two complete ("full", coordinate-1-based) sequences' stated end-coordinates matched the computed degapped lengths exactly (203 bp and 351 bp).
+**Result: 63 sequences** across 7 of the paper's 8 bivalve SINE families (the 8th, BivaDeu-SINE1, has only a single-species consensus per the figure's own legend, not part of this multi-species alignment). Full context — including the paper's 13-member cross-phylum MetaSINE superfamily (fish to Cnidaria, main-text-only images, not recoverable) and its cross-reference to this tracker's "MESC & Snail" row (same superfamily, independently named) — documented in `library/library.html#metasines_nishihara2016`.
 
 ### `B2_3seqs_Mm1Mm2_userFig6.fasta` (3 seqs) + `Dip_a1a2b1b2_consensus_userFig10.fasta` (4 seqs) + `Ves_abc_a1a2Y_consensus_Fig14.fasta` (6 seqs)
 **Citation:** Vassetzky, Borodulina, Ustyantsev, Kosushkin & Kramerov 2021, IJMS 22(18):9897
@@ -108,7 +113,6 @@ The scaffold names (`scaffold-N`) don't resolve to a GenBank accession under the
 ---
 
 ## Not yet gathered
-- **MetaSINEs** (Nishihara et al. 2016) — confirmed genuinely inaccessible: deposited in Repbase only (subscription-gated), absent from Dfam.
 - **ZenoSINE1 + metulj families** (Ray, Grimshaw et al. 2019) — checked the full 6.7MB supplementary data zip directly (17 figures + 4 spreadsheets): every spreadsheet contains only genome-content proportions/community-membership data, no sequence columns; the one figure that might have had tail alignments (Fig. S7) is a pure image with zero extractable text. Confirmed no sequence deposit exists anywhere in this paper's materials.
 - The 4 rows marked `NOT_AVAILABLE` still unresolved (Solanaceae, Amaranthaceae, 18 Branchiostoma SINEs, Nematode/Heligmosomoides) — no accessible full text or deposit found as of this pass.
 
