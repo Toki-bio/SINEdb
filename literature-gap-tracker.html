@@ -494,9 +494,9 @@ body.gate-locked > .wrap { display: none; }
   </header>
 
   <div class="summary">
-    <div class="stat danger"><div class="n">23</div><div class="l">New family, gap confirmed</div></div>
+    <div class="stat danger"><div class="n">22</div><div class="l">New family, gap confirmed</div></div>
     <div class="stat warn"><div class="n">10</div><div class="l">Existing family, updated / new taxa</div></div>
-    <div class="stat ok"><div class="n">2</div><div class="l">Resolved, not a gap</div></div>
+    <div class="stat ok"><div class="n">3</div><div class="l">Resolved, not a gap</div></div>
     <div class="stat muted"><div class="n">1</div><div class="l">Candidates, unverified</div></div>
     <div class="stat"><div class="n">36</div><div class="l">Total logged so far (+19 more preserved for direct genome verification, not counted here)</div></div>
   </div>
@@ -714,13 +714,13 @@ body.gate-locked > .wrap { display: none; }
           <td><span class="pill ok">Open access (BMC)</span></td>
           <td class="notes">De-novo SINE emergence (PittSINE) specific to passerine birds, notable since SINEs are otherwise largely inactive in birds generally. Consensus sequence obtained from the paper's supplementary file.</td>
         </tr>
-        <tr data-family="18 Branchiostoma SINEs" data-status="0" data-cite="Kosushkin &amp; Vassetzky 2020" data-taxon="Amphioxus (Cephalochordata)" data-access="2">
-          <td class="family">18 unnamed families <span class="sub">extreme diversity in one genome</span></td>
-          <td><span class="pill danger">Not in SINEBase</span></td>
+        <tr data-family="18 Branchiostoma SINEs" data-status="1" data-cite="Kosushkin &amp; Vassetzky 2020" data-taxon="Amphioxus (Cephalochordata)" data-access="2">
+          <td class="family">18 named families <span class="sub">BbeA1-9, BbeB1-6, Bfl1/2/4b/7</span></td>
+          <td><span class="pill ok">Already in SINEBase</span></td>
           <td class="cite"><a href="https://doi.org/10.7124/bc.000a1d" target="_blank" rel="noopener">Kosushkin &amp; Vassetzky 2020</a><span class="venue">Biopolymers and Cell</span></td>
           <td class="taxon"><em>Branchiostoma belcheri</em> (lancelet)</td>
           <td><span class="pill ok">Open access</span></td>
-          <td class="notes">18 new SINE families identified in a single lancelet genome - an entirely new taxon (Cephalochordata) for this tracker. No accessible full text or deposit found; sequences not yet obtained.</td>
+          <td class="notes">Not actually a gap: verified directly against SINEBase's own table (sines.eimb.ru/SINETable.html) - all 18 families are cataloged under names BbeA1-A6/A8/A9, BbeB1-B6, and Bfl1/Bfl2/Bfl4b/Bfl7, each explicitly citing "Kosushkin 2020" as source. Previously marked "Not in SINEBase" in error.</td>
         </tr>
         <tr data-family="SINE28" data-status="0" data-cite="Longo et al. 2015" data-taxon="Human / mammals" data-access="2">
           <td class="family">SINE28 <span class="sub">28S rDNA-derived, novel origin</span> <a href="literature-gap-tracker_sequences/SINE28_50loci_Longo2015.fasta" class="seq-link" title="Download FASTA">[50 loci]</a></td>
