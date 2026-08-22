@@ -1,8 +1,26 @@
 # Gathered SINE sequences from the literature-gap tracker
 
-Actual FASTA sequences retrieved for rows in [`literature-gap-tracker.html`](../literature-gap-tracker.html), gathered 2026-08-21 to 2026-08-22, with a re-audit pass on 2026-08-22 re-reading each source manuscript in full to catch missed context (this caught real corrections on MetaSINEs, MESC & Snail, Urop, B2/Dip/Ves, Ere, and Squam3, below). **1319 sequences across 34 files**, one file per source (or per source-pair where both an aligned and a degapped version are kept). No sequence here was fabricated or estimated — every one traces to a specific accession, Dfam family ID, or a specific supplementary file. For each file below, the **exact extraction method** is documented so the provenance is reproducible, not just cited. Where a sequence required reconstruction (e.g. concatenating alignment fragments) rather than a single clean pull, that is stated explicitly, not glossed over.
+Actual FASTA sequences retrieved for rows in [`literature-gap-tracker.html`](../literature-gap-tracker.html), gathered 2026-08-21 to 2026-08-22, with a re-audit pass on 2026-08-22 re-reading each source manuscript in full to catch missed context (this caught real corrections on MetaSINEs, MESC & Snail, Urop, B2/Dip/Ves, Ere, Squam3, HCD-tRNA bivalve, and Platy-1, below). **1429 sequences across 36 files**, one file per source (or per source-pair where both an aligned and a degapped version are kept). No sequence here was fabricated or estimated — every one traces to a specific accession, Dfam family ID, or a specific supplementary file. For each file below, the **exact extraction method** is documented so the provenance is reproducible, not just cited. Where a sequence required reconstruction (e.g. concatenating alignment fragments) rather than a single clean pull, that is stated explicitly, not glossed over.
 
 ---
+
+### `HCDtRNA_bivalve_104seqs_Martelossi2024.fasta` — 104 sequences
+**Citation:** Martelossi, Iannello, Ghiselli & Luchetti 2024, Mobile DNA
+**Extraction method:** No reconstruction needed — Additional File 10 (`13100_2024_332_MOESM10_ESM.fa`, fetched via Europe PMC's supplementary-files bundle, PMC11481361) is a clean, already-deposited FASTA file with 104 named sequences (e.g. `Akag_SINE-1_CORE#SINE/tRNA-Core`), copied as-is.
+**Result:** 104 sequences, real named copies across the paper's 40+ surveyed bivalve genomes.
+
+### `Platy1_6newSubfam_Saguinus_StorerEtAl.fasta` — 6 sequences
+**Citation:** Storer et al., "Extensive Independent Amplification of Platy-1 in Tamarins," PMC10378772
+**Extraction method:** A glm.js (glm-5.2) narrow-summary task on the paper's full text flagged that Supplementary Files S1/S2 are RepeatMasker-format libraries (not just descriptive tables) — a genuine sequence-data lead, cross-checked before trusting: fetched the nested supplementary zip via Europe PMC, opened `Storer_etal_Supplementary_File_S2.txt`, and confirmed all 6 of the paper's own named new subfamilies (Platy-1-8a2/8a4/8a6/8a5b2/8b/8c, all `_Saguinus`) are present as clean FASTA records.
+**Result:** 6 consensus sequences, 109-112 bp.
+
+### Confirmed genuinely blocked (re-audit, full text + supplementary checked directly)
+- **46 grass SINE families** (Mao & Wang 2017, GBE) — no accession/Dfam/Repbase ID for any new family; no supplementary file contains the actual consensus sequences, only metadata tables.
+- **CmiSINEs** (Luchetti, Plazzi & Mantovani 2017, GBE) — consensus sequences sourced from Repbase (subscription-gated, no ID quoted in text); the only named supplement is an alignment figure, not extractable sequence data.
+- **Sauria (Bov-B associated)** (Nakatsuka & Ohshima 2026, Biology) — the paper's 5 new species-specific consensus sequences are attributed only to "This study" with no accession; its Supplementary Tables S1/S2 give only copy-count/TSD metadata and references to *pre-existing* GenBank entries, not the new consensus sequences.
+
+### Citation problem found, not yet resolved
+- **Nematode SINE (Heligmosomoides)** — the tracker's cited paper (Stevens, Martinez-Ugalde et al., bioRxiv preprint 2023.04.17.535870, published as Nat Commun 14:7776) contains the word "SINE" **zero times** in its main text or any of its 6 supplementary files (checked both the preprint and the final published version directly). This paper does not describe SINEs at all — it's a genome-assembly + balancing-selection study. The original "3 SINE families" claim was noted as "found via Dfam," suggesting Dfam curators may have cited this paper only as the source genome assembly, not as SINE-describing literature. The actual Dfam entry/citation for these 3 families has not yet been located.
 
 ### `Squam3_speciesSpecific_Vassetzky2021_AddFile1.fasta` — 51 sequences (re-audit correction)
 **Citation:** Vassetzky, Kosushkin, Korchagin & Ryskov 2021, Mobile DNA 12:10
