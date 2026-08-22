@@ -1,8 +1,13 @@
 # Gathered SINE sequences from the literature-gap tracker
 
-Actual FASTA sequences retrieved for rows in [`literature-gap-tracker.html`](../literature-gap-tracker.html), gathered 2026-08-21 to 2026-08-22. **999 sequences across 27 files**, one file per source (or per source-pair where both an aligned and a degapped version are kept). No sequence here was fabricated or estimated — every one traces to a specific accession, Dfam family ID, or a specific supplementary file. For each file below, the **exact extraction method** is documented so the provenance is reproducible, not just cited. Where a sequence required reconstruction (e.g. concatenating alignment fragments) rather than a single clean pull, that is stated explicitly, not glossed over.
+Actual FASTA sequences retrieved for rows in [`literature-gap-tracker.html`](../literature-gap-tracker.html), gathered 2026-08-21 to 2026-08-22, with a re-audit pass on 2026-08-22 re-reading each source manuscript in full to catch missed context (this caught 2 real corrections: MetaSINEs and MESC & Snail, below). **1014 sequences across 28 files**, one file per source (or per source-pair where both an aligned and a degapped version are kept). No sequence here was fabricated or estimated — every one traces to a specific accession, Dfam family ID, or a specific supplementary file. For each file below, the **exact extraction method** is documented so the provenance is reproducible, not just cited. Where a sequence required reconstruction (e.g. concatenating alignment fragments) rather than a single clean pull, that is stated explicitly, not glossed over.
 
 ---
+
+### `MESC_Lisa3D_Lisa4_15seqs_Matetovici2016.fasta` — 15 sequences (re-audit addition)
+**Citation:** Matetovici et al. 2016, GBE 8(1):253
+**Extraction method:** Missed on the first pass, which only checked Table S1/S2 (raw discovery copies) and the consensus figures. A full re-read of the Methods section turned up an explicit GenBank deposit statement not tied to either supplementary table: "Sequences obtained were deposited under the GenBank accession numbers KJ549622 to KJ549636" (PCR-amplified using family-specific primers, subcloned, Sanger-sequenced). Fetched all 15 directly — GenBank's own titles label them "Lisa_4" and "Lisa_3D" (a naming variant of the paper's own Lsa_4/Lsa_3D families).
+**Result:** 15 sequences, 200–278 bp (8 Lisa_4 clones + 7 Lisa_3D clones).
 
 ### `MetaSINEs_63seqs_Nishihara2016.fasta` — 63 sequences
 **Citation:** Nishihara, Plazzi, Passamonti & Okada 2016, GBE 8(3):528–539

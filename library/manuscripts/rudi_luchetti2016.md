@@ -56,4 +56,6 @@ Databases referenced for searching/masking (not data deposits of this paper): Ge
 
 Dfam ID: No Dfam identifier is stated anywhere in the portions of the paper that were read; the paper does not report a Dfam accession for the RUDI consensus.
 
+**Addendum (2026-08-22 re-audit):** Table 2's 11 "additional RUDI elements" have real GenBank accessions (FY980617, AB490291, AB231865, JX051550, FL499198, AJ623658, GR277531, KF997091, AF070957, JN619400, EF694955) — fetched, but each is the *entire host gene/cDNA record* (some several kb) the RUDI copy is embedded in, not an isolated SINE. The paper gives no coordinates for where within each record the RUDI copy sits. Isolating it would require a BLAST/alignment step against the RUDI consensus that hasn't been done — not included in the sequences collection to avoid presenting an untrimmed gene record as a clean SINE.
+
 Explicit Data Availability statement: The paper does not contain a dedicated "Data Availability" statement section. The only data-availability-type note is the standard Springer Electronic Supplementary Material notice quoted above (linked via the article DOI 10.1007/s00438-016-1194-z). Beyond the GenBank clone accessions (KT809347, KT809348, KT809349) and the consulted public database accessions listed above, no separate data-deposit or code-availability statement is provided in the text.
